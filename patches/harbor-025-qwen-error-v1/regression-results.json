@@ -1,0 +1,25 @@
+{
+  "full_content_certified": false,
+  "model_context_capture": "unknown",
+  "native_error_reproduction": {
+    "path": "validation/evidence/qwen-converter/native-error-only-failure.json",
+    "sha256": "db7a2817fd6a5b1ba231a81c5856f5ab158f6a5c6505be87b99b8885469d1e3e"
+  },
+  "native_scores_changed": false,
+  "original": {
+    "path": "validation/evidence/qwen-converter/before-error-patch.json",
+    "sha256": "abced746d09883da4d5fda88525a057fc416923f174314dbf08d5747fcbdb5ec"
+  },
+  "patched": {
+    "path": "validation/evidence/qwen-converter/after-error-patch.json",
+    "sha256": "f38433850e85b800f73b1637e10c394a922d47d4f0bb40f058719ba711589071"
+  },
+  "patched_error": {
+    "path": "validation/evidence/qwen-converter/patched-error-only.json",
+    "sha256": "200d5e6c79ed37ddb8ab8f09e99eaa5e997dff850147032e502ce1b3945bf7c1"
+  },
+  "preserved_original": {
+    "path": "validation/evidence/qwen-converter/preserved-original.json",
+    "sha256": "23dfd29ac1f0189818e17481796280a1ea030e85fc1d663bd1cf5b30a2bdbd4a"
+  }
+}

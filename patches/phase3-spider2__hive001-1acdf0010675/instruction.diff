@@ -1,0 +1,11 @@
+--- original/instruction.md
++++ variant/instruction.md
+@@ -3,6 +3,8 @@
+ ## Task Description
+ 
+ Process raw COVID-19 case data, clean it, and join it with country codes to display the number of cases and deaths by country and report date?
++
++In `covid_cases`, join `stg_covid__cases` to `ref__country_codes` on `geo_id = alpha_2code` and keep every match. Do not aggregate, and do not deduplicate country names or case records.
+ 
+ ## Environment
+ 

@@ -1,0 +1,41 @@
+{
+  "ade_deb_versions_changed": false,
+  "applicable_dockerfile_sha256": "bf991c65d29cae2d1e48fbdcf75e4b7459e6701e49d7b0e9d531a11892ef39fd",
+  "applicable_source": "spider2",
+  "asana_full_columns": {
+    "path": "artifacts/validation/phase1-review-v1/asana-v3-all-columns.json",
+    "sha256": "da76f86e76091dad3ed5d3df1f21f082fac01640910bbb986b3a41686bd57f05"
+  },
+  "asana_native_runs": {
+    "path": "${ARTIFACT_ROOT}/validation/spider-v3-asana-witness-v1/reconciliation.json",
+    "sha256": "921a28914ae20d7f4e3337efba331b38d6ba71dfb22b51927f357cbcf9612a4a"
+  },
+  "builder": {
+    "path": "scripts/build_spider_v3.py",
+    "sha256": "e188348b3022a90ff087b8ce748e3154630713942d4454918dcfa855829525e3"
+  },
+  "duckdb": "1.2.2",
+  "environment_version_changed": true,
+  "historical_reviews": {
+    "path": "artifacts/validation/phase1-review-v1/spider-v2-history/manifest.json",
+    "sha256": "0b0c9794df069749f9828f6caffc79494b9d1c04626f31e2b7fa22f96b099008"
+  },
+  "implementation": "New immutable Apptainer images implement the attached native-build policy. Original Dockerfiles, verifiers, images and rewards remain historical artifacts.",
+  "native_verifier_modified": false,
+  "new_model_requests": 0,
+  "old_python_lock": {
+    "path": "environments/python/spider/uv.lock",
+    "sha256": "b060dbef2c0b3669d24c239936ff3da965897c74b8ec8085ec9258573d5dd095"
+  },
+  "package_policy": "Exact source dbt_packages bytes/modes/symlinks; missing packages recorded individually, no implicit download.",
+  "patch_id": "spider-duckdb122-vendored-v3",
+  "python_lock": {
+    "path": "environments/python/spider-v3/uv.lock",
+    "sha256": "d87ad08ed69a2f656177a7ed524f2f87ef5c882a79492eb1ecfaeaa038d94b11"
+  },
+  "reason": "User-reproduced DuckDB string aggregation order drift and dbt deps replacing vendored asana_source 0.8.0 with 0.8.2; copy-gold runs do not expose real build failures.",
+  "score_version_changed": false,
+  "source_task_files_modified": false,
+  "type": "environment_compatibility",
+  "validation_status": "Asana witness passed twice; full 55-task environment checks in progress."
+}

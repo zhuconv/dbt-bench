@@ -1,0 +1,11 @@
+--- original/instruction.md
++++ variant/instruction.md
+@@ -3,6 +3,8 @@
+ ## Task Description
+ 
+ Calculate the average bid, ask, and mid prices for stock tickers on a daily basis and then determine the total book value of shares based on these prices
++
++Calculate each quote's mid price as its bid price plus half of the bid-ask spread (ask price minus bid price), then average these per-quote mid prices.
+ 
+ ## Environment
+ 

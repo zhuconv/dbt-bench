@@ -1,0 +1,31 @@
+{
+  "gold_derived_correction": false,
+  "instruction_after": {
+    "path": "${ARTIFACT_ROOT}/validation/phase4-review-v1/pipeline/production-v1/tasks/deb__dbt-fix-repeat-purchase-cohort-revenue/phase4-instruction-f401f0d6f8a5c222/instruction.md",
+    "sha256": "f401f0d6f8a5c222ba3a9328537c15cf20bd7fd67aee3098b3a908afb379e32f"
+  },
+  "instruction_before": {
+    "path": "${STORAGE_ROOT}/cache/backend-tasks-migration-1125801/apptainer/9d3409aaef24413fb31b38e02f9f94611f03bc1585aba1f7c419c7b39874e59b/deb__dbt-fix-repeat-purchase-cohort-revenue/instruction.md",
+    "sha256": "48ee39f9aff77c9c64c15d729d5f719f3d9fa2aa149452455222f47c104bcb0a"
+  },
+  "model_requests": 0,
+  "native_tests_hash": "6c67c05dbee2d45a50096d25a0dbc682beaddd61484b2602cf91d2383288bd45",
+  "native_verifier_modified": false,
+  "patch": {
+    "path": "patches/phase4-deb__dbt-fix-repeat-purchase-cohort-revenue-f401f0d6f8a5/instruction.diff",
+    "sha256": "ac746ba82335a4986193263880997e67787cdbacafc7ec01cc2148169a0f716b"
+  },
+  "production_task": "${ARTIFACT_ROOT}/validation/phase4-review-v1/pipeline/production-v1/tasks/deb__dbt-fix-repeat-purchase-cohort-revenue/phase4-instruction-f401f0d6f8a5c222",
+  "production_task_hash": "155b09fe7bd686dcbd0578c2e6db9fa4d8358c5b4d8227bc3b1b9bc4dd08881a",
+  "schema_version": 1,
+  "selected_instruction": {
+    "path": "${SCRATCH_ROOT}/claude-two-version-pilot/dbt-fix-repeat-purchase-cohort-revenue_v2/instruction.md",
+    "sha256": "f401f0d6f8a5c222ba3a9328537c15cf20bd7fd67aee3098b3a908afb379e32f"
+  },
+  "source_backend_task_hash": "f85a7b6acb5ae47275e56e49d53e2b7f26acdd76fe4bde088724db212cbe69bf",
+  "source_task_hash": "a6a7d7ee2401aa61455c088c7cd1319218ff8bafbf9697a0c1e2297f418aa355",
+  "task_key": "deb__dbt-fix-repeat-purchase-cohort-revenue",
+  "task_version": "phase4-instruction-f401f0d6f8a5c222",
+  "type": "task_instruction_variant",
+  "validation_status": "See separately versioned phase 4 companion ledger; materialization is not certification"
+}

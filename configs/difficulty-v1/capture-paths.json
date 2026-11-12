@@ -1,0 +1,9 @@
+{
+  "model_requests": 0,
+  "review": {
+    "path": "${ARTIFACT_ROOT}/difficulty/qwen36-v1/deb-adapter-v1/path-review-v1/review.json",
+    "sha256": "efcb7066886530a09133c95bcbd7f205a400ba30522e7471c93092246c1027a4"
+  },
+  "schema_version": 1,
+  "scope": "Supplementary readonly source evidence only; no task or checker change, no automatic acceptance of alternative paths."
+}

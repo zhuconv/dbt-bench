@@ -1,0 +1,3362 @@
+{
+  "additional_reviewed_sources": [
+    {
+      "path": "tasks/ade__ade-bench-f1002/environment/project/models/stats/__stats.yml",
+      "sha256": "8515a6dfa94e587f594d2bb77eb28285c9746f7357d58d45ac7d607c0bda37ee"
+    },
+    {
+      "path": "tasks/ade__ade-bench-ana-eng003/environment/project/models/warehouse/dim_customer.sql",
+      "sha256": "d62b7953958d3cc2552a5213a59fb9b8dc086f1d46622fb1fe3df0736339a5d6"
+    },
+    {
+      "path": "tasks/spider2__analytics_engineering001/environment/dbt_project/models/warehouse/dim_customer.sql",
+      "sha256": "a397f241e552c4036c239e630aa1ce527ac07e674ea02b175140cd1b8517b197"
+    }
+  ],
+  "archive_rebinding_scope": "Only source catalog/split/import and preceding review references rebound to byte-identical preserved inputs. Original review retained; no decisions changed.",
+  "changed_catalog": false,
+  "changed_split": false,
+  "families": [
+    {
+      "current_splits": [
+        "train"
+      ],
+      "data_equivalence": "not_certified",
+      "decision": "proposed_conservative_same_split_group",
+      "exact_answer_equivalence": "not_claimed",
+      "id": "shared-airbnb-project",
+      "initialized_sql_overlap": [
+        {
+          "identical_initialized_sql_paths": [
+            "models/source/src_hosts.sql",
+            "models/source/src_listings.sql",
+            "models/source/src_reviews.sql"
+          ],
+          "sql_file_counts": [
+            12,
+            3
+          ],
+          "tasks": [
+            "ade__ade-bench-airbnb005",
+            "ade__ade-bench-airbnb007"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [
+            "models/dim/dim_dates.sql",
+            "models/dim/dim_hosts.sql",
+            "models/dim/dim_listings.sql",
+            "models/fact/fct_reviews.sql",
+            "models/source/src_hosts.sql",
+            "models/source/src_listings.sql",
+            "models/source/src_reviews.sql"
+          ],
+          "sql_file_counts": [
+            12,
+            9
+          ],
+          "tasks": [
+            "ade__ade-bench-airbnb005",
+            "spider2__airbnb001"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [
+            "models/dim/dim_dates.sql",
+            "models/dim/dim_hosts.sql",
+            "models/dim/dim_listings.sql",
+            "models/fact/fct_reviews.sql",
+            "models/source/src_listings.sql"
+          ],
+          "sql_file_counts": [
+            12,
+            9
+          ],
+          "tasks": [
+            "ade__ade-bench-airbnb005",
+            "spider2__airbnb002"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [
+            "models/source/src_hosts.sql",
+            "models/source/src_listings.sql",
+            "models/source/src_reviews.sql"
+          ],
+          "sql_file_counts": [
+            3,
+            9
+          ],
+          "tasks": [
+            "ade__ade-bench-airbnb007",
+            "spider2__airbnb001"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [
+            "models/source/src_listings.sql"
+          ],
+          "sql_file_counts": [
+            3,
+            9
+          ],
+          "tasks": [
+            "ade__ade-bench-airbnb007",
+            "spider2__airbnb002"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [
+            "models/agg/monthly_agg_reviews.sql",
+            "models/dim/dim_dates.sql",
+            "models/dim/dim_hosts.sql",
+            "models/dim/dim_listings.sql",
+            "models/fact/fct_reviews.sql",
+            "models/source/src_listings.sql"
+          ],
+          "sql_file_counts": [
+            9,
+            9
+          ],
+          "tasks": [
+            "spider2__airbnb001",
+            "spider2__airbnb002"
+          ]
+        }
+      ],
+      "members": [
+        "ade__ade-bench-airbnb005",
+        "ade__ade-bench-airbnb007",
+        "spider2__airbnb001",
+        "spider2__airbnb002"
+      ],
+      "rationale": "ADE 005 requests daily 28-day and listing NPS models; the initialized schema for 007 includes those same outputs plus dimensions/fact models. Spider 001 requests daily/monthly sentiment and listing-host updates; 002 requests a seven-day/week-over-week workflow. Shared project and overlapping components justify a conservative split group, not identical-answer classification."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "data_equivalence": "not_certified",
+      "decision": "proposed_conservative_same_split_group",
+      "exact_answer_equivalence": "not_claimed",
+      "id": "shared-northwind-analytics-engineering-project",
+      "initialized_sql_overlap": [
+        {
+          "identical_initialized_sql_paths": [
+            "models/staging/stg_customer.sql",
+            "models/staging/stg_employee_privileges.sql",
+            "models/staging/stg_employees.sql",
+            "models/staging/stg_inventory_transaction_types.sql",
+            "models/staging/stg_inventory_transactions.sql",
+            "models/staging/stg_invoices.sql",
+            "models/staging/stg_order_details.sql",
+            "models/staging/stg_order_details_status.sql",
+            "models/staging/stg_orders.sql",
+            "models/staging/stg_orders_status.sql",
+            "models/staging/stg_orders_tax_status.sql",
+            "models/staging/stg_privileges.sql",
+            "models/staging/stg_products.sql",
+            "models/staging/stg_purchase_order_details.sql",
+            "models/staging/stg_purchase_order_status.sql",
+            "models/staging/stg_purchase_orders.sql",
+            "models/staging/stg_shippers.sql",
+            "models/staging/stg_strings.sql",
+            "models/staging/stg_suppliers.sql"
+          ],
+          "sql_file_counts": [
+            19,
+            26
+          ],
+          "tasks": [
+            "ade__ade-bench-ana-eng003",
+            "ade__ade-bench-ana-eng004"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [
+            "models/staging/stg_customer.sql",
+            "models/staging/stg_employee_privileges.sql",
+            "models/staging/stg_employees.sql",
+            "models/staging/stg_inventory_transaction_types.sql",
+            "models/staging/stg_inventory_transactions.sql",
+            "models/staging/stg_invoices.sql",
+            "models/staging/stg_order_details.sql",
+            "models/staging/stg_order_details_status.sql",
+            "models/staging/stg_orders.sql",
+            "models/staging/stg_orders_status.sql",
+            "models/staging/stg_orders_tax_status.sql",
+            "models/staging/stg_privileges.sql",
+            "models/staging/stg_products.sql",
+            "models/staging/stg_purchase_order_details.sql",
+            "models/staging/stg_purchase_order_status.sql",
+            "models/staging/stg_purchase_orders.sql",
+            "models/staging/stg_shippers.sql",
+            "models/staging/stg_strings.sql",
+            "models/staging/stg_suppliers.sql"
+          ],
+          "sql_file_counts": [
+            19,
+            27
+          ],
+          "tasks": [
+            "ade__ade-bench-ana-eng003",
+            "ade__ade-bench-ana-eng005"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [
+            "models/staging/stg_customer.sql",
+            "models/staging/stg_employee_privileges.sql",
+            "models/staging/stg_employees.sql",
+            "models/staging/stg_inventory_transaction_types.sql",
+            "models/staging/stg_inventory_transactions.sql",
+            "models/staging/stg_invoices.sql",
+            "models/staging/stg_order_details.sql",
+            "models/staging/stg_order_details_status.sql",
+            "models/staging/stg_orders.sql",
+            "models/staging/stg_orders_status.sql",
+            "models/staging/stg_orders_tax_status.sql",
+            "models/staging/stg_privileges.sql",
+            "models/staging/stg_products.sql",
+            "models/staging/stg_purchase_order_details.sql",
+            "models/staging/stg_purchase_order_status.sql",
+            "models/staging/stg_purchase_orders.sql",
+            "models/staging/stg_shippers.sql",
+            "models/staging/stg_strings.sql",
+            "models/staging/stg_suppliers.sql"
+          ],
+          "sql_file_counts": [
+            19,
+            23
+          ],
+          "tasks": [
+            "ade__ade-bench-ana-eng003",
+            "ade__ade-bench-ana-eng006"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [],
+          "sql_file_counts": [
+            19,
+            27
+          ],
+          "tasks": [
+            "ade__ade-bench-ana-eng003",
+            "spider2__analytics_engineering001"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [
+            "models/analytics_obt/obt_sales_overview.sql",
+            "models/staging/stg_customer.sql",
+            "models/staging/stg_employee_privileges.sql",
+            "models/staging/stg_employees.sql",
+            "models/staging/stg_inventory_transaction_types.sql",
+            "models/staging/stg_inventory_transactions.sql",
+            "models/staging/stg_invoices.sql",
+            "models/staging/stg_order_details.sql",
+            "models/staging/stg_order_details_status.sql",
+            "models/staging/stg_orders.sql",
+            "models/staging/stg_orders_status.sql",
+            "models/staging/stg_orders_tax_status.sql",
+            "models/staging/stg_privileges.sql",
+            "models/staging/stg_products.sql",
+            "models/staging/stg_purchase_order_details.sql",
+            "models/staging/stg_purchase_order_status.sql",
+            "models/staging/stg_purchase_orders.sql",
+            "models/staging/stg_shippers.sql",
+            "models/staging/stg_strings.sql",
+            "models/staging/stg_suppliers.sql",
+            "models/warehouse/dim_customer.sql",
+            "models/warehouse/dim_date.sql",
+            "models/warehouse/dim_employees.sql",
+            "models/warehouse/dim_products.sql",
+            "models/warehouse/fact_sales.sql"
+          ],
+          "sql_file_counts": [
+            26,
+            27
+          ],
+          "tasks": [
+            "ade__ade-bench-ana-eng004",
+            "ade__ade-bench-ana-eng005"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [
+            "models/staging/stg_customer.sql",
+            "models/staging/stg_employee_privileges.sql",
+            "models/staging/stg_employees.sql",
+            "models/staging/stg_inventory_transaction_types.sql",
+            "models/staging/stg_inventory_transactions.sql",
+            "models/staging/stg_invoices.sql",
+            "models/staging/stg_order_details.sql",
+            "models/staging/stg_order_details_status.sql",
+            "models/staging/stg_orders.sql",
+            "models/staging/stg_orders_status.sql",
+            "models/staging/stg_orders_tax_status.sql",
+            "models/staging/stg_privileges.sql",
+            "models/staging/stg_products.sql",
+            "models/staging/stg_purchase_order_details.sql",
+            "models/staging/stg_purchase_order_status.sql",
+            "models/staging/stg_purchase_orders.sql",
+            "models/staging/stg_shippers.sql",
+            "models/staging/stg_strings.sql",
+            "models/staging/stg_suppliers.sql",
+            "models/warehouse/dim_customer.sql",
+            "models/warehouse/dim_date.sql",
+            "models/warehouse/dim_employees.sql",
+            "models/warehouse/fact_sales.sql"
+          ],
+          "sql_file_counts": [
+            26,
+            23
+          ],
+          "tasks": [
+            "ade__ade-bench-ana-eng004",
+            "ade__ade-bench-ana-eng006"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [],
+          "sql_file_counts": [
+            26,
+            27
+          ],
+          "tasks": [
+            "ade__ade-bench-ana-eng004",
+            "spider2__analytics_engineering001"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [
+            "models/staging/stg_customer.sql",
+            "models/staging/stg_employee_privileges.sql",
+            "models/staging/stg_employees.sql",
+            "models/staging/stg_inventory_transaction_types.sql",
+            "models/staging/stg_inventory_transactions.sql",
+            "models/staging/stg_invoices.sql",
+            "models/staging/stg_order_details.sql",
+            "models/staging/stg_order_details_status.sql",
+            "models/staging/stg_orders.sql",
+            "models/staging/stg_orders_status.sql",
+            "models/staging/stg_orders_tax_status.sql",
+            "models/staging/stg_privileges.sql",
+            "models/staging/stg_products.sql",
+            "models/staging/stg_purchase_order_details.sql",
+            "models/staging/stg_purchase_order_status.sql",
+            "models/staging/stg_purchase_orders.sql",
+            "models/staging/stg_shippers.sql",
+            "models/staging/stg_strings.sql",
+            "models/staging/stg_suppliers.sql",
+            "models/warehouse/dim_customer.sql",
+            "models/warehouse/dim_date.sql",
+            "models/warehouse/dim_employees.sql",
+            "models/warehouse/fact_sales.sql"
+          ],
+          "sql_file_counts": [
+            27,
+            23
+          ],
+          "tasks": [
+            "ade__ade-bench-ana-eng005",
+            "ade__ade-bench-ana-eng006"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [],
+          "sql_file_counts": [
+            27,
+            27
+          ],
+          "tasks": [
+            "ade__ade-bench-ana-eng005",
+            "spider2__analytics_engineering001"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [],
+          "sql_file_counts": [
+            23,
+            27
+          ],
+          "tasks": [
+            "ade__ade-bench-ana-eng006",
+            "spider2__analytics_engineering001"
+          ]
+        }
+      ],
+      "members": [
+        "ade__ade-bench-ana-eng003",
+        "ade__ade-bench-ana-eng004",
+        "ade__ade-bench-ana-eng005",
+        "ade__ade-bench-ana-eng006",
+        "spider2__analytics_engineering001"
+      ],
+      "rationale": "ADE 003 removes warehouse and analytics models, then asks for a unique customer dimension. Spider starts with a closely related dim_customer implementation, with insertion_timestamp added. ADE 004 and 006 request inventory enrichment; 005 and 006 require inventory deduplication. Setup for 005/006 injects duplicate raw inventory rows, so raw project similarity is not equality of initialized inputs. Group the related project and nested construction/repair tasks conservatively."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "data_equivalence": "not_certified",
+      "decision": "proposed_conservative_same_split_group",
+      "exact_answer_equivalence": "not_claimed",
+      "id": "shared-f1-project",
+      "initialized_sql_overlap": [
+        {
+          "identical_initialized_sql_paths": [
+            "models/core/src_circuits.sql",
+            "models/core/src_constructor_results.sql",
+            "models/core/src_constructor_standings.sql",
+            "models/core/src_constructors.sql",
+            "models/core/src_driver_standings.sql",
+            "models/core/src_drivers.sql",
+            "models/core/src_lap_times.sql",
+            "models/core/src_pit_stops.sql",
+            "models/core/src_position_descriptions.sql",
+            "models/core/src_qualifying.sql",
+            "models/core/src_races.sql",
+            "models/core/src_results.sql",
+            "models/core/src_seasons.sql",
+            "models/core/src_status.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__circuits.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructor_results.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructor_standings.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructors.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__driver_standings.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__drivers.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__lap_times.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__pit_stops.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__qualifying.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__races.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__results.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__seasons.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__status.sql",
+            "models/stats/constructor_championships.sql",
+            "models/stats/constructor_fastest_laps_by_season.sql",
+            "models/stats/constructor_podiums_by_season.sql",
+            "models/stats/constructor_points.sql",
+            "models/stats/constructor_pole_positions_by_season.sql",
+            "models/stats/constructor_retirements_by_season.sql",
+            "models/stats/constructor_wins_by_season.sql",
+            "models/stats/construtor_drivers_championships.sql",
+            "models/stats/driver_championships.sql",
+            "models/stats/driver_fastest_laps_by_season.sql",
+            "models/stats/driver_podiums_by_season.sql",
+            "models/stats/driver_points.sql",
+            "models/stats/driver_pole_positions_by_season.sql",
+            "models/stats/driver_retirements_by_season.sql",
+            "models/stats/driver_wins_by_season.sql",
+            "models/stats/finishes_by_constructor.sql",
+            "models/stats/most_laps.sql",
+            "models/stats/most_races.sql",
+            "models/stats/most_retirements.sql",
+            "models/stats/most_wins.sql",
+            "models/stats/oldest_race_winners_in_modern_era.sql"
+          ],
+          "sql_file_counts": [
+            48,
+            52
+          ],
+          "tasks": [
+            "ade__ade-bench-f1002",
+            "ade__ade-bench-f1003"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [
+            "models/core/src_circuits.sql",
+            "models/core/src_constructor_results.sql",
+            "models/core/src_constructor_standings.sql",
+            "models/core/src_constructors.sql",
+            "models/core/src_driver_standings.sql",
+            "models/core/src_drivers.sql",
+            "models/core/src_lap_times.sql",
+            "models/core/src_pit_stops.sql",
+            "models/core/src_position_descriptions.sql",
+            "models/core/src_qualifying.sql",
+            "models/core/src_races.sql",
+            "models/core/src_results.sql",
+            "models/core/src_seasons.sql",
+            "models/core/src_status.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__circuits.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructor_results.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructor_standings.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructors.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__driver_standings.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__drivers.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__lap_times.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__pit_stops.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__qualifying.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__races.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__results.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__seasons.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__status.sql",
+            "models/stats/constructor_championships.sql",
+            "models/stats/constructor_fastest_laps_by_season.sql",
+            "models/stats/constructor_podiums_by_season.sql",
+            "models/stats/constructor_points.sql",
+            "models/stats/constructor_pole_positions_by_season.sql",
+            "models/stats/constructor_retirements_by_season.sql",
+            "models/stats/constructor_wins_by_season.sql",
+            "models/stats/construtor_drivers_championships.sql",
+            "models/stats/driver_championships.sql",
+            "models/stats/driver_fastest_laps_by_season.sql",
+            "models/stats/driver_podiums_by_season.sql",
+            "models/stats/driver_points.sql",
+            "models/stats/driver_pole_positions_by_season.sql",
+            "models/stats/driver_retirements_by_season.sql",
+            "models/stats/driver_wins_by_season.sql",
+            "models/stats/finishes_by_constructor.sql",
+            "models/stats/most_laps.sql",
+            "models/stats/most_races.sql",
+            "models/stats/most_retirements.sql",
+            "models/stats/most_wins.sql",
+            "models/stats/oldest_race_winners_in_modern_era.sql"
+          ],
+          "sql_file_counts": [
+            48,
+            52
+          ],
+          "tasks": [
+            "ade__ade-bench-f1002",
+            "ade__ade-bench-f1003-hard"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [
+            "models/core/src_circuits.sql",
+            "models/core/src_constructor_results.sql",
+            "models/core/src_constructor_standings.sql",
+            "models/core/src_constructors.sql",
+            "models/core/src_driver_standings.sql",
+            "models/core/src_drivers.sql",
+            "models/core/src_lap_times.sql",
+            "models/core/src_pit_stops.sql",
+            "models/core/src_position_descriptions.sql",
+            "models/core/src_qualifying.sql",
+            "models/core/src_races.sql",
+            "models/core/src_results.sql",
+            "models/core/src_seasons.sql",
+            "models/core/src_status.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__circuits.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructor_results.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructor_standings.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructors.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__driver_standings.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__drivers.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__lap_times.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__pit_stops.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__qualifying.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__races.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__results.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__seasons.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__status.sql",
+            "models/stats/constructor_championships.sql",
+            "models/stats/constructor_fastest_laps_by_season.sql",
+            "models/stats/constructor_podiums_by_season.sql",
+            "models/stats/constructor_points.sql",
+            "models/stats/constructor_pole_positions_by_season.sql",
+            "models/stats/constructor_retirements_by_season.sql",
+            "models/stats/constructor_wins_by_season.sql",
+            "models/stats/construtor_drivers_championships.sql",
+            "models/stats/driver_championships.sql",
+            "models/stats/driver_fastest_laps_by_season.sql",
+            "models/stats/driver_podiums_by_season.sql",
+            "models/stats/driver_points.sql",
+            "models/stats/driver_pole_positions_by_season.sql",
+            "models/stats/driver_retirements_by_season.sql",
+            "models/stats/driver_wins_by_season.sql",
+            "models/stats/finishes_by_constructor.sql",
+            "models/stats/most_laps.sql",
+            "models/stats/most_races.sql",
+            "models/stats/most_retirements.sql",
+            "models/stats/most_wins.sql",
+            "models/stats/oldest_race_winners_in_modern_era.sql"
+          ],
+          "sql_file_counts": [
+            48,
+            52
+          ],
+          "tasks": [
+            "ade__ade-bench-f1002",
+            "ade__ade-bench-f1009"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [
+            "models/core/src_circuits.sql",
+            "models/core/src_constructor_results.sql",
+            "models/core/src_constructor_standings.sql",
+            "models/core/src_constructors.sql",
+            "models/core/src_driver_standings.sql",
+            "models/core/src_drivers.sql",
+            "models/core/src_lap_times.sql",
+            "models/core/src_pit_stops.sql",
+            "models/core/src_position_descriptions.sql",
+            "models/core/src_qualifying.sql",
+            "models/core/src_races.sql",
+            "models/core/src_results.sql",
+            "models/core/src_seasons.sql",
+            "models/core/src_status.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__circuits.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructor_results.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructor_standings.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructors.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__driver_standings.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__drivers.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__lap_times.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__pit_stops.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__qualifying.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__races.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__results.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__seasons.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__status.sql",
+            "models/stats/constructor_championships.sql",
+            "models/stats/constructor_fastest_laps_by_season.sql",
+            "models/stats/constructor_podiums_by_season.sql",
+            "models/stats/constructor_points.sql",
+            "models/stats/constructor_pole_positions_by_season.sql",
+            "models/stats/constructor_retirements_by_season.sql",
+            "models/stats/constructor_wins_by_season.sql",
+            "models/stats/construtor_drivers_championships.sql",
+            "models/stats/driver_championships.sql",
+            "models/stats/driver_fastest_laps_by_season.sql",
+            "models/stats/driver_podiums_by_season.sql",
+            "models/stats/driver_points.sql",
+            "models/stats/driver_pole_positions_by_season.sql",
+            "models/stats/driver_retirements_by_season.sql",
+            "models/stats/driver_wins_by_season.sql",
+            "models/stats/finishes_by_constructor.sql",
+            "models/stats/most_laps.sql",
+            "models/stats/most_races.sql",
+            "models/stats/most_retirements.sql",
+            "models/stats/most_wins.sql",
+            "models/stats/oldest_race_winners_in_modern_era.sql"
+          ],
+          "sql_file_counts": [
+            48,
+            52
+          ],
+          "tasks": [
+            "ade__ade-bench-f1002",
+            "ade__ade-bench-f1010"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [
+            "models/core/src_circuits.sql",
+            "models/core/src_constructor_results.sql",
+            "models/core/src_constructor_standings.sql",
+            "models/core/src_constructors.sql",
+            "models/core/src_driver_standings.sql",
+            "models/core/src_drivers.sql",
+            "models/core/src_lap_times.sql",
+            "models/core/src_pit_stops.sql",
+            "models/core/src_position_descriptions.sql",
+            "models/core/src_qualifying.sql",
+            "models/core/src_races.sql",
+            "models/core/src_results.sql",
+            "models/core/src_seasons.sql",
+            "models/core/src_status.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__circuits.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructor_results.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructor_standings.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructors.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__driver_standings.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__drivers.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__lap_times.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__pit_stops.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__qualifying.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__races.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__results.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__seasons.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__status.sql",
+            "models/stats/constructor_championships.sql",
+            "models/stats/constructor_fastest_laps_by_season.sql",
+            "models/stats/constructor_podiums_by_season.sql",
+            "models/stats/constructor_points.sql",
+            "models/stats/constructor_pole_positions_by_season.sql",
+            "models/stats/constructor_retirements_by_season.sql",
+            "models/stats/constructor_wins_by_season.sql",
+            "models/stats/construtor_drivers_championships.sql",
+            "models/stats/driver_championships.sql",
+            "models/stats/driver_fastest_laps_by_season.sql",
+            "models/stats/driver_podiums_by_season.sql",
+            "models/stats/driver_points.sql",
+            "models/stats/driver_pole_positions_by_season.sql",
+            "models/stats/driver_retirements_by_season.sql",
+            "models/stats/driver_wins_by_season.sql",
+            "models/stats/finishes_by_constructor.sql",
+            "models/stats/most_laps.sql",
+            "models/stats/most_races.sql",
+            "models/stats/most_retirements.sql",
+            "models/stats/most_wins.sql",
+            "models/stats/oldest_race_winners_in_modern_era.sql"
+          ],
+          "sql_file_counts": [
+            48,
+            52
+          ],
+          "tasks": [
+            "ade__ade-bench-f1002",
+            "ade__ade-bench-f1010-medium"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [
+            "models/core/src_circuits.sql",
+            "models/core/src_constructor_results.sql",
+            "models/core/src_constructor_standings.sql",
+            "models/core/src_constructors.sql",
+            "models/core/src_driver_standings.sql",
+            "models/core/src_drivers.sql",
+            "models/core/src_lap_times.sql",
+            "models/core/src_pit_stops.sql",
+            "models/core/src_position_descriptions.sql",
+            "models/core/src_qualifying.sql",
+            "models/core/src_races.sql",
+            "models/core/src_results.sql",
+            "models/core/src_seasons.sql",
+            "models/core/src_status.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__circuits.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructor_results.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructor_standings.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructors.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__driver_standings.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__drivers.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__lap_times.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__pit_stops.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__qualifying.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__races.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__results.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__seasons.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__status.sql",
+            "models/stats/constructor_championships.sql",
+            "models/stats/constructor_fastest_laps_by_season.sql",
+            "models/stats/constructor_podiums_by_season.sql",
+            "models/stats/constructor_points.sql",
+            "models/stats/constructor_pole_positions_by_season.sql",
+            "models/stats/constructor_retirements_by_season.sql",
+            "models/stats/constructor_wins_by_season.sql",
+            "models/stats/construtor_drivers_championships.sql",
+            "models/stats/driver_championships.sql",
+            "models/stats/driver_fastest_laps_by_season.sql",
+            "models/stats/driver_podiums_by_season.sql",
+            "models/stats/driver_points.sql",
+            "models/stats/driver_pole_positions_by_season.sql",
+            "models/stats/driver_retirements_by_season.sql",
+            "models/stats/driver_wins_by_season.sql",
+            "models/stats/finishes_by_constructor.sql",
+            "models/stats/most_laps.sql",
+            "models/stats/most_races.sql",
+            "models/stats/most_retirements.sql",
+            "models/stats/most_wins.sql",
+            "models/stats/oldest_race_winners_in_modern_era.sql"
+          ],
+          "sql_file_counts": [
+            48,
+            53
+          ],
+          "tasks": [
+            "ade__ade-bench-f1002",
+            "ade__ade-bench-f1011"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [
+            "models/stats/constructor_championships.sql",
+            "models/stats/constructor_fastest_laps_by_season.sql",
+            "models/stats/constructor_podiums_by_season.sql",
+            "models/stats/constructor_points.sql",
+            "models/stats/constructor_pole_positions_by_season.sql",
+            "models/stats/constructor_retirements_by_season.sql",
+            "models/stats/constructor_wins_by_season.sql",
+            "models/stats/construtor_drivers_championships.sql",
+            "models/stats/driver_championships.sql",
+            "models/stats/driver_fastest_laps_by_season.sql",
+            "models/stats/driver_podiums_by_season.sql",
+            "models/stats/driver_points.sql",
+            "models/stats/driver_pole_positions_by_season.sql",
+            "models/stats/driver_retirements_by_season.sql",
+            "models/stats/driver_wins_by_season.sql",
+            "models/stats/most_laps.sql",
+            "models/stats/most_retirements.sql",
+            "models/stats/most_wins.sql",
+            "models/stats/oldest_race_winners_in_modern_era.sql"
+          ],
+          "sql_file_counts": [
+            48,
+            34
+          ],
+          "tasks": [
+            "ade__ade-bench-f1002",
+            "spider2__f1001"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [
+            "models/stats/constructor_fastest_laps_by_season.sql",
+            "models/stats/constructor_podiums_by_season.sql",
+            "models/stats/constructor_points.sql",
+            "models/stats/constructor_pole_positions_by_season.sql",
+            "models/stats/constructor_retirements_by_season.sql",
+            "models/stats/constructor_wins_by_season.sql",
+            "models/stats/construtor_drivers_championships.sql",
+            "models/stats/driver_fastest_laps_by_season.sql",
+            "models/stats/driver_podiums_by_season.sql",
+            "models/stats/driver_points.sql",
+            "models/stats/driver_pole_positions_by_season.sql",
+            "models/stats/driver_retirements_by_season.sql",
+            "models/stats/driver_wins_by_season.sql",
+            "models/stats/most_laps.sql",
+            "models/stats/oldest_race_winners_in_modern_era.sql"
+          ],
+          "sql_file_counts": [
+            48,
+            30
+          ],
+          "tasks": [
+            "ade__ade-bench-f1002",
+            "spider2__f1002"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [
+            "models/core/src_circuits.sql",
+            "models/core/src_constructor_results.sql",
+            "models/core/src_constructor_standings.sql",
+            "models/core/src_constructors.sql",
+            "models/core/src_driver_standings.sql",
+            "models/core/src_drivers.sql",
+            "models/core/src_lap_times.sql",
+            "models/core/src_pit_stops.sql",
+            "models/core/src_position_descriptions.sql",
+            "models/core/src_qualifying.sql",
+            "models/core/src_races.sql",
+            "models/core/src_results.sql",
+            "models/core/src_seasons.sql",
+            "models/core/src_status.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__circuits.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructor_results.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructor_standings.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructors.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__driver_standings.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__drivers.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__lap_times.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__pit_stops.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__qualifying.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__races.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__results.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__seasons.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__status.sql",
+            "models/stats/constructor_championships.sql",
+            "models/stats/constructor_fastest_laps_by_season.sql",
+            "models/stats/constructor_podiums_by_season.sql",
+            "models/stats/constructor_points.sql",
+            "models/stats/constructor_pole_positions_by_season.sql",
+            "models/stats/constructor_retirements_by_season.sql",
+            "models/stats/constructor_wins_by_season.sql",
+            "models/stats/construtor_drivers_championships.sql",
+            "models/stats/driver_championships.sql",
+            "models/stats/driver_fastest_laps_by_season.sql",
+            "models/stats/driver_podiums_by_season.sql",
+            "models/stats/driver_points.sql",
+            "models/stats/driver_pole_positions_by_season.sql",
+            "models/stats/driver_retirements_by_season.sql",
+            "models/stats/driver_wins_by_season.sql",
+            "models/stats/finishes_by_constructor.sql",
+            "models/stats/finishes_by_driver.sql",
+            "models/stats/most_fastest_laps.sql",
+            "models/stats/most_laps.sql",
+            "models/stats/most_podiums.sql",
+            "models/stats/most_pole_positions.sql",
+            "models/stats/most_races.sql",
+            "models/stats/most_retirements.sql",
+            "models/stats/most_wins.sql",
+            "models/stats/oldest_race_winners_in_modern_era.sql"
+          ],
+          "sql_file_counts": [
+            52,
+            52
+          ],
+          "tasks": [
+            "ade__ade-bench-f1003",
+            "ade__ade-bench-f1003-hard"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [
+            "models/core/src_circuits.sql",
+            "models/core/src_constructor_results.sql",
+            "models/core/src_constructor_standings.sql",
+            "models/core/src_constructors.sql",
+            "models/core/src_driver_standings.sql",
+            "models/core/src_drivers.sql",
+            "models/core/src_lap_times.sql",
+            "models/core/src_pit_stops.sql",
+            "models/core/src_position_descriptions.sql",
+            "models/core/src_qualifying.sql",
+            "models/core/src_races.sql",
+            "models/core/src_results.sql",
+            "models/core/src_seasons.sql",
+            "models/core/src_status.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__circuits.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructor_results.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructor_standings.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructors.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__driver_standings.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__drivers.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__lap_times.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__pit_stops.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__qualifying.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__races.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__results.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__seasons.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__status.sql",
+            "models/stats/constructor_championships.sql",
+            "models/stats/constructor_fastest_laps_by_season.sql",
+            "models/stats/constructor_podiums_by_season.sql",
+            "models/stats/constructor_points.sql",
+            "models/stats/constructor_pole_positions_by_season.sql",
+            "models/stats/constructor_retirements_by_season.sql",
+            "models/stats/constructor_wins_by_season.sql",
+            "models/stats/construtor_drivers_championships.sql",
+            "models/stats/driver_championships.sql",
+            "models/stats/driver_fastest_laps_by_season.sql",
+            "models/stats/driver_podiums_by_season.sql",
+            "models/stats/driver_points.sql",
+            "models/stats/driver_pole_positions_by_season.sql",
+            "models/stats/driver_retirements_by_season.sql",
+            "models/stats/driver_wins_by_season.sql",
+            "models/stats/finishes_by_constructor.sql",
+            "models/stats/finishes_by_driver.sql",
+            "models/stats/most_fastest_laps.sql",
+            "models/stats/most_laps.sql",
+            "models/stats/most_podiums.sql",
+            "models/stats/most_pole_positions.sql",
+            "models/stats/most_races.sql",
+            "models/stats/most_retirements.sql",
+            "models/stats/most_wins.sql",
+            "models/stats/oldest_race_winners_in_modern_era.sql"
+          ],
+          "sql_file_counts": [
+            52,
+            52
+          ],
+          "tasks": [
+            "ade__ade-bench-f1003",
+            "ade__ade-bench-f1009"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [
+            "models/core/src_circuits.sql",
+            "models/core/src_constructor_results.sql",
+            "models/core/src_constructor_standings.sql",
+            "models/core/src_constructors.sql",
+            "models/core/src_driver_standings.sql",
+            "models/core/src_drivers.sql",
+            "models/core/src_lap_times.sql",
+            "models/core/src_pit_stops.sql",
+            "models/core/src_position_descriptions.sql",
+            "models/core/src_qualifying.sql",
+            "models/core/src_races.sql",
+            "models/core/src_results.sql",
+            "models/core/src_seasons.sql",
+            "models/core/src_status.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__circuits.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructor_results.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructor_standings.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructors.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__driver_standings.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__drivers.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__lap_times.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__pit_stops.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__qualifying.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__races.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__results.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__seasons.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__status.sql",
+            "models/stats/constructor_championships.sql",
+            "models/stats/constructor_fastest_laps_by_season.sql",
+            "models/stats/constructor_podiums_by_season.sql",
+            "models/stats/constructor_points.sql",
+            "models/stats/constructor_pole_positions_by_season.sql",
+            "models/stats/constructor_retirements_by_season.sql",
+            "models/stats/constructor_wins_by_season.sql",
+            "models/stats/construtor_drivers_championships.sql",
+            "models/stats/driver_championships.sql",
+            "models/stats/driver_fastest_laps_by_season.sql",
+            "models/stats/driver_podiums_by_season.sql",
+            "models/stats/driver_points.sql",
+            "models/stats/driver_pole_positions_by_season.sql",
+            "models/stats/driver_retirements_by_season.sql",
+            "models/stats/driver_wins_by_season.sql",
+            "models/stats/finishes_by_constructor.sql",
+            "models/stats/finishes_by_driver.sql",
+            "models/stats/most_fastest_laps.sql",
+            "models/stats/most_laps.sql",
+            "models/stats/most_podiums.sql",
+            "models/stats/most_pole_positions.sql",
+            "models/stats/most_races.sql",
+            "models/stats/most_retirements.sql",
+            "models/stats/most_wins.sql",
+            "models/stats/oldest_race_winners_in_modern_era.sql"
+          ],
+          "sql_file_counts": [
+            52,
+            52
+          ],
+          "tasks": [
+            "ade__ade-bench-f1003",
+            "ade__ade-bench-f1010"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [
+            "models/core/src_circuits.sql",
+            "models/core/src_constructor_results.sql",
+            "models/core/src_constructor_standings.sql",
+            "models/core/src_constructors.sql",
+            "models/core/src_driver_standings.sql",
+            "models/core/src_drivers.sql",
+            "models/core/src_lap_times.sql",
+            "models/core/src_pit_stops.sql",
+            "models/core/src_position_descriptions.sql",
+            "models/core/src_qualifying.sql",
+            "models/core/src_races.sql",
+            "models/core/src_results.sql",
+            "models/core/src_seasons.sql",
+            "models/core/src_status.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__circuits.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructor_results.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructor_standings.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructors.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__driver_standings.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__drivers.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__lap_times.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__pit_stops.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__qualifying.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__races.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__results.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__seasons.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__status.sql",
+            "models/stats/constructor_championships.sql",
+            "models/stats/constructor_fastest_laps_by_season.sql",
+            "models/stats/constructor_podiums_by_season.sql",
+            "models/stats/constructor_points.sql",
+            "models/stats/constructor_pole_positions_by_season.sql",
+            "models/stats/constructor_retirements_by_season.sql",
+            "models/stats/constructor_wins_by_season.sql",
+            "models/stats/construtor_drivers_championships.sql",
+            "models/stats/driver_championships.sql",
+            "models/stats/driver_fastest_laps_by_season.sql",
+            "models/stats/driver_podiums_by_season.sql",
+            "models/stats/driver_points.sql",
+            "models/stats/driver_pole_positions_by_season.sql",
+            "models/stats/driver_retirements_by_season.sql",
+            "models/stats/driver_wins_by_season.sql",
+            "models/stats/finishes_by_constructor.sql",
+            "models/stats/finishes_by_driver.sql",
+            "models/stats/most_fastest_laps.sql",
+            "models/stats/most_laps.sql",
+            "models/stats/most_podiums.sql",
+            "models/stats/most_pole_positions.sql",
+            "models/stats/most_races.sql",
+            "models/stats/most_retirements.sql",
+            "models/stats/most_wins.sql",
+            "models/stats/oldest_race_winners_in_modern_era.sql"
+          ],
+          "sql_file_counts": [
+            52,
+            52
+          ],
+          "tasks": [
+            "ade__ade-bench-f1003",
+            "ade__ade-bench-f1010-medium"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [
+            "models/core/src_circuits.sql",
+            "models/core/src_constructor_results.sql",
+            "models/core/src_constructor_standings.sql",
+            "models/core/src_constructors.sql",
+            "models/core/src_driver_standings.sql",
+            "models/core/src_drivers.sql",
+            "models/core/src_lap_times.sql",
+            "models/core/src_pit_stops.sql",
+            "models/core/src_position_descriptions.sql",
+            "models/core/src_qualifying.sql",
+            "models/core/src_races.sql",
+            "models/core/src_results.sql",
+            "models/core/src_seasons.sql",
+            "models/core/src_status.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__circuits.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructor_results.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructor_standings.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructors.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__driver_standings.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__drivers.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__lap_times.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__pit_stops.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__qualifying.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__races.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__results.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__seasons.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__status.sql",
+            "models/stats/constructor_championships.sql",
+            "models/stats/constructor_fastest_laps_by_season.sql",
+            "models/stats/constructor_podiums_by_season.sql",
+            "models/stats/constructor_points.sql",
+            "models/stats/constructor_pole_positions_by_season.sql",
+            "models/stats/constructor_retirements_by_season.sql",
+            "models/stats/constructor_wins_by_season.sql",
+            "models/stats/construtor_drivers_championships.sql",
+            "models/stats/driver_championships.sql",
+            "models/stats/driver_fastest_laps_by_season.sql",
+            "models/stats/driver_podiums_by_season.sql",
+            "models/stats/driver_points.sql",
+            "models/stats/driver_pole_positions_by_season.sql",
+            "models/stats/driver_retirements_by_season.sql",
+            "models/stats/driver_wins_by_season.sql",
+            "models/stats/finishes_by_constructor.sql",
+            "models/stats/finishes_by_driver.sql",
+            "models/stats/most_fastest_laps.sql",
+            "models/stats/most_laps.sql",
+            "models/stats/most_podiums.sql",
+            "models/stats/most_pole_positions.sql",
+            "models/stats/most_races.sql",
+            "models/stats/most_retirements.sql",
+            "models/stats/most_wins.sql",
+            "models/stats/oldest_race_winners_in_modern_era.sql"
+          ],
+          "sql_file_counts": [
+            52,
+            53
+          ],
+          "tasks": [
+            "ade__ade-bench-f1003",
+            "ade__ade-bench-f1011"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [
+            "models/stats/constructor_championships.sql",
+            "models/stats/constructor_fastest_laps_by_season.sql",
+            "models/stats/constructor_podiums_by_season.sql",
+            "models/stats/constructor_points.sql",
+            "models/stats/constructor_pole_positions_by_season.sql",
+            "models/stats/constructor_retirements_by_season.sql",
+            "models/stats/constructor_wins_by_season.sql",
+            "models/stats/construtor_drivers_championships.sql",
+            "models/stats/driver_championships.sql",
+            "models/stats/driver_fastest_laps_by_season.sql",
+            "models/stats/driver_podiums_by_season.sql",
+            "models/stats/driver_points.sql",
+            "models/stats/driver_pole_positions_by_season.sql",
+            "models/stats/driver_retirements_by_season.sql",
+            "models/stats/driver_wins_by_season.sql",
+            "models/stats/most_laps.sql",
+            "models/stats/most_retirements.sql",
+            "models/stats/most_wins.sql",
+            "models/stats/oldest_race_winners_in_modern_era.sql"
+          ],
+          "sql_file_counts": [
+            52,
+            34
+          ],
+          "tasks": [
+            "ade__ade-bench-f1003",
+            "spider2__f1001"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [
+            "models/stats/constructor_fastest_laps_by_season.sql",
+            "models/stats/constructor_podiums_by_season.sql",
+            "models/stats/constructor_points.sql",
+            "models/stats/constructor_pole_positions_by_season.sql",
+            "models/stats/constructor_retirements_by_season.sql",
+            "models/stats/constructor_wins_by_season.sql",
+            "models/stats/construtor_drivers_championships.sql",
+            "models/stats/driver_fastest_laps_by_season.sql",
+            "models/stats/driver_podiums_by_season.sql",
+            "models/stats/driver_points.sql",
+            "models/stats/driver_pole_positions_by_season.sql",
+            "models/stats/driver_retirements_by_season.sql",
+            "models/stats/driver_wins_by_season.sql",
+            "models/stats/most_laps.sql",
+            "models/stats/oldest_race_winners_in_modern_era.sql"
+          ],
+          "sql_file_counts": [
+            52,
+            30
+          ],
+          "tasks": [
+            "ade__ade-bench-f1003",
+            "spider2__f1002"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [
+            "models/core/src_circuits.sql",
+            "models/core/src_constructor_results.sql",
+            "models/core/src_constructor_standings.sql",
+            "models/core/src_constructors.sql",
+            "models/core/src_driver_standings.sql",
+            "models/core/src_drivers.sql",
+            "models/core/src_lap_times.sql",
+            "models/core/src_pit_stops.sql",
+            "models/core/src_position_descriptions.sql",
+            "models/core/src_qualifying.sql",
+            "models/core/src_races.sql",
+            "models/core/src_results.sql",
+            "models/core/src_seasons.sql",
+            "models/core/src_status.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__circuits.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructor_results.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructor_standings.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructors.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__driver_standings.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__drivers.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__lap_times.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__pit_stops.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__qualifying.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__races.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__results.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__seasons.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__status.sql",
+            "models/stats/constructor_championships.sql",
+            "models/stats/constructor_fastest_laps_by_season.sql",
+            "models/stats/constructor_podiums_by_season.sql",
+            "models/stats/constructor_points.sql",
+            "models/stats/constructor_pole_positions_by_season.sql",
+            "models/stats/constructor_retirements_by_season.sql",
+            "models/stats/constructor_wins_by_season.sql",
+            "models/stats/construtor_drivers_championships.sql",
+            "models/stats/driver_championships.sql",
+            "models/stats/driver_fastest_laps_by_season.sql",
+            "models/stats/driver_podiums_by_season.sql",
+            "models/stats/driver_points.sql",
+            "models/stats/driver_pole_positions_by_season.sql",
+            "models/stats/driver_retirements_by_season.sql",
+            "models/stats/driver_wins_by_season.sql",
+            "models/stats/finishes_by_constructor.sql",
+            "models/stats/finishes_by_driver.sql",
+            "models/stats/most_fastest_laps.sql",
+            "models/stats/most_laps.sql",
+            "models/stats/most_podiums.sql",
+            "models/stats/most_pole_positions.sql",
+            "models/stats/most_races.sql",
+            "models/stats/most_retirements.sql",
+            "models/stats/most_wins.sql",
+            "models/stats/oldest_race_winners_in_modern_era.sql"
+          ],
+          "sql_file_counts": [
+            52,
+            52
+          ],
+          "tasks": [
+            "ade__ade-bench-f1003-hard",
+            "ade__ade-bench-f1009"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [
+            "models/core/src_circuits.sql",
+            "models/core/src_constructor_results.sql",
+            "models/core/src_constructor_standings.sql",
+            "models/core/src_constructors.sql",
+            "models/core/src_driver_standings.sql",
+            "models/core/src_drivers.sql",
+            "models/core/src_lap_times.sql",
+            "models/core/src_pit_stops.sql",
+            "models/core/src_position_descriptions.sql",
+            "models/core/src_qualifying.sql",
+            "models/core/src_races.sql",
+            "models/core/src_results.sql",
+            "models/core/src_seasons.sql",
+            "models/core/src_status.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__circuits.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructor_results.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructor_standings.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructors.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__driver_standings.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__drivers.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__lap_times.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__pit_stops.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__qualifying.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__races.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__results.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__seasons.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__status.sql",
+            "models/stats/constructor_championships.sql",
+            "models/stats/constructor_fastest_laps_by_season.sql",
+            "models/stats/constructor_podiums_by_season.sql",
+            "models/stats/constructor_points.sql",
+            "models/stats/constructor_pole_positions_by_season.sql",
+            "models/stats/constructor_retirements_by_season.sql",
+            "models/stats/constructor_wins_by_season.sql",
+            "models/stats/construtor_drivers_championships.sql",
+            "models/stats/driver_championships.sql",
+            "models/stats/driver_fastest_laps_by_season.sql",
+            "models/stats/driver_podiums_by_season.sql",
+            "models/stats/driver_points.sql",
+            "models/stats/driver_pole_positions_by_season.sql",
+            "models/stats/driver_retirements_by_season.sql",
+            "models/stats/driver_wins_by_season.sql",
+            "models/stats/finishes_by_constructor.sql",
+            "models/stats/finishes_by_driver.sql",
+            "models/stats/most_fastest_laps.sql",
+            "models/stats/most_laps.sql",
+            "models/stats/most_podiums.sql",
+            "models/stats/most_pole_positions.sql",
+            "models/stats/most_races.sql",
+            "models/stats/most_retirements.sql",
+            "models/stats/most_wins.sql",
+            "models/stats/oldest_race_winners_in_modern_era.sql"
+          ],
+          "sql_file_counts": [
+            52,
+            52
+          ],
+          "tasks": [
+            "ade__ade-bench-f1003-hard",
+            "ade__ade-bench-f1010"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [
+            "models/core/src_circuits.sql",
+            "models/core/src_constructor_results.sql",
+            "models/core/src_constructor_standings.sql",
+            "models/core/src_constructors.sql",
+            "models/core/src_driver_standings.sql",
+            "models/core/src_drivers.sql",
+            "models/core/src_lap_times.sql",
+            "models/core/src_pit_stops.sql",
+            "models/core/src_position_descriptions.sql",
+            "models/core/src_qualifying.sql",
+            "models/core/src_races.sql",
+            "models/core/src_results.sql",
+            "models/core/src_seasons.sql",
+            "models/core/src_status.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__circuits.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructor_results.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructor_standings.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructors.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__driver_standings.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__drivers.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__lap_times.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__pit_stops.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__qualifying.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__races.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__results.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__seasons.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__status.sql",
+            "models/stats/constructor_championships.sql",
+            "models/stats/constructor_fastest_laps_by_season.sql",
+            "models/stats/constructor_podiums_by_season.sql",
+            "models/stats/constructor_points.sql",
+            "models/stats/constructor_pole_positions_by_season.sql",
+            "models/stats/constructor_retirements_by_season.sql",
+            "models/stats/constructor_wins_by_season.sql",
+            "models/stats/construtor_drivers_championships.sql",
+            "models/stats/driver_championships.sql",
+            "models/stats/driver_fastest_laps_by_season.sql",
+            "models/stats/driver_podiums_by_season.sql",
+            "models/stats/driver_points.sql",
+            "models/stats/driver_pole_positions_by_season.sql",
+            "models/stats/driver_retirements_by_season.sql",
+            "models/stats/driver_wins_by_season.sql",
+            "models/stats/finishes_by_constructor.sql",
+            "models/stats/finishes_by_driver.sql",
+            "models/stats/most_fastest_laps.sql",
+            "models/stats/most_laps.sql",
+            "models/stats/most_podiums.sql",
+            "models/stats/most_pole_positions.sql",
+            "models/stats/most_races.sql",
+            "models/stats/most_retirements.sql",
+            "models/stats/most_wins.sql",
+            "models/stats/oldest_race_winners_in_modern_era.sql"
+          ],
+          "sql_file_counts": [
+            52,
+            52
+          ],
+          "tasks": [
+            "ade__ade-bench-f1003-hard",
+            "ade__ade-bench-f1010-medium"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [
+            "models/core/src_circuits.sql",
+            "models/core/src_constructor_results.sql",
+            "models/core/src_constructor_standings.sql",
+            "models/core/src_constructors.sql",
+            "models/core/src_driver_standings.sql",
+            "models/core/src_drivers.sql",
+            "models/core/src_lap_times.sql",
+            "models/core/src_pit_stops.sql",
+            "models/core/src_position_descriptions.sql",
+            "models/core/src_qualifying.sql",
+            "models/core/src_races.sql",
+            "models/core/src_results.sql",
+            "models/core/src_seasons.sql",
+            "models/core/src_status.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__circuits.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructor_results.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructor_standings.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructors.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__driver_standings.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__drivers.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__lap_times.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__pit_stops.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__qualifying.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__races.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__results.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__seasons.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__status.sql",
+            "models/stats/constructor_championships.sql",
+            "models/stats/constructor_fastest_laps_by_season.sql",
+            "models/stats/constructor_podiums_by_season.sql",
+            "models/stats/constructor_points.sql",
+            "models/stats/constructor_pole_positions_by_season.sql",
+            "models/stats/constructor_retirements_by_season.sql",
+            "models/stats/constructor_wins_by_season.sql",
+            "models/stats/construtor_drivers_championships.sql",
+            "models/stats/driver_championships.sql",
+            "models/stats/driver_fastest_laps_by_season.sql",
+            "models/stats/driver_podiums_by_season.sql",
+            "models/stats/driver_points.sql",
+            "models/stats/driver_pole_positions_by_season.sql",
+            "models/stats/driver_retirements_by_season.sql",
+            "models/stats/driver_wins_by_season.sql",
+            "models/stats/finishes_by_constructor.sql",
+            "models/stats/finishes_by_driver.sql",
+            "models/stats/most_fastest_laps.sql",
+            "models/stats/most_laps.sql",
+            "models/stats/most_podiums.sql",
+            "models/stats/most_pole_positions.sql",
+            "models/stats/most_races.sql",
+            "models/stats/most_retirements.sql",
+            "models/stats/most_wins.sql",
+            "models/stats/oldest_race_winners_in_modern_era.sql"
+          ],
+          "sql_file_counts": [
+            52,
+            53
+          ],
+          "tasks": [
+            "ade__ade-bench-f1003-hard",
+            "ade__ade-bench-f1011"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [
+            "models/stats/constructor_championships.sql",
+            "models/stats/constructor_fastest_laps_by_season.sql",
+            "models/stats/constructor_podiums_by_season.sql",
+            "models/stats/constructor_points.sql",
+            "models/stats/constructor_pole_positions_by_season.sql",
+            "models/stats/constructor_retirements_by_season.sql",
+            "models/stats/constructor_wins_by_season.sql",
+            "models/stats/construtor_drivers_championships.sql",
+            "models/stats/driver_championships.sql",
+            "models/stats/driver_fastest_laps_by_season.sql",
+            "models/stats/driver_podiums_by_season.sql",
+            "models/stats/driver_points.sql",
+            "models/stats/driver_pole_positions_by_season.sql",
+            "models/stats/driver_retirements_by_season.sql",
+            "models/stats/driver_wins_by_season.sql",
+            "models/stats/most_laps.sql",
+            "models/stats/most_retirements.sql",
+            "models/stats/most_wins.sql",
+            "models/stats/oldest_race_winners_in_modern_era.sql"
+          ],
+          "sql_file_counts": [
+            52,
+            34
+          ],
+          "tasks": [
+            "ade__ade-bench-f1003-hard",
+            "spider2__f1001"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [
+            "models/stats/constructor_fastest_laps_by_season.sql",
+            "models/stats/constructor_podiums_by_season.sql",
+            "models/stats/constructor_points.sql",
+            "models/stats/constructor_pole_positions_by_season.sql",
+            "models/stats/constructor_retirements_by_season.sql",
+            "models/stats/constructor_wins_by_season.sql",
+            "models/stats/construtor_drivers_championships.sql",
+            "models/stats/driver_fastest_laps_by_season.sql",
+            "models/stats/driver_podiums_by_season.sql",
+            "models/stats/driver_points.sql",
+            "models/stats/driver_pole_positions_by_season.sql",
+            "models/stats/driver_retirements_by_season.sql",
+            "models/stats/driver_wins_by_season.sql",
+            "models/stats/most_laps.sql",
+            "models/stats/oldest_race_winners_in_modern_era.sql"
+          ],
+          "sql_file_counts": [
+            52,
+            30
+          ],
+          "tasks": [
+            "ade__ade-bench-f1003-hard",
+            "spider2__f1002"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [
+            "models/core/src_circuits.sql",
+            "models/core/src_constructor_results.sql",
+            "models/core/src_constructor_standings.sql",
+            "models/core/src_constructors.sql",
+            "models/core/src_driver_standings.sql",
+            "models/core/src_drivers.sql",
+            "models/core/src_lap_times.sql",
+            "models/core/src_pit_stops.sql",
+            "models/core/src_position_descriptions.sql",
+            "models/core/src_qualifying.sql",
+            "models/core/src_races.sql",
+            "models/core/src_results.sql",
+            "models/core/src_seasons.sql",
+            "models/core/src_status.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__circuits.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructor_results.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructor_standings.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructors.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__driver_standings.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__drivers.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__lap_times.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__pit_stops.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__qualifying.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__races.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__results.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__seasons.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__status.sql",
+            "models/stats/constructor_championships.sql",
+            "models/stats/constructor_fastest_laps_by_season.sql",
+            "models/stats/constructor_podiums_by_season.sql",
+            "models/stats/constructor_points.sql",
+            "models/stats/constructor_pole_positions_by_season.sql",
+            "models/stats/constructor_retirements_by_season.sql",
+            "models/stats/constructor_wins_by_season.sql",
+            "models/stats/construtor_drivers_championships.sql",
+            "models/stats/driver_championships.sql",
+            "models/stats/driver_fastest_laps_by_season.sql",
+            "models/stats/driver_podiums_by_season.sql",
+            "models/stats/driver_points.sql",
+            "models/stats/driver_pole_positions_by_season.sql",
+            "models/stats/driver_retirements_by_season.sql",
+            "models/stats/driver_wins_by_season.sql",
+            "models/stats/finishes_by_constructor.sql",
+            "models/stats/finishes_by_driver.sql",
+            "models/stats/most_fastest_laps.sql",
+            "models/stats/most_laps.sql",
+            "models/stats/most_podiums.sql",
+            "models/stats/most_pole_positions.sql",
+            "models/stats/most_races.sql",
+            "models/stats/most_retirements.sql",
+            "models/stats/most_wins.sql",
+            "models/stats/oldest_race_winners_in_modern_era.sql"
+          ],
+          "sql_file_counts": [
+            52,
+            52
+          ],
+          "tasks": [
+            "ade__ade-bench-f1009",
+            "ade__ade-bench-f1010"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [
+            "models/core/src_circuits.sql",
+            "models/core/src_constructor_results.sql",
+            "models/core/src_constructor_standings.sql",
+            "models/core/src_constructors.sql",
+            "models/core/src_driver_standings.sql",
+            "models/core/src_drivers.sql",
+            "models/core/src_lap_times.sql",
+            "models/core/src_pit_stops.sql",
+            "models/core/src_position_descriptions.sql",
+            "models/core/src_qualifying.sql",
+            "models/core/src_races.sql",
+            "models/core/src_results.sql",
+            "models/core/src_seasons.sql",
+            "models/core/src_status.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__circuits.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructor_results.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructor_standings.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructors.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__driver_standings.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__drivers.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__lap_times.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__pit_stops.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__qualifying.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__races.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__results.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__seasons.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__status.sql",
+            "models/stats/constructor_championships.sql",
+            "models/stats/constructor_fastest_laps_by_season.sql",
+            "models/stats/constructor_podiums_by_season.sql",
+            "models/stats/constructor_points.sql",
+            "models/stats/constructor_pole_positions_by_season.sql",
+            "models/stats/constructor_retirements_by_season.sql",
+            "models/stats/constructor_wins_by_season.sql",
+            "models/stats/construtor_drivers_championships.sql",
+            "models/stats/driver_championships.sql",
+            "models/stats/driver_fastest_laps_by_season.sql",
+            "models/stats/driver_podiums_by_season.sql",
+            "models/stats/driver_points.sql",
+            "models/stats/driver_pole_positions_by_season.sql",
+            "models/stats/driver_retirements_by_season.sql",
+            "models/stats/driver_wins_by_season.sql",
+            "models/stats/finishes_by_constructor.sql",
+            "models/stats/finishes_by_driver.sql",
+            "models/stats/most_fastest_laps.sql",
+            "models/stats/most_laps.sql",
+            "models/stats/most_podiums.sql",
+            "models/stats/most_pole_positions.sql",
+            "models/stats/most_races.sql",
+            "models/stats/most_retirements.sql",
+            "models/stats/most_wins.sql",
+            "models/stats/oldest_race_winners_in_modern_era.sql"
+          ],
+          "sql_file_counts": [
+            52,
+            52
+          ],
+          "tasks": [
+            "ade__ade-bench-f1009",
+            "ade__ade-bench-f1010-medium"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [
+            "models/core/src_circuits.sql",
+            "models/core/src_constructor_results.sql",
+            "models/core/src_constructor_standings.sql",
+            "models/core/src_constructors.sql",
+            "models/core/src_driver_standings.sql",
+            "models/core/src_drivers.sql",
+            "models/core/src_lap_times.sql",
+            "models/core/src_pit_stops.sql",
+            "models/core/src_position_descriptions.sql",
+            "models/core/src_qualifying.sql",
+            "models/core/src_races.sql",
+            "models/core/src_results.sql",
+            "models/core/src_seasons.sql",
+            "models/core/src_status.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__circuits.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructor_results.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructor_standings.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructors.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__driver_standings.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__drivers.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__lap_times.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__pit_stops.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__qualifying.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__races.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__results.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__seasons.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__status.sql",
+            "models/stats/constructor_championships.sql",
+            "models/stats/constructor_fastest_laps_by_season.sql",
+            "models/stats/constructor_podiums_by_season.sql",
+            "models/stats/constructor_points.sql",
+            "models/stats/constructor_pole_positions_by_season.sql",
+            "models/stats/constructor_retirements_by_season.sql",
+            "models/stats/constructor_wins_by_season.sql",
+            "models/stats/construtor_drivers_championships.sql",
+            "models/stats/driver_championships.sql",
+            "models/stats/driver_fastest_laps_by_season.sql",
+            "models/stats/driver_podiums_by_season.sql",
+            "models/stats/driver_points.sql",
+            "models/stats/driver_pole_positions_by_season.sql",
+            "models/stats/driver_retirements_by_season.sql",
+            "models/stats/driver_wins_by_season.sql",
+            "models/stats/finishes_by_constructor.sql",
+            "models/stats/finishes_by_driver.sql",
+            "models/stats/most_fastest_laps.sql",
+            "models/stats/most_laps.sql",
+            "models/stats/most_podiums.sql",
+            "models/stats/most_pole_positions.sql",
+            "models/stats/most_races.sql",
+            "models/stats/most_retirements.sql",
+            "models/stats/most_wins.sql",
+            "models/stats/oldest_race_winners_in_modern_era.sql"
+          ],
+          "sql_file_counts": [
+            52,
+            53
+          ],
+          "tasks": [
+            "ade__ade-bench-f1009",
+            "ade__ade-bench-f1011"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [
+            "models/stats/constructor_championships.sql",
+            "models/stats/constructor_fastest_laps_by_season.sql",
+            "models/stats/constructor_podiums_by_season.sql",
+            "models/stats/constructor_points.sql",
+            "models/stats/constructor_pole_positions_by_season.sql",
+            "models/stats/constructor_retirements_by_season.sql",
+            "models/stats/constructor_wins_by_season.sql",
+            "models/stats/construtor_drivers_championships.sql",
+            "models/stats/driver_championships.sql",
+            "models/stats/driver_fastest_laps_by_season.sql",
+            "models/stats/driver_podiums_by_season.sql",
+            "models/stats/driver_points.sql",
+            "models/stats/driver_pole_positions_by_season.sql",
+            "models/stats/driver_retirements_by_season.sql",
+            "models/stats/driver_wins_by_season.sql",
+            "models/stats/most_laps.sql",
+            "models/stats/most_retirements.sql",
+            "models/stats/most_wins.sql",
+            "models/stats/oldest_race_winners_in_modern_era.sql"
+          ],
+          "sql_file_counts": [
+            52,
+            34
+          ],
+          "tasks": [
+            "ade__ade-bench-f1009",
+            "spider2__f1001"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [
+            "models/stats/constructor_fastest_laps_by_season.sql",
+            "models/stats/constructor_podiums_by_season.sql",
+            "models/stats/constructor_points.sql",
+            "models/stats/constructor_pole_positions_by_season.sql",
+            "models/stats/constructor_retirements_by_season.sql",
+            "models/stats/constructor_wins_by_season.sql",
+            "models/stats/construtor_drivers_championships.sql",
+            "models/stats/driver_fastest_laps_by_season.sql",
+            "models/stats/driver_podiums_by_season.sql",
+            "models/stats/driver_points.sql",
+            "models/stats/driver_pole_positions_by_season.sql",
+            "models/stats/driver_retirements_by_season.sql",
+            "models/stats/driver_wins_by_season.sql",
+            "models/stats/most_laps.sql",
+            "models/stats/oldest_race_winners_in_modern_era.sql"
+          ],
+          "sql_file_counts": [
+            52,
+            30
+          ],
+          "tasks": [
+            "ade__ade-bench-f1009",
+            "spider2__f1002"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [
+            "models/core/src_circuits.sql",
+            "models/core/src_constructor_results.sql",
+            "models/core/src_constructor_standings.sql",
+            "models/core/src_constructors.sql",
+            "models/core/src_driver_standings.sql",
+            "models/core/src_drivers.sql",
+            "models/core/src_lap_times.sql",
+            "models/core/src_pit_stops.sql",
+            "models/core/src_position_descriptions.sql",
+            "models/core/src_qualifying.sql",
+            "models/core/src_races.sql",
+            "models/core/src_results.sql",
+            "models/core/src_seasons.sql",
+            "models/core/src_status.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__circuits.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructor_results.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructor_standings.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructors.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__driver_standings.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__drivers.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__lap_times.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__pit_stops.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__qualifying.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__races.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__results.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__seasons.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__status.sql",
+            "models/stats/constructor_championships.sql",
+            "models/stats/constructor_fastest_laps_by_season.sql",
+            "models/stats/constructor_podiums_by_season.sql",
+            "models/stats/constructor_points.sql",
+            "models/stats/constructor_pole_positions_by_season.sql",
+            "models/stats/constructor_retirements_by_season.sql",
+            "models/stats/constructor_wins_by_season.sql",
+            "models/stats/construtor_drivers_championships.sql",
+            "models/stats/driver_championships.sql",
+            "models/stats/driver_fastest_laps_by_season.sql",
+            "models/stats/driver_podiums_by_season.sql",
+            "models/stats/driver_points.sql",
+            "models/stats/driver_pole_positions_by_season.sql",
+            "models/stats/driver_retirements_by_season.sql",
+            "models/stats/driver_wins_by_season.sql",
+            "models/stats/finishes_by_constructor.sql",
+            "models/stats/finishes_by_driver.sql",
+            "models/stats/most_fastest_laps.sql",
+            "models/stats/most_laps.sql",
+            "models/stats/most_podiums.sql",
+            "models/stats/most_pole_positions.sql",
+            "models/stats/most_races.sql",
+            "models/stats/most_retirements.sql",
+            "models/stats/most_wins.sql",
+            "models/stats/oldest_race_winners_in_modern_era.sql"
+          ],
+          "sql_file_counts": [
+            52,
+            52
+          ],
+          "tasks": [
+            "ade__ade-bench-f1010",
+            "ade__ade-bench-f1010-medium"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [
+            "models/core/src_circuits.sql",
+            "models/core/src_constructor_results.sql",
+            "models/core/src_constructor_standings.sql",
+            "models/core/src_constructors.sql",
+            "models/core/src_driver_standings.sql",
+            "models/core/src_drivers.sql",
+            "models/core/src_lap_times.sql",
+            "models/core/src_pit_stops.sql",
+            "models/core/src_position_descriptions.sql",
+            "models/core/src_qualifying.sql",
+            "models/core/src_races.sql",
+            "models/core/src_results.sql",
+            "models/core/src_seasons.sql",
+            "models/core/src_status.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__circuits.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructor_results.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructor_standings.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructors.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__driver_standings.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__drivers.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__lap_times.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__pit_stops.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__qualifying.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__races.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__results.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__seasons.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__status.sql",
+            "models/stats/constructor_championships.sql",
+            "models/stats/constructor_fastest_laps_by_season.sql",
+            "models/stats/constructor_podiums_by_season.sql",
+            "models/stats/constructor_points.sql",
+            "models/stats/constructor_pole_positions_by_season.sql",
+            "models/stats/constructor_retirements_by_season.sql",
+            "models/stats/constructor_wins_by_season.sql",
+            "models/stats/construtor_drivers_championships.sql",
+            "models/stats/driver_championships.sql",
+            "models/stats/driver_fastest_laps_by_season.sql",
+            "models/stats/driver_podiums_by_season.sql",
+            "models/stats/driver_points.sql",
+            "models/stats/driver_pole_positions_by_season.sql",
+            "models/stats/driver_retirements_by_season.sql",
+            "models/stats/driver_wins_by_season.sql",
+            "models/stats/finishes_by_constructor.sql",
+            "models/stats/finishes_by_driver.sql",
+            "models/stats/most_fastest_laps.sql",
+            "models/stats/most_laps.sql",
+            "models/stats/most_podiums.sql",
+            "models/stats/most_pole_positions.sql",
+            "models/stats/most_races.sql",
+            "models/stats/most_retirements.sql",
+            "models/stats/most_wins.sql",
+            "models/stats/oldest_race_winners_in_modern_era.sql"
+          ],
+          "sql_file_counts": [
+            52,
+            53
+          ],
+          "tasks": [
+            "ade__ade-bench-f1010",
+            "ade__ade-bench-f1011"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [
+            "models/stats/constructor_championships.sql",
+            "models/stats/constructor_fastest_laps_by_season.sql",
+            "models/stats/constructor_podiums_by_season.sql",
+            "models/stats/constructor_points.sql",
+            "models/stats/constructor_pole_positions_by_season.sql",
+            "models/stats/constructor_retirements_by_season.sql",
+            "models/stats/constructor_wins_by_season.sql",
+            "models/stats/construtor_drivers_championships.sql",
+            "models/stats/driver_championships.sql",
+            "models/stats/driver_fastest_laps_by_season.sql",
+            "models/stats/driver_podiums_by_season.sql",
+            "models/stats/driver_points.sql",
+            "models/stats/driver_pole_positions_by_season.sql",
+            "models/stats/driver_retirements_by_season.sql",
+            "models/stats/driver_wins_by_season.sql",
+            "models/stats/most_laps.sql",
+            "models/stats/most_retirements.sql",
+            "models/stats/most_wins.sql",
+            "models/stats/oldest_race_winners_in_modern_era.sql"
+          ],
+          "sql_file_counts": [
+            52,
+            34
+          ],
+          "tasks": [
+            "ade__ade-bench-f1010",
+            "spider2__f1001"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [
+            "models/stats/constructor_fastest_laps_by_season.sql",
+            "models/stats/constructor_podiums_by_season.sql",
+            "models/stats/constructor_points.sql",
+            "models/stats/constructor_pole_positions_by_season.sql",
+            "models/stats/constructor_retirements_by_season.sql",
+            "models/stats/constructor_wins_by_season.sql",
+            "models/stats/construtor_drivers_championships.sql",
+            "models/stats/driver_fastest_laps_by_season.sql",
+            "models/stats/driver_podiums_by_season.sql",
+            "models/stats/driver_points.sql",
+            "models/stats/driver_pole_positions_by_season.sql",
+            "models/stats/driver_retirements_by_season.sql",
+            "models/stats/driver_wins_by_season.sql",
+            "models/stats/most_laps.sql",
+            "models/stats/oldest_race_winners_in_modern_era.sql"
+          ],
+          "sql_file_counts": [
+            52,
+            30
+          ],
+          "tasks": [
+            "ade__ade-bench-f1010",
+            "spider2__f1002"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [
+            "models/core/src_circuits.sql",
+            "models/core/src_constructor_results.sql",
+            "models/core/src_constructor_standings.sql",
+            "models/core/src_constructors.sql",
+            "models/core/src_driver_standings.sql",
+            "models/core/src_drivers.sql",
+            "models/core/src_lap_times.sql",
+            "models/core/src_pit_stops.sql",
+            "models/core/src_position_descriptions.sql",
+            "models/core/src_qualifying.sql",
+            "models/core/src_races.sql",
+            "models/core/src_results.sql",
+            "models/core/src_seasons.sql",
+            "models/core/src_status.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__circuits.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructor_results.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructor_standings.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructors.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__driver_standings.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__drivers.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__lap_times.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__pit_stops.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__qualifying.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__races.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__results.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__seasons.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__status.sql",
+            "models/stats/constructor_championships.sql",
+            "models/stats/constructor_fastest_laps_by_season.sql",
+            "models/stats/constructor_podiums_by_season.sql",
+            "models/stats/constructor_points.sql",
+            "models/stats/constructor_pole_positions_by_season.sql",
+            "models/stats/constructor_retirements_by_season.sql",
+            "models/stats/constructor_wins_by_season.sql",
+            "models/stats/construtor_drivers_championships.sql",
+            "models/stats/driver_championships.sql",
+            "models/stats/driver_fastest_laps_by_season.sql",
+            "models/stats/driver_podiums_by_season.sql",
+            "models/stats/driver_points.sql",
+            "models/stats/driver_pole_positions_by_season.sql",
+            "models/stats/driver_retirements_by_season.sql",
+            "models/stats/driver_wins_by_season.sql",
+            "models/stats/finishes_by_constructor.sql",
+            "models/stats/finishes_by_driver.sql",
+            "models/stats/most_fastest_laps.sql",
+            "models/stats/most_laps.sql",
+            "models/stats/most_podiums.sql",
+            "models/stats/most_pole_positions.sql",
+            "models/stats/most_races.sql",
+            "models/stats/most_retirements.sql",
+            "models/stats/most_wins.sql",
+            "models/stats/oldest_race_winners_in_modern_era.sql"
+          ],
+          "sql_file_counts": [
+            52,
+            53
+          ],
+          "tasks": [
+            "ade__ade-bench-f1010-medium",
+            "ade__ade-bench-f1011"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [
+            "models/stats/constructor_championships.sql",
+            "models/stats/constructor_fastest_laps_by_season.sql",
+            "models/stats/constructor_podiums_by_season.sql",
+            "models/stats/constructor_points.sql",
+            "models/stats/constructor_pole_positions_by_season.sql",
+            "models/stats/constructor_retirements_by_season.sql",
+            "models/stats/constructor_wins_by_season.sql",
+            "models/stats/construtor_drivers_championships.sql",
+            "models/stats/driver_championships.sql",
+            "models/stats/driver_fastest_laps_by_season.sql",
+            "models/stats/driver_podiums_by_season.sql",
+            "models/stats/driver_points.sql",
+            "models/stats/driver_pole_positions_by_season.sql",
+            "models/stats/driver_retirements_by_season.sql",
+            "models/stats/driver_wins_by_season.sql",
+            "models/stats/most_laps.sql",
+            "models/stats/most_retirements.sql",
+            "models/stats/most_wins.sql",
+            "models/stats/oldest_race_winners_in_modern_era.sql"
+          ],
+          "sql_file_counts": [
+            52,
+            34
+          ],
+          "tasks": [
+            "ade__ade-bench-f1010-medium",
+            "spider2__f1001"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [
+            "models/stats/constructor_fastest_laps_by_season.sql",
+            "models/stats/constructor_podiums_by_season.sql",
+            "models/stats/constructor_points.sql",
+            "models/stats/constructor_pole_positions_by_season.sql",
+            "models/stats/constructor_retirements_by_season.sql",
+            "models/stats/constructor_wins_by_season.sql",
+            "models/stats/construtor_drivers_championships.sql",
+            "models/stats/driver_fastest_laps_by_season.sql",
+            "models/stats/driver_podiums_by_season.sql",
+            "models/stats/driver_points.sql",
+            "models/stats/driver_pole_positions_by_season.sql",
+            "models/stats/driver_retirements_by_season.sql",
+            "models/stats/driver_wins_by_season.sql",
+            "models/stats/most_laps.sql",
+            "models/stats/oldest_race_winners_in_modern_era.sql"
+          ],
+          "sql_file_counts": [
+            52,
+            30
+          ],
+          "tasks": [
+            "ade__ade-bench-f1010-medium",
+            "spider2__f1002"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [
+            "models/stats/constructor_championships.sql",
+            "models/stats/constructor_fastest_laps_by_season.sql",
+            "models/stats/constructor_podiums_by_season.sql",
+            "models/stats/constructor_points.sql",
+            "models/stats/constructor_pole_positions_by_season.sql",
+            "models/stats/constructor_retirements_by_season.sql",
+            "models/stats/constructor_wins_by_season.sql",
+            "models/stats/construtor_drivers_championships.sql",
+            "models/stats/driver_championships.sql",
+            "models/stats/driver_fastest_laps_by_season.sql",
+            "models/stats/driver_podiums_by_season.sql",
+            "models/stats/driver_points.sql",
+            "models/stats/driver_pole_positions_by_season.sql",
+            "models/stats/driver_retirements_by_season.sql",
+            "models/stats/driver_wins_by_season.sql",
+            "models/stats/most_laps.sql",
+            "models/stats/most_retirements.sql",
+            "models/stats/most_wins.sql",
+            "models/stats/oldest_race_winners_in_modern_era.sql"
+          ],
+          "sql_file_counts": [
+            53,
+            34
+          ],
+          "tasks": [
+            "ade__ade-bench-f1011",
+            "spider2__f1001"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [
+            "models/stats/constructor_fastest_laps_by_season.sql",
+            "models/stats/constructor_podiums_by_season.sql",
+            "models/stats/constructor_points.sql",
+            "models/stats/constructor_pole_positions_by_season.sql",
+            "models/stats/constructor_retirements_by_season.sql",
+            "models/stats/constructor_wins_by_season.sql",
+            "models/stats/construtor_drivers_championships.sql",
+            "models/stats/driver_fastest_laps_by_season.sql",
+            "models/stats/driver_podiums_by_season.sql",
+            "models/stats/driver_points.sql",
+            "models/stats/driver_pole_positions_by_season.sql",
+            "models/stats/driver_retirements_by_season.sql",
+            "models/stats/driver_wins_by_season.sql",
+            "models/stats/most_laps.sql",
+            "models/stats/oldest_race_winners_in_modern_era.sql"
+          ],
+          "sql_file_counts": [
+            53,
+            30
+          ],
+          "tasks": [
+            "ade__ade-bench-f1011",
+            "spider2__f1002"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [
+            "models/staging/f1_dataset/stg_f1_dataset__circuits.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructor_results.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructor_standings.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__constructors.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__driver_standings.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__drivers.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__lap_times.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__pit_stops.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__qualifying.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__races.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__results.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__seasons.sql",
+            "models/staging/f1_dataset/stg_f1_dataset__status.sql",
+            "models/stats/constructor_fastest_laps_by_season.sql",
+            "models/stats/constructor_podiums_by_season.sql",
+            "models/stats/constructor_points.sql",
+            "models/stats/constructor_pole_positions_by_season.sql",
+            "models/stats/constructor_retirements_by_season.sql",
+            "models/stats/constructor_wins_by_season.sql",
+            "models/stats/construtor_drivers_championships.sql",
+            "models/stats/driver_fastest_laps_by_season.sql",
+            "models/stats/driver_podiums_by_season.sql",
+            "models/stats/driver_points.sql",
+            "models/stats/driver_pole_positions_by_season.sql",
+            "models/stats/driver_retirements_by_season.sql",
+            "models/stats/driver_wins_by_season.sql",
+            "models/stats/most_laps.sql",
+            "models/stats/most_races.sql",
+            "models/stats/oldest_race_winners_in_modern_era.sql"
+          ],
+          "sql_file_counts": [
+            34,
+            30
+          ],
+          "tasks": [
+            "spider2__f1001",
+            "spider2__f1002"
+          ]
+        }
+      ],
+      "members": [
+        "ade__ade-bench-f1002",
+        "ade__ade-bench-f1003",
+        "ade__ade-bench-f1003-hard",
+        "ade__ade-bench-f1009",
+        "ade__ade-bench-f1010",
+        "ade__ade-bench-f1010-medium",
+        "ade__ade-bench-f1011",
+        "spider2__f1001",
+        "spider2__f1002"
+      ],
+      "rationale": "ADE f1002 schema explicitly requests finishes_by_driver, most_fastest_laps, most_podiums and most_pole_positions. Those four model paths are absent in both its initialized project and Spider f1001, whose prompt requests those driver statistics. Both f1003 variants diagnose unstable top-N results; both f1010 variants construct lap-time summaries. f1011 requests a diagnostic answer table, not a SQL repair. The wider project group contains distinct objectives and does not assert every pair is an exact duplicate."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "data_equivalence": "not_certified",
+      "decision": "proposed_conservative_same_split_group",
+      "exact_answer_equivalence": "not_claimed",
+      "id": "shared-intercom-project",
+      "initialized_sql_overlap": [
+        {
+          "identical_initialized_sql_paths": [],
+          "sql_file_counts": [
+            0,
+            0
+          ],
+          "tasks": [
+            "ade__ade-bench-intercom001",
+            "ade__ade-bench-intercom002"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [],
+          "sql_file_counts": [
+            0,
+            0
+          ],
+          "tasks": [
+            "ade__ade-bench-intercom001",
+            "ade__ade-bench-intercom003"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [],
+          "sql_file_counts": [
+            0,
+            7
+          ],
+          "tasks": [
+            "ade__ade-bench-intercom001",
+            "spider2__intercom001"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [],
+          "sql_file_counts": [
+            0,
+            0
+          ],
+          "tasks": [
+            "ade__ade-bench-intercom002",
+            "ade__ade-bench-intercom003"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [],
+          "sql_file_counts": [
+            0,
+            7
+          ],
+          "tasks": [
+            "ade__ade-bench-intercom002",
+            "spider2__intercom001"
+          ]
+        },
+        {
+          "identical_initialized_sql_paths": [],
+          "sql_file_counts": [
+            0,
+            7
+          ],
+          "tasks": [
+            "ade__ade-bench-intercom003",
+            "spider2__intercom001"
+          ]
+        }
+      ],
+      "members": [
+        "ade__ade-bench-intercom001",
+        "ade__ade-bench-intercom002",
+        "ade__ade-bench-intercom003",
+        "spider2__intercom001"
+      ],
+      "rationale": "All three ADE setups remove local models. 001 requests threads, 002 threads plus conversation metrics, and 003 conversation metrics; the requirements overlap by explicit instruction. Spider begins with seven related conversation/company/contact models and requests admin/team closed-conversation metrics. The same raw project files do not imply the same initialized task or output answer."
+    }
+  ],
+  "frozen": false,
+  "historical_original": {
+    "path": "validation/evidence/cross-source-family-review-v1.json",
+    "sha256": "8a90519bf70f4886971118631c2bb8ef8371cb43a60014c6a47991ddb2e02f90"
+  },
+  "inspection_summary": {
+    "path": "artifacts/validation/catalog-family-review-v1/initialized-projects/summary.json",
+    "sha256": "dff75f4e771909c5c4a33df8e25e16d2d60d6fe711567defe2436bf69a4a527f"
+  },
+  "limitations": [
+    "No new verifier certification or successful benchmark trial.",
+    "Only initialized project file contents were inspected; database sizes do not prove content equivalence.",
+    "All 22 currently belong to train. No new holdout-generalization claim.",
+    "DEB shared warehouse, remaining Spider project relations, and full historical exposure review remain unfinished.",
+    "Family groups are proposals for the later complete split review, not an automatic eligibility override."
+  ],
+  "prompt_variants": [
+    {
+      "database_logical_equivalence": "not_newly_checked_by_this_review",
+      "files": 54,
+      "initialized_model_files_identical": true,
+      "relation": "prompt_variant_must_group",
+      "tasks": [
+        "ade__ade-bench-f1003",
+        "ade__ade-bench-f1003-hard"
+      ]
+    },
+    {
+      "database_logical_equivalence": "not_newly_checked_by_this_review",
+      "files": 54,
+      "initialized_model_files_identical": true,
+      "relation": "prompt_variant_must_group",
+      "tasks": [
+        "ade__ade-bench-f1010",
+        "ade__ade-bench-f1010-medium"
+      ]
+    }
+  ],
+  "remaining_family_review_tasks": 113,
+  "review_script": {
+    "path": "artifacts/validation/catalog-family-review-v1/record_cross_source_review.py",
+    "sha256": "f210cc2b28f695b60472e1a7b2c456dbc95e887675ab0554a28f01252199b511"
+  },
+  "review_status": "partial_22_of_135",
+  "review_version": "cross-source-family-review-v1",
+  "reviewed_tasks": 22,
+  "schema_version": 1,
+  "source_catalog": {
+    "path": "catalog/history/v1-legacy-provisional/tasks.jsonl",
+    "sha256": "107dd7b2519cc959292b5ce3716a85d31b8b507d00188a6da60d5ad6bacc3586"
+  },
+  "source_split": {
+    "path": "catalog/history/v1-legacy-provisional/splits.json",
+    "sha256": "0cd524ad1ed466a642c56d0537cfef0c93f4efa5b067696e482a5ffc3c2e0f1b"
+  },
+  "tasks": [
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/ade__ade-bench-airbnb005.json",
+        "sha256": "8307dba8de4a6cb9d76bc0231db919523d074c6e0450b687436dba32735c9d6e"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/ade-airbnb005.sif",
+        "sha256": "160728f316d95cb59f32f5aa26edea65a9f7ee4934321c9d5daf534da5dc1e02"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/initialized-projects/ade__ade-bench-airbnb005.stdout.json",
+        "sha256": "aa5b859950d9234039b1c99ea29421ec4b694c122c9b0adc342a6fde78b8444f"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_summary": "Daily 28-day and listing-level NPS",
+      "project_family": "shared-airbnb-project",
+      "sources": [
+        {
+          "path": "tasks/ade__ade-bench-airbnb005/instruction.md",
+          "sha256": "5594e67005c68e9d7cc55a0b39e41d2ad392f2b1c59c96044e92a4b1eacfcd3b"
+        },
+        {
+          "path": "tasks/ade__ade-bench-airbnb005/environment/setup.sh",
+          "sha256": "20fb70fc1783b496c7bacdcc5b04993fb4114d5c0d8e9e70179334947d83ee68"
+        }
+      ],
+      "task_key": "ade__ade-bench-airbnb005",
+      "workflow": "add_models",
+      "workflow_scope": "Instruction-level classification only; full semantic contract coverage remains separate"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/ade__ade-bench-airbnb007.json",
+        "sha256": "1c98f4a1a784fc77a38a98369623b49fcdde1529ea44842fa2794e93de1e9fb9"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/ade-native-setup-batch-v1/ade__ade-bench-airbnb007/task.sif",
+        "sha256": "42d7d63a51a7293b77164e61effb6a2732b483116fccb7e422edc86e0d0d37fa"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/initialized-projects/ade__ade-bench-airbnb007.stdout.json",
+        "sha256": "067581ecdb30341545d0b1a2ef13cc6c7bfdb4e1a4dc81318baf8d5047d695ca"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_summary": "NPS plus listing/host dimensions and review fact",
+      "project_family": "shared-airbnb-project",
+      "sources": [
+        {
+          "path": "tasks/ade__ade-bench-airbnb007/instruction.md",
+          "sha256": "2ec4f1f29ec94026765bddd7bd92dc61489a6e0388ee5035096bb1f45db58704"
+        },
+        {
+          "path": "tasks/ade__ade-bench-airbnb007/environment/setup.sh",
+          "sha256": "0fccea3d8112ed24f531a8412235f720dd89eec26405fe0796e329a86264331d"
+        }
+      ],
+      "task_key": "ade__ade-bench-airbnb007",
+      "workflow": "build_models_from_schema",
+      "workflow_scope": "Instruction-level classification only; full semantic contract coverage remains separate"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/ade__ade-bench-ana-eng003.json",
+        "sha256": "adf0ea58aa4af6e2afd0504800be71b335508b05c8c228eaf1fe61ae4fcd506c"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/ade-native-setup-batch-v1/ade__ade-bench-ana-eng003/task.sif",
+        "sha256": "5a996aeed7efc0e024b07224e730dde4bbd8317ef0a42968d997319a10bf45a7"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/initialized-projects/ade__ade-bench-ana-eng003.stdout.json",
+        "sha256": "82a846ba98965bad11675aa3f7675b9742b50e10dff3bfcb7f00a0d85dacd35a"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_summary": "Unique customer dimension with renamed customer_id",
+      "project_family": "shared-northwind-analytics-engineering-project",
+      "sources": [
+        {
+          "path": "tasks/ade__ade-bench-ana-eng003/instruction.md",
+          "sha256": "777f45a775bf0be7a97a16bf1f8f6436111aee3cb33925eb4169b00d0eaac6f2"
+        },
+        {
+          "path": "tasks/ade__ade-bench-ana-eng003/environment/setup.sh",
+          "sha256": "c6ade567761d11dd8183f0b192f0041d7c0ae86484c661132091821964af62a6"
+        }
+      ],
+      "task_key": "ade__ade-bench-ana-eng003",
+      "workflow": "add_model",
+      "workflow_scope": "Instruction-level classification only; full semantic contract coverage remains separate"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/ade__ade-bench-ana-eng004.json",
+        "sha256": "b261a6c77f6a329e671058bc054626f61f76365b05100fc3c040e5697c17c588"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/ade-native-setup-batch-v1/ade__ade-bench-ana-eng004/task.sif",
+        "sha256": "ed545cfe3c0ed6e53808db3c07759341b0b5f25f751173033d21578ef726330e"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/initialized-projects/ade__ade-bench-ana-eng004.stdout.json",
+        "sha256": "8c7a0693e8ad25c6989b6fd1497b978394c052a0efdc538ca5d545c9ca2d5a01"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_summary": "Inventory enriched with product details",
+      "project_family": "shared-northwind-analytics-engineering-project",
+      "sources": [
+        {
+          "path": "tasks/ade__ade-bench-ana-eng004/instruction.md",
+          "sha256": "3b81cfffbf8949d48f933e24a8c73a88d4c50f84b5c6f78f1754fd1308974ba8"
+        },
+        {
+          "path": "tasks/ade__ade-bench-ana-eng004/environment/setup.sh",
+          "sha256": "7ccea8438aa8f8870ad3aa504143eea77b7dc6fdfb8d79c6da92d03e6a65942c"
+        }
+      ],
+      "task_key": "ade__ade-bench-ana-eng004",
+      "workflow": "add_model",
+      "workflow_scope": "Instruction-level classification only; full semantic contract coverage remains separate"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/ade__ade-bench-ana-eng005.json",
+        "sha256": "a4901c74474a7bed0ec5812a891074a68dd7974706acf39b8b41d10dae4623c4"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/ade-native-setup-batch-v1/ade__ade-bench-ana-eng005/task.sif",
+        "sha256": "4bff1adede909e8d8b3dee3d8ccd06ece66984ddde1d4da5bbae3e87eedd34e0"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/initialized-projects/ade__ade-bench-ana-eng005.stdout.json",
+        "sha256": "70f501f9c805d1c8797274beeaf38b87239c0f887b11a84be5fa3e122e76da14"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_summary": "Unique inventory_id in fact_inventory",
+      "project_family": "shared-northwind-analytics-engineering-project",
+      "sources": [
+        {
+          "path": "tasks/ade__ade-bench-ana-eng005/instruction.md",
+          "sha256": "34191cba4543a0b4ef8de573fbef2337fd70fd73212229d368678564f559cc46"
+        },
+        {
+          "path": "tasks/ade__ade-bench-ana-eng005/environment/setup.sh",
+          "sha256": "30359eee3a550f288cfd586e14ce47cb16783001de20b2d83665a83ef223f0aa"
+        }
+      ],
+      "task_key": "ade__ade-bench-ana-eng005",
+      "workflow": "repair_grain",
+      "workflow_scope": "Instruction-level classification only; full semantic contract coverage remains separate"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/ade__ade-bench-ana-eng006.json",
+        "sha256": "6eae1dd6853d188914dec4b91a7656752cdc14fd7b129b8ca1e08da9309a8c1e"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/ade-native-setup-batch-v1/ade__ade-bench-ana-eng006/task.sif",
+        "sha256": "3d2b6f9cce89028222fcda9040da2d0ebd608d4bb39e4d5323b4ee7785acc68c"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/initialized-projects/ade__ade-bench-ana-eng006.stdout.json",
+        "sha256": "ed64af3c9576cfbd48030f2fc292c1ab8b9c30a5bf52abf9806c2a1af54c8137"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_summary": "Product dimension and unique inventory fact/enrichment",
+      "project_family": "shared-northwind-analytics-engineering-project",
+      "sources": [
+        {
+          "path": "tasks/ade__ade-bench-ana-eng006/instruction.md",
+          "sha256": "2f4f8d9853d9553004dfa4c36ab5140315226f27890837f1224590985ea0c29c"
+        },
+        {
+          "path": "tasks/ade__ade-bench-ana-eng006/environment/setup.sh",
+          "sha256": "09112fc45a895ab24a878d9b8f503b1b624fa0d980377ec19f991aa6c3e4732b"
+        }
+      ],
+      "task_key": "ade__ade-bench-ana-eng006",
+      "workflow": "build_models_and_repair_grain",
+      "workflow_scope": "Instruction-level classification only; full semantic contract coverage remains separate"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/ade__ade-bench-f1002.json",
+        "sha256": "3be7204a8c13a4628a870a8b7ca711a54f084f2161b3c01d60e35c37bb273cc2"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/ade-native-setup-batch-v1/ade__ade-bench-f1002/task.sif",
+        "sha256": "15dd13268420adefc05afaa814b1d004181958e2a2b779e36b6ee50fd7118d66"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/initialized-projects/ade__ade-bench-f1002.stdout.json",
+        "sha256": "c530180a18d758328ec912d6eacdc9c08e4d95952110827b113a937ed63503b3"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_summary": "Four driver statistics models",
+      "project_family": "shared-f1-project",
+      "sources": [
+        {
+          "path": "tasks/ade__ade-bench-f1002/instruction.md",
+          "sha256": "de3722c2a197994a3ea3dcf901eeb2e9bae48293bd127479e0bdde4408992929"
+        },
+        {
+          "path": "tasks/ade__ade-bench-f1002/environment/setup.sh",
+          "sha256": "ec8ae0cdc633b1c977c57431d0fac67142594688752ad5cb93fecbb28f823a1d"
+        }
+      ],
+      "task_key": "ade__ade-bench-f1002",
+      "workflow": "build_models_from_schema",
+      "workflow_scope": "Instruction-level classification only; full semantic contract coverage remains separate"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/ade__ade-bench-f1003.json",
+        "sha256": "0753a2eb8da55ac5e107f70750c67449c9c2686099427705fc096eacd99d3025"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/ade-native-setup-pilot-v1/ade__ade-bench-f1003/task.sif",
+        "sha256": "674da519863ff4d1941529e9cee5eecb2ee12f7c926b39a2bc49f46a882cc7af"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/initialized-projects/ade__ade-bench-f1003.stdout.json",
+        "sha256": "3aab69be43dba242e593d17a0790fccc78ba5dc1903756acb52b3ac01e555345"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_summary": "Identify currently unstable top-N models",
+      "project_family": "shared-f1-project",
+      "sources": [
+        {
+          "path": "tasks/ade__ade-bench-f1003/instruction.md",
+          "sha256": "9fdf9734aed9000b8f76b90dabf84efe4a2d478c29374f0567291f1250151b47"
+        },
+        {
+          "path": "tasks/ade__ade-bench-f1003/environment/setup.sh",
+          "sha256": "3667bb6922c0f881f5357826a9130fcce94a7144915ea65dfa472e65ae3b2049"
+        }
+      ],
+      "task_key": "ade__ade-bench-f1003",
+      "workflow": "diagnose_and_submit_answer_model",
+      "workflow_scope": "Instruction-level classification only; full semantic contract coverage remains separate"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/ade__ade-bench-f1003-hard.json",
+        "sha256": "0b46632b74deb4e8fbb8c29342aeb76919df7a56867a3d589bffc44dbb435086"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/ade-native-setup-batch-v1/ade__ade-bench-f1003-hard/task.sif",
+        "sha256": "c5485eddd674a9bc424627f23eb99f3854f1608094988b1ebbd2c749eec1cb7c"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/initialized-projects/ade__ade-bench-f1003-hard.stdout.json",
+        "sha256": "3aab69be43dba242e593d17a0790fccc78ba5dc1903756acb52b3ac01e555345"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_summary": "Same top-N diagnosis, without explicit ties hint",
+      "project_family": "shared-f1-project",
+      "sources": [
+        {
+          "path": "tasks/ade__ade-bench-f1003-hard/instruction.md",
+          "sha256": "5d2a87ac93571f32e1ce7153281d329dcb9b9928690c09da9b467e7c51451a77"
+        },
+        {
+          "path": "tasks/ade__ade-bench-f1003-hard/environment/setup.sh",
+          "sha256": "3667bb6922c0f881f5357826a9130fcce94a7144915ea65dfa472e65ae3b2049"
+        }
+      ],
+      "task_key": "ade__ade-bench-f1003-hard",
+      "workflow": "diagnose_and_submit_answer_model",
+      "workflow_scope": "Instruction-level classification only; full semantic contract coverage remains separate"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/ade__ade-bench-f1009.json",
+        "sha256": "38769e670758475a27d6c3556a5bb5ae134466a9d8c24cdafe9e163fcf106cb3"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/ade-setup-deps-repair-v1/ade__ade-bench-f1009/task.sif",
+        "sha256": "ce47a9e6ed2defaac646b2bbb002d0eaf3fc3d8873a8342187d8b9fd4e521fd0"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/initialized-projects/ade__ade-bench-f1009.stdout.json",
+        "sha256": "9e4c05e6b5267aa632016e1a543486901d97174b00a621862deae6214f2edff7"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_summary": "Current driver age histogram",
+      "project_family": "shared-f1-project",
+      "sources": [
+        {
+          "path": "tasks/ade__ade-bench-f1009/instruction.md",
+          "sha256": "02de4c8fe4e5f512a0024b9ed7925aee655bb644d8a017d6a886b2e0fd7e3819"
+        },
+        {
+          "path": "tasks/ade__ade-bench-f1009/environment/setup.sh",
+          "sha256": "bbf05bc067360615885c8e28d14e76824e7b5e4e110227f88c674f26810692bc"
+        }
+      ],
+      "task_key": "ade__ade-bench-f1009",
+      "workflow": "add_model",
+      "workflow_scope": "Instruction-level classification only; full semantic contract coverage remains separate"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/ade__ade-bench-f1010.json",
+        "sha256": "6ac0c6793dc5bf66dc46635cfb51edd4a06781e3330284a487f0e92d8a26c548"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/ade-setup-deps-repair-v1/ade__ade-bench-f1010/task.sif",
+        "sha256": "41c1f547462abe50f1149b412045e0bf5d96e8e3bfacfe5b775dc258e261c7ea"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/initialized-projects/ade__ade-bench-f1010.stdout.json",
+        "sha256": "e127b2cb069ebc808ecce9f77164ca18ccb1ffd577eae9385fa19db1d1ed5d18"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_summary": "Track/year lap-time summary",
+      "project_family": "shared-f1-project",
+      "sources": [
+        {
+          "path": "tasks/ade__ade-bench-f1010/instruction.md",
+          "sha256": "79d9ba2cb86cb913d52361e31a5ebaed6b6662bcedcc1da0bdb62c097a24d18e"
+        },
+        {
+          "path": "tasks/ade__ade-bench-f1010/environment/setup.sh",
+          "sha256": "bbf05bc067360615885c8e28d14e76824e7b5e4e110227f88c674f26810692bc"
+        }
+      ],
+      "task_key": "ade__ade-bench-f1010",
+      "workflow": "add_model",
+      "workflow_scope": "Instruction-level classification only; full semantic contract coverage remains separate"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/ade__ade-bench-f1010-medium.json",
+        "sha256": "c972ca776ce49315833d7e778bbf4631ec3bbcb3ac6a56c9b9523bc16ae12ea3"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/ade-setup-deps-repair-v1/ade__ade-bench-f1010-medium/task.sif",
+        "sha256": "c26a3cab660b455cd95f446cea80c8c866faa64c58fefdd12b3f6ec3dc405769"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/initialized-projects/ade__ade-bench-f1010-medium.stdout.json",
+        "sha256": "ecaff35724b475901f2076797be2980b96352222f877b405ddb7413fc79b7bc8"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_summary": "Track/year lap-time summary with explicit pit-stop requirement",
+      "project_family": "shared-f1-project",
+      "sources": [
+        {
+          "path": "tasks/ade__ade-bench-f1010-medium/instruction.md",
+          "sha256": "6c30fb6130eebc27c0a4b37927364f53cfe5f145945414d7a722c53ab72a7863"
+        },
+        {
+          "path": "tasks/ade__ade-bench-f1010-medium/environment/setup.sh",
+          "sha256": "bbf05bc067360615885c8e28d14e76824e7b5e4e110227f88c674f26810692bc"
+        }
+      ],
+      "task_key": "ade__ade-bench-f1010-medium",
+      "workflow": "add_model",
+      "workflow_scope": "Instruction-level classification only; full semantic contract coverage remains separate"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/ade__ade-bench-f1011.json",
+        "sha256": "ed64e5c681b5bb2183e7971d3ff8214cea724c42115c02aa30fcac9150842dac"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/ade-setup-deps-repair-v1/ade__ade-bench-f1011/task.sif",
+        "sha256": "4b63c74af2f2816318325d37558bd5934bd71988816d1fbc6c15e48ee39bc0a1"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/initialized-projects/ade__ade-bench-f1011.stdout.json",
+        "sha256": "a08c97126270e7bd27230bc9fce8fef20b2a1c304abec1f7956a30d989abe871"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_summary": "Choose problems in supplied adjusted lap-time analysis",
+      "project_family": "shared-f1-project",
+      "sources": [
+        {
+          "path": "tasks/ade__ade-bench-f1011/instruction.md",
+          "sha256": "e361e7287ec249607f6f21f1b74514ae609746ae5280103873ad307478e369c7"
+        },
+        {
+          "path": "tasks/ade__ade-bench-f1011/environment/setup.sh",
+          "sha256": "7ab70ddf507058d8817382124353178bd7c440fdc98ed2febd7a37644d7a8bea"
+        }
+      ],
+      "task_key": "ade__ade-bench-f1011",
+      "workflow": "diagnose_and_submit_answer_model",
+      "workflow_scope": "Instruction-level classification only; full semantic contract coverage remains separate"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/ade__ade-bench-intercom001.json",
+        "sha256": "39a6add9907357447d668a86095ddb53678c821ad0917616eeb938080e6c8ae2"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/ade-native-setup-batch-v1/ade__ade-bench-intercom001/task.sif",
+        "sha256": "7dd21401d98cb1ecb758d4510cf0430116dbca24d9a9b77d6e898f746ddb054d"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/initialized-projects/ade__ade-bench-intercom001.stdout.json",
+        "sha256": "7f04f79400d0b60b805cace445dd4294af6b312c0515bbf1230a25d3106be92f"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_summary": "Conversation thread aggregation",
+      "project_family": "shared-intercom-project",
+      "sources": [
+        {
+          "path": "tasks/ade__ade-bench-intercom001/instruction.md",
+          "sha256": "b5e2e1e3050f4a62b887e4467b7cbf3f0f90309c99445867dba00d1635d4cff3"
+        },
+        {
+          "path": "tasks/ade__ade-bench-intercom001/environment/setup.sh",
+          "sha256": "95b456c3651b7783870abf8a4596a14a12ec8d9d4ffd0e1608c6ee23e16f08e6"
+        }
+      ],
+      "task_key": "ade__ade-bench-intercom001",
+      "workflow": "add_model",
+      "workflow_scope": "Instruction-level classification only; full semantic contract coverage remains separate"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/ade__ade-bench-intercom002.json",
+        "sha256": "d1eb34d64bc5a59f83415eda472c805175f6a75f5f30a700a459f9be2b162b6f"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/ade-native-setup-batch-v1/ade__ade-bench-intercom002/task.sif",
+        "sha256": "3b3737a8352f18cc1655f8656918c71e50f5271a99d4b6daef3b827ab975c713"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/initialized-projects/ade__ade-bench-intercom002.stdout.json",
+        "sha256": "ad1f3d86c231a3abe2037092f8ee3ca2e10437523920ccbc6f78c7dcae61f323"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_summary": "Threads and conversation response/closure metrics",
+      "project_family": "shared-intercom-project",
+      "sources": [
+        {
+          "path": "tasks/ade__ade-bench-intercom002/instruction.md",
+          "sha256": "f66bc469821c71292e8afa337ec494ab75ac5b09dfd26717d8699a8d5c4fdd8f"
+        },
+        {
+          "path": "tasks/ade__ade-bench-intercom002/environment/setup.sh",
+          "sha256": "95b456c3651b7783870abf8a4596a14a12ec8d9d4ffd0e1608c6ee23e16f08e6"
+        }
+      ],
+      "task_key": "ade__ade-bench-intercom002",
+      "workflow": "add_models",
+      "workflow_scope": "Instruction-level classification only; full semantic contract coverage remains separate"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/ade__ade-bench-intercom003.json",
+        "sha256": "2897e4c34d30d105353bff9e6dd8b0ef9c80a2e2d9925fee2b23c17e9308569f"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/ade-native-setup-batch-v1/ade__ade-bench-intercom003/task.sif",
+        "sha256": "724a26e1d5e58d1aada9913bf4c6418355d0b693752e8f31a7de6941e0bed513"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/initialized-projects/ade__ade-bench-intercom003.stdout.json",
+        "sha256": "8cfb3b5f00b93a5846da10228253d46834ca30eb84b44d4eba39a525a87f5562"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_summary": "Conversation response/closure metrics",
+      "project_family": "shared-intercom-project",
+      "sources": [
+        {
+          "path": "tasks/ade__ade-bench-intercom003/instruction.md",
+          "sha256": "85b37992c7cf5402423ab1ae9f7d5212fee9280529f1f25452f6d61af0b4c853"
+        },
+        {
+          "path": "tasks/ade__ade-bench-intercom003/environment/setup.sh",
+          "sha256": "95b456c3651b7783870abf8a4596a14a12ec8d9d4ffd0e1608c6ee23e16f08e6"
+        }
+      ],
+      "task_key": "ade__ade-bench-intercom003",
+      "workflow": "add_model",
+      "workflow_scope": "Instruction-level classification only; full semantic contract coverage remains separate"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__airbnb001.json",
+        "sha256": "b1d8c7852fa95e6989c3bcf81f7cd4b0c6ee14158925275a509b75f09902f7c5"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-frozen-deps-batch-v1/spider2__airbnb001/task.sif",
+        "sha256": "4bf6c7ed7a8d563c347bc7037e62fee0b2721979343b0802332bf577e55f8509"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/initialized-projects/spider2__airbnb001.stdout.json",
+        "sha256": "af0dde442b20821b3b130a14ba255314261ca5da98a9cddf1700de276a1d16c0"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_summary": "Daily/monthly sentiment and listing-host updates",
+      "project_family": "shared-airbnb-project",
+      "sources": [
+        {
+          "path": "tasks/spider2__airbnb001/instruction.md",
+          "sha256": "5acf88343ed40c830ce9f218e314a091a8d167d9ad24a8981142878b3e53e8dc"
+        }
+      ],
+      "task_key": "spider2__airbnb001",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Instruction-level classification only; full semantic contract coverage remains separate"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__airbnb002.json",
+        "sha256": "5cead38c6264eb24871cccd899b0b78a860141206a37337b5a775ded73fcd4fd"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-frozen-deps-batch-v1/spider2__airbnb002/task.sif",
+        "sha256": "44a0bf9757768e730199ca1d87d6d7059d47bac2c40be9356f015d8679fb3db2"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/initialized-projects/spider2__airbnb002.stdout.json",
+        "sha256": "7efa579c18967bc3dc6cdbc2e892b9734341758443f48b36eb0bf36ece3b3dea"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_summary": "Seven-day sentiment windows and week-over-week changes",
+      "project_family": "shared-airbnb-project",
+      "sources": [
+        {
+          "path": "tasks/spider2__airbnb002/instruction.md",
+          "sha256": "4ebd8a7ddb4eb10e0c4b167e55dd357a85f54a0d721dbf152d5a9ea2bdf54954"
+        }
+      ],
+      "task_key": "spider2__airbnb002",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Instruction-level classification only; full semantic contract coverage remains separate"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__analytics_engineering001.json",
+        "sha256": "9ceb0c7d60870583b3c5139085b95426ef070a86e5a7f4af637f0dc5714a4fcc"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-no-deps-batch-v1/spider2__analytics_engineering001/task.sif",
+        "sha256": "daf13f9dba09cdc45b1f01228dec39f7cd880957d49a2073c7c4e79a945bbe0e"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/initialized-projects/spider2__analytics_engineering001.stdout.json",
+        "sha256": "aafd1c2db17164299d25e2008d0476a3196b2fe50843d78b66b6ce56a5bd7a07"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_summary": "Joined customer/employee/product/purchase-order report",
+      "project_family": "shared-northwind-analytics-engineering-project",
+      "sources": [
+        {
+          "path": "tasks/spider2__analytics_engineering001/instruction.md",
+          "sha256": "a35039037e86766d236ae5765ea0528abb2e9c5f776bd430172e7153fcb4babf"
+        }
+      ],
+      "task_key": "spider2__analytics_engineering001",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Instruction-level classification only; full semantic contract coverage remains separate"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__f1001.json",
+        "sha256": "c9691a62e79149e01742593d04307cf1a3f9133248418a3bdc9f2e3a805b783c"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-frozen-deps-batch-v1/spider2__f1001/task.sif",
+        "sha256": "3a4c8ac662da479e063c74b50a35d7dbea907ae6e18392222c8f7c195fd09185"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/initialized-projects/spider2__f1001.stdout.json",
+        "sha256": "5582493a59f644600737c01897dbae976fd1cb08275e52da281a31caca09dff7"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_summary": "Driver fastest-lap/podium/pole/finish statistics",
+      "project_family": "shared-f1-project",
+      "sources": [
+        {
+          "path": "tasks/spider2__f1001/instruction.md",
+          "sha256": "c5e629ab146cfa719ef213c22fd78fd9bcf8f33c299fb583c89f585181e0f95a"
+        }
+      ],
+      "task_key": "spider2__f1001",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Instruction-level classification only; full semantic contract coverage remains separate"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__f1002.json",
+        "sha256": "4bf01fcada02983691e6c5aaf3685e0b7add5bd44aac3add845749523c9d7eee"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-frozen-deps-batch-v1/spider2__f1002/task.sif",
+        "sha256": "c286d58e10bc9fffefde910155087299bf96cc5efbf1de81dd4d477d19c1c08a"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/initialized-projects/spider2__f1002.stdout.json",
+        "sha256": "cafa700230da13851aa0a78dc7fa02a3f9ec412cb5333670a87851c1c61c7ed3"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_summary": "Constructor performance and championship summaries",
+      "project_family": "shared-f1-project",
+      "sources": [
+        {
+          "path": "tasks/spider2__f1002/instruction.md",
+          "sha256": "54ed67fec0d485945c6a3c43804afaf9ecde4c6585cfa0abbef2c51c1f269212"
+        }
+      ],
+      "task_key": "spider2__f1002",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Instruction-level classification only; full semantic contract coverage remains separate"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__intercom001.json",
+        "sha256": "5ef9a015e963a1315fccc306ceafb99a4e92b55fdd8d2dd50665dae5d25fb648"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-frozen-deps-batch-v1/spider2__intercom001/task.sif",
+        "sha256": "f7ac1e9903434ac2e2462bd7a06872da9cf173e88882a6c62a8dc2257673d072"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/initialized-projects/spider2__intercom001.stdout.json",
+        "sha256": "a0a5b998d39fd94824c36d7d42853bfe854c905ed2969e311a310e5adc5edc9b"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_summary": "Admin/team closed-conversation metrics",
+      "project_family": "shared-intercom-project",
+      "sources": [
+        {
+          "path": "tasks/spider2__intercom001/instruction.md",
+          "sha256": "bd7690cec9877c46cdfb63a5ae1aeed01988534e3a2e1efbea0caaa0080d7f76"
+        }
+      ],
+      "task_key": "spider2__intercom001",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Instruction-level classification only; full semantic contract coverage remains separate"
+    }
+  ]
+}

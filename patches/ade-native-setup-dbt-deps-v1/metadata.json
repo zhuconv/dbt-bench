@@ -1,0 +1,82 @@
+{
+  "application_scope": "Only the image-build copy of each listed setup.sh; source tasks and their untouched native verifier remain immutable. New SIF/provenance identifies the repaired environment.",
+  "id": "ade-native-setup-dbt-deps-v1",
+  "native_verifier_modified": false,
+  "new_environment_version": "ade-setup-dbt-deps-v1",
+  "reason": "Four native setup scripts invoke dbt run without resolving their declared package; actual build exits 2. Install the native package-lock dependencies before dbt run.",
+  "regression_plan": [
+    "Full native setup exits successfully with installed package matching its native lock.",
+    "Actual Harbor default/login/root contexts read the initialized database.",
+    "Two independent native references and two nops per repaired task; retain failures and original native rewards."
+  ],
+  "regression_results": "regression.json (written separately after execution; no automatic pass inferred from patch application)",
+  "schema_version": 1,
+  "task_budgets_modified": false,
+  "tasks": {
+    "ade__ade-bench-f1009": {
+      "after_sha256": "87459749ada9965f76daf32fcf390917f98e38ecce5bc8c5eb7f65ce40c42b1a",
+      "after_text": "\ndbt deps\ndbt run\n",
+      "before_sha256": "bbf05bc067360615885c8e28d14e76824e7b5e4e110227f88c674f26810692bc",
+      "before_text": "\ndbt run\n",
+      "diff": {
+        "path": "patches/ade-native-setup-dbt-deps-v1/ade__ade-bench-f1009.diff",
+        "sha256": "51709655ecf0e2ebe2f7ffe917cc01ca7615e63d800d6e490bbc3f311f524f47"
+      },
+      "file": "environment/setup.sh",
+      "reproduction": {
+        "path": "validation/evidence/ade-setup-dependency-failures-v1/ade__ade-bench-f1009.json",
+        "sha256": "a9b68d4e408ade22226cb348e38d792ce66a484e915818b6be3fd2a401f97161"
+      },
+      "upstream_task_hash": "3c0ced07cd64842b39259ac7ebb571f0359f8de6ae969af73d6dbdd2a0c23210"
+    },
+    "ade__ade-bench-f1010": {
+      "after_sha256": "87459749ada9965f76daf32fcf390917f98e38ecce5bc8c5eb7f65ce40c42b1a",
+      "after_text": "\ndbt deps\ndbt run\n",
+      "before_sha256": "bbf05bc067360615885c8e28d14e76824e7b5e4e110227f88c674f26810692bc",
+      "before_text": "\ndbt run\n",
+      "diff": {
+        "path": "patches/ade-native-setup-dbt-deps-v1/ade__ade-bench-f1010.diff",
+        "sha256": "51709655ecf0e2ebe2f7ffe917cc01ca7615e63d800d6e490bbc3f311f524f47"
+      },
+      "file": "environment/setup.sh",
+      "reproduction": {
+        "path": "validation/evidence/ade-setup-dependency-failures-v1/ade__ade-bench-f1010.json",
+        "sha256": "7394b7820cf2e6d0bd45b11a4d09c2339b3c49ce863da7c3e0d9aaa1b5700d84"
+      },
+      "upstream_task_hash": "94b200b2fa9003ade7851cee51f1e51eb6af8778ec2c07d8a1a0dac0cc61390c"
+    },
+    "ade__ade-bench-f1010-medium": {
+      "after_sha256": "87459749ada9965f76daf32fcf390917f98e38ecce5bc8c5eb7f65ce40c42b1a",
+      "after_text": "\ndbt deps\ndbt run\n",
+      "before_sha256": "bbf05bc067360615885c8e28d14e76824e7b5e4e110227f88c674f26810692bc",
+      "before_text": "\ndbt run\n",
+      "diff": {
+        "path": "patches/ade-native-setup-dbt-deps-v1/ade__ade-bench-f1010-medium.diff",
+        "sha256": "51709655ecf0e2ebe2f7ffe917cc01ca7615e63d800d6e490bbc3f311f524f47"
+      },
+      "file": "environment/setup.sh",
+      "reproduction": {
+        "path": "validation/evidence/ade-setup-dependency-failures-v1/ade__ade-bench-f1010-medium.json",
+        "sha256": "2729467687396729635aefdc5032087fbb5b5334c37e60e00cb6908d6fa6f3c1"
+      },
+      "upstream_task_hash": "bb86bf62fc0a8691e1d41a19af59e2afcae341708d6ef4a222097aa6581e3ade"
+    },
+    "ade__ade-bench-f1011": {
+      "after_sha256": "85ecca407d83390cbaf1df0032399c573d212cffc180aab4676203877bbcb8ae",
+      "after_text": "\ndbt deps\ndbt run\n",
+      "before_sha256": "7ab70ddf507058d8817382124353178bd7c440fdc98ed2febd7a37644d7a8bea",
+      "before_text": "\ndbt run\n",
+      "diff": {
+        "path": "patches/ade-native-setup-dbt-deps-v1/ade__ade-bench-f1011.diff",
+        "sha256": "6429c6fa0dd21cad1a758295adaf5718f683575e4053cb21a6e2f7d60678d8bd"
+      },
+      "file": "environment/setup.sh",
+      "reproduction": {
+        "path": "validation/evidence/ade-setup-dependency-failures-v1/ade__ade-bench-f1011.json",
+        "sha256": "08c555fd9e424a78720f9268dac413ae2b4f32f3afccc955121cc80929a8bf5c"
+      },
+      "upstream_task_hash": "b7b3f9487964586eef86d66cc84d7752b525c158c0b6705fbda1d2d1ac34806f"
+    }
+  },
+  "type": "environment"
+}

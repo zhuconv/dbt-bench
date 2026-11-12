@@ -1,0 +1,3496 @@
+{
+  "archive_rebinding_scope": "Only source catalog/split/import and preceding review references rebound to byte-identical preserved inputs. Original review retained; no decisions changed.",
+  "changed_catalog": false,
+  "changed_split": false,
+  "exact_initialized_sql_scan": [
+    {
+      "identical_sql_content_count": 3,
+      "same_proposed_group": true,
+      "tasks": [
+        "ade__ade-bench-airbnb005",
+        "ade__ade-bench-airbnb007"
+      ]
+    },
+    {
+      "identical_sql_content_count": 7,
+      "same_proposed_group": true,
+      "tasks": [
+        "ade__ade-bench-airbnb005",
+        "spider2__airbnb001"
+      ]
+    },
+    {
+      "identical_sql_content_count": 5,
+      "same_proposed_group": true,
+      "tasks": [
+        "ade__ade-bench-airbnb005",
+        "spider2__airbnb002"
+      ]
+    },
+    {
+      "identical_sql_content_count": 3,
+      "same_proposed_group": true,
+      "tasks": [
+        "ade__ade-bench-airbnb007",
+        "spider2__airbnb001"
+      ]
+    },
+    {
+      "identical_sql_content_count": 1,
+      "same_proposed_group": true,
+      "tasks": [
+        "ade__ade-bench-airbnb007",
+        "spider2__airbnb002"
+      ]
+    },
+    {
+      "identical_sql_content_count": 19,
+      "same_proposed_group": true,
+      "tasks": [
+        "ade__ade-bench-ana-eng003",
+        "ade__ade-bench-ana-eng004"
+      ]
+    },
+    {
+      "identical_sql_content_count": 19,
+      "same_proposed_group": true,
+      "tasks": [
+        "ade__ade-bench-ana-eng003",
+        "ade__ade-bench-ana-eng005"
+      ]
+    },
+    {
+      "identical_sql_content_count": 19,
+      "same_proposed_group": true,
+      "tasks": [
+        "ade__ade-bench-ana-eng003",
+        "ade__ade-bench-ana-eng006"
+      ]
+    },
+    {
+      "identical_sql_content_count": 25,
+      "same_proposed_group": true,
+      "tasks": [
+        "ade__ade-bench-ana-eng004",
+        "ade__ade-bench-ana-eng005"
+      ]
+    },
+    {
+      "identical_sql_content_count": 23,
+      "same_proposed_group": true,
+      "tasks": [
+        "ade__ade-bench-ana-eng004",
+        "ade__ade-bench-ana-eng006"
+      ]
+    },
+    {
+      "identical_sql_content_count": 23,
+      "same_proposed_group": true,
+      "tasks": [
+        "ade__ade-bench-ana-eng005",
+        "ade__ade-bench-ana-eng006"
+      ]
+    },
+    {
+      "identical_sql_content_count": 48,
+      "same_proposed_group": true,
+      "tasks": [
+        "ade__ade-bench-f1002",
+        "ade__ade-bench-f1003"
+      ]
+    },
+    {
+      "identical_sql_content_count": 48,
+      "same_proposed_group": true,
+      "tasks": [
+        "ade__ade-bench-f1002",
+        "ade__ade-bench-f1003-hard"
+      ]
+    },
+    {
+      "identical_sql_content_count": 48,
+      "same_proposed_group": true,
+      "tasks": [
+        "ade__ade-bench-f1002",
+        "ade__ade-bench-f1009"
+      ]
+    },
+    {
+      "identical_sql_content_count": 48,
+      "same_proposed_group": true,
+      "tasks": [
+        "ade__ade-bench-f1002",
+        "ade__ade-bench-f1010"
+      ]
+    },
+    {
+      "identical_sql_content_count": 48,
+      "same_proposed_group": true,
+      "tasks": [
+        "ade__ade-bench-f1002",
+        "ade__ade-bench-f1010-medium"
+      ]
+    },
+    {
+      "identical_sql_content_count": 48,
+      "same_proposed_group": true,
+      "tasks": [
+        "ade__ade-bench-f1002",
+        "ade__ade-bench-f1011"
+      ]
+    },
+    {
+      "identical_sql_content_count": 19,
+      "same_proposed_group": true,
+      "tasks": [
+        "ade__ade-bench-f1002",
+        "spider2__f1001"
+      ]
+    },
+    {
+      "identical_sql_content_count": 15,
+      "same_proposed_group": true,
+      "tasks": [
+        "ade__ade-bench-f1002",
+        "spider2__f1002"
+      ]
+    },
+    {
+      "identical_sql_content_count": 52,
+      "same_proposed_group": true,
+      "tasks": [
+        "ade__ade-bench-f1003",
+        "ade__ade-bench-f1003-hard"
+      ]
+    },
+    {
+      "identical_sql_content_count": 52,
+      "same_proposed_group": true,
+      "tasks": [
+        "ade__ade-bench-f1003",
+        "ade__ade-bench-f1009"
+      ]
+    },
+    {
+      "identical_sql_content_count": 52,
+      "same_proposed_group": true,
+      "tasks": [
+        "ade__ade-bench-f1003",
+        "ade__ade-bench-f1010"
+      ]
+    },
+    {
+      "identical_sql_content_count": 52,
+      "same_proposed_group": true,
+      "tasks": [
+        "ade__ade-bench-f1003",
+        "ade__ade-bench-f1010-medium"
+      ]
+    },
+    {
+      "identical_sql_content_count": 52,
+      "same_proposed_group": true,
+      "tasks": [
+        "ade__ade-bench-f1003",
+        "ade__ade-bench-f1011"
+      ]
+    },
+    {
+      "identical_sql_content_count": 19,
+      "same_proposed_group": true,
+      "tasks": [
+        "ade__ade-bench-f1003",
+        "spider2__f1001"
+      ]
+    },
+    {
+      "identical_sql_content_count": 15,
+      "same_proposed_group": true,
+      "tasks": [
+        "ade__ade-bench-f1003",
+        "spider2__f1002"
+      ]
+    },
+    {
+      "identical_sql_content_count": 52,
+      "same_proposed_group": true,
+      "tasks": [
+        "ade__ade-bench-f1003-hard",
+        "ade__ade-bench-f1009"
+      ]
+    },
+    {
+      "identical_sql_content_count": 52,
+      "same_proposed_group": true,
+      "tasks": [
+        "ade__ade-bench-f1003-hard",
+        "ade__ade-bench-f1010"
+      ]
+    },
+    {
+      "identical_sql_content_count": 52,
+      "same_proposed_group": true,
+      "tasks": [
+        "ade__ade-bench-f1003-hard",
+        "ade__ade-bench-f1010-medium"
+      ]
+    },
+    {
+      "identical_sql_content_count": 52,
+      "same_proposed_group": true,
+      "tasks": [
+        "ade__ade-bench-f1003-hard",
+        "ade__ade-bench-f1011"
+      ]
+    },
+    {
+      "identical_sql_content_count": 19,
+      "same_proposed_group": true,
+      "tasks": [
+        "ade__ade-bench-f1003-hard",
+        "spider2__f1001"
+      ]
+    },
+    {
+      "identical_sql_content_count": 15,
+      "same_proposed_group": true,
+      "tasks": [
+        "ade__ade-bench-f1003-hard",
+        "spider2__f1002"
+      ]
+    },
+    {
+      "identical_sql_content_count": 52,
+      "same_proposed_group": true,
+      "tasks": [
+        "ade__ade-bench-f1009",
+        "ade__ade-bench-f1010"
+      ]
+    },
+    {
+      "identical_sql_content_count": 52,
+      "same_proposed_group": true,
+      "tasks": [
+        "ade__ade-bench-f1009",
+        "ade__ade-bench-f1010-medium"
+      ]
+    },
+    {
+      "identical_sql_content_count": 52,
+      "same_proposed_group": true,
+      "tasks": [
+        "ade__ade-bench-f1009",
+        "ade__ade-bench-f1011"
+      ]
+    },
+    {
+      "identical_sql_content_count": 19,
+      "same_proposed_group": true,
+      "tasks": [
+        "ade__ade-bench-f1009",
+        "spider2__f1001"
+      ]
+    },
+    {
+      "identical_sql_content_count": 15,
+      "same_proposed_group": true,
+      "tasks": [
+        "ade__ade-bench-f1009",
+        "spider2__f1002"
+      ]
+    },
+    {
+      "identical_sql_content_count": 52,
+      "same_proposed_group": true,
+      "tasks": [
+        "ade__ade-bench-f1010",
+        "ade__ade-bench-f1010-medium"
+      ]
+    },
+    {
+      "identical_sql_content_count": 52,
+      "same_proposed_group": true,
+      "tasks": [
+        "ade__ade-bench-f1010",
+        "ade__ade-bench-f1011"
+      ]
+    },
+    {
+      "identical_sql_content_count": 19,
+      "same_proposed_group": true,
+      "tasks": [
+        "ade__ade-bench-f1010",
+        "spider2__f1001"
+      ]
+    },
+    {
+      "identical_sql_content_count": 15,
+      "same_proposed_group": true,
+      "tasks": [
+        "ade__ade-bench-f1010",
+        "spider2__f1002"
+      ]
+    },
+    {
+      "identical_sql_content_count": 52,
+      "same_proposed_group": true,
+      "tasks": [
+        "ade__ade-bench-f1010-medium",
+        "ade__ade-bench-f1011"
+      ]
+    },
+    {
+      "identical_sql_content_count": 19,
+      "same_proposed_group": true,
+      "tasks": [
+        "ade__ade-bench-f1010-medium",
+        "spider2__f1001"
+      ]
+    },
+    {
+      "identical_sql_content_count": 15,
+      "same_proposed_group": true,
+      "tasks": [
+        "ade__ade-bench-f1010-medium",
+        "spider2__f1002"
+      ]
+    },
+    {
+      "identical_sql_content_count": 19,
+      "same_proposed_group": true,
+      "tasks": [
+        "ade__ade-bench-f1011",
+        "spider2__f1001"
+      ]
+    },
+    {
+      "identical_sql_content_count": 15,
+      "same_proposed_group": true,
+      "tasks": [
+        "ade__ade-bench-f1011",
+        "spider2__f1002"
+      ]
+    },
+    {
+      "identical_sql_content_count": 6,
+      "same_proposed_group": true,
+      "tasks": [
+        "spider2__airbnb001",
+        "spider2__airbnb002"
+      ]
+    },
+    {
+      "identical_sql_content_count": 11,
+      "same_proposed_group": true,
+      "tasks": [
+        "spider2__app_reporting001",
+        "spider2__app_reporting002"
+      ]
+    },
+    {
+      "identical_sql_content_count": 29,
+      "same_proposed_group": true,
+      "tasks": [
+        "spider2__f1001",
+        "spider2__f1002"
+      ]
+    },
+    {
+      "identical_sql_content_count": 5,
+      "same_proposed_group": true,
+      "tasks": [
+        "spider2__google_play001",
+        "spider2__google_play002"
+      ]
+    },
+    {
+      "identical_sql_content_count": 24,
+      "same_proposed_group": true,
+      "tasks": [
+        "spider2__quickbooks001",
+        "spider2__quickbooks002"
+      ]
+    },
+    {
+      "identical_sql_content_count": 2,
+      "same_proposed_group": true,
+      "tasks": [
+        "spider2__recharge001",
+        "spider2__recharge002"
+      ]
+    },
+    {
+      "identical_sql_content_count": 27,
+      "same_proposed_group": true,
+      "tasks": [
+        "spider2__shopify001",
+        "spider2__shopify002"
+      ]
+    },
+    {
+      "identical_sql_content_count": 15,
+      "same_proposed_group": true,
+      "tasks": [
+        "spider2__tickit001",
+        "spider2__tickit002"
+      ]
+    },
+    {
+      "identical_sql_content_count": 4,
+      "same_proposed_group": true,
+      "tasks": [
+        "spider2__tpch001",
+        "spider2__tpch002"
+      ]
+    },
+    {
+      "identical_sql_content_count": 56,
+      "same_proposed_group": true,
+      "tasks": [
+        "spider2__workday001",
+        "spider2__workday002"
+      ]
+    },
+    {
+      "identical_sql_content_count": 2,
+      "same_proposed_group": true,
+      "tasks": [
+        "spider2__xero001",
+        "spider2__xero_new001"
+      ]
+    },
+    {
+      "identical_sql_content_count": 2,
+      "same_proposed_group": true,
+      "tasks": [
+        "spider2__xero001",
+        "spider2__xero_new002"
+      ]
+    },
+    {
+      "identical_sql_content_count": 2,
+      "same_proposed_group": true,
+      "tasks": [
+        "spider2__xero_new001",
+        "spider2__xero_new002"
+      ]
+    }
+  ],
+  "families": [
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_conservative_same_split_group",
+      "id": "spider-app-store-reporting",
+      "initialized_sql_overlap": [
+        {
+          "all_sql_paths_and_contents_identical": false,
+          "same_path_identical_sql": [
+            "models/app_reporting__app_version_report.sql",
+            "models/app_reporting__country_report.sql",
+            "models/app_reporting__device_report.sql",
+            "models/app_reporting__os_version_report.sql",
+            "models/app_reporting__traffic_source_report.sql",
+            "models/intermediate/country_report/int_apple_store__country.sql",
+            "models/intermediate/country_report/int_google_play__country.sql",
+            "models/intermediate/device_report/int_apple_store__device.sql",
+            "models/intermediate/device_report/int_google_play__device.sql",
+            "models/intermediate/traffic_source_report/int_apple_store__traffic_source.sql",
+            "models/intermediate/traffic_source_report/int_google_play__traffic_source.sql"
+          ],
+          "sql_file_counts": [
+            14,
+            15
+          ],
+          "tasks": [
+            "spider2__app_reporting001",
+            "spider2__app_reporting002"
+          ]
+        },
+        {
+          "all_sql_paths_and_contents_identical": false,
+          "same_path_identical_sql": [],
+          "sql_file_counts": [
+            14,
+            19
+          ],
+          "tasks": [
+            "spider2__app_reporting001",
+            "spider2__apple_store001"
+          ]
+        },
+        {
+          "all_sql_paths_and_contents_identical": false,
+          "same_path_identical_sql": [],
+          "sql_file_counts": [
+            14,
+            7
+          ],
+          "tasks": [
+            "spider2__app_reporting001",
+            "spider2__google_play001"
+          ]
+        },
+        {
+          "all_sql_paths_and_contents_identical": false,
+          "same_path_identical_sql": [],
+          "sql_file_counts": [
+            14,
+            7
+          ],
+          "tasks": [
+            "spider2__app_reporting001",
+            "spider2__google_play002"
+          ]
+        },
+        {
+          "all_sql_paths_and_contents_identical": false,
+          "same_path_identical_sql": [],
+          "sql_file_counts": [
+            15,
+            19
+          ],
+          "tasks": [
+            "spider2__app_reporting002",
+            "spider2__apple_store001"
+          ]
+        },
+        {
+          "all_sql_paths_and_contents_identical": false,
+          "same_path_identical_sql": [],
+          "sql_file_counts": [
+            15,
+            7
+          ],
+          "tasks": [
+            "spider2__app_reporting002",
+            "spider2__google_play001"
+          ]
+        },
+        {
+          "all_sql_paths_and_contents_identical": false,
+          "same_path_identical_sql": [],
+          "sql_file_counts": [
+            15,
+            7
+          ],
+          "tasks": [
+            "spider2__app_reporting002",
+            "spider2__google_play002"
+          ]
+        },
+        {
+          "all_sql_paths_and_contents_identical": false,
+          "same_path_identical_sql": [],
+          "sql_file_counts": [
+            19,
+            7
+          ],
+          "tasks": [
+            "spider2__apple_store001",
+            "spider2__google_play001"
+          ]
+        },
+        {
+          "all_sql_paths_and_contents_identical": false,
+          "same_path_identical_sql": [],
+          "sql_file_counts": [
+            19,
+            7
+          ],
+          "tasks": [
+            "spider2__apple_store001",
+            "spider2__google_play002"
+          ]
+        },
+        {
+          "all_sql_paths_and_contents_identical": false,
+          "same_path_identical_sql": [
+            "models/google_play__app_version_report.sql",
+            "models/google_play__finance_report.sql",
+            "models/google_play__os_version_report.sql",
+            "models/intermediate/int_google_play__earnings.sql",
+            "models/intermediate/int_google_play__latest_product_info.sql"
+          ],
+          "sql_file_counts": [
+            7,
+            7
+          ],
+          "tasks": [
+            "spider2__google_play001",
+            "spider2__google_play002"
+          ]
+        }
+      ],
+      "members": [
+        "spider2__app_reporting001",
+        "spider2__app_reporting002",
+        "spider2__apple_store001",
+        "spider2__google_play001",
+        "spider2__google_play002"
+      ],
+      "rationale": "App Reporting packages explicitly depend on Fivetran Apple Store and Google Play. App version/OS versus overview objectives differ; the lower-level country/device/overview tasks reuse component projects. Conservatively keep this package dependency family together without claiming equal outputs or identical input data."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_conservative_same_split_group",
+      "id": "spider-quickbooks",
+      "initialized_sql_overlap": [
+        {
+          "all_sql_paths_and_contents_identical": false,
+          "same_path_identical_sql": [
+            "models/double_entry_transactions/int_quickbooks__bill_double_entry.sql",
+            "models/double_entry_transactions/int_quickbooks__bill_payment_double_entry.sql",
+            "models/double_entry_transactions/int_quickbooks__credit_card_pymt_double_entry.sql",
+            "models/double_entry_transactions/int_quickbooks__credit_memo_double_entry.sql",
+            "models/double_entry_transactions/int_quickbooks__deposit_double_entry.sql",
+            "models/double_entry_transactions/int_quickbooks__invoice_double_entry.sql",
+            "models/double_entry_transactions/int_quickbooks__journal_entry_double_entry.sql",
+            "models/double_entry_transactions/int_quickbooks__payment_double_entry.sql",
+            "models/double_entry_transactions/int_quickbooks__purchase_double_entry.sql",
+            "models/double_entry_transactions/int_quickbooks__refund_receipt_double_entry.sql",
+            "models/double_entry_transactions/int_quickbooks__sales_receipt_double_entry.sql",
+            "models/double_entry_transactions/int_quickbooks__transfer_double_entry.sql",
+            "models/double_entry_transactions/int_quickbooks__vendor_credit_double_entry.sql",
+            "models/intermediate/int_quickbooks__bill_join.sql",
+            "models/intermediate/int_quickbooks__invoice_join.sql",
+            "models/transaction_lines/int_quickbooks__bill_transactions.sql",
+            "models/transaction_lines/int_quickbooks__credit_memo_transactions.sql",
+            "models/transaction_lines/int_quickbooks__deposit_transactions.sql",
+            "models/transaction_lines/int_quickbooks__invoice_transactions.sql",
+            "models/transaction_lines/int_quickbooks__journal_entry_transactions.sql",
+            "models/transaction_lines/int_quickbooks__purchase_transactions.sql",
+            "models/transaction_lines/int_quickbooks__refund_receipt_transactions.sql",
+            "models/transaction_lines/int_quickbooks__sales_receipt_transactions.sql",
+            "models/transaction_lines/int_quickbooks__vendor_credit_transactions.sql"
+          ],
+          "sql_file_counts": [
+            29,
+            24
+          ],
+          "tasks": [
+            "spider2__quickbooks001",
+            "spider2__quickbooks002"
+          ]
+        }
+      ],
+      "members": [
+        "spider2__quickbooks001",
+        "spider2__quickbooks002"
+      ],
+      "rationale": "Same QuickBooks project and shared double-entry/transaction components. General-ledger union versus enriched bill/invoice reporting are different objectives within one project."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_conservative_same_split_group",
+      "id": "spider-recharge",
+      "initialized_sql_overlap": [
+        {
+          "all_sql_paths_and_contents_identical": false,
+          "same_path_identical_sql": [
+            "models/intermediate/int_recharge__calendar_spine.sql",
+            "models/standardized_models/recharge__line_item_enhanced.sql"
+          ],
+          "sql_file_counts": [
+            2,
+            9
+          ],
+          "tasks": [
+            "spider2__recharge001",
+            "spider2__recharge002"
+          ]
+        }
+      ],
+      "members": [
+        "spider2__recharge001",
+        "spider2__recharge002"
+      ],
+      "rationale": "Same Recharge project; both initial SQL files from 001 are also present unchanged in 002. Charge-line-item construction and customer transaction rollups use overlapping components, with different requested grain."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_conservative_same_split_group",
+      "id": "spider-shopify",
+      "initialized_sql_overlap": [
+        {
+          "all_sql_paths_and_contents_identical": true,
+          "same_path_identical_sql": [
+            "models/intermediate/int_shopify__customer_email_rollup.sql",
+            "models/intermediate/int_shopify__daily_abandoned_checkouts.sql",
+            "models/intermediate/int_shopify__daily_fulfillment.sql",
+            "models/intermediate/int_shopify__daily_orders.sql",
+            "models/intermediate/int_shopify__discounts__abandoned_checkouts.sql",
+            "models/intermediate/int_shopify__discounts__order_aggregates.sql",
+            "models/intermediate/int_shopify__emails__order_aggregates.sql",
+            "models/intermediate/int_shopify__inventory_level__aggregates.sql",
+            "models/intermediate/int_shopify__order__shipping_aggregates.sql",
+            "models/intermediate/int_shopify__product__order_line_aggregates.sql",
+            "models/intermediate/int_shopify__products_with_aggregates.sql",
+            "models/intermediate/shopify__customers__order_aggregates.sql",
+            "models/intermediate/shopify__orders__order_line_aggregates.sql",
+            "models/intermediate/shopify__orders__order_refunds.sql",
+            "models/metafields/shopify__collection_metafields.sql",
+            "models/metafields/shopify__customer_metafields.sql",
+            "models/metafields/shopify__order_metafields.sql",
+            "models/metafields/shopify__product_image_metafields.sql",
+            "models/metafields/shopify__product_metafields.sql",
+            "models/metafields/shopify__product_variant_metafields.sql",
+            "models/metafields/shopify__shop_metafields.sql",
+            "models/shopify__inventory_levels.sql",
+            "models/shopify__order_lines.sql",
+            "models/shopify__orders.sql",
+            "models/shopify__transactions.sql",
+            "models/standardized_models/shopify__line_item_enhanced.sql",
+            "models/utils/shopify__calendar.sql"
+          ],
+          "sql_file_counts": [
+            27,
+            27
+          ],
+          "tasks": [
+            "spider2__shopify001",
+            "spider2__shopify002"
+          ]
+        },
+        {
+          "all_sql_paths_and_contents_identical": false,
+          "same_path_identical_sql": [],
+          "sql_file_counts": [
+            27,
+            4
+          ],
+          "tasks": [
+            "spider2__shopify001",
+            "spider2__shopify_holistic_reporting001"
+          ]
+        },
+        {
+          "all_sql_paths_and_contents_identical": false,
+          "same_path_identical_sql": [],
+          "sql_file_counts": [
+            27,
+            4
+          ],
+          "tasks": [
+            "spider2__shopify002",
+            "spider2__shopify_holistic_reporting001"
+          ]
+        }
+      ],
+      "members": [
+        "spider2__shopify001",
+        "spider2__shopify002",
+        "spider2__shopify_holistic_reporting001"
+      ],
+      "rationale": "The first two tasks have the same initialized SQL file set and different product/shop versus discount-code goals. Holistic Reporting explicitly depends on Fivetran Shopify and combines it with Klaviyo; group the package relationship conservatively, without claiming an identical warehouse or answer."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_conservative_same_split_group",
+      "id": "spider-tickit",
+      "initialized_sql_overlap": [
+        {
+          "all_sql_paths_and_contents_identical": false,
+          "same_path_identical_sql": [
+            "models/analyses/buyer_likes.sql",
+            "models/analyses/monthly_sales.sql",
+            "models/analyses/non_buyer_likes.sql",
+            "models/analyses/sales_by_category.sql",
+            "models/analyses/top_grossing_events.sql",
+            "models/analyses/top_sellers.sql",
+            "models/intermediate/users/int_buyers_extracted_from_users.sql",
+            "models/marts/marketing/dim_non_buyers.sql",
+            "models/staging/tickit/stg_tickit__categories.sql",
+            "models/staging/tickit/stg_tickit__dates.sql",
+            "models/staging/tickit/stg_tickit__events.sql",
+            "models/staging/tickit/stg_tickit__listings.sql",
+            "models/staging/tickit/stg_tickit__sales.sql",
+            "models/staging/tickit/stg_tickit__users.sql",
+            "models/staging/tickit/stg_tickit__venues.sql"
+          ],
+          "sql_file_counts": [
+            17,
+            17
+          ],
+          "tasks": [
+            "spider2__tickit001",
+            "spider2__tickit002"
+          ]
+        }
+      ],
+      "members": [
+        "spider2__tickit001",
+        "spider2__tickit002"
+      ],
+      "rationale": "Same Redshift-demo/TICKIT project, with 15 shared initialized SQL contents. Sales buyer/seller summaries and event/listing enrichment are different objectives within that project."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_conservative_same_split_group",
+      "id": "spider-tpch",
+      "initialized_sql_overlap": [
+        {
+          "all_sql_paths_and_contents_identical": false,
+          "same_path_identical_sql": [
+            "models/FINANCE/SUPPLIER_RETURNS.sql",
+            "models/FINANCE/intermediate/order_line_items.sql",
+            "models/FINANCE/monthly_return_revenue.sql",
+            "models/base/min_supply_cost.sql"
+          ],
+          "sql_file_counts": [
+            6,
+            6
+          ],
+          "tasks": [
+            "spider2__tpch001",
+            "spider2__tpch002"
+          ]
+        }
+      ],
+      "members": [
+        "spider2__tpch001",
+        "spider2__tpch002"
+      ],
+      "rationale": "Same TPC-H project with four shared initialized SQL contents. Customer lifetime/return calculations and low-cost UK brass supplier selection are different objectives; the shared project is the grouping rationale."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_conservative_same_split_group",
+      "id": "spider-workday",
+      "initialized_sql_overlap": [
+        {
+          "all_sql_paths_and_contents_identical": false,
+          "same_path_identical_sql": [
+            "models/intermediate/int_workday__personal_details.sql",
+            "models/intermediate/int_workday__worker_details.sql",
+            "models/intermediate/int_workday__worker_employee_enhanced.sql",
+            "models/intermediate/int_workday__worker_position_enriched.sql",
+            "models/staging/base/stg_workday__job_family_base.sql",
+            "models/staging/base/stg_workday__job_family_group_base.sql",
+            "models/staging/base/stg_workday__job_family_job_family_group_base.sql",
+            "models/staging/base/stg_workday__job_family_job_profile_base.sql",
+            "models/staging/base/stg_workday__job_profile_base.sql",
+            "models/staging/base/stg_workday__military_service_base.sql",
+            "models/staging/base/stg_workday__organization_base.sql",
+            "models/staging/base/stg_workday__organization_job_family_base.sql",
+            "models/staging/base/stg_workday__organization_role_base.sql",
+            "models/staging/base/stg_workday__organization_role_worker_base.sql",
+            "models/staging/base/stg_workday__person_contact_email_address_base.sql",
+            "models/staging/base/stg_workday__person_name_base.sql",
+            "models/staging/base/stg_workday__personal_information_base.sql",
+            "models/staging/base/stg_workday__personal_information_ethnicity_base.sql",
+            "models/staging/base/stg_workday__position_base.sql",
+            "models/staging/base/stg_workday__position_job_profile_base.sql",
+            "models/staging/base/stg_workday__position_organization_base.sql",
+            "models/staging/base/stg_workday__worker_base.sql",
+            "models/staging/base/stg_workday__worker_leave_status_base.sql",
+            "models/staging/base/stg_workday__worker_position_base.sql",
+            "models/staging/base/stg_workday__worker_position_organization_base.sql",
+            "models/staging/stg_workday__job_family.sql",
+            "models/staging/stg_workday__job_family_group.sql",
+            "models/staging/stg_workday__job_family_job_family_group.sql",
+            "models/staging/stg_workday__job_family_job_profile.sql",
+            "models/staging/stg_workday__job_profile.sql",
+            "models/staging/stg_workday__military_service.sql",
+            "models/staging/stg_workday__organization.sql",
+            "models/staging/stg_workday__organization_job_family.sql",
+            "models/staging/stg_workday__organization_role.sql",
+            "models/staging/stg_workday__organization_role_worker.sql",
+            "models/staging/stg_workday__person_contact_email_address.sql",
+            "models/staging/stg_workday__person_name.sql",
+            "models/staging/stg_workday__personal_information.sql",
+            "models/staging/stg_workday__personal_information_ethnicity.sql",
+            "models/staging/stg_workday__position.sql",
+            "models/staging/stg_workday__position_job_profile.sql",
+            "models/staging/stg_workday__position_organization.sql",
+            "models/staging/stg_workday__worker.sql",
+            "models/staging/stg_workday__worker_leave_status.sql",
+            "models/staging/stg_workday__worker_position.sql",
+            "models/staging/stg_workday__worker_position_organization.sql",
+            "models/workday__employee_overview.sql",
+            "models/workday__position_overview.sql",
+            "models/workday_history/intermediate/int_workday__employee_history.sql",
+            "models/workday_history/staging/stg_workday__personal_information_history.sql",
+            "models/workday_history/staging/stg_workday__worker_history.sql",
+            "models/workday_history/staging/stg_workday__worker_position_history.sql",
+            "models/workday_history/staging/stg_workday__worker_position_organization_history.sql",
+            "models/workday_history/workday__employee_daily_history.sql",
+            "models/workday_history/workday__monthly_summary.sql",
+            "models/workday_history/workday__worker_position_org_daily_history.sql"
+          ],
+          "sql_file_counts": [
+            57,
+            57
+          ],
+          "tasks": [
+            "spider2__workday001",
+            "spider2__workday002"
+          ]
+        }
+      ],
+      "members": [
+        "spider2__workday001",
+        "spider2__workday002"
+      ],
+      "rationale": "Same Workday project with 56 shared initialized SQL contents. Organization-role/worker positions and job-profile/family reporting are different output models within that project."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_conservative_same_split_group",
+      "id": "spider-xero",
+      "initialized_sql_overlap": [
+        {
+          "all_sql_paths_and_contents_identical": false,
+          "same_path_identical_sql": [
+            "models/utilities/xero__calendar_spine.sql",
+            "models/xero__invoice_line_items.sql"
+          ],
+          "sql_file_counts": [
+            4,
+            2
+          ],
+          "tasks": [
+            "spider2__xero001",
+            "spider2__xero_new001"
+          ]
+        },
+        {
+          "all_sql_paths_and_contents_identical": false,
+          "same_path_identical_sql": [
+            "models/utilities/xero__calendar_spine.sql",
+            "models/xero__invoice_line_items.sql"
+          ],
+          "sql_file_counts": [
+            4,
+            3
+          ],
+          "tasks": [
+            "spider2__xero001",
+            "spider2__xero_new002"
+          ]
+        },
+        {
+          "all_sql_paths_and_contents_identical": false,
+          "same_path_identical_sql": [
+            "models/utilities/xero__calendar_spine.sql",
+            "models/xero__invoice_line_items.sql"
+          ],
+          "sql_file_counts": [
+            2,
+            3
+          ],
+          "tasks": [
+            "spider2__xero_new001",
+            "spider2__xero_new002"
+          ]
+        }
+      ],
+      "members": [
+        "spider2__xero001",
+        "spider2__xero_new001",
+        "spider2__xero_new002"
+      ],
+      "rationale": "All identify Xero 0.6.2. Calendar-spine and invoice-line-item SQL are identical across all three initialized projects. Monthly balance-sheet objectives overlap, and the three-report request includes a balance sheet. Different profiles, package presence and removed models remain recorded, not treated as identical initialization."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_conservative_same_split_group",
+      "id": "spider-netflix-prompt-reuse",
+      "initialized_sql_overlap": [
+        {
+          "all_sql_paths_and_contents_identical": false,
+          "same_path_identical_sql": [],
+          "sql_file_counts": [
+            6,
+            5
+          ],
+          "tasks": [
+            "spider2__movie_recomm001",
+            "spider2__netflix001"
+          ]
+        }
+      ],
+      "members": [
+        "spider2__movie_recomm001",
+        "spider2__netflix001"
+      ],
+      "rationale": "Prompts have the same genre/title/premiere/renewal objective with only the product name changed, but initialized projects are MovieLens versus Netflix programming. Retain a conservative same-split prompt-reuse group; this does not assert a shared project or fix the separately evidenced movie_recomm task mismatch."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_singleton",
+      "id": "spider-activity001",
+      "initialized_sql_overlap": [],
+      "members": [
+        "spider2__activity001"
+      ],
+      "rationale": "User sign-up/page-visit aggregation using after versus all-ever methods; dbt activity-schema project."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_singleton",
+      "id": "spider-airport001",
+      "initialized_sql_overlap": [],
+      "members": [
+        "spider2__airport001"
+      ],
+      "rationale": "Malaysian airport arrival aggregation and airport distances; Malaysia airport project."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_singleton",
+      "id": "spider-asana001",
+      "initialized_sql_overlap": [],
+      "members": [
+        "spider2__asana001"
+      ],
+      "rationale": "Asana team/user task completion and close-time metrics; Asana project."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_singleton",
+      "id": "spider-asset001",
+      "initialized_sql_overlap": [],
+      "members": [
+        "spider2__asset001"
+      ],
+      "rationale": "Daily stock bid/ask/mid prices and book value; asset project."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_singleton",
+      "id": "spider-atp_tour001",
+      "initialized_sql_overlap": [],
+      "members": [
+        "spider2__atp_tour001"
+      ],
+      "rationale": "ATP tournament/player match-statistic enrichment; ATP project."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_singleton",
+      "id": "spider-flicks001",
+      "initialized_sql_overlap": [],
+      "members": [
+        "spider2__flicks001"
+      ],
+      "rationale": "Actor movie ratings and releases by year; Flicks project, distinct from Netflix programming and MovieLens."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_singleton",
+      "id": "spider-greenhouse001",
+      "initialized_sql_overlap": [],
+      "members": [
+        "spider2__greenhouse001"
+      ],
+      "rationale": "Enhanced recruiting jobs/applications; Greenhouse project, distinct from Lever source/configuration."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_singleton",
+      "id": "spider-hive001",
+      "initialized_sql_overlap": [],
+      "members": [
+        "spider2__hive001"
+      ],
+      "rationale": "COVID country/date cases/deaths with country-code join; Hive demonstration project."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_singleton",
+      "id": "spider-hubspot001",
+      "initialized_sql_overlap": [],
+      "members": [
+        "spider2__hubspot001"
+      ],
+      "rationale": "Contact email/engagement and email campaign metrics; HubSpot project, distinct from Marketo sources."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_singleton",
+      "id": "spider-inzight001",
+      "initialized_sql_overlap": [],
+      "members": [
+        "spider2__inzight001"
+      ],
+      "rationale": "Monthly electricity peak with 12-month average and change; Inzight project."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_singleton",
+      "id": "spider-jira001",
+      "initialized_sql_overlap": [],
+      "members": [
+        "spider2__jira001"
+      ],
+      "rationale": "Project leads/epics/components and issue closure metrics; Jira project."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_singleton",
+      "id": "spider-lever001",
+      "initialized_sql_overlap": [],
+      "members": [
+        "spider2__lever001"
+      ],
+      "rationale": "Job postings/applications/interviews/requisitions/hiring managers; Lever project."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_singleton",
+      "id": "spider-marketo001",
+      "initialized_sql_overlap": [],
+      "members": [
+        "spider2__marketo001"
+      ],
+      "rationale": "Latest email templates and delivery/interaction metrics; Marketo project."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_singleton",
+      "id": "spider-maturity001",
+      "initialized_sql_overlap": [],
+      "members": [
+        "spider2__maturity001"
+      ],
+      "rationale": "Doctor and patient dimensional information; claim_to_fame project, distinct from NPPES mapping and Synthea event costing."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_singleton",
+      "id": "spider-nba001",
+      "initialized_sql_overlap": [],
+      "members": [
+        "spider2__nba001"
+      ],
+      "rationale": "NBA regular season/playoff/Elo summaries; sports_sims project."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_singleton",
+      "id": "spider-pendo001",
+      "initialized_sql_overlap": [],
+      "members": [
+        "spider2__pendo001"
+      ],
+      "rationale": "Daily guide/page metrics; Pendo project."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_singleton",
+      "id": "spider-playbook002",
+      "initialized_sql_overlap": [],
+      "members": [
+        "spider2__playbook002"
+      ],
+      "rationale": "Generic completion request on acme/playbook project. Output intent is under-specified; no semantic certification inferred from family assignment."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_singleton",
+      "id": "spider-provider001",
+      "initialized_sql_overlap": [],
+      "members": [
+        "spider2__provider001"
+      ],
+      "rationale": "Medicare/NUCC taxonomy and NPI provider enrichment; NPPES project."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_singleton",
+      "id": "spider-qualtrics001",
+      "initialized_sql_overlap": [],
+      "members": [
+        "spider2__qualtrics001"
+      ],
+      "rationale": "Directory contacts, recent additions and survey engagement; Qualtrics project."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_singleton",
+      "id": "spider-reddit001",
+      "initialized_sql_overlap": [],
+      "members": [
+        "spider2__reddit001"
+      ],
+      "rationale": "Paranormal post/comment relations and metadata; Reddit project."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_singleton",
+      "id": "spider-sap001",
+      "initialized_sql_overlap": [],
+      "members": [
+        "spider2__sap001"
+      ],
+      "rationale": "SAP general-ledger extraction/aggregation for 0fi_gl_10 and 0fi_gl_14; distinct SAP project."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_singleton",
+      "id": "spider-scd001",
+      "initialized_sql_overlap": [],
+      "members": [
+        "spider2__scd001"
+      ],
+      "rationale": "Corporate-email account activity/order summaries; dbt_scd project."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_singleton",
+      "id": "spider-social_media001",
+      "initialized_sql_overlap": [],
+      "members": [
+        "spider2__social_media001"
+      ],
+      "rationale": "Combined Facebook/Instagram/LinkedIn/Twitter reports; social_media_reporting project."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_singleton",
+      "id": "spider-synthea001",
+      "initialized_sql_overlap": [],
+      "members": [
+        "spider2__synthea001"
+      ],
+      "rationale": "Healthcare-event cost/charge/payment aggregation; synthea_omop_etl project."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_singleton",
+      "id": "spider-twilio001",
+      "initialized_sql_overlap": [],
+      "members": [
+        "spider2__twilio001"
+      ],
+      "rationale": "Phone/account messaging counts/status/spend; Twilio project."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_singleton",
+      "id": "spider-zuora001",
+      "initialized_sql_overlap": [],
+      "members": [
+        "spider2__zuora001"
+      ],
+      "rationale": "Daily and overall account reporting; Zuora project."
+    }
+  ],
+  "frozen": false,
+  "historical_original": {
+    "path": "validation/evidence/spider-family-review-v1.json",
+    "sha256": "6c1740e6a69512119150cfb9281c64740a130e258d2eda31d7a5d9eaef91f8c7"
+  },
+  "inspection_summary": {
+    "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/summary.json",
+    "sha256": "e22c2c831c20a822803a595b081405a3795eaa67484ad5f449a3b1566692de28"
+  },
+  "limitations": [
+    "This is a family/split review, not verifier validation or proof of task solvability.",
+    "Project/package relations can justify conservative grouping without proving equal data or answers.",
+    "No unmatched exact SQL content was observed in the 71 inspected public project trees; differing text can still implement related logic.",
+    "All inspected ADE/Spider tasks are historical train. No unseen-project/warehouse or clean checkpoint holdout claim.",
+    "DEB semantic family and cross-split exposure review remains unfinished."
+  ],
+  "newly_reviewed_tasks": 49,
+  "previous_review": {
+    "path": "catalog/reviews/family-v1/cross-source-family-review-v1.json",
+    "sha256": "9ef4d4e3d865a1d6b51f2c58b1a10bc10141962f7ca578bb28679ae6b0db983d"
+  },
+  "remaining_tasks": 64,
+  "review_script": {
+    "path": "artifacts/validation/catalog-family-review-v1/record_spider_family_review.py",
+    "sha256": "51fc67427b79c7674b0847f2731f6face2a44b00c235b5a69697d392a026986d"
+  },
+  "review_status": "71_of_135_with_previous_review",
+  "review_version": "spider-family-review-v1",
+  "schema_version": 1,
+  "source_catalog": {
+    "path": "catalog/history/v1-legacy-provisional/tasks.jsonl",
+    "sha256": "107dd7b2519cc959292b5ce3716a85d31b8b507d00188a6da60d5ad6bacc3586"
+  },
+  "source_split": {
+    "path": "catalog/history/v1-legacy-provisional/splits.json",
+    "sha256": "0cd524ad1ed466a642c56d0537cfef0c93f4efa5b067696e482a5ffc3c2e0f1b"
+  },
+  "tasks": [
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__activity001.json",
+        "sha256": "7ad90c949f61fef7a9dc6c48f73eecd63d7f38ebc5db989ff54b51a45427443c"
+      },
+      "current_split": "train",
+      "declared_project_name": "dbt_activity_schema_integration_tests",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-no-deps-pilot-v2/spider2__activity001/task.sif",
+        "sha256": "d3183afe7b214e18a6eadba20bd67c4da9b91db5f5acaafaf0b8bc5cc1541b5f"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__activity001.stdout.json",
+        "sha256": "91f6dba912c45cdae0f050076addab5240ab7ef6909f8b1f6058b2aae3b4c6bd"
+      },
+      "instruction": {
+        "path": "tasks/spider2__activity001/instruction.md",
+        "sha256": "b612cc0c0776b5caba9610b3a84f4cd406c42b498ae39d4fd866e3447ef5f8fc"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "How can I compare user activities to see how many users signed up and visited a page, using both the 'aggregate after' and 'aggregate all ever' methods for capturing the visit page activities?",
+      "split_group": "spider-activity001",
+      "task_key": "spider2__activity001",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__airport001.json",
+        "sha256": "efe55594b05d016b707fd03a7d6a870cfe6c07c534d672f6c27871221346f533"
+      },
+      "current_split": "train",
+      "declared_project_name": "malaysia_airports_analysis",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-frozen-deps-batch-v1/spider2__airport001/task.sif",
+        "sha256": "717f661d8adff9b44a0137bb8b0ea01391fb5599814dc631cc114f71f346f318"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__airport001.stdout.json",
+        "sha256": "9f72061707b3d3791c15585bf1db3e3a736085c32db65bbeb9e66adff8960508"
+      },
+      "instruction": {
+        "path": "tasks/spider2__airport001/instruction.md",
+        "sha256": "f799dfbe5bf6d40e8d4ac212439974d3c1d3ae2ea3c5d8f1c388910c2af8d9c9"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "aggregate and summarize Malaysian airport arrival data, including flight counts and calculate the distances between Malaysian airports in kilometers.",
+      "split_group": "spider-airport001",
+      "task_key": "spider2__airport001",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__app_reporting001.json",
+        "sha256": "16309e0df643c02092795e693151ffc64b7ff6015a24ad4ce08cecfcdf1eb750"
+      },
+      "current_split": "train",
+      "declared_project_name": "app_reporting",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-frozen-deps-batch-v1/spider2__app_reporting001/task.sif",
+        "sha256": "763b5275d6cabb61d7baa64f7ce817a40951a69ed1089a6ca427b8c56b324421"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__app_reporting001.stdout.json",
+        "sha256": "32b4c6e5c45d5052f792a17f316ba0a1aa049d6a541daf2596cee969978a4910"
+      },
+      "instruction": {
+        "path": "tasks/spider2__app_reporting001/instruction.md",
+        "sha256": "b17f120a6ba9e567de3f90b81086d1c30259886d2567aedefc1b6fae8c734354"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "Please generate reports for app version and OS version.",
+      "split_group": "spider-app-store-reporting",
+      "task_key": "spider2__app_reporting001",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__app_reporting002.json",
+        "sha256": "940d7dc73d634c059cd7655b9632379423bff34757ee2ab824fc384c20b4e05c"
+      },
+      "current_split": "train",
+      "declared_project_name": "app_reporting",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-frozen-deps-batch-v1/spider2__app_reporting002/task.sif",
+        "sha256": "39d4a3f9eb1cdbddf28ca104ec745616dab23b7c1e848d941be29c1bce18cfd2"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__app_reporting002.stdout.json",
+        "sha256": "0b3deaec932ca65610b1ffd90de8e2b194b152938c3a5b9b31f5ddc18d08ca5a"
+      },
+      "instruction": {
+        "path": "tasks/spider2__app_reporting002/instruction.md",
+        "sha256": "62cfc5ddd0fb1edefa5b87912770ad98ba0906042c01ffc3459d1f3e5ee2021d"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "Please generate an overview report of the app combine apple store and google play.",
+      "split_group": "spider-app-store-reporting",
+      "task_key": "spider2__app_reporting002",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__apple_store001.json",
+        "sha256": "0ea668eb0cb0cbae381f99e90767308893b4b5963bdad0e4d907494add40e6b2"
+      },
+      "current_split": "train",
+      "declared_project_name": "apple_store",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-no-deps-batch-v1/spider2__apple_store001/task.sif",
+        "sha256": "97b2b582b2d22d30c740e7522b0806b875b3b35dc6c90f3658564e0c183645c2"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__apple_store001.stdout.json",
+        "sha256": "1095e754f879733af4fef9be22c4f2e7a812cc2a74a224a7865dc09eaf19fc55"
+      },
+      "instruction": {
+        "path": "tasks/spider2__apple_store001/instruction.md",
+        "sha256": "4429636a38b15113e294b96bfe11e1cb3ee95184533907e8cc3cd4008e55b011"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "Please finish the data transformation project to generate source type and territory report for me.",
+      "split_group": "spider-app-store-reporting",
+      "task_key": "spider2__apple_store001",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__asana001.json",
+        "sha256": "4d02b25a2c45e97a06c7186856bfad0b95616ee88bfd848be986290f50430f83"
+      },
+      "current_split": "train",
+      "declared_project_name": "asana",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-frozen-deps-batch-v1/spider2__asana001/task.sif",
+        "sha256": "dc54bc76c9906ac495f9508bf647fe99638f9b1930d189d02fc4ce1e2957b94e"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__asana001.stdout.json",
+        "sha256": "aaf13d2a7fe91f9b409f6dbe2c106e72201899c5172a45b1f7a17e0d06880616"
+      },
+      "instruction": {
+        "path": "tasks/spider2__asana001/instruction.md",
+        "sha256": "5a3bee56aaa6045ed74c61a7a43b5115f3ca016b49cd4f6e1da8472fbc20e90f"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "Can you describe the process used to aggregate task and project metrics for Asana teams and users, including open tasks, completed tasks, and average close times?",
+      "split_group": "spider-asana001",
+      "task_key": "spider2__asana001",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__asset001.json",
+        "sha256": "4b77b173850357642692d1c8cb181e07ba53819261aafc45e4fb1bb1f752a5e1"
+      },
+      "current_split": "train",
+      "declared_project_name": "dbt_asset",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-no-deps-batch-v1/spider2__asset001/task.sif",
+        "sha256": "f7924c95272c9bc47e2b94ab6ceea1bb06e282acb70da300c218fd0cc05fb529"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__asset001.stdout.json",
+        "sha256": "1c55d64af46c77696b2f774a508a7d5f710d0c067e9a4753079beaed7d677130"
+      },
+      "instruction": {
+        "path": "tasks/spider2__asset001/instruction.md",
+        "sha256": "e548f953f27c06cee8b845979cdb2eca67401b1ed6186f41d972a196445442fe"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "Calculate the average bid, ask, and mid prices for stock tickers on a daily basis and then determine the total book value of shares based on these prices",
+      "split_group": "spider-asset001",
+      "task_key": "spider2__asset001",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__atp_tour001.json",
+        "sha256": "9c769b59edb62210cfd7c34951199e49c06472a7f57aefe57cabb74bef7c62d9"
+      },
+      "current_split": "train",
+      "declared_project_name": "dbt_atp_tour",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-frozen-deps-batch-v1/spider2__atp_tour001/task.sif",
+        "sha256": "28a7a1c85b391d91c49952f0dfcf064a304cdd1fdfe805091410a4d79bcf1786"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__atp_tour001.stdout.json",
+        "sha256": "b8f80bcc896eeafa79d0a78be7041a3ea8ac03756bd3562e660a04e1b53592b1"
+      },
+      "instruction": {
+        "path": "tasks/spider2__atp_tour001/instruction.md",
+        "sha256": "f88cdc31d0c2afe1fce652622ff2f2d9a410adb53950284fc9e62e870af12e3e"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "How can you generate a summary report of ATP tennis matches that includes details about the tournaments, players, match statistics (such as the winner, loser, aces, and scores), and their associated dates, utilizing dimensional tables for tournaments and players to enrich the report?",
+      "split_group": "spider-atp_tour001",
+      "task_key": "spider2__atp_tour001",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__flicks001.json",
+        "sha256": "bdfa8d6fd2e999954607bf9c6189044b1ae50323787885f90425c0985ef72242"
+      },
+      "current_split": "train",
+      "declared_project_name": "dbt_flicks",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-frozen-deps-batch-v1/spider2__flicks001/task.sif",
+        "sha256": "006b9d28d2c2d84004c964fa6fee6c54b4507dc4147c87e6f1337f7eb7ff504c"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__flicks001.stdout.json",
+        "sha256": "945d00118201a8cc888bd88e7db6588a61eddabfe563bb4ccde9b57b8dce978c"
+      },
+      "instruction": {
+        "path": "tasks/spider2__flicks001/instruction.md",
+        "sha256": "cfd689cc9a4148952096fd6d053993b4a627b01ab741b1badb3836874d56e99f"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "How can I calculate the average IMDb and TMDb ratings for actors based on the movies they've appeared in, and also determine the number of movies each actor participated in by release year?",
+      "split_group": "spider-flicks001",
+      "task_key": "spider2__flicks001",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__google_play001.json",
+        "sha256": "95f28610079565b4d90d57362f9ec8f853127d0f4eb5ed39d6361b2d8e10af4d"
+      },
+      "current_split": "train",
+      "declared_project_name": "google_play",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-frozen-deps-batch-v1/spider2__google_play001/task.sif",
+        "sha256": "0837330dfa7c10a688f1e8d09e82dd877102500ef52f0acf06cb2f51e760e7af"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__google_play001.stdout.json",
+        "sha256": "2c287c7e73d268d6e27ef5d28f0e3469beeb8288a39bd977d7cdcf7c15c18675"
+      },
+      "instruction": {
+        "path": "tasks/spider2__google_play001/instruction.md",
+        "sha256": "6d31b5e7f26750ec1445491603b146eaca02b324114926c7d62d9362edc31931"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "Generate a Google Play country report and a Google Play device report based on aggregated install and rating metrics..",
+      "split_group": "spider-app-store-reporting",
+      "task_key": "spider2__google_play001",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__google_play002.json",
+        "sha256": "93b003570a910aab09a7fef1a0b8c4d609ab56be980ba36f89080dd092f43c4c"
+      },
+      "current_split": "train",
+      "declared_project_name": "google_play",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-frozen-deps-batch-v1/spider2__google_play002/task.sif",
+        "sha256": "ad9e60f3d4252753f45882bcf3734b39f0c1a545604c2fb86fa1492104d9782e"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__google_play002.stdout.json",
+        "sha256": "60b245eb7b0917480a52b1b155c4bcdd24323a07b6464454c89f64fd531f23e7"
+      },
+      "instruction": {
+        "path": "tasks/spider2__google_play002/instruction.md",
+        "sha256": "d8d9cd4502f7ede72f8818e10232c758ae0bf4e28f45853abb5298e450413179"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "Generate an overview report on Google Play app performance, including installs, uninstalls, crashes, ANRs, ratings, and store performance metrics over time.",
+      "split_group": "spider-app-store-reporting",
+      "task_key": "spider2__google_play002",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__greenhouse001.json",
+        "sha256": "74e722141339a7f17142a9ca5eb6398431396596b89dd2fdbc2cb676f7574df0"
+      },
+      "current_split": "train",
+      "declared_project_name": "greenhouse",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-frozen-deps-batch-v1/spider2__greenhouse001/task.sif",
+        "sha256": "1664bfb29faab096752145852bc621ed8cf706b61c1c4ba3a7b678372e51b068"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__greenhouse001.stdout.json",
+        "sha256": "47e07b4f35d9ebc2e9b4fe9a06583ce4cf51df2940397750e005cdfa61955db6"
+      },
+      "instruction": {
+        "path": "tasks/spider2__greenhouse001/instruction.md",
+        "sha256": "1d07f5554d52e9e2300536a816a661acd140aa4c82205bdb3b7805f82f6bfab3"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "Please generate a report on enhanced data of job and application.",
+      "split_group": "spider-greenhouse001",
+      "task_key": "spider2__greenhouse001",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__hive001.json",
+        "sha256": "ea8fca414485039c9317bf4fe3f08642f77b807660ca636d030e8146d29b0f4c"
+      },
+      "current_split": "train",
+      "declared_project_name": "dbt_hive",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-no-deps-batch-v1/spider2__hive001/task.sif",
+        "sha256": "26849ef7453707688b91f955976b273ae6cc41b86cbad542510e537dba2492a4"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__hive001.stdout.json",
+        "sha256": "3dd2022d8884ebd777ea9a891d1cafe7ecb9d5f91006c9a96bbe5288ef102bf8"
+      },
+      "instruction": {
+        "path": "tasks/spider2__hive001/instruction.md",
+        "sha256": "40592d4bc1e2bdb817a14668b8218e6e3a80729d429c49ba39bc8d4a39eadea0"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "Process raw COVID-19 case data, clean it, and join it with country codes to display the number of cases and deaths by country and report date?",
+      "split_group": "spider-hive001",
+      "task_key": "spider2__hive001",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__hubspot001.json",
+        "sha256": "a05617e8b3a7a7be14689bb7952fb209d16be1f0e870ba9c5562a684290b60d9"
+      },
+      "current_split": "train",
+      "declared_project_name": "hubspot",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-frozen-deps-batch-v1/spider2__hubspot001/task.sif",
+        "sha256": "7f80fba7bbe8041dc2ae6b281d182a368f29e408ecd67c862b7ba0482aff4b65"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__hubspot001.stdout.json",
+        "sha256": "5b5fc41aee4336ea37df1d221b664a0eb8c0e3f9a725d61ba5f2f712c83a6388"
+      },
+      "instruction": {
+        "path": "tasks/spider2__hubspot001/instruction.md",
+        "sha256": "15ffbd27352584ccf175d342773acf64970dccaf24f00907bf17ef6d0833f21f"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "How can I merge HubSpot contact data with email metrics, engagement activities, and email campaign performance to provide a comprehensive view of each contact’s interactions and the overall effectiveness of email campaigns?",
+      "split_group": "spider-hubspot001",
+      "task_key": "spider2__hubspot001",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__inzight001.json",
+        "sha256": "49ffa548e5c8e2efc2915bdddd9f0ea4fc78cae05db6fb979e91e9703f62d090"
+      },
+      "current_split": "train",
+      "declared_project_name": "inzight",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-frozen-deps-batch-v1/spider2__inzight001/task.sif",
+        "sha256": "49036a92cf86ec6e43689e5f3a8571dffff0cfcebeeebf5200222420802422d1"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__inzight001.stdout.json",
+        "sha256": "a090009cefd5ed6ba23d5d60a167cba83667b31dd33d57ec88b361ff4e401515"
+      },
+      "instruction": {
+        "path": "tasks/spider2__inzight001/instruction.md",
+        "sha256": "7e31c13d1486b81a04de0f707e2d8f669c631dc4002f229a1a3f5bca45c89507"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "Calculate the monthly peak electricity usage, along with its 12-month rolling average and percentage change compared to the previous month, using timestamps and date-time dimensions.",
+      "split_group": "spider-inzight001",
+      "task_key": "spider2__inzight001",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__jira001.json",
+        "sha256": "55653f2a6b86e5e02b66c4b763dc01c2410dbea6111f3e5ef3aa196525d8b8c6"
+      },
+      "current_split": "train",
+      "declared_project_name": "jira",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-frozen-deps-batch-v1/spider2__jira001/task.sif",
+        "sha256": "9ef93e18bf7086c82e1b98b57215050bca9f6d1febf315484d5ea8d7703d5272"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__jira001.stdout.json",
+        "sha256": "630e081162a3ede0453243d2b740e9f61decf7a5b47d240f6e685ce438190e1e"
+      },
+      "instruction": {
+        "path": "tasks/spider2__jira001/instruction.md",
+        "sha256": "b66a7625a5e75c8fa9cabbc1a2d10dd64c296cc706d934e40d7d7cf26d53811d"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "Retrieve information about Jira projects, including project lead details, associated epics, components, and metrics like the average and median time for closing issues, both in days and seconds.",
+      "split_group": "spider-jira001",
+      "task_key": "spider2__jira001",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__lever001.json",
+        "sha256": "ba0340ac2adbdd2dd83129830396adf58ae5e9f6a0303a630e41c0597f9f927b"
+      },
+      "current_split": "train",
+      "declared_project_name": "lever",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-frozen-deps-batch-v1/spider2__lever001/task.sif",
+        "sha256": "2aa7769ea119860c00c488f19389f0caf0b3e8e8a8173fb750e9132073bc5d1c"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__lever001.stdout.json",
+        "sha256": "6bf7f652b695df315b585e993a79f80696d1a3bab771836c3a16f3f0846fb40e"
+      },
+      "instruction": {
+        "path": "tasks/spider2__lever001/instruction.md",
+        "sha256": "667eb02dfcccb073e3877952c4c858bf2c8480f1b78025a1375efcddc3e35a44"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "Pull together the data from multiple tables related to job postings and create a complete report that covers job applications, interviews, requisitions, tags, and the hiring manager details.",
+      "split_group": "spider-lever001",
+      "task_key": "spider2__lever001",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__marketo001.json",
+        "sha256": "9d0932355545fe80d319cb183a9e036cca96ceed20b857ac113917786982857e"
+      },
+      "current_split": "train",
+      "declared_project_name": "marketo",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-frozen-deps-batch-v1/spider2__marketo001/task.sif",
+        "sha256": "bf6a6c07338cfcc3baf13102bc8b5ce867be0872306bf1a8a6b8f4824703d9be"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__marketo001.stdout.json",
+        "sha256": "c9ca467f5357d87aa4e5363e35f5e3c8aa9d9ab10d43e3a30c864fdda31cb5f8"
+      },
+      "instruction": {
+        "path": "tasks/spider2__marketo001/instruction.md",
+        "sha256": "d605a33d442b5bd833de7cb538748195cb3e656436abb1288cd59051c65ddeac"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "How can I combine the most recent version of each email template with aggregated metrics for sends, opens, bounces, clicks, deliveries, and unsubscribes?",
+      "split_group": "spider-marketo001",
+      "task_key": "spider2__marketo001",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__maturity001.json",
+        "sha256": "bbb13e009d7beedd299f80e19c8ceb2025ed459d5587b9d60ca87ee944d3baf3"
+      },
+      "current_split": "train",
+      "declared_project_name": "claim_to_fame",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-frozen-deps-batch-v1/spider2__maturity001/task.sif",
+        "sha256": "bdf39879e239376df494a4620d31b39f61aec5fe06f4404185c1e7a6e44b774b"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__maturity001.stdout.json",
+        "sha256": "34138c57f65a77748970a229934c8d7d4b6a7ceb73e36b140444ddf795706001"
+      },
+      "instruction": {
+        "path": "tasks/spider2__maturity001/instruction.md",
+        "sha256": "5340a3f665bb4e7599dd25b8436d6f87fcfd2f60366cd9f5d2d903608654a621"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "How can I retrieve detailed information about doctors, including their specialties, and patients, including their medical details, such as diabetes status, from the respective dimension tables?",
+      "split_group": "spider-maturity001",
+      "task_key": "spider2__maturity001",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__movie_recomm001.json",
+        "sha256": "963f863afa7b108e3d42fe28a0e9102e3386252fa6bf9c851b0a74712587066a"
+      },
+      "current_split": "train",
+      "declared_project_name": "movie_recomm",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-no-deps-batch-v1/spider2__movie_recomm001/task.sif",
+        "sha256": "f481992d5c833dc07102ff17556e02e13acafff3a15fb2920019f0f971d274d2"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__movie_recomm001.stdout.json",
+        "sha256": "728c984715d994d1a7b57dd61e8d8a6b971736fe84c0c091c6e2a27beed0b536"
+      },
+      "instruction": {
+        "path": "tasks/spider2__movie_recomm001/instruction.md",
+        "sha256": "b953c4d45f52424eae1865c772c1b9f5c798ef06046f467acdfed456a0066375"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "combine movie_recomm original programs from various genres, clean up their titles, and standardize premiere dates while also categorizing them by genre and renewal status",
+      "split_group": "spider-netflix-prompt-reuse",
+      "task_key": "spider2__movie_recomm001",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__nba001.json",
+        "sha256": "2993e005860dbf1d2a37b035eade47731655e7e4d6a81fcd8cef307f8fff1d42"
+      },
+      "current_split": "train",
+      "declared_project_name": "sports_sims",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-no-deps-batch-v1/spider2__nba001/task.sif",
+        "sha256": "734f222e9bb62d7670b6c033992fc4c88ea0f25dff90ea1828a26a73292c2dbd"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__nba001.stdout.json",
+        "sha256": "6fbb6206072c755e87fc838d4df4312e0bbb16ee87da62057bc81b6b4f0473bf"
+      },
+      "instruction": {
+        "path": "tasks/spider2__nba001/instruction.md",
+        "sha256": "2eba380a140f7915c62ae83386581bca18a741bfa3cb36661312c505fe44d083"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "Create comprehensive views summarizing NBA teams' regular season, playoff progress, and Elo ratings. Use data from season summaries, playoff simulations, and ratings, and include key playoff milestones like semifinals, finals, and championship wins. Keep it concise.",
+      "split_group": "spider-nba001",
+      "task_key": "spider2__nba001",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__netflix001.json",
+        "sha256": "ea373767bbb9c774bf050275046dfa4819d01c182e98fc8a009502d2c038a5c9"
+      },
+      "current_split": "train",
+      "declared_project_name": "netflix_programming",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-frozen-deps-pilot-v1/spider2__netflix001/task.sif",
+        "sha256": "7b36354e808ee2b610bf5fe1671f12371532c0829bd2b419586bf683295c997d"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__netflix001.stdout.json",
+        "sha256": "be88391ddd9a961db5d35985f1a56979bc08b63d8941a76c947ce43c7087f9f3"
+      },
+      "instruction": {
+        "path": "tasks/spider2__netflix001/instruction.md",
+        "sha256": "e410450aafcc696109e23d6c719d0f97630dfd86f8358dc78d8faf0ba4b5f647"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "combine Netflix original programs from various genres, clean up their titles, and standardize premiere dates while also categorizing them by genre and renewal status",
+      "split_group": "spider-netflix-prompt-reuse",
+      "task_key": "spider2__netflix001",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__pendo001.json",
+        "sha256": "ab4d356d6d34c21b9be0fdda09fb2d20984371c9bc3b0ae9d3d8e4643100f417"
+      },
+      "current_split": "train",
+      "declared_project_name": "pendo",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-frozen-deps-batch-v1/spider2__pendo001/task.sif",
+        "sha256": "a669f3cbb62361fed366b9c129dc8c156e3a88813df26f7e50ad5cb6b00518a9"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__pendo001.stdout.json",
+        "sha256": "4e870b7852dfd04d785e527bb74169ffb26ef3ee44797755d727f826ca85488e"
+      },
+      "instruction": {
+        "path": "tasks/spider2__pendo001/instruction.md",
+        "sha256": "6306c87f43590babf0c8b7bb58bf12544df475b526eef08cb2fd50f7fa594890"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "Generate daily metrics reports for Pendo guides and pages",
+      "split_group": "spider-pendo001",
+      "task_key": "spider2__pendo001",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__playbook002.json",
+        "sha256": "0f6db06cca6152fe69bfc3ed49f7516ecd586bf1d23fe263a5f63d9beb216348"
+      },
+      "current_split": "train",
+      "declared_project_name": "acme",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-no-deps-batch-v1/spider2__playbook002/task.sif",
+        "sha256": "c48acd12044377736af41c2617153425aebd5e1302fe5b23d979905b702160c1"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__playbook002.stdout.json",
+        "sha256": "0ab1d25f1efc9927ec96cdbb5c68f6ff7bf9ee8f5820a76634a9ef1f2ce312ab"
+      },
+      "instruction": {
+        "path": "tasks/spider2__playbook002/instruction.md",
+        "sha256": "a309f4ad56ecc697aac86740084931dd291e1b1238c750bc394ccebd79b314fa"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "Please assist me in completing the data transformation project of this database.",
+      "split_group": "spider-playbook002",
+      "task_key": "spider2__playbook002",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__provider001.json",
+        "sha256": "07652bd33a3c5d2aaf5722bb670e9e70c10dc4f9d145fe494e6d2c76a9461af2"
+      },
+      "current_split": "train",
+      "declared_project_name": "nppes",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-no-deps-batch-v1/spider2__provider001/task.sif",
+        "sha256": "c2ac566323da7398f79977c05dd1ee094bef3401467fcbecdb961af9454c010a"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__provider001.stdout.json",
+        "sha256": "eb5d116c0464318754bcf772c2482d8bd31eb63746f9aad44101551a846f707d"
+      },
+      "instruction": {
+        "path": "tasks/spider2__provider001/instruction.md",
+        "sha256": "b101f241ec1c4e08bd2f0869b4f53603334a84ff85c48aa89e62a7a6102cfa19"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "How can I map Medicare specialties to NUCC taxonomy codes, prioritize the most specific one, and assign a primary taxonomy code to each provider in the NPI dataset? Additionally, how can I combine this with provider details, including their entity type, practice location, and specialty, while checking if their NPI is active or deactivated?",
+      "split_group": "spider-provider001",
+      "task_key": "spider2__provider001",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__qualtrics001.json",
+        "sha256": "d32820285ea93d8c2f1278941b9adec018accdb416eaf61c3e29e1c73bdfd76f"
+      },
+      "current_split": "train",
+      "declared_project_name": "qualtrics",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-no-deps-batch-v1/spider2__qualtrics001/task.sif",
+        "sha256": "d5f934177a2979e8574f95decea30757b3363d73d3bef46526d59f9b640eb343"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__qualtrics001.stdout.json",
+        "sha256": "7b71c723343c79567d9a93b102e8d63904beaf64c3d176a88a595c522ddd0c06"
+      },
+      "instruction": {
+        "path": "tasks/spider2__qualtrics001/instruction.md",
+        "sha256": "272fd4bf650ce084baf17fe57a78c4e4d793babff1fd93498a9a65ffbf78eca4"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "calculate key metrics for each directory, including distinct contacts, emails, phones, unsubscribed contacts, and new contacts from the last 30 days, along with survey engagement stats (sent, opened, started, completed) and the number of mailing lists?",
+      "split_group": "spider-qualtrics001",
+      "task_key": "spider2__qualtrics001",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__quickbooks001.json",
+        "sha256": "618ccaf4a5bde9f9c39323fe5b87ccbcb0cf17d3c0b534126ba87f23e181c5ae"
+      },
+      "current_split": "train",
+      "declared_project_name": "quickbooks",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-frozen-deps-batch-v1/spider2__quickbooks001/task.sif",
+        "sha256": "90e64995b2fc42efac384ce792d08cb1cd4edf947d197bb6959f8aeca924a6e8"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__quickbooks001.stdout.json",
+        "sha256": "eea73e04b0ee94f6920e0cc24212baa13e46bcb70ab2cc315a242fd51b43ef77"
+      },
+      "instruction": {
+        "path": "tasks/spider2__quickbooks001/instruction.md",
+        "sha256": "cff7b58cd1d2f7769b00242bd7806bd523153bbe80785c43d248fb4b8aee3a3d"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "Please create a table that unions all records from each model within the double_entry_transactions directory. The table should result in a comprehensive general ledger, ensuring each transaction has an offsetting debit and credit entry.",
+      "split_group": "spider-quickbooks",
+      "task_key": "spider2__quickbooks001",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__quickbooks002.json",
+        "sha256": "56c9c754c5217e5feb4013c4286095d61609c7e4ee301e7da44f699e376beee4"
+      },
+      "current_split": "train",
+      "declared_project_name": "quickbooks",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-frozen-deps-batch-v1/spider2__quickbooks002/task.sif",
+        "sha256": "b30ae132e228221f96c2317619f5f12c731351fd1d4898e837fff6029c99c1cd"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__quickbooks002.stdout.json",
+        "sha256": "a18c7d034b447b89a58e31d5684cfb55ace6cfa919eb303f660d0aa9a8f6ebbe"
+      },
+      "instruction": {
+        "path": "tasks/spider2__quickbooks002/instruction.md",
+        "sha256": "443d4e88464c4f82305560b0dc53607c08c889b17d0ce08b12c28e544b65f53c"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "Generate a table that includes bill and invoice transaction information, including supplier and customer details, payment status, balance, overdue days, and other financial information.",
+      "split_group": "spider-quickbooks",
+      "task_key": "spider2__quickbooks002",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__recharge001.json",
+        "sha256": "fa37118e984f1d3ba9cb7cc3daacade04cc673562d516d06ba4d4212231dd2b3"
+      },
+      "current_split": "train",
+      "declared_project_name": "recharge",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-frozen-deps-batch-v1/spider2__recharge001/task.sif",
+        "sha256": "4fd3beb135f56ffa8a30d3cd2c02db1b0fce2f88de0f3d0d7427c70ce7ad4514"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__recharge001.stdout.json",
+        "sha256": "45667ddd8c285f4a01aad8a4ddb638378e8f9bd7ee824bd2a695c69bcd45d82a"
+      },
+      "instruction": {
+        "path": "tasks/spider2__recharge001/instruction.md",
+        "sha256": "5ae81985db026edbbd1b52e7c535974fc754d0107a92e981445cdab7596fc2d7"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "Create a model to combine charge data, including line items, discounts, taxes, shipping, and refunds, while ensuring each item is uniquely identified and linked to its charge?",
+      "split_group": "spider-recharge",
+      "task_key": "spider2__recharge001",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__recharge002.json",
+        "sha256": "3861a71997bdd30476274c4ec5aab02ba7e21a62acd23d22a88da6dd8a978850"
+      },
+      "current_split": "train",
+      "declared_project_name": "recharge",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-no-deps-batch-v1/spider2__recharge002/task.sif",
+        "sha256": "9e07ae9768a6fe73562df1011852f7602b08e995a85a0d8eba6faaaa02173b5f"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__recharge002.stdout.json",
+        "sha256": "225169e699ff1e6d482de2cee35a1f2d6708f7b188af1d407b8d93fd6ffd75ff"
+      },
+      "instruction": {
+        "path": "tasks/spider2__recharge002/instruction.md",
+        "sha256": "4e48c2deef43c8075e54c16c1327dd8eb0f756b92ea0a81c688cdfac545d5d5a"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "Calculate daily and running totals for customer transactions, including charges, discounts, taxes, refunds, and order quantities, and determine the number of active months for each customer?",
+      "split_group": "spider-recharge",
+      "task_key": "spider2__recharge002",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__reddit001.json",
+        "sha256": "d2acb827bf9b33b3a0e9aaca90d11d97734740d676db8d784832c7ec7bfbccae"
+      },
+      "current_split": "train",
+      "declared_project_name": "dbt_reddit",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-no-deps-batch-v1/spider2__reddit001/task.sif",
+        "sha256": "3dea897a278e16a8c2e728b5078a476f7bc76c8e4d04a092b47dcf7ee18e6d60"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__reddit001.stdout.json",
+        "sha256": "73a12569cf38f5f373904371a1640ad9ceb88cda4a32be623f62f5701adb8e9e"
+      },
+      "instruction": {
+        "path": "tasks/spider2__reddit001/instruction.md",
+        "sha256": "1455eaf7275cc21d0565287417c6c19a0395180e27e8d6d082b9ea71ab32d9e5"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "clean and join Reddit post and comment data from paranormal subreddits to analyze metadata like post scores, comment counts, and timestamps, while ensuring relationships between posts and comments?.",
+      "split_group": "spider-reddit001",
+      "task_key": "spider2__reddit001",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__sap001.json",
+        "sha256": "5fb51ebf638a59370e300cd0318c4946238479f98a0c52e644b05b163f235c52"
+      },
+      "current_split": "train",
+      "declared_project_name": "sap",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-frozen-deps-batch-v1/spider2__sap001/task.sif",
+        "sha256": "ccd004c6ebf1a824452cbf1dd649da4b223fc3001d1029fdc8ffde5349d128ec"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__sap001.stdout.json",
+        "sha256": "a801834c662f0dc14bbdf36037c6b3e765672f1ea02831625a30606a8baf220a"
+      },
+      "instruction": {
+        "path": "tasks/spider2__sap001/instruction.md",
+        "sha256": "a44d370547b0d4128916e2a5e87d152fe41ee3a504471b1f55848827d29f917d"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "Can you explain the process used to handle and aggregate SAP general ledger data for `0fi_gl_10` and `0fi_gl_14`?",
+      "split_group": "spider-sap001",
+      "task_key": "spider2__sap001",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__scd001.json",
+        "sha256": "f78239c6cbcac1c19b8d10aa1bf35856d4a61b67a92eb1f86baa9583eb86e6ab"
+      },
+      "current_split": "train",
+      "declared_project_name": "dbt_scd",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-frozen-deps-batch-v1/spider2__scd001/task.sif",
+        "sha256": "ad2dca56445e07871ef6affa75de9a538e9bfb6a881c2818c685f23ac4fd9ed3"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__scd001.stdout.json",
+        "sha256": "ddd4769a60b295affc2a5c597247ee7285b8b36486651eff599dc5b74d39954d"
+      },
+      "instruction": {
+        "path": "tasks/spider2__scd001/instruction.md",
+        "sha256": "86c4f4e2ac5ad57ed846bfd6366858cad06332e5e06b3580cb9fdbae26bcb89f"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "Generate a report that aggregates corporate account metrics, including the number of gaggles, users, events, and orders associated with corporate emails, while also identifying the first user, most active user, and the user with the most orders for each corporate email",
+      "split_group": "spider-scd001",
+      "task_key": "spider2__scd001",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__shopify001.json",
+        "sha256": "4034a3d2033f35a9a646352099809c61c28e7bd7bad2035265ba5a66a1ac8b20"
+      },
+      "current_split": "train",
+      "declared_project_name": "shopify",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-frozen-deps-pilot-v1/spider2__shopify001/task.sif",
+        "sha256": "2fd101a883d58f88d39676bf9a890242942964546ece6dc74ce5fa08b833ee4c"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__shopify001.stdout.json",
+        "sha256": "7ebabcf1554f35c8415986dec93d59b20554ea24eaa70b1b9299d5ea7a98b0d9"
+      },
+      "instruction": {
+        "path": "tasks/spider2__shopify001/instruction.md",
+        "sha256": "05d91bddb95298e8e527b675b0bc28ab990c904e437782b1bdf2ad492028062c"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "Create two tables: one that pulls together product data like total sales, refunds, discounts, and taxes, and another that tracks daily shop performance, including orders, abandoned checkouts, and fulfillment statuses.",
+      "split_group": "spider-shopify",
+      "task_key": "spider2__shopify001",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__shopify002.json",
+        "sha256": "8498596c7714667f35fac16ce1a045c3f035c0cc84e8f19074b687881c50e674"
+      },
+      "current_split": "train",
+      "declared_project_name": "shopify",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-frozen-deps-batch-v1/spider2__shopify002/task.sif",
+        "sha256": "ff98ffc710f7b8d2afa9280858371efe13484b59d358825b461929b9e58a1f76"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__shopify002.stdout.json",
+        "sha256": "692c0985da314041e40fc9543f4fa58d4f85d244c2678c0381b9f006eed71118"
+      },
+      "instruction": {
+        "path": "tasks/spider2__shopify002/instruction.md",
+        "sha256": "943e202b5ecfa9cf6ee209cc22a413c80e715fee4c920115eacd6c8910d7cb9a"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "Generate a table that combines Shopify discount code data with price rules, order aggregates, and abandoned checkout aggregates. Include metrics like discount amounts, order counts, shipping costs, and customer data for each discount, handling cases where discount codes apply to both shipping and line items.",
+      "split_group": "spider-shopify",
+      "task_key": "spider2__shopify002",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__shopify_holistic_reporting001.json",
+        "sha256": "0650697cc4ad98a30ae69a656da9edb6c699b0b1e3e26fb30d5257d6e51832ed"
+      },
+      "current_split": "train",
+      "declared_project_name": "shopify_holistic_reporting",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-frozen-deps-batch-v1/spider2__shopify_holistic_reporting001/task.sif",
+        "sha256": "fbbf0eeb977d7c3fce058458b6121e8a999c9e9619a786f12c74c516778bbae3"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__shopify_holistic_reporting001.stdout.json",
+        "sha256": "461fc8a49e9d28b3499c11511f4434fb2facd70c88a863d1976b3a84f817d137"
+      },
+      "instruction": {
+        "path": "tasks/spider2__shopify_holistic_reporting001/instruction.md",
+        "sha256": "d0c410eb0cadb3345915a86727dead4a75f07ac0df3559e6a0ce6151a3b15fdb"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "Combine daily customer order data from Shopify and user engagement metrics from Klaviyo, ensuring that records are merged based on email, date, and attribution-related details (such as campaign, flow, and variation IDs) to create a unified view of customer activity across both platforms, including last touch information and source-specific data.",
+      "split_group": "spider-shopify",
+      "task_key": "spider2__shopify_holistic_reporting001",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__social_media001.json",
+        "sha256": "bc80a73b80b87832ad3dc2e1495d6bcf7014fb36c85a77d72ab5020001de21fb"
+      },
+      "current_split": "train",
+      "declared_project_name": "social_media_reporting",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-frozen-deps-batch-v1/spider2__social_media001/task.sif",
+        "sha256": "1af73a035ac7df5ca6067b3d0a1db902a734472fadeb0f4e6b3c3013964b59fb"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__social_media001.stdout.json",
+        "sha256": "bb30d1031b543da7e4670f09fc86c2d4a67ded873c49b344cd99f3158d9b82f3"
+      },
+      "instruction": {
+        "path": "tasks/spider2__social_media001/instruction.md",
+        "sha256": "504809d457c2bb4f89ba1c6a248b23e3db5720afc03cb5070c67dde9968a78cc"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "Generate a comprehensive social media report that includes Facebook, Instagram, LinkedIn, and Twitter reports.",
+      "split_group": "spider-social_media001",
+      "task_key": "spider2__social_media001",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__synthea001.json",
+        "sha256": "6558389db22f545b842faf4d47cfb3844bb2c7cdf6e6d10697fe39bacad90689"
+      },
+      "current_split": "train",
+      "declared_project_name": "synthea_omop_etl",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-no-deps-batch-v1/spider2__synthea001/task.sif",
+        "sha256": "bbb990b70cf7639514c7737fbf8f52eabb6f7f12eee993e9e981767ba7e5cc09"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__synthea001.stdout.json",
+        "sha256": "4443833f8871602dbf6f9c08753f3d624130f66e51bb131cb928c0fefe78eeaa"
+      },
+      "instruction": {
+        "path": "tasks/spider2__synthea001/instruction.md",
+        "sha256": "272eae5f84ac19a7f69ae899fdc310604ef1b5862f03faba89d02146ad0265a3"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "How can we aggregate financial data related to healthcare events, such as conditions, drug exposures, and procedures, to calculate total costs, charges, and payments for each event?",
+      "split_group": "spider-synthea001",
+      "task_key": "spider2__synthea001",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__tickit001.json",
+        "sha256": "feeeae26743fb7dc8cb2572bc7085f11d0d814cada11e3bffdade0b07f8325b6"
+      },
+      "current_split": "train",
+      "declared_project_name": "dbt_redshift_demo",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-frozen-deps-batch-v1/spider2__tickit001/task.sif",
+        "sha256": "3fb50b68ca24b2fadcc5bb2821e1a74782649562d49329fc001450fd03ae8077"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__tickit001.stdout.json",
+        "sha256": "469ca44ed71ea4b4e7a713fd48f45ee7386c1c2c608ec1f232b4086452b47d51"
+      },
+      "instruction": {
+        "path": "tasks/spider2__tickit001/instruction.md",
+        "sha256": "05b8ec5f9817bf84c2389115fbea6f8d33f86185cf58f9880d9f2442ff31f452"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "Generating a complete sales summary that includes buyer and seller details, event categories, and sales metrics.",
+      "split_group": "spider-tickit",
+      "task_key": "spider2__tickit001",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__tickit002.json",
+        "sha256": "f4cac3a62be3d9178876295fac85f0eb33af863958fcf7a826324ac9ec1cabc4"
+      },
+      "current_split": "train",
+      "declared_project_name": "dbt_redshift_demo",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-frozen-deps-batch-v1/spider2__tickit002/task.sif",
+        "sha256": "fb83d533784cdd3489bcc80666941db9d118b91ba72a2269af762af4dba7201e"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__tickit002.stdout.json",
+        "sha256": "b1da945b281bc9c0c717b3be974025198b75db6476f24c8856c45f2b1f07162b"
+      },
+      "instruction": {
+        "path": "tasks/spider2__tickit002/instruction.md",
+        "sha256": "678b744b6f25fef856d876d464db1dfa10621da11d9d185ed75f0b1e0c6d702d"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "Get detailed information about events and ticket listings, including venue details, event timing, categories, seller information, and pricing for each listing",
+      "split_group": "spider-tickit",
+      "task_key": "spider2__tickit002",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__tpch001.json",
+        "sha256": "e2ca879ee929e23021e01bd638cb310e19252eb882567705bc3a654319cbc7b1"
+      },
+      "current_split": "train",
+      "declared_project_name": "tpch",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-frozen-deps-pilot-v1/spider2__tpch001/task.sif",
+        "sha256": "2a026b4a28e089ddb32e0cb352ab47acd4e1fe5ecfaf86afdd62cd3afb096b48"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__tpch001.stdout.json",
+        "sha256": "3a823ec18cc5eaf6bad9ab78f967a4dd2fb56b7bc9c1e9691ec8289badcc0332"
+      },
+      "instruction": {
+        "path": "tasks/spider2__tpch001/instruction.md",
+        "sha256": "92617cbc23621675aec38cb932dcd492edf1d4e2b7c4df2a681ac9d47c84b98d"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "Calculate the lifetime value of a customer by analyzing their total purchases and returns, categorize their status based on the percentage of returns, and combine this data with lost revenue information.",
+      "split_group": "spider-tpch",
+      "task_key": "spider2__tpch001",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__tpch002.json",
+        "sha256": "ceb2d5dd472c0be9ac076124b116bcc03af37991c15027d769609f62491cf491"
+      },
+      "current_split": "train",
+      "declared_project_name": "tpch",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-frozen-deps-batch-v1/spider2__tpch002/task.sif",
+        "sha256": "e6de1b05bdd8196d8ffd2362860bd42bddd464122016e9ea55238163d24ccaf2"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__tpch002.stdout.json",
+        "sha256": "04c9025366b366f082df6a046e173d0f9b9b3be2294e85315058b19f792ebfe5"
+      },
+      "instruction": {
+        "path": "tasks/spider2__tpch002/instruction.md",
+        "sha256": "47c5f43d01c297f1bad68977ead4c610d0a7782976d3e7dbd211592dd63a257a"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "Find low-cost brass part suppliers located in the United Kingdom, including their part availability, retail prices, and contact details",
+      "split_group": "spider-tpch",
+      "task_key": "spider2__tpch002",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__twilio001.json",
+        "sha256": "2ebf03b914a6760b1aba81bbc0a949ca68476639de1447ccc84c10b8a78bf860"
+      },
+      "current_split": "train",
+      "declared_project_name": "twilio",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-frozen-deps-batch-v1/spider2__twilio001/task.sif",
+        "sha256": "5db853d813500a204b128dafb3f06bc5ad26911b134ce705fccffda9c30b39d6"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__twilio001.stdout.json",
+        "sha256": "92c9ffd2e6d58e4ca68cc9648f9749b3338bea2794f3551d462c3816b0df2599"
+      },
+      "instruction": {
+        "path": "tasks/spider2__twilio001/instruction.md",
+        "sha256": "156496fbb0e2298b220258ab6f633b59b9f5c1b18c655566a4ba39aec39264d1"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "Aggregate messaging data for Twilio, one at the phone number level and another at the account level, including details like inbound/outbound message counts, message statuses, and total spend.",
+      "split_group": "spider-twilio001",
+      "task_key": "spider2__twilio001",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__workday001.json",
+        "sha256": "77df139147a1f688db761f38169edd992992307a4be644b1264d644eb1d2ce1d"
+      },
+      "current_split": "train",
+      "declared_project_name": "workday",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-no-deps-batch-v1/spider2__workday001/task.sif",
+        "sha256": "b96b6436d86f66e955ffaefcca7239bb9f1948b70c058b2cc0eab6f855479c6c"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__workday001.stdout.json",
+        "sha256": "a78f0bcf955a5db4492c0dbff575a32b1ba4d08a69cfd22e592cb6ba0d25a4bb"
+      },
+      "instruction": {
+        "path": "tasks/spider2__workday001/instruction.md",
+        "sha256": "27e340952333d4e116c3df9cda9e83a7e5f80cbd879072dbb24622b519c4bb31"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "Create a table that combines organization roles with worker position",
+      "split_group": "spider-workday",
+      "task_key": "spider2__workday001",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__workday002.json",
+        "sha256": "184e7af029c5f847e1070042a99753e1352865f63e621e484683eb925493f81c"
+      },
+      "current_split": "train",
+      "declared_project_name": "workday",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-workday002-v2.sif",
+        "sha256": "b84831c1b8838f4d4bb554052eabd22e6c112c22dd45f850892a8acdb8f055aa"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__workday002.stdout.json",
+        "sha256": "c95a5abd3649a46741229a596dd30f068d9d9b54e88238bf524ffe74dd2d4642"
+      },
+      "instruction": {
+        "path": "tasks/spider2__workday002/instruction.md",
+        "sha256": "29547414e28cdc5d18a34d7caeec15e0fe6a7ac2651378d27c9ed7e86b6ca03c"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "Create a table that aggregates job profile information along with job family and job family group details",
+      "split_group": "spider-workday",
+      "task_key": "spider2__workday002",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__xero001.json",
+        "sha256": "38528c905eafe40a8f1515162615e9921f48a9d35fa2a789ae520bef244fbcb9"
+      },
+      "current_split": "train",
+      "declared_project_name": "xero",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-no-deps-batch-v1/spider2__xero001/task.sif",
+        "sha256": "4e35d5e14e4fab5448a114486c62d65163904fb54a355205647cc330f00e6e5a"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__xero001.stdout.json",
+        "sha256": "9291cb477936e40098784cc8fb3e409dd116421ad5f307df6bb8e960c8560d2b"
+      },
+      "instruction": {
+        "path": "tasks/spider2__xero001/instruction.md",
+        "sha256": "e2d7292c5fcf1da44ff97e81b5dec54b14c970327470f71c4668d9a582f4682a"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "Create a balance sheet report that represents the balance sheet state for each account on a monthly basis.",
+      "split_group": "spider-xero",
+      "task_key": "spider2__xero001",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__xero_new001.json",
+        "sha256": "c567444242d1bd0e2e39fd37c62956ad96598053c62db823a1f1759ce0f5e219"
+      },
+      "current_split": "train",
+      "declared_project_name": "xero",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-frozen-deps-batch-v1/spider2__xero_new001/task.sif",
+        "sha256": "13c322f4f2231c97a80505b18be2d2af99f35aab7f87cfb3ab6fa7e108122846"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__xero_new001.stdout.json",
+        "sha256": "8843a197962fe176565a82127b3ebb5d02ab6223a165154e8a2aa7dc99eb3b21"
+      },
+      "instruction": {
+        "path": "tasks/spider2__xero_new001/instruction.md",
+        "sha256": "013c6abc06a3b13751524e273aacbcc8278d4a2b84ac253b13470b07b509820d"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "You are tasked with completing a data transformation project to generate three financial report models: the Profit and Loss Report, the Balance Sheet Report, and the Invoice Line Items Report. These models primarily rely on data sourced from the General Ledger.",
+      "split_group": "spider-xero",
+      "task_key": "spider2__xero_new001",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__xero_new002.json",
+        "sha256": "ee79c12be232912580a2f466cb4db668ff99f87b888578ec9b06eec90587134a"
+      },
+      "current_split": "train",
+      "declared_project_name": "xero",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-frozen-deps-batch-v1/spider2__xero_new002/task.sif",
+        "sha256": "63bd6acf61928e9ffe7c1dac5f2e7d07f09cafc81508e2847c9efa754786dc89"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__xero_new002.stdout.json",
+        "sha256": "e410da18dced42cda89bed41c39f506a39430c366d1474d29bb8c15f5c8c20a9"
+      },
+      "instruction": {
+        "path": "tasks/spider2__xero_new002/instruction.md",
+        "sha256": "4d743a82083ea20fc74127fb4ed3fc6e1876c9ebbad9b23a5e9ef99cd42fecfd"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "Generate a monthly balance sheet report, summarizing asset, equity, and liability accounts with their net amounts, and categorizing earnings as 'Retained Earnings' or 'Current Year Earnings' based on the financial year-end date",
+      "split_group": "spider-xero",
+      "task_key": "spider2__xero_new002",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/spider2__zuora001.json",
+        "sha256": "713d67e9fbafcabb6b01e22411ea03de6334364f0d7d5183f3f45b27d9111f23"
+      },
+      "current_split": "train",
+      "declared_project_name": "zuora",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/spider-frozen-deps-batch-v1/spider2__zuora001/task.sif",
+        "sha256": "bd527ca0eb403d151897727fd444d734c2cbca9cfa3d8bbc34b9e56f2732a81d"
+      },
+      "initialized_project": {
+        "path": "artifacts/validation/catalog-family-review-v1/remaining-spider-projects/spider2__zuora001.stdout.json",
+        "sha256": "f138a03aafc982b786651baf2139ca6f1b59de8cf23306963808d9adbed5e73b"
+      },
+      "instruction": {
+        "path": "tasks/spider2__zuora001/instruction.md",
+        "sha256": "70cdaab0e23c85cace008ce02504598cea49107f823b3ca63c3f9a44ded8a466"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "objective_text": "Generate the daily account overview and the account overview for Zuora.",
+      "split_group": "spider-zuora001",
+      "task_key": "spider2__zuora001",
+      "workflow": "complete_or_fix_project_run_all_models",
+      "workflow_scope": "Explicit adapted instruction; semantic alignment remains separately reviewed"
+    }
+  ],
+  "total_reviewed_tasks": 71
+}

@@ -1,0 +1,80 @@
+{
+  "after_sha256": "4bf770731e7cba06af49e2a944e1cf93e0fff1918676676350f723b197b67967",
+  "applicable_before_sha256": "7d65c59bf567a9f8c277514afdc79d0b6e843b194a1c3b55565ea292b2816bcf",
+  "before": {
+    "path": "patches/npm-10-lock-libc-metadata-v1/package-lock-before.json",
+    "sha256": "7d65c59bf567a9f8c277514afdc79d0b6e843b194a1c3b55565ea292b2816bcf"
+  },
+  "changes": [
+    {
+      "libc": [
+        "glibc"
+      ],
+      "npm_integrity": "sha512-0DaL0A6Xu6sQSQFwe4iVCrKWU2cCTItnRsYsCdxAMm9NF6twAA9BKnoqy4hqz4+azQ0JHuA26qiUKsf1XJ/v5A==",
+      "package": "node_modules/@img/sharp-libvips-linux-arm64",
+      "source": {
+        "path": "patches/npm-10-lock-libc-metadata-v1/metadata-sources/@img__sharp-libvips-linux-arm64.json",
+        "sha256": "7db60e48a9e1b701178f77cbeeac6f43b1a99d634d04d12843103ee00b3c155d"
+      },
+      "tarball": "https://registry.npmjs.org/@img/sharp-libvips-linux-arm64/-/sharp-libvips-linux-arm64-1.3.3.tgz",
+      "version": "1.3.3"
+    },
+    {
+      "libc": [
+        "musl"
+      ],
+      "npm_integrity": "sha512-Y9kQaLMuNoB0bPYOOdcZMaseNrFpPodIWWMrx+CZyydf2xn68j9WYc6sWWRrDwNkzCQjKYfc68L7jKjGlHMibw==",
+      "package": "node_modules/@img/sharp-libvips-linuxmusl-arm64",
+      "source": {
+        "path": "patches/npm-10-lock-libc-metadata-v1/metadata-sources/@img__sharp-libvips-linuxmusl-arm64.json",
+        "sha256": "b8f1f88f555b0232835c6e5959bd951f796594e7cd22aece161da24b52f644ae"
+      },
+      "tarball": "https://registry.npmjs.org/@img/sharp-libvips-linuxmusl-arm64/-/sharp-libvips-linuxmusl-arm64-1.3.3.tgz",
+      "version": "1.3.3"
+    },
+    {
+      "libc": [
+        "glibc"
+      ],
+      "npm_integrity": "sha512-De4jpEnAU8Hd5oT0j1G3uL4ZvTuipVMn7YC6vPaJhy6/7EwEae0SVAoBrUMYQbkLGDm85taVWwuPc1a44LTzCQ==",
+      "package": "node_modules/@img/sharp-linux-arm64",
+      "source": {
+        "path": "patches/npm-10-lock-libc-metadata-v1/metadata-sources/@img__sharp-linux-arm64.json",
+        "sha256": "55891f809d270721d677f1f8aecc7e5319832e69174e745beaabaf1d0de49b29"
+      },
+      "tarball": "https://registry.npmjs.org/@img/sharp-linux-arm64/-/sharp-linux-arm64-0.35.4.tgz",
+      "version": "0.35.4"
+    },
+    {
+      "libc": [
+        "musl"
+      ],
+      "npm_integrity": "sha512-KB5jxpfWQTr0nc3xdHtWChdbifHrBGsd2SM62Eyxrl8afikm+f5qGBU75SJIZBT/S1MC8XyacdlXBMSWq6OURA==",
+      "package": "node_modules/@img/sharp-linuxmusl-arm64",
+      "source": {
+        "path": "patches/npm-10-lock-libc-metadata-v1/metadata-sources/@img__sharp-linuxmusl-arm64.json",
+        "sha256": "43bd45d860e9aceacd5c77325481d0690f3425e7213c2a9e65f55e8c3cf23baa"
+      },
+      "tarball": "https://registry.npmjs.org/@img/sharp-linuxmusl-arm64/-/sharp-linuxmusl-arm64-0.35.4.tgz",
+      "version": "0.35.4"
+    }
+  ],
+  "diff": {
+    "path": "patches/npm-10-lock-libc-metadata-v1/lock.diff",
+    "sha256": "3dea3f44f1510de19b94af9dc3d55fa9bdffea8f36f9ea692f449fa7c7137853"
+  },
+  "failed_regression": {
+    "path": "artifacts/execution/qwen-locked-install-v1/result.json",
+    "sha256": "5e61a31c94ba9068ede7c674358ee9d86fee4011d06b94e752838e795948db8e"
+  },
+  "kind": "environment_installation_lock_metadata_repair",
+  "npm_version": "10.9.9",
+  "patch_id": "npm-10-lock-libc-metadata-v1",
+  "reason": "npm shrinkwrap serializes os/cpu but omits libc. npm ci then installs two musl optional packages absent from the observed glibc native global install.",
+  "regression_status": "pending",
+  "runtime_integration": "Not applied to Harbor installer; new frozen-install artifacts only",
+  "upstream": {
+    "path": "patches/npm-10-lock-libc-metadata-v1/upstream-shrinkwrap.js",
+    "sha256": "97d50500314b6345cee444a04fa7f93ff154599639f47a79bb16d28ba6988746"
+  }
+}

@@ -1,0 +1,8 @@
+--- original/instruction.md
++++ variant/instruction.md
+@@ -103,3 +103,5 @@
+ - Ensure idempotent execution (multiple runs produce same results)
+ - Use explicit type casts where needed
+ - Handle NULL values appropriately
++
++Count each dropoff row from the session flags alone, not from funnel_stage: BEFORE_VIEW is sessions with no product view, VIEW_TO_CART is sessions with a product view but no add to cart, and CART_TO_PURCHASE is sessions with an add to cart but no purchase. A session that skipped a stage counts in every row whose condition it meets, even if it purchased.

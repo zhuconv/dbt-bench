@@ -1,0 +1,32 @@
+{
+  "final_package_inventory": "release/harbor-package-files.json",
+  "harbor_version": "0.25.0",
+  "patches": [
+    {
+      "id": "harbor-025-apptainer-exec-v1",
+      "path": "patches/harbor-025-apptainer-exec-v1/metadata.json",
+      "sha256": "79871e2c9f32009b60240e9e6d2cc7c729fe9a17fea5fc5498e4dab1ccc988bf"
+    },
+    {
+      "id": "harbor-025-qwen-error-v1",
+      "path": "patches/harbor-025-qwen-error-v1/metadata.json",
+      "sha256": "732e125e6edbdc331e89c96600851366ef5eec31f94088e48ff34098530bf6d3"
+    },
+    {
+      "id": "harbor-025-apptainer-lifecycle-v1",
+      "path": "patches/harbor-025-apptainer-lifecycle-v1/metadata.json",
+      "sha256": "bbaca83ba53df5eeb91f23a2ce22d04577a768cabc5392f90ec95ce55a224ad2"
+    },
+    {
+      "id": "harbor-025-qwen-locked-install-v1",
+      "path": "patches/harbor-025-qwen-locked-install-v1/metadata.json",
+      "sha256": "188568e6bdd6df2b138181290b8d46d946b2ff73008c5a613e9a99d93e8f28a5"
+    },
+    {
+      "id": "harbor-025-apptainer-timeout-v2",
+      "path": "patches/harbor-025-apptainer-timeout-v2/metadata.json",
+      "sha256": "24079b1ce1708aa6c4bc70d51ab8241ac64b7030ae457232dbfbb4ccc1362204"
+    }
+  ],
+  "scope": "Exact patch bytes and package hashes; archived qualification reports remain external."
+}

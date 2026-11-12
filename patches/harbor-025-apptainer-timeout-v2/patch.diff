@@ -1,0 +1,441 @@
+--- a/environments/singularity/singularity.py
++++ b/environments/singularity/singularity.py
+@@ -30,6 +30,7 @@
+ import subprocess
+ import sys
+ import tempfile
++from uuid import uuid4
+ from pathlib import Path
+ from typing import override
+ 
+@@ -46,6 +47,14 @@
+ from harbor.models.environment_type import EnvironmentType
+ from harbor.models.task.config import EnvironmentConfig
+ from harbor.models.trial.paths import TrialPaths
++
++
++class ExecTransportError(RuntimeError):
++    """Container RPC failure, never model budget exhaustion."""
++
++
++class ExecCleanupError(RuntimeError):
++    """Command lifetime unconfirmed: do not grade a moving submission."""
+ 
+ 
+ class MemoryLimitExceededError(Exception):
+@@ -758,51 +767,54 @@
+ 
+         merged_env = self._merge_env(env)
+ 
++        if getattr(self, '_exec_cleanup_failed', False):
++            raise ExecCleanupError('Previous command stop was not confirmed; refusing further execution')
++        exec_id = str(uuid4())
+         try:
+-            _DEFAULT_HTTP_TIMEOUT = 600
+-            http_timeout = (
+-                (timeout_sec + 10) if timeout_sec is not None else _DEFAULT_HTTP_TIMEOUT
+-            )
+-
++            # Read may wait for the whole agent/verifier phase. The caller owns
++            # that phase deadline; an explicit command deadline is sent to the
++            # server. Keep connection/write/pool failures bounded and distinct.
++            http_timeout = httpx.Timeout(connect=10.0, read=None, write=30.0, pool=30.0)
+             response = await self._http_client.post(
+-                f"http://localhost:{self._server_port}/exec",
+-                json={
+-                    "command": command,
+-                    "cwd": cwd,
+-                    "env": merged_env,
+-                    "timeout_sec": timeout_sec,
+-                },
+-                timeout=http_timeout,
+-            )
++                f'http://localhost:{self._server_port}/exec',
++                json={'command': command, 'cwd': cwd, 'env': merged_env,
++                      'timeout_sec': timeout_sec, 'exec_id': exec_id},
++                timeout=http_timeout)
+             response.raise_for_status()
+             result = response.json()
+-
+-            exec_result = ExecResult(
+-                stdout=result.get("stdout"),
+-                stderr=result.get("stderr"),
+-                return_code=result.get("return_code", 1),
+-            )
+-
+-            if exec_result.return_code != 0:
+-                error_output = exec_result.stderr or exec_result.stdout or "<no output>"
+-                self.logger.debug(
+-                    f"Command exited with rc={exec_result.return_code}: {error_output}"
+-                )
+-
+-            return exec_result
+-
+-        except httpx.TimeoutException:
++            return ExecResult(stdout=result.get('stdout'), stderr=result.get('stderr'),
++                              return_code=result.get('return_code', 1))
++        except asyncio.CancelledError:
++            await self._confirm_exec_stopped(exec_id)
++            raise
++        except httpx.HTTPError as exc:
++            await self._confirm_exec_stopped(exec_id)
+             if self._memory_limit_exceeded:
+-                raise MemoryLimitExceededError(self._memory_limit_exceeded)
+-            raise asyncio.TimeoutError(
+-                f"HTTP request timed out after {http_timeout} seconds"  # ty: ignore[possibly-unresolved-reference]
+-                if http_timeout  # ty: ignore[possibly-unresolved-reference]
+-                else "HTTP request timed out"
+-            )
+-        except (httpx.ConnectError, httpx.RemoteProtocolError):
+-            if self._memory_limit_exceeded:
+-                raise MemoryLimitExceededError(self._memory_limit_exceeded)
+-            raise
++                raise MemoryLimitExceededError(self._memory_limit_exceeded) from exc
++            raise ExecTransportError(f'Container exec transport failed ({type(exc).__name__}); '
++                                     f'exec_id={exec_id}; command stop confirmed') from exc
++
++    async def _confirm_exec_stopped(self, exec_id: str) -> None:
++        async def cancel():
++            try:
++                response = await self._http_client.post(
++                    f'http://localhost:{self._server_port}/exec/{exec_id}/cancel', timeout=10.0)
++                response.raise_for_status()
++                body = response.json()
++                if body.get('exec_id') != exec_id or body.get('stopped') is not True:
++                    raise ValueError('Missing matching stop acknowledgement')
++            except Exception as exc:
++                self._exec_cleanup_failed = True
++                raise ExecCleanupError(f'Cannot confirm stopped exec_id={exec_id}; '
++                                       f'no further exec or verification is safe') from exc
++        # A second caller cancellation must not skip stopping the command tree.
++        cleanup = asyncio.create_task(cancel())
++        while not cleanup.done():
++            try:
++                await asyncio.shield(cleanup)
++            except asyncio.CancelledError:
++                continue
++        cleanup.result()
+ 
+     @override
+     async def upload_file(self, source_path: Path | str, target_path: str) -> None:
+--- a/environments/singularity/server.py
++++ b/environments/singularity/server.py
+@@ -22,7 +22,8 @@
+ from typing import Dict, Optional
+ 
+ import uvicorn
+-from fastapi import FastAPI
++from uuid import uuid4
++from fastapi import FastAPI, Request, HTTPException
+ from pydantic import BaseModel
+ 
+ 
+@@ -32,6 +33,7 @@
+     cwd: Optional[str] = None
+     env: Optional[Dict[str, str]] = None
+     timeout_sec: Optional[int] = None
++    exec_id: Optional[str] = None
+ 
+ 
+ class CommandResult(BaseModel):
+@@ -113,56 +115,189 @@
+ app = FastAPI(lifespan=lifespan)
+ 
+ 
+-@app.post("/exec", response_model=CommandResult)
+-def exec_command(req: CommandRequest):
+-    """Execute a command in the container (using sync subprocess).
+-
+-    Uses the Unix `timeout` command for timeout handling (like Daytona).
+-    This ensures all output produced before timeout is captured, unlike
+-    Python's subprocess timeout which may lose buffered output.
+-    """
+-    env = os.environ.copy()
+-    env["PATH"] = env.get("PATH") or "/usr/local/bin:/usr/bin:/bin"
+-    if req.env:
+-        env.update(req.env)
+-
+-    cwd = req.cwd if req.cwd else os.environ.get("SINGULARITY_WORKDIR", "/app")
+-
+-    if req.timeout_sec is not None:
+-        actual_command = f"timeout --signal=TERM {req.timeout_sec} bash -c {_shell_quote(req.command)}"
+-    else:
+-        actual_command = req.command
+-
+-    logger.debug(f"Executing command: {req.command[:100]}")
+-
+-    process = subprocess.Popen(
+-        actual_command,
+-        shell=True,
+-        executable="/bin/bash",
+-        text=True,
+-        encoding="utf-8",
+-        errors="replace",
+-        stdout=subprocess.PIPE,
+-        stderr=subprocess.STDOUT,
+-        cwd=cwd,
+-        env=env,
+-    )
+-
+-    stdout, _ = process.communicate()
+-    actual_output = stdout.strip() if stdout else None
+-
+-    if process.returncode == 124:
+-        logger.warning(
+-            f"Command timed out after {req.timeout_sec} seconds (timeout exit code 124)"
+-        )
+-    else:
+-        logger.debug(f"Command result: returncode={process.returncode}")
+-
+-    return CommandResult(
+-        stdout=actual_output,
+-        stderr=None,
+-        return_code=process.returncode if process.returncode is not None else 1,
+-    )
++# Each request owns a cancellable subprocess tree. The HTTP request may end
++# before the command, so cancellation is acknowledged separately by exec_id.
++_EXECUTIONS = {}
++_EXECUTION_HISTORY_LIMIT = 1024
++
++
++def _process_table():
++    rows = {}
++    for name in os.listdir('/proc'):
++        if not name.isdigit():
++            continue
++        try:
++            with open('/proc/' + name + '/stat') as stream:
++                fields = stream.read().rsplit(')', 1)[1].split()
++            rows[int(name)] = (int(fields[1]), fields[19], fields[0])
++        except (FileNotFoundError, ProcessLookupError, PermissionError):
++            continue
++    return rows
++
++
++class _Execution:
++    def __init__(self):
++        self.token = str(uuid4())
++        self.process = None
++        self.ready = asyncio.Event()
++        self.done = asyncio.Event()
++        self.cancelled = False
++        self.known = {}
++        self.stop_lock = asyncio.Lock()
++        self.task = None
++
++    def remember(self):
++        rows = _process_table()
++        if self.cancelled:
++            # A short-lived intermediary can exit between ancestry samples.
++            # Inherited exec ownership also finds its reparented children.
++            marker = ('HARBOR_EXEC_TOKEN=' + self.token).encode()
++            for pid, row in rows.items():
++                try:
++                    with open('/proc/' + str(pid) + '/environ', 'rb') as stream:
++                        owned = marker in stream.read().split(b'\0')
++                    if owned:
++                        self.known[pid] = row[1]
++                except (FileNotFoundError, ProcessLookupError, PermissionError):
++                    pass
++        if self.process is not None and self.process.pid in rows:
++            self.known.setdefault(self.process.pid, rows[self.process.pid][1])
++        parents = {pid for pid, stamp in self.known.items()
++                   if pid in rows and rows[pid][1] == stamp}
++        while True:
++            children = {pid for pid, row in rows.items() if row[0] in parents}
++            new = children - parents
++            if not new:
++                break
++            for pid in new:
++                self.known[pid] = rows[pid][1]
++            parents.update(new)
++        return {pid for pid, stamp in self.known.items()
++                if pid in rows and rows[pid][1] == stamp and rows[pid][2] != 'Z'}
++
++    async def monitor(self):
++        while not self.done.is_set():
++            self.remember()
++            await asyncio.sleep(0.05)
++
++    async def stop(self):
++        self.cancelled = True
++        await self.ready.wait()
++        async with self.stop_lock:
++            # PID start times guard reuse. Track descendants across setsid and
++            # reparenting; never signal the HTTP service or another exec tree.
++            for sig, grace in ((signal.SIGTERM, 1.0), (signal.SIGKILL, 2.0)):
++                end = asyncio.get_running_loop().time() + grace
++                while True:
++                    alive = self.remember()
++                    if not alive:
++                        return
++                    for pid in alive:
++                        try:
++                            current = _process_table().get(pid)
++                            if current and current[1] == self.known[pid]:
++                                os.kill(pid, sig)
++                        except ProcessLookupError:
++                            pass
++                    if asyncio.get_running_loop().time() >= end:
++                        break
++                    await asyncio.sleep(0.05)
++            if self.remember():
++                raise RuntimeError('Exec subprocess tree did not stop')
++
++    async def run(self, req):
++        monitor = None
++        try:
++            if self.cancelled:
++                return CommandResult(stdout=None, stderr='Cancelled before launch', return_code=143)
++            env = os.environ.copy()
++            env['PATH'] = env.get('PATH') or '/usr/local/bin:/usr/bin:/bin'
++            if req.env:
++                env.update(req.env)
++            env['HARBOR_EXEC_TOKEN'] = self.token
++            self.process = await asyncio.create_subprocess_exec(
++                '/bin/bash', '-c', req.command,
++                cwd=req.cwd or os.environ.get('SINGULARITY_WORKDIR', '/app'),
++                env=env, stdout=asyncio.subprocess.PIPE,
++                stderr=asyncio.subprocess.STDOUT, start_new_session=True)
++            self.ready.set()
++            self.remember()
++            monitor = asyncio.ensure_future(self.monitor())
++            communication = asyncio.ensure_future(self.process.communicate())
++            timed_out = False
++            try:
++                # Zero retains GNU timeout's documented "disabled" behavior.
++                stdout, _ = await asyncio.wait_for(asyncio.shield(communication),
++                                                   timeout=req.timeout_sec or None)
++            except asyncio.TimeoutError:
++                timed_out = True
++                await self.stop()
++                stdout, _ = await asyncio.wait_for(communication, timeout=5)
++            except asyncio.CancelledError:
++                await self.stop()
++                await asyncio.wait_for(communication, timeout=5)
++                raise
++            return CommandResult(stdout=stdout.decode('utf-8', errors='replace').strip() or None,
++                                 stderr=None, return_code=124 if timed_out else self.process.returncode)
++        finally:
++            self.ready.set()
++            self.done.set()
++            if monitor:
++                monitor.cancel()
++                try:
++                    await monitor
++                except asyncio.CancelledError:
++                    pass
++
++
++def _prune_executions():
++    # Active entries are never evicted. Completed/cancelled ids are tombstones
++    # so a cancellation that arrives before POST /exec cannot launch later.
++    for key in list(_EXECUTIONS):
++        if len(_EXECUTIONS) <= _EXECUTION_HISTORY_LIMIT:
++            break
++        if _EXECUTIONS[key].done.is_set():
++            del _EXECUTIONS[key]
++
++
++@app.post('/exec', response_model=CommandResult)
++async def exec_command(req: CommandRequest, request: Request):
++    ident = req.exec_id or str(uuid4())
++    previous = _EXECUTIONS.get(ident)
++    if previous is not None:
++        if previous.cancelled:
++            return CommandResult(stdout=None, stderr='Cancelled before launch', return_code=143)
++        raise HTTPException(status_code=409, detail='Duplicate exec_id')
++    state = _Execution()
++    _EXECUTIONS[ident] = state
++    _prune_executions()
++    state.task = asyncio.ensure_future(state.run(req))
++    try:
++        while not state.task.done():
++            if await request.is_disconnected():
++                await state.stop()
++                break
++            await asyncio.sleep(0.05)
++        return await asyncio.shield(state.task)
++    except asyncio.CancelledError:
++        await state.stop()
++        raise
++
++
++@app.post('/exec/{ident}/cancel')
++async def cancel_command(ident: str):
++    state = _EXECUTIONS.get(ident)
++    if state is None:
++        state = _Execution()
++        state.cancelled = True
++        state.ready.set()
++        state.done.set()
++        _EXECUTIONS[ident] = state
++        _prune_executions()
++    await state.stop()
++    if state.task:
++        await asyncio.wait_for(asyncio.shield(state.task), timeout=5)
++    return {'exec_id': ident, 'stopped': not state.remember()}
+ 
+ 
+ def _shell_quote(s: str) -> str:
+--- a/trial/trial.py
++++ b/trial/trial.py
+@@ -736,6 +736,7 @@
+                 **self.agent.extra_env_for_bridge(self.config.user_agent.bridge.kind),
+             }
+ 
++        timeout_scope = None
+         try:
+             plan = self._network_plan(step_cfg, warn_unknown_inference=True)
+             step_name = step_cfg.name if step_cfg is not None else None
+@@ -766,15 +767,16 @@
+                                 else self.paths.agent_dir,
+                                 enabled=self.user_agent is None,
+                             ):
+-                                await asyncio.wait_for(
+-                                    run(
++                                timeout_scope = asyncio.timeout(timeout_sec)
++                                async with timeout_scope:
++                                    await run(
+                                         instruction=instruction,
+                                         environment=self.agent_environment,
+                                         context=target.agent_result,
+-                                    ),
+-                                    timeout=timeout_sec,
+-                                )
++                                    )
+         except asyncio.TimeoutError as exc:
++            if timeout_scope is None or not timeout_scope.expired():
++                raise  # Preserve inner timeout origin; only this deadline is agent budget.
+             raise AgentTimeoutError(
+                 f"Agent execution timed out after {timeout_sec} seconds"
+             ) from exc
+@@ -970,11 +972,15 @@
+     async def _verify_with_timeout(
+         self, verifier: BaseVerifier, timeout_sec: float | None
+     ) -> VerifierResult:
+-        try:
+-            return await asyncio.wait_for(verifier.verify(), timeout=timeout_sec)
++        timeout_scope = asyncio.timeout(timeout_sec)
++        try:
++            async with timeout_scope:
++                return await verifier.verify()
+         except EnvironmentStartTimeoutError:
+             raise
+         except TimeoutError as exc:
++            if not timeout_scope.expired():
++                raise
+             raise VerifierTimeoutError(
+                 f"Verifier execution timed out after {timeout_sec} seconds"
+             ) from exc
+--- a/models/trial/error_policy.py
++++ b/models/trial/error_policy.py
+@@ -59,6 +59,8 @@
+         "GKEExecStreamClosedError",
+         "GKEPodNotFoundError",
+         "RuntimeRequestError",
++        "ExecTransportError",
++        "ExecCleanupError",
+         "AddTestsDirError",
+         "DownloadVerifierDirError",
+     ),

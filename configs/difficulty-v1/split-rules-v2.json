@@ -1,0 +1,113 @@
+{
+  "amendment_scope": "User clarification of attempt validity, joint success and audit uncertainty only. Random seed, draw algorithm, family grouping and generation settings unchanged.",
+  "approval_required_before_freeze": true,
+  "attempt_accounting": {
+    "invalid_external_attempts": {
+      "action": "Exclude from the four valid attempts and rerun the affected slot. Retain original logs, native reward, causal evidence and parent/replacement linkage; no successful-result selection.",
+      "examples": [
+        "initial environment failure not caused by the model",
+        "external Slurm allocation time-limit interruption",
+        "model service failure not caused by the model"
+      ],
+      "needs_evidence": "Adjudicate cause from actual execution evidence. A generic timeout or failed verifier alone does not prove infrastructure failure."
+    },
+    "joint_success_count_k": "Count attempts among the same four valid attempts with native_pass=true AND audit_pass=true. Only k determines the nominal stratum.",
+    "model_caused_failures": "Model actions that break its environment remain model outcomes, not infrastructure retries.",
+    "model_native_budget_exhaustion": {
+      "action": "Keep as a valid attempt and count actual native/audit outcomes. Do not rerun or replace because of budget exhaustion. Missing grading evidence requires recovery/review, never invented scores.",
+      "examples": [
+        "model consumes native task time budget",
+        "model exhausts native turn/token/context budget"
+      ]
+    },
+    "native_success_count": "Count native passes among the four retained valid attempts. Keep excluded attempts and their raw rewards separately.",
+    "replacement_policy": "Four independent valid attempts are required, not merely four launches. Replacement of excluded external failures stays in the original planned slot with explicit lineage; do not replace a valid behavioral failure.",
+    "required_valid_attempts_per_task": 4,
+    "unknown_cause": "Keep unresolved pending root-cause review; do not silently call it external or a valid failure."
+  },
+  "audit_uncertainty": {
+    "count": "Record audit_unknown_count separately. An unknown audit adds zero to confirmed joint successes k; preserve audit_reward=null.",
+    "draft_reporting": "List every task with an executed unknown audit; show native pass count, k, unknown count/reasons, possible k range and possible strata. Highlight tasks for which possible strata differ.",
+    "freeze": "Draft only. Explicit user confirmation is required before freezing, including disclosure of stratum-sensitive unresolved audits.",
+    "native_pass_unknown_count": "Only valid attempts with native pass and unknown audit can increase k if later resolved as audit pass. Native fail plus unknown audit cannot become joint success.",
+    "nominal_stratum": "0 if k==0;1-3 if1<=k<=3;4 if k==4. Use k only in stratification, not native pass count or an imputed audit value.",
+    "not_executed": "Audit not run / receipt absent is pending, not executed-unknown; complete the audit before producing a split draft.",
+    "possible_k_interval": "[k, k + native_pass_audit_unknown_count]",
+    "retry_policy": "Audit unknown alone does not authorize replacing a valid model attempt. Investigate or re-audit the same preserved submission; infrastructure invalidity is handled separately.",
+    "unknown_definition": "Audit was actually executed on the submission but could not determine pass/fail. Record reason and evidence."
+  },
+  "catalog": {
+    "path": "catalog/tasks.jsonl",
+    "sha256": "661c93038ad0cac07a39f1cc0a12c53436c05fd50af561123e3fd4a86c1aab5e"
+  },
+  "created_at": "2026-11-08T23:36:51.574884+00:00",
+  "database_scope_note": "DEB train and test share the same retail database. This evaluates new tasks on familiar data, not generalization to unseen databases.",
+  "difficulty_categories": {
+    "0": "k=0 confirmed joint successes among4valid attempts",
+    "1-3": "k in1..3 confirmed joint successes among4valid attempts",
+    "4": "k=4 confirmed joint successes among4valid attempts"
+  },
+  "dimensions": [
+    "source",
+    "workflow",
+    "difficulty"
+  ],
+  "excluded_categories": [
+    "gold_error",
+    "degenerate_empty",
+    "broken"
+  ],
+  "family_definition": {
+    "path": "catalog/splits.json",
+    "sha256": "b92e6c8b717ed9df954eaeb62cfaac0297241c6f1565a12b0ffd0ccfb7d7faf3"
+  },
+  "family_review": {
+    "path": "catalog/reviews/family-v1/freeze.json",
+    "sha256": "639944f150fcba31e21366401318a6d39044aeb74502ba14955c013343584261"
+  },
+  "forced_train": "Every family with more than 4 final eligible candidate task IDs; count task IDs, not historical versions.",
+  "measurement_purpose": "Stratification only; no training export of difficulty traces.",
+  "objective": "For each observed category of each of the three dimensions, sum abs(number of candidate tasks in test category / total candidate tasks in category - 1/4). Category denominators count candidate tasks, not families and not test composition. Use exact rational arithmetic.",
+  "old_split_must_remain_byte_identical": true,
+  "random_algorithm": "Python random.Random(seed). First assign sorted entirely-noncandidate families using one random()<0.25 each. Then for each of exactly 10000 draws, visit sorted candidate-containing families: forced train consumes no random draw; otherwise random()<0.25 assigns entire family to test. Evaluate candidate categories only. Choose earliest draw attaining minimum exact objective.",
+  "random_assignments": 10000,
+  "random_seed": 2026110801,
+  "schema_version": 1,
+  "seed_predeclared_before_any_real_draw": true,
+  "source_categories": [
+    "ade",
+    "spider2",
+    "deb"
+  ],
+  "success_definition": "An attempt is successful only when the native verifier passes AND the qualified audit passes on that same submission. Passing exactly one is not success. Unknown audit is not a confirmed success and is counted separately, never relabeled audit failure.",
+  "supersedes": {
+    "path": "configs/difficulty-v1/split-rules.json",
+    "sha256": "4bb9e220350735197d59686f7a7cc5ad215b7b98afd9cab54cdc4eaa362b7c67"
+  },
+  "target_test_fraction": {
+    "denominator": 4,
+    "numerator": 1
+  },
+  "tie_breaker": "first minimum in draw order; no secondary metric or seed search",
+  "training_prohibited": true,
+  "unit": "family-V1 task_family; all members including noncandidates stay together",
+  "version": "family-stratified-difficulty-v2",
+  "workflow_rules": {
+    "new_project": [
+      "new_project",
+      "new_project_from_reference_models"
+    ],
+    "normalization": "lowercase, trim, replace spaces with underscores",
+    "otherwise": "add_or_complete_models",
+    "repair_diagnosis_exact": [
+      "repair_grain",
+      "build_models_and_repair_grain",
+      "rebuild_attribution_model"
+    ],
+    "repair_diagnosis_prefix": [
+      "diagnose",
+      "modify_existing_model"
+    ]
+  },
+  "zero_success_does_not_exclude_task": true
+}

@@ -1,0 +1,31 @@
+{
+  "gold_derived_correction": false,
+  "instruction_after": {
+    "path": "${ARTIFACT_ROOT}/validation/phase3-task-versions-v1/tasks/spider2__asset001/phase3-instruction-916f5a2b8160b484/instruction.md",
+    "sha256": "916f5a2b8160b484b34f6e5286a9401875fe424e145b8f4b9d452cda8a2bd5a7"
+  },
+  "instruction_before": {
+    "path": "${STORAGE_ROOT}/cache/backend-tasks-migration-1125801/apptainer/168f4cbdd248d6f6229dd934da027ea6cce4eda6fca7ed5948465cb741bba45e/spider2__asset001/instruction.md",
+    "sha256": "e548f953f27c06cee8b845979cdb2eca67401b1ed6186f41d972a196445442fe"
+  },
+  "model_requests": 0,
+  "native_tests_hash": "e3595927d23bc10d0755d4e91653d94664f728537c4bbfbaa2a0f12f334a37ab",
+  "native_verifier_modified": false,
+  "patch": {
+    "path": "patches/phase3-spider2__asset001-916f5a2b8160/instruction.diff",
+    "sha256": "8a6bf874ecd74e7462bfc570d9326422c850100ec8620d8235ff3367ecaa0926"
+  },
+  "production_task": "${ARTIFACT_ROOT}/validation/phase3-task-versions-v1/tasks/spider2__asset001/phase3-instruction-916f5a2b8160b484",
+  "production_task_hash": "fa8cf7d4120a71fe44966d0f1f27a2aa8dd89e38214a428faa9fb95ab6d156b4",
+  "schema_version": 1,
+  "selected_instruction": {
+    "path": "${SCRATCH_ROOT}/claude-two-version-pilot/asset001_v2/instruction.md",
+    "sha256": "916f5a2b8160b484b34f6e5286a9401875fe424e145b8f4b9d452cda8a2bd5a7"
+  },
+  "source_backend_task_hash": "e7ab8af52ba923063236bcf6b5a3323f01888596b5e9967a27f18c414ee74a25",
+  "source_task_hash": "ee4bed8cbe437d3b1d61a1f13b06cc9ac28503bfb58baf0595e67276f5658310",
+  "task_key": "spider2__asset001",
+  "task_version": "phase3-instruction-916f5a2b8160b484",
+  "type": "task_instruction_variant",
+  "validation_status": "See separately versioned phase 3 companion ledger; materialization is not certification"
+}

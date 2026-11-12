@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "scope": "Phase4 evaluation eligibility; historical split and train-phase3-v06 retained. No new train/test split is frozen here.",
+  "selection": {
+    "path": "${ARTIFACT_ROOT}/validation/phase4-review-v1/pipeline/freezes/test-phase4-v04/manifest.json",
+    "sha256": "10be1f2019bf52e8d64a21903e907c823a3a43f8358e2417d5a6e23bde67601d"
+  }
+}

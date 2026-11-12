@@ -1,0 +1,16 @@
+# Copy to local.toml (gitignored), or set DBT_BENCH_LOCAL_CONFIG.
+# Only execution coordinates belong here; no generation/scoring overrides.
+allocation = "YOUR_ALLOCATION"
+partition = "gh"
+storage_root = "${SCRATCH}/dbt-bench-storage"
+artifact_root = "${STORAGE_ROOT}/artifacts"
+cache_root = "${STORAGE_ROOT}/cache"
+asset_map = "${STORAGE_ROOT}/local-assets.json"
+runtime_python = "${STORAGE_ROOT}/runtime/timeout-v2/venv/bin/python"
+vllm_executable = "${REPO_ROOT}/inference/.venv/bin/vllm"
+model_snapshot = "${STORAGE_ROOT}/models/qwen3.6-35b-a3b"
+qwen_bundle = "${STORAGE_ROOT}/qwen-runtime/bundle.json"
+apptainer_bin = "/opt/apps/tacc-apptainer/1.4.1/bin"
+cuda_home = "/home1/apps/nvidia/Linux_aarch64/24.7/cuda/12.5"
+cc = "/usr/bin/gcc"
+cxx = "/usr/bin/g++"

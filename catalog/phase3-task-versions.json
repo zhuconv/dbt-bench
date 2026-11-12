@@ -1,0 +1,131 @@
+{
+  "inventory": {
+    "path": "${ARTIFACT_ROOT}/validation/phase3-review-v1/root-control-v1/inventory.json",
+    "sha256": "b333e43fc9204c6c9aee088e440b6c75ce3b376af6c7325f0cee199c5134e612"
+  },
+  "model_requests": 0,
+  "schema_version": 1,
+  "scope": "Runnable native task variants; no agent source, hidden case payload or observation wrapper added.",
+  "variants": {
+    "ade__ade-bench-ana-eng004": {
+      "metadata": {
+        "path": "patches/phase3-ade__ade-bench-ana-eng004-eaca4eab1975/metadata.json",
+        "sha256": "f592952ba37ce6c631ae0397b67e70c188f90e2986f08ca481c666e2698595c5"
+      },
+      "run_path": "${ARTIFACT_ROOT}/validation/phase3-task-versions-v1/tasks/ade__ade-bench-ana-eng004/phase3-instruction-eaca4eab1975e461",
+      "task_version": "phase3-instruction-eaca4eab1975e461"
+    },
+    "ade__ade-bench-ana-eng006": {
+      "metadata": {
+        "path": "patches/phase3-ade__ade-bench-ana-eng006-fc0fa264c68a/metadata.json",
+        "sha256": "3ce42179b66b04690c6307e26559733ccb7b6c389a3afc7bcfb9f978fd96b9c4"
+      },
+      "run_path": "${ARTIFACT_ROOT}/validation/phase3-task-versions-v1/tasks/ade__ade-bench-ana-eng006/phase3-instruction-fc0fa264c68accbc",
+      "task_version": "phase3-instruction-fc0fa264c68accbc"
+    },
+    "ade__ade-bench-f1010-medium": {
+      "metadata": {
+        "path": "patches/phase3-ade__ade-bench-f1010-medium-3308d33d6cca/metadata.json",
+        "sha256": "bb614f1852820d29661f338e9a3282f8388e7debf62c4e1fc85f65b418d82710"
+      },
+      "run_path": "${ARTIFACT_ROOT}/validation/phase3-task-versions-v1/tasks/ade__ade-bench-f1010-medium/phase3-instruction-3308d33d6cca8cf8",
+      "task_version": "phase3-instruction-3308d33d6cca8cf8"
+    },
+    "ade__ade-bench-intercom001": {
+      "metadata": {
+        "path": "patches/phase3-ade__ade-bench-intercom001-6731aadb255f/metadata.json",
+        "sha256": "0361e687843b513e1cd90250705425b0e0e82947bd02dc5d5b9cba2974bd1968"
+      },
+      "run_path": "${ARTIFACT_ROOT}/validation/phase3-task-versions-v1/tasks/ade__ade-bench-intercom001/phase3-instruction-6731aadb255fc07d",
+      "task_version": "phase3-instruction-6731aadb255fc07d"
+    },
+    "ade__ade-bench-intercom002": {
+      "metadata": {
+        "path": "patches/phase3-ade__ade-bench-intercom002-05e5d7c98773/metadata.json",
+        "sha256": "b38808eac772ce92a76039ca8e03e4d9743ccfa44cca99e6758ca8c73f02a3ec"
+      },
+      "run_path": "${ARTIFACT_ROOT}/validation/phase3-task-versions-v1/tasks/ade__ade-bench-intercom002/phase3-instruction-05e5d7c98773753f",
+      "task_version": "phase3-instruction-05e5d7c98773753f"
+    },
+    "ade__ade-bench-intercom003": {
+      "metadata": {
+        "path": "patches/phase3-ade__ade-bench-intercom003-e47e7ecccaed/metadata.json",
+        "sha256": "d34936e09f2b487c3b189b06df6c5bb1df75be5d2ccac011ad71018d0de99e81"
+      },
+      "run_path": "${ARTIFACT_ROOT}/validation/phase3-task-versions-v1/tasks/ade__ade-bench-intercom003/phase3-instruction-e47e7ecccaedb0e0",
+      "task_version": "phase3-instruction-e47e7ecccaedb0e0"
+    },
+    "deb__dbt-exchange-rate-settlement-date": {
+      "metadata": {
+        "path": "patches/phase3-deb__dbt-exchange-rate-settlement-date-8bba6a342f71/metadata.json",
+        "sha256": "f6e15e91892499760474166877051469349a47574af65adb4e688e97779d39de"
+      },
+      "run_path": "${ARTIFACT_ROOT}/validation/phase3-task-versions-v1/tasks/deb__dbt-exchange-rate-settlement-date/phase3-instruction-8bba6a342f715244",
+      "task_version": "phase3-instruction-8bba6a342f715244"
+    },
+    "deb__dbt-retail-task-07-cart-recovery": {
+      "metadata": {
+        "path": "patches/phase3-deb__dbt-retail-task-07-cart-recovery-01585e9bfa38/metadata.json",
+        "sha256": "426dab8fefb42e1e9e3cb5cd435a395adf1972b3355bc2c5f82a7692fff12dcd"
+      },
+      "run_path": "${ARTIFACT_ROOT}/validation/phase3-task-versions-v1/tasks/deb__dbt-retail-task-07-cart-recovery/phase3-instruction-01585e9bfa3892d6",
+      "task_version": "phase3-instruction-01585e9bfa3892d6"
+    },
+    "deb__dbt-retail-task-10-trust-risk": {
+      "metadata": {
+        "path": "patches/phase3-deb__dbt-retail-task-10-trust-risk-5dfb8f31addb/metadata.json",
+        "sha256": "de3ac4e298bf798795e09575c168ee9658ce64e7f82181c174b87be346446e27"
+      },
+      "run_path": "${ARTIFACT_ROOT}/validation/phase3-task-versions-v1/tasks/deb__dbt-retail-task-10-trust-risk/phase3-instruction-5dfb8f31addb301f",
+      "task_version": "phase3-instruction-5dfb8f31addb301f"
+    },
+    "deb__dbt-sales-funnel-analysis": {
+      "metadata": {
+        "path": "patches/phase3-deb__dbt-sales-funnel-analysis-3a93f92ef734/metadata.json",
+        "sha256": "0f51bccb6b766a4601be01aeef0034ac8617df31616010341ec6fae07f47bbc8"
+      },
+      "run_path": "${ARTIFACT_ROOT}/validation/phase3-task-versions-v1/tasks/deb__dbt-sales-funnel-analysis/phase3-instruction-3a93f92ef73498e6",
+      "task_version": "phase3-instruction-3a93f92ef73498e6"
+    },
+    "spider2__apple_store001": {
+      "metadata": {
+        "path": "patches/phase3-spider2__apple_store001-050f24b3ea89/metadata.json",
+        "sha256": "d8dfca85b67afb192c814aa2cdbf963a9deb06708587935b8e8cb980ea486780"
+      },
+      "run_path": "${ARTIFACT_ROOT}/validation/phase3-task-versions-v1/tasks/spider2__apple_store001/phase3-instruction-050f24b3ea89e40d",
+      "task_version": "phase3-instruction-050f24b3ea89e40d"
+    },
+    "spider2__asset001": {
+      "metadata": {
+        "path": "patches/phase3-spider2__asset001-916f5a2b8160/metadata.json",
+        "sha256": "e5bbb8234b3f6e8d2c5eecdb643d912955f71fa95783737212e3ad1ed16bdc54"
+      },
+      "run_path": "${ARTIFACT_ROOT}/validation/phase3-task-versions-v1/tasks/spider2__asset001/phase3-instruction-916f5a2b8160b484",
+      "task_version": "phase3-instruction-916f5a2b8160b484"
+    },
+    "spider2__hive001": {
+      "metadata": {
+        "path": "patches/phase3-spider2__hive001-1acdf0010675/metadata.json",
+        "sha256": "d18965fd16180d4f4b61f8fc1c65f26b85d32941863600c0d3f974fa4db3b3e1"
+      },
+      "run_path": "${ARTIFACT_ROOT}/validation/phase3-task-versions-v1/tasks/spider2__hive001/phase3-instruction-1acdf0010675b28c",
+      "task_version": "phase3-instruction-1acdf0010675b28c"
+    },
+    "spider2__jira001": {
+      "metadata": {
+        "path": "patches/phase3-spider2__jira001-b54cb3dbf67c/metadata.json",
+        "sha256": "14c261132b32b10d931aae1fec0c781b0c97831cbff7936db486530474da9ed0"
+      },
+      "run_path": "${ARTIFACT_ROOT}/validation/phase3-task-versions-v1/tasks/spider2__jira001/phase3-instruction-b54cb3dbf67c167a",
+      "task_version": "phase3-instruction-b54cb3dbf67c167a"
+    },
+    "spider2__recharge001": {
+      "metadata": {
+        "path": "patches/phase3-spider2__recharge001-0c3e4af5d89c/metadata.json",
+        "sha256": "7df4b03a7428c72ec7f0eee2192896b498a097e7608b154c759ba2a0626a91a1"
+      },
+      "run_path": "${ARTIFACT_ROOT}/validation/phase3-task-versions-v1/tasks/spider2__recharge001/phase3-instruction-0c3e4af5d89c7193",
+      "task_version": "phase3-instruction-0c3e4af5d89c7193"
+    }
+  }
+}

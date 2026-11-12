@@ -1,0 +1,8 @@
+--- original/instruction.md
++++ variant/instruction.md
+@@ -63,3 +63,5 @@
+ **fraud_risk_summary**: `risk_level`, `order_count`, `total_payment_amount`, `avg_fraud_score`, `failed_payment_count`, `pct_of_total_orders`
+ 
+ **payment_anomalies** (at least 1 flag): `payment_id`, `order_id`, `customer_id`, `payment_method`, `amount`, `processed_at`, `fraud_score`, `risk_level`, `anomaly_flags` (comma-separated), `anomaly_count`
++
++Express `pct_of_total_orders` as a fraction (0.0-1.0) of all scored orders, like `failure_rate`; do NOT multiply by 100.

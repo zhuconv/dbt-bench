@@ -1,0 +1,8 @@
+--- original/instruction.md
++++ variant/instruction.md
+@@ -37,3 +37,5 @@
+ - time_to_last_close_minutes
+ 
+ All the "time_to" metrics should be calculated in minutes, rounded to 2 decimal places.
++
++Both models should have exactly one row per conversation in the conversation history, including conversations that have no conversation_parts, whose counts should be 0.

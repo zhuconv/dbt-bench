@@ -1,0 +1,78 @@
+--- a/agents/installed/qwen_code.py
++++ b/agents/installed/qwen_code.py
+@@ -1,3 +1,4 @@
++import hashlib
+ import json
+ import os
+ import shlex
+@@ -41,6 +42,10 @@
+ 
+ 
+ class QwenCodeOptions(InstalledAgentOptions):
++    installation_bundle: Path | None = Field(
++        default=None, description="Explicit local locked installation manifest.")
++    installation_bundle_sha256: str | None = Field(
++        default=None, description="Required SHA256 of the installation manifest.")
+     api_key: Annotated[
+         str | None,
+         Env("OPENAI_API_KEY", fallback="OPENAI_API_KEY"),
+@@ -168,6 +173,11 @@
+ 
+     @override
+     async def install(self, environment: BaseEnvironment) -> None:
++        if self.options.installation_bundle is not None:
++            await self._install_locked_bundle(environment)
++            return
++        if self.options.installation_bundle_sha256 is not None:
++            raise ValueError("Installation checksum requires a bundle manifest")
+         await self.ensure_system_dependencies(environment, ("curl",))
+         version_spec = f"@{self._version}" if self._version else "@latest"
+         await self.exec_as_agent(
+@@ -179,6 +189,47 @@
+                 "qwen --version"
+             ),
+         )
++
++    async def _install_locked_bundle(self, environment: BaseEnvironment) -> None:
++        manifest_path = self.options.installation_bundle.resolve()
++        manifest_bytes = manifest_path.read_bytes()
++        if hashlib.sha256(manifest_bytes).hexdigest() != self.options.installation_bundle_sha256:
++            raise ValueError("Locked Qwen manifest checksum mismatch or missing")
++        manifest = json.loads(manifest_bytes)
++        if (manifest.get("schema_version") != 1
++                or manifest.get("kind") != "dbt-bench-qwen-bundle-v1"
++                or manifest.get("platform") != "linux-arm64"
++                or manifest.get("qwen_version") != self._version):
++            raise ValueError("Locked Qwen manifest/version/platform mismatch")
++        paths = {}
++        for name in ("archive", "inventory", "installer"):
++            entry = manifest["files"][name]
++            path = (manifest_path.parent / entry["path"]).resolve()
++            if not path.is_relative_to(manifest_path.parent):
++                raise ValueError("Locked Qwen file escapes manifest directory")
++            with path.open("rb") as stream:
++                actual = hashlib.file_digest(stream, "sha256").hexdigest()
++            if actual != entry["sha256"]:
++                raise ValueError("Locked Qwen file checksum mismatch: " + name)
++            paths[name] = path
++        remote = {"archive": "/installed-agent/qwen-bundle.tar.gz",
++                  "inventory": "/installed-agent/qwen-inventory.json",
++                  "installer": "/installed-agent/qwen-install.py"}
++        for name, path in paths.items():
++            await environment.upload_file(path, remote[name])
++        await self.exec_as_agent(environment, command=shlex.join([
++            "python3", remote["installer"], "--archive", remote["archive"],
++            "--inventory", remote["inventory"],
++            "--archive-sha256", manifest["files"]["archive"]["sha256"],
++            "--inventory-sha256", manifest["files"]["inventory"]["sha256"],
++            "--output", "/logs/agent/locked-install.json",
++        ]))
++        versions = await self.exec_as_agent(environment, command=(
++            "set -eo pipefail; . ~/.nvm/nvm.sh; "
++            "node --version; npm --version; qwen --version"))
++        if (versions.stdout or "").strip().splitlines() != [
++            "v" + manifest["node_version"], manifest["npm_version"], manifest["qwen_version"]]:
++            raise ValueError("Installed Node/npm/Qwen versions differ from bundle")
+ 
+     def _find_session_jsonl(self) -> Path | None:
+         sessions_dir = self.logs_dir / "qwen-sessions"

@@ -1,0 +1,8 @@
+--- original/instruction.md
++++ variant/instruction.md
+@@ -92,3 +92,5 @@
+ - Ensure idempotent execution (multiple runs produce same results).
+ - Use explicit type casts where needed.
+ - Handle NULL values appropriately.
++
++Only source rows with a non-NULL `customer_id` and a non-NULL `ordered_at` are in scope: apply this filter before computing `as_of_date` and every per-customer metric, including `lifetime_orders` and `lifetime_revenue`. Customers with no such row are left out of the mart, and the reconciliation source aggregates use the same filter.

@@ -1,0 +1,11 @@
+--- original/instruction.md
++++ variant/instruction.md
+@@ -3,6 +3,8 @@
+ ## Task Description
+ 
+ Retrieve information about Jira projects, including project lead details, associated epics, components, and metrics like the average and median time for closing issues, both in days and seconds.
++
++In `jira__project_enhanced`, list each project's `components` in descending order of component name, separated by `, `.
+ 
+ ## Environment
+ 

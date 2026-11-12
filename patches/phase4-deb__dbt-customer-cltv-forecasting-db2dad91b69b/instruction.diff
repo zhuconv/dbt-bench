@@ -1,0 +1,8 @@
+--- original/instruction.md
++++ variant/instruction.md
+@@ -96,3 +96,5 @@
+ 
+ - Use CAST() instead of :: for type casting
+ - Use DATEDIFF function for date differences (compatible with both)
++
++Exclude rows where `ordered_at IS NULL`; such orders count toward no metric, so a customer whose only orders lack a timestamp gets no row. The reconciliation total is computed from the source with the same exclusions as the model (cancelled rows, NULL `customer_id`, NULL `ordered_at`).

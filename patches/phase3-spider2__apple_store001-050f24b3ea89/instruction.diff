@@ -1,0 +1,11 @@
+--- original/instruction.md
++++ variant/instruction.md
+@@ -3,6 +3,8 @@
+ ## Task Description
+ 
+ Please finish the data transformation project to generate source type and territory report for me.
++
++In the territory report, keep each territory name exactly as the source reports it, without renaming or merging spellings of the same country. Look up its ISO code, region and sub-region by either the country name or the alternative country name.
+ 
+ ## Environment
+ 

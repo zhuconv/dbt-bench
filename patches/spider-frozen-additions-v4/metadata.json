@@ -1,0 +1,165 @@
+{
+  "actual_environment_probe": {
+    "path": "${ARTIFACT_ROOT}/validation/spider-v4-six-environment-review/summary.json",
+    "sha256": "7b770acecb5140767019792342f780bbbe48b14dad4843a55a7e6361b99f5767"
+  },
+  "dbt_deps_executed": false,
+  "description": "Explicit missing dependencies copied from historical frozen SIFs; NBA pandas2.2.2 only with fixed tzdata. Preserve all task-vendored packages and native files.",
+  "limitations": "2 actual dbt failures retained, 2 missing-node gaps; no solution certification.",
+  "native_verifier_modified": false,
+  "new_native_scoring_version": false,
+  "patch_id": "spider-frozen-additions-v4",
+  "tasks": [
+    {
+      "all_native_task_bytes_preserved": true,
+      "applicable_parent_image": {
+        "path": "${ARTIFACT_ROOT}/images/spider-v3-batch/spider2__netflix001/task.sif",
+        "sha256": "8466127597f2a85e177d736d655dcab690d2bafa4e85aa8167877192c5a67cb1"
+      },
+      "changes": {
+        "path": "${ARTIFACT_ROOT}/images/spider-v4-six-build2/spider2__netflix001/changes.json",
+        "sha256": "55d36c71717bc1232a9ed91895acc99049675d1aeceef15a0dac5ce61427af70"
+      },
+      "definition": {
+        "path": "${ARTIFACT_ROOT}/images/spider-v4-six-build2/spider2__netflix001/image.def",
+        "sha256": "2f7db6102d7e78e96a738a7d82ff0d55c9dd05ad9d5196620d3efa58474f79b6"
+      },
+      "native_task_hash": "ab058d5a927b2b84e2dafa440b6b7b5f6ee2a15d1b61004a9e3149c2b418b3d0",
+      "provenance": {
+        "path": "${ARTIFACT_ROOT}/images/spider-v4-six-build2/spider2__netflix001/provenance.json",
+        "sha256": "114497161996f80ad901e958566057c720d95fe0576f7dfb878419b548c37606"
+      },
+      "result_image": {
+        "path": "${ARTIFACT_ROOT}/images/spider-v4-six-build2/spider2__netflix001/task.sif",
+        "sha256": "16db158a79239b9be64ec41b2ee41805a9881fbd7d803cbf1fa19077cb5ab6c2"
+      },
+      "task_key": "spider2__netflix001"
+    },
+    {
+      "all_native_task_bytes_preserved": true,
+      "applicable_parent_image": {
+        "path": "${ARTIFACT_ROOT}/images/spider-v3-batch/spider2__scd001/task.sif",
+        "sha256": "99ab836e8114fa2e7129b59be47bdef921a644736d1abf18c72b64c9e36a40f3"
+      },
+      "changes": {
+        "path": "${ARTIFACT_ROOT}/images/spider-v4-six-build2/spider2__scd001/changes.json",
+        "sha256": "0aaa0aa4c72dfc86f74d252d3a4340f3c5d61df0e4cf13f31128d55c125e0bf9"
+      },
+      "definition": {
+        "path": "${ARTIFACT_ROOT}/images/spider-v4-six-build2/spider2__scd001/image.def",
+        "sha256": "27d5458a5d0556ca4f2e90e852638bdb0af6d0a1957aa4a290f3e24cd0885735"
+      },
+      "native_task_hash": "27ec6ffccdcdd276ec8edeaf0a8fa69a448dda15e29b3446a16a0cecee6b66fd",
+      "provenance": {
+        "path": "${ARTIFACT_ROOT}/images/spider-v4-six-build2/spider2__scd001/provenance.json",
+        "sha256": "21dd2b0259fea56a1cd7ea5f32b6ed1d36666da45fcd6bfeb53c41f74512a697"
+      },
+      "result_image": {
+        "path": "${ARTIFACT_ROOT}/images/spider-v4-six-build2/spider2__scd001/task.sif",
+        "sha256": "6a931887f2aa19ca81cbeda9b893e63f1b44aad26abda302c4d20655d9f72fd7"
+      },
+      "task_key": "spider2__scd001"
+    },
+    {
+      "all_native_task_bytes_preserved": true,
+      "applicable_parent_image": {
+        "path": "${ARTIFACT_ROOT}/images/spider-v3-batch/spider2__shopify_holistic_reporting001/task.sif",
+        "sha256": "7bbea990d04e00e40125389e0c744c30c728dc37c57f887517419ec351a4cbce"
+      },
+      "changes": {
+        "path": "${ARTIFACT_ROOT}/images/spider-v4-six-build2/spider2__shopify_holistic_reporting001/changes.json",
+        "sha256": "68f5a9babfdef6246da7c338df26e01738228630e08428766eb9d32f01fec0f8"
+      },
+      "definition": {
+        "path": "${ARTIFACT_ROOT}/images/spider-v4-six-build2/spider2__shopify_holistic_reporting001/image.def",
+        "sha256": "36efcf9e4b0d8f5e8ccff867949d99f359c62352c95bab66b6dafbbde684baa7"
+      },
+      "native_task_hash": "5c204734385db31901c1798f772dacf1009b34110832dc6d967bfb27235db7fc",
+      "provenance": {
+        "path": "${ARTIFACT_ROOT}/images/spider-v4-six-build2/spider2__shopify_holistic_reporting001/provenance.json",
+        "sha256": "4c6e112e9983cae4e3bda6563a1831c7c8b34271027771100f18f54e42d67bf7"
+      },
+      "result_image": {
+        "path": "${ARTIFACT_ROOT}/images/spider-v4-six-build2/spider2__shopify_holistic_reporting001/task.sif",
+        "sha256": "d216e8922dc825e764b9687cea68f2d79f2d0d3ae534da1ad75a29ee3382dd3d"
+      },
+      "task_key": "spider2__shopify_holistic_reporting001"
+    },
+    {
+      "all_native_task_bytes_preserved": true,
+      "applicable_parent_image": {
+        "path": "${ARTIFACT_ROOT}/images/spider-v3-batch/spider2__zuora001/task.sif",
+        "sha256": "3d53f83517334139a247d1d7cb912481f527ddc578d8c8cdd99d3ad1fef8a52c"
+      },
+      "changes": {
+        "path": "${ARTIFACT_ROOT}/images/spider-v4-six-build2/spider2__zuora001/changes.json",
+        "sha256": "2d4374ce9dd5dd9e40958dd1dcfd7d5cf75044e60021990beaa3c885ef26b570"
+      },
+      "definition": {
+        "path": "${ARTIFACT_ROOT}/images/spider-v4-six-build2/spider2__zuora001/image.def",
+        "sha256": "e44826bdfede4bef4d34f4f44c3025f569b7872140169535bb41202314757807"
+      },
+      "native_task_hash": "0f5b804a45274327fb1603d1b6eecd2deb2f339b252fd471c3f8bd5b8956d3b3",
+      "provenance": {
+        "path": "${ARTIFACT_ROOT}/images/spider-v4-six-build2/spider2__zuora001/provenance.json",
+        "sha256": "4ebf01fc6b20f4eba23227c2cfe1b40564aaebe8ea57e1b53b981724b33fddd1"
+      },
+      "result_image": {
+        "path": "${ARTIFACT_ROOT}/images/spider-v4-six-build2/spider2__zuora001/task.sif",
+        "sha256": "ed40e3a1b93ae5c9b820d2cc9c0b0ae42f9fed17ba30f9b7fc605d685f0a80b3"
+      },
+      "task_key": "spider2__zuora001"
+    },
+    {
+      "all_native_task_bytes_preserved": true,
+      "applicable_parent_image": {
+        "path": "${ARTIFACT_ROOT}/images/spider-v3-batch/spider2__inzight001/task.sif",
+        "sha256": "b97c504f52d98b884257ff5ed6a981386b75d81aa88fcc3aae6227054d203b34"
+      },
+      "changes": {
+        "path": "${ARTIFACT_ROOT}/images/spider-v4-inzight-build3/spider2__inzight001/changes.json",
+        "sha256": "a3b464fd21dbcd3441a876210c1fba3e71a9b838214347d4a50904fd9c1c865e"
+      },
+      "definition": {
+        "path": "${ARTIFACT_ROOT}/images/spider-v4-inzight-build3/spider2__inzight001/image.def",
+        "sha256": "8d98deb7869474050e8a33e103fb692fb32191014cfa9aa27dd154779432b7cf"
+      },
+      "native_task_hash": "2e4243c3daf4f43fa7261a75715cf59b1ba1ebbf4ad52a882d0dcbe8ae6f4281",
+      "provenance": {
+        "path": "${ARTIFACT_ROOT}/images/spider-v4-inzight-build3/spider2__inzight001/provenance.json",
+        "sha256": "874d552322027ddbd16070cbc58b1115efd4193eb0cab7ba7fb4c5c67bb98242"
+      },
+      "result_image": {
+        "path": "${ARTIFACT_ROOT}/images/spider-v4-inzight-build3/spider2__inzight001/task.sif",
+        "sha256": "8ab6c5e2cdf06e2b39ce7e08c03c564ec988531a1ff20a2f74c21963c7ace072"
+      },
+      "task_key": "spider2__inzight001"
+    },
+    {
+      "all_native_task_bytes_preserved": true,
+      "applicable_parent_image": {
+        "path": "${ARTIFACT_ROOT}/images/spider-v3-batch/spider2__nba001/task.sif",
+        "sha256": "ff46b5e268212f67b1c92dd435cd678b5d867a635f1d5b75ea45643dedb0271b"
+      },
+      "changes": {
+        "path": "${ARTIFACT_ROOT}/images/spider-v4-six-build2/spider2__nba001/changes.json",
+        "sha256": "47ef2e26c5fc8da55dd3126ec0dbec4ea452b8cca55044bf1145015221208105"
+      },
+      "definition": {
+        "path": "${ARTIFACT_ROOT}/images/spider-v4-six-build2/spider2__nba001/image.def",
+        "sha256": "36f94c84b92f0685346dd02924ba4930c828a97cbde8941e40cb6689e9fb1c3a"
+      },
+      "native_task_hash": "5378b5b8e82545c137a9dbca8a04e0c5383b5bf21c94149f7427e0043bd1381a",
+      "provenance": {
+        "path": "${ARTIFACT_ROOT}/images/spider-v4-six-build2/spider2__nba001/provenance.json",
+        "sha256": "ee6e9e10b4f356a6b5d7e5848b6799ed672e171de7ae68b2d04f3a923d0891a9"
+      },
+      "result_image": {
+        "path": "${ARTIFACT_ROOT}/images/spider-v4-six-build2/spider2__nba001/task.sif",
+        "sha256": "613078e2076474576b404b55e96b461a864259517f7f238a65e83de3133fa828"
+      },
+      "task_key": "spider2__nba001"
+    }
+  ],
+  "type": "environment_compatibility"
+}

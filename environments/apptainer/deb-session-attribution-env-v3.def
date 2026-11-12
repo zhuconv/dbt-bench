@@ -1,0 +1,26 @@
+Bootstrap: localimage
+From: artifacts/images/deb-session-attribution-env-v2.sif
+
+%labels
+    dbt_bench_task deb__dbt-session-attribution
+    dbt_bench_derivative deb-session-attribution-env-v3-server-locked
+    parent_sif_sha256 2d6325982c04ab187aff836ff46a87769daf9988afcc6ca89cbeb73eb4641680
+
+%files
+    environments/apptainer/harbor-server-requirements.txt /opt/dbt-bench-build/server-requirements.txt
+
+%post
+    set -eu
+    test -x /usr/bin/python3
+    command -v tmux
+    apt-get -o APT::Sandbox::User=root update
+    apt-get -o APT::Sandbox::User=root install -y asciinema=2.4.0-1
+    rm -rf /var/lib/apt/lists/*
+    command -v asciinema
+    /usr/local/bin/python3 -m venv /opt/harbor-server
+    /opt/harbor-server/bin/python3 -m pip install --no-cache-dir --only-binary=:all: --require-hashes -r /opt/dbt-bench-build/server-requirements.txt
+    /opt/harbor-server/bin/python3 -m pip freeze
+    rm -rf /opt/dbt-bench-build
+    # The parent environment runs during localimage construction. Keep only its
+    # pristine package snapshot so each trial initializes a fresh writable copy.
+    rm -rf /app/dbt_models_duckdb/dbt_packages

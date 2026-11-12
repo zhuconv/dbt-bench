@@ -1,0 +1,8 @@
+--- original/instruction.md
++++ variant/instruction.md
+@@ -12,3 +12,5 @@
+   - last_reopen_at
+   - total_assignments
+   - total_reopens
++
++Build one row per conversation from the active (latest) version of each conversation in the conversation history, and take conversation_created_at from that conversation record. Left join the active conversation parts to their conversation, so a conversation with no parts still gets a row with total_conversation_parts, total_assignments and total_reopens of 0 and null timestamps, and parts whose conversation is not in the conversation history are not counted.

@@ -1,0 +1,135 @@
+{
+  "atif": {
+    "conformance": "patched_basic_suite_passed; combined_payload_and_metadata_gaps_detected; full_context_unknown",
+    "converter": "harbor.agents.installed.qwen_code.QwenCode",
+    "converter_version": "harbor-0.25.0+dbt-bench-qwen-error-v1",
+    "schema": "provided_by_harbor_0.25.0"
+  },
+  "backends": {
+    "apptainer": {
+      "architecture": "aarch64",
+      "harbor_environment_type": "singularity",
+      "image_policy": "complete_native_task_sif_with_sha256_and_build_evidence",
+      "module": "tacc-apptainer/1.4.1",
+      "runtime_conformance": "compute_node_runtime_passed; native_harbor_environment_compatibility_under_repair",
+      "version_output": "apptainer version 1.4.1-1.el9"
+    },
+    "reference": "docker"
+  },
+  "experiment_generation": "dbt-bench-v1",
+  "external_assets": [],
+  "harbor": {
+    "adapter_conformance": "schemas_and_version_pinning_passed; patched_error_only_fixture_passed; broader_gaps_remain",
+    "runtime_lock_sha256": "a47c7fa5f6ce4924f6cfcf28e4f0cda3755af100ffc5fac8c1b2133f27361edd",
+    "runtime_lock_status": "locked_and_installed",
+    "schema_reference": "https://github.com/harbor-framework/harbor/tree/v0.25.0/src/harbor/models",
+    "version": "0.25.0",
+    "wheel_sha256": "51923ac567fc57b03279e93468b105f689628bcac2cd3d541d4e44aa5c0ec309",
+    "wheel_url": "https://files.pythonhosted.org/packages/90/72/2ead84b6d43e4737682dd489b107be9d828bf5ae4869d0d4f2aa72243149/harbor-0.25.0-py3-none-any.whl"
+  },
+  "patches": [],
+  "qwen_code": {
+    "archive_sha256": "fb8dd2b327beedbe639966fca24d27b1b2860b148b78628812178262af871d1a",
+    "installation_bundle": {
+      "default_manifest": ".cache/qwen-runtime/locked-v1/bundle.json",
+      "files": {
+        "archive": "9eecdb60bdf465e83a588542136231c2f30f68e84ea222176f8ca71d3053a120",
+        "installer": "0e9ba995bcc1fa5cf3835854d650efd3843c15e4e1107f680600130634ac2a26",
+        "inventory": "caa7fc4a32ed39fb1281bb4840dfbec8b54479a68c786b2ab8946d66fb292321"
+      },
+      "locks": [
+        {
+          "path": "runtime/qwen-code/node.lock.json",
+          "sha256": "0e9d5b1de12ca12aae70da5e9722a2577345aa283dc74b0b5851a3814659aebb"
+        },
+        {
+          "path": "runtime/qwen-code/nvm.lock.json",
+          "sha256": "c88f439649b8a62c2c4933231cc1669bfe652c7132b3cef0ac202c7d72374ff8"
+        },
+        {
+          "path": "runtime/qwen-code/package-lock.json",
+          "sha256": "4bf770731e7cba06af49e2a944e1cf93e0fff1918676676350f723b197b67967"
+        },
+        {
+          "path": "runtime/qwen-code/native-installation.json",
+          "sha256": "f9fff403e5b094765addfa2fc7f770866df0cb23f21041f55ab0aa20381f1f90"
+        }
+      ],
+      "node_version": "22.23.4",
+      "npm_version": "10.9.9",
+      "patch_id": "harbor-025-qwen-locked-install-v1",
+      "platform": "linux-arm64",
+      "scope": "Required for prepared ARM64 Apptainer model jobs; Docker native online installation remains separately recorded and uncertified"
+    },
+    "integrity": "sha512-iqcBqLQDmKvOtRcVvF78l7bf0NpdymGFBo0qNY0ausPezht+PLXkh15vnIILaBKtM4BabtHSv60xWftMomJ7hw==",
+    "integrity_status": "tarball_verified; fixed_ARM64_bundle_tested_in_three_native_task_environments; model_replay_under_new_identity_pending",
+    "package": "@qwen-code/qwen-code",
+    "pin_mechanism": "Harbor agents[].kwargs.version; runtime source assertion required",
+    "version": "0.26.5"
+  },
+  "release_note": "Coordinate-localized export. Qualification reports are external; status strings inherited from history do not certify this deployment.",
+  "runtime_patches": [
+    {
+      "id": "harbor-025-apptainer-exec-v1",
+      "metadata": "patches/harbor-025-apptainer-exec-v1/metadata.json",
+      "sha256": "79871e2c9f32009b60240e9e6d2cc7c729fe9a17fea5fc5498e4dab1ccc988bf"
+    },
+    {
+      "id": "harbor-025-qwen-error-v1",
+      "metadata": "patches/harbor-025-qwen-error-v1/metadata.json",
+      "sha256": "732e125e6edbdc331e89c96600851366ef5eec31f94088e48ff34098530bf6d3"
+    },
+    {
+      "id": "harbor-025-apptainer-lifecycle-v1",
+      "metadata": "patches/harbor-025-apptainer-lifecycle-v1/metadata.json",
+      "sha256": "bbaca83ba53df5eeb91f23a2ce22d04577a768cabc5392f90ec95ce55a224ad2"
+    },
+    {
+      "id": "harbor-025-qwen-locked-install-v1",
+      "metadata": "patches/harbor-025-qwen-locked-install-v1/metadata.json",
+      "sha256": "188568e6bdd6df2b138181290b8d46d946b2ff73008c5a613e9a99d93e8f28a5"
+    }
+  ],
+  "schema_version": 1,
+  "sources": {
+    "ade": {
+      "adapter_revision": "materialized_harbor_dataset_revision",
+      "revision": "37db108843a49bb31a592e37a75e2c40dc3f9749",
+      "success": {
+        "equals": 1.0,
+        "metric": "reward",
+        "verification": "pending_native_assets"
+      },
+      "task_subdir": "datasets/ade-bench",
+      "upstream_revision": "c305600ebf17e7e7c4550bd401b6ddb530beb7c8",
+      "upstream_url": "https://github.com/dbt-labs/ade-bench.git",
+      "url": "https://github.com/harbor-framework/harbor-datasets.git"
+    },
+    "deb": {
+      "adapter_revision": "upstream_harbor_tasks",
+      "revision": "a3278ad102829a6084dde086244a0ef665a8011c",
+      "success": {
+        "equals": 1.0,
+        "metric": "reward",
+        "verification": "pending_native_assets"
+      },
+      "task_subdir": "tasks",
+      "upstream_revision": "a3278ad102829a6084dde086244a0ef665a8011c",
+      "upstream_url": "https://github.com/Snowflake-Labs/data-eng-bench.git",
+      "url": "https://github.com/Snowflake-Labs/data-eng-bench.git"
+    },
+    "spider2": {
+      "adapter_revision": "fd9af60ae6b804dc76c282b172663e56c0811231",
+      "revision": "82d1fb0c144d28b1fd9852006cee0a39e74bd4a8",
+      "success": {
+        "equals": 1.0,
+        "metric": "reward",
+        "verification": "pending_native_assets"
+      },
+      "task_subdir": "datasets/spider2-dbt",
+      "upstream_revision": "cafb867313aab4e674652054198f383cf4018943",
+      "upstream_url": "https://github.com/xlang-ai/Spider2.git",
+      "url": "https://huggingface.co/datasets/harborframework/harbor-datasets"
+    }
+  }
+}

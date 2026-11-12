@@ -1,0 +1,83 @@
+{
+  "artifacts": [
+    {
+      "destination": "submission/workspace",
+      "exclude": [],
+      "source": "/workspace"
+    }
+  ],
+  "collection_version": "workday-workspace-v1",
+  "contract": {
+    "path": "validation/spider2/workday002/contract.yaml",
+    "sha256": "500f08c30a62ac0a297249bd7d9aa7f8e3387ba98850d5379429de7e3f95720f"
+  },
+  "native_verifier_mode": "shared",
+  "native_verifier_modified": false,
+  "path_evidence": [
+    {
+      "path": "tasks/spider2__workday002/instruction.md",
+      "sha256": "29547414e28cdc5d18a34d7caeec15e0fe6a7ac2651378d27c9ed7e86b6ca03c"
+    },
+    {
+      "path": "tasks/spider2__workday002/environment/Dockerfile",
+      "sha256": "bf991c65d29cae2d1e48fbdcf75e4b7459e6701e49d7b0e9d531a11892ef39fd"
+    },
+    {
+      "path": "tasks/spider2__workday002/environment/dbt_project/profiles.yml",
+      "sha256": "ad81041d2b7b819746ea43faca1506d4d6a3b64c1882ebb35a732664abbcb356"
+    },
+    {
+      "path": "tasks/spider2__workday002/tests/test.sh",
+      "sha256": "7a7036d2085a66c91b442baf8eb497e839d96beda99795503a341ac49043bef8"
+    },
+    {
+      "path": "artifacts/images/spider-workday002-v2-visibility.json",
+      "sha256": "09e08d417ca31ed8fe29775c9a21700fee9fb6afa9bdf5514daca54a8092dc8b"
+    },
+    {
+      "path": "validation/evidence/spider-workday002-review/build-witness.json",
+      "sha256": "fdc8ad176ad706cb0dc00aef1dd58417b56582afd040a2332ead5ef383e5723c"
+    },
+    {
+      "path": "validation/evidence/workday-runtime-review-v1/summary.json",
+      "sha256": "b5ebd568656a525cef570d4bd8b0fd71e7b39afce42ecadcbf4543c28842b814"
+    },
+    {
+      "path": "validation/evidence/workday-semantics-review-v1/summary.json",
+      "sha256": "0563391a7c8530da1edf2d092b1a0a10de9258595e90b9e689873f377ef396c4"
+    },
+    {
+      "path": "validation/evidence/workday-environment-review-v1/summary.json",
+      "sha256": "d4e3373740500eb879dcd7d42b54f478f2868a2b0480bf9897280cefed6382db"
+    },
+    {
+      "path": "validation/evidence/workday-deleted-relations-v1/summary.json",
+      "sha256": "55fc3423fa4633f79187357f8d2f8d762819ee96fdc49a01c1e0ad3d55489181"
+    },
+    {
+      "path": "validation/evidence/workday-workflow-review-v1/summary.json",
+      "sha256": "f5e615934fbb19d4b496f4c53f267efab03bc88b42822bb5968913c1820f1c0d"
+    },
+    {
+      "path": "validation/evidence/workday-audit-review-v1/summary.json",
+      "sha256": "66a683ccb62a147612d8e1d6367af19dd1519b78371e98dac4b1f5538f943e25"
+    },
+    {
+      "path": "validation/evidence/workday-collector-review-v1/summary.json",
+      "sha256": "a5d98f282cb9fdcb4325c102e10be563c90e4d6feab126a1637697b2feabd1fd"
+    },
+    {
+      "path": "validation/evidence/workday-model-workflow-review-v2/summary.json",
+      "sha256": "fb04e83cb63752fc83ad98f01ab46f2db636d8e020e12e55bae232de24e8b8be"
+    }
+  ],
+  "rationale": "Capture complete native /workspace before hidden verifier upload: all dbt source/config/packages, run artifacts and workday.duckdb/WAL. Instruction requires all models to run; native verifier reads the submitted database and does not build dbt. Hidden /tests and /solution are outside this scope. A later trial review must reject incomplete capture if the actual workflow writes required artifacts elsewhere; collection completeness alone does not certify workflow or semantics.",
+  "required_files": [
+    "submission/workspace/dbt_project.yml",
+    "submission/workspace/profiles.yml",
+    "submission/workspace/workday.duckdb"
+  ],
+  "schema_version": 1,
+  "task_hash": "fc3a9532de5060105e947d5e969f9ee85aa404964c3ff204b69944409060eb45",
+  "task_key": "spider2__workday002"
+}

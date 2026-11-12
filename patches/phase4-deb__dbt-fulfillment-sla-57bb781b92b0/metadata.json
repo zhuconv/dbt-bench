@@ -1,0 +1,31 @@
+{
+  "gold_derived_correction": false,
+  "instruction_after": {
+    "path": "${ARTIFACT_ROOT}/validation/phase4-review-v1/pipeline/production-v1/tasks/deb__dbt-fulfillment-sla/phase4-instruction-57bb781b92b013da/instruction.md",
+    "sha256": "57bb781b92b013da14839f4a015580f308c7d67d79b15675b6e324f511b48b33"
+  },
+  "instruction_before": {
+    "path": "${STORAGE_ROOT}/cache/backend-tasks-migration-1125801/apptainer/26b1c873c92a2018675b2c8a98505b788baec6e6668a9f0ad1bda945d7cd94bf/deb__dbt-fulfillment-sla/instruction.md",
+    "sha256": "bd6a3d4130ed2ba3ac879c3723ab797012e1dd770b6776b73ac8249927de8cb6"
+  },
+  "model_requests": 0,
+  "native_tests_hash": "d97f2fcfc5165ccf3d45d4f936c1a1bcf63f736e2c179af971812191ec98e1f4",
+  "native_verifier_modified": false,
+  "patch": {
+    "path": "patches/phase4-deb__dbt-fulfillment-sla-57bb781b92b0/instruction.diff",
+    "sha256": "91a15cdc0531b8f65dfe7c46df5f68fda87e56612ae2dc302fb50c0a74cd0a27"
+  },
+  "production_task": "${ARTIFACT_ROOT}/validation/phase4-review-v1/pipeline/production-v1/tasks/deb__dbt-fulfillment-sla/phase4-instruction-57bb781b92b013da",
+  "production_task_hash": "ff7a37aa7527e8ae3df448bdd7aeee1fc4bb4f5f248ee97e87b294e8f494dad9",
+  "schema_version": 1,
+  "selected_instruction": {
+    "path": "${SCRATCH_ROOT}/claude-two-version-pilot/dbt-fulfillment-sla_v2/instruction.md",
+    "sha256": "57bb781b92b013da14839f4a015580f308c7d67d79b15675b6e324f511b48b33"
+  },
+  "source_backend_task_hash": "d314a139fccfd226b11e0cee33e13183ff2528cff6953a5d5a16fc1b127d316d",
+  "source_task_hash": "65ddb386570f7dca9e772b93f46df9e0af6b5a399ddd1f9ceb917771ab2ee756",
+  "task_key": "deb__dbt-fulfillment-sla",
+  "task_version": "phase4-instruction-57bb781b92b013da",
+  "type": "task_instruction_variant",
+  "validation_status": "See separately versioned phase 4 companion ledger; materialization is not certification"
+}

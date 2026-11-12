@@ -1,0 +1,23 @@
+Bootstrap: docker
+From: ghcr.io/snowflake-labs/data-eng-bench-base@sha256:44ba3dcf5690da2752aa8c0874ffe4c73b124ca0b61b8979b93fe2eb4643b5ca
+
+%labels
+    dbt_bench_environment deb-consolidate-duckdb-env-v2
+    scope reviewed-FROM-and-COPY-data-task
+
+%files
+    tasks/deb__dbt-consolidate/environment/data /app/data
+
+%post
+    set -eu
+    python3 -m pip freeze
+    mkdir -p /opt/dbt-bench-initial
+    mv /app/dbt_models_duckdb/dbt_packages /opt/dbt-bench-initial/dbt_packages
+
+%environment
+    if [ "${DB_TYPE:-duckdb}" != duckdb ]; then
+        echo "This image supports only the reviewed DuckDB backend" >&2
+        exit 1
+    fi
+    /entrypoint.sh /bin/true >/dev/null
+    cp -a /opt/dbt-bench-initial/dbt_packages /app/dbt_models_duckdb/dbt_packages

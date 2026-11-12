@@ -1,0 +1,10 @@
+[project]
+name = "dbt-bench-harbor-server-dependencies"
+version = "0.1.0"
+requires-python = ">=3.11,<3.14"
+dependencies = ["uvicorn", "fastapi"]
+
+[tool.uv]
+package = false
+environments = ["sys_platform == 'linux' and platform_machine == 'aarch64'"]
+required-environments = ["sys_platform == 'linux' and platform_machine == 'aarch64'"]

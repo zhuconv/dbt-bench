@@ -1,0 +1,12 @@
+--- a/agents/installed/qwen_code.py
++++ b/agents/installed/qwen_code.py
+@@ -338,7 +338,8 @@
+                     if not fr:
+                         continue
+                     call_id = fr.get("id") or ""
+-                    output = (fr.get("response") or {}).get("output", "")
++                    response = fr.get("response") or {}
++                    output = response.get("output", response.get("error", ""))
+ 
+                     # Attach observation to the previous assistant step
+                     for step in reversed(steps):

@@ -1,0 +1,31 @@
+{
+  "gold_derived_correction": true,
+  "instruction_after": {
+    "path": "${ARTIFACT_ROOT}/validation/phase3-task-versions-v1/tasks/ade__ade-bench-f1010-medium/phase3-instruction-3308d33d6cca8cf8/instruction.md",
+    "sha256": "3308d33d6cca8cf8ec3294929b49af54ed6fe5b96cc67f10aa54dee6468351d0"
+  },
+  "instruction_before": {
+    "path": "${STORAGE_ROOT}/cache/backend-tasks-migration-1125801/apptainer/5db4452bc574aade06540a6e3f1430431ffbf4c7fb9e632f95e8b0d1e6d9a36e/ade__ade-bench-f1010-medium/instruction.md",
+    "sha256": "6c30fb6130eebc27c0a4b37927364f53cfe5f145945414d7a722c53ab72a7863"
+  },
+  "model_requests": 0,
+  "native_tests_hash": "20e72c5f380d1028e2b7fbe80be3ae1ababbabf57dfad398bb7ce290e0ea0396",
+  "native_verifier_modified": false,
+  "patch": {
+    "path": "patches/phase3-ade__ade-bench-f1010-medium-3308d33d6cca/instruction.diff",
+    "sha256": "af0c30b96c04c05e26fdcf69427721f6b09c1eda1679016a7ea3b0356e26f7dc"
+  },
+  "production_task": "${ARTIFACT_ROOT}/validation/phase3-task-versions-v1/tasks/ade__ade-bench-f1010-medium/phase3-instruction-3308d33d6cca8cf8",
+  "production_task_hash": "50da71518abf5d051b5acf52c5a74bbe4f958f04a72009b1d99dae0a304d337e",
+  "schema_version": 1,
+  "selected_instruction": {
+    "path": "${SCRATCH_ROOT}/claude-two-version-pilot/ade-bench-f1010-medium_v2/instruction.md",
+    "sha256": "3308d33d6cca8cf8ec3294929b49af54ed6fe5b96cc67f10aa54dee6468351d0"
+  },
+  "source_backend_task_hash": "3cfe5e57ab028aa91640bd8a218031f0d4069a742b9ced32c4962691f4c6ba14",
+  "source_task_hash": "bb86bf62fc0a8691e1d41a19af59e2afcae341708d6ef4a222097aa6581e3ade",
+  "task_key": "ade__ade-bench-f1010-medium",
+  "task_version": "phase3-instruction-3308d33d6cca8cf8",
+  "type": "task_instruction_variant",
+  "validation_status": "See separately versioned phase 3 companion ledger; materialization is not certification"
+}

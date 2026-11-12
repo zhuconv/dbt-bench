@@ -1,0 +1,30 @@
+{
+  "files": [
+    {
+      "after_sha256": "37b32291984a04bec9a309a36d10f2e07f85af86c46ba2df8b3ff276873fa212",
+      "after_text": "                    response = fr.get(\"response\") or {}\n                    output = response.get(\"output\", response.get(\"error\", \"\"))",
+      "before_sha256": "488bf5a6b607e0d3cccf384ff56a8bac14003ca8a0a6013b5a38b95dab492b2e",
+      "before_text": "                    output = (fr.get(\"response\") or {}).get(\"output\", \"\")",
+      "path": "agents/installed/qwen_code.py"
+    }
+  ],
+  "id": "harbor-025-qwen-error-v1",
+  "native_verifier_modified": false,
+  "new_converter_version": "harbor-0.25.0+dbt-bench-qwen-error-v1",
+  "package": "harbor",
+  "package_version": "0.25.0",
+  "reason": "Preserve an error-only native Qwen tool response instead of converting it to an empty observation. Keep the native output branch, empty-string semantics and ID attachment unchanged. Combined output+error, unknown events and context capture remain uncertified.",
+  "regression_evidence": [
+    {
+      "path": "validation/evidence/qwen-converter/native-error-only-failure.json",
+      "sha256": "db7a2817fd6a5b1ba231a81c5856f5ab158f6a5c6505be87b99b8885469d1e3e"
+    },
+    {
+      "path": "validation/evidence/qwen-converter/qwen-026-schema-basis.json",
+      "sha256": "26d78c55860beab62f57cb98b1fd3d3ba0a107e9782e6a281dc940364375e7ac"
+    }
+  ],
+  "schema_version": 1,
+  "task_budgets_modified": false,
+  "type": "trace"
+}

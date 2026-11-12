@@ -1,0 +1,61 @@
+{
+  "attempt_ids": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "attempts_per_task": 4,
+  "automatic_trial_retries": 0,
+  "created_at": "2026-11-08T17:25:09.062405+00:00",
+  "extra_model_smokes": false,
+  "harbor_concurrency": 1,
+  "harbor_runtime_lock": {
+    "path": "runtime/uv.lock",
+    "sha256": "a47c7fa5f6ce4924f6cfcf28e4f0cda3755af100ffc5fac8c1b2133f27361edd"
+  },
+  "harness": "Harbor 0.25.0 native Qwen Code 0.26.5; no modified agent loop or added dbt prompt/tools",
+  "inference_concurrency": 1,
+  "inference_runtime_lock": {
+    "path": "inference/uv.lock",
+    "sha256": "8f7d41cf4c254f70568addad094239e8fcbe049cf1b194db3f2963290525ee68"
+  },
+  "initial_pool": {
+    "path": "${ARTIFACT_ROOT}/validation/phase3-review-v1/root-control-v1/freezes/train-phase3-v06/manifest.json",
+    "sha256": "672eb5a3f3ab4580363557ef44a1a8e4e01a34c65c7591914625c6cb3a6857ce"
+  },
+  "invalid_attempt_policy": "Keep every raw trial. Missing capture/audit, external service or allocation interruption stays unresolved, not a fabricated 0. Only independently established infrastructure failure may be retried in the same planned attempt slot with explicit parent linkage; no replacement of behavioral failures or ordinary task-budget terminations.",
+  "model": "Qwen/Qwen3.6-35B-A3B",
+  "native_task_budgets": "preserved; record external allocation deadline separately",
+  "phase4_input": {
+    "path": "${SCRATCH_ROOT}/claude-two-version-pilot/results_test.json",
+    "sha256": "e4c40f433a8affb8185504b8f08593e6a69746ccd15562bdd013f368662ccaa9"
+  },
+  "protocol_ping_requests": false,
+  "purpose": "difficulty measurement only; prohibited for model training",
+  "qwen_settings": {
+    "path": "inference/qwen-code-settings.json",
+    "sha256": "beb027da4b3eec3445911f742d22471fc315c5f4bda2bd55c42af7069b8fb238"
+  },
+  "revision": "995ad96eacd98c81ed38be0c5b274b04031597b0",
+  "schema_version": 1,
+  "scope": "Only step2 authorized model generations; steps1/3 and CPU audit/reports never invoke a model.",
+  "serving_spec": {
+    "path": "inference/qwen3.6-35b-a3b.json",
+    "sha256": "bf148158464ddbf3790dc32d459d26e737023710418d09b4389ac10a323eeac0"
+  },
+  "slurm": {
+    "account": "${ALLOCATION}",
+    "default_partition": "gh-dev",
+    "fallback_partition": "gh only with recorded evidence that subdivided gh-dev jobs cannot satisfy a required run",
+    "nodes": 1,
+    "time_limit": "02:00:00"
+  },
+  "split_rules": {
+    "path": "configs/difficulty-v1/split-rules.json",
+    "sha256": "4bb9e220350735197d59686f7a7cc5ad215b7b98afd9cab54cdc4eaa362b7c67"
+  },
+  "success_definition": "Native reward map satisfies its source success rule AND the qualified frozen task audit returns 1 on the actual same agent submission. Native-only counts retained separately. Missing audit or invalid execution is not a success and does not silently become a measured failure.",
+  "training_prohibited": true,
+  "version": "qwen36-difficulty-v1"
+}

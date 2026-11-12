@@ -1,0 +1,36 @@
+Bootstrap: docker
+From: python@sha256:8f867a1f16776618234a2d0ef41fbb991d0bd0b142c8a95bc37456d8e47104cf
+
+%files
+    environments/apptainer/harbor-server-requirements.txt /opt/dbt-bench-build/harbor-server-requirements.txt
+    environments/apptainer/spider-requirements.txt /opt/dbt-bench-build/requirements.txt
+    tasks/spider2__workday002/environment/dbt_project /workspace
+
+%post
+    set -eu
+    export DEBIAN_FRONTEND=noninteractive
+    apt-get -o APT::Sandbox::User=root update
+    apt-get -o APT::Sandbox::User=root install -y --no-install-recommends git curl python3 python3-venv tmux asciinema
+    rm -rf /var/lib/apt/lists/*
+    pip install --no-cache-dir --only-binary=:all: --require-hashes -r /opt/dbt-bench-build/requirements.txt
+    python3 -m venv /opt/harbor-server
+    /opt/harbor-server/bin/python3 -m pip install --no-cache-dir --only-binary=:all: --require-hashes -r /opt/dbt-bench-build/harbor-server-requirements.txt
+    /opt/harbor-server/bin/python3 -m pip freeze
+    rm -rf /opt/dbt-bench-build
+    cd /workspace
+    if [ -f packages.yml ]; then dbt deps --profiles-dir /workspace || true; fi
+    mkdir -p /opt/dbt-bench-initial
+    for folder in dbt_packages target logs; do
+        if [ -d "/workspace/$folder" ]; then
+            mv "/workspace/$folder" "/opt/dbt-bench-initial/$folder"
+        fi
+    done
+    python3 -m pip freeze
+    dpkg-query -W
+
+%environment
+    for folder in dbt_packages target logs; do
+        if [ -d "/opt/dbt-bench-initial/$folder" ]; then
+            cp -a "/opt/dbt-bench-initial/$folder" "/workspace/$folder"
+        fi
+    done

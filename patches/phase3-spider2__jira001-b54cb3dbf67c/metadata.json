@@ -1,0 +1,31 @@
+{
+  "gold_derived_correction": false,
+  "instruction_after": {
+    "path": "${ARTIFACT_ROOT}/validation/phase3-task-versions-v1/tasks/spider2__jira001/phase3-instruction-b54cb3dbf67c167a/instruction.md",
+    "sha256": "b54cb3dbf67c167a508bfbf1e6cfe9d181cbd25839a61af7a6cc38add6b9ee83"
+  },
+  "instruction_before": {
+    "path": "${STORAGE_ROOT}/cache/backend-tasks-migration-1125801/apptainer/71977bcc420981e666c9375fc025a6307139c177d98210efe7d7036927d3570e/spider2__jira001/instruction.md",
+    "sha256": "b66a7625a5e75c8fa9cabbc1a2d10dd64c296cc706d934e40d7d7cf26d53811d"
+  },
+  "model_requests": 0,
+  "native_tests_hash": "5dec7f6418c8e045b832e3435b81c9def85f35518089b60ec265526d8a3c23a6",
+  "native_verifier_modified": false,
+  "patch": {
+    "path": "patches/phase3-spider2__jira001-b54cb3dbf67c/instruction.diff",
+    "sha256": "92df70e9abc28822af87ff6ad02cffbce02ad2a86081b45b9362c96edd3ca833"
+  },
+  "production_task": "${ARTIFACT_ROOT}/validation/phase3-task-versions-v1/tasks/spider2__jira001/phase3-instruction-b54cb3dbf67c167a",
+  "production_task_hash": "29e163b6ca354e3293bb7202a09bf9640d80b194792ef10a99fe5b78b902e37c",
+  "schema_version": 1,
+  "selected_instruction": {
+    "path": "${SCRATCH_ROOT}/claude-two-version-pilot/jira001_v2/instruction.md",
+    "sha256": "b54cb3dbf67c167a508bfbf1e6cfe9d181cbd25839a61af7a6cc38add6b9ee83"
+  },
+  "source_backend_task_hash": "6ac9eb7a8588470ad64f4f393a2c22666582b4f267bbbfe0a4e8bad00144fc6d",
+  "source_task_hash": "091d4e2da62e421352871612691c46954f8ccd883d3e87ac205d0cb7a371be34",
+  "task_key": "spider2__jira001",
+  "task_version": "phase3-instruction-b54cb3dbf67c167a",
+  "type": "task_instruction_variant",
+  "validation_status": "See separately versioned phase 3 companion ledger; materialization is not certification"
+}

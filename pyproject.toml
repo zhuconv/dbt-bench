@@ -1,0 +1,13 @@
+[project]
+name = "dbt-bench"
+version = "0.1.0"
+description = "Pinned Harbor task preparation, validation evidence, and trace-aware reporting"
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.uv]
+package = false
+
+[tool.ruff]
+line-length = 100
+

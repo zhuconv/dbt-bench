@@ -1,0 +1,18 @@
+--- a/environment/Dockerfile
++++ b/environment/Dockerfile
+@@ -10,7 +10,7 @@
+ # Install dbt-duckdb and dependencies
+ RUN pip install --no-cache-dir \
+     dbt-duckdb>=1.7.0 \
+-    duckdb>=0.9.0 \
++    duckdb==1.2.2 \
+     pandas
+ 
+ # Install additional dependencies for spider-agent-dbt
+@@ -26,5 +26,5 @@
+ COPY dbt_project/ /workspace/
+ 
+ # Ensure dbt packages are installed if packages.yml exists
+-RUN if [ -f packages.yml ]; then dbt deps --profiles-dir /workspace || true; fi
++# Retain task-vendored dbt_packages exactly; do not resolve floating ranges here.
+ CMD ["/bin/bash"]

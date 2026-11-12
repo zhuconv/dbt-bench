@@ -1,0 +1,185 @@
+# Each request owns a cancellable subprocess tree. The HTTP request may end
+# before the command, so cancellation is acknowledged separately by exec_id.
+_EXECUTIONS = {}
+_EXECUTION_HISTORY_LIMIT = 1024
+
+
+def _process_table():
+    rows = {}
+    for name in os.listdir('/proc'):
+        if not name.isdigit():
+            continue
+        try:
+            with open('/proc/' + name + '/stat') as stream:
+                fields = stream.read().rsplit(')', 1)[1].split()
+            rows[int(name)] = (int(fields[1]), fields[19], fields[0])
+        except (FileNotFoundError, ProcessLookupError, PermissionError):
+            continue
+    return rows
+
+
+class _Execution:
+    def __init__(self):
+        self.token = str(uuid4())
+        self.process = None
+        self.ready = asyncio.Event()
+        self.done = asyncio.Event()
+        self.cancelled = False
+        self.known = {}
+        self.stop_lock = asyncio.Lock()
+        self.task = None
+
+    def remember(self):
+        rows = _process_table()
+        if self.cancelled:
+            # A short-lived intermediary can exit between ancestry samples.
+            # Inherited exec ownership also finds its reparented children.
+            marker = ('HARBOR_EXEC_TOKEN=' + self.token).encode()
+            for pid, row in rows.items():
+                try:
+                    with open('/proc/' + str(pid) + '/environ', 'rb') as stream:
+                        owned = marker in stream.read().split(b'\0')
+                    if owned:
+                        self.known[pid] = row[1]
+                except (FileNotFoundError, ProcessLookupError, PermissionError):
+                    pass
+        if self.process is not None and self.process.pid in rows:
+            self.known.setdefault(self.process.pid, rows[self.process.pid][1])
+        parents = {pid for pid, stamp in self.known.items()
+                   if pid in rows and rows[pid][1] == stamp}
+        while True:
+            children = {pid for pid, row in rows.items() if row[0] in parents}
+            new = children - parents
+            if not new:
+                break
+            for pid in new:
+                self.known[pid] = rows[pid][1]
+            parents.update(new)
+        return {pid for pid, stamp in self.known.items()
+                if pid in rows and rows[pid][1] == stamp and rows[pid][2] != 'Z'}
+
+    async def monitor(self):
+        while not self.done.is_set():
+            self.remember()
+            await asyncio.sleep(0.05)
+
+    async def stop(self):
+        self.cancelled = True
+        await self.ready.wait()
+        async with self.stop_lock:
+            # PID start times guard reuse. Track descendants across setsid and
+            # reparenting; never signal the HTTP service or another exec tree.
+            for sig, grace in ((signal.SIGTERM, 1.0), (signal.SIGKILL, 2.0)):
+                end = asyncio.get_running_loop().time() + grace
+                while True:
+                    alive = self.remember()
+                    if not alive:
+                        return
+                    for pid in alive:
+                        try:
+                            current = _process_table().get(pid)
+                            if current and current[1] == self.known[pid]:
+                                os.kill(pid, sig)
+                        except ProcessLookupError:
+                            pass
+                    if asyncio.get_running_loop().time() >= end:
+                        break
+                    await asyncio.sleep(0.05)
+            if self.remember():
+                raise RuntimeError('Exec subprocess tree did not stop')
+
+    async def run(self, req):
+        monitor = None
+        try:
+            if self.cancelled:
+                return CommandResult(stdout=None, stderr='Cancelled before launch', return_code=143)
+            env = os.environ.copy()
+            env['PATH'] = env.get('PATH') or '/usr/local/bin:/usr/bin:/bin'
+            if req.env:
+                env.update(req.env)
+            env['HARBOR_EXEC_TOKEN'] = self.token
+            self.process = await asyncio.create_subprocess_exec(
+                '/bin/bash', '-c', req.command,
+                cwd=req.cwd or os.environ.get('SINGULARITY_WORKDIR', '/app'),
+                env=env, stdout=asyncio.subprocess.PIPE,
+                stderr=asyncio.subprocess.STDOUT, start_new_session=True)
+            self.ready.set()
+            self.remember()
+            monitor = asyncio.ensure_future(self.monitor())
+            communication = asyncio.ensure_future(self.process.communicate())
+            timed_out = False
+            try:
+                # Zero retains GNU timeout's documented "disabled" behavior.
+                stdout, _ = await asyncio.wait_for(asyncio.shield(communication),
+                                                   timeout=req.timeout_sec or None)
+            except asyncio.TimeoutError:
+                timed_out = True
+                await self.stop()
+                stdout, _ = await asyncio.wait_for(communication, timeout=5)
+            except asyncio.CancelledError:
+                await self.stop()
+                await asyncio.wait_for(communication, timeout=5)
+                raise
+            return CommandResult(stdout=stdout.decode('utf-8', errors='replace').strip() or None,
+                                 stderr=None, return_code=124 if timed_out else self.process.returncode)
+        finally:
+            self.ready.set()
+            self.done.set()
+            if monitor:
+                monitor.cancel()
+                try:
+                    await monitor
+                except asyncio.CancelledError:
+                    pass
+
+
+def _prune_executions():
+    # Active entries are never evicted. Completed/cancelled ids are tombstones
+    # so a cancellation that arrives before POST /exec cannot launch later.
+    for key in list(_EXECUTIONS):
+        if len(_EXECUTIONS) <= _EXECUTION_HISTORY_LIMIT:
+            break
+        if _EXECUTIONS[key].done.is_set():
+            del _EXECUTIONS[key]
+
+
+@app.post('/exec', response_model=CommandResult)
+async def exec_command(req: CommandRequest, request: Request):
+    ident = req.exec_id or str(uuid4())
+    previous = _EXECUTIONS.get(ident)
+    if previous is not None:
+        if previous.cancelled:
+            return CommandResult(stdout=None, stderr='Cancelled before launch', return_code=143)
+        raise HTTPException(status_code=409, detail='Duplicate exec_id')
+    state = _Execution()
+    _EXECUTIONS[ident] = state
+    _prune_executions()
+    state.task = asyncio.ensure_future(state.run(req))
+    try:
+        while not state.task.done():
+            if await request.is_disconnected():
+                await state.stop()
+                break
+            await asyncio.sleep(0.05)
+        return await asyncio.shield(state.task)
+    except asyncio.CancelledError:
+        await state.stop()
+        raise
+
+
+@app.post('/exec/{ident}/cancel')
+async def cancel_command(ident: str):
+    state = _EXECUTIONS.get(ident)
+    if state is None:
+        state = _Execution()
+        state.cancelled = True
+        state.ready.set()
+        state.done.set()
+        _EXECUTIONS[ident] = state
+        _prune_executions()
+    await state.stop()
+    if state.task:
+        await asyncio.wait_for(asyncio.shield(state.task), timeout=5)
+    return {'exec_id': ident, 'stopped': not state.remember()}
+
+

@@ -1,0 +1,23 @@
+{
+  "model": "Qwen/Qwen3.6-35B-A3B",
+  "revision": "995ad96eacd98c81ed38be0c5b274b04031597b0",
+  "served_model_name": "qwen3.6-35b-a3b",
+  "vllm": "0.19.0",
+  "vllm_aarch64_wheel_sha256": "6ab90ccca5d7ca3bd2c8f90133f0fac85e8f4af582a1c67c6cc3f63c615521e3",
+  "server_args": [
+    "--host", "127.0.0.1", "--port", "8000",
+    "--dtype", "bfloat16", "--max-model-len", "131072",
+    "--gpu-memory-utilization", "0.90", "--max-num-seqs", "1",
+    "--language-model-only", "--enable-auto-tool-choice",
+    "--tool-call-parser", "qwen3_coder", "--reasoning-parser", "qwen3",
+    "--enable-prefix-caching", "--enable-log-requests",
+    "--generation-config", "vllm"
+  ],
+  "generation_defaults": {
+    "temperature": 0.6, "top_p": 0.95, "top_k": 20,
+    "min_p": 0.0, "presence_penalty": 0.0, "repetition_penalty": 1.0
+  },
+  "thinking": "enabled by pinned model chat template default",
+  "task_key": "deb__dbt-session-attribution",
+  "scope": "Single-task execution smoke; no benchmark or SFT certification"
+}

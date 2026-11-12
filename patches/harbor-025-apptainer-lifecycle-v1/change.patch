@@ -1,0 +1,117 @@
+--- a/environments/singularity/singularity.py
++++ b/environments/singularity/singularity.py
+@@ -25,6 +25,7 @@
+ import os
+ import shlex
+ import shutil
++import signal
+ import socket
+ import subprocess
+ import sys
+@@ -276,15 +277,42 @@
+             fcntl.flock(lock_file.fileno(), fcntl.LOCK_UN)
+             lock_file.close()
+ 
++    async def _terminate_server(self, grace_seconds: float = 5.0) -> None:
++        """Reap the dedicated container session, including an orphaned runtime.
++
++        Apptainer's launcher may exit before its runtime parent and namespace
++        init. Signalling only the launcher, then looking up its children, loses
++        those reparented processes. Each launch below owns a new session.
++        """
++        process = getattr(self, "_server_process", None)
++        if process is None:
++            return
++        try:
++            if os.getpgid(process.pid) != process.pid:
++                raise RuntimeError("Refusing to signal a container without its own process group")
++        except ProcessLookupError:
++            pass  # The launcher exited; its dedicated process group can remain.
++        try:
++            os.killpg(process.pid, signal.SIGTERM)
++            self.logger.debug(f"Sent SIGTERM to container process group {process.pid}")
++        except ProcessLookupError:
++            pass
++        if grace_seconds > 0:
++            try:
++                await asyncio.wait_for(asyncio.shield(process.wait()), timeout=grace_seconds)
++            except asyncio.TimeoutError:
++                self.logger.debug("Container shutdown timed out; killing remaining group members")
++        # Also handle descendants that ignored TERM after their launcher exited.
++        try:
++            os.killpg(process.pid, signal.SIGKILL)
++        except ProcessLookupError:
++            pass
++        await asyncio.wait_for(process.wait(), timeout=5.0)
++        self._server_process = None
++
+     async def _cleanup_server_resources(self) -> None:
+         """Clean up any existing server resources from a previous run."""
+-        if (
+-            hasattr(self, "_server_process")
+-            and self._server_process
+-            and self._server_process.returncode is None
+-        ):
+-            self._server_process.kill()
+-            await self._server_process.wait()
++        await self._terminate_server(grace_seconds=0)
+         if (
+             hasattr(self, "_stream_task")
+             and self._stream_task
+@@ -402,6 +430,7 @@
+                 *cmd,
+                 stdout=asyncio.subprocess.PIPE,
+                 stderr=asyncio.subprocess.STDOUT,
++                start_new_session=True,
+             )
+ 
+             self._stream_task = asyncio.create_task(self._stream_server_output())
+@@ -457,9 +486,7 @@
+                 return
+ 
+             # Clean up the failed server process before retrying
+-            if self._server_process and self._server_process.returncode is None:
+-                self._server_process.kill()
+-                await self._server_process.wait()
++            await self._terminate_server(grace_seconds=0)
+             if self._stream_task and not self._stream_task.done():
+                 self._stream_task.cancel()
+                 try:
+@@ -626,7 +653,7 @@
+                         f"({usage_pct * 100:.0f}%). Killing container."
+                     )
+                     self._memory_limit_exceeded = error_msg
+-                    self._server_process.kill()
++                    await self._terminate_server(grace_seconds=0)
+                     return
+ 
+                 interval = (
+@@ -678,27 +705,7 @@
+             except asyncio.CancelledError:
+                 pass
+ 
+-        if self._server_process and self._server_process.returncode is None:
+-            pid = self._server_process.pid
+-
+-            self._server_process.terminate()
+-            self.logger.debug(f"Sent SIGTERM to Singularity process {pid}")
+-
+-            try:
+-                await asyncio.wait_for(self._server_process.wait(), timeout=5.0)
+-            except asyncio.TimeoutError:
+-                self.logger.debug("Graceful shutdown timed out, force killing")
+-                self._server_process.kill()
+-                await self._server_process.wait()
+-
+-            try:
+-                subprocess.run(
+-                    ["pkill", "-9", "-P", str(pid)],
+-                    capture_output=True,
+-                    timeout=5,
+-                )
+-            except Exception:
+-                pass
++        await self._terminate_server()
+ 
+         if hasattr(self, "_stream_task") and self._stream_task:
+             self._stream_task.cancel()

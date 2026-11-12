@@ -1,0 +1,49 @@
+        if getattr(self, '_exec_cleanup_failed', False):
+            raise ExecCleanupError('Previous command stop was not confirmed; refusing further execution')
+        exec_id = str(uuid4())
+        try:
+            # Read may wait for the whole agent/verifier phase. The caller owns
+            # that phase deadline; an explicit command deadline is sent to the
+            # server. Keep connection/write/pool failures bounded and distinct.
+            http_timeout = httpx.Timeout(connect=10.0, read=None, write=30.0, pool=30.0)
+            response = await self._http_client.post(
+                f'http://localhost:{self._server_port}/exec',
+                json={'command': command, 'cwd': cwd, 'env': merged_env,
+                      'timeout_sec': timeout_sec, 'exec_id': exec_id},
+                timeout=http_timeout)
+            response.raise_for_status()
+            result = response.json()
+            return ExecResult(stdout=result.get('stdout'), stderr=result.get('stderr'),
+                              return_code=result.get('return_code', 1))
+        except asyncio.CancelledError:
+            await self._confirm_exec_stopped(exec_id)
+            raise
+        except httpx.HTTPError as exc:
+            await self._confirm_exec_stopped(exec_id)
+            if self._memory_limit_exceeded:
+                raise MemoryLimitExceededError(self._memory_limit_exceeded) from exc
+            raise ExecTransportError(f'Container exec transport failed ({type(exc).__name__}); '
+                                     f'exec_id={exec_id}; command stop confirmed') from exc
+
+    async def _confirm_exec_stopped(self, exec_id: str) -> None:
+        async def cancel():
+            try:
+                response = await self._http_client.post(
+                    f'http://localhost:{self._server_port}/exec/{exec_id}/cancel', timeout=10.0)
+                response.raise_for_status()
+                body = response.json()
+                if body.get('exec_id') != exec_id or body.get('stopped') is not True:
+                    raise ValueError('Missing matching stop acknowledgement')
+            except Exception as exc:
+                self._exec_cleanup_failed = True
+                raise ExecCleanupError(f'Cannot confirm stopped exec_id={exec_id}; '
+                                       f'no further exec or verification is safe') from exc
+        # A second caller cancellation must not skip stopping the command tree.
+        cleanup = asyncio.create_task(cancel())
+        while not cleanup.done():
+            try:
+                await asyncio.shield(cleanup)
+            except asyncio.CancelledError:
+                continue
+        cleanup.result()
+

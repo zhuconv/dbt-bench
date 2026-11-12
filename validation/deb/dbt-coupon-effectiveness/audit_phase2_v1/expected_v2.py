@@ -1,0 +1,76 @@
+"""Reviewed flat original-input coupon replay. No native or gold reads.
+Adapted from retained phase1 independent derivation, not its comparison verdicts.
+Default HALF_UP/NTILE policy is conditional; explicit policy runner reports alternatives.
+"""
+import pathlib,json,hashlib,collections,datetime,decimal,re,math
+D=decimal.Decimal
+EFFECT=['promotion_id','promotion_name','promotion_type','discount_type','discount_value','total_coupons','total_redemptions','unique_customers','unique_orders','repeat_redeemer_count','repeat_redeemer_pct','total_discount_given','total_order_value','total_order_value_before_discount','avg_discount_per_redemption','avg_order_value','avg_order_value_before_discount','discount_to_revenue_ratio','revenue_per_discount_dollar','total_usage_limit','redemption_rate','avg_redemptions_per_coupon','avg_redemptions_per_customer','first_time_redemptions','repeat_redemptions','first_time_pct','new_customer_acquisition_cost','first_redemption_date','last_redemption_date','days_active','avg_daily_redemptions','activity_status','performance_tier','efficiency_rating','customer_focus','revenue_rank','top_customer_redemptions','top_customer_pct','single_use_customer_count','single_use_customer_pct','concentration_risk','early_redemption_count','late_redemption_count','early_avg_order_value','late_avg_order_value','early_avg_discount','late_avg_discount','order_value_decay_pct','decay_classification']
+SUMMARY=['promotion_type','discount_type','promotion_count','total_redemptions','unique_customers','total_discount_given','total_order_value','avg_discount_per_redemption','avg_order_value','revenue_per_discount_dollar','first_time_pct','pct_of_total_redemptions','pct_of_total_revenue','high_performer_count','excellent_efficiency_count']
+TRENDS=['promotion_id','promotion_name','redemption_month','monthly_redemptions','monthly_discount','monthly_order_value','monthly_unique_customers','monthly_first_time_count','cumulative_redemptions','cumulative_discount','cumulative_order_value','month_rank','pct_of_total_redemptions','monthly_revenue_per_discount','weekday_redemptions','weekend_redemptions','weekday_order_value','weekend_order_value','weekday_avg_order_value','weekend_avg_order_value','weekend_lift_pct']
+INT=['redemption_id','coupon_id','order_id','customer_id','discount_amount','redeemed_at','coupon_code','promotion_id','usage_limit','promotion_name','promotion_type','discount_type','discount_value','ordered_at','grand_total','is_first_order','day_of_week']
+def sha(p):return hashlib.sha256(pathlib.Path(p).read_bytes()).hexdigest()
+def digest(x):return hashlib.sha256(json.dumps(x,default=str,sort_keys=True,separators=(',',':')).encode()).hexdigest()
+def save(p,x):p=pathlib.Path(p);p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(x,default=str,indent=2,sort_keys=True)+'\n')
+def rnd(x,n=2):return None if x is None else D(x).quantize(D(10)**-n,rounding=decimal.ROUND_HALF_UP)
+def ratio(a,b,n=2):return rnd(D(a)/D(b),n)if b else None
+def money(v):
+ try:return D(re.sub(r'[^0-9.\-]','',str(v)))if v is not None else None
+ except decimal.InvalidOperation:return None
+def truth(v):return str(v).strip().lower()in['1','true','t','yes','y']if v is not None else False
+def day(v):return v.date()if isinstance(v,datetime.datetime)else v
+
+def derive(data_input,rounding=decimal.ROUND_HALF_UP,subtotal_policy='raw',tier_policy='ntile'):
+ assert subtotal_policy in ['raw','displayed'] and tier_policy in ['ntile','ceil','floor']
+ def rnd(x,n=2):return None if x is None else D(x).quantize(D(10)**-n,rounding=rounding)
+ def ratio(a,b,n=2):return rnd(D(a)/D(b),n)if b else None
+ raw={k:len(v)for k,v in data_input.items()};data={b:data_input[a]for a,b in {'orders':'stg_orders__orders','coupons':'stg_pos__coupons','promotions':'stg_pos__promotions','usage':'stg_pos__coupon_usage'}.items()}
+ orders=collections.defaultdict(list);coupons=collections.defaultdict(list);promos=collections.defaultdict(list)
+ for r in data['stg_orders__orders']:
+  if r['order_id']is not None:orders[r['order_id']].append(r)
+ for r in data['stg_pos__coupons']:
+  if r['coupon_id']is not None:coupons[r['coupon_id']].append(r)
+ for r in data['stg_pos__promotions']:
+  if r['promotion_id']is not None:promos[r['promotion_id']].append(r)
+ valid=[];rejected=collections.Counter();coupon_groups=collections.defaultdict(list)
+ for row in data['stg_pos__coupons']:
+  if row['promotion_id']is not None and row['promotion_id']in promos:coupon_groups[row['promotion_id']].append(row)
+ for u in data['stg_pos__coupon_usage']:
+  discount=money(u['discount_amount'])
+  if discount is None or discount<=0:rejected['nonpositive_or_invalid_discount']+=1;continue
+  if u['order_id']is None or u['coupon_id']is None:rejected['null_join_key']+=1;continue
+  for o in orders.get(u['order_id'],[]):
+   dt=day(o['ordered_at'])
+   if o['status']is None or o['status']in['CANCELLED','RETURNED','FAILED']:rejected['invalid_status']+=1;continue
+   if truth(o['test_order_flag']):rejected['test_order']+=1;continue
+   if dt is None or not datetime.date(2023,1,1)<=dt<datetime.date(2024,12,1):rejected['outside_period']+=1;continue
+   for cp in coupons.get(u['coupon_id'],[]):
+    if cp['promotion_id']is None:continue
+    for p in promos.get(cp['promotion_id'],[]):
+     valid.append({'redemption_id':u['redemption_id'],'coupon_id':u['coupon_id'],'order_id':u['order_id'],'customer_id':u['customer_id'],'discount_amount':discount,'redeemed_at':u['redeemed_at'],'coupon_code':cp['coupon_code'],'promotion_id':cp['promotion_id'],'usage_limit':cp['usage_limit'],'promotion_name':p['promotion_name'],'promotion_type':p['promotion_type'],'discount_type':p['discount_type'],'discount_value':money(p['discount_value'])or D(0),'ordered_at':o['ordered_at'],'grand_total':o['grand_total'],'is_first_order':o['is_first_order'],'day_of_week':dt.weekday()})
+ valid.sort(key=lambda r:(str(r['redemption_id']),str(r['coupon_id']),str(r['order_id'])));groups=collections.defaultdict(list)
+ for r in valid:groups[r['promotion_id']].append(r)
+ effects=[];details={};duplicate_orders=[]
+ for pid,rs in groups.items():
+  p=promos[pid][0];cs=coupon_groups[pid];n=len(rs);customers=collections.Counter(r['customer_id']for r in rs if r['customer_id']is not None);nc=len(customers);nu=len(set(r['order_id']for r in rs));disc=sum(r['discount_amount']for r in rs);revenue=sum(r['grand_total']for r in rs);first=[r for r in rs if truth(r['is_first_order'])];rep=sum(v>1 for v in customers.values());top=sum(sorted(customers.values(),reverse=True)[:math.ceil(nc*.1)]);single=sum(v==1 for v in customers.values());dates=[day(r['ordered_at'])for r in rs];lo,hi=min(dates),max(dates);active=max(1,(hi-lo).days);count_coupons=len({r['coupon_id']for r in cs if r['coupon_id']is not None});limit=None if any(r['usage_limit']is None for r in cs)else sum(r['usage_limit']for r in cs);order=sorted(rs,key=lambda r:(r['ordered_at'],r['redemption_id']));early,late=order[:math.ceil(n/2)],order[math.ceil(n/2):];ea=sum(r['grand_total']for r in early)/len(early);la=sum(r['grand_total']for r in late)/len(late)if late else None;ed=sum(r['discount_amount']for r in early)/len(early);ld=sum(r['discount_amount']for r in late)/len(late)if late else None;decay=ratio(100*(ea-la),ea,1)if la is not None and ea else None;top_pct=ratio(top*100,n,1);rpd=ratio(revenue,disc);ft_pct=ratio(len(first)*100,n,1)
+  if nu!=n:duplicate_orders.append({'promotion_id':pid,'redemptions':n,'unique_orders':nu})
+  r=dict(promotion_id=pid,promotion_name=p['promotion_name'],promotion_type=p['promotion_type'],discount_type=p['discount_type'],discount_value=money(p['discount_value'])or D(0),total_coupons=count_coupons,total_redemptions=n,unique_customers=nc,unique_orders=nu,repeat_redeemer_count=rep,repeat_redeemer_pct=ratio(rep*100,nc,1),total_discount_given=rnd(disc),total_order_value=rnd(revenue),total_order_value_before_discount=rnd(revenue+disc),avg_discount_per_redemption=ratio(disc,n),avg_order_value=ratio(revenue,nu),avg_order_value_before_discount=ratio(revenue+disc,nu),discount_to_revenue_ratio=ratio(disc*100,revenue,1),revenue_per_discount_dollar=rpd,total_usage_limit=limit,redemption_rate=ratio(n*100,limit,1)if limit is not None else None,avg_redemptions_per_coupon=ratio(n,count_coupons),avg_redemptions_per_customer=ratio(n,nc),first_time_redemptions=len(first),repeat_redemptions=n-len(first),first_time_pct=ft_pct,new_customer_acquisition_cost=ratio(sum(x['discount_amount']for x in first),len(first)),first_redemption_date=lo,last_redemption_date=hi,days_active=active,avg_daily_redemptions=ratio(n,active),activity_status='Active'if hi>=datetime.date(2024,11,1)else'Dormant'if hi>=datetime.date(2024,9,2)else'Inactive',efficiency_rating='Excellent'if rpd>=10 else'Good'if rpd>=5 else'Average'if rpd>=2 else'Poor',customer_focus='Acquisition'if ft_pct>=50 else'Retention'if ft_pct<30 else'Balanced',top_customer_redemptions=top,top_customer_pct=top_pct,single_use_customer_count=single,single_use_customer_pct=ratio(single*100,nc,1),concentration_risk='High'if top_pct>=50 else'Medium'if top_pct>=30 else'Low',early_redemption_count=len(early),late_redemption_count=len(late),early_avg_order_value=rnd(ea),late_avg_order_value=rnd(la),early_avg_discount=rnd(ed),late_avg_discount=rnd(ld),order_value_decay_pct=decay,decay_classification='Stable'if decay is None else'Improving'if decay<-10 else'Stable'if decay<=10 else'Declining'if decay<=30 else'Collapsing');effects.append(r);details[pid]={'all_associated_coupons':cs,'redeemed_coupon_ids':sorted({x['coupon_id']for x in rs}),'customer_counts':dict(customers),'early_redemption_ids':[x['redemption_id']for x in early],'late_redemption_ids':[x['redemption_id']for x in late],'exact_early_order_average':ea,'exact_late_order_average':la}
+ effects.sort(key=lambda r:(-r['total_order_value'],r['promotion_id']));dense={v:i+1 for i,v in enumerate(sorted({r['total_order_value']for r in effects},reverse=True))};n=len(effects);q,rem=divmod(n,5);buckets=[]
+ for i in range(5):buckets.extend([i+1]*(q+(i<rem)))
+ for idx,(r,b)in enumerate(zip(effects,buckets)):
+  r['revenue_rank']=dense[r['total_order_value']]
+  cutoff=(math.ceil(n*.2)if tier_policy=='ceil'else math.floor(n*.2))
+  r['performance_tier']=('High Performer'if b==1 else'Low Performer'if b==5 else'Medium Performer')if tier_policy=='ntile'else('High Performer'if idx<cutoff else'Low Performer'if idx>=n-cutoff else'Medium Performer')
+ summary=[];egroups=collections.defaultdict(list)
+ for r in effects:egroups[r['promotion_type'],r['discount_type']].append(r)
+ totalsum=sum(r['total_order_value']for r in effects)if subtotal_policy=='displayed'else sum(r['grand_total']for r in valid);totaln=sum(r['total_redemptions']for r in effects)
+ for(kind,disc_type),es in egroups.items():
+  ids={r['promotion_id']for r in es};rs=[r for r in valid if r['promotion_id']in ids];nr=len(rs);rev=sum(r['grand_total']for r in rs)if subtotal_policy=='raw'else sum(r['total_order_value']for r in es);discount=sum(r['discount_amount']for r in rs)if subtotal_policy=='raw'else sum(r['total_discount_given']for r in es);nu=len({r['order_id']for r in rs});summary.append(dict(promotion_type=kind,discount_type=disc_type,promotion_count=len(es),total_redemptions=nr,unique_customers=len({r['customer_id']for r in rs if r['customer_id']is not None}),total_discount_given=rnd(discount),total_order_value=rnd(rev),avg_discount_per_redemption=ratio(discount,nr),avg_order_value=ratio(rev,nu),revenue_per_discount_dollar=ratio(rev,discount),first_time_pct=ratio(sum(truth(r['is_first_order'])for r in rs)*100,nr,1),pct_of_total_redemptions=ratio(nr*100,totaln,1),pct_of_total_revenue=ratio(rev*100,totalsum,1),high_performer_count=sum(r['performance_tier']=='High Performer'for r in es),excellent_efficiency_count=sum(r['efficiency_rating']=='Excellent'for r in es)))
+ summary.sort(key=lambda r:(-r['total_order_value'],str(r['promotion_type']),str(r['discount_type'])));trends=[]
+ for pid,rs in sorted(groups.items()):
+  months=collections.defaultdict(list)
+  for r in rs:months[r['ordered_at'].strftime('%Y-%m')].append(r)
+  cum_n=0;cum_disc=D(0);cum_rev=D(0)
+  for rank,(month,xs)in enumerate(sorted(months.items()),1):
+   n=len(xs);discount=sum(r['discount_amount']for r in xs);rev=sum(r['grand_total']for r in xs);wd=[r for r in xs if r['day_of_week']<5];we=[r for r in xs if r['day_of_week']>=5];wv=sum(r['grand_total']for r in wd);ev=sum(r['grand_total']for r in we);wa=wv/len(wd)if wd else None;ea=ev/len(we)if we else None;cum_n+=n;cum_disc+=discount if subtotal_policy=='raw'else rnd(discount);cum_rev+=rev if subtotal_policy=='raw'else rnd(rev)
+   trends.append(dict(promotion_id=pid,promotion_name=promos[pid][0]['promotion_name'],redemption_month=month,monthly_redemptions=n,monthly_discount=rnd(discount),monthly_order_value=rnd(rev),monthly_unique_customers=len({r['customer_id']for r in xs if r['customer_id']is not None}),monthly_first_time_count=sum(truth(r['is_first_order'])for r in xs),cumulative_redemptions=cum_n,cumulative_discount=rnd(cum_disc),cumulative_order_value=rnd(cum_rev),month_rank=rank,pct_of_total_redemptions=ratio(n*100,len(rs),1),monthly_revenue_per_discount=ratio(rev,discount),weekday_redemptions=len(wd),weekend_redemptions=len(we),weekday_order_value=rnd(wv),weekend_order_value=rnd(ev),weekday_avg_order_value=rnd(wa),weekend_avg_order_value=rnd(ea),weekend_lift_pct=ratio((ea-wa)*100,wa,1)if ea is not None and wa else None))
+ return {'raw':raw,'relations':{'int_coupon_redemptions':{'columns':INT,'rows':[[r[k]for k in INT]for r in valid]},'coupon_effectiveness':{'columns':EFFECT,'rows':[[r[k]for k in EFFECT]for r in effects]},'coupon_summary':{'columns':SUMMARY,'rows':[[r[k]for k in SUMMARY]for r in summary]},'coupon_trends':{'columns':TRENDS,'rows':[[r[k]for k in TRENDS]for r in trends]}},'details':details,'policy':{'rounding':rounding,'subtotal_policy':subtotal_policy,'tier_policy':tier_policy},'profile':{'valid_redemptions':len(valid),'promotions_with_redemptions':len(groups),'valid_master_promotions':len(promos),'zero_redemption_valid_promotions':sorted(set(promos)-set(groups)),'rejected_usage_conditions':dict(rejected),'duplicate_orders_within_promotion':duplicate_orders,'friday_or_sunday_valid_redemptions':[r['redemption_id']for r in valid if r['day_of_week']in[4,6]],'revenue_ties':{str(v):n for v,n in collections.Counter(r['total_order_value']for r in effects).items()if n>1}},'interpretation':'Provided initial staging relations are the declared inputs; NULL equality never joins. Current50redemptions/23active promotions derived completely. All associated coupons determine counts/limits, real Python weekdays determine Mon-Fri vs Sat-Sun, summary customers are distinct across the group. Inactive promotion inclusion/undefined0-redemption metrics not silently resolved. Monetary HALF_UP2, percentage1, ratio/average2 representation; native binary half ties and policy choices kept separate. Revenue NTILE5/dense-rank representation selected for non-multiple-of5 population, not a uniquely required tie policy.'}

@@ -1,0 +1,91 @@
+{
+  "inventory": {
+    "path": "${ARTIFACT_ROOT}/validation/phase4-review-v1/pipeline/inventory.json",
+    "sha256": "f407aa2b598efc663e367102be47ac40192b01f162c90578ea46bef024808e55"
+  },
+  "model_requests": 0,
+  "schema_version": 1,
+  "scope": "Runnable native task variants; no agent source, hidden case payload or observation wrapper added.",
+  "variants": {
+    "deb__dbt-customer-churn-early-warning": {
+      "metadata": {
+        "path": "patches/phase4-deb__dbt-customer-churn-early-warning-72c0e039c28d/metadata.json",
+        "sha256": "83706d231b049069c8e8fcac62eb5b5aaeeb9229db807529ce457888c7e29b0f"
+      },
+      "run_path": "${ARTIFACT_ROOT}/validation/phase4-review-v1/pipeline/production-v1/tasks/deb__dbt-customer-churn-early-warning/phase4-instruction-72c0e039c28d2c84",
+      "task_version": "phase4-instruction-72c0e039c28d2c84"
+    },
+    "deb__dbt-customer-cltv-forecasting": {
+      "metadata": {
+        "path": "patches/phase4-deb__dbt-customer-cltv-forecasting-db2dad91b69b/metadata.json",
+        "sha256": "f5ea0a97112d952c288d8d7a75411d4fe5786db3006b87808f4a71c7ca533fee"
+      },
+      "run_path": "${ARTIFACT_ROOT}/validation/phase4-review-v1/pipeline/production-v1/tasks/deb__dbt-customer-cltv-forecasting/phase4-instruction-db2dad91b69b4407",
+      "task_version": "phase4-instruction-db2dad91b69b4407"
+    },
+    "deb__dbt-customer-ltv-fix": {
+      "metadata": {
+        "path": "patches/phase4-deb__dbt-customer-ltv-fix-5ef90937891f/metadata.json",
+        "sha256": "7053e0e633a50ad5c178096d4d0f207c2c814fdf58b850b33727ed1da56742d3"
+      },
+      "run_path": "${ARTIFACT_ROOT}/validation/phase4-review-v1/pipeline/production-v1/tasks/deb__dbt-customer-ltv-fix/phase4-instruction-5ef90937891f9bd3",
+      "task_version": "phase4-instruction-5ef90937891f9bd3"
+    },
+    "deb__dbt-fix-repeat-purchase-cohort-revenue": {
+      "metadata": {
+        "path": "patches/phase4-deb__dbt-fix-repeat-purchase-cohort-revenue-f401f0d6f8a5/metadata.json",
+        "sha256": "b2caee00fa13293b949ec3e6ec37f28668ee571deb6a3e5d27edbdd70db2d33e"
+      },
+      "run_path": "${ARTIFACT_ROOT}/validation/phase4-review-v1/pipeline/production-v1/tasks/deb__dbt-fix-repeat-purchase-cohort-revenue/phase4-instruction-f401f0d6f8a5c222",
+      "task_version": "phase4-instruction-f401f0d6f8a5c222"
+    },
+    "deb__dbt-fulfillment-sla": {
+      "metadata": {
+        "path": "patches/phase4-deb__dbt-fulfillment-sla-57bb781b92b0/metadata.json",
+        "sha256": "0b85a8900eb06a87cbe17671119f8e9b79fb28aa0c8c69b305fe1008aa3431bb"
+      },
+      "run_path": "${ARTIFACT_ROOT}/validation/phase4-review-v1/pipeline/production-v1/tasks/deb__dbt-fulfillment-sla/phase4-instruction-57bb781b92b013da",
+      "task_version": "phase4-instruction-57bb781b92b013da"
+    },
+    "deb__dbt-inventory-analysis": {
+      "metadata": {
+        "path": "patches/phase4-deb__dbt-inventory-analysis-9372499d1491/metadata.json",
+        "sha256": "abe20890382ae7c7e2d15816bfd359fb5127e30a766dcf79b6795953b3f4f470"
+      },
+      "run_path": "${ARTIFACT_ROOT}/validation/phase4-review-v1/pipeline/production-v1/tasks/deb__dbt-inventory-analysis/phase4-instruction-9372499d14911074",
+      "task_version": "phase4-instruction-9372499d14911074"
+    },
+    "deb__dbt-order-interval-metrics": {
+      "metadata": {
+        "path": "patches/phase4-deb__dbt-order-interval-metrics-df22fa905f77/metadata.json",
+        "sha256": "245a421e7399879db6ea5a4faf007e00f792bceef68174c86b5faa65d2cce449"
+      },
+      "run_path": "${ARTIFACT_ROOT}/validation/phase4-review-v1/pipeline/production-v1/tasks/deb__dbt-order-interval-metrics/phase4-instruction-df22fa905f772edf",
+      "task_version": "phase4-instruction-df22fa905f772edf"
+    },
+    "deb__dbt-payment-fraud-analysis": {
+      "metadata": {
+        "path": "patches/phase4-deb__dbt-payment-fraud-analysis-d72295b539bf/metadata.json",
+        "sha256": "17e6e6ced66eb03b0070e6636881aac4ef1d2fb4a8976d31f4dd0e66f8f34727"
+      },
+      "run_path": "${ARTIFACT_ROOT}/validation/phase4-review-v1/pipeline/production-v1/tasks/deb__dbt-payment-fraud-analysis/phase4-instruction-d72295b539bf664b",
+      "task_version": "phase4-instruction-d72295b539bf664b"
+    },
+    "deb__dbt-supplier-scorecard": {
+      "metadata": {
+        "path": "patches/phase4-deb__dbt-supplier-scorecard-0ccf767fc501/metadata.json",
+        "sha256": "160534547d5130d6b330fa831e4e3b5119848a6210dd90206fb35c8e546f5ea6"
+      },
+      "run_path": "${ARTIFACT_ROOT}/validation/phase4-review-v1/pipeline/production-v1/tasks/deb__dbt-supplier-scorecard/phase4-instruction-0ccf767fc501f4bf",
+      "task_version": "phase4-instruction-0ccf767fc501f4bf"
+    },
+    "deb__dbt-three-way-matching": {
+      "metadata": {
+        "path": "patches/phase4-deb__dbt-three-way-matching-3b870cad9130/metadata.json",
+        "sha256": "0075d70f89297f06f7da0301347488e06406ae3d13f54bb99bb1bc31a55ec525"
+      },
+      "run_path": "${ARTIFACT_ROOT}/validation/phase4-review-v1/pipeline/production-v1/tasks/deb__dbt-three-way-matching/phase4-instruction-3b870cad913036eb",
+      "task_version": "phase4-instruction-3b870cad913036eb"
+    }
+  }
+}

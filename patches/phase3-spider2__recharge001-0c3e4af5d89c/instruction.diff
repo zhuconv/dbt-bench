@@ -1,0 +1,11 @@
+--- original/instruction.md
++++ variant/instruction.md
+@@ -3,6 +3,8 @@
+ ## Task Description
+ 
+ Create a model to combine charge data, including line items, discounts, taxes, shipping, and refunds, while ensuring each item is uniquely identified and linked to its charge?
++
++Report each discount's `amount` in currency as a positive number; for a percentage discount, apply the percentage to the charge's `total_line_items_price` and round to two decimals.
+ 
+ ## Environment
+ 

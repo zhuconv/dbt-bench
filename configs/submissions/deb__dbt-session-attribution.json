@@ -1,0 +1,58 @@
+{
+  "artifacts": [
+    {
+      "destination": "submission/workspace",
+      "exclude": [],
+      "source": "/app"
+    }
+  ],
+  "collection_version": "session-workspace-v2",
+  "contract": {
+    "path": "validation/deb/dbt-session-attribution/contract.yaml",
+    "sha256": "70fe66a54ffc0bb708f0081bbc5365b0517d663f8a6a802b1d7c7975f4f42fac"
+  },
+  "native_verifier_mode": "shared",
+  "native_verifier_modified": false,
+  "path_evidence": [
+    {
+      "path": "artifacts/validation/submission-capture-deb-v1/jobs/submission-capture-deb-v1/deb__dbt-session-attribution__aVZfPuA/agent/oracle.txt",
+      "sha256": "bcd71f6ed17635ee75342323a2cf32f0b698b63652e2e3d8ecaa004156622150"
+    },
+    {
+      "path": "validation/evidence/gh-dev-1123630-submission-scope-gap.json",
+      "sha256": "df54004abcd586c7224107ba7cdd777d3235f6d038726220a2344cd712e2f46c"
+    },
+    {
+      "path": "validation/evidence/trace-reporting-scope-review-v1.json",
+      "sha256": "c879577b4ce677de14ec53cc27b9e3dc053f7839b829f73b477b48494eb1479e"
+    },
+    {
+      "path": "validation/evidence/session-environment-review-v1/summary.json",
+      "sha256": "c735aa8902a50fe0bc4a324a96148f3860be016708109f1b1076a877ad1665b3"
+    },
+    {
+      "path": "validation/evidence/session-workflow-review-v1/summary.json",
+      "sha256": "52e370605b9712ee3ab7e20da63021875bdb0c31a5428895d39d2869b9a65a27"
+    },
+    {
+      "path": "validation/evidence/session-visibility-review-v1/summary.json",
+      "sha256": "82d7d8340916323573a8d64b891bc52b7b809b588d1a28d119061c30c0a4bb37"
+    },
+    {
+      "path": "validation/evidence/session-audit-review-v1/summary.json",
+      "sha256": "c578f57c28e124512cc8e1383c4e05606fd3171c27cee4200c78fc078ec7f271"
+    },
+    {
+      "path": "validation/evidence/session-collector-review-v1/summary.json",
+      "sha256": "30563d5251263322b02b1db40509a1b28f3a67dafd462aad4445252c965f7f23"
+    }
+  ],
+  "rationale": "Preserve the complete /app task workspace before verifier upload, including database/WAL and every native or prompt-declared project path. The actual model created /app/dbt_transforms and also edited /app/dbt_models_snowflake; collecting only the initialized DuckDB project loses its source. Hidden /tests and /solution are outside /app and original instructions/checker are unchanged.",
+  "required_files": [
+    "submission/workspace/dbt_models_duckdb/dbt_project.yml",
+    "submission/workspace/database/retail.duckdb"
+  ],
+  "schema_version": 1,
+  "task_hash": "16d714d3b211747fb9ed5b9f5a345207244fb81996343a09d62b477491d958a1",
+  "task_key": "deb__dbt-session-attribution"
+}

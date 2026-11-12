@@ -1,0 +1,8 @@
+--- original/instruction.md
++++ variant/instruction.md
+@@ -349,3 +349,5 @@
+ ## Files
+ - DuckDB: `/app/dbt_models_duckdb/models/intermediate/cart_recovery/` and `/app/dbt_models_duckdb/models/marts/digital/`
+ - Snowflake: `/app/dbt_models_snowflake/models/intermediate/cart_recovery/` and `/app/dbt_models_snowflake/models/marts/digital/`
++
++Left join the per-cart item rollup to carts on `cart_id` and do **not** coalesce it: carts with no item rows keep NULL `item_line_count`, `distinct_variants`, `total_quantity` and `items_total`, both in `int_cart_recovery__cart_base` and in `fct_cart_recovery_priority`.

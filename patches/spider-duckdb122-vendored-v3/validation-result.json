@@ -1,0 +1,37 @@
+{
+  "ade_deb_versions_changed": false,
+  "asana": {
+    "all_columns_exact_rows": 45,
+    "clean_builds": 2,
+    "comparison": {
+      "path": "artifacts/validation/phase1-review-v1/asana-v3-all-columns.json",
+      "sha256": "da76f86e76091dad3ed5d3df1f21f082fac01640910bbb986b3a41686bd57f05"
+    },
+    "native_rewards": [
+      1,
+      1
+    ],
+    "witness": {
+      "path": "${ARTIFACT_ROOT}/validation/spider-v3-asana-witness-v1/reconciliation.json",
+      "sha256": "921a28914ae20d7f4e3337efba331b38d6ba71dfb22b51927f357cbcf9612a4a"
+    }
+  },
+  "environment": "spider-duckdb122-vendored-v3",
+  "native_rewards_modified": false,
+  "native_verifier_modified": false,
+  "new_model_requests": 0,
+  "reference_nop_mechanical_reexecution": "pending_environment_errors",
+  "schema_version": 1,
+  "scope": "Environment compatibility regression only; full Spider validation remains incomplete",
+  "spider_semantic_agent_paused": true,
+  "unmodified_project_probes": {
+    "fail_other": 15,
+    "gap_missing_node": 10,
+    "pass": 30,
+    "review": {
+      "path": "${ARTIFACT_ROOT}/validation/spider-v3-environment-review-v1/summary.json",
+      "sha256": "103c7d2c10c5d95ede08cfcf4b347f7b1b562677915da7e9bb50af36f3248992"
+    },
+    "tasks": 55
+  }
+}

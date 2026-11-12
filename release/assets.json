@@ -1,0 +1,1557 @@
+{
+  "artifact_store_url": null,
+  "assets": [
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-9c75036f4febb7314d475568ddd440c3b965c8aebb44fc4fdb1cb8a20da3587b",
+      "kind": "task",
+      "sha256": "9c75036f4febb7314d475568ddd440c3b965c8aebb44fc4fdb1cb8a20da3587b",
+      "store_key": "9c75036f4febb7314d475568ddd440c3b965c8aebb44fc4fdb1cb8a20da3587b"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 320212992,
+      "hash_algorithm": "sha256",
+      "id": "image-3e23d16ac0456b2d618f4131c0146ed9030019e943190202dfee30123faf5efc",
+      "kind": "image",
+      "sha256": "3e23d16ac0456b2d618f4131c0146ed9030019e943190202dfee30123faf5efc",
+      "store_key": "3e23d16ac0456b2d618f4131c0146ed9030019e943190202dfee30123faf5efc"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 103649,
+      "hash_algorithm": "sha256",
+      "id": "qualification-c7a8cae111b865b51e1987f1ef4724c55b6786e68e03fcb2ee43633004f5b67d",
+      "kind": "qualification",
+      "sha256": "c7a8cae111b865b51e1987f1ef4724c55b6786e68e03fcb2ee43633004f5b67d",
+      "store_key": "c7a8cae111b865b51e1987f1ef4724c55b6786e68e03fcb2ee43633004f5b67d"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-53c496fa47081e0337a09e277508963a9aa3b11c89d2f8e7826210ab51dbd537",
+      "kind": "task",
+      "sha256": "53c496fa47081e0337a09e277508963a9aa3b11c89d2f8e7826210ab51dbd537",
+      "store_key": "53c496fa47081e0337a09e277508963a9aa3b11c89d2f8e7826210ab51dbd537"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 237985792,
+      "hash_algorithm": "sha256",
+      "id": "image-42d7d63a51a7293b77164e61effb6a2732b483116fccb7e422edc86e0d0d37fa",
+      "kind": "image",
+      "sha256": "42d7d63a51a7293b77164e61effb6a2732b483116fccb7e422edc86e0d0d37fa",
+      "store_key": "42d7d63a51a7293b77164e61effb6a2732b483116fccb7e422edc86e0d0d37fa"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 136087,
+      "hash_algorithm": "sha256",
+      "id": "qualification-8cb6dbc3def2cf0fdfc545ea59a1b78a93b525fe737c076fea4b3fcb46259bf2",
+      "kind": "qualification",
+      "sha256": "8cb6dbc3def2cf0fdfc545ea59a1b78a93b525fe737c076fea4b3fcb46259bf2",
+      "store_key": "8cb6dbc3def2cf0fdfc545ea59a1b78a93b525fe737c076fea4b3fcb46259bf2"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-a91d39df5f2f83240dca813b32674371a5c02cc2be5b9eb3deb1ad0192d6bd7f",
+      "kind": "task",
+      "sha256": "a91d39df5f2f83240dca813b32674371a5c02cc2be5b9eb3deb1ad0192d6bd7f",
+      "store_key": "a91d39df5f2f83240dca813b32674371a5c02cc2be5b9eb3deb1ad0192d6bd7f"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 196530176,
+      "hash_algorithm": "sha256",
+      "id": "image-5a996aeed7efc0e024b07224e730dde4bbd8317ef0a42968d997319a10bf45a7",
+      "kind": "image",
+      "sha256": "5a996aeed7efc0e024b07224e730dde4bbd8317ef0a42968d997319a10bf45a7",
+      "store_key": "5a996aeed7efc0e024b07224e730dde4bbd8317ef0a42968d997319a10bf45a7"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 58855,
+      "hash_algorithm": "sha256",
+      "id": "qualification-452e0661ce9fd5948115a89985a5ed0995a23051df39e9d31c243a0871c03686",
+      "kind": "qualification",
+      "sha256": "452e0661ce9fd5948115a89985a5ed0995a23051df39e9d31c243a0871c03686",
+      "store_key": "452e0661ce9fd5948115a89985a5ed0995a23051df39e9d31c243a0871c03686"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-aad267608e21574ad82124142e16baecd6834a242c7f2d87185b32e99949fa18",
+      "kind": "task",
+      "sha256": "aad267608e21574ad82124142e16baecd6834a242c7f2d87185b32e99949fa18",
+      "store_key": "aad267608e21574ad82124142e16baecd6834a242c7f2d87185b32e99949fa18"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 196616192,
+      "hash_algorithm": "sha256",
+      "id": "image-ed545cfe3c0ed6e53808db3c07759341b0b5f25f751173033d21578ef726330e",
+      "kind": "image",
+      "sha256": "ed545cfe3c0ed6e53808db3c07759341b0b5f25f751173033d21578ef726330e",
+      "store_key": "ed545cfe3c0ed6e53808db3c07759341b0b5f25f751173033d21578ef726330e"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 62342,
+      "hash_algorithm": "sha256",
+      "id": "qualification-1a82520294d2e0600fa69f10d54296924e3fffbd433ca2edf7910e05ade432c2",
+      "kind": "qualification",
+      "sha256": "1a82520294d2e0600fa69f10d54296924e3fffbd433ca2edf7910e05ade432c2",
+      "store_key": "1a82520294d2e0600fa69f10d54296924e3fffbd433ca2edf7910e05ade432c2"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-2af6c1c4f48c50cd4ab43238489b9e76de9b0635f2fe8d637c49dbfafd95912f",
+      "kind": "task",
+      "sha256": "2af6c1c4f48c50cd4ab43238489b9e76de9b0635f2fe8d637c49dbfafd95912f",
+      "store_key": "2af6c1c4f48c50cd4ab43238489b9e76de9b0635f2fe8d637c49dbfafd95912f"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 196624384,
+      "hash_algorithm": "sha256",
+      "id": "image-4bff1adede909e8d8b3dee3d8ccd06ece66984ddde1d4da5bbae3e87eedd34e0",
+      "kind": "image",
+      "sha256": "4bff1adede909e8d8b3dee3d8ccd06ece66984ddde1d4da5bbae3e87eedd34e0",
+      "store_key": "4bff1adede909e8d8b3dee3d8ccd06ece66984ddde1d4da5bbae3e87eedd34e0"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 60055,
+      "hash_algorithm": "sha256",
+      "id": "qualification-7bb49bd5bd8dd8ca4c1452732b8922c9ac7e06108a5f5591acf77da0edc57c60",
+      "kind": "qualification",
+      "sha256": "7bb49bd5bd8dd8ca4c1452732b8922c9ac7e06108a5f5591acf77da0edc57c60",
+      "store_key": "7bb49bd5bd8dd8ca4c1452732b8922c9ac7e06108a5f5591acf77da0edc57c60"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-efd6b4bd5bd89a8fe31120a206af1af0c1d4805b4cee9510d31d36e8e15f003f",
+      "kind": "task",
+      "sha256": "efd6b4bd5bd89a8fe31120a206af1af0c1d4805b4cee9510d31d36e8e15f003f",
+      "store_key": "efd6b4bd5bd89a8fe31120a206af1af0c1d4805b4cee9510d31d36e8e15f003f"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 196591616,
+      "hash_algorithm": "sha256",
+      "id": "image-3d2b6f9cce89028222fcda9040da2d0ebd608d4bb39e4d5323b4ee7785acc68c",
+      "kind": "image",
+      "sha256": "3d2b6f9cce89028222fcda9040da2d0ebd608d4bb39e4d5323b4ee7785acc68c",
+      "store_key": "3d2b6f9cce89028222fcda9040da2d0ebd608d4bb39e4d5323b4ee7785acc68c"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 83464,
+      "hash_algorithm": "sha256",
+      "id": "qualification-21cfcc7684c9c9409454b6177f51b31832c053b85aae016176625b9be5b27d5e",
+      "kind": "qualification",
+      "sha256": "21cfcc7684c9c9409454b6177f51b31832c053b85aae016176625b9be5b27d5e",
+      "store_key": "21cfcc7684c9c9409454b6177f51b31832c053b85aae016176625b9be5b27d5e"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-f5582e22a16499d3213fc9c6579dda77b3c3ff378fcab9244381ea7086dc26cc",
+      "kind": "task",
+      "sha256": "f5582e22a16499d3213fc9c6579dda77b3c3ff378fcab9244381ea7086dc26cc",
+      "store_key": "f5582e22a16499d3213fc9c6579dda77b3c3ff378fcab9244381ea7086dc26cc"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 199983104,
+      "hash_algorithm": "sha256",
+      "id": "image-674da519863ff4d1941529e9cee5eecb2ee12f7c926b39a2bc49f46a882cc7af",
+      "kind": "image",
+      "sha256": "674da519863ff4d1941529e9cee5eecb2ee12f7c926b39a2bc49f46a882cc7af",
+      "store_key": "674da519863ff4d1941529e9cee5eecb2ee12f7c926b39a2bc49f46a882cc7af"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 75720,
+      "hash_algorithm": "sha256",
+      "id": "qualification-d0f33bdd7617aa7369d613ff6fa35f4911ade84fbf24f5089b4164fd5fa33868",
+      "kind": "qualification",
+      "sha256": "d0f33bdd7617aa7369d613ff6fa35f4911ade84fbf24f5089b4164fd5fa33868",
+      "store_key": "d0f33bdd7617aa7369d613ff6fa35f4911ade84fbf24f5089b4164fd5fa33868"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-679d2263708d3ef681e620d908793371982230f9b1aa460ddf1f564994edad0f",
+      "kind": "task",
+      "sha256": "679d2263708d3ef681e620d908793371982230f9b1aa460ddf1f564994edad0f",
+      "store_key": "679d2263708d3ef681e620d908793371982230f9b1aa460ddf1f564994edad0f"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 199983104,
+      "hash_algorithm": "sha256",
+      "id": "image-c5485eddd674a9bc424627f23eb99f3854f1608094988b1ebbd2c749eec1cb7c",
+      "kind": "image",
+      "sha256": "c5485eddd674a9bc424627f23eb99f3854f1608094988b1ebbd2c749eec1cb7c",
+      "store_key": "c5485eddd674a9bc424627f23eb99f3854f1608094988b1ebbd2c749eec1cb7c"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 74198,
+      "hash_algorithm": "sha256",
+      "id": "qualification-c7832ce6e818f28b35f7093de300732e84691c0755a8e617994e8e51da994de5",
+      "kind": "qualification",
+      "sha256": "c7832ce6e818f28b35f7093de300732e84691c0755a8e617994e8e51da994de5",
+      "store_key": "c7832ce6e818f28b35f7093de300732e84691c0755a8e617994e8e51da994de5"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-2d5b7d92c3e02e4aecef7ff7437155a35c1a81c732f92db3f8dfb0c64e0fafdc",
+      "kind": "task",
+      "sha256": "2d5b7d92c3e02e4aecef7ff7437155a35c1a81c732f92db3f8dfb0c64e0fafdc",
+      "store_key": "2d5b7d92c3e02e4aecef7ff7437155a35c1a81c732f92db3f8dfb0c64e0fafdc"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 204173312,
+      "hash_algorithm": "sha256",
+      "id": "image-ce47a9e6ed2defaac646b2bbb002d0eaf3fc3d8873a8342187d8b9fd4e521fd0",
+      "kind": "image",
+      "sha256": "ce47a9e6ed2defaac646b2bbb002d0eaf3fc3d8873a8342187d8b9fd4e521fd0",
+      "store_key": "ce47a9e6ed2defaac646b2bbb002d0eaf3fc3d8873a8342187d8b9fd4e521fd0"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 76210,
+      "hash_algorithm": "sha256",
+      "id": "qualification-36219817101a429f0a584ff8ef82f83b4f672084c10f20c832f4ea07969bdfa7",
+      "kind": "qualification",
+      "sha256": "36219817101a429f0a584ff8ef82f83b4f672084c10f20c832f4ea07969bdfa7",
+      "store_key": "36219817101a429f0a584ff8ef82f83b4f672084c10f20c832f4ea07969bdfa7"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-94b44d8c2768978c71d20c803f6d8c76baf44b67eb4885ab85487d0949254507",
+      "kind": "task",
+      "sha256": "94b44d8c2768978c71d20c803f6d8c76baf44b67eb4885ab85487d0949254507",
+      "store_key": "94b44d8c2768978c71d20c803f6d8c76baf44b67eb4885ab85487d0949254507"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 204169216,
+      "hash_algorithm": "sha256",
+      "id": "image-41c1f547462abe50f1149b412045e0bf5d96e8e3bfacfe5b775dc258e261c7ea",
+      "kind": "image",
+      "sha256": "41c1f547462abe50f1149b412045e0bf5d96e8e3bfacfe5b775dc258e261c7ea",
+      "store_key": "41c1f547462abe50f1149b412045e0bf5d96e8e3bfacfe5b775dc258e261c7ea"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 71776,
+      "hash_algorithm": "sha256",
+      "id": "qualification-90232cec51b20ee0416e8e378282aad34542980ed8a8607da1bc4fc916713dcd",
+      "kind": "qualification",
+      "sha256": "90232cec51b20ee0416e8e378282aad34542980ed8a8607da1bc4fc916713dcd",
+      "store_key": "90232cec51b20ee0416e8e378282aad34542980ed8a8607da1bc4fc916713dcd"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-c79e9f4a7e433b9eebc10eff04892d7574375cc380a9f8ea2d135111cfb9f28b",
+      "kind": "task",
+      "sha256": "c79e9f4a7e433b9eebc10eff04892d7574375cc380a9f8ea2d135111cfb9f28b",
+      "store_key": "c79e9f4a7e433b9eebc10eff04892d7574375cc380a9f8ea2d135111cfb9f28b"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 204140544,
+      "hash_algorithm": "sha256",
+      "id": "image-c26a3cab660b455cd95f446cea80c8c866faa64c58fefdd12b3f6ec3dc405769",
+      "kind": "image",
+      "sha256": "c26a3cab660b455cd95f446cea80c8c866faa64c58fefdd12b3f6ec3dc405769",
+      "store_key": "c26a3cab660b455cd95f446cea80c8c866faa64c58fefdd12b3f6ec3dc405769"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 56069,
+      "hash_algorithm": "sha256",
+      "id": "qualification-ce2a8f0838cb4bf4cc0bf04ce2e5c7cc7469b7afa26385a2a04f82e79603cb79",
+      "kind": "qualification",
+      "sha256": "ce2a8f0838cb4bf4cc0bf04ce2e5c7cc7469b7afa26385a2a04f82e79603cb79",
+      "store_key": "ce2a8f0838cb4bf4cc0bf04ce2e5c7cc7469b7afa26385a2a04f82e79603cb79"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-8792ab3ed74d429df38515a45315d40e49dc96b38e478d739fcb3137f1b3cb50",
+      "kind": "task",
+      "sha256": "8792ab3ed74d429df38515a45315d40e49dc96b38e478d739fcb3137f1b3cb50",
+      "store_key": "8792ab3ed74d429df38515a45315d40e49dc96b38e478d739fcb3137f1b3cb50"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 204132352,
+      "hash_algorithm": "sha256",
+      "id": "image-4b63c74af2f2816318325d37558bd5934bd71988816d1fbc6c15e48ee39bc0a1",
+      "kind": "image",
+      "sha256": "4b63c74af2f2816318325d37558bd5934bd71988816d1fbc6c15e48ee39bc0a1",
+      "store_key": "4b63c74af2f2816318325d37558bd5934bd71988816d1fbc6c15e48ee39bc0a1"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 74089,
+      "hash_algorithm": "sha256",
+      "id": "qualification-29b0a3619cb430bfe400be852da73cd432ffa7cad40df16a85128dd9dcd83db0",
+      "kind": "qualification",
+      "sha256": "29b0a3619cb430bfe400be852da73cd432ffa7cad40df16a85128dd9dcd83db0",
+      "store_key": "29b0a3619cb430bfe400be852da73cd432ffa7cad40df16a85128dd9dcd83db0"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-12d7152fb841a502e3af0635648f22ccf7d40116f9f99dddd398ac01ebf69c6a",
+      "kind": "task",
+      "sha256": "12d7152fb841a502e3af0635648f22ccf7d40116f9f99dddd398ac01ebf69c6a",
+      "store_key": "12d7152fb841a502e3af0635648f22ccf7d40116f9f99dddd398ac01ebf69c6a"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 196767744,
+      "hash_algorithm": "sha256",
+      "id": "image-7dd21401d98cb1ecb758d4510cf0430116dbca24d9a9b77d6e898f746ddb054d",
+      "kind": "image",
+      "sha256": "7dd21401d98cb1ecb758d4510cf0430116dbca24d9a9b77d6e898f746ddb054d",
+      "store_key": "7dd21401d98cb1ecb758d4510cf0430116dbca24d9a9b77d6e898f746ddb054d"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 60534,
+      "hash_algorithm": "sha256",
+      "id": "qualification-4db4a1ba7f4988b5dcd94daf6b817a4c478631c668b4d3ca55a03dded01f2a07",
+      "kind": "qualification",
+      "sha256": "4db4a1ba7f4988b5dcd94daf6b817a4c478631c668b4d3ca55a03dded01f2a07",
+      "store_key": "4db4a1ba7f4988b5dcd94daf6b817a4c478631c668b4d3ca55a03dded01f2a07"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-b99f274193a468dbc48c8908d329f0df3ddd8761031b50195555fad7cf39b6bf",
+      "kind": "task",
+      "sha256": "b99f274193a468dbc48c8908d329f0df3ddd8761031b50195555fad7cf39b6bf",
+      "store_key": "b99f274193a468dbc48c8908d329f0df3ddd8761031b50195555fad7cf39b6bf"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 196767744,
+      "hash_algorithm": "sha256",
+      "id": "image-3b3737a8352f18cc1655f8656918c71e50f5271a99d4b6daef3b827ab975c713",
+      "kind": "image",
+      "sha256": "3b3737a8352f18cc1655f8656918c71e50f5271a99d4b6daef3b827ab975c713",
+      "store_key": "3b3737a8352f18cc1655f8656918c71e50f5271a99d4b6daef3b827ab975c713"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 72558,
+      "hash_algorithm": "sha256",
+      "id": "qualification-d1145afd4b1246ebec4ba985c6d2478c3d86e9c19038803baffd1b9ad2379c71",
+      "kind": "qualification",
+      "sha256": "d1145afd4b1246ebec4ba985c6d2478c3d86e9c19038803baffd1b9ad2379c71",
+      "store_key": "d1145afd4b1246ebec4ba985c6d2478c3d86e9c19038803baffd1b9ad2379c71"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-3b9cc8e51dd673c18a7dc8bbc166fe606e834ff40d36183555eba4f67903fc7b",
+      "kind": "task",
+      "sha256": "3b9cc8e51dd673c18a7dc8bbc166fe606e834ff40d36183555eba4f67903fc7b",
+      "store_key": "3b9cc8e51dd673c18a7dc8bbc166fe606e834ff40d36183555eba4f67903fc7b"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 196767744,
+      "hash_algorithm": "sha256",
+      "id": "image-724a26e1d5e58d1aada9913bf4c6418355d0b693752e8f31a7de6941e0bed513",
+      "kind": "image",
+      "sha256": "724a26e1d5e58d1aada9913bf4c6418355d0b693752e8f31a7de6941e0bed513",
+      "store_key": "724a26e1d5e58d1aada9913bf4c6418355d0b693752e8f31a7de6941e0bed513"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 61895,
+      "hash_algorithm": "sha256",
+      "id": "qualification-72b3b1c97192282e43a87c4229a960c9a184c7016e11e1f5513595337ab5fd4e",
+      "kind": "qualification",
+      "sha256": "72b3b1c97192282e43a87c4229a960c9a184c7016e11e1f5513595337ab5fd4e",
+      "store_key": "72b3b1c97192282e43a87c4229a960c9a184c7016e11e1f5513595337ab5fd4e"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-d75f9b9c346b5674fff7d9a3e861f3967c211acf9572a0449f5de394f08dd68f",
+      "kind": "task",
+      "sha256": "d75f9b9c346b5674fff7d9a3e861f3967c211acf9572a0449f5de394f08dd68f",
+      "store_key": "d75f9b9c346b5674fff7d9a3e861f3967c211acf9572a0449f5de394f08dd68f"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 355258368,
+      "hash_algorithm": "sha256",
+      "id": "image-f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c",
+      "kind": "image",
+      "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c",
+      "store_key": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 186751,
+      "hash_algorithm": "sha256",
+      "id": "qualification-35309444b360e696c62e71bf68b963302a69ac5d786004e726b0fe2a5acf73c2",
+      "kind": "qualification",
+      "sha256": "35309444b360e696c62e71bf68b963302a69ac5d786004e726b0fe2a5acf73c2",
+      "store_key": "35309444b360e696c62e71bf68b963302a69ac5d786004e726b0fe2a5acf73c2"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-bfd7b249a31c4d7db479cfc2052f18aa5663ce7a08e337231e5a5135a4612d74",
+      "kind": "task",
+      "sha256": "bfd7b249a31c4d7db479cfc2052f18aa5663ce7a08e337231e5a5135a4612d74",
+      "store_key": "bfd7b249a31c4d7db479cfc2052f18aa5663ce7a08e337231e5a5135a4612d74"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 229707,
+      "hash_algorithm": "sha256",
+      "id": "qualification-e477c8f0e7e270e1e679c54839e4e3a9cf72fb5fd72d61cb08c0707750d16c71",
+      "kind": "qualification",
+      "sha256": "e477c8f0e7e270e1e679c54839e4e3a9cf72fb5fd72d61cb08c0707750d16c71",
+      "store_key": "e477c8f0e7e270e1e679c54839e4e3a9cf72fb5fd72d61cb08c0707750d16c71"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-5c2962386c02eb729ea6659fb99c07fd36cd4406cf8a23459216e58dc042a046",
+      "kind": "task",
+      "sha256": "5c2962386c02eb729ea6659fb99c07fd36cd4406cf8a23459216e58dc042a046",
+      "store_key": "5c2962386c02eb729ea6659fb99c07fd36cd4406cf8a23459216e58dc042a046"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 187415,
+      "hash_algorithm": "sha256",
+      "id": "qualification-25fcdb03ba4b1b347f00b7114262c39eee05fe2a15a599fa3350c21b36bfa110",
+      "kind": "qualification",
+      "sha256": "25fcdb03ba4b1b347f00b7114262c39eee05fe2a15a599fa3350c21b36bfa110",
+      "store_key": "25fcdb03ba4b1b347f00b7114262c39eee05fe2a15a599fa3350c21b36bfa110"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-c1365ce723ccb5ade2222faed5d0876a91b46a0b005d424f0dbccea5e7c5e002",
+      "kind": "task",
+      "sha256": "c1365ce723ccb5ade2222faed5d0876a91b46a0b005d424f0dbccea5e7c5e002",
+      "store_key": "c1365ce723ccb5ade2222faed5d0876a91b46a0b005d424f0dbccea5e7c5e002"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 124641,
+      "hash_algorithm": "sha256",
+      "id": "qualification-dde3640c83f0b6c5b8ae30899f388bc6b35272cf4b38beec9b7674fb90773162",
+      "kind": "qualification",
+      "sha256": "dde3640c83f0b6c5b8ae30899f388bc6b35272cf4b38beec9b7674fb90773162",
+      "store_key": "dde3640c83f0b6c5b8ae30899f388bc6b35272cf4b38beec9b7674fb90773162"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-639c192f252a8a018415995f4722f6f4829ab5e52fdde6a7ba76a833624de750",
+      "kind": "task",
+      "sha256": "639c192f252a8a018415995f4722f6f4829ab5e52fdde6a7ba76a833624de750",
+      "store_key": "639c192f252a8a018415995f4722f6f4829ab5e52fdde6a7ba76a833624de750"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 82131,
+      "hash_algorithm": "sha256",
+      "id": "qualification-e776d8da3c17454c9657da90aed7d698134966f449aae213a7c211ec62315853",
+      "kind": "qualification",
+      "sha256": "e776d8da3c17454c9657da90aed7d698134966f449aae213a7c211ec62315853",
+      "store_key": "e776d8da3c17454c9657da90aed7d698134966f449aae213a7c211ec62315853"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-5a0b54ad65115ed07b23b001cf7a1bf52c11da613bccb1b3c791fe485e9de879",
+      "kind": "task",
+      "sha256": "5a0b54ad65115ed07b23b001cf7a1bf52c11da613bccb1b3c791fe485e9de879",
+      "store_key": "5a0b54ad65115ed07b23b001cf7a1bf52c11da613bccb1b3c791fe485e9de879"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 155522,
+      "hash_algorithm": "sha256",
+      "id": "qualification-9065459690470de66b623bd398cdca3e7b318aab7ac9eddbcb7702a508f9bf00",
+      "kind": "qualification",
+      "sha256": "9065459690470de66b623bd398cdca3e7b318aab7ac9eddbcb7702a508f9bf00",
+      "store_key": "9065459690470de66b623bd398cdca3e7b318aab7ac9eddbcb7702a508f9bf00"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-9ee778862e2ea2fb5c4ccd74c1e58ce21cd36979abdca2c87f5bdb28448d47cd",
+      "kind": "task",
+      "sha256": "9ee778862e2ea2fb5c4ccd74c1e58ce21cd36979abdca2c87f5bdb28448d47cd",
+      "store_key": "9ee778862e2ea2fb5c4ccd74c1e58ce21cd36979abdca2c87f5bdb28448d47cd"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 182338,
+      "hash_algorithm": "sha256",
+      "id": "qualification-15e3f4504338085f7311512f63d154f930bbb4a57b636785c13e33b972115ddb",
+      "kind": "qualification",
+      "sha256": "15e3f4504338085f7311512f63d154f930bbb4a57b636785c13e33b972115ddb",
+      "store_key": "15e3f4504338085f7311512f63d154f930bbb4a57b636785c13e33b972115ddb"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-e0da1d3492e4cce8b7fa0a97b18e4d3b3738bccb364fbea6d46157759d47bdc5",
+      "kind": "task",
+      "sha256": "e0da1d3492e4cce8b7fa0a97b18e4d3b3738bccb364fbea6d46157759d47bdc5",
+      "store_key": "e0da1d3492e4cce8b7fa0a97b18e4d3b3738bccb364fbea6d46157759d47bdc5"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 82449,
+      "hash_algorithm": "sha256",
+      "id": "qualification-f4c9ed3542a09a548742fcd2a801dbc71c7f417e2775f4935102ab217e03fc80",
+      "kind": "qualification",
+      "sha256": "f4c9ed3542a09a548742fcd2a801dbc71c7f417e2775f4935102ab217e03fc80",
+      "store_key": "f4c9ed3542a09a548742fcd2a801dbc71c7f417e2775f4935102ab217e03fc80"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-d54a2b42990a4f2ab101b8181f5dca8a85d941b9c9e911357a504e93fdd47e49",
+      "kind": "task",
+      "sha256": "d54a2b42990a4f2ab101b8181f5dca8a85d941b9c9e911357a504e93fdd47e49",
+      "store_key": "d54a2b42990a4f2ab101b8181f5dca8a85d941b9c9e911357a504e93fdd47e49"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 167839,
+      "hash_algorithm": "sha256",
+      "id": "qualification-8388c4e64dcc8f2b64e35a7c16883dfc96f6a27e39a9dd024c9d5cf4e8b17b89",
+      "kind": "qualification",
+      "sha256": "8388c4e64dcc8f2b64e35a7c16883dfc96f6a27e39a9dd024c9d5cf4e8b17b89",
+      "store_key": "8388c4e64dcc8f2b64e35a7c16883dfc96f6a27e39a9dd024c9d5cf4e8b17b89"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-d6f9fcf6156ba2808714ff3f2f5e1fbe912e26fe3d0f481ad1e5c7f30de779df",
+      "kind": "task",
+      "sha256": "d6f9fcf6156ba2808714ff3f2f5e1fbe912e26fe3d0f481ad1e5c7f30de779df",
+      "store_key": "d6f9fcf6156ba2808714ff3f2f5e1fbe912e26fe3d0f481ad1e5c7f30de779df"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 86523,
+      "hash_algorithm": "sha256",
+      "id": "qualification-712a42bb5cea6b11867295312be8f43b8e918ae5d397e18448d7d66280b284da",
+      "kind": "qualification",
+      "sha256": "712a42bb5cea6b11867295312be8f43b8e918ae5d397e18448d7d66280b284da",
+      "store_key": "712a42bb5cea6b11867295312be8f43b8e918ae5d397e18448d7d66280b284da"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-bde46a8d75356400408f22294e8de2095e9fa9be49a83cb4fd25e3cb6ab5c034",
+      "kind": "task",
+      "sha256": "bde46a8d75356400408f22294e8de2095e9fa9be49a83cb4fd25e3cb6ab5c034",
+      "store_key": "bde46a8d75356400408f22294e8de2095e9fa9be49a83cb4fd25e3cb6ab5c034"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 69578,
+      "hash_algorithm": "sha256",
+      "id": "qualification-e6799f7f150c1a56079b42c5131d49299f6aef39bf417a8fd78f0574b6f90dbf",
+      "kind": "qualification",
+      "sha256": "e6799f7f150c1a56079b42c5131d49299f6aef39bf417a8fd78f0574b6f90dbf",
+      "store_key": "e6799f7f150c1a56079b42c5131d49299f6aef39bf417a8fd78f0574b6f90dbf"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-bd8ac39a7859ec4ec65a163a2001da99bbfb1f6ca2f716bcacb8bff677ce5904",
+      "kind": "task",
+      "sha256": "bd8ac39a7859ec4ec65a163a2001da99bbfb1f6ca2f716bcacb8bff677ce5904",
+      "store_key": "bd8ac39a7859ec4ec65a163a2001da99bbfb1f6ca2f716bcacb8bff677ce5904"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 176265,
+      "hash_algorithm": "sha256",
+      "id": "qualification-ce3f1e0059c4f12c3b69743bad4b4a80a19ef614e7a1c9c150c96c7cd8c84f3d",
+      "kind": "qualification",
+      "sha256": "ce3f1e0059c4f12c3b69743bad4b4a80a19ef614e7a1c9c150c96c7cd8c84f3d",
+      "store_key": "ce3f1e0059c4f12c3b69743bad4b4a80a19ef614e7a1c9c150c96c7cd8c84f3d"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-ad48e47ffbe36a108e427a77914a3f46b98d5adf9d0497b86f9195aaa7ca8678",
+      "kind": "task",
+      "sha256": "ad48e47ffbe36a108e427a77914a3f46b98d5adf9d0497b86f9195aaa7ca8678",
+      "store_key": "ad48e47ffbe36a108e427a77914a3f46b98d5adf9d0497b86f9195aaa7ca8678"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 224053,
+      "hash_algorithm": "sha256",
+      "id": "qualification-02761a70c290e395025ce233a137c64e7572c1793bd78cae9b4942062dc91528",
+      "kind": "qualification",
+      "sha256": "02761a70c290e395025ce233a137c64e7572c1793bd78cae9b4942062dc91528",
+      "store_key": "02761a70c290e395025ce233a137c64e7572c1793bd78cae9b4942062dc91528"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-f201001186d4c40d4e4c075ba627f77de2bb5113bfe6af060426a8350486af7c",
+      "kind": "task",
+      "sha256": "f201001186d4c40d4e4c075ba627f77de2bb5113bfe6af060426a8350486af7c",
+      "store_key": "f201001186d4c40d4e4c075ba627f77de2bb5113bfe6af060426a8350486af7c"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 89140,
+      "hash_algorithm": "sha256",
+      "id": "qualification-60d60eda704ddbe7fec2f4cd0a120c664fdf82afec4315cdb0f9d1e8b3731dd2",
+      "kind": "qualification",
+      "sha256": "60d60eda704ddbe7fec2f4cd0a120c664fdf82afec4315cdb0f9d1e8b3731dd2",
+      "store_key": "60d60eda704ddbe7fec2f4cd0a120c664fdf82afec4315cdb0f9d1e8b3731dd2"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-4e14c491cb12027fe5cc4876dfb81776ec00718118a443024ad51a319fc2cc0d",
+      "kind": "task",
+      "sha256": "4e14c491cb12027fe5cc4876dfb81776ec00718118a443024ad51a319fc2cc0d",
+      "store_key": "4e14c491cb12027fe5cc4876dfb81776ec00718118a443024ad51a319fc2cc0d"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 73591,
+      "hash_algorithm": "sha256",
+      "id": "qualification-e891aea7bf17f1a23bf629efead4f250862632e84b81e18fb81d4ea61b2d53d8",
+      "kind": "qualification",
+      "sha256": "e891aea7bf17f1a23bf629efead4f250862632e84b81e18fb81d4ea61b2d53d8",
+      "store_key": "e891aea7bf17f1a23bf629efead4f250862632e84b81e18fb81d4ea61b2d53d8"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-0f84ad074469cc03a19b78630a63767223bb06448c867161d2cd3603233bdf36",
+      "kind": "task",
+      "sha256": "0f84ad074469cc03a19b78630a63767223bb06448c867161d2cd3603233bdf36",
+      "store_key": "0f84ad074469cc03a19b78630a63767223bb06448c867161d2cd3603233bdf36"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 127558,
+      "hash_algorithm": "sha256",
+      "id": "qualification-68bfb18675be3dc6687ebd8afbb1a0e63041d7528cbb72902212661f4727d6f3",
+      "kind": "qualification",
+      "sha256": "68bfb18675be3dc6687ebd8afbb1a0e63041d7528cbb72902212661f4727d6f3",
+      "store_key": "68bfb18675be3dc6687ebd8afbb1a0e63041d7528cbb72902212661f4727d6f3"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-ab8d293d378ed31e40dce17bc40eda05aa1ae299989d34ffedff35e2b25b5eab",
+      "kind": "task",
+      "sha256": "ab8d293d378ed31e40dce17bc40eda05aa1ae299989d34ffedff35e2b25b5eab",
+      "store_key": "ab8d293d378ed31e40dce17bc40eda05aa1ae299989d34ffedff35e2b25b5eab"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 4247088,
+      "hash_algorithm": "sha256",
+      "id": "qualification-becfd88d1d5c324654c8baf304e6c0294e54efb76a6574120c156bf1078c0df2",
+      "kind": "qualification",
+      "sha256": "becfd88d1d5c324654c8baf304e6c0294e54efb76a6574120c156bf1078c0df2",
+      "store_key": "becfd88d1d5c324654c8baf304e6c0294e54efb76a6574120c156bf1078c0df2"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-f540250b07dc01d7f7539223feb4d1b0e6f35d252ea4f7a20a7322a063f439a5",
+      "kind": "task",
+      "sha256": "f540250b07dc01d7f7539223feb4d1b0e6f35d252ea4f7a20a7322a063f439a5",
+      "store_key": "f540250b07dc01d7f7539223feb4d1b0e6f35d252ea4f7a20a7322a063f439a5"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 4309857,
+      "hash_algorithm": "sha256",
+      "id": "qualification-aed996fb0ff2eeb37ae23dbf5531d9a783dc40c51b2a188666471abdfe5826b3",
+      "kind": "qualification",
+      "sha256": "aed996fb0ff2eeb37ae23dbf5531d9a783dc40c51b2a188666471abdfe5826b3",
+      "store_key": "aed996fb0ff2eeb37ae23dbf5531d9a783dc40c51b2a188666471abdfe5826b3"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-18526ecfb58eb81748c627a08b043b9164b3aefa6007bdf64af96d37573fd5a6",
+      "kind": "task",
+      "sha256": "18526ecfb58eb81748c627a08b043b9164b3aefa6007bdf64af96d37573fd5a6",
+      "store_key": "18526ecfb58eb81748c627a08b043b9164b3aefa6007bdf64af96d37573fd5a6"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 259388,
+      "hash_algorithm": "sha256",
+      "id": "qualification-c5caf1381c15d8265fd41fc859a2e7e9295bed7f6a3d0596ad0eb53f311cb61c",
+      "kind": "qualification",
+      "sha256": "c5caf1381c15d8265fd41fc859a2e7e9295bed7f6a3d0596ad0eb53f311cb61c",
+      "store_key": "c5caf1381c15d8265fd41fc859a2e7e9295bed7f6a3d0596ad0eb53f311cb61c"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-b62f741934fdd7312af5ec0a77921b28f98189f6572544def31e69c21d85a8f2",
+      "kind": "task",
+      "sha256": "b62f741934fdd7312af5ec0a77921b28f98189f6572544def31e69c21d85a8f2",
+      "store_key": "b62f741934fdd7312af5ec0a77921b28f98189f6572544def31e69c21d85a8f2"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 81098,
+      "hash_algorithm": "sha256",
+      "id": "qualification-f9fa17d484e0ea3fde1a9b9d4fae1a68b61b0fe6d092c735a4cc43ce3e34a907",
+      "kind": "qualification",
+      "sha256": "f9fa17d484e0ea3fde1a9b9d4fae1a68b61b0fe6d092c735a4cc43ce3e34a907",
+      "store_key": "f9fa17d484e0ea3fde1a9b9d4fae1a68b61b0fe6d092c735a4cc43ce3e34a907"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-b13b9b895210c8e7f18d190ac1054f9b3268716a978b650ceea446a5bd0c75a8",
+      "kind": "task",
+      "sha256": "b13b9b895210c8e7f18d190ac1054f9b3268716a978b650ceea446a5bd0c75a8",
+      "store_key": "b13b9b895210c8e7f18d190ac1054f9b3268716a978b650ceea446a5bd0c75a8"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 323422,
+      "hash_algorithm": "sha256",
+      "id": "qualification-7e745d62154e4a02e973a1ddd92f10d03dcf51b19e187ec5fcaa8295a2a2c6b8",
+      "kind": "qualification",
+      "sha256": "7e745d62154e4a02e973a1ddd92f10d03dcf51b19e187ec5fcaa8295a2a2c6b8",
+      "store_key": "7e745d62154e4a02e973a1ddd92f10d03dcf51b19e187ec5fcaa8295a2a2c6b8"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-bc074bc24fb429232e4ee023a0c6cfe7fe8413a97f1bd86119757d9b6a656b9f",
+      "kind": "task",
+      "sha256": "bc074bc24fb429232e4ee023a0c6cfe7fe8413a97f1bd86119757d9b6a656b9f",
+      "store_key": "bc074bc24fb429232e4ee023a0c6cfe7fe8413a97f1bd86119757d9b6a656b9f"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 133112,
+      "hash_algorithm": "sha256",
+      "id": "qualification-aa586c8e2cce1ea7aaf1ec45bf8d11b50323bbe88c431335cdc86a0568a15f18",
+      "kind": "qualification",
+      "sha256": "aa586c8e2cce1ea7aaf1ec45bf8d11b50323bbe88c431335cdc86a0568a15f18",
+      "store_key": "aa586c8e2cce1ea7aaf1ec45bf8d11b50323bbe88c431335cdc86a0568a15f18"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-85472ff635434a07a258c2e31e1799bd453cfca011a6451905cc89c1186048e2",
+      "kind": "task",
+      "sha256": "85472ff635434a07a258c2e31e1799bd453cfca011a6451905cc89c1186048e2",
+      "store_key": "85472ff635434a07a258c2e31e1799bd453cfca011a6451905cc89c1186048e2"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 250490,
+      "hash_algorithm": "sha256",
+      "id": "qualification-651f7488ad1fa96e54fdec790448899b86034a9aa6289d9919752dd2d02b43d8",
+      "kind": "qualification",
+      "sha256": "651f7488ad1fa96e54fdec790448899b86034a9aa6289d9919752dd2d02b43d8",
+      "store_key": "651f7488ad1fa96e54fdec790448899b86034a9aa6289d9919752dd2d02b43d8"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-4e392d1ca5313ecc03521dbf89ead1d2e7550f992465d19563b09ff92490e399",
+      "kind": "task",
+      "sha256": "4e392d1ca5313ecc03521dbf89ead1d2e7550f992465d19563b09ff92490e399",
+      "store_key": "4e392d1ca5313ecc03521dbf89ead1d2e7550f992465d19563b09ff92490e399"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 160455,
+      "hash_algorithm": "sha256",
+      "id": "qualification-614a7c37fc46224466db59718592e724233fed7b41e8b0215634cf11cf7a1a79",
+      "kind": "qualification",
+      "sha256": "614a7c37fc46224466db59718592e724233fed7b41e8b0215634cf11cf7a1a79",
+      "store_key": "614a7c37fc46224466db59718592e724233fed7b41e8b0215634cf11cf7a1a79"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-bd41c9f3daee82cb935e89d2935e05d749a52608a4f181e15373356e4f6f968d",
+      "kind": "task",
+      "sha256": "bd41c9f3daee82cb935e89d2935e05d749a52608a4f181e15373356e4f6f968d",
+      "store_key": "bd41c9f3daee82cb935e89d2935e05d749a52608a4f181e15373356e4f6f968d"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 115537,
+      "hash_algorithm": "sha256",
+      "id": "qualification-b9cb987e6a524a7ed49f88d41a76db382ef80a331f5039aa16adf6d7b227be7e",
+      "kind": "qualification",
+      "sha256": "b9cb987e6a524a7ed49f88d41a76db382ef80a331f5039aa16adf6d7b227be7e",
+      "store_key": "b9cb987e6a524a7ed49f88d41a76db382ef80a331f5039aa16adf6d7b227be7e"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-b9f878470d06b2a6f1342d0e9bc80ae207d800e5d687fb1cbd20b8efab69be31",
+      "kind": "task",
+      "sha256": "b9f878470d06b2a6f1342d0e9bc80ae207d800e5d687fb1cbd20b8efab69be31",
+      "store_key": "b9f878470d06b2a6f1342d0e9bc80ae207d800e5d687fb1cbd20b8efab69be31"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 160882,
+      "hash_algorithm": "sha256",
+      "id": "qualification-8543afd1160300624392a61daa8635dfbde6a36c4d1307aab2a956bb2fe087ce",
+      "kind": "qualification",
+      "sha256": "8543afd1160300624392a61daa8635dfbde6a36c4d1307aab2a956bb2fe087ce",
+      "store_key": "8543afd1160300624392a61daa8635dfbde6a36c4d1307aab2a956bb2fe087ce"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-85453dc18e75a4755be32837d451ecbf20b8ef065c03057210ef308c516b50f2",
+      "kind": "task",
+      "sha256": "85453dc18e75a4755be32837d451ecbf20b8ef065c03057210ef308c516b50f2",
+      "store_key": "85453dc18e75a4755be32837d451ecbf20b8ef065c03057210ef308c516b50f2"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 183147,
+      "hash_algorithm": "sha256",
+      "id": "qualification-680964c0f0ac5e3035fbcd6087b5f9e86b329759d7adad8b1a24f274fb939826",
+      "kind": "qualification",
+      "sha256": "680964c0f0ac5e3035fbcd6087b5f9e86b329759d7adad8b1a24f274fb939826",
+      "store_key": "680964c0f0ac5e3035fbcd6087b5f9e86b329759d7adad8b1a24f274fb939826"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-cf30b1bcc2bf01d78043e97cbc715ed5bcafb5d8ee845d05def876599c8d1bdd",
+      "kind": "task",
+      "sha256": "cf30b1bcc2bf01d78043e97cbc715ed5bcafb5d8ee845d05def876599c8d1bdd",
+      "store_key": "cf30b1bcc2bf01d78043e97cbc715ed5bcafb5d8ee845d05def876599c8d1bdd"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 170606,
+      "hash_algorithm": "sha256",
+      "id": "qualification-885b94fac91bbcd0d8a20c0190c36c1cfe7ec7c3adbd9a18919c624fceb74060",
+      "kind": "qualification",
+      "sha256": "885b94fac91bbcd0d8a20c0190c36c1cfe7ec7c3adbd9a18919c624fceb74060",
+      "store_key": "885b94fac91bbcd0d8a20c0190c36c1cfe7ec7c3adbd9a18919c624fceb74060"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-f793de90f0e2401768682ef40d73ff50e3b46ce7ab5db158edd7833092647587",
+      "kind": "task",
+      "sha256": "f793de90f0e2401768682ef40d73ff50e3b46ce7ab5db158edd7833092647587",
+      "store_key": "f793de90f0e2401768682ef40d73ff50e3b46ce7ab5db158edd7833092647587"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 133151,
+      "hash_algorithm": "sha256",
+      "id": "qualification-33bdb9ee80ff81bb6d69fd1d0979caa7402281c3711249169a34eac2ccb982f7",
+      "kind": "qualification",
+      "sha256": "33bdb9ee80ff81bb6d69fd1d0979caa7402281c3711249169a34eac2ccb982f7",
+      "store_key": "33bdb9ee80ff81bb6d69fd1d0979caa7402281c3711249169a34eac2ccb982f7"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-3b3d80098d5c6d9e08b2f6b109c4dad91a596f984e10e674c854ef5e717a0c81",
+      "kind": "task",
+      "sha256": "3b3d80098d5c6d9e08b2f6b109c4dad91a596f984e10e674c854ef5e717a0c81",
+      "store_key": "3b3d80098d5c6d9e08b2f6b109c4dad91a596f984e10e674c854ef5e717a0c81"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 170412,
+      "hash_algorithm": "sha256",
+      "id": "qualification-9791f09c831da24069b4518578901966450c8d431a2c52abfb8676027b067ae5",
+      "kind": "qualification",
+      "sha256": "9791f09c831da24069b4518578901966450c8d431a2c52abfb8676027b067ae5",
+      "store_key": "9791f09c831da24069b4518578901966450c8d431a2c52abfb8676027b067ae5"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-ef234ff0686d1436f779c99a0bbec7181a2b468e954cd4e67d60710134e238d0",
+      "kind": "task",
+      "sha256": "ef234ff0686d1436f779c99a0bbec7181a2b468e954cd4e67d60710134e238d0",
+      "store_key": "ef234ff0686d1436f779c99a0bbec7181a2b468e954cd4e67d60710134e238d0"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 355540992,
+      "hash_algorithm": "sha256",
+      "id": "image-294bc8f0712f4c715c464f7842852ffadf1662ccb0e12f1b4c4d643f32ec9f48",
+      "kind": "image",
+      "sha256": "294bc8f0712f4c715c464f7842852ffadf1662ccb0e12f1b4c4d643f32ec9f48",
+      "store_key": "294bc8f0712f4c715c464f7842852ffadf1662ccb0e12f1b4c4d643f32ec9f48"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 192957,
+      "hash_algorithm": "sha256",
+      "id": "qualification-78a6295640d31689f03b9ff36cb26dff02ca490d4d1fabebf8af40f757e19d1f",
+      "kind": "qualification",
+      "sha256": "78a6295640d31689f03b9ff36cb26dff02ca490d4d1fabebf8af40f757e19d1f",
+      "store_key": "78a6295640d31689f03b9ff36cb26dff02ca490d4d1fabebf8af40f757e19d1f"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-3b0202b434a80c9333798d7c92454896cacb2d6d446ca271db56e7996d2098e6",
+      "kind": "task",
+      "sha256": "3b0202b434a80c9333798d7c92454896cacb2d6d446ca271db56e7996d2098e6",
+      "store_key": "3b0202b434a80c9333798d7c92454896cacb2d6d446ca271db56e7996d2098e6"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 187839,
+      "hash_algorithm": "sha256",
+      "id": "qualification-b4281bee980f29ecfcb3cfa9b46e6bcc10b6f25d2be7d481c61bb076356204bc",
+      "kind": "qualification",
+      "sha256": "b4281bee980f29ecfcb3cfa9b46e6bcc10b6f25d2be7d481c61bb076356204bc",
+      "store_key": "b4281bee980f29ecfcb3cfa9b46e6bcc10b6f25d2be7d481c61bb076356204bc"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-5556cf04d73695d0939b54658ada1e0753686883615bdba94254d2146f60e4d6",
+      "kind": "task",
+      "sha256": "5556cf04d73695d0939b54658ada1e0753686883615bdba94254d2146f60e4d6",
+      "store_key": "5556cf04d73695d0939b54658ada1e0753686883615bdba94254d2146f60e4d6"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 181716,
+      "hash_algorithm": "sha256",
+      "id": "qualification-6e89c68542418e8ea92d3adb665601a828a20e8bf928472338972e3c64ffa8cc",
+      "kind": "qualification",
+      "sha256": "6e89c68542418e8ea92d3adb665601a828a20e8bf928472338972e3c64ffa8cc",
+      "store_key": "6e89c68542418e8ea92d3adb665601a828a20e8bf928472338972e3c64ffa8cc"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-7801b62c72bf4311c05f86f515ab1a6f7c1857e3b7a80f6aaca9603fdcac6676",
+      "kind": "task",
+      "sha256": "7801b62c72bf4311c05f86f515ab1a6f7c1857e3b7a80f6aaca9603fdcac6676",
+      "store_key": "7801b62c72bf4311c05f86f515ab1a6f7c1857e3b7a80f6aaca9603fdcac6676"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 169367,
+      "hash_algorithm": "sha256",
+      "id": "qualification-aa8dfe5f9caba0d2aeadecfcd5187420fab7a04142f381e69bf0e2b021c90c0c",
+      "kind": "qualification",
+      "sha256": "aa8dfe5f9caba0d2aeadecfcd5187420fab7a04142f381e69bf0e2b021c90c0c",
+      "store_key": "aa8dfe5f9caba0d2aeadecfcd5187420fab7a04142f381e69bf0e2b021c90c0c"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-91e98b10e9ac93b4609e5cc3a685962b6b30fe4f0c0eed550449825ecb0b554b",
+      "kind": "task",
+      "sha256": "91e98b10e9ac93b4609e5cc3a685962b6b30fe4f0c0eed550449825ecb0b554b",
+      "store_key": "91e98b10e9ac93b4609e5cc3a685962b6b30fe4f0c0eed550449825ecb0b554b"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 363686,
+      "hash_algorithm": "sha256",
+      "id": "qualification-5877d77bf08ded501667c9ee491dcf45d18285b6a893d906390394f55b6b927d",
+      "kind": "qualification",
+      "sha256": "5877d77bf08ded501667c9ee491dcf45d18285b6a893d906390394f55b6b927d",
+      "store_key": "5877d77bf08ded501667c9ee491dcf45d18285b6a893d906390394f55b6b927d"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-42c240d4331d2b590fd44c8ac714afa18b0659aa55b2dc70f0a4e4bf140d2e31",
+      "kind": "task",
+      "sha256": "42c240d4331d2b590fd44c8ac714afa18b0659aa55b2dc70f0a4e4bf140d2e31",
+      "store_key": "42c240d4331d2b590fd44c8ac714afa18b0659aa55b2dc70f0a4e4bf140d2e31"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 179888,
+      "hash_algorithm": "sha256",
+      "id": "qualification-7f6f9202ddfecf8f6b693c70d1523c4b24f69364fba0d36a73fcd4194297932b",
+      "kind": "qualification",
+      "sha256": "7f6f9202ddfecf8f6b693c70d1523c4b24f69364fba0d36a73fcd4194297932b",
+      "store_key": "7f6f9202ddfecf8f6b693c70d1523c4b24f69364fba0d36a73fcd4194297932b"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-843b8d826c8eb5c5e179a7a7f1cdc0ab41c6c8408f4415b569ec2b319a68f9af",
+      "kind": "task",
+      "sha256": "843b8d826c8eb5c5e179a7a7f1cdc0ab41c6c8408f4415b569ec2b319a68f9af",
+      "store_key": "843b8d826c8eb5c5e179a7a7f1cdc0ab41c6c8408f4415b569ec2b319a68f9af"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 205193216,
+      "hash_algorithm": "sha256",
+      "id": "image-39f48a4c5f4cd8f8e7235d415e9459a49ca201e91b33e3b1a0a3eaee1485e15b",
+      "kind": "image",
+      "sha256": "39f48a4c5f4cd8f8e7235d415e9459a49ca201e91b33e3b1a0a3eaee1485e15b",
+      "store_key": "39f48a4c5f4cd8f8e7235d415e9459a49ca201e91b33e3b1a0a3eaee1485e15b"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 238005,
+      "hash_algorithm": "sha256",
+      "id": "qualification-5a567ed30158c6b981079aa0b956e16307f53faf6b8d243e0c670fd790f18f92",
+      "kind": "qualification",
+      "sha256": "5a567ed30158c6b981079aa0b956e16307f53faf6b8d243e0c670fd790f18f92",
+      "store_key": "5a567ed30158c6b981079aa0b956e16307f53faf6b8d243e0c670fd790f18f92"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-37fbb28c2fa81580ba4094244e033951ec998f149bc57a96ad8d6fbe12013744",
+      "kind": "task",
+      "sha256": "37fbb28c2fa81580ba4094244e033951ec998f149bc57a96ad8d6fbe12013744",
+      "store_key": "37fbb28c2fa81580ba4094244e033951ec998f149bc57a96ad8d6fbe12013744"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 205193216,
+      "hash_algorithm": "sha256",
+      "id": "image-8323ed9479cf457c33415f8289c30cb868eda60d8264fb4356df2c3b00ee85a9",
+      "kind": "image",
+      "sha256": "8323ed9479cf457c33415f8289c30cb868eda60d8264fb4356df2c3b00ee85a9",
+      "store_key": "8323ed9479cf457c33415f8289c30cb868eda60d8264fb4356df2c3b00ee85a9"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 232678,
+      "hash_algorithm": "sha256",
+      "id": "qualification-404837d622fa7b0f78ce0be4fe7235eeafdfd312c29c756c64b11d4a26b88f05",
+      "kind": "qualification",
+      "sha256": "404837d622fa7b0f78ce0be4fe7235eeafdfd312c29c756c64b11d4a26b88f05",
+      "store_key": "404837d622fa7b0f78ce0be4fe7235eeafdfd312c29c756c64b11d4a26b88f05"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-90dc426fe4693eb252e4678846d53a3007adf573f577dd60901793ae6ec1637e",
+      "kind": "task",
+      "sha256": "90dc426fe4693eb252e4678846d53a3007adf573f577dd60901793ae6ec1637e",
+      "store_key": "90dc426fe4693eb252e4678846d53a3007adf573f577dd60901793ae6ec1637e"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 204726272,
+      "hash_algorithm": "sha256",
+      "id": "image-4c0789ae41ddd1b8b87bbea9e555fd5fec8df8d7bf4adf9f83733b80bf38945d",
+      "kind": "image",
+      "sha256": "4c0789ae41ddd1b8b87bbea9e555fd5fec8df8d7bf4adf9f83733b80bf38945d",
+      "store_key": "4c0789ae41ddd1b8b87bbea9e555fd5fec8df8d7bf4adf9f83733b80bf38945d"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 232090,
+      "hash_algorithm": "sha256",
+      "id": "qualification-b9d58cbadfbba294a92e23ddb124359038b5b4575d6a418a8febda90bc910caa",
+      "kind": "qualification",
+      "sha256": "b9d58cbadfbba294a92e23ddb124359038b5b4575d6a418a8febda90bc910caa",
+      "store_key": "b9d58cbadfbba294a92e23ddb124359038b5b4575d6a418a8febda90bc910caa"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-2520d2ea94db0c3db6344f9c315bcaf40666a047bade0f4dc6e75ddcfea65b12",
+      "kind": "task",
+      "sha256": "2520d2ea94db0c3db6344f9c315bcaf40666a047bade0f4dc6e75ddcfea65b12",
+      "store_key": "2520d2ea94db0c3db6344f9c315bcaf40666a047bade0f4dc6e75ddcfea65b12"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 219480064,
+      "hash_algorithm": "sha256",
+      "id": "image-e24702c7d0299838af168cc3c1e312b88703e2259d0c6b5da318b6c786a9029c",
+      "kind": "image",
+      "sha256": "e24702c7d0299838af168cc3c1e312b88703e2259d0c6b5da318b6c786a9029c",
+      "store_key": "e24702c7d0299838af168cc3c1e312b88703e2259d0c6b5da318b6c786a9029c"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 94605,
+      "hash_algorithm": "sha256",
+      "id": "qualification-f536af49bb9b2a1aa328e5ddcadffc90f107fbd1d430b8ce47616215d0bc2bd0",
+      "kind": "qualification",
+      "sha256": "f536af49bb9b2a1aa328e5ddcadffc90f107fbd1d430b8ce47616215d0bc2bd0",
+      "store_key": "f536af49bb9b2a1aa328e5ddcadffc90f107fbd1d430b8ce47616215d0bc2bd0"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-d67331b2d831e0d424a74e3a6e6c8f0b45c13713ca7c07311ed1559d6c00954b",
+      "kind": "task",
+      "sha256": "d67331b2d831e0d424a74e3a6e6c8f0b45c13713ca7c07311ed1559d6c00954b",
+      "store_key": "d67331b2d831e0d424a74e3a6e6c8f0b45c13713ca7c07311ed1559d6c00954b"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 204738560,
+      "hash_algorithm": "sha256",
+      "id": "image-75cdde48037e9c93512b08c9974c1aad6d5ea6a620d81a428dc8cb5abe69af69",
+      "kind": "image",
+      "sha256": "75cdde48037e9c93512b08c9974c1aad6d5ea6a620d81a428dc8cb5abe69af69",
+      "store_key": "75cdde48037e9c93512b08c9974c1aad6d5ea6a620d81a428dc8cb5abe69af69"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 172790,
+      "hash_algorithm": "sha256",
+      "id": "qualification-68ee1b54be3f98b351af4be74bcaf31765d5c331ad9b0a24ae06699ab5f65c16",
+      "kind": "qualification",
+      "sha256": "68ee1b54be3f98b351af4be74bcaf31765d5c331ad9b0a24ae06699ab5f65c16",
+      "store_key": "68ee1b54be3f98b351af4be74bcaf31765d5c331ad9b0a24ae06699ab5f65c16"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-8459249b33387ed495dd075829cdb6d01584bc6520661f74e1aedca973dd6b5a",
+      "kind": "task",
+      "sha256": "8459249b33387ed495dd075829cdb6d01584bc6520661f74e1aedca973dd6b5a",
+      "store_key": "8459249b33387ed495dd075829cdb6d01584bc6520661f74e1aedca973dd6b5a"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 203968512,
+      "hash_algorithm": "sha256",
+      "id": "image-0aa0b9e80c8f90832ec0924f7f0bd26b7759434181ac00712f8d5a3a13ec5246",
+      "kind": "image",
+      "sha256": "0aa0b9e80c8f90832ec0924f7f0bd26b7759434181ac00712f8d5a3a13ec5246",
+      "store_key": "0aa0b9e80c8f90832ec0924f7f0bd26b7759434181ac00712f8d5a3a13ec5246"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 82356,
+      "hash_algorithm": "sha256",
+      "id": "qualification-6ac8ef88cdf565201eb87982c8f0314d3c6ec79aac135c234ddde0ea56131fb0",
+      "kind": "qualification",
+      "sha256": "6ac8ef88cdf565201eb87982c8f0314d3c6ec79aac135c234ddde0ea56131fb0",
+      "store_key": "6ac8ef88cdf565201eb87982c8f0314d3c6ec79aac135c234ddde0ea56131fb0"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-6582cd205bd3559ab2755c425e772c471d20f8f4c4665da2edfc3887709be03d",
+      "kind": "task",
+      "sha256": "6582cd205bd3559ab2755c425e772c471d20f8f4c4665da2edfc3887709be03d",
+      "store_key": "6582cd205bd3559ab2755c425e772c471d20f8f4c4665da2edfc3887709be03d"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 204623872,
+      "hash_algorithm": "sha256",
+      "id": "image-993a5ee369464ac3bee72f1b718a4f3c89c1604eee0ec49d33c6613662e78103",
+      "kind": "image",
+      "sha256": "993a5ee369464ac3bee72f1b718a4f3c89c1604eee0ec49d33c6613662e78103",
+      "store_key": "993a5ee369464ac3bee72f1b718a4f3c89c1604eee0ec49d33c6613662e78103"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 219363,
+      "hash_algorithm": "sha256",
+      "id": "qualification-c9db7023b2886c1ce46433adfdbcbdd94b9a4ebf847ab2dfc41a63ca75676812",
+      "kind": "qualification",
+      "sha256": "c9db7023b2886c1ce46433adfdbcbdd94b9a4ebf847ab2dfc41a63ca75676812",
+      "store_key": "c9db7023b2886c1ce46433adfdbcbdd94b9a4ebf847ab2dfc41a63ca75676812"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-85051214d9830d85b1bce53efed8124b7799b4663d7343771741190cadc8723f",
+      "kind": "task",
+      "sha256": "85051214d9830d85b1bce53efed8124b7799b4663d7343771741190cadc8723f",
+      "store_key": "85051214d9830d85b1bce53efed8124b7799b4663d7343771741190cadc8723f"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 204652544,
+      "hash_algorithm": "sha256",
+      "id": "image-f3d992b881041b0f30d03b9061c237ebcaa57f592df8a9d9c53522dbd33e4473",
+      "kind": "image",
+      "sha256": "f3d992b881041b0f30d03b9061c237ebcaa57f592df8a9d9c53522dbd33e4473",
+      "store_key": "f3d992b881041b0f30d03b9061c237ebcaa57f592df8a9d9c53522dbd33e4473"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 221387,
+      "hash_algorithm": "sha256",
+      "id": "qualification-ba81647c6ddedc783765456c3ab4d74e022220d2294442fca3e609dc9bf7016e",
+      "kind": "qualification",
+      "sha256": "ba81647c6ddedc783765456c3ab4d74e022220d2294442fca3e609dc9bf7016e",
+      "store_key": "ba81647c6ddedc783765456c3ab4d74e022220d2294442fca3e609dc9bf7016e"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-f7d83f568ba2111ac9d3fd28375ccbdeaf7f95a8ea455e67376bb1ed218c369c",
+      "kind": "task",
+      "sha256": "f7d83f568ba2111ac9d3fd28375ccbdeaf7f95a8ea455e67376bb1ed218c369c",
+      "store_key": "f7d83f568ba2111ac9d3fd28375ccbdeaf7f95a8ea455e67376bb1ed218c369c"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 204718080,
+      "hash_algorithm": "sha256",
+      "id": "image-b76376cf74a0d69ad73dbb9977d1077d30e469fb466088a06a7dab94d7c03053",
+      "kind": "image",
+      "sha256": "b76376cf74a0d69ad73dbb9977d1077d30e469fb466088a06a7dab94d7c03053",
+      "store_key": "b76376cf74a0d69ad73dbb9977d1077d30e469fb466088a06a7dab94d7c03053"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 212350,
+      "hash_algorithm": "sha256",
+      "id": "qualification-21dda430daf6afbc464ac36b6a8dda92a5c7e116a5c03b2e3426dcf8abdd4c51",
+      "kind": "qualification",
+      "sha256": "21dda430daf6afbc464ac36b6a8dda92a5c7e116a5c03b2e3426dcf8abdd4c51",
+      "store_key": "21dda430daf6afbc464ac36b6a8dda92a5c7e116a5c03b2e3426dcf8abdd4c51"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-38a1e63d64305c6784485a1ae03347b2abce0e9c38dea3d3dea46ba89292c1cc",
+      "kind": "task",
+      "sha256": "38a1e63d64305c6784485a1ae03347b2abce0e9c38dea3d3dea46ba89292c1cc",
+      "store_key": "38a1e63d64305c6784485a1ae03347b2abce0e9c38dea3d3dea46ba89292c1cc"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 210817024,
+      "hash_algorithm": "sha256",
+      "id": "image-1329f8fe64254776ab90625302c9fb1f81eb1b4b38b803e064ffdda901cba0a4",
+      "kind": "image",
+      "sha256": "1329f8fe64254776ab90625302c9fb1f81eb1b4b38b803e064ffdda901cba0a4",
+      "store_key": "1329f8fe64254776ab90625302c9fb1f81eb1b4b38b803e064ffdda901cba0a4"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 255625,
+      "hash_algorithm": "sha256",
+      "id": "qualification-4cd73c30603716f19064680002f712b297f81046f4cad16ef48b665e44d0d04f",
+      "kind": "qualification",
+      "sha256": "4cd73c30603716f19064680002f712b297f81046f4cad16ef48b665e44d0d04f",
+      "store_key": "4cd73c30603716f19064680002f712b297f81046f4cad16ef48b665e44d0d04f"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-452b5cfb39eaa12ff021e85dbf49039c295c2255126b77b78ebfe83f81a00518",
+      "kind": "task",
+      "sha256": "452b5cfb39eaa12ff021e85dbf49039c295c2255126b77b78ebfe83f81a00518",
+      "store_key": "452b5cfb39eaa12ff021e85dbf49039c295c2255126b77b78ebfe83f81a00518"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 204005376,
+      "hash_algorithm": "sha256",
+      "id": "image-c6379b521ffc262e4598b154887ed5d3565dd4251efff7a55ac169eff482c427",
+      "kind": "image",
+      "sha256": "c6379b521ffc262e4598b154887ed5d3565dd4251efff7a55ac169eff482c427",
+      "store_key": "c6379b521ffc262e4598b154887ed5d3565dd4251efff7a55ac169eff482c427"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 208703,
+      "hash_algorithm": "sha256",
+      "id": "qualification-3c0499dfc115c11772da2c1cfac76095d1ff74eb5cabcabe5f5b418fbe3a9598",
+      "kind": "qualification",
+      "sha256": "3c0499dfc115c11772da2c1cfac76095d1ff74eb5cabcabe5f5b418fbe3a9598",
+      "store_key": "3c0499dfc115c11772da2c1cfac76095d1ff74eb5cabcabe5f5b418fbe3a9598"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-194c7f4e21529ba5e87f5de82844b43f94454b5432e82d4b243fe743812c4d91",
+      "kind": "task",
+      "sha256": "194c7f4e21529ba5e87f5de82844b43f94454b5432e82d4b243fe743812c4d91",
+      "store_key": "194c7f4e21529ba5e87f5de82844b43f94454b5432e82d4b243fe743812c4d91"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 204750848,
+      "hash_algorithm": "sha256",
+      "id": "image-a6cfdac52d5144073556202979189f5ba4e3f27e9cf411b5da1c6170272ac514",
+      "kind": "image",
+      "sha256": "a6cfdac52d5144073556202979189f5ba4e3f27e9cf411b5da1c6170272ac514",
+      "store_key": "a6cfdac52d5144073556202979189f5ba4e3f27e9cf411b5da1c6170272ac514"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 176409,
+      "hash_algorithm": "sha256",
+      "id": "qualification-16abb4da718b36a9db056d98e2caf85cadd53040ad6b06a6f34d9afa4c4d0755",
+      "kind": "qualification",
+      "sha256": "16abb4da718b36a9db056d98e2caf85cadd53040ad6b06a6f34d9afa4c4d0755",
+      "store_key": "16abb4da718b36a9db056d98e2caf85cadd53040ad6b06a6f34d9afa4c4d0755"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-79280e53370dc6855c59bf137583c18ea1336872f9d4879c841b07fb6cd4b914",
+      "kind": "task",
+      "sha256": "79280e53370dc6855c59bf137583c18ea1336872f9d4879c841b07fb6cd4b914",
+      "store_key": "79280e53370dc6855c59bf137583c18ea1336872f9d4879c841b07fb6cd4b914"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 205041664,
+      "hash_algorithm": "sha256",
+      "id": "image-53d5916ff99de9474ff14c8a62a22ce6e03b620e5961cc84b6ac30779c1401eb",
+      "kind": "image",
+      "sha256": "53d5916ff99de9474ff14c8a62a22ce6e03b620e5961cc84b6ac30779c1401eb",
+      "store_key": "53d5916ff99de9474ff14c8a62a22ce6e03b620e5961cc84b6ac30779c1401eb"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 363810,
+      "hash_algorithm": "sha256",
+      "id": "qualification-b3777435dddeb1715c1b1403959aeba6e343e711d39060f8432d8c82cc0f77c5",
+      "kind": "qualification",
+      "sha256": "b3777435dddeb1715c1b1403959aeba6e343e711d39060f8432d8c82cc0f77c5",
+      "store_key": "b3777435dddeb1715c1b1403959aeba6e343e711d39060f8432d8c82cc0f77c5"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-51120249fcb29f99fd2477f55bfc6e490b13d37ef555404348a6f7a73635662d",
+      "kind": "task",
+      "sha256": "51120249fcb29f99fd2477f55bfc6e490b13d37ef555404348a6f7a73635662d",
+      "store_key": "51120249fcb29f99fd2477f55bfc6e490b13d37ef555404348a6f7a73635662d"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 211369984,
+      "hash_algorithm": "sha256",
+      "id": "image-bef6d0589e209aeff83a80bbe920bd12814629d61273bcdc81aa30d3366950f9",
+      "kind": "image",
+      "sha256": "bef6d0589e209aeff83a80bbe920bd12814629d61273bcdc81aa30d3366950f9",
+      "store_key": "bef6d0589e209aeff83a80bbe920bd12814629d61273bcdc81aa30d3366950f9"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 189727,
+      "hash_algorithm": "sha256",
+      "id": "qualification-45e5bb9bd6f5f32ff4746c9879f7178da5291537d2a220eab7f362225c940f25",
+      "kind": "qualification",
+      "sha256": "45e5bb9bd6f5f32ff4746c9879f7178da5291537d2a220eab7f362225c940f25",
+      "store_key": "45e5bb9bd6f5f32ff4746c9879f7178da5291537d2a220eab7f362225c940f25"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-89dc25ba7b225ff5bd8fe29a5da654056e69805fd643808cf75c5fce2ad19082",
+      "kind": "task",
+      "sha256": "89dc25ba7b225ff5bd8fe29a5da654056e69805fd643808cf75c5fce2ad19082",
+      "store_key": "89dc25ba7b225ff5bd8fe29a5da654056e69805fd643808cf75c5fce2ad19082"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 204275712,
+      "hash_algorithm": "sha256",
+      "id": "image-aa086772f50603e4477133db99c612851a64ec014867213833288317cbe55655",
+      "kind": "image",
+      "sha256": "aa086772f50603e4477133db99c612851a64ec014867213833288317cbe55655",
+      "store_key": "aa086772f50603e4477133db99c612851a64ec014867213833288317cbe55655"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 502159,
+      "hash_algorithm": "sha256",
+      "id": "qualification-484abe9ada0f89be5ab28ae5d8fe824fd68791f4e979c5e131fa80c110f79fa7",
+      "kind": "qualification",
+      "sha256": "484abe9ada0f89be5ab28ae5d8fe824fd68791f4e979c5e131fa80c110f79fa7",
+      "store_key": "484abe9ada0f89be5ab28ae5d8fe824fd68791f4e979c5e131fa80c110f79fa7"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": null,
+      "hash_algorithm": "dbt_bench.io.tree_hash",
+      "id": "task-ff8d9d44cd9cb31f985ad0ae0de4d5c2bdb1e1d5d80e74e261d62c1e2a737635",
+      "kind": "task",
+      "sha256": "ff8d9d44cd9cb31f985ad0ae0de4d5c2bdb1e1d5d80e74e261d62c1e2a737635",
+      "store_key": "ff8d9d44cd9cb31f985ad0ae0de4d5c2bdb1e1d5d80e74e261d62c1e2a737635"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 204271616,
+      "hash_algorithm": "sha256",
+      "id": "image-be26d87ad5011d60573552ae62df7d72a7821b081212e60d732155b10be45549",
+      "kind": "image",
+      "sha256": "be26d87ad5011d60573552ae62df7d72a7821b081212e60d732155b10be45549",
+      "store_key": "be26d87ad5011d60573552ae62df7d72a7821b081212e60d732155b10be45549"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 487107,
+      "hash_algorithm": "sha256",
+      "id": "qualification-8404c7448dc3f7d599cc216e27733cd625a0d1827390670bab2cc7d47c0d154b",
+      "kind": "qualification",
+      "sha256": "8404c7448dc3f7d599cc216e27733cd625a0d1827390670bab2cc7d47c0d154b",
+      "store_key": "8404c7448dc3f7d599cc216e27733cd625a0d1827390670bab2cc7d47c0d154b"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 1953,
+      "hash_algorithm": "sha256",
+      "id": "qwen-manifest-459ee1185ff8a73b6637dd5c1486d35a8f2deb13eb5d31eaa1123ab637253552",
+      "kind": "qwen-manifest",
+      "sha256": "459ee1185ff8a73b6637dd5c1486d35a8f2deb13eb5d31eaa1123ab637253552",
+      "store_key": "459ee1185ff8a73b6637dd5c1486d35a8f2deb13eb5d31eaa1123ab637253552"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 166399562,
+      "hash_algorithm": "sha256",
+      "id": "qwen-archive-9eecdb60bdf465e83a588542136231c2f30f68e84ea222176f8ca71d3053a120",
+      "kind": "qwen-archive",
+      "sha256": "9eecdb60bdf465e83a588542136231c2f30f68e84ea222176f8ca71d3053a120",
+      "store_key": "9eecdb60bdf465e83a588542136231c2f30f68e84ea222176f8ca71d3053a120"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 5506,
+      "hash_algorithm": "sha256",
+      "id": "qwen-installer-0e9ba995bcc1fa5cf3835854d650efd3843c15e4e1107f680600130634ac2a26",
+      "kind": "qwen-installer",
+      "sha256": "0e9ba995bcc1fa5cf3835854d650efd3843c15e4e1107f680600130634ac2a26",
+      "store_key": "0e9ba995bcc1fa5cf3835854d650efd3843c15e4e1107f680600130634ac2a26"
+    },
+    {
+      "availability": "controlled artifact store; obtain immutable object from project owner",
+      "bytes": 1773831,
+      "hash_algorithm": "sha256",
+      "id": "qwen-inventory-caa7fc4a32ed39fb1281bb4840dfbec8b54479a68c786b2ab8946d66fb292321",
+      "kind": "qwen-inventory",
+      "sha256": "caa7fc4a32ed39fb1281bb4840dfbec8b54479a68c786b2ab8946d66fb292321",
+      "store_key": "caa7fc4a32ed39fb1281bb4840dfbec8b54479a68c786b2ab8946d66fb292321"
+    }
+  ],
+  "note": "No public SIF/evidence hosting is configured. Use an owner-approved shared store and verify checksums. Public upstream downloads alone do not reconstruct frozen SIF bytes.",
+  "public_model": {
+    "inventory": "release/model-files.json",
+    "model": "Qwen/Qwen3.6-35B-A3B",
+    "revision": "995ad96eacd98c81ed38be0c5b274b04031597b0"
+  },
+  "qwen_bundle": {
+    "archive": "qwen-archive-9eecdb60bdf465e83a588542136231c2f30f68e84ea222176f8ca71d3053a120",
+    "installer": "qwen-installer-0e9ba995bcc1fa5cf3835854d650efd3843c15e4e1107f680600130634ac2a26",
+    "inventory": "qwen-inventory-caa7fc4a32ed39fb1281bb4840dfbec8b54479a68c786b2ab8946d66fb292321",
+    "manifest": "qwen-manifest-459ee1185ff8a73b6637dd5c1486d35a8f2deb13eb5d31eaa1123ab637253552"
+  },
+  "schema_version": 1
+}

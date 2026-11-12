@@ -1,0 +1,8 @@
+{
+  "archive_sha256": "fb8dd2b327beedbe639966fca24d27b1b2860b148b78628812178262af871d1a",
+  "integrity": "sha512-iqcBqLQDmKvOtRcVvF78l7bf0NpdymGFBo0qNY0ausPezht+PLXkh15vnIILaBKtM4BabtHSv60xWftMomJ7hw==",
+  "name": "@qwen-code/qwen-code",
+  "tarball": "https://registry.npmjs.org/@qwen-code/qwen-code/-/qwen-code-0.26.5.tgz",
+  "verification": "Registry integrity matched downloaded tarball; actual per-trial installation recorded separately",
+  "version": "0.26.5"
+}

@@ -1,0 +1,8 @@
+--- original/instruction.md
++++ variant/instruction.md
+@@ -137,3 +137,5 @@
+ - For Snowflake, run dbt with `--select` specifying model names explicitly
+ 
+ Install additional libraries as needed.
++
++A supplier with no POs that qualify for cost metrics gets a cost variance of 0%. The composite score always combines all three component scores with the 40/35/25 weights.

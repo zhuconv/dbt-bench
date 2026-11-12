@@ -1,0 +1,31 @@
+{
+  "default_entry": {
+    "path": "scripts/report.py",
+    "sha256": "d5d56d7d99bd0b799c02e5077dc4a026ffa9a864eca73263eb6dcfab45ad5f00"
+  },
+  "diff": {
+    "path": "patches/training-purpose-exclusion-v6/policy.diff",
+    "sha256": "25d49955c615d7d3879ee0d9f99cd5556c6448cd1e587cf914aa4e5ab926d4c4"
+  },
+  "historical_reports_modified": false,
+  "implementation": {
+    "path": "src/dbt_bench/report_v6.py",
+    "sha256": "20cd8f08f6fdfedfda98ae21200858c4928b636b33cd4ea5159a284bfe3392aa"
+  },
+  "model_requests": 0,
+  "native_rewards_modified": false,
+  "old_policy_source_preserved": true,
+  "prior_implementation": {
+    "path": "src/dbt_bench/report.py",
+    "sha256": "269451cdc59b3a9186275bd44d3920e1c9fa3444440dee6f3b0affb02c963c65"
+  },
+  "reason": "User prohibits every difficulty-measurement rollout from training, including successful traces on historical train tasks.",
+  "regressions": {
+    "path": "tests/test_training_purpose_exclusion.py",
+    "sha256": "d8dddbed67657009e49bfff33cf6c5da437f0d120008ac94673ed494fcae414b"
+  },
+  "schema_version": 1,
+  "task_versions_modified": false,
+  "type": "training_candidate_selection_policy",
+  "version": "training-candidates-v6-purpose-exclusions"
+}

@@ -1,0 +1,66 @@
+{
+  "files": [
+    {
+      "after_sha256": "96f51912f84d8197a90e06ebf41f43cd2da188ac412859b6e7679407aab5aa41",
+      "before_sha256": "9ed93d8221f63a1bc55196c4253855ffcf85c36641609ef500d243515d4faf79",
+      "path": "environments/singularity/singularity.py",
+      "replacements": [
+        {
+          "after_text": "import shutil\nimport signal\nimport socket",
+          "before_text": "import shutil\nimport socket"
+        },
+        {
+          "after_text": "    async def _terminate_server(self, grace_seconds: float = 5.0) -> None:\n        \"\"\"Reap the dedicated container session, including an orphaned runtime.\n\n        Apptainer's launcher may exit before its runtime parent and namespace\n        init. Signalling only the launcher, then looking up its children, loses\n        those reparented processes. Each launch below owns a new session.\n        \"\"\"\n        process = getattr(self, \"_server_process\", None)\n        if process is None:\n            return\n        try:\n            if os.getpgid(process.pid) != process.pid:\n                raise RuntimeError(\"Refusing to signal a container without its own process group\")\n        except ProcessLookupError:\n            pass  # The launcher exited; its dedicated process group can remain.\n        try:\n            os.killpg(process.pid, signal.SIGTERM)\n            self.logger.debug(f\"Sent SIGTERM to container process group {process.pid}\")\n        except ProcessLookupError:\n            pass\n        if grace_seconds > 0:\n            try:\n                await asyncio.wait_for(asyncio.shield(process.wait()), timeout=grace_seconds)\n            except asyncio.TimeoutError:\n                self.logger.debug(\"Container shutdown timed out; killing remaining group members\")\n        # Also handle descendants that ignored TERM after their launcher exited.\n        try:\n            os.killpg(process.pid, signal.SIGKILL)\n        except ProcessLookupError:\n            pass\n        await asyncio.wait_for(process.wait(), timeout=5.0)\n        self._server_process = None\n\n    async def _cleanup_server_resources(self) -> None:\n",
+          "before_text": "    async def _cleanup_server_resources(self) -> None:\n"
+        },
+        {
+          "after_text": "        await self._terminate_server(grace_seconds=0)\n",
+          "before_text": "        if (\n            hasattr(self, \"_server_process\")\n            and self._server_process\n            and self._server_process.returncode is None\n        ):\n            self._server_process.kill()\n            await self._server_process.wait()\n"
+        },
+        {
+          "after_text": "            self._server_process = await asyncio.create_subprocess_exec(\n                *cmd,\n                stdout=asyncio.subprocess.PIPE,\n                stderr=asyncio.subprocess.STDOUT,\n                start_new_session=True,\n            )",
+          "before_text": "            self._server_process = await asyncio.create_subprocess_exec(\n                *cmd,\n                stdout=asyncio.subprocess.PIPE,\n                stderr=asyncio.subprocess.STDOUT,\n            )"
+        },
+        {
+          "after_text": "            await self._terminate_server(grace_seconds=0)\n",
+          "before_text": "            if self._server_process and self._server_process.returncode is None:\n                self._server_process.kill()\n                await self._server_process.wait()\n"
+        },
+        {
+          "after_text": "                    await self._terminate_server(grace_seconds=0)\n                    return",
+          "before_text": "                    self._server_process.kill()\n                    return"
+        },
+        {
+          "after_text": "        await self._terminate_server()\n\n",
+          "before_text": "        if self._server_process and self._server_process.returncode is None:\n            pid = self._server_process.pid\n\n            self._server_process.terminate()\n            self.logger.debug(f\"Sent SIGTERM to Singularity process {pid}\")\n\n            try:\n                await asyncio.wait_for(self._server_process.wait(), timeout=5.0)\n            except asyncio.TimeoutError:\n                self.logger.debug(\"Graceful shutdown timed out, force killing\")\n                self._server_process.kill()\n                await self._server_process.wait()\n\n            try:\n                subprocess.run(\n                    [\"pkill\", \"-9\", \"-P\", str(pid)],\n                    capture_output=True,\n                    timeout=5,\n                )\n            except Exception:\n                pass\n\n"
+        }
+      ]
+    }
+  ],
+  "id": "harbor-025-apptainer-lifecycle-v1",
+  "limitations": [
+    "Process teardown is covered; this does not claim network isolation or complete model-context capture.",
+    "SIGKILL of the outer Harbor process cannot run its Python cleanup; Slurm allocation teardown remains the external lifetime boundary."
+  ],
+  "native_verifier_modified": false,
+  "new_runtime_version": "harbor-0.25.0+dbt-bench-apptainer-exec-v1+lifecycle-v1",
+  "package": "harbor",
+  "package_version": "0.25.0",
+  "reason": "Real Apptainer probes left 353 reachable orphan HTTP services after launcher exit and deleted staging. Use an owned process group and reap it on normal stop, replacement, startup failure and memory termination.",
+  "regression_evidence": [
+    {
+      "path": "artifacts/runtime/lifecycle-candidate-regression-v3/result.json",
+      "sha256": "ce7f9337ffe61b2e8ea948705bcee7bdd066e191b24e13ec2e8afd0fdc805243"
+    },
+    {
+      "path": "validation/evidence/lifecycle-patch-tests-v1.json",
+      "sha256": "5bd31571d16b7c9cd3cfbb41cdde324f1d38d31d12d386f8f47004babfe448ff"
+    },
+    {
+      "path": "validation/evidence/harbor-lifecycle-discovery-v1.json",
+      "sha256": "df12d594f4c3b2d500b3cfda2ad26edabf2458fd0d4ba48316ddbf4dc044b413"
+    }
+  ],
+  "schema_version": 1,
+  "task_budgets_modified": false,
+  "type": "environment"
+}

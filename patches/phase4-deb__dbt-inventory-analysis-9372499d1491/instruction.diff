@@ -1,0 +1,8 @@
+--- original/instruction.md
++++ variant/instruction.md
+@@ -83,3 +83,5 @@
+ ## Guidelines
+ 
+ - Do NOT set schema in dbt_project.yml
++
++Name each metric column with the snake_case form of its bold label unless the item gives a column name in backticks. Name the identification columns after their source columns.

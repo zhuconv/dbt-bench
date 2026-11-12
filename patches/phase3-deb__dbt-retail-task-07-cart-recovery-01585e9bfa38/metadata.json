@@ -1,0 +1,31 @@
+{
+  "gold_derived_correction": false,
+  "instruction_after": {
+    "path": "${ARTIFACT_ROOT}/validation/phase3-task-versions-v1/tasks/deb__dbt-retail-task-07-cart-recovery/phase3-instruction-01585e9bfa3892d6/instruction.md",
+    "sha256": "01585e9bfa3892d60a8e1eb6b95640a197825530b3a1db1766e2a5b29bfa8533"
+  },
+  "instruction_before": {
+    "path": "${STORAGE_ROOT}/cache/backend-tasks-migration-1125801/apptainer/459a8d06f01a757872a7602ca32cf9e77cb58d84333931fd42565ff6e5936716/deb__dbt-retail-task-07-cart-recovery/instruction.md",
+    "sha256": "d9a6c26ec7385dbab8f60e0ebcc422cb91ad2cea8defcb02fc81e76f1b2e36e2"
+  },
+  "model_requests": 0,
+  "native_tests_hash": "82217b4e827cbf78e24f8c3ccd92ba8ee181428eb4207242e5bd657048cee7c9",
+  "native_verifier_modified": false,
+  "patch": {
+    "path": "patches/phase3-deb__dbt-retail-task-07-cart-recovery-01585e9bfa38/instruction.diff",
+    "sha256": "a48d28e617658fd947088d933b541a81144f4ddb237bdb58a9a12425f41c3e92"
+  },
+  "production_task": "${ARTIFACT_ROOT}/validation/phase3-task-versions-v1/tasks/deb__dbt-retail-task-07-cart-recovery/phase3-instruction-01585e9bfa3892d6",
+  "production_task_hash": "772015f145f46ac758973331bd94137b7dd842a4cde65b73e2f2cddcbafc89c9",
+  "schema_version": 1,
+  "selected_instruction": {
+    "path": "${SCRATCH_ROOT}/claude-two-version-pilot/dbt-retail-task-07-cart-recovery_v2/instruction.md",
+    "sha256": "01585e9bfa3892d60a8e1eb6b95640a197825530b3a1db1766e2a5b29bfa8533"
+  },
+  "source_backend_task_hash": "81497fe66f972e1ba4f203a06f31585417e4bde27a3207c32a4e8eef49eef367",
+  "source_task_hash": "2a689e75f5b4aa5b539da2fe0b659a8781cfd27637e400d38667b9de91651427",
+  "task_key": "deb__dbt-retail-task-07-cart-recovery",
+  "task_version": "phase3-instruction-01585e9bfa3892d6",
+  "type": "task_instruction_variant",
+  "validation_status": "See separately versioned phase 3 companion ledger; materialization is not certification"
+}

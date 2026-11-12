@@ -1,0 +1,22 @@
+{
+  "environments": {
+    "ade__ade-bench-airbnb005": {
+      "instruction_unchanged": true,
+      "layer": {
+        "path": "${ARTIFACT_ROOT}/validation/phase3-review-v1/root-control-v1/airbnb005-server-layer-v1/summary.json",
+        "sha256": "c8381357e43ae37dae1345ec44faa982bde16b98051597cb72b2ed660e854d24"
+      },
+      "metadata": {
+        "path": "${ARTIFACT_ROOT}/validation/phase3-task-environments-v1/ade__ade-bench-airbnb005-metadata.json",
+        "sha256": "9f48b2017b2ffbcc90e0fad0e3ef393653385e730560d11cfc3e25c8c6c003a9"
+      },
+      "native_verifier_modified": false,
+      "production_task_hash": "f22c833585c07f013cc7ac89dc6bd0e4c7e5f19c8c6fcb441de5465dab75f00b",
+      "run_path": "${ARTIFACT_ROOT}/validation/phase3-task-environments-v1/ade__ade-bench-airbnb005",
+      "task_key": "ade__ade-bench-airbnb005",
+      "task_version": "original-96a808223fa49807",
+      "type": "environment_transport_only"
+    }
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,8 @@
+--- original/instruction.md
++++ variant/instruction.md
+@@ -376,3 +376,5 @@
+ - Use `DATEDIFF` instead of `date_diff` for date difference calculations
+ - For interval arithmetic, use `DATEADD` instead of `interval` expressions where possible
+ - Handle boolean columns carefully as Snowflake may store them as VARCHAR
++
++Do not coalesce aggregated counts or amounts to 0: leave them NULL when a review has nothing to aggregate, including `product_event_7d_count` when no events fall in its 7-day window.

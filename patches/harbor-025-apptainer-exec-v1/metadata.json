@@ -1,0 +1,37 @@
+{
+  "files": [
+    {
+      "after_sha256": "9ed93d8221f63a1bc55196c4253855ffcf85c36641609ef500d243515d4faf79",
+      "after_text": "            su_command = f\"su {user_arg} -s /bin/bash -c {shlex.quote(command)}\"\n            if resolved_user in (\"root\", 0):\n                # TACC root-mapped namespaces cannot reset supplementary groups.\n                # Already-root execution needs no identity change; retain su for other UIDs.\n                command = (\n                    'if [ \"$(id -u)\" = 0 ]; then '\n                    f\"exec /bin/bash -c {shlex.quote(command)}; \"\n                    f\"else exec {su_command}; fi\"\n                )\n            else:\n                command = su_command",
+      "before_sha256": "c1de39bcbd6fd1e13d7275923e0d595d9fa9b19144eaefc173e103d3caef3e2f",
+      "before_text": "            command = f\"su {user_arg} -s /bin/bash -c {shlex.quote(command)}\"",
+      "path": "environments/singularity/singularity.py"
+    },
+    {
+      "after_sha256": "9e2631641a53c80a3b64117e9bd527a1b8ef95128753d8bc42808b50d9125a5e",
+      "after_text": "    env[\"PATH\"] = env.get(\"PATH\") or \"/usr/local/bin:/usr/bin:/bin\"",
+      "before_sha256": "8f7ad4195d6809febdec947b64c5e415ca79b61f135714117411b1e866a7e4b5",
+      "before_text": "    env[\"PATH\"] = \"/usr/bin:/usr/local/bin:\" + env.get(\"PATH\", \"/bin\")",
+      "path": "environments/singularity/server.py"
+    }
+  ],
+  "id": "harbor-025-apptainer-exec-v1",
+  "native_verifier_modified": false,
+  "new_runtime_version": "harbor-0.25.0+dbt-bench-apptainer-exec-v1",
+  "package": "harbor",
+  "package_version": "0.25.0",
+  "reason": "Actual native Harbor run reproduced redundant su root group-reset failure and server PATH overriding Python 3.12 with incompatible /usr/bin Python 3.13. Preserve native image PATH and skip identity switching only when requested root is already UID 0.",
+  "regression_evidence": [
+    {
+      "path": "validation/evidence/harbor-deb-native/result.json",
+      "sha256": "8c33b4b1a9c58eceee09bc1cab3da3db692d459cafca80fd960d556123d3fba2"
+    },
+    {
+      "path": "validation/evidence/harbor-deb-native/harbor-environment.log",
+      "sha256": "9cd40bfc1cd3445dd20085681bc4f21222b1f843d0e7dda6822f9f7ba72b2075"
+    }
+  ],
+  "schema_version": 1,
+  "task_budgets_modified": false,
+  "type": "environment"
+}

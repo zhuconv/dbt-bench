@@ -1,0 +1,13 @@
+{
+  "current": {
+    "path": "configs/difficulty-v1/split-rules-v2.json",
+    "sha256": "d18076aa1f2f4d2c38e6d1ce093089b275dc584105128530e5f1d3b2a515863c"
+  },
+  "historical": [
+    {
+      "path": "configs/difficulty-v1/split-rules.json",
+      "sha256": "4bb9e220350735197d59686f7a7cc5ad215b7b98afd9cab54cdc4eaa362b7c67"
+    }
+  ],
+  "purpose": "Report/split rules selector only; existing measurement identities remain bound to their original immutable rules."
+}

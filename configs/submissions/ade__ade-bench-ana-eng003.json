@@ -1,0 +1,52 @@
+{
+  "artifacts": [
+    {
+      "destination": "submission/workspace",
+      "exclude": [],
+      "source": "/app"
+    }
+  ],
+  "collection_version": "customer-workspace-v1",
+  "contract": {
+    "path": "validation/ade/ade-bench-ana-eng003/contract.yaml",
+    "sha256": "ec03a316842cd1c334436a0441184f88994bf1974827e7dbc5cbe5f8664aa264"
+  },
+  "native_verifier_mode": "shared",
+  "native_verifier_modified": false,
+  "output_policy_version": "customer-rename-output-v2",
+  "path_evidence": [
+    {
+      "path": "tasks/ade__ade-bench-ana-eng003/tests/test.sh",
+      "sha256": "ce206b3f96384e1bdceade5ad4c8cbfb86d056374b5c3f200a943a38bf6fba38"
+    },
+    {
+      "path": "validation/evidence/customer-audit-review-v1/summary.json",
+      "sha256": "7179c2f387ada9f1a37153937223dd5f9e4c070f066986ce3cd4618e30ce5082"
+    },
+    {
+      "path": "artifacts/images/ade-native-setup-batch-v1/ade__ade-bench-ana-eng003/initial-visibility.json",
+      "sha256": "aac9e490d15f962e5457f0c8d0ec090216b3bcc98d01f8acf53e97f68a60e1b0"
+    },
+    {
+      "path": "validation/evidence/customer-environment-review-v1/summary.json",
+      "sha256": "cb061f9418614e25058bcf79048a5adbc4f5124d82776760e39350cb656bd7a8"
+    },
+    {
+      "path": "validation/evidence/trace-reporting-scope-review-v1.json",
+      "sha256": "c879577b4ce677de14ec53cc27b9e3dc053f7839b829f73b477b48494eb1479e"
+    },
+    {
+      "path": "validation/evidence/customer-output-review-v2/summary.json",
+      "sha256": "a4d274009a29053533009b75be7c55ed73e371ead8bb613a26ad6d48a5d5eedd"
+    }
+  ],
+  "rationale": "Capture complete native /app before verifier upload, including dbt models/macros/config/packages and database/WAL. Native test-setup builds submitted dim_customer before hidden seeds/tests; model presence and correctness are assessed separately so nop capture remains meaningful. Hidden /tests and /solution are outside this scope.",
+  "required_files": [
+    "submission/workspace/dbt_project.yml",
+    "submission/workspace/profiles.yml",
+    "submission/workspace/analytics_engineering.duckdb"
+  ],
+  "schema_version": 1,
+  "task_hash": "ac261daddd681974babe395031772e4016c14c72eefb6124073dcb9e8f7efe0d",
+  "task_key": "ade__ade-bench-ana-eng003"
+}

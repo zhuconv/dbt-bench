@@ -1,0 +1,8 @@
+{
+  "cc": "/usr/bin/gcc",
+  "cxx": "/usr/bin/g++",
+  "cuda_home": "/home1/apps/nvidia/Linux_aarch64/24.7/cuda/12.5",
+  "triton_cache": ".cache/triton",
+  "flashinfer_cache": ".cache/flashinfer-runtime",
+  "reason": "Use GNU host compilers and the actual CUDA 12.5 toolkit root. The inherited nvc compiler rejects Triton's flags, and the NVHPC nvcc wrapper directory has no libcudart. CUDA/PyTorch compatibility is checked on the allocated GPU."
+}

@@ -1,0 +1,3746 @@
+{
+  "archive_rebinding_scope": "Only source catalog/split/import and preceding review references rebound to byte-identical preserved inputs. Original review retained; no decisions changed.",
+  "changed_catalog": false,
+  "changed_split": false,
+  "environment_evidence": [
+    {
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "initial_snapshot": {
+        "path": "artifacts/images/deb-base-server-review-v1/after.json",
+        "sha256": "c6e5fe493482f84222abb8155bce76f93d8e6014228b748f8ec80e84c787a0dd"
+      },
+      "native_environment_review": {
+        "path": "artifacts/images/deb-base-server-review-v1/summary.json",
+        "sha256": "8598e4d7cd47ea508d629289c70ac31f4a9d45f87b68835ef5805bf39aeaadae"
+      },
+      "tasks": [
+        "deb__dbt-abc-classification",
+        "deb__dbt-basket-composition-analysis",
+        "deb__dbt-calculate-running-balance",
+        "deb__dbt-channel-attribution-analysis",
+        "deb__dbt-coupon-effectiveness",
+        "deb__dbt-customer-acquisition-channel-performance",
+        "deb__dbt-customer-churn-cohorts",
+        "deb__dbt-customer-churn-early-warning",
+        "deb__dbt-customer-cltv-forecasting",
+        "deb__dbt-customer-cohort-retention",
+        "deb__dbt-customer-cross-sell-insights",
+        "deb__dbt-customer-geographic",
+        "deb__dbt-customer-lifetime-value",
+        "deb__dbt-customer-ltv-fix",
+        "deb__dbt-customer-order-analytics",
+        "deb__dbt-customer-risk-scoring",
+        "deb__dbt-daily-order-summary",
+        "deb__dbt-dq-macro-enforcement",
+        "deb__dbt-exchange-rate-settlement-date",
+        "deb__dbt-fix-cac-payback-waterfall",
+        "deb__dbt-fix-email-attribution",
+        "deb__dbt-fix-marketing-attribution",
+        "deb__dbt-fix-multi-touch-attribution",
+        "deb__dbt-fix-paid-search-attribution",
+        "deb__dbt-fix-repeat-purchase-cohort-revenue",
+        "deb__dbt-fraud-detection-model",
+        "deb__dbt-fulfillment-sla",
+        "deb__dbt-gl-reconciliation",
+        "deb__dbt-harbor-marketing-mix-model",
+        "deb__dbt-harbor-product-affinity",
+        "deb__dbt-harbor-warehouse-capacity",
+        "deb__dbt-hr-analytics",
+        "deb__dbt-inventory-analysis",
+        "deb__dbt-inventory-stockout-risk",
+        "deb__dbt-loyalty-points-analysis",
+        "deb__dbt-monthly-channel-revenue",
+        "deb__dbt-multicurrency-lifo",
+        "deb__dbt-order-fulfillment-analytics",
+        "deb__dbt-order-fulfillment-metrics",
+        "deb__dbt-order-interval-metrics",
+        "deb__dbt-order-reconciliation",
+        "deb__dbt-payment-fraud-analysis",
+        "deb__dbt-price-elasticity",
+        "deb__dbt-product-affinity",
+        "deb__dbt-product-category-analytics",
+        "deb__dbt-product-performance-metrics",
+        "deb__dbt-product-return-rate-analysis",
+        "deb__dbt-product-sales-velocity",
+        "deb__dbt-retail-task-01-channel-revenue",
+        "deb__dbt-retail-task-04-market-roi",
+        "deb__dbt-retail-task-07-cart-recovery",
+        "deb__dbt-retail-task-10-trust-risk",
+        "deb__dbt-rfm-customer-segmentation",
+        "deb__dbt-rfm-customer-segmentation-2",
+        "deb__dbt-rfm-customer-tiering",
+        "deb__dbt-sales-funnel-analysis",
+        "deb__dbt-supplier-payment-optimization",
+        "deb__dbt-supplier-scorecard",
+        "deb__dbt-test-orders-filter",
+        "deb__dbt-three-way-matching",
+        "deb__dbt-web-session-analytics",
+        "deb__dbt-weekly-sales-growth"
+      ]
+    },
+    {
+      "image": {
+        "path": "artifacts/images/deb-consolidate-env-v3.sif",
+        "sha256": "c907d6809d262fbaf3c53249e0e520c005af6134728d663609ccc478b584f039"
+      },
+      "initial_snapshot": {
+        "path": "artifacts/images/deb-consolidate-server-review-v2/after.json",
+        "sha256": "3031ec7aa56a24de801e52f9115f102027e7fd803baae8cef0e19c4c18d35846"
+      },
+      "native_environment_review": {
+        "path": "artifacts/images/deb-consolidate-server-review-v2/summary.json",
+        "sha256": "0d6eba80b4b1ba02dbfeaa1182d3294cb9d5463f468d991878d13e0bf865bf0a"
+      },
+      "tasks": [
+        "deb__dbt-consolidate"
+      ]
+    },
+    {
+      "image": {
+        "path": "artifacts/images/deb-session-attribution-env-v3.sif",
+        "sha256": "294bc8f0712f4c715c464f7842852ffadf1662ccb0e12f1b4c4d643f32ec9f48"
+      },
+      "initial_snapshot": {
+        "path": "artifacts/images/deb-session-server-review-v1/after.json",
+        "sha256": "9942cffaebff77f15eebd56de2b7aef22e0dc9ada9fd4e8a3a63f1e72c6562dc"
+      },
+      "native_environment_review": {
+        "path": "artifacts/images/deb-session-server-review-v1/summary.json",
+        "sha256": "933b4e27ba4644f5addb54c68130a031a39a1c44f9bc5835261c0cbf7022d123"
+      },
+      "tasks": [
+        "deb__dbt-session-attribution"
+      ]
+    }
+  ],
+  "environment_scope": "Previously executed native fresh-environment snapshots rebound by current exact SIF and artifact hashes; no new benchmark execution",
+  "explicit_distinctions": [
+    {
+      "reason": "Shared procurement entities, but invoice payment/discount decisions, supplier delivery-quality scores and PO-line matching have different outputs and central rules; shared data alone does not force one group.",
+      "tasks": [
+        "supplier-payment-optimization",
+        "supplier-scorecard",
+        "three-way-matching"
+      ]
+    },
+    {
+      "reason": "Warehouse value aggregation, per-SKU depletion/lead-time forecasting and hourly capacity workload are distinct objectives and grains.",
+      "tasks": [
+        "inventory-analysis",
+        "inventory-stockout-risk",
+        "harbor-warehouse-capacity"
+      ]
+    },
+    {
+      "reason": "Hybrid decay on web sessions plus sales, five GA4 reporting models, funnel stages, session-quality scores and cart outreach share concepts but have different required submissions and source/linkage rules. No claim of unseen marketing domain.",
+      "tasks": [
+        "session-attribution",
+        "fix-multi-touch-attribution",
+        "sales-funnel-analysis",
+        "web-session-analytics",
+        "retail-task-07-cart-recovery"
+      ]
+    },
+    {
+      "reason": "Daily count/revenue, Sunday-week growth with explicit H1 scope, and monthly channel benchmark scorecards are distinct task targets; generic order aggregation is retained as a shared skill, not labeled unseen.",
+      "tasks": [
+        "daily-order-summary",
+        "weekly-sales-growth",
+        "monthly-channel-revenue"
+      ]
+    },
+    {
+      "reason": "Category hierarchy profitability, product ABC/velocity, return-event timing/reasons and midpoint demand elasticity are distinct targets despite shared product/order entities.",
+      "tasks": [
+        "product-category-analytics",
+        "product-performance-metrics",
+        "product-return-rate-analysis",
+        "price-elasticity"
+      ]
+    },
+    {
+      "reason": "Customer account ledger, unpaid/return/chargeback points, GL debits/credits, order header-line reconciliation, settlement FX and LIFO COGS have different governing rules and output grains; do not group merely as finance.",
+      "tasks": [
+        "calculate-running-balance",
+        "customer-risk-scoring",
+        "gl-reconciliation",
+        "order-reconciliation",
+        "exchange-rate-settlement-date",
+        "multicurrency-lifo"
+      ]
+    }
+  ],
+  "families": [
+    {
+      "current_splits": [
+        "test",
+        "train"
+      ],
+      "decision": "proposed_conservative_same_split_group",
+      "id": "deb-ga4-attribution",
+      "members": [
+        "deb__dbt-fix-marketing-attribution",
+        "deb__dbt-fix-email-attribution",
+        "deb__dbt-fix-paid-search-attribution",
+        "deb__dbt-fix-multi-touch-attribution"
+      ],
+      "rationale": "Shared GA sessions/events pipeline and daily date/channel/medium/campaign output with distinct sessions, converted-session purchase revenue and conversion rate. Paid-search and marketing instructions substantially repeat the core rules; email changes the fixed date window and normalization; multi-touch extends the output with five credit models and assist metrics. Keep together despite different windows and individual task defects."
+    },
+    {
+      "current_splits": [
+        "test",
+        "train"
+      ],
+      "decision": "proposed_conservative_same_split_group",
+      "id": "deb-customer-value-retention",
+      "members": [
+        "deb__dbt-customer-churn-cohorts",
+        "deb__dbt-customer-cohort-retention",
+        "deb__dbt-fix-repeat-purchase-cohort-revenue",
+        "deb__dbt-customer-cltv-forecasting",
+        "deb__dbt-customer-lifetime-value",
+        "deb__dbt-customer-ltv-fix",
+        "deb__dbt-rfm-customer-segmentation",
+        "deb__dbt-rfm-customer-segmentation-2",
+        "deb__dbt-rfm-customer-tiering",
+        "deb__dbt-order-interval-metrics",
+        "deb__dbt-customer-order-analytics",
+        "deb__dbt-customer-churn-early-warning"
+      ],
+      "rationale": "Conservative component-overlap group: churn-cohorts and cohort-retention both require first-purchase monthly cohort retention/revenue; repeat-purchase extends the same cohort/bucket cumulative-revenue target. RFM segmentation-2 explicitly includes a monthly cohort-retention output, connecting the RFM variants. CLV and customer-order tasks share customer order count/spend/first-last-date/value-segmentation components; advanced CLV includes inter-order gaps, churn and cohort outputs, connecting order-interval metrics and weekly churn warning. Forecasts, thresholds, filters, data layers and customer universes differ. This intentionally broad 12-task group limits reuse across splits without asserting identical answers; it does not group unrelated retail tasks merely for sharing orders."
+    },
+    {
+      "current_splits": [
+        "test",
+        "train"
+      ],
+      "decision": "proposed_conservative_same_split_group",
+      "id": "deb-fulfillment-performance",
+      "members": [
+        "deb__dbt-fulfillment-sla",
+        "deb__dbt-order-fulfillment-analytics",
+        "deb__dbt-order-fulfillment-metrics"
+      ],
+      "rationale": "Overlapping order processing/delivery and carrier/fulfillment metrics. The analytics task includes shipment/carrier and order lifecycle outputs also used conceptually by SLA and order-type summaries. Group conservatively; shipment/month versus warehouse/day versus order-type grains and their filters remain distinct."
+    },
+    {
+      "current_splits": [
+        "test"
+      ],
+      "decision": "proposed_conservative_same_split_group",
+      "id": "deb-product-affinity",
+      "members": [
+        "deb__dbt-harbor-product-affinity",
+        "deb__dbt-product-affinity",
+        "deb__dbt-customer-cross-sell-insights"
+      ],
+      "rationale": "All require deduplicated within-order product/SKU pairs and support/confidence/lift association metrics. Temporal, segment, hierarchy and bundle extensions differ. Basket composition remains separate because it classifies basket size/value transitions rather than product-pair association rules."
+    },
+    {
+      "current_splits": [
+        "test"
+      ],
+      "decision": "proposed_conservative_same_split_group",
+      "id": "deb-product-sales-scorecards",
+      "members": [
+        "deb__dbt-abc-classification",
+        "deb__dbt-product-performance-metrics",
+        "deb__dbt-product-sales-velocity"
+      ],
+      "rationale": "Product performance explicitly combines revenue-contribution ABC classification and product sales velocity, linking the specialized ABC and velocity tasks. Different filters, windows, return handling and score definitions remain recorded; no claim of identical final tables."
+    },
+    {
+      "current_splits": [
+        "test"
+      ],
+      "decision": "proposed_conservative_same_split_group",
+      "id": "deb-monthly-channel-revenue",
+      "members": [
+        "deb__dbt-monthly-channel-revenue",
+        "deb__dbt-retail-task-01-channel-revenue"
+      ],
+      "rationale": "Both explicitly request monthly channel revenue/AOV outputs; one adds growth/market benchmarks and the other fact-dimension profit/discount/margin with required view/tags. Group conservatively despite different sales sources and channel representations."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_conservative_same_split_group",
+      "id": "deb-customer-channel-acquisition",
+      "members": [
+        "deb__dbt-channel-attribution-analysis",
+        "deb__dbt-customer-acquisition-channel-performance"
+      ],
+      "rationale": "Both identify a customer first-order acquisition channel and summarize customer/order/revenue quality by channel. Sales channel IDs versus UTM-derived marketing attribution and their filters differ. Distinct from per-session GA4 attribution."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_conservative_same_split_group",
+      "id": "deb-marketing-payback",
+      "members": [
+        "deb__dbt-fix-cac-payback-waterfall",
+        "deb__dbt-retail-task-04-market-roi"
+      ],
+      "rationale": "Both construct marketing spend/revenue and payback metrics. Campaign-day cumulative waterfall versus monthly channel/new-customer segments and 90-day payback differ. Conservatively keep both within one split; MMM econometric baseline/adstock/saturation remains a different task."
+    },
+    {
+      "current_splits": [
+        "test"
+      ],
+      "decision": "proposed_conservative_same_split_group",
+      "id": "deb-fraud-analysis",
+      "members": [
+        "deb__dbt-fraud-detection-model",
+        "deb__dbt-payment-fraud-analysis"
+      ],
+      "rationale": "Related fraud/velocity anomaly objectives across orders and payments, with different required flags and input score sources. Conservative fraud family; customer unpaid/return/chargeback point scoring remains a separate output objective."
+    },
+    {
+      "current_splits": [
+        "test"
+      ],
+      "decision": "proposed_singleton",
+      "id": "deb-basket-composition-analysis",
+      "members": [
+        "deb__dbt-basket-composition-analysis"
+      ],
+      "rationale": "Basket size/value patterns, transitions and efficiency/growth scores. No duplicate/superset task objective requiring grouping was identified in the declared instruction-level review."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_singleton",
+      "id": "deb-calculate-running-balance",
+      "members": [
+        "deb__dbt-calculate-running-balance"
+      ],
+      "rationale": "Customer order/payment running ledger and account-risk summaries. No duplicate/superset task objective requiring grouping was identified in the declared instruction-level review."
+    },
+    {
+      "current_splits": [
+        "test"
+      ],
+      "decision": "proposed_singleton",
+      "id": "deb-consolidate",
+      "members": [
+        "deb__dbt-consolidate"
+      ],
+      "rationale": "Seed three ads CSVs, standardize/deduplicate staging and union with source labels. No duplicate/superset task objective requiring grouping was identified in the declared instruction-level review."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_singleton",
+      "id": "deb-coupon-effectiveness",
+      "members": [
+        "deb__dbt-coupon-effectiveness"
+      ],
+      "rationale": "Promotion redemption, lift and coupon trend analysis. No duplicate/superset task objective requiring grouping was identified in the declared instruction-level review."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_singleton",
+      "id": "deb-customer-geographic",
+      "members": [
+        "deb__dbt-customer-geographic"
+      ],
+      "rationale": "State customer/revenue aggregation using default shipping addresses. No duplicate/superset task objective requiring grouping was identified in the declared instruction-level review."
+    },
+    {
+      "current_splits": [
+        "test"
+      ],
+      "decision": "proposed_singleton",
+      "id": "deb-customer-risk-scoring",
+      "members": [
+        "deb__dbt-customer-risk-scoring"
+      ],
+      "rationale": "All-customer unpaid-order/return/chargeback point-based risk scores. No duplicate/superset task objective requiring grouping was identified in the declared instruction-level review."
+    },
+    {
+      "current_splits": [
+        "test"
+      ],
+      "decision": "proposed_singleton",
+      "id": "deb-daily-order-summary",
+      "members": [
+        "deb__dbt-daily-order-summary"
+      ],
+      "rationale": "Daily valid-order count and revenue. No duplicate/superset task objective requiring grouping was identified in the declared instruction-level review."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_singleton",
+      "id": "deb-dq-macro-enforcement",
+      "members": [
+        "deb__dbt-dq-macro-enforcement"
+      ],
+      "rationale": "Order-line DQ flags, SKU/name fallbacks and corrected net pricing. No duplicate/superset task objective requiring grouping was identified in the declared instruction-level review."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_singleton",
+      "id": "deb-exchange-rate-settlement-date",
+      "members": [
+        "deb__dbt-exchange-rate-settlement-date"
+      ],
+      "rationale": "Revenue fact FX rates at latest payment settlement date with fallback. No duplicate/superset task objective requiring grouping was identified in the declared instruction-level review."
+    },
+    {
+      "current_splits": [
+        "test"
+      ],
+      "decision": "proposed_singleton",
+      "id": "deb-gl-reconciliation",
+      "members": [
+        "deb__dbt-gl-reconciliation"
+      ],
+      "rationale": "Account/trial balances, unbalanced entries and fiscal-period summaries. No duplicate/superset task objective requiring grouping was identified in the declared instruction-level review."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_singleton",
+      "id": "deb-harbor-marketing-mix-model",
+      "members": [
+        "deb__dbt-harbor-marketing-mix-model"
+      ],
+      "rationale": "Marketing mix baseline, adstock/saturation and budget optimization. No duplicate/superset task objective requiring grouping was identified in the declared instruction-level review."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_singleton",
+      "id": "deb-harbor-warehouse-capacity",
+      "members": [
+        "deb__dbt-harbor-warehouse-capacity"
+      ],
+      "rationale": "Warehouse hourly volume grid, daily capacity, peaks and staffing. No duplicate/superset task objective requiring grouping was identified in the declared instruction-level review."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_singleton",
+      "id": "deb-hr-analytics",
+      "members": [
+        "deb__dbt-hr-analytics"
+      ],
+      "rationale": "HR organization, compensation, capacity and workforce productivity layers. No duplicate/superset task objective requiring grouping was identified in the declared instruction-level review."
+    },
+    {
+      "current_splits": [
+        "test"
+      ],
+      "decision": "proposed_singleton",
+      "id": "deb-inventory-analysis",
+      "members": [
+        "deb__dbt-inventory-analysis"
+      ],
+      "rationale": "Warehouse on-hand quantity/value and weighted unit-cost concentration. No duplicate/superset task objective requiring grouping was identified in the declared instruction-level review."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_singleton",
+      "id": "deb-inventory-stockout-risk",
+      "members": [
+        "deb__dbt-inventory-stockout-risk"
+      ],
+      "rationale": "Warehouse/SKU stockout risk from velocity, inventory and procurement lead times. No duplicate/superset task objective requiring grouping was identified in the declared instruction-level review."
+    },
+    {
+      "current_splits": [
+        "test"
+      ],
+      "decision": "proposed_singleton",
+      "id": "deb-loyalty-points-analysis",
+      "members": [
+        "deb__dbt-loyalty-points-analysis"
+      ],
+      "rationale": "Program-level loyalty earn/redeem/expire and liability summary. No duplicate/superset task objective requiring grouping was identified in the declared instruction-level review."
+    },
+    {
+      "current_splits": [
+        "test"
+      ],
+      "decision": "proposed_singleton",
+      "id": "deb-multicurrency-lifo",
+      "members": [
+        "deb__dbt-multicurrency-lifo"
+      ],
+      "rationale": "Purchase FX and sale COGS using LIFO with weighted-average fallback. No duplicate/superset task objective requiring grouping was identified in the declared instruction-level review."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_singleton",
+      "id": "deb-order-reconciliation",
+      "members": [
+        "deb__dbt-order-reconciliation"
+      ],
+      "rationale": "Order-header versus line-total financial reconciliation. No duplicate/superset task objective requiring grouping was identified in the declared instruction-level review."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_singleton",
+      "id": "deb-price-elasticity",
+      "members": [
+        "deb__dbt-price-elasticity"
+      ],
+      "rationale": "Monthly midpoint product demand-price elasticity. No duplicate/superset task objective requiring grouping was identified in the declared instruction-level review."
+    },
+    {
+      "current_splits": [
+        "test"
+      ],
+      "decision": "proposed_singleton",
+      "id": "deb-product-category-analytics",
+      "members": [
+        "deb__dbt-product-category-analytics"
+      ],
+      "rationale": "Category hierarchy sales/cost/profit aggregation. No duplicate/superset task objective requiring grouping was identified in the declared instruction-level review."
+    },
+    {
+      "current_splits": [
+        "test"
+      ],
+      "decision": "proposed_singleton",
+      "id": "deb-product-return-rate-analysis",
+      "members": [
+        "deb__dbt-product-return-rate-analysis"
+      ],
+      "rationale": "Return-line/product-month rates, impact, timing and reasons. No duplicate/superset task objective requiring grouping was identified in the declared instruction-level review."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_singleton",
+      "id": "deb-retail-task-07-cart-recovery",
+      "members": [
+        "deb__dbt-retail-task-07-cart-recovery"
+      ],
+      "rationale": "Cart recovery queue from session/inventory/customer/consent signals. No duplicate/superset task objective requiring grouping was identified in the declared instruction-level review."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_singleton",
+      "id": "deb-retail-task-10-trust-risk",
+      "members": [
+        "deb__dbt-retail-task-10-trust-risk"
+      ],
+      "rationale": "Review enrichment, moderation risk and monthly KPI rollup. No duplicate/superset task objective requiring grouping was identified in the declared instruction-level review."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_singleton",
+      "id": "deb-sales-funnel-analysis",
+      "members": [
+        "deb__dbt-sales-funnel-analysis"
+      ],
+      "rationale": "Session view/cart/purchase funnel and dropoff. No duplicate/superset task objective requiring grouping was identified in the declared instruction-level review."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_singleton",
+      "id": "deb-session-attribution",
+      "members": [
+        "deb__dbt-session-attribution"
+      ],
+      "rationale": "Quality-filtered web-session hybrid-decay fractional conversion credit. No duplicate/superset task objective requiring grouping was identified in the declared instruction-level review."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_singleton",
+      "id": "deb-supplier-payment-optimization",
+      "members": [
+        "deb__dbt-supplier-payment-optimization"
+      ],
+      "rationale": "Invoice FX/aging, early-payment discounts, risk and cash-flow priorities. No duplicate/superset task objective requiring grouping was identified in the declared instruction-level review."
+    },
+    {
+      "current_splits": [
+        "test"
+      ],
+      "decision": "proposed_singleton",
+      "id": "deb-supplier-scorecard",
+      "members": [
+        "deb__dbt-supplier-scorecard"
+      ],
+      "rationale": "Supplier delivery/quality/cost weighted performance score. No duplicate/superset task objective requiring grouping was identified in the declared instruction-level review."
+    },
+    {
+      "current_splits": [
+        "test"
+      ],
+      "decision": "proposed_singleton",
+      "id": "deb-test-orders-filter",
+      "members": [
+        "deb__dbt-test-orders-filter"
+      ],
+      "rationale": "Filter non-production orders into production_sales. No duplicate/superset task objective requiring grouping was identified in the declared instruction-level review."
+    },
+    {
+      "current_splits": [
+        "test"
+      ],
+      "decision": "proposed_singleton",
+      "id": "deb-three-way-matching",
+      "members": [
+        "deb__dbt-three-way-matching"
+      ],
+      "rationale": "PO-line/receipt/invoice quantity/price matching and risk exceptions. No duplicate/superset task objective requiring grouping was identified in the declared instruction-level review."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_singleton",
+      "id": "deb-web-session-analytics",
+      "members": [
+        "deb__dbt-web-session-analytics"
+      ],
+      "rationale": "Session engagement/duration quality, device and visitor summaries. No duplicate/superset task objective requiring grouping was identified in the declared instruction-level review."
+    },
+    {
+      "current_splits": [
+        "train"
+      ],
+      "decision": "proposed_singleton",
+      "id": "deb-weekly-sales-growth",
+      "members": [
+        "deb__dbt-weekly-sales-growth"
+      ],
+      "rationale": "Sunday-based weekly sales with week-over-week growth. No duplicate/superset task objective requiring grouping was identified in the declared instruction-level review."
+    }
+  ],
+  "frozen": false,
+  "historical_original": {
+    "path": "validation/evidence/deb-family-review-v1.json",
+    "sha256": "69399519daae2a8db4e61f16ce9a4816dafdc661495de849ac383a0217b97a48"
+  },
+  "historical_training_use": "unknown; list membership is not proof of checkpoint training",
+  "initial_duckdb_model_file_count": 2387,
+  "initial_duckdb_model_files_identical": true,
+  "legacy_input_files_reverified": [
+    {
+      "legacy_relative_path": "code/data/test_tasks_v2.json",
+      "sha256": "ccdf9bd134538f6c7d6b0c300be6394e06c47fea7bf5b4c789adc66563ff8268"
+    },
+    {
+      "legacy_relative_path": "code/data/test_tasks_v3.json",
+      "sha256": "78bfbb8e9390d0d30c089993aad89b467031ed4a7fd65774b9ee93828c36ddf6"
+    },
+    {
+      "legacy_relative_path": "code/data/train_tasks_v2.json",
+      "sha256": "9f5c995e42cb0a2a761191a9a509af9eaf6687f237b55fdede80a5257d18604b"
+    },
+    {
+      "legacy_relative_path": "code/data/train_tasks_v3.json",
+      "sha256": "917b43bcf7cdd633e0bf0a52be814d6b750b490e56ae000c782a04f19e0b778a"
+    },
+    {
+      "legacy_relative_path": "code/harbor-cmp/excluded_tasks.json",
+      "sha256": "ec467e8674d2e97ba248dade102ff3965529e8eb1ec4724b08e21c856d091317"
+    }
+  ],
+  "limitations": [
+    "Shared retail warehouse is explicitly recorded; this is not unseen-warehouse generalization.",
+    "Conservative groups include related but non-equivalent tasks; narrower future grouping requires a separately versioned review.",
+    "Moving historical train tasks to test cannot make them a clean holdout for old checkpoints.",
+    "Instruction-level family review does not establish gold correctness, actual solvability or verifier coverage.",
+    "Full catalog metadata migration and evidence identity review are required before activating a frozen split."
+  ],
+  "proposed_assignment_policy": "Keep groups intact; if any member was v3 test, assign the entire group to test. Otherwise train. No rewards/validation outcomes used.",
+  "proposed_assignments": {
+    "deb__dbt-abc-classification": "test",
+    "deb__dbt-basket-composition-analysis": "test",
+    "deb__dbt-calculate-running-balance": "train",
+    "deb__dbt-channel-attribution-analysis": "train",
+    "deb__dbt-consolidate": "test",
+    "deb__dbt-coupon-effectiveness": "train",
+    "deb__dbt-customer-acquisition-channel-performance": "train",
+    "deb__dbt-customer-churn-cohorts": "test",
+    "deb__dbt-customer-churn-early-warning": "test",
+    "deb__dbt-customer-cltv-forecasting": "test",
+    "deb__dbt-customer-cohort-retention": "test",
+    "deb__dbt-customer-cross-sell-insights": "test",
+    "deb__dbt-customer-geographic": "train",
+    "deb__dbt-customer-lifetime-value": "test",
+    "deb__dbt-customer-ltv-fix": "test",
+    "deb__dbt-customer-order-analytics": "test",
+    "deb__dbt-customer-risk-scoring": "test",
+    "deb__dbt-daily-order-summary": "test",
+    "deb__dbt-dq-macro-enforcement": "train",
+    "deb__dbt-exchange-rate-settlement-date": "train",
+    "deb__dbt-fix-cac-payback-waterfall": "train",
+    "deb__dbt-fix-email-attribution": "test",
+    "deb__dbt-fix-marketing-attribution": "test",
+    "deb__dbt-fix-multi-touch-attribution": "test",
+    "deb__dbt-fix-paid-search-attribution": "test",
+    "deb__dbt-fix-repeat-purchase-cohort-revenue": "test",
+    "deb__dbt-fraud-detection-model": "test",
+    "deb__dbt-fulfillment-sla": "test",
+    "deb__dbt-gl-reconciliation": "test",
+    "deb__dbt-harbor-marketing-mix-model": "train",
+    "deb__dbt-harbor-product-affinity": "test",
+    "deb__dbt-harbor-warehouse-capacity": "train",
+    "deb__dbt-hr-analytics": "train",
+    "deb__dbt-inventory-analysis": "test",
+    "deb__dbt-inventory-stockout-risk": "train",
+    "deb__dbt-loyalty-points-analysis": "test",
+    "deb__dbt-monthly-channel-revenue": "test",
+    "deb__dbt-multicurrency-lifo": "test",
+    "deb__dbt-order-fulfillment-analytics": "test",
+    "deb__dbt-order-fulfillment-metrics": "test",
+    "deb__dbt-order-interval-metrics": "test",
+    "deb__dbt-order-reconciliation": "train",
+    "deb__dbt-payment-fraud-analysis": "test",
+    "deb__dbt-price-elasticity": "train",
+    "deb__dbt-product-affinity": "test",
+    "deb__dbt-product-category-analytics": "test",
+    "deb__dbt-product-performance-metrics": "test",
+    "deb__dbt-product-return-rate-analysis": "test",
+    "deb__dbt-product-sales-velocity": "test",
+    "deb__dbt-retail-task-01-channel-revenue": "test",
+    "deb__dbt-retail-task-04-market-roi": "train",
+    "deb__dbt-retail-task-07-cart-recovery": "train",
+    "deb__dbt-retail-task-10-trust-risk": "train",
+    "deb__dbt-rfm-customer-segmentation": "test",
+    "deb__dbt-rfm-customer-segmentation-2": "test",
+    "deb__dbt-rfm-customer-tiering": "test",
+    "deb__dbt-sales-funnel-analysis": "train",
+    "deb__dbt-session-attribution": "train",
+    "deb__dbt-supplier-payment-optimization": "train",
+    "deb__dbt-supplier-scorecard": "test",
+    "deb__dbt-test-orders-filter": "test",
+    "deb__dbt-three-way-matching": "test",
+    "deb__dbt-web-session-analytics": "train",
+    "deb__dbt-weekly-sales-growth": "train"
+  },
+  "proposed_changes": [
+    {
+      "from": "train",
+      "reason": "Keep the reviewed group intact; any historical v3 test member keeps the whole group in test",
+      "task_key": "deb__dbt-customer-churn-early-warning",
+      "to": "test"
+    },
+    {
+      "from": "train",
+      "reason": "Keep the reviewed group intact; any historical v3 test member keeps the whole group in test",
+      "task_key": "deb__dbt-customer-cohort-retention",
+      "to": "test"
+    },
+    {
+      "from": "train",
+      "reason": "Keep the reviewed group intact; any historical v3 test member keeps the whole group in test",
+      "task_key": "deb__dbt-customer-lifetime-value",
+      "to": "test"
+    },
+    {
+      "from": "train",
+      "reason": "Keep the reviewed group intact; any historical v3 test member keeps the whole group in test",
+      "task_key": "deb__dbt-customer-ltv-fix",
+      "to": "test"
+    },
+    {
+      "from": "train",
+      "reason": "Keep the reviewed group intact; any historical v3 test member keeps the whole group in test",
+      "task_key": "deb__dbt-fix-email-attribution",
+      "to": "test"
+    },
+    {
+      "from": "train",
+      "reason": "Keep the reviewed group intact; any historical v3 test member keeps the whole group in test",
+      "task_key": "deb__dbt-fix-multi-touch-attribution",
+      "to": "test"
+    },
+    {
+      "from": "train",
+      "reason": "Keep the reviewed group intact; any historical v3 test member keeps the whole group in test",
+      "task_key": "deb__dbt-fix-paid-search-attribution",
+      "to": "test"
+    },
+    {
+      "from": "train",
+      "reason": "Keep the reviewed group intact; any historical v3 test member keeps the whole group in test",
+      "task_key": "deb__dbt-fulfillment-sla",
+      "to": "test"
+    },
+    {
+      "from": "train",
+      "reason": "Keep the reviewed group intact; any historical v3 test member keeps the whole group in test",
+      "task_key": "deb__dbt-order-interval-metrics",
+      "to": "test"
+    },
+    {
+      "from": "train",
+      "reason": "Keep the reviewed group intact; any historical v3 test member keeps the whole group in test",
+      "task_key": "deb__dbt-rfm-customer-segmentation",
+      "to": "test"
+    },
+    {
+      "from": "train",
+      "reason": "Keep the reviewed group intact; any historical v3 test member keeps the whole group in test",
+      "task_key": "deb__dbt-rfm-customer-segmentation-2",
+      "to": "test"
+    },
+    {
+      "from": "train",
+      "reason": "Keep the reviewed group intact; any historical v3 test member keeps the whole group in test",
+      "task_key": "deb__dbt-rfm-customer-tiering",
+      "to": "test"
+    }
+  ],
+  "proposed_counts": {
+    "test": 42,
+    "train": 22
+  },
+  "review_scope": "Family and historical split review only; full verifier contracts remain separately incomplete",
+  "review_script": {
+    "path": "artifacts/validation/catalog-family-review-v1/record_deb_family_review.py",
+    "sha256": "7762471719f1503b774bafd8b20131f357f0d2493bd774120ca874712113f630"
+  },
+  "review_version": "deb-family-review-v1",
+  "reviewed_tasks": 64,
+  "schema_version": 1,
+  "shared_initial_retail_database_hashes": {
+    "deb-base-env-v4.sif": "916c24cf403b3ec2986b52a2be851581e73e630851424fa964cde4738d76b892",
+    "deb-consolidate-env-v3.sif": "916c24cf403b3ec2986b52a2be851581e73e630851424fa964cde4738d76b892",
+    "deb-session-attribution-env-v3.sif": "916c24cf403b3ec2986b52a2be851581e73e630851424fa964cde4738d76b892"
+  },
+  "source_catalog": {
+    "path": "catalog/history/v1-legacy-provisional/tasks.jsonl",
+    "sha256": "107dd7b2519cc959292b5ce3716a85d31b8b507d00188a6da60d5ad6bacc3586"
+  },
+  "source_import": {
+    "path": "catalog/history/v1-legacy-provisional/import.json",
+    "sha256": "87f6e95dd8fc05b9df68842ae5c86f4626d78d9fa1d540a4868d2e3248cc0553"
+  },
+  "source_split": {
+    "path": "catalog/history/v1-legacy-provisional/splits.json",
+    "sha256": "0cd524ad1ed466a642c56d0537cfef0c93f4efa5b067696e482a5ffc3c2e0f1b"
+  },
+  "tasks": [
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-abc-classification.json",
+        "sha256": "6d4b1b8894d39183046eb34407b5f140f535219f128fadff481cadd366d31348"
+      },
+      "current_split": "test",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/test_tasks_v2.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-abc-classification/instruction.md",
+        "sha256": "4b81ded4cc867d775f1f9f84c01e9f693387019c6f71e1ebf6df7d5b09d93876"
+      },
+      "legacy_split": {
+        "v2": "test",
+        "v3": "test"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-abc-classification/environment/Dockerfile",
+        "sha256": "80af24b9544dcc5dea0d6d5b0f8cab09b0ce4720629f0362f8e82f49c310d0a8"
+      },
+      "objective_summary": "Product revenue Pareto/ABC classification and concentration summaries",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-product-sales-scorecards",
+      "task_key": "deb__dbt-abc-classification",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "add_models"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-basket-composition-analysis.json",
+        "sha256": "3458b4f25a860dd97282cfeb9d81b81916ea16e914d70c78cf136fccdfdba39f"
+      },
+      "current_split": "test",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/test_tasks_v2.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-basket-composition-analysis/instruction.md",
+        "sha256": "ef403a4a3c6e5970497e4aa23192a75e739c87fe55481eab03993707faf30dee"
+      },
+      "legacy_split": {
+        "v2": "test",
+        "v3": "test"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-basket-composition-analysis/environment/Dockerfile",
+        "sha256": "80af24b9544dcc5dea0d6d5b0f8cab09b0ce4720629f0362f8e82f49c310d0a8"
+      },
+      "objective_summary": "Basket size/value patterns, transitions and efficiency/growth scores",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-basket-composition-analysis",
+      "task_key": "deb__dbt-basket-composition-analysis",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "add_models"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-calculate-running-balance.json",
+        "sha256": "48565f75d27a27aac4aaf14fb6d76e0ec0e01fe8252319061a3702430aef994d"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-calculate-running-balance/instruction.md",
+        "sha256": "dd5e7350a0b1cd03e82081753da6fa41442190fa8a2e73ab9225cf097571ce1d"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-calculate-running-balance/environment/Dockerfile",
+        "sha256": "ba55cb2429657e675c192707e701a70ee4907f7b3a067bff679cf34ddf7fe15c"
+      },
+      "objective_summary": "Customer order/payment running ledger and account-risk summaries",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-calculate-running-balance",
+      "task_key": "deb__dbt-calculate-running-balance",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-channel-attribution-analysis.json",
+        "sha256": "67dc5a88fce87da28e1a158c754dcee084c994cfebcaf25b577e095b868507af"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-channel-attribution-analysis/instruction.md",
+        "sha256": "534598a7eb998714de836c8f4b6db9b78feaffdede04fa404a2e1faa1b8dd62e"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-channel-attribution-analysis/environment/Dockerfile",
+        "sha256": "02dd6aaed5521786eae26e416c1242cb4b001e12818b4dc88512eb05c362fca6"
+      },
+      "objective_summary": "First-order sales-channel acquisition and cross-channel engagement",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-customer-channel-acquisition",
+      "task_key": "deb__dbt-channel-attribution-analysis",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "add_models"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-consolidate.json",
+        "sha256": "3103fdd96a0847146937ac88dd857f4b7cdabd02fe8ae84308463c4fbe34e472"
+      },
+      "current_split": "test",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-consolidate-env-v3.sif",
+        "sha256": "c907d6809d262fbaf3c53249e0e520c005af6134728d663609ccc478b584f039"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-consolidate/instruction.md",
+        "sha256": "d4ca46038cbf641dbd624d17390038d7ed002bc19c9b1731558d4671da62d8a4"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "test"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-consolidate/environment/Dockerfile",
+        "sha256": "f7887450f3010bfbbb56822a90bac794bec9a0eb6e431ff9576951638ad2aee2"
+      },
+      "objective_summary": "Seed three ads CSVs, standardize/deduplicate staging and union with source labels",
+      "primary_input_family": "ads-csv",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-consolidate",
+      "task_key": "deb__dbt-consolidate",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "seed_and_union_ads_datasets"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-coupon-effectiveness.json",
+        "sha256": "85045b5049d10c3791697e0f694b08f2dc742bda2d707ba3dc6bc1679e77683e"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-coupon-effectiveness/instruction.md",
+        "sha256": "9f8daf9ac0369fd40fe9fcfdd45b33349b791f12a9d055b416102be007a7cd9e"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-coupon-effectiveness/environment/Dockerfile",
+        "sha256": "acfc92d9c9e89a96cb1854a5de859159906ade23e4b36d84e967217ab9442114"
+      },
+      "objective_summary": "Promotion redemption, lift and coupon trend analysis",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-coupon-effectiveness",
+      "task_key": "deb__dbt-coupon-effectiveness",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "add_models"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-customer-acquisition-channel-performance.json",
+        "sha256": "b60e7cbfbfab5c5c51f12b75ee586b8aeeec0ad74dce676811f4520ec7cddcde"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-customer-acquisition-channel-performance/instruction.md",
+        "sha256": "d711fa96f2d266661a29bb4addefb62b654bcd2d2ee115bbc9cd193132e78802"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-customer-acquisition-channel-performance/environment/Dockerfile",
+        "sha256": "02dd6aaed5521786eae26e416c1242cb4b001e12818b4dc88512eb05c362fca6"
+      },
+      "objective_summary": "First-touch customer acquisition-channel value and repeat-rate mart",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-customer-channel-acquisition",
+      "task_key": "deb__dbt-customer-acquisition-channel-performance",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project_from_reference_models"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-customer-churn-cohorts.json",
+        "sha256": "3a8121f072186ec7ce4790b0688068b18e0e4b3ab83289adbfc2942f4911d073"
+      },
+      "current_split": "test",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/test_tasks_v2.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-customer-churn-cohorts/instruction.md",
+        "sha256": "ef8556fa88610e92a7e3693b5bbfa4504ce3a83ed4352542f401a7f517965573"
+      },
+      "legacy_split": {
+        "v2": "test",
+        "v3": "test"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-customer-churn-cohorts/environment/Dockerfile",
+        "sha256": "02dd6aaed5521786eae26e416c1242cb4b001e12818b4dc88512eb05c362fca6"
+      },
+      "objective_summary": "First-transaction monthly cohort retention and churn-adjusted CLV",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-customer-value-retention",
+      "task_key": "deb__dbt-customer-churn-cohorts",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "add_models"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-customer-churn-early-warning.json",
+        "sha256": "e09b252fee1e899bdb0d3a64c192961ccd54fa4b0e5ef9139f1c1b81482885e8"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-customer-churn-early-warning/instruction.md",
+        "sha256": "c5f9223523a3a9beb3a49f3f55f290909e1afb7dbd7b29fa890fe86bc52785ed"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-customer-churn-early-warning/environment/Dockerfile",
+        "sha256": "ba55cb2429657e675c192707e701a70ee4907f7b3a067bff679cf34ddf7fe15c"
+      },
+      "objective_summary": "Weekly recency/count/revenue churn-warning mart",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-customer-value-retention",
+      "task_key": "deb__dbt-customer-churn-early-warning",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project_from_reference_models"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-customer-cltv-forecasting.json",
+        "sha256": "5719f697d7b12f8f0e54f054ca54a919f848f97be7af64d28be6ae601bfdaeec"
+      },
+      "current_split": "test",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/test_tasks_v2.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-customer-cltv-forecasting/instruction.md",
+        "sha256": "c174ccdfcb8ecd3dd3ddbd458ec545399cedf257a95fff3a35f6cbd5c56841e3"
+      },
+      "legacy_split": {
+        "v2": "test",
+        "v3": "test"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-customer-cltv-forecasting/environment/Dockerfile",
+        "sha256": "320a8703a5ab39567aa9d1fa69a1b5c54b1010c6d56ee6430129894e68a4a026"
+      },
+      "objective_summary": "Customer 3/6/12-month revenue forecasts from six-month activity",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-customer-value-retention",
+      "task_key": "deb__dbt-customer-cltv-forecasting",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project_from_reference_models"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-customer-cohort-retention.json",
+        "sha256": "50a2f034c6fa4786a9d6c11a58345947ff37795471bb7fc1cb791128afb774c8"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-customer-cohort-retention/instruction.md",
+        "sha256": "cf68a75ca41b31e8b085e1ed459aa2eb5bc488762db582adcb557ca4da2415f8"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-customer-cohort-retention/environment/Dockerfile",
+        "sha256": "02dd6aaed5521786eae26e416c1242cb4b001e12818b4dc88512eb05c362fca6"
+      },
+      "objective_summary": "Monthly first-valid-order cohort retention, revenue and summaries",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-customer-value-retention",
+      "task_key": "deb__dbt-customer-cohort-retention",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "build_dbt_models"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-customer-cross-sell-insights.json",
+        "sha256": "28c06b3f899c56ddb6c9deecb56c4126988a9ebb9e464b93bd04e04d334f6ab3"
+      },
+      "current_split": "test",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/test_tasks_v2.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-customer-cross-sell-insights/instruction.md",
+        "sha256": "267e73b0ad17bbb70e1d5641df530b7db209bb05d7c4c3f7fcd994d82e02149b"
+      },
+      "legacy_split": {
+        "v2": "test",
+        "v3": "test"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-customer-cross-sell-insights/environment/Dockerfile",
+        "sha256": "ba55cb2429657e675c192707e701a70ee4907f7b3a067bff679cf34ddf7fe15c"
+      },
+      "objective_summary": "SKU-pair association rules, temporal decay, segment and category analysis",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-product-affinity",
+      "task_key": "deb__dbt-customer-cross-sell-insights",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project_from_reference_models"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-customer-geographic.json",
+        "sha256": "55a165e69aef36b4cec49ce910141ba7041723b5bf0ba35a220f0c2fcdbbab0e"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-customer-geographic/instruction.md",
+        "sha256": "fbf44ab3663fcb9d939595a5b225bc517f1a25b7338cd4b36a9868a2e2850f6f"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-customer-geographic/environment/Dockerfile",
+        "sha256": "ba55cb2429657e675c192707e701a70ee4907f7b3a067bff679cf34ddf7fe15c"
+      },
+      "objective_summary": "State customer/revenue aggregation using default shipping addresses",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-customer-geographic",
+      "task_key": "deb__dbt-customer-geographic",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-customer-lifetime-value.json",
+        "sha256": "7054e31a63d9f9c34942d53ed5482b4a18f98d6e609e91ce37ca18689abc821a"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-customer-lifetime-value/instruction.md",
+        "sha256": "75f5b84838aeee2b10059808ac7b2464a563115e193c09265f146c0988478c26"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-customer-lifetime-value/environment/Dockerfile",
+        "sha256": "26f60945479dd22640a166c41560ad3c3321977c8d6364d2f8f94ea64d5b5abb"
+      },
+      "objective_summary": "CLV NPV, inter-order gaps, health/churn, lifecycle and cohort suite",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-customer-value-retention",
+      "task_key": "deb__dbt-customer-lifetime-value",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "add_models"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-customer-ltv-fix.json",
+        "sha256": "0e0f9b64456490065ca1534a5730451470004aa44a4cd446bb6bf8c29f812bbd"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-customer-ltv-fix/instruction.md",
+        "sha256": "dcb50c0fd19d97943d6089d56e9d953ff97433a385f3ffd9c3f481b114b0e283"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-customer-ltv-fix/environment/Dockerfile",
+        "sha256": "26f60945479dd22640a166c41560ad3c3321977c8d6364d2f8f94ea64d5b5abb"
+      },
+      "objective_summary": "Valid-order customer lifetime value with zero-order customers and value tiers",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-customer-value-retention",
+      "task_key": "deb__dbt-customer-ltv-fix",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "diagnose_and_add_corrected_model"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-customer-order-analytics.json",
+        "sha256": "09863e7357c51b55d1158da5770de550a7c4e6020888910ad209fe9a5d7b77ec"
+      },
+      "current_split": "test",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/test_tasks_v2.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-customer-order-analytics/instruction.md",
+        "sha256": "2e222e7aba60614f5a72d1fdd5b469c6bddbce3ffab1641be96f417735a950e6"
+      },
+      "legacy_split": {
+        "v2": "test",
+        "v3": "test"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-customer-order-analytics/environment/Dockerfile",
+        "sha256": "ba55cb2429657e675c192707e701a70ee4907f7b3a067bff679cf34ddf7fe15c"
+      },
+      "objective_summary": "Customer valid-order metrics and purchase-frequency tiers",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-customer-value-retention",
+      "task_key": "deb__dbt-customer-order-analytics",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-customer-risk-scoring.json",
+        "sha256": "59172fc2afe05cafe19f39b9254c4ac203a22e118f8aeb9f4140e10982b2e41e"
+      },
+      "current_split": "test",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/test_tasks_v2.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-customer-risk-scoring/instruction.md",
+        "sha256": "eb77bfdd49aeabc612fb28c835ed7c8d595cd9b411fd9e86d871a06752bb7c0e"
+      },
+      "legacy_split": {
+        "v2": "test",
+        "v3": "test"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-customer-risk-scoring/environment/Dockerfile",
+        "sha256": "02dd6aaed5521786eae26e416c1242cb4b001e12818b4dc88512eb05c362fca6"
+      },
+      "objective_summary": "All-customer unpaid-order/return/chargeback point-based risk scores",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-customer-risk-scoring",
+      "task_key": "deb__dbt-customer-risk-scoring",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-daily-order-summary.json",
+        "sha256": "e95a9a5c8ab6073eb11224c565cbd08af2d61ae1cc53a4ed30d0452a51d4a694"
+      },
+      "current_split": "test",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/test_tasks_v2.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-daily-order-summary/instruction.md",
+        "sha256": "d88a9d6c1bfcf7a9bb9af5e7095ef13bd88bbc7ca94be454f127ec9032f08851"
+      },
+      "legacy_split": {
+        "v2": "test",
+        "v3": "test"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-daily-order-summary/environment/Dockerfile",
+        "sha256": "3d18ec3f06bd289ee633e24b8b05b43779e91a3bbb6e3b4481c501a21336ddea"
+      },
+      "objective_summary": "Daily valid-order count and revenue",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-daily-order-summary",
+      "task_key": "deb__dbt-daily-order-summary",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-dq-macro-enforcement.json",
+        "sha256": "63756a794f32e60b78ff1d537a328002c58255a705a8acd23f0f900bf8d1dd3d"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-dq-macro-enforcement/instruction.md",
+        "sha256": "49743365842e5bc29fcbb719a0553f726db8304611f6be9943c39a5b7afb2cd8"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-dq-macro-enforcement/environment/Dockerfile",
+        "sha256": "24230e744d84be01f3c83aa7294d25322f0532d76177f27d0c0ca2537f9d3e51"
+      },
+      "objective_summary": "Order-line DQ flags, SKU/name fallbacks and corrected net pricing",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-dq-macro-enforcement",
+      "task_key": "deb__dbt-dq-macro-enforcement",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "modify_existing_model_and_macros"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-exchange-rate-settlement-date.json",
+        "sha256": "95e6c8cd09f2f22c16fb246ec715e4797d87ce3f410a3957c6d94468bb6f7d25"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-exchange-rate-settlement-date/instruction.md",
+        "sha256": "99f8671657b2277a446f6ae242f39e29f0549133476509530741f31df3c85f33"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-exchange-rate-settlement-date/environment/Dockerfile",
+        "sha256": "bdfe1555ed849d8a23246c2202e535f32897c8722cfdf77c75f5250a7f0cc7de"
+      },
+      "objective_summary": "Revenue fact FX rates at latest payment settlement date with fallback",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-exchange-rate-settlement-date",
+      "task_key": "deb__dbt-exchange-rate-settlement-date",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "modify_existing_model"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-fix-cac-payback-waterfall.json",
+        "sha256": "6de13eb589dd4e131bcc90af63115018e4fdca76e08bef4dac35ac0eea66e096"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-fix-cac-payback-waterfall/instruction.md",
+        "sha256": "b70d234d92963ed8dc7dfb530fb7e2810396a9b6bce58a0906f7d52642cf40c8"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-fix-cac-payback-waterfall/environment/Dockerfile",
+        "sha256": "201a7148b7005ed308603c04b9d734a3e8d7a4e8dcd754f0eb069b9c32dbf792"
+      },
+      "objective_summary": "Campaign-day cumulative spend/revenue and payback waterfall",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-marketing-payback",
+      "task_key": "deb__dbt-fix-cac-payback-waterfall",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project_from_reference_models"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-fix-email-attribution.json",
+        "sha256": "cd695e49c18e11ad67f8d5dce39df2c456bfcdc870badc9cb57a3bf0ea4f18e1"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-fix-email-attribution/instruction.md",
+        "sha256": "5ecc971d702a7150ceb9f4e224319c008b252c9decfc4d60dc1c798fa62ea8c7"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-fix-email-attribution/environment/Dockerfile",
+        "sha256": "91b80e27631cb37c8a621de831e47756dc16793d0b1e396c85482d2c08bfd13a"
+      },
+      "objective_summary": "Daily GA4 UTM attribution with fixed dates and purchase-event revenue",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-ga4-attribution",
+      "task_key": "deb__dbt-fix-email-attribution",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project_from_reference_models"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-fix-marketing-attribution.json",
+        "sha256": "8aa8714e1f575fa1e8e4901332040d924dcb6ba273ed8b0e35baf078e16a99ba"
+      },
+      "current_split": "test",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/test_tasks_v2.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-fix-marketing-attribution/instruction.md",
+        "sha256": "866c88e958be747dbdf2711147e233980dbdec1cdf92bda08f98f79b5817e08c"
+      },
+      "legacy_split": {
+        "v2": "test",
+        "v3": "test"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-fix-marketing-attribution/environment/Dockerfile",
+        "sha256": "797acb536dc1340aed3410480cc20aabdd78cedb7e6fcfae9974c422745094d4"
+      },
+      "objective_summary": "GA4 daily attribution repair with rolling data-relative window",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-ga4-attribution",
+      "task_key": "deb__dbt-fix-marketing-attribution",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "diagnose_and_rebuild_model"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-fix-multi-touch-attribution.json",
+        "sha256": "ea5269bf55123bc9ff6f0465318018a54023391d463c110e9f7a0d6cf0a27eee"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-fix-multi-touch-attribution/instruction.md",
+        "sha256": "684908ea13f989da27b9b08b8f87dc79690d4f25f7073d4741ac9a905c51f3c1"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-fix-multi-touch-attribution/environment/Dockerfile",
+        "sha256": "02dd6aaed5521786eae26e416c1242cb4b001e12818b4dc88512eb05c362fca6"
+      },
+      "objective_summary": "Five GA4 attribution models with channel groups and assists",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-ga4-attribution",
+      "task_key": "deb__dbt-fix-multi-touch-attribution",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project_from_reference_models"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-fix-paid-search-attribution.json",
+        "sha256": "d8d7519a98f8de5d24871c21effa0201abaed06037a42bd7011d823331613ee8"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-fix-paid-search-attribution/instruction.md",
+        "sha256": "562e7375023692098bbf4c0fdcbf4480a6e59ae2212d7170dec3668331fb0c82"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-fix-paid-search-attribution/environment/Dockerfile",
+        "sha256": "c5481bccb9177459ab269ef20f78eb58ff9bdbc9dfb2407d854cff63e2d327bd"
+      },
+      "objective_summary": "Daily GA4 attribution retaining paid-search channel quality",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-ga4-attribution",
+      "task_key": "deb__dbt-fix-paid-search-attribution",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "rebuild_attribution_model"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-fix-repeat-purchase-cohort-revenue.json",
+        "sha256": "5a3ff6458c381f473d86f4bbb3daaaeb6fc18d93f0793d57927cd839a254d8b6"
+      },
+      "current_split": "test",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-fix-repeat-purchase-cohort-revenue/instruction.md",
+        "sha256": "48ee39f9aff77c9c64c15d729d5f719f3d9fa2aa149452455222f47c104bcb0a"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "test"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-fix-repeat-purchase-cohort-revenue/environment/Dockerfile",
+        "sha256": "02dd6aaed5521786eae26e416c1242cb4b001e12818b4dc88512eb05c362fca6"
+      },
+      "objective_summary": "First-purchase cohort/month bucket counts, revenue and cumulative revenue",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-customer-value-retention",
+      "task_key": "deb__dbt-fix-repeat-purchase-cohort-revenue",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project_from_reference_models"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-fraud-detection-model.json",
+        "sha256": "291b59f883e588631c4ca71e6e1dc29d47ebfe0a5b6d3b3307e6eb0c433302dd"
+      },
+      "current_split": "test",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/test_tasks_v2.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-fraud-detection-model/instruction.md",
+        "sha256": "703108acdf0f54772d48131eaa9e12ec76d9cb08d7f2e88a034d2d5ae2ccf883"
+      },
+      "legacy_split": {
+        "v2": "test",
+        "v3": "test"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-fraud-detection-model/environment/Dockerfile",
+        "sha256": "02dd6aaed5521786eae26e416c1242cb4b001e12818b4dc88512eb05c362fca6"
+      },
+      "objective_summary": "All-order fraud flags for value, quantity, velocity, addresses and history",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-fraud-analysis",
+      "task_key": "deb__dbt-fraud-detection-model",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "build_dbt_models"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-fulfillment-sla.json",
+        "sha256": "9b58980f8a6f767de00473a1ed550d45f2cba370c34f65cb37db2bb386362f46"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-fulfillment-sla/instruction.md",
+        "sha256": "bd6a3d4130ed2ba3ac879c3723ab797012e1dd770b6776b73ac8249927de8cb6"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-fulfillment-sla/environment/Dockerfile",
+        "sha256": "02dd6aaed5521786eae26e416c1242cb4b001e12818b4dc88512eb05c362fca6"
+      },
+      "objective_summary": "Shipment SLA, carrier and warehouse performance analytics",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-fulfillment-performance",
+      "task_key": "deb__dbt-fulfillment-sla",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "add_models"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-gl-reconciliation.json",
+        "sha256": "170b27d98d4b040456673aa8e0011e2985d243cc2f02b3e9ad22021515c592b9"
+      },
+      "current_split": "test",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/test_tasks_v2.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-gl-reconciliation/instruction.md",
+        "sha256": "f7cafa992539b4b0851cb478712dbb8817ce5e8480ef6b703a8ba5846c7cb99d"
+      },
+      "legacy_split": {
+        "v2": "test",
+        "v3": "test"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-gl-reconciliation/environment/Dockerfile",
+        "sha256": "80af24b9544dcc5dea0d6d5b0f8cab09b0ce4720629f0362f8e82f49c310d0a8"
+      },
+      "objective_summary": "Account/trial balances, unbalanced entries and fiscal-period summaries",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-gl-reconciliation",
+      "task_key": "deb__dbt-gl-reconciliation",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-harbor-marketing-mix-model.json",
+        "sha256": "86bcc07ce6062481385cd3ed8b1f091da7e60f3376b876691348848d0789f13e"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-harbor-marketing-mix-model/instruction.md",
+        "sha256": "15b815b3a6e5e75b09e732c5cd7b5c46d9ec5780f110733d423f421f5c92fcfd"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-harbor-marketing-mix-model/environment/Dockerfile",
+        "sha256": "02dd6aaed5521786eae26e416c1242cb4b001e12818b4dc88512eb05c362fca6"
+      },
+      "objective_summary": "Marketing mix baseline, adstock/saturation and budget optimization",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-harbor-marketing-mix-model",
+      "task_key": "deb__dbt-harbor-marketing-mix-model",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "add_models"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-harbor-product-affinity.json",
+        "sha256": "b25829bcbd15750197f66fd2023a2f97cd9a7e15c1ad61766ef6b56be82e44b1"
+      },
+      "current_split": "test",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-harbor-product-affinity/instruction.md",
+        "sha256": "2bbdc4b90f7372be65d88f935c43664c87c4f8c3b1cb96d1c3494bc0b0461cb2"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "test"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-harbor-product-affinity/environment/Dockerfile",
+        "sha256": "02dd6aaed5521786eae26e416c1242cb4b001e12818b4dc88512eb05c362fca6"
+      },
+      "objective_summary": "Product co-occurrence association rules and bundle recommendations",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-product-affinity",
+      "task_key": "deb__dbt-harbor-product-affinity",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "add_models"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-harbor-warehouse-capacity.json",
+        "sha256": "a34148123a6560e4fd5582636b8429ed9190e7f7b4ec736750bf2822acdd8a88"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-harbor-warehouse-capacity/instruction.md",
+        "sha256": "4e9218a75f0c343f0e0d0a13dfed03148b0315efbacbe8e8c650cbab00e8cfa4"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-harbor-warehouse-capacity/environment/Dockerfile",
+        "sha256": "ba55cb2429657e675c192707e701a70ee4907f7b3a067bff679cf34ddf7fe15c"
+      },
+      "objective_summary": "Warehouse hourly volume grid, daily capacity, peaks and staffing",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-harbor-warehouse-capacity",
+      "task_key": "deb__dbt-harbor-warehouse-capacity",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-hr-analytics.json",
+        "sha256": "6f261071cfe71e3c0bf592dbb2e5b046322e2dbc0192362978618546f59f0544"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-hr-analytics/instruction.md",
+        "sha256": "feec55d1e97a6173f1347d46e024ffaeec45e325df011bd8bbdcc32ffe34cf4d"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-hr-analytics/environment/Dockerfile",
+        "sha256": "797acb536dc1340aed3410480cc20aabdd78cedb7e6fcfae9974c422745094d4"
+      },
+      "objective_summary": "HR organization, compensation, capacity and workforce productivity layers",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-hr-analytics",
+      "task_key": "deb__dbt-hr-analytics",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-inventory-analysis.json",
+        "sha256": "1633893d336191c709fcf5cb7668b7dd58cffb1c13dc7c27c079a6029fa2aa78"
+      },
+      "current_split": "test",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-inventory-analysis/instruction.md",
+        "sha256": "92a97757ecec5d888749f9b5969b397ca4d3f7304efa5a3beedb216269a37a46"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "test"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-inventory-analysis/environment/Dockerfile",
+        "sha256": "70620e5d4f1edf55709989ab6c8d1522ce3533c955677ab986f480f335b99ac9"
+      },
+      "objective_summary": "Warehouse on-hand quantity/value and weighted unit-cost concentration",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-inventory-analysis",
+      "task_key": "deb__dbt-inventory-analysis",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-inventory-stockout-risk.json",
+        "sha256": "576de5b770aee82f8d604c5269f32aa86ae7e6b6c90e19e7d91a382840ef230d"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-inventory-stockout-risk/instruction.md",
+        "sha256": "d404374684b6cb4a8ed69a288fd360ea853458f2c6b5251d477c0458eab407cd"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-inventory-stockout-risk/environment/Dockerfile",
+        "sha256": "ba55cb2429657e675c192707e701a70ee4907f7b3a067bff679cf34ddf7fe15c"
+      },
+      "objective_summary": "Warehouse/SKU stockout risk from velocity, inventory and procurement lead times",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-inventory-stockout-risk",
+      "task_key": "deb__dbt-inventory-stockout-risk",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-loyalty-points-analysis.json",
+        "sha256": "4c589bb47176cb4f36e89b61cb052511c5bd2e6c147037282d44e593b7a717b1"
+      },
+      "current_split": "test",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-loyalty-points-analysis/instruction.md",
+        "sha256": "02389032e92f5b04953e4819dcff14f7e41c86cf1401018c27e32d4f67f61193"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "test"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-loyalty-points-analysis/environment/Dockerfile",
+        "sha256": "02dd6aaed5521786eae26e416c1242cb4b001e12818b4dc88512eb05c362fca6"
+      },
+      "objective_summary": "Program-level loyalty earn/redeem/expire and liability summary",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-loyalty-points-analysis",
+      "task_key": "deb__dbt-loyalty-points-analysis",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-monthly-channel-revenue.json",
+        "sha256": "cbae96e6e47903db7dcbdcd15c73901478bbd703e8890a02e9eb845f67f237e3"
+      },
+      "current_split": "test",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/test_tasks_v2.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-monthly-channel-revenue/instruction.md",
+        "sha256": "a1433503841fa4867ffddbadfcdca51dff0f6582f7b694ec5d7f65c231714117"
+      },
+      "legacy_split": {
+        "v2": "test",
+        "v3": "test"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-monthly-channel-revenue/environment/Dockerfile",
+        "sha256": "d713951d931acf2b9115faef3e42679a3dbeb9186326887882ded6a2774301f1"
+      },
+      "objective_summary": "Monthly sales-channel metrics, growth and market benchmarks",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-monthly-channel-revenue",
+      "task_key": "deb__dbt-monthly-channel-revenue",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "add_models"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-multicurrency-lifo.json",
+        "sha256": "ab8566626e238aabbb6726cdb9e6ec3946299478d20fb65803417fe51d378bd6"
+      },
+      "current_split": "test",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-multicurrency-lifo/instruction.md",
+        "sha256": "668d2e273baa573e01d2058f600e961bd9b83c6928ac9fc92d0446cc636ddd31"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "test"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-multicurrency-lifo/environment/Dockerfile",
+        "sha256": "ba55cb2429657e675c192707e701a70ee4907f7b3a067bff679cf34ddf7fe15c"
+      },
+      "objective_summary": "Purchase FX and sale COGS using LIFO with weighted-average fallback",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-multicurrency-lifo",
+      "task_key": "deb__dbt-multicurrency-lifo",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project_from_reference_models"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-order-fulfillment-analytics.json",
+        "sha256": "52017e05fe262a6cf891fe8548ed77a21a3c0ad77016351af87f80f85e54b8e8"
+      },
+      "current_split": "test",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/test_tasks_v2.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-order-fulfillment-analytics/instruction.md",
+        "sha256": "bc2a9f6a394849ceaf9951305efdab6e196888148c0e8465f7905a5b85daa693"
+      },
+      "legacy_split": {
+        "v2": "test",
+        "v3": "test"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-order-fulfillment-analytics/environment/Dockerfile",
+        "sha256": "02dd6aaed5521786eae26e416c1242cb4b001e12818b4dc88512eb05c362fca6"
+      },
+      "objective_summary": "Order lifecycle, shipment, fulfillment, returns and daily revenue layers",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-fulfillment-performance",
+      "task_key": "deb__dbt-order-fulfillment-analytics",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "add_models"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-order-fulfillment-metrics.json",
+        "sha256": "c30231105e3e5654635aca9bbb4494cfa0cc77b2d817e78daccff132443d0e70"
+      },
+      "current_split": "test",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-order-fulfillment-metrics/instruction.md",
+        "sha256": "bb98b2a29098aad709059bbcadf27c321159cc7644dcd663cb85632503a03753"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "test"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-order-fulfillment-metrics/environment/Dockerfile",
+        "sha256": "ba55cb2429657e675c192707e701a70ee4907f7b3a067bff679cf34ddf7fe15c"
+      },
+      "objective_summary": "Order-type processing/delivery metrics and performance tiers",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-fulfillment-performance",
+      "task_key": "deb__dbt-order-fulfillment-metrics",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-order-interval-metrics.json",
+        "sha256": "4f768018b6b1047ba412fea5a8a3ea7cfc6dc5f95b7f18eaea241a86363f22fc"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-order-interval-metrics/instruction.md",
+        "sha256": "6bc6b0f5df62b0cbe0dfb09bc154c331339eb836e3fcea3604dbc31bd31fd443"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-order-interval-metrics/environment/Dockerfile",
+        "sha256": "26f60945479dd22640a166c41560ad3c3321977c8d6364d2f8f94ea64d5b5abb"
+      },
+      "objective_summary": "Customer inter-order gaps, value/churn, momentum and lifecycle",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-customer-value-retention",
+      "task_key": "deb__dbt-order-interval-metrics",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "add_models"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-order-reconciliation.json",
+        "sha256": "57da55c20e756823ff64b4f96f04b3cb6bb10c8581dc350fd445c1992861f2d7"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-order-reconciliation/instruction.md",
+        "sha256": "a719283074bbb0007025daa0f169bf03e826009f9d09fd59fc6296b836ea81ad"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-order-reconciliation/environment/Dockerfile",
+        "sha256": "e39c5a1c2716629a48b45d24d25d0b7e61ba003f850937f8a1496f2cbe0960d5"
+      },
+      "objective_summary": "Order-header versus line-total financial reconciliation",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-order-reconciliation",
+      "task_key": "deb__dbt-order-reconciliation",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-payment-fraud-analysis.json",
+        "sha256": "84d121c89d609f2f4389009c5efeaa1595f50463ad01ed08f36226116cf65c4e"
+      },
+      "current_split": "test",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/test_tasks_v2.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-payment-fraud-analysis/instruction.md",
+        "sha256": "edb45464f5d1a08dd65320768be06f4e8d353b6d21cb1b5961b289cf7cf3cf81"
+      },
+      "legacy_split": {
+        "v2": "test",
+        "v3": "test"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-payment-fraud-analysis/environment/Dockerfile",
+        "sha256": "614280ec06df548e5e2ae908310866385ffd9099b3702fbbb8ad39269c097c64"
+      },
+      "objective_summary": "Payment method/velocity, supplied fraud scores and payment anomalies",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-fraud-analysis",
+      "task_key": "deb__dbt-payment-fraud-analysis",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-price-elasticity.json",
+        "sha256": "66a75f21eee7093cfaea0455344ec33d06486f24cefbc3e93150b9bdea816d32"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-price-elasticity/instruction.md",
+        "sha256": "faec5702370d75fd838cf6992f1ef142661058687e55d1a1d131be207cef2038"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-price-elasticity/environment/Dockerfile",
+        "sha256": "797acb536dc1340aed3410480cc20aabdd78cedb7e6fcfae9974c422745094d4"
+      },
+      "objective_summary": "Monthly midpoint product demand-price elasticity",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-price-elasticity",
+      "task_key": "deb__dbt-price-elasticity",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-product-affinity.json",
+        "sha256": "82b1f215ead36b4b2ae955c6bfd5121acbb47f02c89e6a8983ae371192e9b574"
+      },
+      "current_split": "test",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/test_tasks_v2.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-product-affinity/instruction.md",
+        "sha256": "04675ebeabcbc60266b8ae07cfe7a53f6aa840eec656f806773cc1a84c63afad"
+      },
+      "legacy_split": {
+        "v2": "test",
+        "v3": "test"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-product-affinity/environment/Dockerfile",
+        "sha256": "70375fecff85f50afffd4819458a72ea41e8867f5914cc680de2d2f47c406321"
+      },
+      "objective_summary": "Product association rules with temporal, segment and category extensions",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-product-affinity",
+      "task_key": "deb__dbt-product-affinity",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "add_models"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-product-category-analytics.json",
+        "sha256": "49513661d48d15cfdc565909303595c4d434824448ab42b49990a7fb73b6be05"
+      },
+      "current_split": "test",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-product-category-analytics/instruction.md",
+        "sha256": "ff0ffcd26959c859b5c76a0662307f419ad0edf15a4065bfd19e17769e66737c"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "test"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-product-category-analytics/environment/Dockerfile",
+        "sha256": "02dd6aaed5521786eae26e416c1242cb4b001e12818b4dc88512eb05c362fca6"
+      },
+      "objective_summary": "Category hierarchy sales/cost/profit aggregation",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-product-category-analytics",
+      "task_key": "deb__dbt-product-category-analytics",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-product-performance-metrics.json",
+        "sha256": "3fd8ff66ab1a1d9ac7c697c539f46e3407e3900ea7ee5c11e57d629c7dbf1348"
+      },
+      "current_split": "test",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-product-performance-metrics/instruction.md",
+        "sha256": "8f3b0330526e9fc04f4ebce57f171a6f66fa0921ec9645caa541b07351524d85"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "test"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-product-performance-metrics/environment/Dockerfile",
+        "sha256": "31568d1f5d01e38e117b2eafacc4a6f028b9f6b0402872de2e65b253c8575421"
+      },
+      "objective_summary": "Product revenue/returns, ABC, velocity and health scoring",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-product-sales-scorecards",
+      "task_key": "deb__dbt-product-performance-metrics",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "add_models"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-product-return-rate-analysis.json",
+        "sha256": "c88b4d3b3281510e2c02a059ba38a98672ad3ed361accf669a26a56ddcd1f99e"
+      },
+      "current_split": "test",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/test_tasks_v2.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-product-return-rate-analysis/instruction.md",
+        "sha256": "e05e42c65f1588e2575d540bf291196d2c38b85e431228198fcd25aedcd30e3e"
+      },
+      "legacy_split": {
+        "v2": "test",
+        "v3": "test"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-product-return-rate-analysis/environment/Dockerfile",
+        "sha256": "2b6fd0d8d8efffe9f7aadf1c1f5056f23a35c976b9e8e567d38d1b6b27110da0"
+      },
+      "objective_summary": "Return-line/product-month rates, impact, timing and reasons",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-product-return-rate-analysis",
+      "task_key": "deb__dbt-product-return-rate-analysis",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project_from_reference_models"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-product-sales-velocity.json",
+        "sha256": "f894401efb0d9f29d8e00cecc017d7b7c32966565585b6a3f447bfecef8ec118"
+      },
+      "current_split": "test",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-product-sales-velocity/instruction.md",
+        "sha256": "7b350bee217c0957370a972a548e22efd94a3e93114a65fcd895fb6581bea67d"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "test"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-product-sales-velocity/environment/Dockerfile",
+        "sha256": "02dd6aaed5521786eae26e416c1242cb4b001e12818b4dc88512eb05c362fca6"
+      },
+      "objective_summary": "Product day/month sales velocity, demand shifts and scorecard",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-product-sales-scorecards",
+      "task_key": "deb__dbt-product-sales-velocity",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "add_models"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-retail-task-01-channel-revenue.json",
+        "sha256": "3815f5b846d0e39e407d214f413f97339e63ef5fa5fd30743a37a8b9e79d19db"
+      },
+      "current_split": "test",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/test_tasks_v2.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-retail-task-01-channel-revenue/instruction.md",
+        "sha256": "c78a571b8208eacbd8f3ac382c5516be98fbc19981a5c48d6606a405b9ad2cf9"
+      },
+      "legacy_split": {
+        "v2": "test",
+        "v3": "test"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-retail-task-01-channel-revenue/environment/Dockerfile",
+        "sha256": "02dd6aaed5521786eae26e416c1242cb4b001e12818b4dc88512eb05c362fca6"
+      },
+      "objective_summary": "Monthly sales-fact channel revenue/profit/margin view",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-monthly-channel-revenue",
+      "task_key": "deb__dbt-retail-task-01-channel-revenue",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "add_model_with_required_tags"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-retail-task-04-market-roi.json",
+        "sha256": "d35a1c68027e103e7258d085600b571fcb9ee992c4842fdecd99c3da2250fe9a"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-retail-task-04-market-roi/instruction.md",
+        "sha256": "3b5571b3ce2cd730e5a2e70e976522762bf80b754269910b8d8c8c341d3756d7"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-retail-task-04-market-roi/environment/Dockerfile",
+        "sha256": "02dd6aaed5521786eae26e416c1242cb4b001e12818b4dc88512eb05c362fca6"
+      },
+      "objective_summary": "Monthly channel/segment marketing ROI and 90-day payback",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-marketing-payback",
+      "task_key": "deb__dbt-retail-task-04-market-roi",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "add_model_and_tests"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-retail-task-07-cart-recovery.json",
+        "sha256": "f08d473f96cfe932cac99c2ca756e6067bc877f87b56304063d278cf2ed2a70f"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-retail-task-07-cart-recovery/instruction.md",
+        "sha256": "d9a6c26ec7385dbab8f60e0ebcc422cb91ad2cea8defcb02fc81e76f1b2e36e2"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-retail-task-07-cart-recovery/environment/Dockerfile",
+        "sha256": "939fd148c4b5a25b2ae8df22b9985a4d67d89f9242471ebbd5e4061839e632e9"
+      },
+      "objective_summary": "Cart recovery queue from session/inventory/customer/consent signals",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-retail-task-07-cart-recovery",
+      "task_key": "deb__dbt-retail-task-07-cart-recovery",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "build_models_from_allowed_staging_refs"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-retail-task-10-trust-risk.json",
+        "sha256": "dc9ecc59a8d6e2010ffbfa98de6b081eb26a5d8140da22e03f7fa9411ac15708"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-retail-task-10-trust-risk/instruction.md",
+        "sha256": "62b91404f55c11b1f0712b5ac3ed715081ce7aeb734ea9464edf6c985cc3c52f"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-retail-task-10-trust-risk/environment/Dockerfile",
+        "sha256": "02dd6aaed5521786eae26e416c1242cb4b001e12818b4dc88512eb05c362fca6"
+      },
+      "objective_summary": "Review enrichment, moderation risk and monthly KPI rollup",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-retail-task-10-trust-risk",
+      "task_key": "deb__dbt-retail-task-10-trust-risk",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "add_models_and_schema_tests"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-rfm-customer-segmentation.json",
+        "sha256": "6da742f5149db191d82104bf2d7884408ed0b2124f8603ee619a834ea9904fac"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-rfm-customer-segmentation/instruction.md",
+        "sha256": "1b1973164c99024b89a1010e5b1111351aaa254650b1d5ea471a2c02e02556bc"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-rfm-customer-segmentation/environment/Dockerfile",
+        "sha256": "f01a8a7b00828d5fbfb72866749853fe38841ba826ab396b71f91d4baf454e09"
+      },
+      "objective_summary": "Customer recency/frequency/monetary quintiles and priority-ordered segments",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-customer-value-retention",
+      "task_key": "deb__dbt-rfm-customer-segmentation",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-rfm-customer-segmentation-2.json",
+        "sha256": "5a9355ba14db5abf6b36f59a3cacd28c9d8c1449d95275293c2adbad4ea0633b"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-rfm-customer-segmentation-2/instruction.md",
+        "sha256": "781004fdc836cc3ad16901312d74dfeb5c5da69b7624aeefec953b57ed481a1f"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-rfm-customer-segmentation-2/environment/Dockerfile",
+        "sha256": "01dd6849a5127ed8c0c0b64bd79498d2546ca93c142260ab9009250118fe56c4"
+      },
+      "objective_summary": "RFM scores with churn, recommendations and monthly cohort retention",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-customer-value-retention",
+      "task_key": "deb__dbt-rfm-customer-segmentation-2",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "add_models"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-rfm-customer-tiering.json",
+        "sha256": "faa30d9398bcf2784d0abeb0773f01e3b52e7d1f6b1cb98f63e5eb9324ccc253"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-rfm-customer-tiering/instruction.md",
+        "sha256": "cb711ed680c159b6287a5c025c70651f35eaec1bed1893152aa0cf8ede3b7efb"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-rfm-customer-tiering/environment/Dockerfile",
+        "sha256": "02dd6aaed5521786eae26e416c1242cb4b001e12818b4dc88512eb05c362fca6"
+      },
+      "objective_summary": "RFM tiers/transitions, weighted channels and cohort analytics",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-customer-value-retention",
+      "task_key": "deb__dbt-rfm-customer-tiering",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "add_models"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-sales-funnel-analysis.json",
+        "sha256": "392675f9e4f2f557556bd0fc18ff0a10fded08b569c37e1e9c5b27647b1946bf"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-sales-funnel-analysis/instruction.md",
+        "sha256": "37fcbadc66edaac47a9e9ed0717fd10a3d6e4d90c6bcab8cbd711152e6c65aee"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-sales-funnel-analysis/environment/Dockerfile",
+        "sha256": "ba55cb2429657e675c192707e701a70ee4907f7b3a067bff679cf34ddf7fe15c"
+      },
+      "objective_summary": "Session view/cart/purchase funnel and dropoff",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-sales-funnel-analysis",
+      "task_key": "deb__dbt-sales-funnel-analysis",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-session-attribution.json",
+        "sha256": "64e96a559ec6f7e773021d00547f3204ae1a1d3f8fbad16a75bf71ecb596aaef"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-session-attribution-env-v3.sif",
+        "sha256": "294bc8f0712f4c715c464f7842852ffadf1662ccb0e12f1b4c4d643f32ec9f48"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-session-attribution/instruction.md",
+        "sha256": "ee4b10bd5661820ace841c7b72571b31ca02ea8709113aaaa02f516723a304f6"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-session-attribution/environment/Dockerfile",
+        "sha256": "c3212a3c41343e2330ecad2cc0432f3299f31de8d233478c29062ea195cab930"
+      },
+      "objective_summary": "Quality-filtered web-session hybrid-decay fractional conversion credit",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-session-attribution",
+      "task_key": "deb__dbt-session-attribution",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "add_model"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-supplier-payment-optimization.json",
+        "sha256": "0a6973f7e80950ae93ccd0afb64958eb777a68b27e4c8f6cabd2e6bc20705f35"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-supplier-payment-optimization/instruction.md",
+        "sha256": "d80147dc97ab86f26da58224c9d87bd553c2af2b2a77f72a12f0a448c79479f3"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-supplier-payment-optimization/environment/Dockerfile",
+        "sha256": "9a0520216b1d24548dab234c866919ae1811fdea1f637f24800257df7ee099d0"
+      },
+      "objective_summary": "Invoice FX/aging, early-payment discounts, risk and cash-flow priorities",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-supplier-payment-optimization",
+      "task_key": "deb__dbt-supplier-payment-optimization",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "add_single_mart_model"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-supplier-scorecard.json",
+        "sha256": "a08838dab3f2ca74fcb755db954e557b90359b0f1d80cc7a1f73f4ba920e3637"
+      },
+      "current_split": "test",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/test_tasks_v2.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-supplier-scorecard/instruction.md",
+        "sha256": "a706e0494b40ccd4a151e6f3cbc9da93c4943ab1a1fe1f13024f1436af64dcf0"
+      },
+      "legacy_split": {
+        "v2": "test",
+        "v3": "test"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-supplier-scorecard/environment/Dockerfile",
+        "sha256": "02dd6aaed5521786eae26e416c1242cb4b001e12818b4dc88512eb05c362fca6"
+      },
+      "objective_summary": "Supplier delivery/quality/cost weighted performance score",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-supplier-scorecard",
+      "task_key": "deb__dbt-supplier-scorecard",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-test-orders-filter.json",
+        "sha256": "0d37c3f79cf2c5611ca3563a8273134eaf0a65e01169df1e0f72cf2506650f14"
+      },
+      "current_split": "test",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/test_tasks_v2.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-test-orders-filter/instruction.md",
+        "sha256": "8e392753293c0dbd3174a008ad12de659501f71b01db4f0cdaaa289881b5383b"
+      },
+      "legacy_split": {
+        "v2": "test",
+        "v3": "test"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-test-orders-filter/environment/Dockerfile",
+        "sha256": "bf097544290175054b80f528cc6109d4917f784e68d78e25f049ba05a6044d76"
+      },
+      "objective_summary": "Filter non-production orders into production_sales",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-test-orders-filter",
+      "task_key": "deb__dbt-test-orders-filter",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "diagnose_and_add_model"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-three-way-matching.json",
+        "sha256": "913670128dbbc6e06ffd579f64d130bbffb325883eac762dda0fd5c384fb7881"
+      },
+      "current_split": "test",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/test_tasks_v2.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-three-way-matching/instruction.md",
+        "sha256": "ed64113bd05222073724ffc92a97fc325cea8e168b68e90b45dac79e44ef361f"
+      },
+      "legacy_split": {
+        "v2": "test",
+        "v3": "test"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-three-way-matching/environment/Dockerfile",
+        "sha256": "3cf559d179e950b23644f76953cbe322c895b2d2499170347dae34d2f9a36ab7"
+      },
+      "objective_summary": "PO-line/receipt/invoice quantity/price matching and risk exceptions",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-three-way-matching",
+      "task_key": "deb__dbt-three-way-matching",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "add_single_mart_model"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-web-session-analytics.json",
+        "sha256": "7feaf8efe928112eccb19441159168d1edb13c33d4d5f42c21e8a5dfa511b87b"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-web-session-analytics/instruction.md",
+        "sha256": "e8b67934ad5eb18c86b767eeccd0797cd744f2c86aed36f4effbd0f9e950a630"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-web-session-analytics/environment/Dockerfile",
+        "sha256": "f01a8a7b00828d5fbfb72866749853fe38841ba826ab396b71f91d4baf454e09"
+      },
+      "objective_summary": "Session engagement/duration quality, device and visitor summaries",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-web-session-analytics",
+      "task_key": "deb__dbt-web-session-analytics",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project"
+    },
+    {
+      "backend_binding": {
+        "path": "catalog/backends/apptainer/deb__dbt-weekly-sales-growth.json",
+        "sha256": "5c39aebc41b3b270ac1bc8dfe566d953a4bf3c91b18e0eb877f17557ade75935"
+      },
+      "current_split": "train",
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "image": {
+        "path": "artifacts/images/deb-base-env-v4.sif",
+        "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "instruction": {
+        "path": "tasks/deb__dbt-weekly-sales-growth/instruction.md",
+        "sha256": "856339fc3f22abfa1e882e324c96b631235d8ecd3fffe50b325cd4921b710bb6"
+      },
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "native_dockerfile": {
+        "path": "tasks/deb__dbt-weekly-sales-growth/environment/Dockerfile",
+        "sha256": "0b473c05a6b177dcb1f32709d101bfbb586e22a7b2ba20a5bb2352f2fd6e32ff"
+      },
+      "objective_summary": "Sunday-based weekly sales with week-over-week growth",
+      "primary_input_family": "deb-retail-warehouse",
+      "project_family": "deb-retail-reference-project",
+      "review_scope": "Instruction objective, workflow, source and required-model overlap; not full semantic-contract coverage",
+      "split_group": "deb-weekly-sales-growth",
+      "task_key": "deb__dbt-weekly-sales-growth",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project"
+    }
+  ],
+  "v2_train_moved_to_v3_test": [
+    "deb__dbt-consolidate",
+    "deb__dbt-fix-repeat-purchase-cohort-revenue",
+    "deb__dbt-harbor-product-affinity",
+    "deb__dbt-inventory-analysis",
+    "deb__dbt-loyalty-points-analysis",
+    "deb__dbt-multicurrency-lifo",
+    "deb__dbt-order-fulfillment-metrics",
+    "deb__dbt-product-category-analytics",
+    "deb__dbt-product-performance-metrics",
+    "deb__dbt-product-sales-velocity"
+  ]
+}

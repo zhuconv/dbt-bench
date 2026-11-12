@@ -1,0 +1,8 @@
+--- original/instruction.md
++++ variant/instruction.md
+@@ -56,3 +56,5 @@
+ - The `avg_order_value` should be 0 for customers with no orders
+ - Do NOT modify upstream staging models
+ - Preserve all output columns
++
++Decide order validity from status alone: exclude only cancelled or returned orders and count all others, including those still in progress, regardless of payment status, fulfillment status or cancellation timestamps.

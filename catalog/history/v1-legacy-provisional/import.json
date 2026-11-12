@@ -1,0 +1,43 @@
+{
+  "archive_sha256_verified": false,
+  "candidate_count": 135,
+  "candidate_ids_hash": "ca3e2e4dbc0ee33fcc7b33f78b17255f0b3cf7c29545405c5dacaee9603dfd7b",
+  "counts": {
+    "ade": 16,
+    "deb": 64,
+    "spider2": 55
+  },
+  "counts_match_plan": true,
+  "expected_counts": {
+    "ade": 16,
+    "deb": 64,
+    "spider2": 55
+  },
+  "expected_revision": "0f80b11a1a2dfc1b53c5106bf34a83f5a4a23098",
+  "input_identity": {
+    "files": {
+      "code/data/test_tasks_v2.json": "ccdf9bd134538f6c7d6b0c300be6394e06c47fea7bf5b4c789adc66563ff8268",
+      "code/data/test_tasks_v3.json": "78bfbb8e9390d0d30c089993aad89b467031ed4a7fd65774b9ee93828c36ddf6",
+      "code/data/train_tasks_v2.json": "9f5c995e42cb0a2a761191a9a509af9eaf6687f237b55fdede80a5257d18604b",
+      "code/data/train_tasks_v3.json": "917b43bcf7cdd633e0bf0a52be814d6b750b490e56ae000c782a04f19e0b778a",
+      "code/harbor-cmp/excluded_tasks.json": "ec467e8674d2e97ba248dade102ff3965529e8eb1ec4724b08e21c856d091317"
+    },
+    "revision": "0f80b11a1a2dfc1b53c5106bf34a83f5a4a23098"
+  },
+  "legacy_validation_imported": false,
+  "legacy_worktree_status": "",
+  "revision_matches_plan": true,
+  "schema_version": 1,
+  "v2_train_moved_to_v3_test": [
+    "deb__dbt-consolidate",
+    "deb__dbt-fix-repeat-purchase-cohort-revenue",
+    "deb__dbt-harbor-product-affinity",
+    "deb__dbt-inventory-analysis",
+    "deb__dbt-loyalty-points-analysis",
+    "deb__dbt-multicurrency-lifo",
+    "deb__dbt-order-fulfillment-metrics",
+    "deb__dbt-product-category-analytics",
+    "deb__dbt-product-performance-metrics",
+    "deb__dbt-product-sales-velocity"
+  ]
+}

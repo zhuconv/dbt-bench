@@ -1,0 +1,31 @@
+{
+  "gold_derived_correction": false,
+  "instruction_after": {
+    "path": "${ARTIFACT_ROOT}/validation/phase4-review-v1/pipeline/production-v1/tasks/deb__dbt-order-interval-metrics/phase4-instruction-df22fa905f772edf/instruction.md",
+    "sha256": "df22fa905f772edf42193856d9a9f01349127b6d52a146c9dca44f2102bc2a78"
+  },
+  "instruction_before": {
+    "path": "${STORAGE_ROOT}/cache/backend-tasks-migration-1125801/apptainer/a75da7c45d2d10c144b85b205f8bf171563c465adfe40ff17736ca23377f69f9/deb__dbt-order-interval-metrics/instruction.md",
+    "sha256": "6bc6b0f5df62b0cbe0dfb09bc154c331339eb836e3fcea3604dbc31bd31fd443"
+  },
+  "model_requests": 0,
+  "native_tests_hash": "8abcfa65c6f75aac916e0b952ad855834ac142bf9db77e8bdda6e858755e63fe",
+  "native_verifier_modified": false,
+  "patch": {
+    "path": "patches/phase4-deb__dbt-order-interval-metrics-df22fa905f77/instruction.diff",
+    "sha256": "fa98c0211fe64e1cb235a5c593cb11034c1c3839f78cdd3ce5ff7ecfc8fea170"
+  },
+  "production_task": "${ARTIFACT_ROOT}/validation/phase4-review-v1/pipeline/production-v1/tasks/deb__dbt-order-interval-metrics/phase4-instruction-df22fa905f772edf",
+  "production_task_hash": "521e73b29d7616a4da688a72fb31d68664786a9bbbf19497b485ad3943ed3f0b",
+  "schema_version": 1,
+  "selected_instruction": {
+    "path": "${SCRATCH_ROOT}/claude-two-version-pilot/dbt-order-interval-metrics_v2/instruction.md",
+    "sha256": "df22fa905f772edf42193856d9a9f01349127b6d52a146c9dca44f2102bc2a78"
+  },
+  "source_backend_task_hash": "5b82d35454cda18ba87cbfe0085456b006af277754047a089b06ca8785e36f65",
+  "source_task_hash": "4cda6832064a975595ec01a7094f1e9fcec6cdf18ca6a0ccca0561b5e2d46bc8",
+  "task_key": "deb__dbt-order-interval-metrics",
+  "task_version": "phase4-instruction-df22fa905f772edf",
+  "type": "task_instruction_variant",
+  "validation_status": "See separately versioned phase 4 companion ledger; materialization is not certification"
+}

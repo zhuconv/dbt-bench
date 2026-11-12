@@ -1,0 +1,22 @@
+{
+  "evidence": [
+    {
+      "path": "validation/evidence/harbor-deb-native/result.json",
+      "sha256": "8c33b4b1a9c58eceee09bc1cab3da3db692d459cafca80fd960d556123d3fba2"
+    },
+    {
+      "path": "validation/evidence/harbor-deb-env-v1/result.json",
+      "sha256": "8dfd7c4bf82c27864b34fb16ff1dda80f92f752e5b0301e84c0484cdac5e3891"
+    },
+    {
+      "path": "validation/evidence/harbor-deb-env-v2/result.json",
+      "sha256": "33ff6af76c2875259fe21c66b2c86048c82f94402262199f75c0a5a81beb2e76"
+    },
+    {
+      "path": "validation/evidence/implementation-tests.json",
+      "sha256": "7e0a53733249334d333074335d46989ea15ca52892975756b8293b72452886e4"
+    }
+  ],
+  "patch": "harbor-025-apptainer-exec-v1",
+  "scope": "Environment compatibility only; native verifier unchanged"
+}

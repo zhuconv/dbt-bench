@@ -1,0 +1,52 @@
+Bootstrap: docker
+From: python@sha256:8f867a1f16776618234a2d0ef41fbb991d0bd0b142c8a95bc37456d8e47104cf
+
+%files
+    environments/apptainer/ade-requirements.txt /opt/dbt-bench-build/requirements.txt
+    .cache/assets/6287aa46b6c375d816e63ae66d024fbbfd70404825aabdfdf898a970871d2f4b /opt/dbt-bench-build/node.tar.xz
+    .cache/assets/189088da0c6429ec5178dfaab1a114805f6cab0b61b165ab236efedf1d57a71b /usr/local/bin/yq
+    tasks/ade__ade-bench-airbnb005/environment/project /app
+    artifacts/images/ade-airbnb.duckdb /app/airbnb.duckdb
+    tasks/ade__ade-bench-airbnb005/environment/CLAUDE.md /app/CLAUDE.md
+    tasks/ade__ade-bench-airbnb005/environment/GEMINI.md /app/GEMINI.md
+    tasks/ade__ade-bench-airbnb005/environment/AGENTS.md /app/AGENTS.md
+    tasks/ade__ade-bench-airbnb005/environment/MACRO.md /app/MACRO.md
+    tasks/ade__ade-bench-airbnb005/environment/shared-scripts /scripts
+    tasks/ade__ade-bench-airbnb005/environment/setup.sh /app/setup.sh
+    tasks/ade__ade-bench-airbnb005/environment/setup-data /app/setup
+
+%post
+    set -eu
+    export DEBIAN_FRONTEND=noninteractive
+    apt-get -o APT::Sandbox::User=root update
+    apt-get -o APT::Sandbox::User=root install -y tmux asciinema curl xz-utils
+    rm -rf /var/lib/apt/lists/*
+    python3 -c "import lzma,shutil; shutil.copyfileobj(lzma.open('/opt/dbt-bench-build/node.tar.xz','rb'),open('/opt/dbt-bench-build/node.tar','wb'))"
+    tar --no-same-owner -xf /opt/dbt-bench-build/node.tar --strip-components=1 -C /usr/local
+    chmod +x /usr/local/bin/yq
+    pip install --no-cache-dir --only-binary=:all: --require-hashes -r /opt/dbt-bench-build/requirements.txt
+    rm -rf /opt/dbt-bench-build
+    mkdir -p /installed-agent /scripts /sage/solutions /sage /app /seeds /solutions /logs
+    cd /app
+    # Execute the native setup. Unlike the upstream RUN's final rm, retain a
+    # setup failure as an explicit build failure requiring investigation.
+    bash setup.sh --db-type=duckdb --project-type=dbt
+    rm -f /app/setup.sh
+    rm -rf /app/setup
+    mkdir -p /opt/dbt-bench-initial
+    for folder in dbt_packages target logs; do
+        if [ -d "/app/$folder" ]; then
+            mv "/app/$folder" "/opt/dbt-bench-initial/$folder"
+        fi
+    done
+    python3 -m pip freeze
+    dpkg-query -W
+    node --version
+    yq --version
+
+%environment
+    for folder in dbt_packages target logs; do
+        if [ -d "/opt/dbt-bench-initial/$folder" ]; then
+            cp -a "/opt/dbt-bench-initial/$folder" "/app/$folder"
+        fi
+    done

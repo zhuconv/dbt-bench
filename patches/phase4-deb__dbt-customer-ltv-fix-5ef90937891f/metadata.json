@@ -1,0 +1,31 @@
+{
+  "gold_derived_correction": false,
+  "instruction_after": {
+    "path": "${ARTIFACT_ROOT}/validation/phase4-review-v1/pipeline/production-v1/tasks/deb__dbt-customer-ltv-fix/phase4-instruction-5ef90937891f9bd3/instruction.md",
+    "sha256": "5ef90937891f9bd35c6153b93826ff5ef519dc3c5c9a38c795306ad0fa061187"
+  },
+  "instruction_before": {
+    "path": "${STORAGE_ROOT}/cache/backend-tasks-migration-1125801/apptainer/0a06c1b1c89ee9a9fa4784c161ade2d34c46a04888b481b7abf1b384f44a1b86/deb__dbt-customer-ltv-fix/instruction.md",
+    "sha256": "dcb50c0fd19d97943d6089d56e9d953ff97433a385f3ffd9c3f481b114b0e283"
+  },
+  "model_requests": 0,
+  "native_tests_hash": "bd45ece4bbe618efa1829ab0d3df0d9e607bcb15d1a23b66ca703cbb873b7418",
+  "native_verifier_modified": false,
+  "patch": {
+    "path": "patches/phase4-deb__dbt-customer-ltv-fix-5ef90937891f/instruction.diff",
+    "sha256": "67e28c92c9afb3f4e970c1650fcfd390c99f4e49d9e8d3c94463c229ab4ea478"
+  },
+  "production_task": "${ARTIFACT_ROOT}/validation/phase4-review-v1/pipeline/production-v1/tasks/deb__dbt-customer-ltv-fix/phase4-instruction-5ef90937891f9bd3",
+  "production_task_hash": "ca5f149bd5f5d72b5ddcffa3307ea5345de6cab949d78e7a8ef20d4390976b61",
+  "schema_version": 1,
+  "selected_instruction": {
+    "path": "${SCRATCH_ROOT}/claude-two-version-pilot/dbt-customer-ltv-fix_v2/instruction.md",
+    "sha256": "5ef90937891f9bd35c6153b93826ff5ef519dc3c5c9a38c795306ad0fa061187"
+  },
+  "source_backend_task_hash": "64f166cc04c7fec11618c7d5d8a582eb6db5774bf7bdf1c9d1461391f26e207b",
+  "source_task_hash": "83dea043d9584dbb3b4a5366c15047696461805eecb04fdca442142495faf6a0",
+  "task_key": "deb__dbt-customer-ltv-fix",
+  "task_version": "phase4-instruction-5ef90937891f9bd3",
+  "type": "task_instruction_variant",
+  "validation_status": "See separately versioned phase 4 companion ledger; materialization is not certification"
+}

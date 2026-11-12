@@ -1,0 +1,31 @@
+{
+  "gold_derived_correction": false,
+  "instruction_after": {
+    "path": "${ARTIFACT_ROOT}/validation/phase3-task-versions-v1/tasks/spider2__apple_store001/phase3-instruction-050f24b3ea89e40d/instruction.md",
+    "sha256": "050f24b3ea89e40d5b075b4aecf4fdffa7ecc4d551cb995fd2224f89e37c27c3"
+  },
+  "instruction_before": {
+    "path": "${STORAGE_ROOT}/cache/backend-tasks-migration-1125801/apptainer/3da5a94d3d2536a3eeecaaf90d4814f24532eac6cc804a9454434d2eada7c033/spider2__apple_store001/instruction.md",
+    "sha256": "4429636a38b15113e294b96bfe11e1cb3ee95184533907e8cc3cd4008e55b011"
+  },
+  "model_requests": 0,
+  "native_tests_hash": "ba9a3bd455dc2e507b31c782d57c2905b593c36c3d53fd08a87308f65df5c780",
+  "native_verifier_modified": false,
+  "patch": {
+    "path": "patches/phase3-spider2__apple_store001-050f24b3ea89/instruction.diff",
+    "sha256": "a88d313cabc4c03a17b2a7e9b825f68bc08202963de13efbb0b94ba3766d9cb1"
+  },
+  "production_task": "${ARTIFACT_ROOT}/validation/phase3-task-versions-v1/tasks/spider2__apple_store001/phase3-instruction-050f24b3ea89e40d",
+  "production_task_hash": "2f6965c95f85777f2724adbc8e42addc7286df14e569d6a5fde190feb7e74e04",
+  "schema_version": 1,
+  "selected_instruction": {
+    "path": "${SCRATCH_ROOT}/claude-two-version-pilot/apple_store001_v2/instruction.md",
+    "sha256": "050f24b3ea89e40d5b075b4aecf4fdffa7ecc4d551cb995fd2224f89e37c27c3"
+  },
+  "source_backend_task_hash": "e6b940e9021c28ac94c132ecb38bf11d2a5a7f994e7b9fc925f9a200f042c121",
+  "source_task_hash": "acbae17df733613f645648c96b91841d58b10f05eb3d3cba92c60e2e2f544e85",
+  "task_key": "spider2__apple_store001",
+  "task_version": "phase3-instruction-050f24b3ea89e40d",
+  "type": "task_instruction_variant",
+  "validation_status": "See separately versioned phase 3 companion ledger; materialization is not certification"
+}

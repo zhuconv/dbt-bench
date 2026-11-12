@@ -1,0 +1,31 @@
+{
+  "gold_derived_correction": false,
+  "instruction_after": {
+    "path": "${ARTIFACT_ROOT}/validation/phase3-task-versions-v1/tasks/ade__ade-bench-ana-eng004/phase3-instruction-eaca4eab1975e461/instruction.md",
+    "sha256": "eaca4eab1975e4615738d76376a02c9e6dd66ba26803c689b3c51ec8ec0952c1"
+  },
+  "instruction_before": {
+    "path": "${STORAGE_ROOT}/cache/backend-tasks-migration-1125801/apptainer/fef920db1b5371cc4b4a4794964f31c5e676d59aaead24ba4755ae53341c950b/ade__ade-bench-ana-eng004/instruction.md",
+    "sha256": "3b81cfffbf8949d48f933e24a8c73a88d4c50f84b5c6f78f1754fd1308974ba8"
+  },
+  "model_requests": 0,
+  "native_tests_hash": "9e16c544fc0a74198d65fe926677a79f601f5c37b8407cad8f5f040b058b6ac4",
+  "native_verifier_modified": false,
+  "patch": {
+    "path": "patches/phase3-ade__ade-bench-ana-eng004-eaca4eab1975/instruction.diff",
+    "sha256": "945c303981cf8fe546333aaf897ed4a1f572c5c906c27782a92c98ffb44498c6"
+  },
+  "production_task": "${ARTIFACT_ROOT}/validation/phase3-task-versions-v1/tasks/ade__ade-bench-ana-eng004/phase3-instruction-eaca4eab1975e461",
+  "production_task_hash": "7565c32568994afade117bede7da566006becfd1086a4fb8e4f8d1006d3c7835",
+  "schema_version": 1,
+  "selected_instruction": {
+    "path": "${SCRATCH_ROOT}/claude-two-version-pilot/ade-bench-ana-eng004_v2/instruction.md",
+    "sha256": "eaca4eab1975e4615738d76376a02c9e6dd66ba26803c689b3c51ec8ec0952c1"
+  },
+  "source_backend_task_hash": "e3ebccb66b6ea2bd7dbbf528618fe1d2697a4ce9d0e7e713d0b8f83228cbf402",
+  "source_task_hash": "d40446221073c6c1631b76a8a0f64310f3fcbfc611ad371be2b9e375a2f9c046",
+  "task_key": "ade__ade-bench-ana-eng004",
+  "task_version": "phase3-instruction-eaca4eab1975e461",
+  "type": "task_instruction_variant",
+  "validation_status": "See separately versioned phase 3 companion ledger; materialization is not certification"
+}

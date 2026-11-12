@@ -1,0 +1,4064 @@
+{
+  "assignment_policy": "Keep reviewed groups intact. Any historical v3 test member keeps the entire group in test; otherwise train. No model rewards or verifier outcomes determine membership.",
+  "assignments": {
+    "ade__ade-bench-airbnb005": "train",
+    "ade__ade-bench-airbnb007": "train",
+    "ade__ade-bench-ana-eng003": "train",
+    "ade__ade-bench-ana-eng004": "train",
+    "ade__ade-bench-ana-eng005": "train",
+    "ade__ade-bench-ana-eng006": "train",
+    "ade__ade-bench-f1002": "train",
+    "ade__ade-bench-f1003": "train",
+    "ade__ade-bench-f1003-hard": "train",
+    "ade__ade-bench-f1009": "train",
+    "ade__ade-bench-f1010": "train",
+    "ade__ade-bench-f1010-medium": "train",
+    "ade__ade-bench-f1011": "train",
+    "ade__ade-bench-intercom001": "train",
+    "ade__ade-bench-intercom002": "train",
+    "ade__ade-bench-intercom003": "train",
+    "deb__dbt-abc-classification": "test",
+    "deb__dbt-basket-composition-analysis": "test",
+    "deb__dbt-calculate-running-balance": "train",
+    "deb__dbt-channel-attribution-analysis": "train",
+    "deb__dbt-consolidate": "test",
+    "deb__dbt-coupon-effectiveness": "train",
+    "deb__dbt-customer-acquisition-channel-performance": "train",
+    "deb__dbt-customer-churn-cohorts": "test",
+    "deb__dbt-customer-churn-early-warning": "test",
+    "deb__dbt-customer-cltv-forecasting": "test",
+    "deb__dbt-customer-cohort-retention": "test",
+    "deb__dbt-customer-cross-sell-insights": "test",
+    "deb__dbt-customer-geographic": "train",
+    "deb__dbt-customer-lifetime-value": "test",
+    "deb__dbt-customer-ltv-fix": "test",
+    "deb__dbt-customer-order-analytics": "test",
+    "deb__dbt-customer-risk-scoring": "test",
+    "deb__dbt-daily-order-summary": "test",
+    "deb__dbt-dq-macro-enforcement": "train",
+    "deb__dbt-exchange-rate-settlement-date": "train",
+    "deb__dbt-fix-cac-payback-waterfall": "train",
+    "deb__dbt-fix-email-attribution": "test",
+    "deb__dbt-fix-marketing-attribution": "test",
+    "deb__dbt-fix-multi-touch-attribution": "test",
+    "deb__dbt-fix-paid-search-attribution": "test",
+    "deb__dbt-fix-repeat-purchase-cohort-revenue": "test",
+    "deb__dbt-fraud-detection-model": "test",
+    "deb__dbt-fulfillment-sla": "test",
+    "deb__dbt-gl-reconciliation": "test",
+    "deb__dbt-harbor-marketing-mix-model": "train",
+    "deb__dbt-harbor-product-affinity": "test",
+    "deb__dbt-harbor-warehouse-capacity": "train",
+    "deb__dbt-hr-analytics": "train",
+    "deb__dbt-inventory-analysis": "test",
+    "deb__dbt-inventory-stockout-risk": "train",
+    "deb__dbt-loyalty-points-analysis": "test",
+    "deb__dbt-monthly-channel-revenue": "test",
+    "deb__dbt-multicurrency-lifo": "test",
+    "deb__dbt-order-fulfillment-analytics": "test",
+    "deb__dbt-order-fulfillment-metrics": "test",
+    "deb__dbt-order-interval-metrics": "test",
+    "deb__dbt-order-reconciliation": "train",
+    "deb__dbt-payment-fraud-analysis": "test",
+    "deb__dbt-price-elasticity": "train",
+    "deb__dbt-product-affinity": "test",
+    "deb__dbt-product-category-analytics": "test",
+    "deb__dbt-product-performance-metrics": "test",
+    "deb__dbt-product-return-rate-analysis": "test",
+    "deb__dbt-product-sales-velocity": "test",
+    "deb__dbt-retail-task-01-channel-revenue": "test",
+    "deb__dbt-retail-task-04-market-roi": "train",
+    "deb__dbt-retail-task-07-cart-recovery": "train",
+    "deb__dbt-retail-task-10-trust-risk": "train",
+    "deb__dbt-rfm-customer-segmentation": "test",
+    "deb__dbt-rfm-customer-segmentation-2": "test",
+    "deb__dbt-rfm-customer-tiering": "test",
+    "deb__dbt-sales-funnel-analysis": "train",
+    "deb__dbt-session-attribution": "train",
+    "deb__dbt-supplier-payment-optimization": "train",
+    "deb__dbt-supplier-scorecard": "test",
+    "deb__dbt-test-orders-filter": "test",
+    "deb__dbt-three-way-matching": "test",
+    "deb__dbt-web-session-analytics": "train",
+    "deb__dbt-weekly-sales-growth": "train",
+    "spider2__activity001": "train",
+    "spider2__airbnb001": "train",
+    "spider2__airbnb002": "train",
+    "spider2__airport001": "train",
+    "spider2__analytics_engineering001": "train",
+    "spider2__app_reporting001": "train",
+    "spider2__app_reporting002": "train",
+    "spider2__apple_store001": "train",
+    "spider2__asana001": "train",
+    "spider2__asset001": "train",
+    "spider2__atp_tour001": "train",
+    "spider2__f1001": "train",
+    "spider2__f1002": "train",
+    "spider2__flicks001": "train",
+    "spider2__google_play001": "train",
+    "spider2__google_play002": "train",
+    "spider2__greenhouse001": "train",
+    "spider2__hive001": "train",
+    "spider2__hubspot001": "train",
+    "spider2__intercom001": "train",
+    "spider2__inzight001": "train",
+    "spider2__jira001": "train",
+    "spider2__lever001": "train",
+    "spider2__marketo001": "train",
+    "spider2__maturity001": "train",
+    "spider2__movie_recomm001": "train",
+    "spider2__nba001": "train",
+    "spider2__netflix001": "train",
+    "spider2__pendo001": "train",
+    "spider2__playbook002": "train",
+    "spider2__provider001": "train",
+    "spider2__qualtrics001": "train",
+    "spider2__quickbooks001": "train",
+    "spider2__quickbooks002": "train",
+    "spider2__recharge001": "train",
+    "spider2__recharge002": "train",
+    "spider2__reddit001": "train",
+    "spider2__sap001": "train",
+    "spider2__scd001": "train",
+    "spider2__shopify001": "train",
+    "spider2__shopify002": "train",
+    "spider2__shopify_holistic_reporting001": "train",
+    "spider2__social_media001": "train",
+    "spider2__synthea001": "train",
+    "spider2__tickit001": "train",
+    "spider2__tickit002": "train",
+    "spider2__tpch001": "train",
+    "spider2__tpch002": "train",
+    "spider2__twilio001": "train",
+    "spider2__workday001": "train",
+    "spider2__workday002": "train",
+    "spider2__xero001": "train",
+    "spider2__xero_new001": "train",
+    "spider2__xero_new002": "train",
+    "spider2__zuora001": "train"
+  },
+  "candidate_ids_hash": "ca3e2e4dbc0ee33fcc7b33f78b17255f0b3cf7c29545405c5dacaee9603dfd7b",
+  "changes": [
+    {
+      "from": "train",
+      "task_key": "deb__dbt-customer-churn-early-warning",
+      "to": "test"
+    },
+    {
+      "from": "train",
+      "task_key": "deb__dbt-customer-cohort-retention",
+      "to": "test"
+    },
+    {
+      "from": "train",
+      "task_key": "deb__dbt-customer-lifetime-value",
+      "to": "test"
+    },
+    {
+      "from": "train",
+      "task_key": "deb__dbt-customer-ltv-fix",
+      "to": "test"
+    },
+    {
+      "from": "train",
+      "task_key": "deb__dbt-fix-email-attribution",
+      "to": "test"
+    },
+    {
+      "from": "train",
+      "task_key": "deb__dbt-fix-multi-touch-attribution",
+      "to": "test"
+    },
+    {
+      "from": "train",
+      "task_key": "deb__dbt-fix-paid-search-attribution",
+      "to": "test"
+    },
+    {
+      "from": "train",
+      "task_key": "deb__dbt-fulfillment-sla",
+      "to": "test"
+    },
+    {
+      "from": "train",
+      "task_key": "deb__dbt-order-interval-metrics",
+      "to": "test"
+    },
+    {
+      "from": "train",
+      "task_key": "deb__dbt-rfm-customer-segmentation",
+      "to": "test"
+    },
+    {
+      "from": "train",
+      "task_key": "deb__dbt-rfm-customer-segmentation-2",
+      "to": "test"
+    },
+    {
+      "from": "train",
+      "task_key": "deb__dbt-rfm-customer-tiering",
+      "to": "test"
+    }
+  ],
+  "counts": {
+    "test": 42,
+    "train": 93
+  },
+  "evidence_inputs_verified": 516,
+  "groups": {
+    "deb-basket-composition-analysis": [
+      "deb__dbt-basket-composition-analysis"
+    ],
+    "deb-calculate-running-balance": [
+      "deb__dbt-calculate-running-balance"
+    ],
+    "deb-consolidate": [
+      "deb__dbt-consolidate"
+    ],
+    "deb-coupon-effectiveness": [
+      "deb__dbt-coupon-effectiveness"
+    ],
+    "deb-customer-channel-acquisition": [
+      "deb__dbt-channel-attribution-analysis",
+      "deb__dbt-customer-acquisition-channel-performance"
+    ],
+    "deb-customer-geographic": [
+      "deb__dbt-customer-geographic"
+    ],
+    "deb-customer-risk-scoring": [
+      "deb__dbt-customer-risk-scoring"
+    ],
+    "deb-customer-value-retention": [
+      "deb__dbt-customer-churn-cohorts",
+      "deb__dbt-customer-churn-early-warning",
+      "deb__dbt-customer-cltv-forecasting",
+      "deb__dbt-customer-cohort-retention",
+      "deb__dbt-customer-lifetime-value",
+      "deb__dbt-customer-ltv-fix",
+      "deb__dbt-customer-order-analytics",
+      "deb__dbt-fix-repeat-purchase-cohort-revenue",
+      "deb__dbt-order-interval-metrics",
+      "deb__dbt-rfm-customer-segmentation",
+      "deb__dbt-rfm-customer-segmentation-2",
+      "deb__dbt-rfm-customer-tiering"
+    ],
+    "deb-daily-order-summary": [
+      "deb__dbt-daily-order-summary"
+    ],
+    "deb-dq-macro-enforcement": [
+      "deb__dbt-dq-macro-enforcement"
+    ],
+    "deb-exchange-rate-settlement-date": [
+      "deb__dbt-exchange-rate-settlement-date"
+    ],
+    "deb-fraud-analysis": [
+      "deb__dbt-fraud-detection-model",
+      "deb__dbt-payment-fraud-analysis"
+    ],
+    "deb-fulfillment-performance": [
+      "deb__dbt-fulfillment-sla",
+      "deb__dbt-order-fulfillment-analytics",
+      "deb__dbt-order-fulfillment-metrics"
+    ],
+    "deb-ga4-attribution": [
+      "deb__dbt-fix-email-attribution",
+      "deb__dbt-fix-marketing-attribution",
+      "deb__dbt-fix-multi-touch-attribution",
+      "deb__dbt-fix-paid-search-attribution"
+    ],
+    "deb-gl-reconciliation": [
+      "deb__dbt-gl-reconciliation"
+    ],
+    "deb-harbor-marketing-mix-model": [
+      "deb__dbt-harbor-marketing-mix-model"
+    ],
+    "deb-harbor-warehouse-capacity": [
+      "deb__dbt-harbor-warehouse-capacity"
+    ],
+    "deb-hr-analytics": [
+      "deb__dbt-hr-analytics"
+    ],
+    "deb-inventory-analysis": [
+      "deb__dbt-inventory-analysis"
+    ],
+    "deb-inventory-stockout-risk": [
+      "deb__dbt-inventory-stockout-risk"
+    ],
+    "deb-loyalty-points-analysis": [
+      "deb__dbt-loyalty-points-analysis"
+    ],
+    "deb-marketing-payback": [
+      "deb__dbt-fix-cac-payback-waterfall",
+      "deb__dbt-retail-task-04-market-roi"
+    ],
+    "deb-monthly-channel-revenue": [
+      "deb__dbt-monthly-channel-revenue",
+      "deb__dbt-retail-task-01-channel-revenue"
+    ],
+    "deb-multicurrency-lifo": [
+      "deb__dbt-multicurrency-lifo"
+    ],
+    "deb-order-reconciliation": [
+      "deb__dbt-order-reconciliation"
+    ],
+    "deb-price-elasticity": [
+      "deb__dbt-price-elasticity"
+    ],
+    "deb-product-affinity": [
+      "deb__dbt-customer-cross-sell-insights",
+      "deb__dbt-harbor-product-affinity",
+      "deb__dbt-product-affinity"
+    ],
+    "deb-product-category-analytics": [
+      "deb__dbt-product-category-analytics"
+    ],
+    "deb-product-return-rate-analysis": [
+      "deb__dbt-product-return-rate-analysis"
+    ],
+    "deb-product-sales-scorecards": [
+      "deb__dbt-abc-classification",
+      "deb__dbt-product-performance-metrics",
+      "deb__dbt-product-sales-velocity"
+    ],
+    "deb-retail-task-07-cart-recovery": [
+      "deb__dbt-retail-task-07-cart-recovery"
+    ],
+    "deb-retail-task-10-trust-risk": [
+      "deb__dbt-retail-task-10-trust-risk"
+    ],
+    "deb-sales-funnel-analysis": [
+      "deb__dbt-sales-funnel-analysis"
+    ],
+    "deb-session-attribution": [
+      "deb__dbt-session-attribution"
+    ],
+    "deb-supplier-payment-optimization": [
+      "deb__dbt-supplier-payment-optimization"
+    ],
+    "deb-supplier-scorecard": [
+      "deb__dbt-supplier-scorecard"
+    ],
+    "deb-test-orders-filter": [
+      "deb__dbt-test-orders-filter"
+    ],
+    "deb-three-way-matching": [
+      "deb__dbt-three-way-matching"
+    ],
+    "deb-web-session-analytics": [
+      "deb__dbt-web-session-analytics"
+    ],
+    "deb-weekly-sales-growth": [
+      "deb__dbt-weekly-sales-growth"
+    ],
+    "shared-airbnb-project": [
+      "ade__ade-bench-airbnb005",
+      "ade__ade-bench-airbnb007",
+      "spider2__airbnb001",
+      "spider2__airbnb002"
+    ],
+    "shared-f1-project": [
+      "ade__ade-bench-f1002",
+      "ade__ade-bench-f1003",
+      "ade__ade-bench-f1003-hard",
+      "ade__ade-bench-f1009",
+      "ade__ade-bench-f1010",
+      "ade__ade-bench-f1010-medium",
+      "ade__ade-bench-f1011",
+      "spider2__f1001",
+      "spider2__f1002"
+    ],
+    "shared-intercom-project": [
+      "ade__ade-bench-intercom001",
+      "ade__ade-bench-intercom002",
+      "ade__ade-bench-intercom003",
+      "spider2__intercom001"
+    ],
+    "shared-northwind-analytics-engineering-project": [
+      "ade__ade-bench-ana-eng003",
+      "ade__ade-bench-ana-eng004",
+      "ade__ade-bench-ana-eng005",
+      "ade__ade-bench-ana-eng006",
+      "spider2__analytics_engineering001"
+    ],
+    "spider-activity001": [
+      "spider2__activity001"
+    ],
+    "spider-airport001": [
+      "spider2__airport001"
+    ],
+    "spider-app-store-reporting": [
+      "spider2__app_reporting001",
+      "spider2__app_reporting002",
+      "spider2__apple_store001",
+      "spider2__google_play001",
+      "spider2__google_play002"
+    ],
+    "spider-asana001": [
+      "spider2__asana001"
+    ],
+    "spider-asset001": [
+      "spider2__asset001"
+    ],
+    "spider-atp_tour001": [
+      "spider2__atp_tour001"
+    ],
+    "spider-flicks001": [
+      "spider2__flicks001"
+    ],
+    "spider-greenhouse001": [
+      "spider2__greenhouse001"
+    ],
+    "spider-hive001": [
+      "spider2__hive001"
+    ],
+    "spider-hubspot001": [
+      "spider2__hubspot001"
+    ],
+    "spider-inzight001": [
+      "spider2__inzight001"
+    ],
+    "spider-jira001": [
+      "spider2__jira001"
+    ],
+    "spider-lever001": [
+      "spider2__lever001"
+    ],
+    "spider-marketo001": [
+      "spider2__marketo001"
+    ],
+    "spider-maturity001": [
+      "spider2__maturity001"
+    ],
+    "spider-nba001": [
+      "spider2__nba001"
+    ],
+    "spider-netflix-prompt-reuse": [
+      "spider2__movie_recomm001",
+      "spider2__netflix001"
+    ],
+    "spider-pendo001": [
+      "spider2__pendo001"
+    ],
+    "spider-playbook002": [
+      "spider2__playbook002"
+    ],
+    "spider-provider001": [
+      "spider2__provider001"
+    ],
+    "spider-qualtrics001": [
+      "spider2__qualtrics001"
+    ],
+    "spider-quickbooks": [
+      "spider2__quickbooks001",
+      "spider2__quickbooks002"
+    ],
+    "spider-recharge": [
+      "spider2__recharge001",
+      "spider2__recharge002"
+    ],
+    "spider-reddit001": [
+      "spider2__reddit001"
+    ],
+    "spider-sap001": [
+      "spider2__sap001"
+    ],
+    "spider-scd001": [
+      "spider2__scd001"
+    ],
+    "spider-shopify": [
+      "spider2__shopify001",
+      "spider2__shopify002",
+      "spider2__shopify_holistic_reporting001"
+    ],
+    "spider-social_media001": [
+      "spider2__social_media001"
+    ],
+    "spider-synthea001": [
+      "spider2__synthea001"
+    ],
+    "spider-tickit": [
+      "spider2__tickit001",
+      "spider2__tickit002"
+    ],
+    "spider-tpch": [
+      "spider2__tpch001",
+      "spider2__tpch002"
+    ],
+    "spider-twilio001": [
+      "spider2__twilio001"
+    ],
+    "spider-workday": [
+      "spider2__workday001",
+      "spider2__workday002"
+    ],
+    "spider-xero": [
+      "spider2__xero001",
+      "spider2__xero_new001",
+      "spider2__xero_new002"
+    ],
+    "spider-zuora001": [
+      "spider2__zuora001"
+    ]
+  },
+  "historical_v2_train_to_v3_test": [
+    "deb__dbt-consolidate",
+    "deb__dbt-fix-repeat-purchase-cohort-revenue",
+    "deb__dbt-harbor-product-affinity",
+    "deb__dbt-inventory-analysis",
+    "deb__dbt-loyalty-points-analysis",
+    "deb__dbt-multicurrency-lifo",
+    "deb__dbt-order-fulfillment-metrics",
+    "deb__dbt-product-category-analytics",
+    "deb__dbt-product-performance-metrics",
+    "deb__dbt-product-sales-velocity"
+  ],
+  "input_reviews": [
+    {
+      "path": "catalog/reviews/family-v1/cross-source-family-review-v1.json",
+      "sha256": "9ef4d4e3d865a1d6b51f2c58b1a10bc10141962f7ca578bb28679ae6b0db983d"
+    },
+    {
+      "path": "catalog/reviews/family-v1/spider-family-review-v1.json",
+      "sha256": "6bb67e4c5dda477aeed0bc9825a13e439089ed7c6591f934763e344960978130"
+    },
+    {
+      "path": "catalog/reviews/family-v1/deb-family-review-v1.json",
+      "sha256": "ad83133f699b85d17caff401638a02a53b401bfc344bf3c27bdee42453e860a5"
+    }
+  ],
+  "kind": "reviewed-family-split-v1",
+  "limitations": [
+    "Family/workflow scope only; full task contracts and semantic validation remain separate.",
+    "Conservative component/project groups do not assert identical answers or logical data equivalence.",
+    "Shared DEB warehouse is recorded separately; this is not unseen-warehouse generalization.",
+    "Prior train membership remains historical exposure, not proof of actual checkpoint training and not a clean holdout claim.",
+    "Unknown warehouse families remain explicit for other Spider projects."
+  ],
+  "schema_version": 1,
+  "script": {
+    "path": "artifacts/validation/split-freeze-v1/prepare_decisions.py",
+    "sha256": "125dea77f27fe549d9b819df63d8999229e320b59e77c3485ea38916c063a7f4"
+  },
+  "source_catalog": {
+    "path": "catalog/history/v1-legacy-provisional/tasks.jsonl",
+    "sha256": "107dd7b2519cc959292b5ce3716a85d31b8b507d00188a6da60d5ad6bacc3586"
+  },
+  "source_split": {
+    "path": "catalog/history/v1-legacy-provisional/splits.json",
+    "sha256": "0cd524ad1ed466a642c56d0537cfef0c93f4efa5b067696e482a5ffc3c2e0f1b"
+  },
+  "tasks": {
+    "ade__ade-bench-airbnb005": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "shared-airbnb-project",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "shared-airbnb-project",
+      "warehouse_family": "airbnb",
+      "workflow": "add_models"
+    },
+    "ade__ade-bench-airbnb007": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "shared-airbnb-project",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "shared-airbnb-project",
+      "warehouse_family": "airbnb",
+      "workflow": "build_models_from_schema"
+    },
+    "ade__ade-bench-ana-eng003": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "shared-northwind-analytics-engineering-project",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "shared-northwind-analytics-engineering-project",
+      "warehouse_family": "northwind",
+      "workflow": "add_model"
+    },
+    "ade__ade-bench-ana-eng004": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "shared-northwind-analytics-engineering-project",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "shared-northwind-analytics-engineering-project",
+      "warehouse_family": "northwind",
+      "workflow": "add_model"
+    },
+    "ade__ade-bench-ana-eng005": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "shared-northwind-analytics-engineering-project",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "shared-northwind-analytics-engineering-project",
+      "warehouse_family": "northwind",
+      "workflow": "repair_grain"
+    },
+    "ade__ade-bench-ana-eng006": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "shared-northwind-analytics-engineering-project",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "shared-northwind-analytics-engineering-project",
+      "warehouse_family": "northwind",
+      "workflow": "build_models_and_repair_grain"
+    },
+    "ade__ade-bench-f1002": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "shared-f1-project",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "shared-f1-project",
+      "warehouse_family": "f1",
+      "workflow": "build_models_from_schema"
+    },
+    "ade__ade-bench-f1003": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "shared-f1-project",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "shared-f1-project",
+      "warehouse_family": "f1",
+      "workflow": "diagnose_and_submit_answer_model"
+    },
+    "ade__ade-bench-f1003-hard": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "shared-f1-project",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "shared-f1-project",
+      "warehouse_family": "f1",
+      "workflow": "diagnose_and_submit_answer_model"
+    },
+    "ade__ade-bench-f1009": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "shared-f1-project",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "shared-f1-project",
+      "warehouse_family": "f1",
+      "workflow": "add_model"
+    },
+    "ade__ade-bench-f1010": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "shared-f1-project",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "shared-f1-project",
+      "warehouse_family": "f1",
+      "workflow": "add_model"
+    },
+    "ade__ade-bench-f1010-medium": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "shared-f1-project",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "shared-f1-project",
+      "warehouse_family": "f1",
+      "workflow": "add_model"
+    },
+    "ade__ade-bench-f1011": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "shared-f1-project",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "shared-f1-project",
+      "warehouse_family": "f1",
+      "workflow": "diagnose_and_submit_answer_model"
+    },
+    "ade__ade-bench-intercom001": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "shared-intercom-project",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "shared-intercom-project",
+      "warehouse_family": "intercom",
+      "workflow": "add_model"
+    },
+    "ade__ade-bench-intercom002": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "shared-intercom-project",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "shared-intercom-project",
+      "warehouse_family": "intercom",
+      "workflow": "add_models"
+    },
+    "ade__ade-bench-intercom003": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "shared-intercom-project",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "shared-intercom-project",
+      "warehouse_family": "intercom",
+      "workflow": "add_model"
+    },
+    "deb__dbt-abc-classification": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/test_tasks_v2.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "test",
+        "v3": "test"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "test",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-product-sales-scorecards",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "add_models"
+    },
+    "deb__dbt-basket-composition-analysis": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/test_tasks_v2.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "test",
+        "v3": "test"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "test",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-basket-composition-analysis",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "add_models"
+    },
+    "deb__dbt-calculate-running-balance": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-calculate-running-balance",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project"
+    },
+    "deb__dbt-channel-attribution-analysis": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-customer-channel-acquisition",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "add_models"
+    },
+    "deb__dbt-consolidate": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "test"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "test",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-consolidate",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "seed_and_union_ads_datasets"
+    },
+    "deb__dbt-coupon-effectiveness": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-coupon-effectiveness",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "add_models"
+    },
+    "deb__dbt-customer-acquisition-channel-performance": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-customer-channel-acquisition",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project_from_reference_models"
+    },
+    "deb__dbt-customer-churn-cohorts": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/test_tasks_v2.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "test",
+        "v3": "test"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "test",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-customer-value-retention",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "add_models"
+    },
+    "deb__dbt-customer-churn-early-warning": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "test",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-customer-value-retention",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project_from_reference_models"
+    },
+    "deb__dbt-customer-cltv-forecasting": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/test_tasks_v2.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "test",
+        "v3": "test"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "test",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-customer-value-retention",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project_from_reference_models"
+    },
+    "deb__dbt-customer-cohort-retention": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "test",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-customer-value-retention",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "build_dbt_models"
+    },
+    "deb__dbt-customer-cross-sell-insights": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/test_tasks_v2.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "test",
+        "v3": "test"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "test",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-product-affinity",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project_from_reference_models"
+    },
+    "deb__dbt-customer-geographic": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-customer-geographic",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project"
+    },
+    "deb__dbt-customer-lifetime-value": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "test",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-customer-value-retention",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "add_models"
+    },
+    "deb__dbt-customer-ltv-fix": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "test",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-customer-value-retention",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "diagnose_and_add_corrected_model"
+    },
+    "deb__dbt-customer-order-analytics": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/test_tasks_v2.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "test",
+        "v3": "test"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "test",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-customer-value-retention",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project"
+    },
+    "deb__dbt-customer-risk-scoring": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/test_tasks_v2.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "test",
+        "v3": "test"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "test",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-customer-risk-scoring",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project"
+    },
+    "deb__dbt-daily-order-summary": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/test_tasks_v2.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "test",
+        "v3": "test"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "test",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-daily-order-summary",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project"
+    },
+    "deb__dbt-dq-macro-enforcement": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-dq-macro-enforcement",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "modify_existing_model_and_macros"
+    },
+    "deb__dbt-exchange-rate-settlement-date": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-exchange-rate-settlement-date",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "modify_existing_model"
+    },
+    "deb__dbt-fix-cac-payback-waterfall": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-marketing-payback",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project_from_reference_models"
+    },
+    "deb__dbt-fix-email-attribution": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "test",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-ga4-attribution",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project_from_reference_models"
+    },
+    "deb__dbt-fix-marketing-attribution": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/test_tasks_v2.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "test",
+        "v3": "test"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "test",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-ga4-attribution",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "diagnose_and_rebuild_model"
+    },
+    "deb__dbt-fix-multi-touch-attribution": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "test",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-ga4-attribution",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project_from_reference_models"
+    },
+    "deb__dbt-fix-paid-search-attribution": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "test",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-ga4-attribution",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "rebuild_attribution_model"
+    },
+    "deb__dbt-fix-repeat-purchase-cohort-revenue": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "test"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "test",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-customer-value-retention",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project_from_reference_models"
+    },
+    "deb__dbt-fraud-detection-model": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/test_tasks_v2.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "test",
+        "v3": "test"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "test",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-fraud-analysis",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "build_dbt_models"
+    },
+    "deb__dbt-fulfillment-sla": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "test",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-fulfillment-performance",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "add_models"
+    },
+    "deb__dbt-gl-reconciliation": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/test_tasks_v2.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "test",
+        "v3": "test"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "test",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-gl-reconciliation",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project"
+    },
+    "deb__dbt-harbor-marketing-mix-model": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-harbor-marketing-mix-model",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "add_models"
+    },
+    "deb__dbt-harbor-product-affinity": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "test"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "test",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-product-affinity",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "add_models"
+    },
+    "deb__dbt-harbor-warehouse-capacity": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-harbor-warehouse-capacity",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project"
+    },
+    "deb__dbt-hr-analytics": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-hr-analytics",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project"
+    },
+    "deb__dbt-inventory-analysis": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "test"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "test",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-inventory-analysis",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project"
+    },
+    "deb__dbt-inventory-stockout-risk": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-inventory-stockout-risk",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project"
+    },
+    "deb__dbt-loyalty-points-analysis": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "test"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "test",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-loyalty-points-analysis",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project"
+    },
+    "deb__dbt-monthly-channel-revenue": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/test_tasks_v2.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "test",
+        "v3": "test"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "test",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-monthly-channel-revenue",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "add_models"
+    },
+    "deb__dbt-multicurrency-lifo": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "test"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "test",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-multicurrency-lifo",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project_from_reference_models"
+    },
+    "deb__dbt-order-fulfillment-analytics": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/test_tasks_v2.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "test",
+        "v3": "test"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "test",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-fulfillment-performance",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "add_models"
+    },
+    "deb__dbt-order-fulfillment-metrics": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "test"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "test",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-fulfillment-performance",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project"
+    },
+    "deb__dbt-order-interval-metrics": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "test",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-customer-value-retention",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "add_models"
+    },
+    "deb__dbt-order-reconciliation": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-order-reconciliation",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project"
+    },
+    "deb__dbt-payment-fraud-analysis": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/test_tasks_v2.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "test",
+        "v3": "test"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "test",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-fraud-analysis",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project"
+    },
+    "deb__dbt-price-elasticity": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-price-elasticity",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project"
+    },
+    "deb__dbt-product-affinity": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/test_tasks_v2.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "test",
+        "v3": "test"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "test",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-product-affinity",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "add_models"
+    },
+    "deb__dbt-product-category-analytics": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "test"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "test",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-product-category-analytics",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project"
+    },
+    "deb__dbt-product-performance-metrics": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "test"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "test",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-product-sales-scorecards",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "add_models"
+    },
+    "deb__dbt-product-return-rate-analysis": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/test_tasks_v2.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "test",
+        "v3": "test"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "test",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-product-return-rate-analysis",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project_from_reference_models"
+    },
+    "deb__dbt-product-sales-velocity": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "test"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "test",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-product-sales-scorecards",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "add_models"
+    },
+    "deb__dbt-retail-task-01-channel-revenue": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/test_tasks_v2.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "test",
+        "v3": "test"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "test",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-monthly-channel-revenue",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "add_model_with_required_tags"
+    },
+    "deb__dbt-retail-task-04-market-roi": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-marketing-payback",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "add_model_and_tests"
+    },
+    "deb__dbt-retail-task-07-cart-recovery": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-retail-task-07-cart-recovery",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "build_models_from_allowed_staging_refs"
+    },
+    "deb__dbt-retail-task-10-trust-risk": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-retail-task-10-trust-risk",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "add_models_and_schema_tests"
+    },
+    "deb__dbt-rfm-customer-segmentation": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "test",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-customer-value-retention",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project"
+    },
+    "deb__dbt-rfm-customer-segmentation-2": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "test",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-customer-value-retention",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "add_models"
+    },
+    "deb__dbt-rfm-customer-tiering": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "test",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-customer-value-retention",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "add_models"
+    },
+    "deb__dbt-sales-funnel-analysis": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-sales-funnel-analysis",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project"
+    },
+    "deb__dbt-session-attribution": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-session-attribution",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "add_model"
+    },
+    "deb__dbt-supplier-payment-optimization": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-supplier-payment-optimization",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "add_single_mart_model"
+    },
+    "deb__dbt-supplier-scorecard": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/test_tasks_v2.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "test",
+        "v3": "test"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "test",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-supplier-scorecard",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project"
+    },
+    "deb__dbt-test-orders-filter": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/test_tasks_v2.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "test",
+        "v3": "test"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "test",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-test-orders-filter",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "diagnose_and_add_model"
+    },
+    "deb__dbt-three-way-matching": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/test_tasks_v3.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/test_tasks_v2.json",
+          "split": "test",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "test",
+        "v3": "test"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "test",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-three-way-matching",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "add_single_mart_model"
+    },
+    "deb__dbt-web-session-analytics": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-web-session-analytics",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project"
+    },
+    "deb__dbt-weekly-sales-growth": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "deb-retail-reference-project",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "deb-weekly-sales-growth",
+      "warehouse_family": "deb-retail-warehouse",
+      "workflow": "new_project"
+    },
+    "spider2__activity001": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:dbt_activity_schema_integration_tests",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-activity001",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__airbnb001": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "shared-airbnb-project",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "shared-airbnb-project",
+      "warehouse_family": "airbnb",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__airbnb002": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "shared-airbnb-project",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "shared-airbnb-project",
+      "warehouse_family": "airbnb",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__airport001": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:malaysia_airports_analysis",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-airport001",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__analytics_engineering001": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "shared-northwind-analytics-engineering-project",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "shared-northwind-analytics-engineering-project",
+      "warehouse_family": "northwind",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__app_reporting001": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:app_reporting",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-app-store-reporting",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__app_reporting002": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:app_reporting",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-app-store-reporting",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__apple_store001": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:apple_store",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-app-store-reporting",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__asana001": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:asana",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-asana001",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__asset001": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:dbt_asset",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-asset001",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__atp_tour001": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:dbt_atp_tour",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-atp_tour001",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__f1001": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "shared-f1-project",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "shared-f1-project",
+      "warehouse_family": "f1",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__f1002": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "shared-f1-project",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "shared-f1-project",
+      "warehouse_family": "f1",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__flicks001": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:dbt_flicks",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-flicks001",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__google_play001": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:google_play",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-app-store-reporting",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__google_play002": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:google_play",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-app-store-reporting",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__greenhouse001": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:greenhouse",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-greenhouse001",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__hive001": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:dbt_hive",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-hive001",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__hubspot001": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:hubspot",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-hubspot001",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__intercom001": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "shared-intercom-project",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "shared-intercom-project",
+      "warehouse_family": "intercom",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__inzight001": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:inzight",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-inzight001",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__jira001": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:jira",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-jira001",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__lever001": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:lever",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-lever001",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__marketo001": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:marketo",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-marketo001",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__maturity001": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:claim_to_fame",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-maturity001",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__movie_recomm001": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:movie_recomm",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-netflix-prompt-reuse",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__nba001": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:sports_sims",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-nba001",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__netflix001": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:netflix_programming",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-netflix-prompt-reuse",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__pendo001": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:pendo",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-pendo001",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__playbook002": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:acme",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-playbook002",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__provider001": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:nppes",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-provider001",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__qualtrics001": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:qualtrics",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-qualtrics001",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__quickbooks001": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:quickbooks",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-quickbooks",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__quickbooks002": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:quickbooks",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-quickbooks",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__recharge001": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:recharge",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-recharge",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__recharge002": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:recharge",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-recharge",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__reddit001": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:dbt_reddit",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-reddit001",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__sap001": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:sap",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-sap001",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__scd001": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:dbt_scd",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-scd001",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__shopify001": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:shopify",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-shopify",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__shopify002": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:shopify",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-shopify",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__shopify_holistic_reporting001": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:shopify_holistic_reporting",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-shopify",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__social_media001": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:social_media_reporting",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-social_media001",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__synthea001": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:synthea_omop_etl",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-synthea001",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__tickit001": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:dbt_redshift_demo",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-tickit",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__tickit002": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:dbt_redshift_demo",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-tickit",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__tpch001": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:tpch",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-tpch",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__tpch002": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:tpch",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-tpch",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__twilio001": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:twilio",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-twilio001",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__workday001": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:workday",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-workday",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__workday002": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:workday",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-workday",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__xero001": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:xero",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-xero",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__xero_new001": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:xero",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-xero",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__xero_new002": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:xero",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-xero",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    },
+    "spider2__zuora001": {
+      "exposure_history": [
+        {
+          "evidence": "catalog/legacy/train_tasks_v3.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v3"
+        },
+        {
+          "evidence": "catalog/legacy/train_tasks_v2.json",
+          "split": "train",
+          "training_use": "unknown",
+          "version": "v2"
+        }
+      ],
+      "legacy_split": {
+        "v2": "train",
+        "v3": "train"
+      },
+      "project_family": "spider-project:zuora",
+      "split": "train",
+      "split_version": "v2-family-reviewed-2026-11-05",
+      "task_family": "spider-zuora001",
+      "warehouse_family": "unknown",
+      "workflow": "complete_or_fix_project_run_all_models"
+    }
+  },
+  "validation_certifications_changed": false,
+  "version": "v2-family-reviewed-2026-11-05"
+}

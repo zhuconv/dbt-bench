@@ -1,0 +1,8 @@
+--- original/instruction.md
++++ variant/instruction.md
+@@ -308,3 +308,5 @@
+ - Do NOT modify upstream staging models
+ - Do NOT change model materialization
+ - Preserve all output columns
++
++If no receipts exist for a PO line, report `receipt_quantity`, `accepted_quantity` and `rejected_quantity` as 0, and never substitute `po_quantity` into `accepted_quantity`. Compute `quantity_variance`, `expected_amount` and `total_variance` from that zero exactly as their formulas state, and return NULL for `quantity_variance_pct`.

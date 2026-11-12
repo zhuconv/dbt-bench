@@ -1,0 +1,39 @@
+{
+  "artifacts": [
+    {
+      "destination": "submission/workspace",
+      "exclude": [],
+      "source": "/app"
+    }
+  ],
+  "collection_version": "inventory-workspace-v1",
+  "contract": {
+    "path": "validation/ade/ade-bench-ana-eng005/contract.yaml",
+    "sha256": "80b8aa399998e4943c9ea283d5745e51c65bf13e4c0f93e5aacd00dd621021ef"
+  },
+  "native_verifier_mode": "shared",
+  "native_verifier_modified": false,
+  "path_evidence": [
+    {
+      "path": "validation/evidence/inventory-native-review-v1/summary.json",
+      "sha256": "393b702b571929811e9f5bbe09737ae9ff6bea3cd79450da01ad2fa024ff6424"
+    },
+    {
+      "path": "artifacts/validation/inventory-submission-controls-v1/reconciliation.json",
+      "sha256": "626777d516ba29d292c8ede5b95b3afaaea06fb01f275cfec792647077b206de"
+    },
+    {
+      "path": "tasks/ade__ade-bench-ana-eng005/tests/test-setup.sh",
+      "sha256": "a78a67551d1b4afb81202621c68318786d7a2aa8309bd603a1a6e865ef1bf346"
+    }
+  ],
+  "rationale": "Capture complete /app before native hidden tests/seeds. Both native oracle and nop collections are verified; native test-setup builds submitted fact_inventory. Hidden /tests and /solution are outside the export. Source/output/environment validity is checked separately from collection completeness.",
+  "required_files": [
+    "submission/workspace/dbt_project.yml",
+    "submission/workspace/profiles.yml",
+    "submission/workspace/analytics_engineering.duckdb"
+  ],
+  "schema_version": 1,
+  "task_hash": "5eb808be6df0aa9e3be10e4d5ed70c4b960c8f55a28932846830174017375cd5",
+  "task_key": "ade__ade-bench-ana-eng005"
+}

@@ -1,0 +1,46 @@
+{
+  "activation": "Requires an explicit sources.lock.yaml runtime_patches entry and installation bundle kwargs",
+  "files": [
+    {
+      "after_sha256": "434b6be964ab72ac7d1b95d60520bab48ef9af4bc9248d82a24809080b8e213d",
+      "before_sha256": "37b32291984a04bec9a309a36d10f2e07f85af86c46ba2df8b3ff276873fa212",
+      "path": "agents/installed/qwen_code.py",
+      "replacements": [
+        {
+          "after_text": "import hashlib\nimport json\n",
+          "before_text": "import json\n"
+        },
+        {
+          "after_text": "class QwenCodeOptions(InstalledAgentOptions):\n    installation_bundle: Path | None = Field(\n        default=None, description=\"Explicit local locked installation manifest.\")\n    installation_bundle_sha256: str | None = Field(\n        default=None, description=\"Required SHA256 of the installation manifest.\")\n",
+          "before_text": "class QwenCodeOptions(InstalledAgentOptions):\n"
+        },
+        {
+          "after_text": "    async def install(self, environment: BaseEnvironment) -> None:\n        if self.options.installation_bundle is not None:\n            await self._install_locked_bundle(environment)\n            return\n        if self.options.installation_bundle_sha256 is not None:\n            raise ValueError(\"Installation checksum requires a bundle manifest\")\n",
+          "before_text": "    async def install(self, environment: BaseEnvironment) -> None:\n"
+        },
+        {
+          "after_text": "    async def _install_locked_bundle(self, environment: BaseEnvironment) -> None:\n        manifest_path = self.options.installation_bundle.resolve()\n        manifest_bytes = manifest_path.read_bytes()\n        if hashlib.sha256(manifest_bytes).hexdigest() != self.options.installation_bundle_sha256:\n            raise ValueError(\"Locked Qwen manifest checksum mismatch or missing\")\n        manifest = json.loads(manifest_bytes)\n        if (manifest.get(\"schema_version\") != 1\n                or manifest.get(\"kind\") != \"dbt-bench-qwen-bundle-v1\"\n                or manifest.get(\"platform\") != \"linux-arm64\"\n                or manifest.get(\"qwen_version\") != self._version):\n            raise ValueError(\"Locked Qwen manifest/version/platform mismatch\")\n        paths = {}\n        for name in (\"archive\", \"inventory\", \"installer\"):\n            entry = manifest[\"files\"][name]\n            path = (manifest_path.parent / entry[\"path\"]).resolve()\n            if not path.is_relative_to(manifest_path.parent):\n                raise ValueError(\"Locked Qwen file escapes manifest directory\")\n            with path.open(\"rb\") as stream:\n                actual = hashlib.file_digest(stream, \"sha256\").hexdigest()\n            if actual != entry[\"sha256\"]:\n                raise ValueError(\"Locked Qwen file checksum mismatch: \" + name)\n            paths[name] = path\n        remote = {\"archive\": \"/installed-agent/qwen-bundle.tar.gz\",\n                  \"inventory\": \"/installed-agent/qwen-inventory.json\",\n                  \"installer\": \"/installed-agent/qwen-install.py\"}\n        for name, path in paths.items():\n            await environment.upload_file(path, remote[name])\n        await self.exec_as_agent(environment, command=shlex.join([\n            \"python3\", remote[\"installer\"], \"--archive\", remote[\"archive\"],\n            \"--inventory\", remote[\"inventory\"],\n            \"--archive-sha256\", manifest[\"files\"][\"archive\"][\"sha256\"],\n            \"--inventory-sha256\", manifest[\"files\"][\"inventory\"][\"sha256\"],\n            \"--output\", \"/logs/agent/locked-install.json\",\n        ]))\n        versions = await self.exec_as_agent(environment, command=(\n            \"set -eo pipefail; . ~/.nvm/nvm.sh; \"\n            \"node --version; npm --version; qwen --version\"))\n        if (versions.stdout or \"\").strip().splitlines() != [\n            \"v\" + manifest[\"node_version\"], manifest[\"npm_version\"], manifest[\"qwen_version\"]]:\n            raise ValueError(\"Installed Node/npm/Qwen versions differ from bundle\")\n\n    def _find_session_jsonl(self) -> Path | None:\n",
+          "before_text": "    def _find_session_jsonl(self) -> Path | None:\n"
+        }
+      ]
+    }
+  ],
+  "id": "harbor-025-qwen-locked-install-v1",
+  "native_verifier_modified": false,
+  "package": "harbor",
+  "package_version": "0.25.0",
+  "reason": "Explicit checksum-bound offline installation bundle replaces mutable Node/npm resolution only when requested; preserves native Qwen run/tools/converter. Python extraction also avoids the observed ADE xz sandbox failure.",
+  "regression_evidence": [
+    {
+      "path": "validation/evidence/qwen-bundle-candidate-review-v1.json",
+      "sha256": "ba79eb49c45b450653a186e71b6c2551c5a92a5c2e4e2a59f3b2b122d26920ba"
+    },
+    {
+      "path": "validation/evidence/qwen-bundle-candidate-tests-v1.json",
+      "sha256": "d20b525a3208747d27b2954b703f99b0231f9e011252b4179ca1e71cae16092c"
+    }
+  ],
+  "schema_version": 1,
+  "task_budgets_modified": false,
+  "type": "environment"
+}

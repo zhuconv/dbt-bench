@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "scope": "Current train-only phase 3 selection; older freezes and test rows retained.",
+  "selection": {
+    "path": "${ARTIFACT_ROOT}/validation/phase3-review-v1/root-control-v1/freezes/train-phase3-v06/manifest.json",
+    "sha256": "672eb5a3f3ab4580363557ef44a1a8e4e01a34c65c7591914625c6cb3a6857ce"
+  }
+}

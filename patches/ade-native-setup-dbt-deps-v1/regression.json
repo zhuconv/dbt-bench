@@ -1,0 +1,178 @@
+{
+  "native_batch": {
+    "path": "artifacts/validation/ade-repaired-reference-batch-v1/reconciliation.json",
+    "sha256": "86273147093054cf1c2ec47fdc6c0f0613056b8badac174f3923992fa0cec82d"
+  },
+  "original_failures": {
+    "path": "validation/evidence/ade-setup-dependency-failures-v1/summary.json",
+    "sha256": "16fbe84525d8cc00366c171e88f51d28216317c435ff1028cb1e9455586135e1"
+  },
+  "patch": {
+    "path": "patches/ade-native-setup-dbt-deps-v1/metadata.json",
+    "sha256": "c4c899f8382cd9000f66e5ef79201dada5ec036eaff01e424957e2cc5da73415"
+  },
+  "qwen_smoke": false,
+  "semantically_certified_tasks": 0,
+  "tasks": [
+    {
+      "actual_context": {
+        "path": "artifacts/images/ade-setup-deps-repair-v1/ade__ade-bench-f1009/context/result.json",
+        "sha256": "fbf27a82a0df36abb86d9b4bb63521e6ade36f461f277e8805a2fddb61d8eb0b"
+      },
+      "image_provenance": {
+        "path": "artifacts/images/ade-setup-deps-repair-v1/ade__ade-bench-f1009/provenance.json",
+        "sha256": "bf27e7619a210f329917a0bcf8162a34571eae60044b1f6336b1d72231f73cea"
+      },
+      "native_exceptions": 0,
+      "native_nop_rejections": 2,
+      "native_oracle_passes": 2,
+      "original_setup_sha256": "bbf05bc067360615885c8e28d14e76824e7b5e4e110227f88c674f26810692bc",
+      "original_source_and_verifier_unchanged": true,
+      "patched_setup_sha256": "87459749ada9965f76daf32fcf390917f98e38ecce5bc8c5eb7f65ce40c42b1a",
+      "scope": "Environment setup repair regression only; no semantic certification or actual Qwen execution.",
+      "setup_build_log": {
+        "path": "artifacts/images/ade-setup-deps-repair-v1/ade__ade-bench-f1009/build.log",
+        "sha256": "012e49d0650664f9cdde2d84b417a30ce77719ee4cb9401499c292ce3fd6e1e2"
+      },
+      "task_key": "ade__ade-bench-f1009",
+      "trials": [
+        {
+          "path": "artifacts/validation/ade-repaired-reference-batch-v1/jobs/ade-repaired-reference-batch-v1/ade__ade-bench-f1009__AqGh6G8/result.json",
+          "sha256": "3fc34d8f4ec16c978de54d0d79e7fdaa5747f60dc851f9d6ce204964c08461fb"
+        },
+        {
+          "path": "artifacts/validation/ade-repaired-reference-batch-v1/jobs/ade-repaired-reference-batch-v1/ade__ade-bench-f1009__mZWFCqz/result.json",
+          "sha256": "0aa82aae75b6c2dfddfee8a8d93301fff5f5f9f3397c337dbf5e2310f726a6f1"
+        },
+        {
+          "path": "artifacts/validation/ade-repaired-reference-batch-v1/jobs/ade-repaired-reference-batch-v1/ade__ade-bench-f1009__nRvPbjo/result.json",
+          "sha256": "d6687df21316086f7cb88c096063787efe3bc106b5afb3f6028d649ab10b68d9"
+        },
+        {
+          "path": "artifacts/validation/ade-repaired-reference-batch-v1/jobs/ade-repaired-reference-batch-v1/ade__ade-bench-f1009__v4p7jaq/result.json",
+          "sha256": "6609f60c8f2ca836697e516c6cefbc45bc25b89abda8f08bef682c1afa2a1d4a"
+        }
+      ]
+    },
+    {
+      "actual_context": {
+        "path": "artifacts/images/ade-setup-deps-repair-v1/ade__ade-bench-f1010/context/result.json",
+        "sha256": "0f2c60a9e90856a588a8358f89c79a24f57f60455c833d53705364539ce6886f"
+      },
+      "image_provenance": {
+        "path": "artifacts/images/ade-setup-deps-repair-v1/ade__ade-bench-f1010/provenance.json",
+        "sha256": "5b18beb7366da57af3cb4a62084cd8875ee3a52e2bb1cedf958fe219852429a1"
+      },
+      "native_exceptions": 0,
+      "native_nop_rejections": 2,
+      "native_oracle_passes": 2,
+      "original_setup_sha256": "bbf05bc067360615885c8e28d14e76824e7b5e4e110227f88c674f26810692bc",
+      "original_source_and_verifier_unchanged": true,
+      "patched_setup_sha256": "87459749ada9965f76daf32fcf390917f98e38ecce5bc8c5eb7f65ce40c42b1a",
+      "scope": "Environment setup repair regression only; no semantic certification or actual Qwen execution.",
+      "setup_build_log": {
+        "path": "artifacts/images/ade-setup-deps-repair-v1/ade__ade-bench-f1010/build.log",
+        "sha256": "f0313862205144abb068ba4423cd2b9401efb375bb16107a580d413c09c70178"
+      },
+      "task_key": "ade__ade-bench-f1010",
+      "trials": [
+        {
+          "path": "artifacts/validation/ade-repaired-reference-batch-v1/jobs/ade-repaired-reference-batch-v1/ade__ade-bench-f1010__6BfGb2d/result.json",
+          "sha256": "e9ae5ace707a9fe372709f00889908b48a71305c0e65c2a4466409a55fcab447"
+        },
+        {
+          "path": "artifacts/validation/ade-repaired-reference-batch-v1/jobs/ade-repaired-reference-batch-v1/ade__ade-bench-f1010__7iu8REz/result.json",
+          "sha256": "2afc52ef3e5a9672bd28f701e8ba3958e8584ffb2901f1a52ec7145f211d6806"
+        },
+        {
+          "path": "artifacts/validation/ade-repaired-reference-batch-v1/jobs/ade-repaired-reference-batch-v1/ade__ade-bench-f1010__F6Cp4Xo/result.json",
+          "sha256": "4449a2942b03a4fe723fb4eeee65a06aa72ebfb7674506acdeaa20eee3e7ba0a"
+        },
+        {
+          "path": "artifacts/validation/ade-repaired-reference-batch-v1/jobs/ade-repaired-reference-batch-v1/ade__ade-bench-f1010__p92Q69r/result.json",
+          "sha256": "46d3575834828d67b160818b6caf90f172238d99340e8edb9ee6e162a853831c"
+        }
+      ]
+    },
+    {
+      "actual_context": {
+        "path": "artifacts/images/ade-setup-deps-repair-v1/ade__ade-bench-f1010-medium/context/result.json",
+        "sha256": "06697d627d1cafcddc555ffc5c1b1104a6b4ee4728187295682d10079b0719c6"
+      },
+      "image_provenance": {
+        "path": "artifacts/images/ade-setup-deps-repair-v1/ade__ade-bench-f1010-medium/provenance.json",
+        "sha256": "fbc22ec183789aab9101e4bfd796852d61c8e42bda8bf2c856a4f4ffaab4d9e7"
+      },
+      "native_exceptions": 0,
+      "native_nop_rejections": 2,
+      "native_oracle_passes": 2,
+      "original_setup_sha256": "bbf05bc067360615885c8e28d14e76824e7b5e4e110227f88c674f26810692bc",
+      "original_source_and_verifier_unchanged": true,
+      "patched_setup_sha256": "87459749ada9965f76daf32fcf390917f98e38ecce5bc8c5eb7f65ce40c42b1a",
+      "scope": "Environment setup repair regression only; no semantic certification or actual Qwen execution.",
+      "setup_build_log": {
+        "path": "artifacts/images/ade-setup-deps-repair-v1/ade__ade-bench-f1010-medium/build.log",
+        "sha256": "9edd771e3666de76a9df9d42ee6753fa0b8d186589c0f80cd7a4948700948499"
+      },
+      "task_key": "ade__ade-bench-f1010-medium",
+      "trials": [
+        {
+          "path": "artifacts/validation/ade-repaired-reference-batch-v1/jobs/ade-repaired-reference-batch-v1/ade__ade-bench-f1010-medium__5WtVFYU/result.json",
+          "sha256": "ff2b243ff59e79898e90f57f6c0102d04438592137b2debc82e356f889528e9f"
+        },
+        {
+          "path": "artifacts/validation/ade-repaired-reference-batch-v1/jobs/ade-repaired-reference-batch-v1/ade__ade-bench-f1010-medium__UsLzkbJ/result.json",
+          "sha256": "db47219dd741e8d679baaa80bb14c472a3862f4ef7a72be3059168d5f00c520e"
+        },
+        {
+          "path": "artifacts/validation/ade-repaired-reference-batch-v1/jobs/ade-repaired-reference-batch-v1/ade__ade-bench-f1010-medium__WW2EbQn/result.json",
+          "sha256": "c6fa15b2c46a25974519716a0f9286e93a7c13543ed2b02eb4352562f3a0c692"
+        },
+        {
+          "path": "artifacts/validation/ade-repaired-reference-batch-v1/jobs/ade-repaired-reference-batch-v1/ade__ade-bench-f1010-medium__tGpunGh/result.json",
+          "sha256": "7c34e10c8360393574e71c0a83a9715d8d3b0a0d57d775c0ecba2a8b20df0288"
+        }
+      ]
+    },
+    {
+      "actual_context": {
+        "path": "artifacts/images/ade-public-setup-review-f1011-v1/ade__ade-bench-f1011/context/result.json",
+        "sha256": "afe25c3b47812a0ace9f4040c7b24a715b8ab1462c24e01ee75d7418f4930a2d"
+      },
+      "image_provenance": {
+        "path": "artifacts/images/ade-public-setup-review-f1011-v1/ade__ade-bench-f1011/provenance.json",
+        "sha256": "f8ab2c51ced42eff8d3b530e9f91a363b401a525ab68960f17eb918a2f7746a6"
+      },
+      "native_exceptions": 0,
+      "native_nop_rejections": 2,
+      "native_oracle_passes": 2,
+      "original_setup_sha256": "7ab70ddf507058d8817382124353178bd7c440fdc98ed2febd7a37644d7a8bea",
+      "original_source_and_verifier_unchanged": true,
+      "patched_setup_sha256": "85ecca407d83390cbaf1df0032399c573d212cffc180aab4676203877bbcb8ae",
+      "scope": "Environment setup repair regression only; no semantic certification or actual Qwen execution.",
+      "setup_build_log": {
+        "path": "artifacts/images/ade-setup-deps-repair-v1/ade__ade-bench-f1011/build.log",
+        "sha256": "dfe605623d5675c129c9c6b1e5ec2d14c11e4fbec48d3526d282cde4ae157b9e"
+      },
+      "task_key": "ade__ade-bench-f1011",
+      "trials": [
+        {
+          "path": "artifacts/validation/ade-repaired-reference-batch-v1/jobs/ade-repaired-reference-batch-v1/ade__ade-bench-f1011__3EmLBBg/result.json",
+          "sha256": "70cbac92f93331e1ab2c7dd617b97bba7bffbc35991fd5babb63f83952978c22"
+        },
+        {
+          "path": "artifacts/validation/ade-repaired-reference-batch-v1/jobs/ade-repaired-reference-batch-v1/ade__ade-bench-f1011__Lrs5Zth/result.json",
+          "sha256": "a998d3522522d4d25e04b8f9d279e52d6fd6b2447cd0af0ddd0326b902b21a43"
+        },
+        {
+          "path": "artifacts/validation/ade-repaired-reference-batch-v1/jobs/ade-repaired-reference-batch-v1/ade__ade-bench-f1011__gakDp8W/result.json",
+          "sha256": "74168f0795a763916cf0dec872be13b8990bf43764e09b8f1d16b409a73fd8c1"
+        },
+        {
+          "path": "artifacts/validation/ade-repaired-reference-batch-v1/jobs/ade-repaired-reference-batch-v1/ade__ade-bench-f1011__nRimxCX/result.json",
+          "sha256": "6637c52786329b1300fc693d999b15af7493db9fd68ea3e8df75d0cb3c5fcb19"
+        }
+      ]
+    }
+  ]
+}

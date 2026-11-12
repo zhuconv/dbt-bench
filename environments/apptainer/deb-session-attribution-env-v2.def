@@ -1,0 +1,24 @@
+Bootstrap: docker
+From: ghcr.io/snowflake-labs/data-eng-bench-base@sha256:44ba3dcf5690da2752aa8c0874ffe4c73b124ca0b61b8979b93fe2eb4643b5ca
+
+%labels
+    dbt_bench_task deb__dbt-session-attribution
+    native_dockerfile_sha256 c3212a3c41343e2330ecad2cc0432f3299f31de8d233478c29062ea195cab930
+
+%post
+    set -eu
+    pip install --no-cache-dir pandas==2.2.3 numpy==2.2.1
+    python3 -m pip freeze
+    mkdir -p /opt/dbt-bench-initial
+    mv /app/dbt_models_duckdb/dbt_packages /opt/dbt-bench-initial/dbt_packages
+
+%environment
+    # Reproduce the native image's DuckDB ENTRYPOINT in each fresh container /tmp.
+    # The explicit command used by Harbor's `apptainer exec` bypasses the OCI entrypoint.
+    if [ "${DB_TYPE:-duckdb}" != duckdb ]; then
+        echo "This task image supports only the reviewed DuckDB backend" >&2
+        exit 1
+    fi
+    /entrypoint.sh /bin/true >/dev/null
+    # dbt deps removes/recreates this tree; instantiate it in the fresh writable layer.
+    cp -a /opt/dbt-bench-initial/dbt_packages /app/dbt_models_duckdb/dbt_packages

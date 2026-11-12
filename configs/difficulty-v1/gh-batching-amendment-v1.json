@@ -1,0 +1,80 @@
+{
+  "account": "${ALLOCATION}",
+  "attempt_ids_per_remaining_task": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "automatic_trial_retries": 0,
+  "baseline_selection": {
+    "path": "${ARTIFACT_ROOT}/difficulty/qwen36-v1/migration-gh-review-v1/remaining-tasks.json",
+    "sha256": "d673a9b49a9b65b45164af121d6bc76075ea41d350c864aecc0ab2e6baf1161d"
+  },
+  "batch_assignment": "Deterministic longest(agent+verifier native seconds) task first; assign to lowest accumulated-budget batch, then lowest batch index. Not based on successes.",
+  "batch_count": 8,
+  "cancelled_unstarted_jobs": [
+    "1130274",
+    "1130410",
+    "1130656"
+  ],
+  "client_and_server_generation_parameters": "Unchanged from locked measurement-rules.json except per-batch server seed explicitly above.",
+  "completed_attempts_preserved": 8,
+  "completed_runs": [
+    "${ARTIFACT_ROOT}/difficulty/qwen36-v1/ade-ana005-a1-4",
+    "${ARTIFACT_ROOT}/difficulty/qwen36-v1/ade-f1003-a1-4"
+  ],
+  "concurrency_per_batch": 1,
+  "created_at": "2026-11-08T22:39:00.870502+00:00",
+  "evidence": [
+    {
+      "path": "${ARTIFACT_ROOT}/difficulty/qwen36-v1/gh-migration-v1/cancelled-pending.json",
+      "sha256": "f1cbada3f257604091c24f72fe06f1d4dc0b29214de75cce4b9ff6de7f87088b"
+    },
+    {
+      "path": "${ARTIFACT_ROOT}/difficulty/qwen36-v1/gh-migration-v1/slurm-query-1.json",
+      "sha256": "8f6bfcb28be159765c950b7bf330f5d02f007c249907823de285dd239abf8302"
+    },
+    {
+      "path": "${ARTIFACT_ROOT}/difficulty/qwen36-v1/gh-migration-v1/slurm-query-2.json",
+      "sha256": "6d80750a7fd78d18e96576bee2a05aa83cc7116844c6dafe796a66021d426dd2"
+    },
+    {
+      "path": "${ARTIFACT_ROOT}/difficulty/qwen36-v1/gh-migration-v1/slurm-query-3.json",
+      "sha256": "533c76299c750b4e790240d0d0d0305cfa704259c56e46df4c7cfd6d5c1a27e4"
+    },
+    {
+      "path": "${ARTIFACT_ROOT}/difficulty/qwen36-v1/gh-migration-v1/slurm-query-4.json",
+      "sha256": "4cb3c1caaca28496f9acb6d08fedf57169afa5c5d870140e32e5ca4c0a4bbf8c"
+    },
+    {
+      "path": "${ARTIFACT_ROOT}/difficulty/qwen36-v1/migration-gh-review-v1/handoff.json",
+      "sha256": "79af27ace7a168e615cf6715afc85d1d62985967ad5c86fa7e456754a4b56f33"
+    }
+  ],
+  "model_requests_only_for_prescribed_difficulty_attempts": true,
+  "model_service": "One vLLM process per batch; sequential native Harbor single-task jobs with4 independent clean trials each. No added agent loop or scheduler.",
+  "native_budgets_unchanged": true,
+  "no_extra_smoke_generations": true,
+  "nodes_per_batch": 1,
+  "parent_measurement_rules": {
+    "path": "configs/difficulty-v1/measurement-rules.json",
+    "sha256": "f58b853593db9dc5fe0ab35b2ad682ed9fe8f3216bb4da593246a31268a5972b"
+  },
+  "partition": "gh",
+  "reason": "Observed gh-dev MaxJobsPU=1 and queue delay; user authorized longer gh allocations under CLAUDE.md exception.",
+  "remaining_attempts": 256,
+  "schema_version": 1,
+  "seed_policy": "A single deterministic server_seed per new batch, derived from scheduling amendment hash, population hash and sorted-budget batch membership/index before requests. Continuous RNG stream across independent Harbor trials; historical per-job seeds/results preserved. New scheduling/seed identity is recorded and is not claimed bit-identical to unstarted historical plans.",
+  "split_freeze_requires_explicit_user_confirmation": true,
+  "split_rules_unchanged": {
+    "path": "configs/difficulty-v1/split-rules.json",
+    "sha256": "4bb9e220350735197d59686f7a7cc5ad215b7b98afd9cab54cdc4eaa362b7c67"
+  },
+  "timeout_limit_caveat": "This is an overhead allowance, not a guarantee that all setup/collect timeout caps can simultaneously be consumed. Full serial phase caps exceed8x48hours; no cap is shortened. Allocation interruptions stay unresolved, not model failures, and require explicit follow-up reconciliation.",
+  "training_prohibited": true,
+  "user_authorization": "User explicitly requested6–8 parallel gh batches after gh-dev serial-job queue made measurement take1–2weeks; retain completed attempts and cancel only not-started jobs.",
+  "version": "qwen36-difficulty-gh-batching-v1",
+  "walltime_basis": "Sum of native agent+verifier budgets plus at least6hours for setup/capture/model startup. Every batch requests the QOS maximum48hours and exits as soon as done.",
+  "walltime_sec": 172800
+}

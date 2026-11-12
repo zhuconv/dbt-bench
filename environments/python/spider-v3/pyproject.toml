@@ -1,0 +1,13 @@
+[project]
+name = "dbt-bench-spider-image-dependencies"
+version = "0.1.0"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+  "dbt-core==1.10.22", "dbt-duckdb==1.10.0", "duckdb==1.2.2", "pandas",
+  "openai", "tiktoken", "tenacity", "gymnasium", "rich"
+]
+
+[tool.uv]
+package = false
+environments = ["sys_platform == 'linux' and platform_machine == 'aarch64'"]
+required-environments = ["sys_platform == 'linux' and platform_machine == 'aarch64'"]

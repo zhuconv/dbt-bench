@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "authority": "User implementation plan and read-only legacy code; not new task validation",
+  "risks": [
+    {"id": "ade-calendar-window", "tasks": ["ade__ade-bench-airbnb005"], "status": "pending_native_reproduction", "required": "Only mutate reviews_28d from 28 calendar days to 28 rows; independently recompute daily values before native verification", "fixture": "tests/test_risks.py"},
+    {"id": "ade-diagnostic-deliverable", "tasks": ["ade__ade-bench-f1003", "ade__ade-bench-f1003-hard", "ade__ade-bench-f1011"], "status": "pending_assets", "required": "Read diagnostic answer-table contract; do not substitute model repair"},
+    {"id": "ade-prompt-variants", "tasks": ["ade__ade-bench-f1003", "ade__ade-bench-f1003-hard", "ade__ade-bench-f1010", "ade__ade-bench-f1010-medium"], "status": "grouped_pending_asset_review", "required": "Same split group; inspect setup and expected answers"},
+    {"id": "spider-copy-gold", "sources": ["spider2"], "status": "pending_assets", "required": "Review each solution; copy-gold is only a comparator fixture. Rebuild dbt project from clean inputs without gold access", "pilot": "spider2__workday002"},
+    {"id": "spider-row-association", "sources": ["spider2"], "status": "pending_native_reproduction", "required": "Preserve column multisets but permute value-to-key association; independently prove mismatch", "fixture": "tests/test_comparison.py"},
+    {"id": "spider-movie-instruction", "tasks": ["spider2__movie_recomm001"], "status": "pending_assets", "required": "Reconcile genre/program date prompt with MovieLens user_watched_movies schema and adapter all-models instruction"},
+    {"id": "deb-python-path", "sources": ["deb"], "status": "pending_native_reproduction", "required": "Probe actual Qwen tools and native verifier Python executable/import paths/dbt shebang; cross-read agent-created DuckDB", "fixture": "tests/test_environment.py"},
+    {"id": "deb-profile-schema", "sources": ["deb"], "status": "pending_native_reproduction", "required": "Check profile location, schema, DB path/permissions and source data in both execution contexts"},
+    {"id": "deb-dependency-mutation", "sources": ["deb"], "status": "pending_native_reproduction", "required": "Dependency damage caused by agent remains original failure; restored diagnostic rerun has separate identity"},
+    {"id": "deb-marketing-schema", "tasks": ["deb__dbt-fix-marketing-attribution"], "status": "pending_native_reproduction", "required": "Reproduce source-schema issue; scoring repair must be versioned and preserve native reward"},
+    {"id": "deb-return-rate", "tasks": ["deb__dbt-product-return-rate-analysis"], "status": "pending_native_reproduction", "required": "Separately reproduce profile path issue and return-lines/units grader contradiction; retain candidate"},
+    {"id": "deb-reference-types", "tasks": ["deb__dbt-retail-task-04-market-roi", "deb__dbt-session-attribution", "deb__dbt-daily-order-summary"], "status": "pending_assets", "required": "Review expected JSON, independent recomputation, and aggregate assertions separately; use session-attribution as proposed normal control, not yet certified"},
+    {"id": "legacy-strict-precision", "sources": ["ade", "spider2", "deb"], "status": "fixture_regression_implemented", "required": "Integer/large integer exactness, keyed tolerance, multiset and independent negative proof", "fixture": "tests/test_comparison.py"},
+    {"id": "qwen-error-loss", "sources": ["ade", "spider2", "deb"], "status": "fixture_regression_implemented_runtime_conformance_pending", "required": "Preserve functionResponse.response.error and call ID; test pinned converter against real schema", "fixture": "tests/trace_fidelity/test_trace.py"},
+    {"id": "cross-source-project-family", "sources": ["ade", "spider2"], "status": "pending_assets", "required": "Inspect Airbnb/F1/Intercom setup states and targets before family freeze"}
+  ]
+}

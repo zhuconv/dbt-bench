@@ -1,0 +1,38 @@
+{
+  "independent_replay": {
+    "path": "artifacts/execution/qwen-locked-install-v3/result.json",
+    "sha256": "cd8815ffb518ffbba2c7f1277acc4240aa4b15c091caac8280e24ef5abb4aa75"
+  },
+  "initial_failure": {
+    "path": "artifacts/execution/qwen-locked-install-v1/result.json",
+    "sha256": "5e61a31c94ba9068ede7c674358ee9d86fee4011d06b94e752838e795948db8e"
+  },
+  "locks": [
+    {
+      "path": "runtime/qwen-code/package.json",
+      "sha256": "78056dfda647963b7da968741407de04e9923c03fd7924a5f89b4349556cfa65"
+    },
+    {
+      "path": "runtime/qwen-code/package-lock.json",
+      "sha256": "4bf770731e7cba06af49e2a944e1cf93e0fff1918676676350f723b197b67967"
+    },
+    {
+      "path": "runtime/qwen-code/node.lock.json",
+      "sha256": "0e9d5b1de12ca12aae70da5e9722a2577345aa283dc74b0b5851a3814659aebb"
+    },
+    {
+      "path": "runtime/qwen-code/native-installation.json",
+      "sha256": "f9fff403e5b094765addfa2fc7f770866df0cb23f21041f55ab0aa20381f1f90"
+    }
+  ],
+  "model_requests": 0,
+  "new_installation_directories": 2,
+  "package_files_compared": 1608,
+  "packages": 17,
+  "passed": true,
+  "scope": "Prepared Linux ARM64 locked installer only; native Harbor integration remains unchanged",
+  "tests": {
+    "path": "validation/evidence/qwen-installation-ninja-tests-v1.json",
+    "sha256": "0c548b44ce737bc92e817edb6b9040c7eab35b0cec4b1f472a170995ba12da96"
+  }
+}

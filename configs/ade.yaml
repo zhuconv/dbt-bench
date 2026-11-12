@@ -1,0 +1,12 @@
+{
+  "job_name": "ade-parameterize-with-prepare-config",
+  "jobs_dir": "jobs",
+  "n_attempts": 1,
+  "n_concurrent_trials": 1,
+  "timeout_multiplier": 1.0,
+  "retry": {"max_retries": 0},
+  "environment": {"type": "docker", "env": {"DB_TYPE": "duckdb"}},
+  "agents": [{"name": "qwen-coder", "kwargs": {"version": "0.26.5"}, "env": {"DB_TYPE": "duckdb"}, "model_api_key_name": "OPENAI_API_KEY"}],
+  "verifier": {"env": {"DB_TYPE": "duckdb"}},
+  "datasets": [{"path": "tasks", "task_names": ["ade__*"]}]
+}

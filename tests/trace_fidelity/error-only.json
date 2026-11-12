@@ -1,0 +1,9 @@
+{
+  "fixture_kind": "synthetic_qwen_message_parts_shape",
+  "schema_basis": "User-provided functionResponse.response.error failure case; installed 0.25.0 schema conformance still required",
+  "events": [
+    {"type": "user", "message": {"parts": [{"text": "Read the missing file."}]}},
+    {"type": "assistant", "message": {"parts": [{"functionCall": {"id": "call-error", "name": "read_file", "args": {"path": "/missing.sql"}}}]}},
+    {"type": "tool_result", "message": {"parts": [{"functionResponse": {"id": "call-error", "response": {"error": "ENOENT: /missing.sql does not exist"}}}]}}
+  ]
+}

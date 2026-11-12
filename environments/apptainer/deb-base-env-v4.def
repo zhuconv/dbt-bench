@@ -1,0 +1,26 @@
+Bootstrap: localimage
+From: artifacts/images/deb-base-env-v2.sif
+
+%labels
+    dbt_bench_derivative deb-base-env-v4-server-locked
+    parent_sif_sha256 89281109adeecd76df225391e79a4396df9f4de54776aade42db5a9c096de955
+
+%files
+    environments/apptainer/harbor-server-requirements.txt /opt/dbt-bench-build/server-requirements.txt
+
+%post
+    set -eu
+    test -x /usr/bin/python3
+    command -v tmux
+    apt-get -o APT::Sandbox::User=root update
+    apt-get -o APT::Sandbox::User=root install -y asciinema=2.4.0-1
+    rm -rf /var/lib/apt/lists/*
+    command -v asciinema
+    /usr/local/bin/python3 -m venv /opt/harbor-server
+    /opt/harbor-server/bin/python3 -m pip install --no-cache-dir --only-binary=:all: --require-hashes -r /opt/dbt-bench-build/server-requirements.txt
+    /opt/harbor-server/bin/python3 -m pip freeze
+    rm -rf /opt/dbt-bench-build
+    # localimage construction evaluates the parent environment. Remove its
+    # build-time writable package copy, retaining the pristine source snapshot.
+    # Fresh runtime initialization must create exactly one package tree.
+    rm -rf /app/dbt_models_duckdb/dbt_packages

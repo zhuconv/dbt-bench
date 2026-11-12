@@ -1,0 +1,8 @@
+--- original/instruction.md
++++ variant/instruction.md
+@@ -393,3 +393,5 @@
+ - Use `DATEDIFF('day', start, end)` for date differences (works on both backends)
+ - Use `CAST(... AS DOUBLE)` for division to avoid integer division issues
+ - Use integer 1/0 instead of boolean true/false for cross-database compatibility
++
++If a shipping method's name is NULL, use its shipping_method_code as shipping_method_name, so that shipping_method_name is never NULL in fulfillment_sla.

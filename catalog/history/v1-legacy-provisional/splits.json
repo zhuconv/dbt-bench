@@ -1,0 +1,548 @@
+{
+  "assignments": {
+    "ade__ade-bench-airbnb005": "train",
+    "ade__ade-bench-airbnb007": "train",
+    "ade__ade-bench-ana-eng003": "train",
+    "ade__ade-bench-ana-eng004": "train",
+    "ade__ade-bench-ana-eng005": "train",
+    "ade__ade-bench-ana-eng006": "train",
+    "ade__ade-bench-f1002": "train",
+    "ade__ade-bench-f1003": "train",
+    "ade__ade-bench-f1003-hard": "train",
+    "ade__ade-bench-f1009": "train",
+    "ade__ade-bench-f1010": "train",
+    "ade__ade-bench-f1010-medium": "train",
+    "ade__ade-bench-f1011": "train",
+    "ade__ade-bench-intercom001": "train",
+    "ade__ade-bench-intercom002": "train",
+    "ade__ade-bench-intercom003": "train",
+    "deb__dbt-abc-classification": "test",
+    "deb__dbt-basket-composition-analysis": "test",
+    "deb__dbt-calculate-running-balance": "train",
+    "deb__dbt-channel-attribution-analysis": "train",
+    "deb__dbt-consolidate": "test",
+    "deb__dbt-coupon-effectiveness": "train",
+    "deb__dbt-customer-acquisition-channel-performance": "train",
+    "deb__dbt-customer-churn-cohorts": "test",
+    "deb__dbt-customer-churn-early-warning": "train",
+    "deb__dbt-customer-cltv-forecasting": "test",
+    "deb__dbt-customer-cohort-retention": "train",
+    "deb__dbt-customer-cross-sell-insights": "test",
+    "deb__dbt-customer-geographic": "train",
+    "deb__dbt-customer-lifetime-value": "train",
+    "deb__dbt-customer-ltv-fix": "train",
+    "deb__dbt-customer-order-analytics": "test",
+    "deb__dbt-customer-risk-scoring": "test",
+    "deb__dbt-daily-order-summary": "test",
+    "deb__dbt-dq-macro-enforcement": "train",
+    "deb__dbt-exchange-rate-settlement-date": "train",
+    "deb__dbt-fix-cac-payback-waterfall": "train",
+    "deb__dbt-fix-email-attribution": "train",
+    "deb__dbt-fix-marketing-attribution": "test",
+    "deb__dbt-fix-multi-touch-attribution": "train",
+    "deb__dbt-fix-paid-search-attribution": "train",
+    "deb__dbt-fix-repeat-purchase-cohort-revenue": "test",
+    "deb__dbt-fraud-detection-model": "test",
+    "deb__dbt-fulfillment-sla": "train",
+    "deb__dbt-gl-reconciliation": "test",
+    "deb__dbt-harbor-marketing-mix-model": "train",
+    "deb__dbt-harbor-product-affinity": "test",
+    "deb__dbt-harbor-warehouse-capacity": "train",
+    "deb__dbt-hr-analytics": "train",
+    "deb__dbt-inventory-analysis": "test",
+    "deb__dbt-inventory-stockout-risk": "train",
+    "deb__dbt-loyalty-points-analysis": "test",
+    "deb__dbt-monthly-channel-revenue": "test",
+    "deb__dbt-multicurrency-lifo": "test",
+    "deb__dbt-order-fulfillment-analytics": "test",
+    "deb__dbt-order-fulfillment-metrics": "test",
+    "deb__dbt-order-interval-metrics": "train",
+    "deb__dbt-order-reconciliation": "train",
+    "deb__dbt-payment-fraud-analysis": "test",
+    "deb__dbt-price-elasticity": "train",
+    "deb__dbt-product-affinity": "test",
+    "deb__dbt-product-category-analytics": "test",
+    "deb__dbt-product-performance-metrics": "test",
+    "deb__dbt-product-return-rate-analysis": "test",
+    "deb__dbt-product-sales-velocity": "test",
+    "deb__dbt-retail-task-01-channel-revenue": "test",
+    "deb__dbt-retail-task-04-market-roi": "train",
+    "deb__dbt-retail-task-07-cart-recovery": "train",
+    "deb__dbt-retail-task-10-trust-risk": "train",
+    "deb__dbt-rfm-customer-segmentation": "train",
+    "deb__dbt-rfm-customer-segmentation-2": "train",
+    "deb__dbt-rfm-customer-tiering": "train",
+    "deb__dbt-sales-funnel-analysis": "train",
+    "deb__dbt-session-attribution": "train",
+    "deb__dbt-supplier-payment-optimization": "train",
+    "deb__dbt-supplier-scorecard": "test",
+    "deb__dbt-test-orders-filter": "test",
+    "deb__dbt-three-way-matching": "test",
+    "deb__dbt-web-session-analytics": "train",
+    "deb__dbt-weekly-sales-growth": "train",
+    "spider2__activity001": "train",
+    "spider2__airbnb001": "train",
+    "spider2__airbnb002": "train",
+    "spider2__airport001": "train",
+    "spider2__analytics_engineering001": "train",
+    "spider2__app_reporting001": "train",
+    "spider2__app_reporting002": "train",
+    "spider2__apple_store001": "train",
+    "spider2__asana001": "train",
+    "spider2__asset001": "train",
+    "spider2__atp_tour001": "train",
+    "spider2__f1001": "train",
+    "spider2__f1002": "train",
+    "spider2__flicks001": "train",
+    "spider2__google_play001": "train",
+    "spider2__google_play002": "train",
+    "spider2__greenhouse001": "train",
+    "spider2__hive001": "train",
+    "spider2__hubspot001": "train",
+    "spider2__intercom001": "train",
+    "spider2__inzight001": "train",
+    "spider2__jira001": "train",
+    "spider2__lever001": "train",
+    "spider2__marketo001": "train",
+    "spider2__maturity001": "train",
+    "spider2__movie_recomm001": "train",
+    "spider2__nba001": "train",
+    "spider2__netflix001": "train",
+    "spider2__pendo001": "train",
+    "spider2__playbook002": "train",
+    "spider2__provider001": "train",
+    "spider2__qualtrics001": "train",
+    "spider2__quickbooks001": "train",
+    "spider2__quickbooks002": "train",
+    "spider2__recharge001": "train",
+    "spider2__recharge002": "train",
+    "spider2__reddit001": "train",
+    "spider2__sap001": "train",
+    "spider2__scd001": "train",
+    "spider2__shopify001": "train",
+    "spider2__shopify002": "train",
+    "spider2__shopify_holistic_reporting001": "train",
+    "spider2__social_media001": "train",
+    "spider2__synthea001": "train",
+    "spider2__tickit001": "train",
+    "spider2__tickit002": "train",
+    "spider2__tpch001": "train",
+    "spider2__tpch002": "train",
+    "spider2__twilio001": "train",
+    "spider2__workday001": "train",
+    "spider2__workday002": "train",
+    "spider2__xero001": "train",
+    "spider2__xero_new001": "train",
+    "spider2__xero_new002": "train",
+    "spider2__zuora001": "train"
+  },
+  "candidate_ids_hash": "ca3e2e4dbc0ee33fcc7b33f78b17255f0b3cf7c29545405c5dacaee9603dfd7b",
+  "groups": {
+    "ade__ade-bench-airbnb005": [
+      "ade__ade-bench-airbnb005"
+    ],
+    "ade__ade-bench-airbnb007": [
+      "ade__ade-bench-airbnb007"
+    ],
+    "ade__ade-bench-ana-eng003": [
+      "ade__ade-bench-ana-eng003"
+    ],
+    "ade__ade-bench-ana-eng004": [
+      "ade__ade-bench-ana-eng004"
+    ],
+    "ade__ade-bench-ana-eng005": [
+      "ade__ade-bench-ana-eng005"
+    ],
+    "ade__ade-bench-ana-eng006": [
+      "ade__ade-bench-ana-eng006"
+    ],
+    "ade__ade-bench-f1002": [
+      "ade__ade-bench-f1002"
+    ],
+    "ade__ade-bench-f1003": [
+      "ade__ade-bench-f1003",
+      "ade__ade-bench-f1003-hard"
+    ],
+    "ade__ade-bench-f1009": [
+      "ade__ade-bench-f1009"
+    ],
+    "ade__ade-bench-f1010": [
+      "ade__ade-bench-f1010",
+      "ade__ade-bench-f1010-medium"
+    ],
+    "ade__ade-bench-f1011": [
+      "ade__ade-bench-f1011"
+    ],
+    "ade__ade-bench-intercom001": [
+      "ade__ade-bench-intercom001"
+    ],
+    "ade__ade-bench-intercom002": [
+      "ade__ade-bench-intercom002"
+    ],
+    "ade__ade-bench-intercom003": [
+      "ade__ade-bench-intercom003"
+    ],
+    "deb__dbt-abc-classification": [
+      "deb__dbt-abc-classification"
+    ],
+    "deb__dbt-basket-composition-analysis": [
+      "deb__dbt-basket-composition-analysis"
+    ],
+    "deb__dbt-calculate-running-balance": [
+      "deb__dbt-calculate-running-balance"
+    ],
+    "deb__dbt-channel-attribution-analysis": [
+      "deb__dbt-channel-attribution-analysis"
+    ],
+    "deb__dbt-consolidate": [
+      "deb__dbt-consolidate"
+    ],
+    "deb__dbt-coupon-effectiveness": [
+      "deb__dbt-coupon-effectiveness"
+    ],
+    "deb__dbt-customer-acquisition-channel-performance": [
+      "deb__dbt-customer-acquisition-channel-performance"
+    ],
+    "deb__dbt-customer-churn-cohorts": [
+      "deb__dbt-customer-churn-cohorts"
+    ],
+    "deb__dbt-customer-churn-early-warning": [
+      "deb__dbt-customer-churn-early-warning"
+    ],
+    "deb__dbt-customer-cltv-forecasting": [
+      "deb__dbt-customer-cltv-forecasting"
+    ],
+    "deb__dbt-customer-cohort-retention": [
+      "deb__dbt-customer-cohort-retention"
+    ],
+    "deb__dbt-customer-cross-sell-insights": [
+      "deb__dbt-customer-cross-sell-insights"
+    ],
+    "deb__dbt-customer-geographic": [
+      "deb__dbt-customer-geographic"
+    ],
+    "deb__dbt-customer-lifetime-value": [
+      "deb__dbt-customer-lifetime-value"
+    ],
+    "deb__dbt-customer-ltv-fix": [
+      "deb__dbt-customer-ltv-fix"
+    ],
+    "deb__dbt-customer-order-analytics": [
+      "deb__dbt-customer-order-analytics"
+    ],
+    "deb__dbt-customer-risk-scoring": [
+      "deb__dbt-customer-risk-scoring"
+    ],
+    "deb__dbt-daily-order-summary": [
+      "deb__dbt-daily-order-summary"
+    ],
+    "deb__dbt-dq-macro-enforcement": [
+      "deb__dbt-dq-macro-enforcement"
+    ],
+    "deb__dbt-exchange-rate-settlement-date": [
+      "deb__dbt-exchange-rate-settlement-date"
+    ],
+    "deb__dbt-fix-cac-payback-waterfall": [
+      "deb__dbt-fix-cac-payback-waterfall"
+    ],
+    "deb__dbt-fix-email-attribution": [
+      "deb__dbt-fix-email-attribution"
+    ],
+    "deb__dbt-fix-marketing-attribution": [
+      "deb__dbt-fix-marketing-attribution"
+    ],
+    "deb__dbt-fix-multi-touch-attribution": [
+      "deb__dbt-fix-multi-touch-attribution"
+    ],
+    "deb__dbt-fix-paid-search-attribution": [
+      "deb__dbt-fix-paid-search-attribution"
+    ],
+    "deb__dbt-fix-repeat-purchase-cohort-revenue": [
+      "deb__dbt-fix-repeat-purchase-cohort-revenue"
+    ],
+    "deb__dbt-fraud-detection-model": [
+      "deb__dbt-fraud-detection-model"
+    ],
+    "deb__dbt-fulfillment-sla": [
+      "deb__dbt-fulfillment-sla"
+    ],
+    "deb__dbt-gl-reconciliation": [
+      "deb__dbt-gl-reconciliation"
+    ],
+    "deb__dbt-harbor-marketing-mix-model": [
+      "deb__dbt-harbor-marketing-mix-model"
+    ],
+    "deb__dbt-harbor-product-affinity": [
+      "deb__dbt-harbor-product-affinity"
+    ],
+    "deb__dbt-harbor-warehouse-capacity": [
+      "deb__dbt-harbor-warehouse-capacity"
+    ],
+    "deb__dbt-hr-analytics": [
+      "deb__dbt-hr-analytics"
+    ],
+    "deb__dbt-inventory-analysis": [
+      "deb__dbt-inventory-analysis"
+    ],
+    "deb__dbt-inventory-stockout-risk": [
+      "deb__dbt-inventory-stockout-risk"
+    ],
+    "deb__dbt-loyalty-points-analysis": [
+      "deb__dbt-loyalty-points-analysis"
+    ],
+    "deb__dbt-monthly-channel-revenue": [
+      "deb__dbt-monthly-channel-revenue"
+    ],
+    "deb__dbt-multicurrency-lifo": [
+      "deb__dbt-multicurrency-lifo"
+    ],
+    "deb__dbt-order-fulfillment-analytics": [
+      "deb__dbt-order-fulfillment-analytics"
+    ],
+    "deb__dbt-order-fulfillment-metrics": [
+      "deb__dbt-order-fulfillment-metrics"
+    ],
+    "deb__dbt-order-interval-metrics": [
+      "deb__dbt-order-interval-metrics"
+    ],
+    "deb__dbt-order-reconciliation": [
+      "deb__dbt-order-reconciliation"
+    ],
+    "deb__dbt-payment-fraud-analysis": [
+      "deb__dbt-payment-fraud-analysis"
+    ],
+    "deb__dbt-price-elasticity": [
+      "deb__dbt-price-elasticity"
+    ],
+    "deb__dbt-product-affinity": [
+      "deb__dbt-product-affinity"
+    ],
+    "deb__dbt-product-category-analytics": [
+      "deb__dbt-product-category-analytics"
+    ],
+    "deb__dbt-product-performance-metrics": [
+      "deb__dbt-product-performance-metrics"
+    ],
+    "deb__dbt-product-return-rate-analysis": [
+      "deb__dbt-product-return-rate-analysis"
+    ],
+    "deb__dbt-product-sales-velocity": [
+      "deb__dbt-product-sales-velocity"
+    ],
+    "deb__dbt-retail-task-01-channel-revenue": [
+      "deb__dbt-retail-task-01-channel-revenue"
+    ],
+    "deb__dbt-retail-task-04-market-roi": [
+      "deb__dbt-retail-task-04-market-roi"
+    ],
+    "deb__dbt-retail-task-07-cart-recovery": [
+      "deb__dbt-retail-task-07-cart-recovery"
+    ],
+    "deb__dbt-retail-task-10-trust-risk": [
+      "deb__dbt-retail-task-10-trust-risk"
+    ],
+    "deb__dbt-rfm-customer-segmentation": [
+      "deb__dbt-rfm-customer-segmentation"
+    ],
+    "deb__dbt-rfm-customer-segmentation-2": [
+      "deb__dbt-rfm-customer-segmentation-2"
+    ],
+    "deb__dbt-rfm-customer-tiering": [
+      "deb__dbt-rfm-customer-tiering"
+    ],
+    "deb__dbt-sales-funnel-analysis": [
+      "deb__dbt-sales-funnel-analysis"
+    ],
+    "deb__dbt-session-attribution": [
+      "deb__dbt-session-attribution"
+    ],
+    "deb__dbt-supplier-payment-optimization": [
+      "deb__dbt-supplier-payment-optimization"
+    ],
+    "deb__dbt-supplier-scorecard": [
+      "deb__dbt-supplier-scorecard"
+    ],
+    "deb__dbt-test-orders-filter": [
+      "deb__dbt-test-orders-filter"
+    ],
+    "deb__dbt-three-way-matching": [
+      "deb__dbt-three-way-matching"
+    ],
+    "deb__dbt-web-session-analytics": [
+      "deb__dbt-web-session-analytics"
+    ],
+    "deb__dbt-weekly-sales-growth": [
+      "deb__dbt-weekly-sales-growth"
+    ],
+    "spider2__activity001": [
+      "spider2__activity001"
+    ],
+    "spider2__airbnb001": [
+      "spider2__airbnb001"
+    ],
+    "spider2__airbnb002": [
+      "spider2__airbnb002"
+    ],
+    "spider2__airport001": [
+      "spider2__airport001"
+    ],
+    "spider2__analytics_engineering001": [
+      "spider2__analytics_engineering001"
+    ],
+    "spider2__app_reporting001": [
+      "spider2__app_reporting001"
+    ],
+    "spider2__app_reporting002": [
+      "spider2__app_reporting002"
+    ],
+    "spider2__apple_store001": [
+      "spider2__apple_store001"
+    ],
+    "spider2__asana001": [
+      "spider2__asana001"
+    ],
+    "spider2__asset001": [
+      "spider2__asset001"
+    ],
+    "spider2__atp_tour001": [
+      "spider2__atp_tour001"
+    ],
+    "spider2__f1001": [
+      "spider2__f1001"
+    ],
+    "spider2__f1002": [
+      "spider2__f1002"
+    ],
+    "spider2__flicks001": [
+      "spider2__flicks001"
+    ],
+    "spider2__google_play001": [
+      "spider2__google_play001"
+    ],
+    "spider2__google_play002": [
+      "spider2__google_play002"
+    ],
+    "spider2__greenhouse001": [
+      "spider2__greenhouse001"
+    ],
+    "spider2__hive001": [
+      "spider2__hive001"
+    ],
+    "spider2__hubspot001": [
+      "spider2__hubspot001"
+    ],
+    "spider2__intercom001": [
+      "spider2__intercom001"
+    ],
+    "spider2__inzight001": [
+      "spider2__inzight001"
+    ],
+    "spider2__jira001": [
+      "spider2__jira001"
+    ],
+    "spider2__lever001": [
+      "spider2__lever001"
+    ],
+    "spider2__marketo001": [
+      "spider2__marketo001"
+    ],
+    "spider2__maturity001": [
+      "spider2__maturity001"
+    ],
+    "spider2__movie_recomm001": [
+      "spider2__movie_recomm001"
+    ],
+    "spider2__nba001": [
+      "spider2__nba001"
+    ],
+    "spider2__netflix001": [
+      "spider2__netflix001"
+    ],
+    "spider2__pendo001": [
+      "spider2__pendo001"
+    ],
+    "spider2__playbook002": [
+      "spider2__playbook002"
+    ],
+    "spider2__provider001": [
+      "spider2__provider001"
+    ],
+    "spider2__qualtrics001": [
+      "spider2__qualtrics001"
+    ],
+    "spider2__quickbooks001": [
+      "spider2__quickbooks001"
+    ],
+    "spider2__quickbooks002": [
+      "spider2__quickbooks002"
+    ],
+    "spider2__recharge001": [
+      "spider2__recharge001"
+    ],
+    "spider2__recharge002": [
+      "spider2__recharge002"
+    ],
+    "spider2__reddit001": [
+      "spider2__reddit001"
+    ],
+    "spider2__sap001": [
+      "spider2__sap001"
+    ],
+    "spider2__scd001": [
+      "spider2__scd001"
+    ],
+    "spider2__shopify001": [
+      "spider2__shopify001"
+    ],
+    "spider2__shopify002": [
+      "spider2__shopify002"
+    ],
+    "spider2__shopify_holistic_reporting001": [
+      "spider2__shopify_holistic_reporting001"
+    ],
+    "spider2__social_media001": [
+      "spider2__social_media001"
+    ],
+    "spider2__synthea001": [
+      "spider2__synthea001"
+    ],
+    "spider2__tickit001": [
+      "spider2__tickit001"
+    ],
+    "spider2__tickit002": [
+      "spider2__tickit002"
+    ],
+    "spider2__tpch001": [
+      "spider2__tpch001"
+    ],
+    "spider2__tpch002": [
+      "spider2__tpch002"
+    ],
+    "spider2__twilio001": [
+      "spider2__twilio001"
+    ],
+    "spider2__workday001": [
+      "spider2__workday001"
+    ],
+    "spider2__workday002": [
+      "spider2__workday002"
+    ],
+    "spider2__xero001": [
+      "spider2__xero001"
+    ],
+    "spider2__xero_new001": [
+      "spider2__xero_new001"
+    ],
+    "spider2__xero_new002": [
+      "spider2__xero_new002"
+    ],
+    "spider2__zuora001": [
+      "spider2__zuora001"
+    ]
+  },
+  "hash": "3fe017f3ebbc1ef13937e8a7b03d440d4995a9e68faaab980066b2cc0883f5de",
+  "rationale": "Preserve v3 history; known ADE prompt variants grouped. Cross-source setup/project and DEB family review pending. Not a certified clean holdout.",
+  "schema_version": 1,
+  "status": "provisional",
+  "version": "v1-legacy-provisional"
+}

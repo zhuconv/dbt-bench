@@ -1,0 +1,32 @@
+--- a/environments/singularity/singularity.py
++++ b/environments/singularity/singularity.py
+@@ -737,7 +737,17 @@
+                 user_arg = f"$(getent passwd {resolved_user} | cut -d: -f1)"
+             else:
+                 user_arg = shlex.quote(str(resolved_user))
+-            command = f"su {user_arg} -s /bin/bash -c {shlex.quote(command)}"
++            su_command = f"su {user_arg} -s /bin/bash -c {shlex.quote(command)}"
++            if resolved_user in ("root", 0):
++                # TACC root-mapped namespaces cannot reset supplementary groups.
++                # Already-root execution needs no identity change; retain su for other UIDs.
++                command = (
++                    'if [ "$(id -u)" = 0 ]; then '
++                    f"exec /bin/bash -c {shlex.quote(command)}; "
++                    f"else exec {su_command}; fi"
++                )
++            else:
++                command = su_command
+ 
+         merged_env = self._merge_env(env)
+ 
+--- a/environments/singularity/server.py
++++ b/environments/singularity/server.py
+@@ -122,7 +122,7 @@
+     Python's subprocess timeout which may lose buffered output.
+     """
+     env = os.environ.copy()
+-    env["PATH"] = "/usr/bin:/usr/local/bin:" + env.get("PATH", "/bin")
++    env["PATH"] = env.get("PATH") or "/usr/local/bin:/usr/bin:/bin"
+     if req.env:
+         env.update(req.env)
+ 

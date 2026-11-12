@@ -1,0 +1,8 @@
+--- original/instruction.md
++++ variant/instruction.md
+@@ -85,3 +85,5 @@
+ - Do NOT modify upstream staging models
+ - Do NOT change model materialization
+ - Preserve all output columns
++
++Add `settlement_date` to the existing grain, so the output has one row per `order_date`, `settlement_date`, `currency_code` and `source_system`. Settlement date is determined per order, so orders with the same order date, currency and source system that settle on different dates go to separate rows.

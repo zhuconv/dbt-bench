@@ -1,0 +1,39 @@
+--- src/dbt_bench/report.py (retained)
++++ src/dbt_bench/report_v6.py (new default)
+@@ -14,7 +14,17 @@
+ from .validation import identity, reusable, task_dir
+ from .submission import inspect_submission as inspect_legacy_submission
+ 
+-POLICY_VERSION = "training-candidates-v5"
++POLICY_VERSION = "training-candidates-v6-purpose-exclusions"
++
++
++def usage_scope(experiment, binding):
++    identity = experiment.get('identity', {})
++    purpose = identity.get('purpose')
++    prohibited = (experiment.get('training_prohibited') is True
++                  or identity.get('training_prohibited') is True
++                  or binding.get('training_prohibited') is True
++                  or purpose in {'difficulty_only_no_training', 'audit_conformance_only'})
++    return {'training_prohibited': prohibited, 'experiment_purpose': purpose}
+ 
+ 
+ def inspect_submission(trial_dir, spec):
+@@ -129,6 +139,9 @@
+ 
+ def eligibility(trial, validation, *, split_status, root):
+     reasons = []
++    if (trial.get('training_prohibited') is True
++            or trial.get('experiment_purpose') in {'difficulty_only_no_training', 'audit_conformance_only'}):
++        reasons.append('experiment_prohibits_training')
+     if trial.get("split") != "train":
+         reasons.append("not_train_split")
+     if split_status != "reviewed_frozen":
+@@ -275,6 +288,7 @@
+     if annotation and (annotation.get("category") not in {1, 2, 3, 4} or not annotation.get("reason") or not evidence_ok(annotation.get("evidence"), root)):
+         annotation = {"status": "pending_review", "submitted": annotation}
+     trial = {"schema_version": 1, "trial_id": tid, "trial_name": data.get("trial_name"),
++             **usage_scope(experiment, binding),
+              "job_id": data.get("config", {}).get("job_id"), "task_key": task,
+              "native_task_name": data.get("task_name"), "experiment_id": experiment["experiment_id"],
+              "attempt": binding.get("attempt"), "retry_of": binding.get("retry_of"),

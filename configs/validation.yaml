@@ -1,0 +1,11 @@
+{
+  "job_name": "validation-parameterize-with-validate",
+  "jobs_dir": "artifacts/validation/jobs",
+  "n_attempts": 2,
+  "n_concurrent_trials": 1,
+  "timeout_multiplier": 1.0,
+  "retry": {"max_retries": 0},
+  "environment": {"type": "docker", "env": {"DB_TYPE": "duckdb"}},
+  "agents": [{"name": "oracle", "env": {"DB_TYPE": "duckdb"}}, {"name": "nop", "env": {"DB_TYPE": "duckdb"}}],
+  "verifier": {"env": {"DB_TYPE": "duckdb"}}
+}

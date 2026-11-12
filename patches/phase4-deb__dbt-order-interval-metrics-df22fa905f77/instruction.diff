@@ -1,0 +1,8 @@
+--- original/instruction.md
++++ variant/instruction.md
+@@ -277,3 +277,5 @@
+ - Ensure deterministic results across multiple runs
+ - Use sample standard deviation (not population) for std_dev_days calculation
+ - For half-based calculations, split orders by sequence number: first_half includes sequences 1 to CEIL(total_orders/2), second_half includes the rest
++
++Assign tiers with NTILE(4) over total_revenue ascending (4 = 'Platinum', 1 = 'Bronze'), so when the customer count is not divisible by four, the lower tiers get the extra customers.

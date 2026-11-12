@@ -1,0 +1,631 @@
+{
+  "batches": [
+    {
+      "all_phase_caps_sec": 78480.0,
+      "attempt_ids": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "id": "batch-01",
+      "native_agent_verifier_sec": 41200.0,
+      "server_seed": 3802985506,
+      "source_experiment_id": "ef5cce80dde2985b6ca22c767b89985fb60d307a1b4410fbe0606feb3d6c5cbe",
+      "task_keys": [
+        "deb__dbt-calculate-running-balance",
+        "spider2__app_reporting001",
+        "ade__ade-bench-f1009"
+      ],
+      "walltime_sec": 86400
+    },
+    {
+      "all_phase_caps_sec": 78000.0,
+      "attempt_ids": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "id": "batch-02",
+      "native_agent_verifier_sec": 41200.0,
+      "server_seed": 4253894415,
+      "source_experiment_id": "b65e42265c35cd2dba250506edc953001861ba2325395220dd60342488599f53",
+      "task_keys": [
+        "deb__dbt-coupon-effectiveness",
+        "spider2__app_reporting002",
+        "ade__ade-bench-airbnb005"
+      ],
+      "walltime_sec": 86400
+    },
+    {
+      "all_phase_caps_sec": 78000.0,
+      "attempt_ids": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "id": "batch-03",
+      "native_agent_verifier_sec": 41200.0,
+      "server_seed": 3971091462,
+      "source_experiment_id": "212fb7f487ff38c004649fda1819e6bf83c370571a897a5ea561a7ee26b2b097",
+      "task_keys": [
+        "deb__dbt-customer-churn-cohorts",
+        "spider2__apple_store001",
+        "ade__ade-bench-airbnb007"
+      ],
+      "walltime_sec": 86400
+    },
+    {
+      "all_phase_caps_sec": 78000.0,
+      "attempt_ids": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "id": "batch-04",
+      "native_agent_verifier_sec": 41200.0,
+      "server_seed": 1216271506,
+      "source_experiment_id": "affae29e5ef74b385476c6ba98e83a2bf6f6fcb9bcd3f63a9dbb9001c2406feb",
+      "task_keys": [
+        "deb__dbt-customer-churn-early-warning",
+        "spider2__asset001",
+        "ade__ade-bench-ana-eng003"
+      ],
+      "walltime_sec": 86400
+    },
+    {
+      "all_phase_caps_sec": 78000.0,
+      "attempt_ids": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "id": "batch-05",
+      "native_agent_verifier_sec": 41200.0,
+      "server_seed": 4041670451,
+      "source_experiment_id": "287aa2fe00348331d762de1f837a09d3bdd63df699448ad41cf0cdc2465aa0c4",
+      "task_keys": [
+        "deb__dbt-customer-cltv-forecasting",
+        "spider2__google_play001",
+        "ade__ade-bench-ana-eng004"
+      ],
+      "walltime_sec": 86400
+    },
+    {
+      "all_phase_caps_sec": 78000.0,
+      "attempt_ids": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "id": "batch-06",
+      "native_agent_verifier_sec": 41200.0,
+      "server_seed": 2464377531,
+      "source_experiment_id": "ef28f1a110621ecb3b670feb518f39fc985624dec8cacf57834ee9c6260c3698",
+      "task_keys": [
+        "deb__dbt-customer-geographic",
+        "spider2__hive001",
+        "ade__ade-bench-ana-eng006"
+      ],
+      "walltime_sec": 86400
+    },
+    {
+      "all_phase_caps_sec": 78000.0,
+      "attempt_ids": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "id": "batch-07",
+      "native_agent_verifier_sec": 41200.0,
+      "server_seed": 2949817419,
+      "source_experiment_id": "67eadf1ab414e8eb650faccc7069aef5e75c34cffa98bb6bbda7b018c8353411",
+      "task_keys": [
+        "deb__dbt-customer-lifetime-value",
+        "spider2__intercom001",
+        "ade__ade-bench-f1003-hard"
+      ],
+      "walltime_sec": 86400
+    },
+    {
+      "all_phase_caps_sec": 78000.0,
+      "attempt_ids": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "id": "batch-08",
+      "native_agent_verifier_sec": 41200.0,
+      "server_seed": 4057428331,
+      "source_experiment_id": "0eb108e9a3b20bcc92571b1048c3dba250f135cb306485b666e9819e729d2f67",
+      "task_keys": [
+        "deb__dbt-customer-ltv-fix",
+        "spider2__jira001",
+        "ade__ade-bench-f1010"
+      ],
+      "walltime_sec": 86400
+    },
+    {
+      "all_phase_caps_sec": 78000.0,
+      "attempt_ids": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "id": "batch-09",
+      "native_agent_verifier_sec": 41200.0,
+      "server_seed": 4226594052,
+      "source_experiment_id": "71b1f8b6f22616f59bc27c889a999d7fd9c5263605ce84415105641083d9cf99",
+      "task_keys": [
+        "deb__dbt-customer-order-analytics",
+        "spider2__lever001",
+        "ade__ade-bench-f1010-medium"
+      ],
+      "walltime_sec": 86400
+    },
+    {
+      "all_phase_caps_sec": 78000.0,
+      "attempt_ids": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "id": "batch-10",
+      "native_agent_verifier_sec": 41200.0,
+      "server_seed": 959103401,
+      "source_experiment_id": "86483612668209296f8e09731c3f0a5a7d82d3f4af765d28f0007e13500b1fb1",
+      "task_keys": [
+        "deb__dbt-customer-risk-scoring",
+        "spider2__marketo001",
+        "ade__ade-bench-f1011"
+      ],
+      "walltime_sec": 86400
+    },
+    {
+      "all_phase_caps_sec": 78000.0,
+      "attempt_ids": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "id": "batch-11",
+      "native_agent_verifier_sec": 41200.0,
+      "server_seed": 2500701088,
+      "source_experiment_id": "11ff6419a0eea118e97825885ec154c57856bdc39b27281d5ccb485e86992c4b",
+      "task_keys": [
+        "deb__dbt-daily-order-summary",
+        "spider2__maturity001",
+        "ade__ade-bench-intercom001"
+      ],
+      "walltime_sec": 86400
+    },
+    {
+      "all_phase_caps_sec": 78000.0,
+      "attempt_ids": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "id": "batch-12",
+      "native_agent_verifier_sec": 41200.0,
+      "server_seed": 310496259,
+      "source_experiment_id": "73520df9fce1d8c419be03ee78ab2e7a5c5527ec632b590fc99dd11cea5daaea",
+      "task_keys": [
+        "deb__dbt-exchange-rate-settlement-date",
+        "spider2__recharge002",
+        "ade__ade-bench-intercom002"
+      ],
+      "walltime_sec": 86400
+    },
+    {
+      "all_phase_caps_sec": 78000.0,
+      "attempt_ids": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "id": "batch-13",
+      "native_agent_verifier_sec": 41200.0,
+      "server_seed": 375234386,
+      "source_experiment_id": "9f00ec1cd70cf0ec048219dc1f16247201c8c475d884c14e0d5a83e2992b7e12",
+      "task_keys": [
+        "deb__dbt-fix-cac-payback-waterfall",
+        "spider2__shopify002",
+        "ade__ade-bench-intercom003"
+      ],
+      "walltime_sec": 86400
+    },
+    {
+      "all_phase_caps_sec": 66960.0,
+      "attempt_ids": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "id": "batch-14",
+      "native_agent_verifier_sec": 37600.0,
+      "server_seed": 1507139594,
+      "source_experiment_id": "93eeaa0d1c06995b20d3f91f76dc907df7a0e096b841cd1f557f3c8c3c5dbb7a",
+      "task_keys": [
+        "deb__dbt-fix-email-attribution",
+        "spider2__tickit001"
+      ],
+      "walltime_sec": 86400
+    },
+    {
+      "all_phase_caps_sec": 66960.0,
+      "attempt_ids": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "id": "batch-15",
+      "native_agent_verifier_sec": 37600.0,
+      "server_seed": 3248494431,
+      "source_experiment_id": "c6566d165e9c424bbc65f9b39580646ccd85d1c7a4f620b69f6eccb8bcfb05f9",
+      "task_keys": [
+        "deb__dbt-fix-multi-touch-attribution",
+        "spider2__workday001"
+      ],
+      "walltime_sec": 86400
+    },
+    {
+      "all_phase_caps_sec": 66960.0,
+      "attempt_ids": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "id": "batch-16",
+      "native_agent_verifier_sec": 37600.0,
+      "server_seed": 3717537432,
+      "source_experiment_id": "2317d4b79742d16ed6155dab5bee0a0b8739361ef580f61a8e19c5598a83505e",
+      "task_keys": [
+        "deb__dbt-fraud-detection-model",
+        "spider2__workday002"
+      ],
+      "walltime_sec": 86400
+    },
+    {
+      "all_phase_caps_sec": 51120.0,
+      "attempt_ids": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "id": "batch-17",
+      "native_agent_verifier_sec": 28000.0,
+      "server_seed": 22985249,
+      "source_experiment_id": "5b14216806ae69333ec30b8cd8fddcf62ef74200771b7b5ea8c8eb089c44f72b",
+      "task_keys": [
+        "deb__dbt-fulfillment-sla"
+      ],
+      "walltime_sec": 86400
+    },
+    {
+      "all_phase_caps_sec": 51120.0,
+      "attempt_ids": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "id": "batch-18",
+      "native_agent_verifier_sec": 28000.0,
+      "server_seed": 914416430,
+      "source_experiment_id": "6801672eb83496231b5d6031871fa4a7c7c65d89d6d356233b3201ad6684a695",
+      "task_keys": [
+        "deb__dbt-harbor-warehouse-capacity"
+      ],
+      "walltime_sec": 86400
+    },
+    {
+      "all_phase_caps_sec": 51120.0,
+      "attempt_ids": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "id": "batch-19",
+      "native_agent_verifier_sec": 28000.0,
+      "server_seed": 1814010220,
+      "source_experiment_id": "13294780e878222bffbb7dd7a0c4583b95ab66ea17e64c403678d0bb4f38d714",
+      "task_keys": [
+        "deb__dbt-inventory-analysis"
+      ],
+      "walltime_sec": 86400
+    },
+    {
+      "all_phase_caps_sec": 51120.0,
+      "attempt_ids": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "id": "batch-20",
+      "native_agent_verifier_sec": 28000.0,
+      "server_seed": 2706372901,
+      "source_experiment_id": "2d7c018a22fba30dc395c19eed35d98bf99a8b77fdcc6fb0480b2ddc8898be81",
+      "task_keys": [
+        "deb__dbt-inventory-stockout-risk"
+      ],
+      "walltime_sec": 86400
+    },
+    {
+      "all_phase_caps_sec": 51120.0,
+      "attempt_ids": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "id": "batch-21",
+      "native_agent_verifier_sec": 28000.0,
+      "server_seed": 3716187316,
+      "source_experiment_id": "36a7f5faae0edec025d36f382dfa3ccbbacc39227a7a2672b0d3603cc9606c36",
+      "task_keys": [
+        "deb__dbt-loyalty-points-analysis"
+      ],
+      "walltime_sec": 86400
+    },
+    {
+      "all_phase_caps_sec": 51120.0,
+      "attempt_ids": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "id": "batch-22",
+      "native_agent_verifier_sec": 28000.0,
+      "server_seed": 1104652967,
+      "source_experiment_id": "f7f81fb9699bad1f554b98aa203da8fdddc2dcfb1a5e0c0351788e4b9cfcc66d",
+      "task_keys": [
+        "deb__dbt-order-reconciliation"
+      ],
+      "walltime_sec": 86400
+    },
+    {
+      "all_phase_caps_sec": 51120.0,
+      "attempt_ids": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "id": "batch-23",
+      "native_agent_verifier_sec": 28000.0,
+      "server_seed": 53174931,
+      "source_experiment_id": "90b9d5d4159c7ee78448ceb71a91d3bedd2ca9221233e3a1a57d819e920ce00a",
+      "task_keys": [
+        "deb__dbt-price-elasticity"
+      ],
+      "walltime_sec": 86400
+    },
+    {
+      "all_phase_caps_sec": 51120.0,
+      "attempt_ids": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "id": "batch-24",
+      "native_agent_verifier_sec": 28000.0,
+      "server_seed": 3247096564,
+      "source_experiment_id": "343aac7e9670ca09e64f8016b38d66c1e9b910640f0d2af38b93ec125f22e511",
+      "task_keys": [
+        "deb__dbt-product-category-analytics"
+      ],
+      "walltime_sec": 86400
+    },
+    {
+      "all_phase_caps_sec": 51120.0,
+      "attempt_ids": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "id": "batch-25",
+      "native_agent_verifier_sec": 28000.0,
+      "server_seed": 2994114695,
+      "source_experiment_id": "c87de4b8b2d9ee58a78f3b1cc5b20f1bc74a4010708dfba9550edd72250a0804",
+      "task_keys": [
+        "deb__dbt-retail-task-01-channel-revenue"
+      ],
+      "walltime_sec": 86400
+    },
+    {
+      "all_phase_caps_sec": 51120.0,
+      "attempt_ids": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "id": "batch-26",
+      "native_agent_verifier_sec": 28000.0,
+      "server_seed": 3757739453,
+      "source_experiment_id": "0e5438842940729925f728c53e04ada611ec0c98671ba62679c60d30b9219e62",
+      "task_keys": [
+        "deb__dbt-retail-task-04-market-roi"
+      ],
+      "walltime_sec": 86400
+    },
+    {
+      "all_phase_caps_sec": 51120.0,
+      "attempt_ids": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "id": "batch-27",
+      "native_agent_verifier_sec": 28000.0,
+      "server_seed": 1282082933,
+      "source_experiment_id": "777600932c366ce91f9a75fa5926e0551c2de74e7e60bf369d1e02868842cc0f",
+      "task_keys": [
+        "deb__dbt-rfm-customer-segmentation"
+      ],
+      "walltime_sec": 86400
+    },
+    {
+      "all_phase_caps_sec": 51120.0,
+      "attempt_ids": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "id": "batch-28",
+      "native_agent_verifier_sec": 28000.0,
+      "server_seed": 2409074048,
+      "source_experiment_id": "d301875fa219c1a1f1265d0d49622cb1d5d1beaec36be560782bfa020833bdfe",
+      "task_keys": [
+        "deb__dbt-rfm-customer-segmentation-2"
+      ],
+      "walltime_sec": 86400
+    },
+    {
+      "all_phase_caps_sec": 51120.0,
+      "attempt_ids": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "id": "batch-29",
+      "native_agent_verifier_sec": 28000.0,
+      "server_seed": 1847588878,
+      "source_experiment_id": "1d4ae801c94b928fff2559f411b18984f70c3c79820e00285f0233b8fd63ecc2",
+      "task_keys": [
+        "deb__dbt-sales-funnel-analysis"
+      ],
+      "walltime_sec": 86400
+    },
+    {
+      "all_phase_caps_sec": 51120.0,
+      "attempt_ids": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "id": "batch-30",
+      "native_agent_verifier_sec": 28000.0,
+      "server_seed": 3332569970,
+      "source_experiment_id": "b5529494cb3d0dc7b8a88db6c6bd575973d18d1adc961ce25915d64e903917f6",
+      "task_keys": [
+        "deb__dbt-session-attribution"
+      ],
+      "walltime_sec": 86400
+    },
+    {
+      "all_phase_caps_sec": 51120.0,
+      "attempt_ids": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "id": "batch-31",
+      "native_agent_verifier_sec": 28000.0,
+      "server_seed": 3701492887,
+      "source_experiment_id": "578e877f78e58cc0557f9d2111d867744473561e048f459de2580e8f6b32ae8f",
+      "task_keys": [
+        "deb__dbt-supplier-payment-optimization"
+      ],
+      "walltime_sec": 86400
+    },
+    {
+      "all_phase_caps_sec": 51120.0,
+      "attempt_ids": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "id": "batch-32",
+      "native_agent_verifier_sec": 28000.0,
+      "server_seed": 2188852826,
+      "source_experiment_id": "5678c3d3aeb6ccca077082fa729ebbc3fbb26395f672b17adcd2d7cdc57a4e64",
+      "task_keys": [
+        "deb__dbt-supplier-scorecard"
+      ],
+      "walltime_sec": 86400
+    },
+    {
+      "all_phase_caps_sec": 51120.0,
+      "attempt_ids": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "id": "batch-33",
+      "native_agent_verifier_sec": 28000.0,
+      "server_seed": 3284446808,
+      "source_experiment_id": "ccf422821f5132f6c33f60cfe9a257d7ebef98f47ab99cc353e878052f3a010b",
+      "task_keys": [
+        "deb__dbt-three-way-matching"
+      ],
+      "walltime_sec": 86400
+    },
+    {
+      "all_phase_caps_sec": 51120.0,
+      "attempt_ids": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "id": "batch-34",
+      "native_agent_verifier_sec": 28000.0,
+      "server_seed": 1398256504,
+      "source_experiment_id": "6620a0bb4f5d0585b8b3c2aabc5b9de3d928f8a88068f0f4879c2f687ed2dcc1",
+      "task_keys": [
+        "deb__dbt-web-session-analytics"
+      ],
+      "walltime_sec": 86400
+    },
+    {
+      "all_phase_caps_sec": 51120.0,
+      "attempt_ids": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "id": "batch-35",
+      "native_agent_verifier_sec": 28000.0,
+      "server_seed": 4176886947,
+      "source_experiment_id": "04925326de37e7576ba5a24cd8e855949a17e08e213702257c2650225ddf63ae",
+      "task_keys": [
+        "deb__dbt-weekly-sales-growth"
+      ],
+      "walltime_sec": 86400
+    }
+  ],
+  "prepared_only": true,
+  "requires_owner_assignment_before_execution": true,
+  "schema_version": 1
+}

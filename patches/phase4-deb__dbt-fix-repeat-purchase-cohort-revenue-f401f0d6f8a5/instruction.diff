@@ -1,0 +1,8 @@
+--- original/instruction.md
++++ variant/instruction.md
+@@ -95,3 +95,5 @@
+ - **Schema Configuration**:
+   - For DuckDB: Ensure your model materializes in the `analytics` schema exactly (not `main_analytics` or similar). Review dbt's schema naming conventions if needed.
+   - For Snowflake: The model should materialize in the `main` schema (the default schema for the Snowflake profile).
++
++Drop source rows with NULL `ordered_at` before deduplicating. Keep each row with a NULL `order_id` as its own record: it counts toward revenue and its customer's cohort, but not toward `orders`.
