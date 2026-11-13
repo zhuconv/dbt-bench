@@ -65,8 +65,19 @@ class ResolveTest(unittest.TestCase):
         self.assertEqual(self.r([claim('owner', 'claimed')], t=later)[0], 'free')
         self.assertEqual(self.r([claim('owner', 'running')], t=later)[0], 'stale')
 
-    def test_released_and_finished_claims_do_not_hold(self):
-        self.assertEqual(self.r([claim('owner', 'released'), claim('bob', 'finished')])[0], 'free')
+    def test_released_claim_does_not_hold(self):
+        self.assertEqual(self.r([claim('owner', 'released')])[0], 'free')
+
+    def test_finished_claim_on_main_holds_without_results(self):
+        label, h = self.r([claim('owner', 'released'), claim('owner', 'finished')])
+        self.assertEqual((label, h['worker'], h['via']), ('finished', 'owner', 'main'))
+
+    def test_finished_pr_awaiting_merge_holds_as_review(self):
+        label, h = self.r([claim('owner', 'queued', 999)], [pr(4, claim('alice', 'finished'))])
+        self.assertEqual((label, h['worker'], h['via']), ('review', 'alice', 'pr#4'))
+        # A later PR does not get it either.
+        label, h = self.r(prs=[pr(4, claim('alice', 'finished')), pr(6, claim('bob', 'claimed'))])
+        self.assertEqual((label, h['worker']), ('review', 'alice'))
 
 
 FAKE_GH = r'''#!/usr/bin/env python3
@@ -221,6 +232,11 @@ class PrModeTest(LedgerRepos):
             p = self.w('alice', a, 'pr', 'publish', ba, task, str(s), str(raw))
             self.assertEqual(p.returncode, 0, p.stderr)
         self.assertEqual(self.w('alice', a, 'pr', 'finish', ba).returncode, 0)
+        # Until the owner merges, the finished batch stays held and nobody can claim it.
+        status = self.w('bob', b, 'pr', 'status').stdout
+        self.assertIn(f'{ba}  review            results 0/2  alice via pr#', status)
+        nxt = self.w('bob', b, 'pr', 'next', '--platform', 'p')
+        self.assertNotIn(ba, nxt.stdout)
 
         # The PR check accepts this branch, and rejects it once it touches anything else.
         base = self.git(a, 'rev-parse', 'upstream/main').stdout.strip()

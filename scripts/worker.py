@@ -35,7 +35,9 @@ Claim states:
             releases the claim.
   running   the job has started; renew the 6 h lease with `heartbeat` at least every 2 hours.
             An expired running claim shows as stale and is never reassigned automatically.
-  finished  the batch is done
+  finished  the batch is done. In an open PR the batch shows as `review` and stays held
+            until the owner merges or closes the PR. On main it holds the batch even
+            without result summaries (the owner's own Vista runs are recorded this way).
   released  given up before running
 """
 import argparse, base64, datetime as dt, hashlib, json, os, re, subprocess, sys, time
@@ -91,14 +93,19 @@ def resolve(tasks, claims, prs, results, t=None):
     claims:  claims on main, each a dict
     prs:     open ledger PRs for this batch: {'number', 'worker', 'claim'}
     results: {task: worker} of summaries on main
-    Rules: complete results mean finished; a running claim always holds; a fresh `claimed`
-    claim on main holds; otherwise the lowest-numbered open PR with an active claim holds
-    (this is how a PR takes over a queued claim on main); otherwise the oldest active claim
-    on main holds.
+    Rules: complete results mean finished, and so does a `finished` claim on main (the
+    owner's own runs publish no summaries); a running claim always holds; an open PR whose
+    claim is `finished` holds as `review` until the owner merges or closes it; a fresh
+    `claimed` claim on main holds; otherwise the lowest-numbered open PR with an active claim
+    holds (this is how a PR takes over a queued claim on main); otherwise the oldest active
+    claim on main holds.
     """
     t = t or now()
     if set(tasks) <= set(results):
         return 'finished', None
+    done = [dict(c, via='main') for c in claims if c.get('state') == 'finished']
+    if done:
+        return 'finished', min(done, key=lambda c: c.get('finished_at') or c.get('claimed_at') or '')
 
     def active(c):
         if not c or c.get('state') not in ACTIVE:
@@ -107,13 +114,17 @@ def resolve(tasks, claims, prs, results, t=None):
 
     on_main = [dict(c, via='main') for c in claims if active(c)]
     in_prs = [dict(p['claim'], via=f"pr#{p['number']}", pr=p['number'])
-              for p in sorted(prs, key=lambda p: p['number']) if active(p['claim'])]
+              for p in sorted(prs, key=lambda p: p['number'])
+              if active(p['claim']) or (p['claim'] or {}).get('state') == 'finished']
     running = [c for c in on_main + in_prs if c['state'] == 'running']
     if len(running) > 1:
         return 'conflict', running[0]
     if running:
         c = running[0]
         return ('stale' if parse(c['lease_until']) < t else 'running'), c
+    review = [c for c in in_prs if c['state'] == 'finished']
+    if review:
+        return 'review', review[0]
     fresh = sorted((c for c in on_main if c['state'] == 'claimed'), key=lambda c: (c['claimed_at'], c['worker']))
     if fresh:
         return 'claimed', fresh[0]

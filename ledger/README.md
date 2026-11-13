@@ -7,8 +7,9 @@ The shared queue of the distributed difficulty measurement. Workers follow [AGEN
 - The work units themselves are `release/batches.json`.
 
 Who holds a batch:
-- complete results mean finished;
+- complete results, or a `finished` claim on main, mean finished (the owner's own runs publish no summaries);
 - otherwise a running claim holds;
+- otherwise an open PR whose claim is `finished` holds as `review`, until the owner merges or closes it;
 - otherwise a fresh `claimed` claim on main holds;
 - otherwise the lowest-numbered open ledger PR holds. This is how a PR takes over a batch that the owner has only queued.
 

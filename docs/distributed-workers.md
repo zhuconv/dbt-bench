@@ -61,9 +61,10 @@ sequenceDiagram
 
 The rules below are applied in order:
 
-1. When every task of the batch has a summary on `main`, the batch is finished.
+1. When every task of the batch has a summary on `main`, or a claim on `main` is `finished`, the batch is finished. The owner's own Vista runs are recorded the second way, because they publish no summaries.
 2. Otherwise a running claim holds it.
-3. Otherwise a fresh `claimed` claim on `main` holds it.
-4. Otherwise the lowest-numbered open ledger PR holds it. This is how a worker takes over a batch the owner has only queued. The owner's sync script then cancels the pending Vista job and releases the owner claim.
+3. Otherwise an open PR whose claim is `finished` holds it as `review`, until the owner merges or closes that PR.
+4. Otherwise a fresh `claimed` claim on `main` holds it.
+5. Otherwise the lowest-numbered open ledger PR holds it. This is how a worker takes over a batch the owner has only queued. The owner's sync script then cancels the pending Vista job and releases the owner claim.
 
 The rules are implemented in `scripts/worker.py`. The ledger layout is in [ledger/README.md](../ledger/README.md), and the PR check is `scripts/ledger_check.py`. Merging a PR accepts its raw results only; joint native and audit success is decided centrally afterwards.
