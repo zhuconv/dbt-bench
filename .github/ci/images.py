@@ -13,7 +13,6 @@ import hashlib
 import json
 import os
 import re
-import subprocess
 import sys
 import tarfile
 import urllib.request
@@ -73,6 +72,7 @@ def cmd_plan(a):
 
 
 def download(url, dest, size, digest):
+    """url may be a Request. Checks the declared size while streaming and the SHA256 at the end."""
     with urllib.request.urlopen(url, timeout=300) as r, open(dest, 'xb') as f:
         total = 0
         while chunk := r.read(1 << 22):
@@ -81,7 +81,34 @@ def download(url, dest, size, digest):
                 raise SystemExit(f'{url}: larger than the declared {size} bytes')
             f.write(chunk)
     if total != size or sha256(dest) != digest:
-        raise SystemExit(f'{url}: size or SHA256 differs from release/upload-manifest.json')
+        raise SystemExit(f'{getattr(url, "full_url", url)}: size or SHA256 differs from release/upload-manifest.json')
+
+
+def pull_sif(tag, dest, size, digest):
+    """Anonymous OCI pull of the single SIF layer.
+
+    `apptainer pull` refuses an arm64 SIF on an amd64 host, and here the SIF is
+    only read with unsquashfs, so fetch the layer blob directly.
+    """
+    repo = PACKAGE.removeprefix('ghcr.io/')
+    with urllib.request.urlopen(f'https://ghcr.io/token?scope=repository:{repo}:pull', timeout=60) as r:
+        token = json.load(r)['token']
+
+    def request(path, accept=None):
+        req = urllib.request.Request(f'https://ghcr.io/v2/{repo}/{path}')
+        # Not forwarded on the redirect to the blob storage host.
+        req.add_unredirected_header('Authorization', 'Bearer ' + token)
+        if accept:
+            req.add_header('Accept', accept)
+        return req
+
+    with urllib.request.urlopen(request(f'manifests/{tag}', 'application/vnd.oci.image.manifest.v1+json'),
+                                timeout=60) as r:
+        manifest = json.load(r)
+    layers = [x for x in manifest.get('layers', []) if x.get('mediaType') == 'application/vnd.sylabs.sif.layer.v1.sif']
+    if len(layers) != 1 or layers[0]['digest'] != 'sha256:' + digest or layers[0]['size'] != size:
+        raise SystemExit(f'{tag}: registry manifest does not hold exactly the expected SIF layer')
+    download(request(f'blobs/sha256:{digest}'), dest, size, digest)
 
 
 def cmd_fetch(a):
@@ -105,9 +132,7 @@ def cmd_fetch(a):
         raise SystemExit('Task tree hash differs after extraction')
 
     sif = out / 'original.sif'
-    subprocess.run(['apptainer', '-q', 'pull', str(sif), f'oras://{PACKAGE}:{sif_obj["tag"]}'], check=True)
-    if sha256(sif) != sif_obj['sha256']:
-        raise SystemExit('Original SIF SHA256 differs')
+    pull_sif(sif_obj['tag'], sif, sif_obj['bytes'], sif_obj['sha256'])
     print(json.dumps({'task_tree': str(task_tree), 'original_sif': str(sif),
                       'task_archive_sha256': task_obj['sha256'], 'original_sif_sha256': sif_obj['sha256']}))
 
