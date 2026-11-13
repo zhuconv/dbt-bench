@@ -5,7 +5,8 @@ from pathlib import Path
 from unittest.mock import patch
 from dbt_bench import io
 from dbt_bench.local_config import load,expand
-from release_tools import config_for,same_task_semantics,ROOT
+from release_tools import config_for,same_task_semantics,ROOT,qwen_installation_identity
+from tests.helpers import fixture_root,qwen_bundle_fixture
 
 class PortableControls(unittest.TestCase):
     def test_nested_local_paths_and_casefold_allocation(self):
@@ -29,17 +30,38 @@ class PortableControls(unittest.TestCase):
             self.assertIsNone(c['agents'][0]['override_timeout_sec'])
             self.assertEqual(c['agents'][0]['kwargs']['config'],io.read_json(ROOT/'inference/qwen-code-settings.json'))
 
-    def test_config_changes_only_three_coordinates_and_job_name(self):
+    def test_rebuilt_manifest_binds_actual_hash_without_changing_protocol(self):
         template=deepcopy(io.read_json(ROOT/'catalog/measurement-tasks.json')['tasks'][0]['config_template'])
         with tempfile.TemporaryDirectory() as d:
-            bundle=Path(d)/'bundle.json';bundle.write_text('{}')
+            root=Path(d);fixture_root(root);bundle=qwen_bundle_fixture(root)
             template['agents'][0]['kwargs']['installation_bundle_sha256']=io.file_hash(bundle)
-            current=config_for(template,Path(d)/'member',Path(d)/'task',{'qwen_bundle':str(bundle)})
-            current['job_name']=template['job_name'];current['jobs_dir']=template['jobs_dir'];current['tasks'][0]['path']=template['tasks'][0]['path']
-            current['agents'][0]['kwargs']['installation_bundle']=template['agents'][0]['kwargs']['installation_bundle']
-            self.assertEqual(current,template)
-            bundle.write_text('{"changed":true}')
-            with self.assertRaisesRegex(ValueError,'manifest differs'):config_for(template,Path(d)/'member',Path(d)/'task',{'qwen_bundle':str(bundle)})
+            with patch('release_tools.ROOT',root):
+                original=config_for(template,root/'member',root/'task',{'qwen_bundle':str(bundle)})
+                original_receipt=qwen_installation_identity(original)
+                manifest=io.read_json(bundle);manifest['source_installation']={'path':'different-builder/result.json','sha256':'a'*64}
+                io.write_json(bundle,manifest)
+                current=config_for(template,root/'member',root/'task',{'qwen_bundle':str(bundle)})
+                receipt=qwen_installation_identity(current)
+                self.assertEqual(receipt['content_id'],original_receipt['content_id'])
+                self.assertNotEqual(receipt['manifest_sha256'],original_receipt['manifest_sha256'])
+                self.assertEqual(current['agents'][0]['kwargs']['installation_bundle_sha256'],io.file_hash(bundle))
+                # Only deployment coordinates and the verified manifest binding change.
+                for key in ('job_name','jobs_dir'):current[key]=template[key]
+                current['tasks'][0]['path']=template['tasks'][0]['path']
+                for key in ('installation_bundle','installation_bundle_sha256'):
+                    current['agents'][0]['kwargs'][key]=template['agents'][0]['kwargs'][key]
+                self.assertEqual(current,template)
+
+    def test_rewritten_manifest_cannot_authorize_different_bundle_bytes(self):
+        template=deepcopy(io.read_json(ROOT/'catalog/measurement-tasks.json')['tasks'][0]['config_template'])
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d);fixture_root(root);bundle=qwen_bundle_fixture(root)
+            manifest=io.read_json(bundle);archive=bundle.parent/'archive'
+            archive.write_text('tampered but self-consistently rehashed')
+            manifest['files']['archive']['sha256']=io.file_hash(archive);io.write_json(bundle,manifest)
+            with patch('release_tools.ROOT',root):
+                with self.assertRaisesRegex(ValueError,'checksum mismatch'):
+                    config_for(template,root/'member',root/'task',{'qwen_bundle':str(bundle)})
 
     def test_64_tasks_unique_and_native_budgets_fit_full_phase_caps(self):
         batches=io.read_json(ROOT/'release/batches.json')['batches'];keys=[]

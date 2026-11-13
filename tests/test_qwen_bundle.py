@@ -123,6 +123,25 @@ class QwenBundleTests(unittest.TestCase):
 
 
 class PreparedBundleTests(unittest.TestCase):
+    def test_builder_normalizes_umask_drift_without_changing_bytes_or_links(self):
+        spec = importlib.util.spec_from_file_location('build_qwen_modes', ROOT / 'scripts/build_qwen_bundle.py')
+        builder = importlib.util.module_from_spec(spec); spec.loader.exec_module(builder)
+        with tempfile.TemporaryDirectory() as tmp:
+            tree = Path(tmp) / 'nvm'; (tree / 'bin').mkdir(parents=True)
+            plain = tree / 'nvm.sh'; plain.write_text('fixed script'); plain.chmod(0o600)
+            executable = tree / 'bin/node'; executable.write_text('fixed executable'); executable.chmod(0o700)
+            (tree / 'bin/qwen').symlink_to('node')
+            tree.chmod(0o700); (tree / 'bin').chmod(0o700)
+            before = {p.name: bundle.sha256(p) for p in (plain, executable)}
+            builder.normalize_runtime_modes(tree)
+            self.assertEqual(plain.stat().st_mode & 0o777, 0o644)
+            self.assertEqual(executable.stat().st_mode & 0o777, 0o755)
+            self.assertEqual((tree / 'bin').stat().st_mode & 0o777, 0o755)
+            self.assertEqual(os.readlink(tree / 'bin/qwen'), 'node')
+            self.assertEqual(before, {p.name: bundle.sha256(p) for p in (plain, executable)})
+            first = bundle.inventory(tree); builder.normalize_runtime_modes(tree)
+            self.assertEqual(first, bundle.inventory(tree))
+
     def test_added_files_or_changed_receipt_cannot_be_bundled(self):
         spec = importlib.util.spec_from_file_location('build_qwen', ROOT / 'scripts/build_qwen_bundle.py')
         builder = importlib.util.module_from_spec(spec)

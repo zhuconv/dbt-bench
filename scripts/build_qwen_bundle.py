@@ -35,6 +35,23 @@ def verify_modules(installation, receipt):
         raise ValueError('Prepared Qwen package bytes differ from locked native receipt')
 
 
+def normalize_runtime_modes(tree):
+    """Reproduce the reviewed native modes, independent of the builder's umask.
+
+    Only the private staging copy is changed. The locked complete inventory
+    remains the authority; this is not permission-insensitive equivalence.
+    """
+    for path in [tree, *tree.rglob('*')]:
+        if path.is_symlink():
+            continue
+        if path.is_dir():
+            path.chmod(0o755)
+        elif path.is_file():
+            path.chmod(0o755 if path.stat().st_mode & 0o111 else 0o644)
+        else:
+            raise ValueError('Unsupported installation entry')
+
+
 def build(installation, out):
     installation=Path(installation).resolve();out=Path(out).resolve()
     report=read_json(installation/'result.json')
@@ -77,7 +94,11 @@ def build(installation, out):
         target=modules/'@qwen-code/qwen-code'/package['bin']['qwen']
         if not target.resolve().is_relative_to(modules) or not target.is_file():raise ValueError('Invalid Qwen executable')
         (version/'bin/qwen').symlink_to(os.path.relpath(target,version/'bin'))
+        normalize_runtime_modes(tree)
         entries=installer.inventory(tree);write_json(out/'inventory.json',entries)
+        pin=read_json(ROOT/'sources.lock.yaml')['qwen_code']['installation_bundle']
+        if file_hash(out/'inventory.json') != pin['files']['inventory']:
+            raise ValueError('Rebuilt complete runtime inventory differs from the reviewed installation')
         # Normalize archive timestamps/owners, retain file modes and safe symlinks.
         def normalized(info):
             info.uid=info.gid=info.mtime=0;info.uname=info.gname='';info.pax_headers={}
@@ -86,6 +107,9 @@ def build(installation, out):
             with gzip.GzipFile(filename='',mode='wb',fileobj=raw,mtime=0,compresslevel=6) as zipped:
                 with tarfile.open(fileobj=zipped,mode='w',dereference=False) as stream:
                     stream.add(tree,arcname='nvm',filter=normalized)
+    for name, filename in [('archive','bundle.tar.gz'),('inventory','inventory.json'),('installer','install_bundle.py')]:
+        if file_hash(out/filename) != pin['files'][name]:
+            raise ValueError('Rebuilt bundle payload differs from source lock: '+name)
     manifest={'schema_version':1,'kind':'dbt-bench-qwen-bundle-v1','platform':'linux-arm64',
         'qwen_version':'0.26.5','node_version':node['version'],'npm_version':node['npm_version'],
         'nvm_revision':nvm['revision'],'entries':len(entries),

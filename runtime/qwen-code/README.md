@@ -1,90 +1,45 @@
-# Prepared Qwen installation locks
+# Rebuild the locked Qwen installation
 
-These locks preserve Qwen Code 0.26.5, Node 22.23.4 and npm 10.9.9 on Linux
-ARM64/glibc. The installer-only Harbor patch has passed actual setup and replay
-in ADE, Spider and DEB containers and is activated in `sources.lock.yaml`.
-`prepare config --backend apptainer` requires the fixed bundle and records its
-manifest hash in native agent kwargs. Docker's native online installation is
-still separately recorded as not certified; this ARM64 bundle is not an x86
-installation.
+Qwen Code 0.26.5, Node 22.23.4 and npm 10.9.9 are fixed for Linux ARM64/glibc. The bundle is not redistributed. The files in this directory and the build scripts are sufficient to rebuild it from public npm, Node and the pinned NVM GitHub revision; no original private installation log is required.
 
-`package-lock.json` fixes every npm tarball URL and integrity value.
-`node.lock.json` fixes the Node archive and binary hashes. The binary hash
-matches the actual native adapter installation. `native-installation.json`
-contains 17 observed package versions and 1,608 package-file hashes, so replay
-does not need the original large artifacts directory.
+`package-lock.json` pins every npm tarball and its integrity value. Use the replay workflow below (`npm ci`), not a fresh `npm install -g @qwen-code/qwen-code@0.26.5`: the latter can resolve different transitive dependencies. `native-installation.json` contains 17 observed versions and 1,608 package-file hashes. `node.lock.json` fixes the official Node archive/binary; `nvm.lock.json` fixes four NVM support files.
 
-On an allocated Linux ARM64 compute node, prepare a new install check:
+## Build on a Linux ARM64 compute node
+
+Use the patched Python installed by the main README. On a clean checkout, keep caches on SCRATCH (if `.cache/qwen-runtime` already exists, keep its hash-checked contents):
 
 ```bash
-runtime/.venv/bin/python scripts/freeze_qwen_dependencies.py \
-  --output-dir artifacts/execution/qwen-lock-check-new
+runtime_python="$SCRATCH/dbt-bench-runtime/timeout-v2/venv/bin/python"
+qwen_work="$SCRATCH/dbt-bench-qwen-build"
+qwen_cache="$SCRATCH/dbt-bench-qwen-cache"
+mkdir -p "$qwen_cache" .cache
+if [ ! -e .cache/qwen-runtime ] && [ ! -L .cache/qwen-runtime ]; then
+  ln -s "$qwen_cache" .cache/qwen-runtime
+fi
+PYTHONDONTWRITEBYTECODE=1 "$runtime_python" scripts/freeze_qwen_dependencies.py \
+  --output-dir "$qwen_work/installation-v1"
+PYTHONDONTWRITEBYTECODE=1 "$runtime_python" scripts/build_qwen_bundle.py \
+  --installation "$qwen_work/installation-v1" \
+  --output-dir "$qwen_work/bundle-v1"
 ```
 
-The command uses the committed locks, downloads missing pinned artifacts, and
-installs into two distinct directories. The second installation uses npm's
-offline mode. With an already populated cache, both can be offline:
+Use new output directories each time. The first command downloads the locked official artifacts, runs two independent installations (the second uses npm offline mode), verifies versions, and compares every declared package file to the portable native receipt. The historical `native_observation` paths in that receipt are provenance, not files required by this replay. With an already populated cache, `freeze_qwen_dependencies.py --offline` can also perform the first install without npm network access. This does not claim network isolation.
 
-```bash
-runtime/.venv/bin/python scripts/freeze_qwen_dependencies.py --offline \
-  --output-dir artifacts/execution/qwen-lock-offline-new
-```
+The builder verifies those results, creates the native NVM layout, normalizes staging permissions to the reviewed modes (directories and executables 0755, other files 0644, symlinks unchanged), and emits:
 
-Both complete inventories must match, and all declared package bytes must
-match the portable native receipt. Generated `.bin` links and npm's hidden
-lock metadata are excluded from the comparison across different installation
-layouts; CLI execution is checked separately. This is not a claim of full
-network isolation or actual model/tool execution. Existing output directories
-and locks are never silently replaced.
+- `bundle.json`: local build provenance and checksums;
+- `bundle.tar.gz`: the complete native runtime tree;
+- `inventory.json`: all 7,615 entries, including paths, file hashes, sizes, modes and symlink targets;
+- `install_bundle.py`: the unchanged standalone installer.
 
-npm 10.9.9 omitted `libc` conditions from its initial lock. That made `npm ci`
-install two musl packages absent from the native glibc installation. The
-[recorded metadata repair](../../patches/npm-10-lock-libc-metadata-v1/metadata.json)
-restores four exact upstream package fields under before/after hash checks.
-It changes no package versions or package code. The first failed comparison
-is retained, and subsequent independent offline installations match the
-native versions and package bytes. A regenerated lock with a different
-preimage is rejected and needs a new review.
+It refuses output unless the inventory, archive and installer exactly match the existing hashes in `sources.lock.yaml`. Permissions are checked, not ignored. This fixes the previous dependence on the builder's umask. Two actual rebuilds under umask 077 and 022 produced the original archive and inventory hashes. Only the manifest hash changes with build provenance. See [the CPU verification and identity review](../../docs/qwen-bundle-rebuild.md).
 
-Build the fixed NVM/Node/Qwen tree from a successful installation check:
+Set `qwen_bundle` in `configs/local.toml` to the absolute path of your new `bundle.json`. `scripts/bench.py prepare` verifies the dependency locks and all three payload hashes, then records the **actual local manifest SHA256** in native Qwen Code kwargs. No modification of the locked Harbor adapter is needed. Do not map a rebuilt manifest to the historical manifest asset ID in `release/assets.json`; the direct `qwen_bundle` setting supplies it.
 
-```bash
-runtime/.venv/bin/python scripts/build_qwen_bundle.py \
-  --installation artifacts/execution/qwen-lock-check-new \
-  --output-dir .cache/qwen-runtime/locked-v1
-runtime/.venv/bin/python scripts/check_runtime.py --require-locked-installation
-```
+For the older general task preparation entry point, pass `prepare config --qwen-bundle PATH/bundle.json`. The default-only `check_runtime.py --require-locked-installation` expects the location declared in `sources.lock.yaml`; it is not a validator for an arbitrary output directory. Portable `bench.py prepare/check` validates the configured bundle.
 
-The builder verifies the complete prepared module inventory and its canonical
-package bytes against the native receipt. It emits a deterministic archive,
-exact inventory, standalone installer and checksum-bound `bundle.json`.
-`nvm.lock.json` pins the native-observed NVM script and support files. No npm
-resolution or NVM download runs inside the task. Two independent builds produced
-the same archive and inventory; the native tree contains 7,615 entries.
+## What remains fixed
 
-The builder refuses to replace an existing output directory. An existing cache
-is checked by `check_runtime.py --require-locked-installation` and each
-`prepare config` invocation. For a different prepared location, pass
-`prepare config --qwen-bundle PATH/bundle.json`; archive, inventory and installer
-hashes must still match the source lock. A changed local manifest cannot
-authorize different installation bytes.
+The npm libc metadata repair is already included in the committed lock and does not run a new version resolution during replay. Generated `.bin` links and npm's hidden lock metadata are omitted only from the package-layout comparison; the assembled runtime's full inventory, executable permissions and symlink targets are checked exactly. No blanket package-file or archive-hash exemption is introduced.
 
-`scripts/check_qwen_setup.py` accepts `--candidate-adapter`,
-`--candidate-sha256`, `--installation-bundle` and `--bundle-sha256` alongside
-its task/database/output arguments. Candidate options are for isolated patch
-development; normal probes now use the installed native class and just the
-bundle arguments. Evidence and archived probe scripts are retained in the
-[three-source review](../../validation/evidence/qwen-bundle-candidate-review-v1.json).
-
-The installer uses Python extraction to avoid ADE's observed `xz` sandbox
-failure. It normally renames a validated staging tree; on the observed
-Apptainer `EXDEV` error only, it copies to a newly created destination and
-rechecks every entry. It refuses to merge an existing changed tree, cleans its
-own failed copy, and verifies replay after NVM has actually been sourced.
-This fallback is not an atomic rename. All three initial databases remained
-unchanged, and all four probe containers (including the first failed ADE
-attempt) were confirmed stopped.
-
-Remaining work: freeze remaining Harbor server dependencies and validate actual model/tool
-execution under that new identity. Setup probes contain no model requests and
-do not certify benchmark semantics or training eligibility.
+The installer verifies before installation, refuses a changed destination, and retains the reviewed Apptainer EXDEV fallback. Reconstruction and CLI version checks send no model requests. New local manifest/execution hashes remain distinct from historical ones, while identical payloads receive the same installation-content ID. This is supporting evidence for a future controlled cross-account import, not automatic permission to merge results or count duplicate attempt slots. Measurement trajectories remain prohibited from training use.

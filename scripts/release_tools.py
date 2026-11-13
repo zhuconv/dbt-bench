@@ -56,16 +56,34 @@ def same_task_semantics(original, relocated):
 def config_for(template, run, task, settings):
     c=deepcopy(template)
     c['job_name']=Path(run).name;c['jobs_dir']=str(Path(run)/'jobs');c['tasks'][0]['path']=str(task)
-    c['agents'][0]['kwargs']['installation_bundle']=settings['qwen_bundle']
-    # Bundle payload/manifest is fixed and only relative-addressed internally.
-    if io.file_hash(settings['qwen_bundle'])!=c['agents'][0]['kwargs']['installation_bundle_sha256']:
-        raise ValueError('Qwen bundle manifest differs')
+    # Build provenance changes the manifest hash. Reuse the existing strict
+    # payload/lock verifier, then bind this exact manifest for native Harbor.
+    from dbt_bench.prepare import bind_qwen_bundle
+    bind_qwen_bundle(ROOT, c, settings['qwen_bundle'])
     return c
+
+
+def qwen_installation_identity(config):
+    """Payload equivalence evidence, separate from an execution/manifest ID.
+
+    Call after config_for has verified every payload against sources.lock.yaml.
+    This field alone does not authorize cross-account result import.
+    """
+    kwargs=config['agents'][0]['kwargs']
+    manifest=io.read_json(kwargs['installation_bundle'])
+    content={key:manifest[key] for key in ('kind','platform','qwen_version','node_version','npm_version')}
+    content['files']={name:manifest['files'][name]['sha256'] for name in ('archive','inventory','installer')}
+    content['locks']=manifest['locks']
+    return {'schema_version':1,'policy':'exact_locked_payload_v1',
+            'content':content,'content_id':io.digest(content),
+            'manifest_sha256':kwargs['installation_bundle_sha256']}
 
 
 def seal(path, settings):
     files=[ROOT/'scripts/run_release_batch.py',ROOT/'scripts/release_tools.py',ROOT/'src/dbt_bench/io.py',
-           ROOT/'src/dbt_bench/local_config.py',ROOT/'scripts/run_gh_smoke.py',ROOT/'scripts/verify_container_cleanup.py',
+           ROOT/'src/dbt_bench/local_config.py',ROOT/'src/dbt_bench/prepare.py',
+           ROOT/'src/dbt_bench/catalog.py',ROOT/'src/dbt_bench/backends.py',
+           *sorted((ROOT/'runtime/qwen-code').glob('*.json')),ROOT/'scripts/run_gh_smoke.py',ROOT/'scripts/verify_container_cleanup.py',
            ROOT/'scripts/review_tools.py',ROOT/'release/harbor-package-files.json',
            ROOT/'release/batches.json',ROOT/'catalog/measurement-tasks.json',ROOT/'release/assets.json',
            ROOT/'configs/difficulty-v1/measurement-rules.json',ROOT/'configs/difficulty-v1/split-rules.json',
@@ -91,7 +109,8 @@ def validate_member(entry, batch, identity, root=ROOT):
     if (io.digest(i)!=m['experiment_id'] or io.file_hash(run/'config.yaml')!=m['config_hash']
             or c!=i['config'] or c!=config_for(row['config_template'],run,i['config']['tasks'][0]['path'],required())
             or i['attempt_ids']!=[1,2,3,4] or i['server_seed']!=identity['server_seed']
-            or i['shared_model_batch']!=str(batch) or i['task_version']!=row['task_version']):
+            or i['shared_model_batch']!=str(batch) or i['task_version']!=row['task_version']
+            or i['qwen_installation']!=qwen_installation_identity(c)):
         raise ValueError('Member protocol/configuration changed')
     task=Path(c['tasks'][0]['path'])
     if io.tree_hash(task)!=i['actual_task_hash'] or io.tree_hash(task/'tests')!=row['native_tests_sha256']:
@@ -184,6 +203,7 @@ def prepare(batch_id,output):
         JobConfig.model_validate(config)
         identity={'task_key':key,'task_version':row['task_version'],'config':config,'attempt_ids':[1,2,3,4],
             'shared_model_batch':str(output),'server_seed':template['server_seed'],'runtime_patch':runtime,
+            'qwen_installation':qwen_installation_identity(config),
             'canonical_task_hash':row['task_tree_sha256'],'actual_task_hash':io.tree_hash(task),
             'deployment':settings,'purpose':'difficulty_only_no_training','training_prohibited':True,
             'relocation':{'changed_files':['task.toml'] if before!=after else [],'allowed_field':'environment.docker_image',

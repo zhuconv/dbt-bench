@@ -50,11 +50,13 @@ printf '%s  %s\n' "$image_sha256" "$image_path" | sha256sum --check --strict
 
 The SIF SHA256 is the image identity; the OCI manifest digest is a different value and is not used for verification. Task archives and the qualification index archive are attachments to the `assets-v1-20261112` Release. Check both the downloaded archive SHA256 and the extracted task/file hashes; commands are in [asset acquisition](docs/artifacts.md). Create the private JSON `asset_map` named in local config, mapping each asset ID to its verified local file/directory. Missing assets remain blocking errors.
 
-The Qwen Code bundle (Qwen Code 0.26.5, Node 22.23.4 and npm 10.9.9 for Linux ARM64) is not redistributed, because it carries third-party binaries under LGPL terms. Build it from the official npm and Node downloads pinned in `runtime/qwen-code/` (see its README and `scripts/build_qwen_bundle.py`). Every package file is checked against `runtime/qwen-code/native-installation.json`. A rebuilt bundle has its own archive identity.
+The Qwen Code bundle (Qwen Code 0.26.5, Node 22.23.4 and npm 10.9.9 for Linux ARM64) is not redistributed. Follow the [locked rebuild commands](runtime/qwen-code/README.md) using npm, Node and pinned NVM downloads. Two independent npm installations must match all 1,608 native package files. The builder normalizes the reviewed permissions and requires the complete archive, inventory and installer to match their original hashes. Set `qwen_bundle` to your new `bundle.json`; preparation records its actual manifest hash after verifying the unchanged payloads. The manifest and execution identity may differ because of local provenance. [CPU verification and merge limits](docs/qwen-bundle-rebuild.md) explain the distinction.
 
 For the public model, `scripts/prefetch_smoke_model.py` downloads the exact pinned revision and checks every file against HF metadata. The full expected inventory is also in `release/model-files.json`. Set `model_snapshot` to the verified snapshot path. No model request is sent during download.
 
 ## Prepare and run one assigned batch
+
+Distributed workers take batches from the shared ledger and publish results as described in [AGENTS.md](AGENTS.md). The steps below run one batch.
 
 The 35 prepared 24h batch declarations are in `release/batches.json`. They cover 64 still-unstarted tasks; the two completed ADE pilots and repeat-purchase recovery are intentionally excluded. Coordinate whole-batch ownership with the experiment owner **before** running to prevent duplicate attempts. Do not select batches based on model outcomes.
 
