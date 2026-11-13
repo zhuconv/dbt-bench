@@ -9,10 +9,13 @@ def run(args):subprocess.run(args,check=True)
 for p in Path('/etc/apt/sources.list.d').glob('*'):p.unlink()
 Path('/etc/apt/sources.list').write_text(''.join('deb [check-valid-until=no] https://snapshot.debian.org/archive/'+archive+'/'+date+'/ '+suite+' main\n' for date in ('20260807T000000Z','20261029T000000Z','20261104T000000Z','20261106T000000Z','20261112T000000Z') for archive,suite in [('debian','trixie'),('debian-security','trixie-security')]))
 run(['apt-get','-o','Acquire::Check-Valid-Until=false','update'])
-run(['apt-get','install','-y','--no-install-recommends','--allow-downgrades',*(root/'apt.txt').read_text().splitlines()])
+# apt-<arch>.txt, when present, pins the same Debian source versions as the arm64
+# apt.txt; only per-architecture binNMU suffixes differ (see make_arch_apt_lock.py).
+apt_lock=root/('apt-'+a.arch+'.txt') if (root/('apt-'+a.arch+'.txt')).is_file() else root/'apt.txt'
+run(['apt-get','install','-y','--no-install-recommends','--allow-downgrades',*apt_lock.read_text().splitlines()])
 actual=dict(line.split('\t') for line in subprocess.check_output(['dpkg-query','-W','-f=${binary:Package}\t${Version}\n'],text=True).splitlines())
 actual={k.removesuffix(':'+a.arch):v for k,v in actual.items()}
-expected=dict(line.split('=',1) for line in (root/'apt.txt').read_text().splitlines())
+expected=dict(line.split('=',1) for line in apt_lock.read_text().splitlines())
 if actual!=expected:raise ValueError('Debian inventory differs; do not silently relax architecture/package versions')
 if subprocess.check_output(['/usr/local/bin/python3','-c','import platform;print(platform.python_version())'],text=True).strip()!=spec['python_version']:raise ValueError('Python interpreter version differs')
 run(['/usr/local/bin/python3','-m','pip','install','--no-deps','--only-binary=:all:','--require-hashes','-r',str(root/'python.txt')])

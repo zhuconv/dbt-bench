@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "arch": "amd64",
+  "rule": "same Debian source version as the arm64 pin",
+  "snapshot_dates": [
+    "20260807T000000Z",
+    "20261029T000000Z",
+    "20261104T000000Z",
+    "20261106T000000Z",
+    "20261112T000000Z"
+  ],
+  "changes": [
+    {
+      "group": "10f8a81179d1d7e8",
+      "package": "grep",
+      "arm64_version": "3.11-4+b1",
+      "amd64_version": "3.11-4",
+      "source": "grep",
+      "source_version": "3.11-4"
+    },
+    {
+      "group": "1c24e2ff3245ae0a",
+      "package": "grep",
+      "arm64_version": "3.11-4+b1",
+      "amd64_version": "3.11-4",
+      "source": "grep",
+      "source_version": "3.11-4"
+    },
+    {
+      "group": "24652c4986ded03b",
+      "package": "grep",
+      "arm64_version": "3.11-4+b1",
+      "amd64_version": "3.11-4",
+      "source": "grep",
+      "source_version": "3.11-4"
+    },
+    {
+      "group": "3cc1f2d02e92eb04",
+      "package": "grep",
+      "arm64_version": "3.11-4+b1",
+      "amd64_version": "3.11-4",
+      "source": "grep",
+      "source_version": "3.11-4"
+    },
+    {
+      "group": "a9c9b7d2ef4cfb6a",
+      "package": "grep",
+      "arm64_version": "3.11-4+b1",
+      "amd64_version": "3.11-4",
+      "source": "grep",
+      "source_version": "3.11-4"
+    }
+  ]
+}
