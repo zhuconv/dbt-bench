@@ -8,7 +8,7 @@ The original catalog contains **135 tasks**: ADE 16, Spider 55, DEB 64. The curr
 
 ## Supported environment
 
-The tested deployment is TACC Vista GH200, Linux aarch64, Apptainer 1.4.1, Slurm, Harbor 0.25.0 and Qwen Code 0.26.5. The model is Qwen3.6-35B-A3B at the revision in `inference/qwen3.6-35b-a3b.json`; vLLM 0.19.0 and its dependencies are locked separately. Docker remains the benchmark reference backend; the current measurement release uses the reviewed Apptainer images. Other architectures/backends require separate qualification.
+The tested deployment is TACC Vista GH200, Linux aarch64, Apptainer 1.4.1, Slurm, Harbor 0.25.0 and Qwen Code 0.26.5. The model is Qwen3.6-35B-A3B at the revision in `inference/qwen3.6-35b-a3b.json`; vLLM 0.19.0 and its dependencies are locked separately. Docker remains the benchmark reference backend; the current measurement release uses the reviewed Apptainer images. The owner also accepts H100 Linux x86_64 results as equivalent to ARM64 without a cross-architecture equivalence study. The amd64 build recipes and locks are provided; amd64 images must be built, CPU-smoked and digest-registered before workers can prepare measurements. Other backends remain outside this measurement release.
 
 Run installations, agents, containers and inference on compute nodes. Use login nodes only for short Slurm commands. Obtain your own allocation membership; no project credential is required for the public model or DuckDB warehouse. Optional provider/registry credentials belong in your environment, never this repository.
 
@@ -25,7 +25,7 @@ unset UV_PROJECT_ENVIRONMENT
 UV_PROJECT_ENVIRONMENT="$SCRATCH/dbt-bench-inference"   uv sync --locked --project inference --python 3.12
 ```
 
-The installer creates a new runtime, applies exact preimage/postimage patches, and verifies all 515 Harbor package files. It will not overwrite a sealed runtime. The host interpreter path is a deployment coordinate; the package contents and dependency locks remain fixed. The inference lock is aarch64-specific and must be validated on the target GPU.
+The installer creates a new runtime, applies exact preimage/postimage patches, and verifies all 515 Harbor package files. It will not overwrite a sealed runtime. The host interpreter path is a deployment coordinate; the package contents and dependency locks remain fixed. The original inference lock is aarch64-specific. x86 workers use `inference/x86_64/uv.lock`; see [H100 setup](docs/h100-worker.md). Both keep vLLM 0.19.0 and matching shared dependency versions.
 
 ## Configure and acquire external assets
 
@@ -85,12 +85,47 @@ Task relocation changes only the declared image coordinate in `task.toml`; the c
 
 The index retains raw reward maps, exceptions and missing slots; audit and joint success remain `null` until the same captured submission is audited. Raw Qwen/Harbor records and pre-verifier captures remain under each member's `jobs/` directory. `launch-result.json` describes execution completion, **not** audit success. Review `interruption.json` before assigning failure or replacement slots. Never restart a used output directory.
 
-Qualified task checkers are included under `validation/`; full contracts, expected outputs, qualification evidence and immutable audit request specifications are external assets. The historical audit/reconcile scripts require those exact artifacts. The release does not synthesize missing audit receipts, reinterpret native successes as joint successes, or implement cross-account result import. Return raw jobs, captures, manifests and later audit receipts to the experiment owner for adjudication; cross-account import tooling is deferred.
+Qualified task checkers are included under `validation/`; full contracts, expected outputs, qualification evidence and immutable audit request specifications are external assets. The historical audit/reconcile scripts require those exact artifacts. The release does not synthesize missing audit receipts or reinterpret native successes as joint successes. Export each finalized task, publish through the maintained worker tool, and let the owner import merged results for central audit as below.
+
+## Export a finalized task and import accepted results
+
+Use the same code checkout that prepared the batch. A task is finalized when its `launch-result.json` records `finalization_status=recorded_after_cleanup`, not merely when the file first appears. Export does not run a model or score the submission:
+
+```bash
+"$runtime_python" scripts/bench.py export \
+  --batch "$SCRATCH/dbt-bench-runs/batch-01" \
+  --task deb__dbt-calculate-running-balance \
+  --output "$SCRATCH/dbt-bench-exports/batch-01-running-balance"
+```
+
+The new directory contains `summary.json`, a `.tar.gz` raw archive and `export-receipt.json`. The summary has all 4 slots, raw reward maps, exceptions, durations, submission hashes, and code/image/model/runtime/Qwen/platform identities. The archive retains the full task member (native jobs, Qwen logs, trajectories, pre-verifier submission captures, native verifier output), batch launch/server metadata, task and runtime proofs, and a per-file inventory. Missing captures stay missing; audit and joint success remain null. Ambiguous duplicate/unfinished trial mappings are rejected for owner review. Pre-export historical executions without the new prepared code/image identity need an explicit owner adapter; this command never relabels them.
+
+Then use the maintained coordination tool:
+
+```bash
+python scripts/worker.py publish batch-01 deb__dbt-calculate-running-balance \
+  "$SCRATCH/dbt-bench-exports/batch-01-running-balance/summary.json" \
+  "$SCRATCH/dbt-bench-exports/batch-01-running-balance/batch-01--deb__dbt-calculate-running-balance.tar.gz"
+```
+
+The owner imports only accepted upstream main, after merging and fetching:
+
+```bash
+git -C "$DBT_BENCH_LEDGER" fetch upstream main
+"$runtime_python" scripts/bench.py import --ledger "$DBT_BENCH_LEDGER" \
+  --remote upstream --output "$SCRATCH/dbt-bench-central/imported-v1"
+```
+
+Import reads committed main blobs, never unmerged worktree JSON. It verifies the owner's repository URL, accepted claim, archive size/SHA256, safe extraction and file inventory, task/data/native-verifier hashes, exact config/budgets/model/sampling/seed, Qwen payload locks, approved platform image/runtime, and slot ownership. An identical repeat import verifies retained evidence and is idempotent; changed or duplicate slots fail. Each imported task retains immutable raw files, an acceptance receipt and a companion path map. `trials.jsonl` provides local trial paths to central submission extraction, audit and reconciliation; it does not fill audit/validity decisions. The full qualification evidence remains an owner-side audit prerequisite. [Import policy](docs/qwen-bundle-rebuild.md) preserves separate original execution IDs. Measurement data must never enter training.
+
+## amd64 images and H100 workers
+
+See [image recipes](images/README.md) and [H100 setup](docs/h100-worker.md). Both architectures use the same Docker base recipe with architecture-specific digests under a fixed upstream index. The task layer retains the exact initial task data and frozen dependencies. `images/platform-images.json` currently lists amd64 images as `build_required`; preparation fails until the owner records published SIF and registry digests. Do not start the worker loop before that and the target CPU reference smoke are complete.
 
 ## CPU regression checks
 
 ```bash
-PYTHONPATH=src:scripts "$runtime_python" -m unittest   tests.test_release_portability tests.test_comparison tests.test_validation   tests.test_reporting tests.test_training_purpose_exclusion   tests.test_runtime_timeout_v2 tests.test_runtime_patch_chain -v
+PYTHONPATH=src:scripts "$runtime_python" -m unittest   tests.test_release_portability tests.test_comparison tests.test_validation   tests.test_reporting tests.test_training_purpose_exclusion   tests.test_runtime_timeout_v2 tests.test_runtime_patch_chain   tests.test_result_transfer tests.test_platform_support -v
 ```
 
 These checks use small fixtures and do not count as benchmark runs. Older task-specific tests/scripts may additionally require the external qualification archive; source is retained for review and reuse. The release's portable GPU path has CPU preparation/equivalence coverage, but no new GPU run was launched from this export. The active experiment's separate runtime GPU validation is tracked independently.

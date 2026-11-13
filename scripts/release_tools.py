@@ -1,7 +1,7 @@
 """Portable execution coordinates around the same finite native Harbor jobs.
 
 No scoring definition, model parameters, task budgets, attempt counts or seeds
-are supplied by local deployment settings. Cross-account import is not provided.
+are supplied by local deployment settings. Central import verifies accepted ledger results separately.
 """
 from copy import deepcopy
 import json
@@ -21,7 +21,13 @@ def asset_index():
 
 
 def asset(asset_id, settings, *, verify=True):
-    entry=asset_index()[asset_id]
+    index=asset_index()
+    if asset_id in index:entry=index[asset_id]
+    else:
+        from platform_support import platform_name
+        matches=[v for v in io.read_json(ROOT/'images/platform-images.json')['images'] if v.get('asset_id')==asset_id and v.get('status')=='published' and v['platform']==platform_name(settings)]
+        if len(matches)!=1:raise ValueError('Unknown published platform asset')
+        entry={'hash_algorithm':'sha256','sha256':matches[0]['sif_sha256']}
     mapping=io.read_json(settings['asset_map'])
     if asset_id not in mapping:raise ValueError('Missing immutable asset mapping: '+asset_id)
     path=Path(mapping[asset_id]).resolve()
@@ -40,10 +46,12 @@ def runtime_check(settings):
     package=Path(harbor.__file__).parent.resolve()
     if Path(sys.executable).absolute()!=Path(settings['runtime_python']).absolute():
         raise ValueError('Use the configured patched runtime Python')
-    for row in io.read_json(ROOT/'release/harbor-package-files.json'):
+    from platform_support import runtime_inventory
+    inventory=runtime_inventory(settings,ROOT)
+    for row in io.read_json(inventory):
         if io.file_hash(package/row['path'])!=row['sha256']:
             raise ValueError('Runtime content differs: '+row['path'])
-    return {'package_inventory':io.evidence_ref(ROOT/'release/harbor-package-files.json',ROOT),
+    return {'harbor_version':__import__('importlib.metadata',fromlist=['version']).version('harbor'),'python_version':sys.version,'package_inventory':io.evidence_ref(inventory,ROOT),
             'python':settings['runtime_python'],'package':str(package)}
 
 
@@ -58,8 +66,8 @@ def config_for(template, run, task, settings):
     c['job_name']=Path(run).name;c['jobs_dir']=str(Path(run)/'jobs');c['tasks'][0]['path']=str(task)
     # Build provenance changes the manifest hash. Reuse the existing strict
     # payload/lock verifier, then bind this exact manifest for native Harbor.
-    from dbt_bench.prepare import bind_qwen_bundle
-    bind_qwen_bundle(ROOT, c, settings['qwen_bundle'])
+    from platform_support import bind_bundle
+    bind_bundle(c, settings, ROOT)
     return c
 
 
@@ -80,7 +88,7 @@ def qwen_installation_identity(config):
 
 
 def seal(path, settings):
-    files=[ROOT/'scripts/run_release_batch.py',ROOT/'scripts/release_tools.py',ROOT/'src/dbt_bench/io.py',
+    files=[ROOT/'scripts/platform_support.py',ROOT/'scripts/run_release_batch.py',ROOT/'scripts/release_tools.py',ROOT/'src/dbt_bench/io.py',
            ROOT/'src/dbt_bench/local_config.py',ROOT/'src/dbt_bench/prepare.py',
            ROOT/'src/dbt_bench/catalog.py',ROOT/'src/dbt_bench/backends.py',
            *sorted((ROOT/'runtime/qwen-code').glob('*.json')),ROOT/'scripts/run_gh_smoke.py',ROOT/'scripts/verify_container_cleanup.py',
@@ -90,6 +98,9 @@ def seal(path, settings):
            ROOT/'catalog/splits.json',ROOT/'sources.lock.yaml',
            ROOT/'inference/qwen3.6-35b-a3b.json',ROOT/'inference/qwen-code-settings.json',
            ROOT/'inference/uv.lock',ROOT/'runtime/uv.lock',ROOT/'release/model-files.json']
+    files+=sorted((ROOT/'runtime/qwen-code/linux-x64').glob('*.json'))
+    files += [ROOT/'release/harbor-amd64-package-files.json',ROOT/'inference/x86_64/uv.lock']
+    files+=[ROOT/'images/platform-images.json'] if (ROOT/'images/platform-images.json').exists() else []
     io.write_json(path/'preflight.json',{'manifest':io.evidence_ref(path/'manifest.json',ROOT),
         'files':[io.evidence_ref(p,ROOT) for p in files], 'deployment':settings,'training_prohibited':True})
 
@@ -106,6 +117,10 @@ def validate_member(entry, batch, identity, root=ROOT):
     if (run/'launch.json').exists():raise ValueError('Existing member invocation must not be restarted')
     if not io.evidence_ok(entry['manifest'],ROOT):raise ValueError('Member manifest changed')
     m=io.read_json(run/'manifest.json');i=m['identity'];c=io.read_json(run/'config.yaml');row=task_index()[i['task_key']]
+    from platform_support import image_identity, code_identity
+    if (i['image_identity']!=image_identity(row,required(),ROOT) or i['qualified_review_asset']!=row['qualified_review_asset']
+            or i['code_identity']['content_id']!=code_identity(ROOT)['content_id']):
+        raise ValueError('Prepared image/code/qualification binding changed')
     if (io.digest(i)!=m['experiment_id'] or io.file_hash(run/'config.yaml')!=m['config_hash']
             or c!=i['config'] or c!=config_for(row['config_template'],run,i['config']['tasks'][0]['path'],required())
             or i['attempt_ids']!=[1,2,3,4] or i['server_seed']!=identity['server_seed']
@@ -115,7 +130,7 @@ def validate_member(entry, batch, identity, root=ROOT):
     task=Path(c['tasks'][0]['path'])
     if io.tree_hash(task)!=i['actual_task_hash'] or io.tree_hash(task/'tests')!=row['native_tests_sha256']:
         raise ValueError('Relocated task or native verifier changed')
-    asset(row['image_asset'],required())
+    asset(i['image_identity']['asset_id'],required())
     return m,c,{}
 
 
@@ -178,6 +193,14 @@ def model_command(directory,manifest,root=ROOT):
         if p.stat().st_size!=item['size']:raise ValueError('Model size differs: '+item['path'])
         actual=io.file_hash(p) if 'sha256' in item else hashlib.sha1(f'blob {p.stat().st_size}\0'.encode()+p.read_bytes()).hexdigest()
         if actual!=item.get('sha256',item.get('git_blob_sha1')):raise ValueError('Model content differs: '+item['path'])
+    inference_python=Path(s['vllm_executable']).with_name('python')
+    probe='import importlib.metadata as m,json,platform,sys;print(json.dumps({"python":sys.version,"machine":platform.machine(),"packages":{n:m.version(n) for n in ("vllm","torch","torchaudio","torchvision")}}))'
+    versions=json.loads(subprocess.run([str(inference_python),'-c',probe],check=True,capture_output=True,text=True,timeout=60).stdout)
+    expected={'vllm':'0.19.0','torch':'2.10.0+cu128','torchaudio':'2.10.0+cu128','torchvision':'0.25.0+cu128'}
+    if versions['packages']!=expected:raise ValueError('Actual inference package versions differ')
+    from platform_support import PLATFORMS,platform_name
+    if versions['machine']!=PLATFORMS[platform_name(s)]:raise ValueError('Inference runtime architecture differs')
+    io.write_json(directory/'inference-runtime.json',versions)
     command=[s['vllm_executable'],'serve',str(snapshot),'--served-model-name',spec['served_model_name'],*spec['server_args'],
         '--override-generation-config',json.dumps(spec['generation_defaults']),'--seed',str(manifest['identity']['server_seed'])]
     io.write_json(directory/'server-command.json',{'argv':command,'model_inventory':io.evidence_ref(ROOT/'release/model-files.json',ROOT),
@@ -186,13 +209,15 @@ def model_command(directory,manifest,root=ROOT):
 
 
 def prepare(batch_id,output):
-    settings=required();runtime=runtime_check(settings);template=next(b for b in io.read_json(ROOT/'release/batches.json')['batches'] if b['id']==batch_id)
+    settings=required()
+    from platform_support import check_host, image_identity, code_identity
+    check_host(settings);runtime=runtime_check(settings);code=code_identity(ROOT);template=next(b for b in io.read_json(ROOT/'release/batches.json')['batches'] if b['id']==batch_id)
     output=Path(output).resolve()
     if output.exists():raise ValueError('Use a new output directory')
     output.mkdir(parents=True)
     refs=[];planned=[];rows=task_index()
     for key in template['task_keys']:
-        row=rows[key];source=asset(row['task_asset'],settings);image=asset(row['image_asset'],settings)
+        row=rows[key];source=asset(row['task_asset'],settings);image_id=image_identity(row,settings,ROOT);image=asset(image_id['asset_id'],settings)
         run=output/'members'/key;run.mkdir(parents=True);task=run/'task';shutil.copytree(source,task,symlinks=True)
         before=(task/'task.toml').read_text()
         after,n=re.subn(r'(?m)^docker_image\s*=\s*.*$', 'docker_image = '+json.dumps(str(image)),before)
@@ -201,7 +226,7 @@ def prepare(batch_id,output):
         config=config_for(row['config_template'],run,task,settings)
         from harbor.models.job.config import JobConfig
         JobConfig.model_validate(config)
-        identity={'task_key':key,'task_version':row['task_version'],'config':config,'attempt_ids':[1,2,3,4],
+        identity={'code_identity':code,'image_identity':image_id,'qualified_review_asset':row['qualified_review_asset'],'task_key':key,'task_version':row['task_version'],'config':config,'attempt_ids':[1,2,3,4],
             'shared_model_batch':str(output),'server_seed':template['server_seed'],'runtime_patch':runtime,
             'qwen_installation':qwen_installation_identity(config),
             'canonical_task_hash':row['task_tree_sha256'],'actual_task_hash':io.tree_hash(task),

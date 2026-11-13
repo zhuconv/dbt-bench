@@ -1,0 +1,19 @@
+# Copy to local.toml (gitignored), or set DBT_BENCH_LOCAL_CONFIG.
+# Only execution coordinates belong here; no generation/scoring overrides.
+# Architecture: linux-arm64 (Vista) or linux-amd64 (x86 H100).
+platform = "linux-amd64"
+allocation = "YOUR_ALLOCATION"
+partition = "YOUR_GPU_PARTITION"
+slurm_gres = "gpu:1" # Or gpu:h100:1, as required by your Slurm cluster.
+storage_root = "${SCRATCH}/dbt-bench-storage"
+artifact_root = "${STORAGE_ROOT}/artifacts"
+cache_root = "${STORAGE_ROOT}/cache"
+asset_map = "${STORAGE_ROOT}/local-assets.json"
+runtime_python = "${STORAGE_ROOT}/runtime/timeout-v2/venv/bin/python"
+vllm_executable = "${REPO_ROOT}/inference/x86_64/.venv/bin/vllm"
+model_snapshot = "${STORAGE_ROOT}/models/qwen3.6-35b-a3b"
+qwen_bundle = "${STORAGE_ROOT}/qwen-runtime-x64/bundle.json"
+apptainer_bin = "/usr/local/bin"
+cuda_home = "/usr/local/cuda-12.8"
+cc = "/usr/bin/gcc"
+cxx = "/usr/bin/g++"

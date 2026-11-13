@@ -56,3 +56,7 @@ The fixed upstream task snapshots in `sources.lock.yaml` can be retrieved with `
 The public model stays at the fixed HF revision in `inference/qwen3.6-35b-a3b.json`; `scripts/prefetch_smoke_model.py` and `release/model-files.json` verify it. Model weights are not part of this upload plan. The download does not send model requests.
 
 Task solutions/gold/tests are public upstream materials but must stay outside the agent-visible workspace during evaluation. Do not mount a complete task archive into the agent. Images, task archives and qualification records contain historical build paths. They were published unchanged on purpose: a sanitized copy would be a new artifact, never a silent replacement of the original hashes.
+
+## amd64 reconstruction
+
+`images/` provides a shared Docker base recipe and architecture-independent task layer. Base manifests for amd64 and arm64 come from the same pinned upstream index. See [image build inputs and CPU smoke](../images/README.md). amd64 image URIs/digests remain unset until the owner builds and publishes them; the runner rejects unregistered images. Original ARM SIFs are still needed as read-only sources of initial databases/setup snapshots absent from the task archives. Qwen x64 is reconstructed locally with `scripts/build_qwen_platform.py`, never downloaded from our registry.

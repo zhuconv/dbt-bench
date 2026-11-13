@@ -1,0 +1,9 @@
+{
+  "after_sha256": "ea5b2e1d4cca12dde0133c809cb661112b1b539880ba77b8b6fa6c8a8081d2cd",
+  "after_text": "or manifest.get(\"platform\") not in {\"linux-arm64\", \"linux-x64\"}",
+  "before_sha256": "434b6be964ab72ac7d1b95d60520bab48ef9af4bc9248d82a24809080b8e213d",
+  "before_text": "or manifest.get(\"platform\") != \"linux-arm64\"",
+  "id": "harbor-025-qwen-platform-v1",
+  "path": "agents/installed/qwen_code.py",
+  "scope": "Accept linux-x64 manifest in the same native locked installation path; target installer enforces host architecture. No timeout/agent behavior changes."
+}

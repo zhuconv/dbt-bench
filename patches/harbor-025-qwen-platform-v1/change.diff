@@ -1,0 +1,11 @@
+--- a/agents/installed/qwen_code.py
++++ b/agents/installed/qwen_code.py
+@@ -198,7 +198,7 @@
+         manifest = json.loads(manifest_bytes)
+         if (manifest.get("schema_version") != 1
+                 or manifest.get("kind") != "dbt-bench-qwen-bundle-v1"
+-                or manifest.get("platform") != "linux-arm64"
++                or manifest.get("platform") not in {"linux-arm64", "linux-x64"}
+                 or manifest.get("qwen_version") != self._version):
+             raise ValueError("Locked Qwen manifest/version/platform mismatch")
+         paths = {}

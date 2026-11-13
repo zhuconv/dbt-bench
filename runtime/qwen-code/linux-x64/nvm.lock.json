@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "version": "0.40.2",
+  "revision": "ffec9fec724da725013d5b50e763908113983fc3",
+  "files": [
+    {
+      "path": "nvm.sh",
+      "url": "https://raw.githubusercontent.com/nvm-sh/nvm/ffec9fec724da725013d5b50e763908113983fc3/nvm.sh",
+      "sha256": "9290aec6cc2efc89273e16a77214eb37303caaff8c943102de5116fdef47ba86",
+      "mode": "0644"
+    },
+    {
+      "path": "nvm-exec",
+      "url": "https://raw.githubusercontent.com/nvm-sh/nvm/ffec9fec724da725013d5b50e763908113983fc3/nvm-exec",
+      "sha256": "e6b7a2bafac6994e1ba14282cff82c75476fba0788f68a9ecf558dfdf3331621",
+      "mode": "0755"
+    },
+    {
+      "path": "bash_completion",
+      "url": "https://raw.githubusercontent.com/nvm-sh/nvm/ffec9fec724da725013d5b50e763908113983fc3/bash_completion",
+      "sha256": "b7eb3bf03d59b61e451957b020640aa55fe8bf47fb39d85d244e259f445d2fbe",
+      "mode": "0644"
+    },
+    {
+      "path": "LICENSE.md",
+      "url": "https://raw.githubusercontent.com/nvm-sh/nvm/ffec9fec724da725013d5b50e763908113983fc3/LICENSE.md",
+      "sha256": "681a12d1a1367b5890be9bc71a70466633d28fd32397be9b72d69d9bfb243492",
+      "mode": "0644"
+    }
+  ],
+  "scope": "Exact native-observed nvm.sh; fixed revision support files. No NVM installer/network resolution runs inside the task."
+}

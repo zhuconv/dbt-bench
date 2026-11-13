@@ -43,3 +43,7 @@ For the older general task preparation entry point, pass `prepare config --qwen-
 The npm libc metadata repair is already included in the committed lock and does not run a new version resolution during replay. Generated `.bin` links and npm's hidden lock metadata are omitted only from the package-layout comparison; the assembled runtime's full inventory, executable permissions and symlink targets are checked exactly. No blanket package-file or archive-hash exemption is introduced.
 
 The installer verifies before installation, refuses a changed destination, and retains the reviewed Apptainer EXDEV fallback. Reconstruction and CLI version checks send no model requests. New local manifest/execution hashes remain distinct from historical ones, while identical payloads receive the same installation-content ID. This is supporting evidence for a future controlled cross-account import, not automatic permission to merge results or count duplicate attempt slots. Measurement trajectories remain prohibited from training use.
+
+## Linux x64
+
+Use `python scripts/build_qwen_platform.py --cache /data/cache/qwen --output /data/qwen-x64` with Python 3.13. Separate locks in `linux-x64/` preserve Qwen 0.26.5, Node 22.23.4 and npm 10.9.9. The builder checks upstream npm integrity, full file inventory and deterministic archive hash. The native adapter checks target host and CLI versions before any attempt. See [H100 setup](../../docs/h100-worker.md). ARM locks and the original builder remain unchanged.

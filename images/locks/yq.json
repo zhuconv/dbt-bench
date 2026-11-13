@@ -1,0 +1,14 @@
+{
+  "amd64": {
+    "sha256": "8e34fc298390875de416e6a4afcb8cabeceb25d9aa8506c1a2f9353cf702ea5f",
+    "source": "Official pinned release asset downloaded over TLS",
+    "url": "https://github.com/mikefarah/yq/releases/download/v4.54.1/yq_linux_amd64",
+    "version": "v4.54.1"
+  },
+  "arm64": {
+    "sha256": "189088da0c6429ec5178dfaab1a114805f6cab0b61b165ab236efedf1d57a71b",
+    "source": "Official pinned release asset downloaded over TLS",
+    "url": "https://github.com/mikefarah/yq/releases/download/v4.54.1/yq_linux_arm64",
+    "version": "v4.54.1"
+  }
+}

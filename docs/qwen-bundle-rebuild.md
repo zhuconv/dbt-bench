@@ -36,17 +36,16 @@ The CPU test's first wrapper assigned the same `/dev/null` to two npm config rol
 
 ## Can the results be merged?
 
-**Not by assigning the historical execution ID, and not automatically with the current tools.** Local paths, allocation and manifest provenance already create a distinct execution identity. A matching Qwen installation-content ID is one necessary equivalence check, not a complete measurement identity or an audit result. `bench.py inspect` still reports `cross_account_merge_supported=false`.
+The release now supplies `bench.py export` and owner-side `bench.py import` under policy `distributed-import-v1-user-accepted-amd64-arm64`. It preserves original execution IDs and records a separate acceptance receipt. It never merges a result by rewriting its original identity.
 
-The minimal future import layer should add a companion receipt, without editing old manifests/results, and must:
+1. Only summaries committed to the experiment owner's remote main are accepted. Fork/PR working trees are not acceptance. A matching worker claim and the declared batch/task/slot assignment are mandatory.
+2. Raw archives are downloaded and checked for size/SHA256, safe paths and a complete file inventory. Native results, failures, submissions and trace logs remain unchanged. The summary is independently reconstructed from raw slots; it cannot invent a score.
+3. Task version, canonical data/task hash, native tests, qualification binding, model files/revision, native configuration/budgets/retries, full server command and batch seed must match. Normalization is restricted to job/path coordinates and the hash of a verified Qwen manifest. Code files and runtime inventories are checked against the central reviewed release. Coordinate/provenance changes keep distinct execution IDs.
+4. ARM Qwen retains the original full payload locks. x64 has separate explicit Node/npm/NVM, package, archive and full-inventory locks. Native code is selected only through platform-specific reviewed bindings. The 2026-11-12 owner decision accepts architecture equivalence without an empirical cross-architecture study; it does not relax task, model, seed or scoring checks.
+5. Ordered batch members and 4 slots are checked; duplicate IDs/slots or changed publications fail. A byte-identical repeat import checks retained evidence and is idempotent. A new server RNG stream is not claimed to continue the old one bit for bit.
+6. `trials.jsonl` and companion path maps expose local raw trial paths for central extraction/audit. Audit and validity remain pending until the owner evaluates the exact pre-native capture with the qualified checker and adjudicates interruptions. Historical paths are not edited. Missing capture/qualification evidence cannot become a joint success. No imported measurement/trajectory may be used for training.
 
-1. Verify original and imported artifacts, the exact Qwen payload/lock hashes and the fixed Harbor package inventory; do not trust a supplied content ID without verifying its inputs.
-2. Match task version, canonical task/data/image identity, native verifier, qualified audit checker, model revision, sampling/thinking/context settings, attempt budgets and retry policy. Normalize only explicitly allowed deployment paths/account coordinates and the verified bundle manifest provenance.
-3. Match the assigned batch, ordered members, server seed and four planned attempt slots. Preserve independent execution IDs; reject duplicate slot ownership/results instead of selecting a favorable run. A new server RNG stream is not bitwise continuation of an old one.
-4. Audit the exact captured submission, retain native/audit outcomes and external-interruption adjudication, then apply the existing joint-success and four-valid-attempt rules. A bundle equivalence receipt cannot fill missing audit or qualification evidence.
-5. Record the equivalence-policy version and all source execution IDs in the import receipt. Preserve the difficulty-only / no-training restriction.
-
-This change supplies the verified `qwen_installation` companion field in newly prepared member identities. It does not implement or preapprove that importer, alter the split rules, or merge any result. Ownership must be coordinated before another account runs an already assigned batch.
+The original ARM receipt remains `exact_locked_payload_v1`. The x64 bundle's same-platform equivalence also requires full payload equality; matching only npm package versions is insufficient. Code/image identity is sealed during preparation. Legacy pre-export runs without those bindings need an explicit separate owner adapter and are not auto-converted.
 
 ## If an archive hash still differs
 

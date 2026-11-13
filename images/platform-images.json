@@ -1,0 +1,1092 @@
+{
+  "architecture_policy": "User accepts amd64/arm64 equivalence without cross-architecture validation; 2026-11-12",
+  "images": [
+    {
+      "asset_id": "image-amd64-3e23d16ac0456b2d618f4131c0146ed9030019e943190202dfee30123faf5efc",
+      "base_group": "10f8a81179d1d7e8",
+      "canonical_asset": "image-3e23d16ac0456b2d618f4131c0146ed9030019e943190202dfee30123faf5efc",
+      "initial_snapshot": {
+        "download_bytes": 320212992,
+        "download_sha256": "3e23d16ac0456b2d618f4131c0146ed9030019e943190202dfee30123faf5efc",
+        "filename": "image-3e23d16ac0456b2d618f4131c0146ed9030019e943190202dfee30123faf5efc.sif",
+        "hold_resolutions": {
+          "component_notice_and_corresponding_source_review": "third_party",
+          "dataset_provenance_review": "third_party",
+          "embedded_build_coordinates_review": "embedded_paths"
+        },
+        "publication_holds": [],
+        "registry_manifest_digest": "sha256:cdd7b5018bde9d4988d632496d3eda192394de88712fc7ca7b9a3250f799f083",
+        "status": "published",
+        "tag": "v1-linux-arm64-3e23d16ac0456b2d618f4131c0146ed9030019e943190202dfee30123faf5efc",
+        "transport": "oras",
+        "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-3e23d16ac0456b2d618f4131c0146ed9030019e943190202dfee30123faf5efc"
+      },
+      "native_initializer": "images/locks/3e23d16ac0456b2d618f4131c0146ed9030019e943190202dfee30123faf5efc-initialize.sh",
+      "oci_digest": null,
+      "platform": "linux-amd64",
+      "sif_sha256": null,
+      "source": "ade",
+      "status": "build_required",
+      "task_keys": [
+        "ade__ade-bench-airbnb005"
+      ],
+      "uri": null,
+      "working_dir": "/app"
+    },
+    {
+      "asset_id": "image-amd64-42d7d63a51a7293b77164e61effb6a2732b483116fccb7e422edc86e0d0d37fa",
+      "base_group": "1c24e2ff3245ae0a",
+      "canonical_asset": "image-42d7d63a51a7293b77164e61effb6a2732b483116fccb7e422edc86e0d0d37fa",
+      "initial_snapshot": {
+        "download_bytes": 237985792,
+        "download_sha256": "42d7d63a51a7293b77164e61effb6a2732b483116fccb7e422edc86e0d0d37fa",
+        "filename": "image-42d7d63a51a7293b77164e61effb6a2732b483116fccb7e422edc86e0d0d37fa.sif",
+        "hold_resolutions": {
+          "component_notice_and_corresponding_source_review": "third_party",
+          "dataset_provenance_review": "third_party",
+          "embedded_build_coordinates_review": "embedded_paths"
+        },
+        "publication_holds": [],
+        "registry_manifest_digest": "sha256:366f68980f1d44dba6f32eaeabc3f5a9009d0db54e843b534b86227b81df7d8e",
+        "status": "published",
+        "tag": "v1-linux-arm64-42d7d63a51a7293b77164e61effb6a2732b483116fccb7e422edc86e0d0d37fa",
+        "transport": "oras",
+        "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-42d7d63a51a7293b77164e61effb6a2732b483116fccb7e422edc86e0d0d37fa"
+      },
+      "native_initializer": "images/locks/42d7d63a51a7293b77164e61effb6a2732b483116fccb7e422edc86e0d0d37fa-initialize.sh",
+      "oci_digest": null,
+      "platform": "linux-amd64",
+      "sif_sha256": null,
+      "source": "ade",
+      "status": "build_required",
+      "task_keys": [
+        "ade__ade-bench-airbnb007"
+      ],
+      "uri": null,
+      "working_dir": "/app"
+    },
+    {
+      "asset_id": "image-amd64-5a996aeed7efc0e024b07224e730dde4bbd8317ef0a42968d997319a10bf45a7",
+      "base_group": "1c24e2ff3245ae0a",
+      "canonical_asset": "image-5a996aeed7efc0e024b07224e730dde4bbd8317ef0a42968d997319a10bf45a7",
+      "initial_snapshot": {
+        "download_bytes": 196530176,
+        "download_sha256": "5a996aeed7efc0e024b07224e730dde4bbd8317ef0a42968d997319a10bf45a7",
+        "filename": "image-5a996aeed7efc0e024b07224e730dde4bbd8317ef0a42968d997319a10bf45a7.sif",
+        "hold_resolutions": {
+          "component_notice_and_corresponding_source_review": "third_party",
+          "dataset_provenance_review": "third_party",
+          "embedded_build_coordinates_review": "embedded_paths"
+        },
+        "publication_holds": [],
+        "registry_manifest_digest": "sha256:76814c83fbb26f09483035b93489adc13b4b1570c990d859bb742e74dbf633fe",
+        "status": "published",
+        "tag": "v1-linux-arm64-5a996aeed7efc0e024b07224e730dde4bbd8317ef0a42968d997319a10bf45a7",
+        "transport": "oras",
+        "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-5a996aeed7efc0e024b07224e730dde4bbd8317ef0a42968d997319a10bf45a7"
+      },
+      "native_initializer": "images/locks/5a996aeed7efc0e024b07224e730dde4bbd8317ef0a42968d997319a10bf45a7-initialize.sh",
+      "oci_digest": null,
+      "platform": "linux-amd64",
+      "sif_sha256": null,
+      "source": "ade",
+      "status": "build_required",
+      "task_keys": [
+        "ade__ade-bench-ana-eng003"
+      ],
+      "uri": null,
+      "working_dir": "/app"
+    },
+    {
+      "asset_id": "image-amd64-ed545cfe3c0ed6e53808db3c07759341b0b5f25f751173033d21578ef726330e",
+      "base_group": "1c24e2ff3245ae0a",
+      "canonical_asset": "image-ed545cfe3c0ed6e53808db3c07759341b0b5f25f751173033d21578ef726330e",
+      "initial_snapshot": {
+        "download_bytes": 196616192,
+        "download_sha256": "ed545cfe3c0ed6e53808db3c07759341b0b5f25f751173033d21578ef726330e",
+        "filename": "image-ed545cfe3c0ed6e53808db3c07759341b0b5f25f751173033d21578ef726330e.sif",
+        "hold_resolutions": {
+          "component_notice_and_corresponding_source_review": "third_party",
+          "dataset_provenance_review": "third_party",
+          "embedded_build_coordinates_review": "embedded_paths"
+        },
+        "publication_holds": [],
+        "registry_manifest_digest": "sha256:e143d453d05265d1afb2724b034d986377ebc48771eeca05b0f0e8bfbd99edfe",
+        "status": "published",
+        "tag": "v1-linux-arm64-ed545cfe3c0ed6e53808db3c07759341b0b5f25f751173033d21578ef726330e",
+        "transport": "oras",
+        "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-ed545cfe3c0ed6e53808db3c07759341b0b5f25f751173033d21578ef726330e"
+      },
+      "native_initializer": "images/locks/ed545cfe3c0ed6e53808db3c07759341b0b5f25f751173033d21578ef726330e-initialize.sh",
+      "oci_digest": null,
+      "platform": "linux-amd64",
+      "sif_sha256": null,
+      "source": "ade",
+      "status": "build_required",
+      "task_keys": [
+        "ade__ade-bench-ana-eng004"
+      ],
+      "uri": null,
+      "working_dir": "/app"
+    },
+    {
+      "asset_id": "image-amd64-4bff1adede909e8d8b3dee3d8ccd06ece66984ddde1d4da5bbae3e87eedd34e0",
+      "base_group": "1c24e2ff3245ae0a",
+      "canonical_asset": "image-4bff1adede909e8d8b3dee3d8ccd06ece66984ddde1d4da5bbae3e87eedd34e0",
+      "initial_snapshot": {
+        "download_bytes": 196624384,
+        "download_sha256": "4bff1adede909e8d8b3dee3d8ccd06ece66984ddde1d4da5bbae3e87eedd34e0",
+        "filename": "image-4bff1adede909e8d8b3dee3d8ccd06ece66984ddde1d4da5bbae3e87eedd34e0.sif",
+        "hold_resolutions": {
+          "component_notice_and_corresponding_source_review": "third_party",
+          "dataset_provenance_review": "third_party",
+          "embedded_build_coordinates_review": "embedded_paths"
+        },
+        "publication_holds": [],
+        "registry_manifest_digest": "sha256:10b17aed0e1b746a205a1f13b1a6047d370cf078282c79db8e7c7c225734b299",
+        "status": "published",
+        "tag": "v1-linux-arm64-4bff1adede909e8d8b3dee3d8ccd06ece66984ddde1d4da5bbae3e87eedd34e0",
+        "transport": "oras",
+        "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-4bff1adede909e8d8b3dee3d8ccd06ece66984ddde1d4da5bbae3e87eedd34e0"
+      },
+      "native_initializer": "images/locks/4bff1adede909e8d8b3dee3d8ccd06ece66984ddde1d4da5bbae3e87eedd34e0-initialize.sh",
+      "oci_digest": null,
+      "platform": "linux-amd64",
+      "sif_sha256": null,
+      "source": "ade",
+      "status": "build_required",
+      "task_keys": [
+        "ade__ade-bench-ana-eng005"
+      ],
+      "uri": null,
+      "working_dir": "/app"
+    },
+    {
+      "asset_id": "image-amd64-3d2b6f9cce89028222fcda9040da2d0ebd608d4bb39e4d5323b4ee7785acc68c",
+      "base_group": "1c24e2ff3245ae0a",
+      "canonical_asset": "image-3d2b6f9cce89028222fcda9040da2d0ebd608d4bb39e4d5323b4ee7785acc68c",
+      "initial_snapshot": {
+        "download_bytes": 196591616,
+        "download_sha256": "3d2b6f9cce89028222fcda9040da2d0ebd608d4bb39e4d5323b4ee7785acc68c",
+        "filename": "image-3d2b6f9cce89028222fcda9040da2d0ebd608d4bb39e4d5323b4ee7785acc68c.sif",
+        "hold_resolutions": {
+          "component_notice_and_corresponding_source_review": "third_party",
+          "dataset_provenance_review": "third_party",
+          "embedded_build_coordinates_review": "embedded_paths"
+        },
+        "publication_holds": [],
+        "registry_manifest_digest": "sha256:8d2c5d4d1c8937afeadf1cdab36f032e085436e944318a1efc988facc4893fc0",
+        "status": "published",
+        "tag": "v1-linux-arm64-3d2b6f9cce89028222fcda9040da2d0ebd608d4bb39e4d5323b4ee7785acc68c",
+        "transport": "oras",
+        "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-3d2b6f9cce89028222fcda9040da2d0ebd608d4bb39e4d5323b4ee7785acc68c"
+      },
+      "native_initializer": "images/locks/3d2b6f9cce89028222fcda9040da2d0ebd608d4bb39e4d5323b4ee7785acc68c-initialize.sh",
+      "oci_digest": null,
+      "platform": "linux-amd64",
+      "sif_sha256": null,
+      "source": "ade",
+      "status": "build_required",
+      "task_keys": [
+        "ade__ade-bench-ana-eng006"
+      ],
+      "uri": null,
+      "working_dir": "/app"
+    },
+    {
+      "asset_id": "image-amd64-674da519863ff4d1941529e9cee5eecb2ee12f7c926b39a2bc49f46a882cc7af",
+      "base_group": "1c24e2ff3245ae0a",
+      "canonical_asset": "image-674da519863ff4d1941529e9cee5eecb2ee12f7c926b39a2bc49f46a882cc7af",
+      "initial_snapshot": {
+        "download_bytes": 199983104,
+        "download_sha256": "674da519863ff4d1941529e9cee5eecb2ee12f7c926b39a2bc49f46a882cc7af",
+        "filename": "image-674da519863ff4d1941529e9cee5eecb2ee12f7c926b39a2bc49f46a882cc7af.sif",
+        "hold_resolutions": {
+          "component_notice_and_corresponding_source_review": "third_party",
+          "dataset_provenance_review": "third_party",
+          "embedded_build_coordinates_review": "embedded_paths"
+        },
+        "publication_holds": [],
+        "registry_manifest_digest": "sha256:5d0f6bb3f259007be537922fe637ee2847b5615ebd35a4e3c4148b2b6f129f10",
+        "status": "published",
+        "tag": "v1-linux-arm64-674da519863ff4d1941529e9cee5eecb2ee12f7c926b39a2bc49f46a882cc7af",
+        "transport": "oras",
+        "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-674da519863ff4d1941529e9cee5eecb2ee12f7c926b39a2bc49f46a882cc7af"
+      },
+      "native_initializer": "images/locks/674da519863ff4d1941529e9cee5eecb2ee12f7c926b39a2bc49f46a882cc7af-initialize.sh",
+      "oci_digest": null,
+      "platform": "linux-amd64",
+      "sif_sha256": null,
+      "source": "ade",
+      "status": "build_required",
+      "task_keys": [
+        "ade__ade-bench-f1003"
+      ],
+      "uri": null,
+      "working_dir": "/app"
+    },
+    {
+      "asset_id": "image-amd64-c5485eddd674a9bc424627f23eb99f3854f1608094988b1ebbd2c749eec1cb7c",
+      "base_group": "1c24e2ff3245ae0a",
+      "canonical_asset": "image-c5485eddd674a9bc424627f23eb99f3854f1608094988b1ebbd2c749eec1cb7c",
+      "initial_snapshot": {
+        "download_bytes": 199983104,
+        "download_sha256": "c5485eddd674a9bc424627f23eb99f3854f1608094988b1ebbd2c749eec1cb7c",
+        "filename": "image-c5485eddd674a9bc424627f23eb99f3854f1608094988b1ebbd2c749eec1cb7c.sif",
+        "hold_resolutions": {
+          "component_notice_and_corresponding_source_review": "third_party",
+          "dataset_provenance_review": "third_party",
+          "embedded_build_coordinates_review": "embedded_paths"
+        },
+        "publication_holds": [],
+        "registry_manifest_digest": "sha256:7b285330dc745e136377fbe4e31b343cff94eb368ccade3696edcd7917d77514",
+        "status": "published",
+        "tag": "v1-linux-arm64-c5485eddd674a9bc424627f23eb99f3854f1608094988b1ebbd2c749eec1cb7c",
+        "transport": "oras",
+        "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-c5485eddd674a9bc424627f23eb99f3854f1608094988b1ebbd2c749eec1cb7c"
+      },
+      "native_initializer": "images/locks/c5485eddd674a9bc424627f23eb99f3854f1608094988b1ebbd2c749eec1cb7c-initialize.sh",
+      "oci_digest": null,
+      "platform": "linux-amd64",
+      "sif_sha256": null,
+      "source": "ade",
+      "status": "build_required",
+      "task_keys": [
+        "ade__ade-bench-f1003-hard"
+      ],
+      "uri": null,
+      "working_dir": "/app"
+    },
+    {
+      "asset_id": "image-amd64-ce47a9e6ed2defaac646b2bbb002d0eaf3fc3d8873a8342187d8b9fd4e521fd0",
+      "base_group": "1c24e2ff3245ae0a",
+      "canonical_asset": "image-ce47a9e6ed2defaac646b2bbb002d0eaf3fc3d8873a8342187d8b9fd4e521fd0",
+      "initial_snapshot": {
+        "download_bytes": 204173312,
+        "download_sha256": "ce47a9e6ed2defaac646b2bbb002d0eaf3fc3d8873a8342187d8b9fd4e521fd0",
+        "filename": "image-ce47a9e6ed2defaac646b2bbb002d0eaf3fc3d8873a8342187d8b9fd4e521fd0.sif",
+        "hold_resolutions": {
+          "component_notice_and_corresponding_source_review": "third_party",
+          "dataset_provenance_review": "third_party",
+          "embedded_build_coordinates_review": "embedded_paths"
+        },
+        "publication_holds": [],
+        "registry_manifest_digest": "sha256:e34dec5a9ccb964e9263e9c8c8d0f5e5e018306c86f80691ffe08276b5ba2b33",
+        "status": "published",
+        "tag": "v1-linux-arm64-ce47a9e6ed2defaac646b2bbb002d0eaf3fc3d8873a8342187d8b9fd4e521fd0",
+        "transport": "oras",
+        "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-ce47a9e6ed2defaac646b2bbb002d0eaf3fc3d8873a8342187d8b9fd4e521fd0"
+      },
+      "native_initializer": "images/locks/ce47a9e6ed2defaac646b2bbb002d0eaf3fc3d8873a8342187d8b9fd4e521fd0-initialize.sh",
+      "oci_digest": null,
+      "platform": "linux-amd64",
+      "sif_sha256": null,
+      "source": "ade",
+      "status": "build_required",
+      "task_keys": [
+        "ade__ade-bench-f1009"
+      ],
+      "uri": null,
+      "working_dir": "/app"
+    },
+    {
+      "asset_id": "image-amd64-41c1f547462abe50f1149b412045e0bf5d96e8e3bfacfe5b775dc258e261c7ea",
+      "base_group": "1c24e2ff3245ae0a",
+      "canonical_asset": "image-41c1f547462abe50f1149b412045e0bf5d96e8e3bfacfe5b775dc258e261c7ea",
+      "initial_snapshot": {
+        "download_bytes": 204169216,
+        "download_sha256": "41c1f547462abe50f1149b412045e0bf5d96e8e3bfacfe5b775dc258e261c7ea",
+        "filename": "image-41c1f547462abe50f1149b412045e0bf5d96e8e3bfacfe5b775dc258e261c7ea.sif",
+        "hold_resolutions": {
+          "component_notice_and_corresponding_source_review": "third_party",
+          "dataset_provenance_review": "third_party",
+          "embedded_build_coordinates_review": "embedded_paths"
+        },
+        "publication_holds": [],
+        "registry_manifest_digest": "sha256:de5ddc64435a6f1471d63810a421efa9356d964efe85b4ba9e40ed1519ce194c",
+        "status": "published",
+        "tag": "v1-linux-arm64-41c1f547462abe50f1149b412045e0bf5d96e8e3bfacfe5b775dc258e261c7ea",
+        "transport": "oras",
+        "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-41c1f547462abe50f1149b412045e0bf5d96e8e3bfacfe5b775dc258e261c7ea"
+      },
+      "native_initializer": "images/locks/41c1f547462abe50f1149b412045e0bf5d96e8e3bfacfe5b775dc258e261c7ea-initialize.sh",
+      "oci_digest": null,
+      "platform": "linux-amd64",
+      "sif_sha256": null,
+      "source": "ade",
+      "status": "build_required",
+      "task_keys": [
+        "ade__ade-bench-f1010"
+      ],
+      "uri": null,
+      "working_dir": "/app"
+    },
+    {
+      "asset_id": "image-amd64-c26a3cab660b455cd95f446cea80c8c866faa64c58fefdd12b3f6ec3dc405769",
+      "base_group": "1c24e2ff3245ae0a",
+      "canonical_asset": "image-c26a3cab660b455cd95f446cea80c8c866faa64c58fefdd12b3f6ec3dc405769",
+      "initial_snapshot": {
+        "download_bytes": 204140544,
+        "download_sha256": "c26a3cab660b455cd95f446cea80c8c866faa64c58fefdd12b3f6ec3dc405769",
+        "filename": "image-c26a3cab660b455cd95f446cea80c8c866faa64c58fefdd12b3f6ec3dc405769.sif",
+        "hold_resolutions": {
+          "component_notice_and_corresponding_source_review": "third_party",
+          "dataset_provenance_review": "third_party",
+          "embedded_build_coordinates_review": "embedded_paths"
+        },
+        "publication_holds": [],
+        "registry_manifest_digest": "sha256:87ac13ad4d7117445760ebd332ad30147b962ee831d1b2c802dd150acccac9f6",
+        "status": "published",
+        "tag": "v1-linux-arm64-c26a3cab660b455cd95f446cea80c8c866faa64c58fefdd12b3f6ec3dc405769",
+        "transport": "oras",
+        "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-c26a3cab660b455cd95f446cea80c8c866faa64c58fefdd12b3f6ec3dc405769"
+      },
+      "native_initializer": "images/locks/c26a3cab660b455cd95f446cea80c8c866faa64c58fefdd12b3f6ec3dc405769-initialize.sh",
+      "oci_digest": null,
+      "platform": "linux-amd64",
+      "sif_sha256": null,
+      "source": "ade",
+      "status": "build_required",
+      "task_keys": [
+        "ade__ade-bench-f1010-medium"
+      ],
+      "uri": null,
+      "working_dir": "/app"
+    },
+    {
+      "asset_id": "image-amd64-4b63c74af2f2816318325d37558bd5934bd71988816d1fbc6c15e48ee39bc0a1",
+      "base_group": "1c24e2ff3245ae0a",
+      "canonical_asset": "image-4b63c74af2f2816318325d37558bd5934bd71988816d1fbc6c15e48ee39bc0a1",
+      "initial_snapshot": {
+        "download_bytes": 204132352,
+        "download_sha256": "4b63c74af2f2816318325d37558bd5934bd71988816d1fbc6c15e48ee39bc0a1",
+        "filename": "image-4b63c74af2f2816318325d37558bd5934bd71988816d1fbc6c15e48ee39bc0a1.sif",
+        "hold_resolutions": {
+          "component_notice_and_corresponding_source_review": "third_party",
+          "dataset_provenance_review": "third_party",
+          "embedded_build_coordinates_review": "embedded_paths"
+        },
+        "publication_holds": [],
+        "registry_manifest_digest": "sha256:a7a64d296fe1fd1e9eed738e35b7797ce5fe9f6f6b39e2292a1672967cb8db05",
+        "status": "published",
+        "tag": "v1-linux-arm64-4b63c74af2f2816318325d37558bd5934bd71988816d1fbc6c15e48ee39bc0a1",
+        "transport": "oras",
+        "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-4b63c74af2f2816318325d37558bd5934bd71988816d1fbc6c15e48ee39bc0a1"
+      },
+      "native_initializer": "images/locks/4b63c74af2f2816318325d37558bd5934bd71988816d1fbc6c15e48ee39bc0a1-initialize.sh",
+      "oci_digest": null,
+      "platform": "linux-amd64",
+      "sif_sha256": null,
+      "source": "ade",
+      "status": "build_required",
+      "task_keys": [
+        "ade__ade-bench-f1011"
+      ],
+      "uri": null,
+      "working_dir": "/app"
+    },
+    {
+      "asset_id": "image-amd64-7dd21401d98cb1ecb758d4510cf0430116dbca24d9a9b77d6e898f746ddb054d",
+      "base_group": "1c24e2ff3245ae0a",
+      "canonical_asset": "image-7dd21401d98cb1ecb758d4510cf0430116dbca24d9a9b77d6e898f746ddb054d",
+      "initial_snapshot": {
+        "download_bytes": 196767744,
+        "download_sha256": "7dd21401d98cb1ecb758d4510cf0430116dbca24d9a9b77d6e898f746ddb054d",
+        "filename": "image-7dd21401d98cb1ecb758d4510cf0430116dbca24d9a9b77d6e898f746ddb054d.sif",
+        "hold_resolutions": {
+          "component_notice_and_corresponding_source_review": "third_party",
+          "dataset_provenance_review": "third_party",
+          "embedded_build_coordinates_review": "embedded_paths"
+        },
+        "publication_holds": [],
+        "registry_manifest_digest": "sha256:2d57174baceac8101ebaf73c1ecd23656ea043c345a05677aac9e1ec88b52f9c",
+        "status": "published",
+        "tag": "v1-linux-arm64-7dd21401d98cb1ecb758d4510cf0430116dbca24d9a9b77d6e898f746ddb054d",
+        "transport": "oras",
+        "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-7dd21401d98cb1ecb758d4510cf0430116dbca24d9a9b77d6e898f746ddb054d"
+      },
+      "native_initializer": "images/locks/7dd21401d98cb1ecb758d4510cf0430116dbca24d9a9b77d6e898f746ddb054d-initialize.sh",
+      "oci_digest": null,
+      "platform": "linux-amd64",
+      "sif_sha256": null,
+      "source": "ade",
+      "status": "build_required",
+      "task_keys": [
+        "ade__ade-bench-intercom001"
+      ],
+      "uri": null,
+      "working_dir": "/app"
+    },
+    {
+      "asset_id": "image-amd64-3b3737a8352f18cc1655f8656918c71e50f5271a99d4b6daef3b827ab975c713",
+      "base_group": "1c24e2ff3245ae0a",
+      "canonical_asset": "image-3b3737a8352f18cc1655f8656918c71e50f5271a99d4b6daef3b827ab975c713",
+      "initial_snapshot": {
+        "download_bytes": 196767744,
+        "download_sha256": "3b3737a8352f18cc1655f8656918c71e50f5271a99d4b6daef3b827ab975c713",
+        "filename": "image-3b3737a8352f18cc1655f8656918c71e50f5271a99d4b6daef3b827ab975c713.sif",
+        "hold_resolutions": {
+          "component_notice_and_corresponding_source_review": "third_party",
+          "dataset_provenance_review": "third_party",
+          "embedded_build_coordinates_review": "embedded_paths"
+        },
+        "publication_holds": [],
+        "registry_manifest_digest": "sha256:184bc18af3b191d1f5099746567a06f2f37990b8608b86999957c110fce1389e",
+        "status": "published",
+        "tag": "v1-linux-arm64-3b3737a8352f18cc1655f8656918c71e50f5271a99d4b6daef3b827ab975c713",
+        "transport": "oras",
+        "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-3b3737a8352f18cc1655f8656918c71e50f5271a99d4b6daef3b827ab975c713"
+      },
+      "native_initializer": "images/locks/3b3737a8352f18cc1655f8656918c71e50f5271a99d4b6daef3b827ab975c713-initialize.sh",
+      "oci_digest": null,
+      "platform": "linux-amd64",
+      "sif_sha256": null,
+      "source": "ade",
+      "status": "build_required",
+      "task_keys": [
+        "ade__ade-bench-intercom002"
+      ],
+      "uri": null,
+      "working_dir": "/app"
+    },
+    {
+      "asset_id": "image-amd64-724a26e1d5e58d1aada9913bf4c6418355d0b693752e8f31a7de6941e0bed513",
+      "base_group": "1c24e2ff3245ae0a",
+      "canonical_asset": "image-724a26e1d5e58d1aada9913bf4c6418355d0b693752e8f31a7de6941e0bed513",
+      "initial_snapshot": {
+        "download_bytes": 196767744,
+        "download_sha256": "724a26e1d5e58d1aada9913bf4c6418355d0b693752e8f31a7de6941e0bed513",
+        "filename": "image-724a26e1d5e58d1aada9913bf4c6418355d0b693752e8f31a7de6941e0bed513.sif",
+        "hold_resolutions": {
+          "component_notice_and_corresponding_source_review": "third_party",
+          "dataset_provenance_review": "third_party",
+          "embedded_build_coordinates_review": "embedded_paths"
+        },
+        "publication_holds": [],
+        "registry_manifest_digest": "sha256:69ab4a99b08c40a32fb55fd69f18b13e0eac79256f98e50d56e82cdc5c99c8ab",
+        "status": "published",
+        "tag": "v1-linux-arm64-724a26e1d5e58d1aada9913bf4c6418355d0b693752e8f31a7de6941e0bed513",
+        "transport": "oras",
+        "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-724a26e1d5e58d1aada9913bf4c6418355d0b693752e8f31a7de6941e0bed513"
+      },
+      "native_initializer": "images/locks/724a26e1d5e58d1aada9913bf4c6418355d0b693752e8f31a7de6941e0bed513-initialize.sh",
+      "oci_digest": null,
+      "platform": "linux-amd64",
+      "sif_sha256": null,
+      "source": "ade",
+      "status": "build_required",
+      "task_keys": [
+        "ade__ade-bench-intercom003"
+      ],
+      "uri": null,
+      "working_dir": "/app"
+    },
+    {
+      "asset_id": "image-amd64-f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c",
+      "base_group": "3cc1f2d02e92eb04",
+      "canonical_asset": "image-f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c",
+      "initial_snapshot": {
+        "download_bytes": 355258368,
+        "download_sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c",
+        "filename": "image-f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c.sif",
+        "hold_resolutions": {
+          "component_notice_and_corresponding_source_review": "third_party"
+        },
+        "publication_holds": [],
+        "registry_manifest_digest": "sha256:777ef3292afc782e5400141408e1c75b5f6622c3f6e1f13934c8ff9769a2c0e9",
+        "status": "published",
+        "tag": "v1-linux-arm64-f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c",
+        "transport": "oras",
+        "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      },
+      "native_initializer": "images/locks/f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c-initialize.sh",
+      "oci_digest": null,
+      "platform": "linux-amd64",
+      "sif_sha256": null,
+      "source": "deb",
+      "status": "build_required",
+      "task_keys": [
+        "deb__dbt-calculate-running-balance",
+        "deb__dbt-coupon-effectiveness",
+        "deb__dbt-customer-churn-cohorts",
+        "deb__dbt-customer-churn-early-warning",
+        "deb__dbt-customer-cltv-forecasting",
+        "deb__dbt-customer-geographic",
+        "deb__dbt-customer-lifetime-value",
+        "deb__dbt-customer-ltv-fix",
+        "deb__dbt-customer-order-analytics",
+        "deb__dbt-customer-risk-scoring",
+        "deb__dbt-daily-order-summary",
+        "deb__dbt-exchange-rate-settlement-date",
+        "deb__dbt-fix-cac-payback-waterfall",
+        "deb__dbt-fix-email-attribution",
+        "deb__dbt-fix-multi-touch-attribution",
+        "deb__dbt-fix-repeat-purchase-cohort-revenue",
+        "deb__dbt-fraud-detection-model",
+        "deb__dbt-fulfillment-sla",
+        "deb__dbt-harbor-warehouse-capacity",
+        "deb__dbt-inventory-analysis",
+        "deb__dbt-inventory-stockout-risk",
+        "deb__dbt-loyalty-points-analysis",
+        "deb__dbt-order-reconciliation",
+        "deb__dbt-price-elasticity",
+        "deb__dbt-product-category-analytics",
+        "deb__dbt-retail-task-01-channel-revenue",
+        "deb__dbt-retail-task-04-market-roi",
+        "deb__dbt-rfm-customer-segmentation",
+        "deb__dbt-rfm-customer-segmentation-2",
+        "deb__dbt-sales-funnel-analysis",
+        "deb__dbt-supplier-payment-optimization",
+        "deb__dbt-supplier-scorecard",
+        "deb__dbt-three-way-matching",
+        "deb__dbt-web-session-analytics",
+        "deb__dbt-weekly-sales-growth"
+      ],
+      "uri": null,
+      "working_dir": "/app"
+    },
+    {
+      "asset_id": "image-amd64-294bc8f0712f4c715c464f7842852ffadf1662ccb0e12f1b4c4d643f32ec9f48",
+      "base_group": "24652c4986ded03b",
+      "canonical_asset": "image-294bc8f0712f4c715c464f7842852ffadf1662ccb0e12f1b4c4d643f32ec9f48",
+      "initial_snapshot": {
+        "download_bytes": 355540992,
+        "download_sha256": "294bc8f0712f4c715c464f7842852ffadf1662ccb0e12f1b4c4d643f32ec9f48",
+        "filename": "image-294bc8f0712f4c715c464f7842852ffadf1662ccb0e12f1b4c4d643f32ec9f48.sif",
+        "hold_resolutions": {
+          "component_notice_and_corresponding_source_review": "third_party"
+        },
+        "publication_holds": [],
+        "registry_manifest_digest": "sha256:f594cc8df05caa8bab5217fb926f105bb06b000959897e3e65fbaa3487ef32aa",
+        "status": "published",
+        "tag": "v1-linux-arm64-294bc8f0712f4c715c464f7842852ffadf1662ccb0e12f1b4c4d643f32ec9f48",
+        "transport": "oras",
+        "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-294bc8f0712f4c715c464f7842852ffadf1662ccb0e12f1b4c4d643f32ec9f48"
+      },
+      "native_initializer": "images/locks/294bc8f0712f4c715c464f7842852ffadf1662ccb0e12f1b4c4d643f32ec9f48-initialize.sh",
+      "oci_digest": null,
+      "platform": "linux-amd64",
+      "sif_sha256": null,
+      "source": "deb",
+      "status": "build_required",
+      "task_keys": [
+        "deb__dbt-session-attribution"
+      ],
+      "uri": null,
+      "working_dir": "/app"
+    },
+    {
+      "asset_id": "image-amd64-39f48a4c5f4cd8f8e7235d415e9459a49ca201e91b33e3b1a0a3eaee1485e15b",
+      "base_group": "a9c9b7d2ef4cfb6a",
+      "canonical_asset": "image-39f48a4c5f4cd8f8e7235d415e9459a49ca201e91b33e3b1a0a3eaee1485e15b",
+      "initial_snapshot": {
+        "download_bytes": 205193216,
+        "download_sha256": "39f48a4c5f4cd8f8e7235d415e9459a49ca201e91b33e3b1a0a3eaee1485e15b",
+        "filename": "image-39f48a4c5f4cd8f8e7235d415e9459a49ca201e91b33e3b1a0a3eaee1485e15b.sif",
+        "hold_resolutions": {
+          "component_notice_and_corresponding_source_review": "third_party",
+          "dataset_provenance_review": "third_party",
+          "embedded_build_coordinates_review": "embedded_paths"
+        },
+        "publication_holds": [],
+        "registry_manifest_digest": "sha256:3611d260e924a858c2c7758e8060d033514fc405b42ecba78cc4ba2f44392c27",
+        "status": "published",
+        "tag": "v1-linux-arm64-39f48a4c5f4cd8f8e7235d415e9459a49ca201e91b33e3b1a0a3eaee1485e15b",
+        "transport": "oras",
+        "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-39f48a4c5f4cd8f8e7235d415e9459a49ca201e91b33e3b1a0a3eaee1485e15b"
+      },
+      "native_initializer": "images/locks/39f48a4c5f4cd8f8e7235d415e9459a49ca201e91b33e3b1a0a3eaee1485e15b-initialize.sh",
+      "oci_digest": null,
+      "platform": "linux-amd64",
+      "sif_sha256": null,
+      "source": "spider2",
+      "status": "build_required",
+      "task_keys": [
+        "spider2__app_reporting001"
+      ],
+      "uri": null,
+      "working_dir": "/workspace"
+    },
+    {
+      "asset_id": "image-amd64-8323ed9479cf457c33415f8289c30cb868eda60d8264fb4356df2c3b00ee85a9",
+      "base_group": "a9c9b7d2ef4cfb6a",
+      "canonical_asset": "image-8323ed9479cf457c33415f8289c30cb868eda60d8264fb4356df2c3b00ee85a9",
+      "initial_snapshot": {
+        "download_bytes": 205193216,
+        "download_sha256": "8323ed9479cf457c33415f8289c30cb868eda60d8264fb4356df2c3b00ee85a9",
+        "filename": "image-8323ed9479cf457c33415f8289c30cb868eda60d8264fb4356df2c3b00ee85a9.sif",
+        "hold_resolutions": {
+          "component_notice_and_corresponding_source_review": "third_party",
+          "dataset_provenance_review": "third_party",
+          "embedded_build_coordinates_review": "embedded_paths"
+        },
+        "publication_holds": [],
+        "registry_manifest_digest": "sha256:cd7e8235381d7495906f62da723057b0dbcdd21add203c3739a1eb8825f088ae",
+        "status": "published",
+        "tag": "v1-linux-arm64-8323ed9479cf457c33415f8289c30cb868eda60d8264fb4356df2c3b00ee85a9",
+        "transport": "oras",
+        "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-8323ed9479cf457c33415f8289c30cb868eda60d8264fb4356df2c3b00ee85a9"
+      },
+      "native_initializer": "images/locks/8323ed9479cf457c33415f8289c30cb868eda60d8264fb4356df2c3b00ee85a9-initialize.sh",
+      "oci_digest": null,
+      "platform": "linux-amd64",
+      "sif_sha256": null,
+      "source": "spider2",
+      "status": "build_required",
+      "task_keys": [
+        "spider2__app_reporting002"
+      ],
+      "uri": null,
+      "working_dir": "/workspace"
+    },
+    {
+      "asset_id": "image-amd64-4c0789ae41ddd1b8b87bbea9e555fd5fec8df8d7bf4adf9f83733b80bf38945d",
+      "base_group": "a9c9b7d2ef4cfb6a",
+      "canonical_asset": "image-4c0789ae41ddd1b8b87bbea9e555fd5fec8df8d7bf4adf9f83733b80bf38945d",
+      "initial_snapshot": {
+        "download_bytes": 204726272,
+        "download_sha256": "4c0789ae41ddd1b8b87bbea9e555fd5fec8df8d7bf4adf9f83733b80bf38945d",
+        "filename": "image-4c0789ae41ddd1b8b87bbea9e555fd5fec8df8d7bf4adf9f83733b80bf38945d.sif",
+        "hold_resolutions": {
+          "component_notice_and_corresponding_source_review": "third_party",
+          "dataset_provenance_review": "third_party",
+          "embedded_build_coordinates_review": "embedded_paths"
+        },
+        "publication_holds": [],
+        "registry_manifest_digest": "sha256:0f7561f0f4c25074672c1946750f23c62fb632259cfbf0d79caf54914c173f29",
+        "status": "published",
+        "tag": "v1-linux-arm64-4c0789ae41ddd1b8b87bbea9e555fd5fec8df8d7bf4adf9f83733b80bf38945d",
+        "transport": "oras",
+        "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-4c0789ae41ddd1b8b87bbea9e555fd5fec8df8d7bf4adf9f83733b80bf38945d"
+      },
+      "native_initializer": "images/locks/4c0789ae41ddd1b8b87bbea9e555fd5fec8df8d7bf4adf9f83733b80bf38945d-initialize.sh",
+      "oci_digest": null,
+      "platform": "linux-amd64",
+      "sif_sha256": null,
+      "source": "spider2",
+      "status": "build_required",
+      "task_keys": [
+        "spider2__apple_store001"
+      ],
+      "uri": null,
+      "working_dir": "/workspace"
+    },
+    {
+      "asset_id": "image-amd64-e24702c7d0299838af168cc3c1e312b88703e2259d0c6b5da318b6c786a9029c",
+      "base_group": "a9c9b7d2ef4cfb6a",
+      "canonical_asset": "image-e24702c7d0299838af168cc3c1e312b88703e2259d0c6b5da318b6c786a9029c",
+      "initial_snapshot": {
+        "download_bytes": 219480064,
+        "download_sha256": "e24702c7d0299838af168cc3c1e312b88703e2259d0c6b5da318b6c786a9029c",
+        "filename": "image-e24702c7d0299838af168cc3c1e312b88703e2259d0c6b5da318b6c786a9029c.sif",
+        "hold_resolutions": {
+          "component_notice_and_corresponding_source_review": "third_party",
+          "dataset_provenance_review": "third_party",
+          "embedded_build_coordinates_review": "embedded_paths"
+        },
+        "publication_holds": [],
+        "registry_manifest_digest": "sha256:33bd0a17b1c16888611be07cf3260bc65fb5bad2d0904eb0d7c3114cefe105ae",
+        "status": "published",
+        "tag": "v1-linux-arm64-e24702c7d0299838af168cc3c1e312b88703e2259d0c6b5da318b6c786a9029c",
+        "transport": "oras",
+        "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-e24702c7d0299838af168cc3c1e312b88703e2259d0c6b5da318b6c786a9029c"
+      },
+      "native_initializer": "images/locks/e24702c7d0299838af168cc3c1e312b88703e2259d0c6b5da318b6c786a9029c-initialize.sh",
+      "oci_digest": null,
+      "platform": "linux-amd64",
+      "sif_sha256": null,
+      "source": "spider2",
+      "status": "build_required",
+      "task_keys": [
+        "spider2__asset001"
+      ],
+      "uri": null,
+      "working_dir": "/workspace"
+    },
+    {
+      "asset_id": "image-amd64-75cdde48037e9c93512b08c9974c1aad6d5ea6a620d81a428dc8cb5abe69af69",
+      "base_group": "a9c9b7d2ef4cfb6a",
+      "canonical_asset": "image-75cdde48037e9c93512b08c9974c1aad6d5ea6a620d81a428dc8cb5abe69af69",
+      "initial_snapshot": {
+        "download_bytes": 204738560,
+        "download_sha256": "75cdde48037e9c93512b08c9974c1aad6d5ea6a620d81a428dc8cb5abe69af69",
+        "filename": "image-75cdde48037e9c93512b08c9974c1aad6d5ea6a620d81a428dc8cb5abe69af69.sif",
+        "hold_resolutions": {
+          "component_notice_and_corresponding_source_review": "third_party",
+          "dataset_provenance_review": "third_party",
+          "embedded_build_coordinates_review": "embedded_paths"
+        },
+        "publication_holds": [],
+        "registry_manifest_digest": "sha256:582d742507bd13e87414d80f2ff914956d07b898de3b85f043f475cc9178404d",
+        "status": "published",
+        "tag": "v1-linux-arm64-75cdde48037e9c93512b08c9974c1aad6d5ea6a620d81a428dc8cb5abe69af69",
+        "transport": "oras",
+        "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-75cdde48037e9c93512b08c9974c1aad6d5ea6a620d81a428dc8cb5abe69af69"
+      },
+      "native_initializer": "images/locks/75cdde48037e9c93512b08c9974c1aad6d5ea6a620d81a428dc8cb5abe69af69-initialize.sh",
+      "oci_digest": null,
+      "platform": "linux-amd64",
+      "sif_sha256": null,
+      "source": "spider2",
+      "status": "build_required",
+      "task_keys": [
+        "spider2__google_play001"
+      ],
+      "uri": null,
+      "working_dir": "/workspace"
+    },
+    {
+      "asset_id": "image-amd64-0aa0b9e80c8f90832ec0924f7f0bd26b7759434181ac00712f8d5a3a13ec5246",
+      "base_group": "a9c9b7d2ef4cfb6a",
+      "canonical_asset": "image-0aa0b9e80c8f90832ec0924f7f0bd26b7759434181ac00712f8d5a3a13ec5246",
+      "initial_snapshot": {
+        "download_bytes": 203968512,
+        "download_sha256": "0aa0b9e80c8f90832ec0924f7f0bd26b7759434181ac00712f8d5a3a13ec5246",
+        "filename": "image-0aa0b9e80c8f90832ec0924f7f0bd26b7759434181ac00712f8d5a3a13ec5246.sif",
+        "hold_resolutions": {
+          "component_notice_and_corresponding_source_review": "third_party",
+          "dataset_provenance_review": "third_party",
+          "embedded_build_coordinates_review": "embedded_paths"
+        },
+        "publication_holds": [],
+        "registry_manifest_digest": "sha256:f3f74f3d0b0677d9b2cb9fc21f187443d374c2c29110d32a868e117cbd253021",
+        "status": "published",
+        "tag": "v1-linux-arm64-0aa0b9e80c8f90832ec0924f7f0bd26b7759434181ac00712f8d5a3a13ec5246",
+        "transport": "oras",
+        "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-0aa0b9e80c8f90832ec0924f7f0bd26b7759434181ac00712f8d5a3a13ec5246"
+      },
+      "native_initializer": "images/locks/0aa0b9e80c8f90832ec0924f7f0bd26b7759434181ac00712f8d5a3a13ec5246-initialize.sh",
+      "oci_digest": null,
+      "platform": "linux-amd64",
+      "sif_sha256": null,
+      "source": "spider2",
+      "status": "build_required",
+      "task_keys": [
+        "spider2__hive001"
+      ],
+      "uri": null,
+      "working_dir": "/workspace"
+    },
+    {
+      "asset_id": "image-amd64-993a5ee369464ac3bee72f1b718a4f3c89c1604eee0ec49d33c6613662e78103",
+      "base_group": "a9c9b7d2ef4cfb6a",
+      "canonical_asset": "image-993a5ee369464ac3bee72f1b718a4f3c89c1604eee0ec49d33c6613662e78103",
+      "initial_snapshot": {
+        "download_bytes": 204623872,
+        "download_sha256": "993a5ee369464ac3bee72f1b718a4f3c89c1604eee0ec49d33c6613662e78103",
+        "filename": "image-993a5ee369464ac3bee72f1b718a4f3c89c1604eee0ec49d33c6613662e78103.sif",
+        "hold_resolutions": {
+          "component_notice_and_corresponding_source_review": "third_party",
+          "dataset_provenance_review": "third_party",
+          "embedded_build_coordinates_review": "embedded_paths"
+        },
+        "publication_holds": [],
+        "registry_manifest_digest": "sha256:b49b25e97a1e06a1701528de0611d95cfbacccd98ad0014ba6f829567e90fef7",
+        "status": "published",
+        "tag": "v1-linux-arm64-993a5ee369464ac3bee72f1b718a4f3c89c1604eee0ec49d33c6613662e78103",
+        "transport": "oras",
+        "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-993a5ee369464ac3bee72f1b718a4f3c89c1604eee0ec49d33c6613662e78103"
+      },
+      "native_initializer": "images/locks/993a5ee369464ac3bee72f1b718a4f3c89c1604eee0ec49d33c6613662e78103-initialize.sh",
+      "oci_digest": null,
+      "platform": "linux-amd64",
+      "sif_sha256": null,
+      "source": "spider2",
+      "status": "build_required",
+      "task_keys": [
+        "spider2__intercom001"
+      ],
+      "uri": null,
+      "working_dir": "/workspace"
+    },
+    {
+      "asset_id": "image-amd64-f3d992b881041b0f30d03b9061c237ebcaa57f592df8a9d9c53522dbd33e4473",
+      "base_group": "a9c9b7d2ef4cfb6a",
+      "canonical_asset": "image-f3d992b881041b0f30d03b9061c237ebcaa57f592df8a9d9c53522dbd33e4473",
+      "initial_snapshot": {
+        "download_bytes": 204652544,
+        "download_sha256": "f3d992b881041b0f30d03b9061c237ebcaa57f592df8a9d9c53522dbd33e4473",
+        "filename": "image-f3d992b881041b0f30d03b9061c237ebcaa57f592df8a9d9c53522dbd33e4473.sif",
+        "hold_resolutions": {
+          "component_notice_and_corresponding_source_review": "third_party",
+          "dataset_provenance_review": "third_party",
+          "embedded_build_coordinates_review": "embedded_paths"
+        },
+        "publication_holds": [],
+        "registry_manifest_digest": "sha256:b1a59bc7e9586013d9a21dbb25cd2a3d27efdc115c34c2d61d22d82f7d0551cc",
+        "status": "published",
+        "tag": "v1-linux-arm64-f3d992b881041b0f30d03b9061c237ebcaa57f592df8a9d9c53522dbd33e4473",
+        "transport": "oras",
+        "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-f3d992b881041b0f30d03b9061c237ebcaa57f592df8a9d9c53522dbd33e4473"
+      },
+      "native_initializer": "images/locks/f3d992b881041b0f30d03b9061c237ebcaa57f592df8a9d9c53522dbd33e4473-initialize.sh",
+      "oci_digest": null,
+      "platform": "linux-amd64",
+      "sif_sha256": null,
+      "source": "spider2",
+      "status": "build_required",
+      "task_keys": [
+        "spider2__jira001"
+      ],
+      "uri": null,
+      "working_dir": "/workspace"
+    },
+    {
+      "asset_id": "image-amd64-b76376cf74a0d69ad73dbb9977d1077d30e469fb466088a06a7dab94d7c03053",
+      "base_group": "a9c9b7d2ef4cfb6a",
+      "canonical_asset": "image-b76376cf74a0d69ad73dbb9977d1077d30e469fb466088a06a7dab94d7c03053",
+      "initial_snapshot": {
+        "download_bytes": 204718080,
+        "download_sha256": "b76376cf74a0d69ad73dbb9977d1077d30e469fb466088a06a7dab94d7c03053",
+        "filename": "image-b76376cf74a0d69ad73dbb9977d1077d30e469fb466088a06a7dab94d7c03053.sif",
+        "hold_resolutions": {
+          "component_notice_and_corresponding_source_review": "third_party",
+          "dataset_provenance_review": "third_party",
+          "embedded_build_coordinates_review": "embedded_paths"
+        },
+        "publication_holds": [],
+        "registry_manifest_digest": "sha256:5409814dd9c90549ab51540cb1eaca19cbdd0c4ffe50108038a874c825ec886a",
+        "status": "published",
+        "tag": "v1-linux-arm64-b76376cf74a0d69ad73dbb9977d1077d30e469fb466088a06a7dab94d7c03053",
+        "transport": "oras",
+        "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-b76376cf74a0d69ad73dbb9977d1077d30e469fb466088a06a7dab94d7c03053"
+      },
+      "native_initializer": "images/locks/b76376cf74a0d69ad73dbb9977d1077d30e469fb466088a06a7dab94d7c03053-initialize.sh",
+      "oci_digest": null,
+      "platform": "linux-amd64",
+      "sif_sha256": null,
+      "source": "spider2",
+      "status": "build_required",
+      "task_keys": [
+        "spider2__lever001"
+      ],
+      "uri": null,
+      "working_dir": "/workspace"
+    },
+    {
+      "asset_id": "image-amd64-1329f8fe64254776ab90625302c9fb1f81eb1b4b38b803e064ffdda901cba0a4",
+      "base_group": "a9c9b7d2ef4cfb6a",
+      "canonical_asset": "image-1329f8fe64254776ab90625302c9fb1f81eb1b4b38b803e064ffdda901cba0a4",
+      "initial_snapshot": {
+        "download_bytes": 210817024,
+        "download_sha256": "1329f8fe64254776ab90625302c9fb1f81eb1b4b38b803e064ffdda901cba0a4",
+        "filename": "image-1329f8fe64254776ab90625302c9fb1f81eb1b4b38b803e064ffdda901cba0a4.sif",
+        "hold_resolutions": {
+          "component_notice_and_corresponding_source_review": "third_party",
+          "dataset_provenance_review": "third_party",
+          "embedded_build_coordinates_review": "embedded_paths"
+        },
+        "publication_holds": [],
+        "registry_manifest_digest": "sha256:542b2db0367293e7cc69c29bffe868e03cbbd6115a215ab3df6784d67bec770c",
+        "status": "published",
+        "tag": "v1-linux-arm64-1329f8fe64254776ab90625302c9fb1f81eb1b4b38b803e064ffdda901cba0a4",
+        "transport": "oras",
+        "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-1329f8fe64254776ab90625302c9fb1f81eb1b4b38b803e064ffdda901cba0a4"
+      },
+      "native_initializer": "images/locks/1329f8fe64254776ab90625302c9fb1f81eb1b4b38b803e064ffdda901cba0a4-initialize.sh",
+      "oci_digest": null,
+      "platform": "linux-amd64",
+      "sif_sha256": null,
+      "source": "spider2",
+      "status": "build_required",
+      "task_keys": [
+        "spider2__marketo001"
+      ],
+      "uri": null,
+      "working_dir": "/workspace"
+    },
+    {
+      "asset_id": "image-amd64-c6379b521ffc262e4598b154887ed5d3565dd4251efff7a55ac169eff482c427",
+      "base_group": "a9c9b7d2ef4cfb6a",
+      "canonical_asset": "image-c6379b521ffc262e4598b154887ed5d3565dd4251efff7a55ac169eff482c427",
+      "initial_snapshot": {
+        "download_bytes": 204005376,
+        "download_sha256": "c6379b521ffc262e4598b154887ed5d3565dd4251efff7a55ac169eff482c427",
+        "filename": "image-c6379b521ffc262e4598b154887ed5d3565dd4251efff7a55ac169eff482c427.sif",
+        "hold_resolutions": {
+          "component_notice_and_corresponding_source_review": "third_party",
+          "dataset_provenance_review": "third_party",
+          "embedded_build_coordinates_review": "embedded_paths"
+        },
+        "publication_holds": [],
+        "registry_manifest_digest": "sha256:dd4befb88fad34adf00e7dea9b866f6691a6c3e6964f2265ab620c0fb3e82d39",
+        "status": "published",
+        "tag": "v1-linux-arm64-c6379b521ffc262e4598b154887ed5d3565dd4251efff7a55ac169eff482c427",
+        "transport": "oras",
+        "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-c6379b521ffc262e4598b154887ed5d3565dd4251efff7a55ac169eff482c427"
+      },
+      "native_initializer": "images/locks/c6379b521ffc262e4598b154887ed5d3565dd4251efff7a55ac169eff482c427-initialize.sh",
+      "oci_digest": null,
+      "platform": "linux-amd64",
+      "sif_sha256": null,
+      "source": "spider2",
+      "status": "build_required",
+      "task_keys": [
+        "spider2__maturity001"
+      ],
+      "uri": null,
+      "working_dir": "/workspace"
+    },
+    {
+      "asset_id": "image-amd64-a6cfdac52d5144073556202979189f5ba4e3f27e9cf411b5da1c6170272ac514",
+      "base_group": "a9c9b7d2ef4cfb6a",
+      "canonical_asset": "image-a6cfdac52d5144073556202979189f5ba4e3f27e9cf411b5da1c6170272ac514",
+      "initial_snapshot": {
+        "download_bytes": 204750848,
+        "download_sha256": "a6cfdac52d5144073556202979189f5ba4e3f27e9cf411b5da1c6170272ac514",
+        "filename": "image-a6cfdac52d5144073556202979189f5ba4e3f27e9cf411b5da1c6170272ac514.sif",
+        "hold_resolutions": {
+          "component_notice_and_corresponding_source_review": "third_party",
+          "dataset_provenance_review": "third_party",
+          "embedded_build_coordinates_review": "embedded_paths"
+        },
+        "publication_holds": [],
+        "registry_manifest_digest": "sha256:3ad29a613317e8f541fdb0ebe679653ffea2546f6f6879cc81bcb34b4b57a9b4",
+        "status": "published",
+        "tag": "v1-linux-arm64-a6cfdac52d5144073556202979189f5ba4e3f27e9cf411b5da1c6170272ac514",
+        "transport": "oras",
+        "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-a6cfdac52d5144073556202979189f5ba4e3f27e9cf411b5da1c6170272ac514"
+      },
+      "native_initializer": "images/locks/a6cfdac52d5144073556202979189f5ba4e3f27e9cf411b5da1c6170272ac514-initialize.sh",
+      "oci_digest": null,
+      "platform": "linux-amd64",
+      "sif_sha256": null,
+      "source": "spider2",
+      "status": "build_required",
+      "task_keys": [
+        "spider2__recharge002"
+      ],
+      "uri": null,
+      "working_dir": "/workspace"
+    },
+    {
+      "asset_id": "image-amd64-53d5916ff99de9474ff14c8a62a22ce6e03b620e5961cc84b6ac30779c1401eb",
+      "base_group": "a9c9b7d2ef4cfb6a",
+      "canonical_asset": "image-53d5916ff99de9474ff14c8a62a22ce6e03b620e5961cc84b6ac30779c1401eb",
+      "initial_snapshot": {
+        "download_bytes": 205041664,
+        "download_sha256": "53d5916ff99de9474ff14c8a62a22ce6e03b620e5961cc84b6ac30779c1401eb",
+        "filename": "image-53d5916ff99de9474ff14c8a62a22ce6e03b620e5961cc84b6ac30779c1401eb.sif",
+        "hold_resolutions": {
+          "component_notice_and_corresponding_source_review": "third_party",
+          "dataset_provenance_review": "third_party",
+          "embedded_build_coordinates_review": "embedded_paths"
+        },
+        "publication_holds": [],
+        "registry_manifest_digest": "sha256:7f644b21076ba7e1183c64fc082c234eb0089a127db44b8183b7d7fd93082e08",
+        "status": "published",
+        "tag": "v1-linux-arm64-53d5916ff99de9474ff14c8a62a22ce6e03b620e5961cc84b6ac30779c1401eb",
+        "transport": "oras",
+        "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-53d5916ff99de9474ff14c8a62a22ce6e03b620e5961cc84b6ac30779c1401eb"
+      },
+      "native_initializer": "images/locks/53d5916ff99de9474ff14c8a62a22ce6e03b620e5961cc84b6ac30779c1401eb-initialize.sh",
+      "oci_digest": null,
+      "platform": "linux-amd64",
+      "sif_sha256": null,
+      "source": "spider2",
+      "status": "build_required",
+      "task_keys": [
+        "spider2__shopify002"
+      ],
+      "uri": null,
+      "working_dir": "/workspace"
+    },
+    {
+      "asset_id": "image-amd64-bef6d0589e209aeff83a80bbe920bd12814629d61273bcdc81aa30d3366950f9",
+      "base_group": "a9c9b7d2ef4cfb6a",
+      "canonical_asset": "image-bef6d0589e209aeff83a80bbe920bd12814629d61273bcdc81aa30d3366950f9",
+      "initial_snapshot": {
+        "download_bytes": 211369984,
+        "download_sha256": "bef6d0589e209aeff83a80bbe920bd12814629d61273bcdc81aa30d3366950f9",
+        "filename": "image-bef6d0589e209aeff83a80bbe920bd12814629d61273bcdc81aa30d3366950f9.sif",
+        "hold_resolutions": {
+          "component_notice_and_corresponding_source_review": "third_party",
+          "dataset_provenance_review": "third_party",
+          "embedded_build_coordinates_review": "embedded_paths"
+        },
+        "publication_holds": [],
+        "registry_manifest_digest": "sha256:9ef53676f7e1330128807294c8d2ee81e6ab98d8c08dafec22e78ba0db723b14",
+        "status": "published",
+        "tag": "v1-linux-arm64-bef6d0589e209aeff83a80bbe920bd12814629d61273bcdc81aa30d3366950f9",
+        "transport": "oras",
+        "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-bef6d0589e209aeff83a80bbe920bd12814629d61273bcdc81aa30d3366950f9"
+      },
+      "native_initializer": "images/locks/bef6d0589e209aeff83a80bbe920bd12814629d61273bcdc81aa30d3366950f9-initialize.sh",
+      "oci_digest": null,
+      "platform": "linux-amd64",
+      "sif_sha256": null,
+      "source": "spider2",
+      "status": "build_required",
+      "task_keys": [
+        "spider2__tickit001"
+      ],
+      "uri": null,
+      "working_dir": "/workspace"
+    },
+    {
+      "asset_id": "image-amd64-aa086772f50603e4477133db99c612851a64ec014867213833288317cbe55655",
+      "base_group": "a9c9b7d2ef4cfb6a",
+      "canonical_asset": "image-aa086772f50603e4477133db99c612851a64ec014867213833288317cbe55655",
+      "initial_snapshot": {
+        "download_bytes": 204275712,
+        "download_sha256": "aa086772f50603e4477133db99c612851a64ec014867213833288317cbe55655",
+        "filename": "image-aa086772f50603e4477133db99c612851a64ec014867213833288317cbe55655.sif",
+        "hold_resolutions": {
+          "component_notice_and_corresponding_source_review": "third_party",
+          "dataset_provenance_review": "third_party",
+          "embedded_build_coordinates_review": "embedded_paths"
+        },
+        "publication_holds": [],
+        "registry_manifest_digest": "sha256:e7236e610d34dacbc34610be1f99bc74eb29a7bb9af5d826352d0d4bbc81e0ee",
+        "status": "published",
+        "tag": "v1-linux-arm64-aa086772f50603e4477133db99c612851a64ec014867213833288317cbe55655",
+        "transport": "oras",
+        "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-aa086772f50603e4477133db99c612851a64ec014867213833288317cbe55655"
+      },
+      "native_initializer": "images/locks/aa086772f50603e4477133db99c612851a64ec014867213833288317cbe55655-initialize.sh",
+      "oci_digest": null,
+      "platform": "linux-amd64",
+      "sif_sha256": null,
+      "source": "spider2",
+      "status": "build_required",
+      "task_keys": [
+        "spider2__workday001"
+      ],
+      "uri": null,
+      "working_dir": "/workspace"
+    },
+    {
+      "asset_id": "image-amd64-be26d87ad5011d60573552ae62df7d72a7821b081212e60d732155b10be45549",
+      "base_group": "a9c9b7d2ef4cfb6a",
+      "canonical_asset": "image-be26d87ad5011d60573552ae62df7d72a7821b081212e60d732155b10be45549",
+      "initial_snapshot": {
+        "download_bytes": 204271616,
+        "download_sha256": "be26d87ad5011d60573552ae62df7d72a7821b081212e60d732155b10be45549",
+        "filename": "image-be26d87ad5011d60573552ae62df7d72a7821b081212e60d732155b10be45549.sif",
+        "hold_resolutions": {
+          "component_notice_and_corresponding_source_review": "third_party",
+          "dataset_provenance_review": "third_party",
+          "embedded_build_coordinates_review": "embedded_paths"
+        },
+        "publication_holds": [],
+        "registry_manifest_digest": "sha256:0237495ddbdd345982969e10cc08845c151cc5e042b61b0d9e3a16bf174a57e2",
+        "status": "published",
+        "tag": "v1-linux-arm64-be26d87ad5011d60573552ae62df7d72a7821b081212e60d732155b10be45549",
+        "transport": "oras",
+        "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-be26d87ad5011d60573552ae62df7d72a7821b081212e60d732155b10be45549"
+      },
+      "native_initializer": "images/locks/be26d87ad5011d60573552ae62df7d72a7821b081212e60d732155b10be45549-initialize.sh",
+      "oci_digest": null,
+      "platform": "linux-amd64",
+      "sif_sha256": null,
+      "source": "spider2",
+      "status": "build_required",
+      "task_keys": [
+        "spider2__workday002"
+      ],
+      "uri": null,
+      "working_dir": "/workspace"
+    }
+  ],
+  "schema_version": 1
+}

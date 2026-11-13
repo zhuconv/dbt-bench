@@ -1,0 +1,121 @@
+{
+  "actions": {
+    "GPU_runs": 0,
+    "Slurm_operations": 0,
+    "commits_in_release": 0,
+    "maintained_coordination_files_changed": 0,
+    "model_requests": 0,
+    "registry_pushes": 0
+  },
+  "baseline_commit": "d7b7393b08dc0b7b469768433074209b12873951",
+  "date": "2026-11-12",
+  "evidence": [
+    {
+      "path": "${ARTIFACT_ROOT}/release-distributed-worker/20261112-v1/cpu-tests-v2.log",
+      "sha256": "25291cfe3e18e8b85631bc251cc545c015307e9f94755c57b4e42b2a9e6e0a66"
+    },
+    {
+      "path": "${ARTIFACT_ROOT}/release-distributed-worker/20261112-v1/native-platform-adapter.log",
+      "sha256": "2d142805861c3d23d424d04bebc55be3a3d484ca567c7f838471287c0f42e2bc"
+    },
+    {
+      "path": "${ARTIFACT_ROOT}/release-distributed-worker/20261112-v1/image-context-checks-v2.json",
+      "sha256": "eca0e1bb2f0ae9befe3c8a264643560342a3117608c7ff951385b3253df1f1ab"
+    },
+    {
+      "path": "${ARTIFACT_ROOT}/release-distributed-worker/20261112-v1/actual-native-slot-check.json",
+      "sha256": "5bc7058294eec0eca19d03215f8200c01505d592d4e57fddfa4e51f5d6faace3"
+    }
+  ],
+  "export_import": "implemented; CPU roundtrip, ownership, artifact, native-config and protocol checks exercised",
+  "limitations": [
+    "Portable Slurm plus Apptainer runner; no bare-metal scheduler",
+    "Historical pre-export executions lack new prepared code/image proof and are not silently reassigned a release identity",
+    "Original ARM SIFs supply initial databases/setup snapshots missing from task tarballs"
+  ],
+  "multiarch_images": {
+    "publication": "not_executed",
+    "recipes": 33,
+    "software_groups": 5,
+    "target_build_and_reference_smoke": "not_executed",
+    "three_source_context_checks": [
+      {
+        "passed": true,
+        "result": {
+          "base_group": "10f8a81179d1d7e8",
+          "canonical_image_sha256": "3e23d16ac0456b2d618f4131c0146ed9030019e943190202dfee30123faf5efc",
+          "files_from_task_release": 31,
+          "platform": "linux/amd64",
+          "scope": "Architecture-independent initial payload, exact pinned software recipe; no build/smoke performed",
+          "source_release": "assets-v1-20261112",
+          "task_key": "ade__ade-bench-airbnb005",
+          "task_tree_sha256": "9c75036f4febb7314d475568ddd440c3b965c8aebb44fc4fdb1cb8a20da3587b",
+          "upstream": "docker.io/library/python@sha256:6d10e720318bd84cc3d88af92bb5a47189222e17620a2fd214da6445e4afb679",
+          "working_dir": "/app"
+        },
+        "task": "ade__ade-bench-airbnb005"
+      },
+      {
+        "passed": true,
+        "result": {
+          "base_group": "24652c4986ded03b",
+          "canonical_image_sha256": "294bc8f0712f4c715c464f7842852ffadf1662ccb0e12f1b4c4d643f32ec9f48",
+          "files_from_task_release": 0,
+          "platform": "linux/amd64",
+          "scope": "Architecture-independent initial payload, exact pinned software recipe; no build/smoke performed",
+          "source_release": "assets-v1-20261112",
+          "task_key": "deb__dbt-session-attribution",
+          "task_tree_sha256": "ef234ff0686d1436f779c99a0bbec7181a2b468e954cd4e67d60710134e238d0",
+          "upstream": "ghcr.io/snowflake-labs/data-eng-bench-base@sha256:ef92b6ef197a89ff1d8b371aaf5de19343003abc462991ddeedb1b1005e2e04b",
+          "working_dir": "/app"
+        },
+        "task": "deb__dbt-session-attribution"
+      },
+      {
+        "passed": true,
+        "result": {
+          "base_group": "a9c9b7d2ef4cfb6a",
+          "canonical_image_sha256": "39f48a4c5f4cd8f8e7235d415e9459a49ca201e91b33e3b1a0a3eaee1485e15b",
+          "files_from_task_release": 22,
+          "platform": "linux/amd64",
+          "scope": "Architecture-independent initial payload, exact pinned software recipe; no build/smoke performed",
+          "source_release": "assets-v1-20261112",
+          "task_key": "spider2__app_reporting001",
+          "task_tree_sha256": "843b8d826c8eb5c5e179a7a7f1cdc0ab41c6c8408f4415b569ec2b319a68f9af",
+          "upstream": "docker.io/library/python@sha256:6d10e720318bd84cc3d88af92bb5a47189222e17620a2fd214da6445e4afb679",
+          "working_dir": "/workspace"
+        },
+        "task": "spider2__app_reporting001"
+      }
+    ]
+  },
+  "remaining": [
+    "Owner build and publish amd64 images; register SIF/OCI digests and URIs",
+    "Run the provided amd64 CPU reference smoke",
+    "Execute x64 CLI version checks and unchanged H100 service startup on the target machine",
+    "Real merged worker import and central audit need actual worker archives and the owner qualification evidence; only fixtures were imported here"
+  ],
+  "schema_version": 1,
+  "tests": {
+    "count": 56,
+    "existing_native_trials_parsed": 4,
+    "existing_submission_captures_verified": 4,
+    "native_adapter_recording_environment": "passed",
+    "passed": 55,
+    "skip_reason": "Old helper expects release/runtime/.venv; the new native adapter fixture was separately executed with the existing timeout-fixed runtime",
+    "skipped": 1
+  },
+  "x64_runtime": {
+    "H100_inference_startup": false,
+    "arm_control_matches_original_archive_inventory_installer": true,
+    "independent_x64_assemblies_equal": true,
+    "inventory_entries": 7615,
+    "native_x64_cli_execution": false,
+    "node_version": "22.23.4",
+    "npm_version": "10.9.9",
+    "packages": 17,
+    "qwen_version": "0.26.5",
+    "shared_dependency_version_differences": 0,
+    "vllm": "0.19.0"
+  }
+}

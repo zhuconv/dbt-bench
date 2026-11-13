@@ -1,0 +1,8 @@
+{
+  "name": "dbt-bench-qwen-code-runtime",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {"node": "22.23.4", "npm": "10.9.9"},
+  "packageManager": "npm@10.9.9",
+  "dependencies": {"@qwen-code/qwen-code": "0.26.5"}
+}

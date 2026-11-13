@@ -1,5 +1,7 @@
 # Copy to local.toml (gitignored), or set DBT_BENCH_LOCAL_CONFIG.
 # Only execution coordinates belong here; no generation/scoring overrides.
+# Architecture: linux-arm64 (Vista) or linux-amd64 (x86 H100).
+platform = "linux-arm64"
 allocation = "YOUR_ALLOCATION"
 partition = "gh"
 storage_root = "${SCRATCH}/dbt-bench-storage"

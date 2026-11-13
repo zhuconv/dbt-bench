@@ -21,6 +21,10 @@ def command(batch,test_only=False):
         '--nodes=1','--ntasks=1',f'--time={hours:02}:00:00','--signal=B:TERM@180',
         '--comment=dbt-difficulty-'+m['experiment_id'],'--job-name=dbt-release-'+m['identity']['batch_id'],
         '--output='+str(batch/'slurm-%j.out'),'--error='+str(batch/'slurm-%j.err')]
+    if s.get('slurm_gres'):
+        # Resource coordinate only. Exactly one GPU is prescribed.
+        if not __import__('re').fullmatch(r'gpu(?::[A-Za-z0-9_-]+)?:1',s['slurm_gres']):raise ValueError('Request exactly one GPU in slurm_gres')
+        argv.append('--gres='+s['slurm_gres'])
     if test_only:argv.append('--test-only')
     argv += [str(ROOT/'scripts/slurm/release-batch.sbatch'),str(batch),s['runtime_python'],str(Path(__import__('os').environ.get('DBT_BENCH_LOCAL_CONFIG',ROOT/'configs/local.toml')).resolve())]
     return shlex.join(argv)
@@ -43,7 +47,7 @@ def inspect(batch):
         missing += m['planned'][len(paths):]
     return {'experiment_id':manifest['experiment_id'],'raw_trials':records,'missing_slots':missing,
         'audit_status':'unscored; use qualified checker on the captured same submission; never infer audit from native reward',
-        'training_prohibited':True,'cross_account_merge_supported':False}
+        'training_prohibited':True,'cross_account_merge_supported':True,'import_required':'bench.py import; inspect alone does not accept or audit results'}
 
 
 if __name__=='__main__':
@@ -52,6 +56,8 @@ if __name__=='__main__':
     for name in ('check','sbatch-command','inspect'):
         x=sub.add_parser(name);x.add_argument('--batch',type=Path,required=True)
         if name=='sbatch-command':x.add_argument('--test-only',action='store_true')
+    x=sub.add_parser('export');x.add_argument('--batch',type=Path,required=True);x.add_argument('--task',required=True);x.add_argument('--output',type=Path,required=True)
+    x=sub.add_parser('import');x.add_argument('--ledger',type=Path,required=True);x.add_argument('--output',type=Path,required=True);x.add_argument('--remote',default='upstream')
     a=p.parse_args()
     if a.action=='prepare':
         from release_tools import prepare
@@ -59,5 +65,11 @@ if __name__=='__main__':
     elif a.action=='check':
         from release_tools import validate_batch
         m=validate_batch(a.batch);print(json.dumps({'passed':True,'experiment_id':m['experiment_id'],'model_requests':0}))
+    elif a.action=='export':
+        from result_transfer import export_task
+        print(json.dumps(export_task(a.batch,a.task,a.output),indent=2))
+    elif a.action=='import':
+        from result_transfer import import_ledger
+        print(json.dumps(import_ledger(a.ledger,a.output,a.remote),indent=2))
     elif a.action=='sbatch-command':print(command(a.batch,a.test_only))
     else:print(json.dumps(inspect(a.batch),indent=2))

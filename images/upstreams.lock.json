@@ -1,0 +1,20 @@
+{
+  "deb": {
+    "index_digest": "sha256:29bcb90579ecc8fc0dbb0d658b2a938374ac057ff816c78746520d48ed1edb09",
+    "platforms": {
+      "amd64": "ghcr.io/snowflake-labs/data-eng-bench-base@sha256:ef92b6ef197a89ff1d8b371aaf5de19343003abc462991ddeedb1b1005e2e04b",
+      "arm64": "ghcr.io/snowflake-labs/data-eng-bench-base@sha256:44ba3dcf5690da2752aa8c0874ffe4c73b124ca0b61b8979b93fe2eb4643b5ca"
+    },
+    "tag": "ghcr.io/snowflake-labs/data-eng-bench-base:latest",
+    "tag_scope": "historical tag resolved at source preparation; builds always use the pinned index/platform digests"
+  },
+  "python": {
+    "index_digest": "sha256:db20d8506e2f15b6db39b40b6015ca46bae855dec6dd326d462cfe79ae972893",
+    "platforms": {
+      "amd64": "docker.io/library/python@sha256:6d10e720318bd84cc3d88af92bb5a47189222e17620a2fd214da6445e4afb679",
+      "arm64": "docker.io/library/python@sha256:8f867a1f16776618234a2d0ef41fbb991d0bd0b142c8a95bc37456d8e47104cf"
+    },
+    "tag": "python:3.11-slim",
+    "version": "3.11.18-slim-trixie"
+  }
+}

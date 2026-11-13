@@ -12,6 +12,7 @@ def load(path=None):
     data = tomllib.loads(path.read_text()) if path.is_file() else {}
     data.setdefault('allocation', '')
     data.setdefault('partition', 'gh')
+    data.setdefault('platform', 'linux-arm64')
     defaults = {'repo_root': str(ROOT), 'home': str(Path.home()),
         'scratch_root': os.environ.get('SCRATCH', '/tmp/dbt-bench'),
         'work_root': os.environ.get('WORK', str(ROOT.parent))}

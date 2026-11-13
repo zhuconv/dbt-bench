@@ -1,0 +1,31 @@
+{
+  "evidence": "Cross-assembled from integrity-checked upstream archives; target CLI execution is required by Harbor before each attempt.",
+  "files": {
+    "archive": "3113929917a76f95346ede4826e3cb19e3b7ca6a475e11c59c350fa7b9c9f27d",
+    "installer": "cfe4bf0408762a02fe4df2710956a25a663cf6fac2924963cf78e5e8cb3b1abc",
+    "inventory": "876f5e06132334457050d4a0af9be9625e833e59f00614813f91b901db7eec64"
+  },
+  "kind": "dbt-bench-qwen-bundle-v1",
+  "locks": [
+    {
+      "path": "runtime/qwen-code/linux-x64/package.json",
+      "sha256": "78056dfda647963b7da968741407de04e9923c03fd7924a5f89b4349556cfa65"
+    },
+    {
+      "path": "runtime/qwen-code/linux-x64/package-lock.json",
+      "sha256": "1c328fc1866b7dd4514d5e896f3890456d2a1d4d995a50d7731821c249bb3f39"
+    },
+    {
+      "path": "runtime/qwen-code/linux-x64/node.lock.json",
+      "sha256": "821f5945e8427eb325a68df0ddfe84ff21ab257b3d895f970543dc5d9eff1ca2"
+    },
+    {
+      "path": "runtime/qwen-code/linux-x64/nvm.lock.json",
+      "sha256": "c88f439649b8a62c2c4933231cc1669bfe652c7132b3cef0ac202c7d72374ff8"
+    }
+  ],
+  "node_version": "22.23.4",
+  "npm_version": "10.9.9",
+  "platform": "linux-x64",
+  "qwen_version": "0.26.5"
+}

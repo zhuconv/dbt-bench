@@ -1,0 +1,12 @@
+# syntax=docker/dockerfile:1
+# Select BASE_IMAGE from upstreams.lock.json, never a live tag.
+ARG BASE_IMAGE
+FROM ${BASE_IMAGE}
+ARG TARGETARCH
+ENV DEBIAN_FRONTEND=noninteractive
+COPY locks/ /opt/dbt-bench-build/locks/
+COPY tools/install_base.py /opt/dbt-bench-build/install_base.py
+RUN python3 /opt/dbt-bench-build/install_base.py --arch "${TARGETARCH}"
+# Native initial state is supplied by the architecture-independent task layer.
+RUN rm -rf /app /workspace /scripts /opt/dbt-bench-initial && \
+    mkdir -p /app /workspace /scripts /logs /installed-agent /sage/solutions /seeds /solutions
