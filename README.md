@@ -8,7 +8,7 @@ The original catalog contains **135 tasks**: ADE 16, Spider 55, DEB 64. The curr
 
 ## Supported environment
 
-The tested deployment is TACC Vista GH200, Linux aarch64, Apptainer 1.4.1, Slurm, Harbor 0.25.0 and Qwen Code 0.26.5. The model is Qwen3.6-35B-A3B at the revision in `inference/qwen3.6-35b-a3b.json`; vLLM 0.19.0 and its dependencies are locked separately. Docker remains the benchmark reference backend; the current measurement release uses the reviewed Apptainer images. The owner also accepts H100 Linux x86_64 results as equivalent to ARM64 without a cross-architecture equivalence study. The amd64 build recipes and locks are provided; amd64 images must be built, CPU-smoked and digest-registered before workers can prepare measurements. Other backends remain outside this measurement release.
+The tested deployment is TACC Vista GH200, Linux aarch64, Apptainer 1.4.1, Slurm, Harbor 0.25.0 and Qwen Code 0.26.5. The model is Qwen3.6-35B-A3B at the revision in `inference/qwen3.6-35b-a3b.json`; vLLM 0.19.0 and its dependencies are locked separately. Docker remains the benchmark reference backend; the current measurement release uses the reviewed Apptainer images. The owner also accepts H100 Linux x86_64 results as equivalent to ARM64 without a cross-architecture equivalence study. The amd64 images are built from the same recipes by GitHub Actions, passed a CPU reference smoke, and are registered with their digests in `images/platform-images.json`; no H100 GPU run has been made yet. Other backends remain outside this measurement release.
 
 Run installations, agents, containers and inference on compute nodes. Use login nodes only for short Slurm commands. Obtain your own allocation membership; no project credential is required for the public model or DuckDB warehouse. Optional provider/registry credentials belong in your environment, never this repository.
 
@@ -120,7 +120,7 @@ Import reads committed main blobs, never unmerged worktree JSON. It verifies the
 
 ## amd64 images and H100 workers
 
-See [image recipes](images/README.md) and [H100 setup](docs/h100-worker.md). Both architectures use the same Docker base recipe with architecture-specific digests under a fixed upstream index. The task layer retains the exact initial task data and frozen dependencies. `images/platform-images.json` currently lists amd64 images as `build_required`; preparation fails until the owner records published SIF and registry digests. Do not start the worker loop before that and the target CPU reference smoke are complete.
+See [image recipes](images/README.md) and [H100 setup](docs/h100-worker.md). Both architectures use the same Docker base recipe with architecture-specific digests under a fixed upstream index. The task layer retains the exact initial task data and frozen dependencies. The 33 amd64 images were built by the `build-images` workflow ([run 43359761397](https://github.com/zhuconv/dbt-bench/actions/runs/43359761397), commit `93ce3f1`). Each passed the CPU reference smoke (the task's oracle solution, native verifier reward 1) and a Qwen Code 0.26.5 CLI check inside the image, run with Harbor's container flags. They are on GHCR as `v1-linux-amd64-<SIF SHA256>`, and `images/platform-images.json` records each SIF SHA256 and registry digest. `python scripts/worker.py assets <batch> ...` downloads and verifies the images and task trees of a batch; `worker.py run` does it by itself.
 
 ## CPU regression checks
 

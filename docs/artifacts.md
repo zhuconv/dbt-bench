@@ -4,7 +4,7 @@ The repository contains source, locks, recipes, checker code and small manifests
 
 ## Hosting status
 
-The 33 images are published in `ghcr.io/zhuconv/dbt-bench-images`, one tag per SIF: `v1-linux-arm64-<full SIF SHA256>`. The 67 task archives and the qualification index archive are attachments to the `assets-v1-20261112` GitHub Release. File names, sizes and hashes are in `release/upload-manifest.json`; the review behind the publication is in [asset-publication.md](asset-publication.md). The Qwen Code bundle is not redistributed (see below).
+The 33 images are published in `ghcr.io/zhuconv/dbt-bench-images`, one tag per SIF: `v1-linux-arm64-<full SIF SHA256>`. Their 33 amd64 rebuilds are in the same package as `v1-linux-amd64-<SIF SHA256>` (see "amd64 reconstruction" below). The 67 task archives and the qualification index archive are attachments to the `assets-v1-20261112` GitHub Release. File names, sizes and hashes are in `release/upload-manifest.json`; the review behind the publication is in [asset-publication.md](asset-publication.md). The Qwen Code bundle is not redistributed (see below).
 
 Never substitute a newly resolved image, dbt package or task version for an absent object.
 
@@ -59,4 +59,16 @@ Task solutions/gold/tests are public upstream materials but must stay outside th
 
 ## amd64 reconstruction
 
-`images/` provides a shared Docker base recipe and architecture-independent task layer. Base manifests for amd64 and arm64 come from the same pinned upstream index. See [image build inputs and CPU smoke](../images/README.md). amd64 image URIs/digests remain unset until the owner builds and publishes them; the runner rejects unregistered images. Original ARM SIFs are still needed as read-only sources of initial databases/setup snapshots absent from the task archives. Qwen x64 is reconstructed locally with `scripts/build_qwen_platform.py`, never downloaded from our registry.
+`images/` provides a shared Docker base recipe and architecture-independent task layer. Base manifests for amd64 and arm64 come from the same pinned upstream index. See [image build inputs and CPU smoke](../images/README.md).
+
+The 33 amd64 images were built on 2026-11-12 by the `build-images` GitHub Actions workflow ([run 43359761397](https://github.com/zhuconv/dbt-bench/actions/runs/43359761397)). Each passed the CPU reference smoke and a Qwen Code CLI check inside the image. They are in the same package, tagged `v1-linux-amd64-<SIF SHA256>`. `images/platform-images.json` gives each one's asset ID, SIF SHA256, size, registry digest and build record. A SIF built this way is a new artifact with its own hash, not a byte copy of the arm64 one. To pull one by hand on an amd64 host:
+
+```bash
+tag='<tag from images/platform-images.json>'
+sif_sha256='<its sif_sha256>'
+image_path="$SCRATCH/dbt-bench-assets/image-amd64-${sif_sha256}.sif"
+apptainer pull "$image_path" "oras://ghcr.io/zhuconv/dbt-bench-images:${tag}"
+printf '%s  %s\n' "$sif_sha256" "$image_path" | sha256sum --check --strict
+```
+
+`python scripts/worker.py assets <batch> --asset-map <asset_map> --dest <dir>` does this for every task of a batch, and adds the task trees. Original ARM SIFs are still needed as read-only sources of initial databases/setup snapshots absent from the task archives. Qwen x64 is reconstructed locally with `scripts/build_qwen_platform.py`, never downloaded from our registry.

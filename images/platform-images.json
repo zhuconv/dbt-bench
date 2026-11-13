@@ -4,6 +4,23 @@
     {
       "asset_id": "image-amd64-3e23d16ac0456b2d618f4131c0146ed9030019e943190202dfee30123faf5efc",
       "base_group": "10f8a81179d1d7e8",
+      "build": {
+        "apptainer": "apptainer version 1.4.1",
+        "base_image": "docker.io/library/python@sha256:6d10e720318bd84cc3d88af92bb5a47189222e17620a2fd214da6445e4afb679",
+        "commit": "93ce3f19e72cf7427710727ed8fb75ee8b4427cd",
+        "reference_smoke": {
+          "model_requests": 0,
+          "native_rewards": [
+            {
+              "reward": 1.0
+            }
+          ],
+          "passed": true,
+          "task": "ade__ade-bench-airbnb005"
+        },
+        "workflow_run": "https://github.com/zhuconv/dbt-bench/actions/runs/43359761397"
+      },
+      "bytes": 426319872,
       "canonical_asset": "image-3e23d16ac0456b2d618f4131c0146ed9030019e943190202dfee30123faf5efc",
       "initial_snapshot": {
         "download_bytes": 320212992,
@@ -22,20 +39,38 @@
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-3e23d16ac0456b2d618f4131c0146ed9030019e943190202dfee30123faf5efc"
       },
       "native_initializer": "images/locks/3e23d16ac0456b2d618f4131c0146ed9030019e943190202dfee30123faf5efc-initialize.sh",
-      "oci_digest": null,
+      "oci_digest": "sha256:337176026d32e18a15db1c37a68fde6b9a7db9127c3ea35ac9b007821d140d52",
       "platform": "linux-amd64",
-      "sif_sha256": null,
+      "sif_sha256": "48f02be72a197559142f86c568a71f070ce5ce2a3ce9a096b71d45ca8e2500b9",
       "source": "ade",
-      "status": "build_required",
+      "status": "published",
+      "tag": "v1-linux-amd64-48f02be72a197559142f86c568a71f070ce5ce2a3ce9a096b71d45ca8e2500b9",
       "task_keys": [
         "ade__ade-bench-airbnb005"
       ],
-      "uri": null,
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-amd64-48f02be72a197559142f86c568a71f070ce5ce2a3ce9a096b71d45ca8e2500b9",
       "working_dir": "/app"
     },
     {
       "asset_id": "image-amd64-42d7d63a51a7293b77164e61effb6a2732b483116fccb7e422edc86e0d0d37fa",
       "base_group": "1c24e2ff3245ae0a",
+      "build": {
+        "apptainer": "apptainer version 1.4.1",
+        "base_image": "docker.io/library/python@sha256:6d10e720318bd84cc3d88af92bb5a47189222e17620a2fd214da6445e4afb679",
+        "commit": "93ce3f19e72cf7427710727ed8fb75ee8b4427cd",
+        "reference_smoke": {
+          "model_requests": 0,
+          "native_rewards": [
+            {
+              "reward": 1.0
+            }
+          ],
+          "passed": true,
+          "task": "ade__ade-bench-airbnb007"
+        },
+        "workflow_run": "https://github.com/zhuconv/dbt-bench/actions/runs/43359761397"
+      },
+      "bytes": 342810624,
       "canonical_asset": "image-42d7d63a51a7293b77164e61effb6a2732b483116fccb7e422edc86e0d0d37fa",
       "initial_snapshot": {
         "download_bytes": 237985792,
@@ -54,20 +89,38 @@
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-42d7d63a51a7293b77164e61effb6a2732b483116fccb7e422edc86e0d0d37fa"
       },
       "native_initializer": "images/locks/42d7d63a51a7293b77164e61effb6a2732b483116fccb7e422edc86e0d0d37fa-initialize.sh",
-      "oci_digest": null,
+      "oci_digest": "sha256:8a6e803d8f2dd2cf4f2ecb9238dd3314c5b97a681d9e04b9a39871e5b27bdfe1",
       "platform": "linux-amd64",
-      "sif_sha256": null,
+      "sif_sha256": "f405a13d031f49e26d1a41d8c2dd970e81c3e882623abe69263a3d5bbd777123",
       "source": "ade",
-      "status": "build_required",
+      "status": "published",
+      "tag": "v1-linux-amd64-f405a13d031f49e26d1a41d8c2dd970e81c3e882623abe69263a3d5bbd777123",
       "task_keys": [
         "ade__ade-bench-airbnb007"
       ],
-      "uri": null,
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-amd64-f405a13d031f49e26d1a41d8c2dd970e81c3e882623abe69263a3d5bbd777123",
       "working_dir": "/app"
     },
     {
       "asset_id": "image-amd64-5a996aeed7efc0e024b07224e730dde4bbd8317ef0a42968d997319a10bf45a7",
       "base_group": "1c24e2ff3245ae0a",
+      "build": {
+        "apptainer": "apptainer version 1.4.1",
+        "base_image": "docker.io/library/python@sha256:6d10e720318bd84cc3d88af92bb5a47189222e17620a2fd214da6445e4afb679",
+        "commit": "93ce3f19e72cf7427710727ed8fb75ee8b4427cd",
+        "reference_smoke": {
+          "model_requests": 0,
+          "native_rewards": [
+            {
+              "reward": 1.0
+            }
+          ],
+          "passed": true,
+          "task": "ade__ade-bench-ana-eng003"
+        },
+        "workflow_run": "https://github.com/zhuconv/dbt-bench/actions/runs/43359761397"
+      },
+      "bytes": 301350912,
       "canonical_asset": "image-5a996aeed7efc0e024b07224e730dde4bbd8317ef0a42968d997319a10bf45a7",
       "initial_snapshot": {
         "download_bytes": 196530176,
@@ -86,20 +139,38 @@
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-5a996aeed7efc0e024b07224e730dde4bbd8317ef0a42968d997319a10bf45a7"
       },
       "native_initializer": "images/locks/5a996aeed7efc0e024b07224e730dde4bbd8317ef0a42968d997319a10bf45a7-initialize.sh",
-      "oci_digest": null,
+      "oci_digest": "sha256:ce8f32e5b2d145b40cec0122f863d6045770f77d2a7cea955069996ce7da775b",
       "platform": "linux-amd64",
-      "sif_sha256": null,
+      "sif_sha256": "3b03b3e081269af6076f743744e73f9fa6910e431d06c7300447fa738c5a7100",
       "source": "ade",
-      "status": "build_required",
+      "status": "published",
+      "tag": "v1-linux-amd64-3b03b3e081269af6076f743744e73f9fa6910e431d06c7300447fa738c5a7100",
       "task_keys": [
         "ade__ade-bench-ana-eng003"
       ],
-      "uri": null,
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-amd64-3b03b3e081269af6076f743744e73f9fa6910e431d06c7300447fa738c5a7100",
       "working_dir": "/app"
     },
     {
       "asset_id": "image-amd64-ed545cfe3c0ed6e53808db3c07759341b0b5f25f751173033d21578ef726330e",
       "base_group": "1c24e2ff3245ae0a",
+      "build": {
+        "apptainer": "apptainer version 1.4.1",
+        "base_image": "docker.io/library/python@sha256:6d10e720318bd84cc3d88af92bb5a47189222e17620a2fd214da6445e4afb679",
+        "commit": "93ce3f19e72cf7427710727ed8fb75ee8b4427cd",
+        "reference_smoke": {
+          "model_requests": 0,
+          "native_rewards": [
+            {
+              "reward": 1.0
+            }
+          ],
+          "passed": true,
+          "task": "ade__ade-bench-ana-eng004"
+        },
+        "workflow_run": "https://github.com/zhuconv/dbt-bench/actions/runs/43359761397"
+      },
+      "bytes": 301441024,
       "canonical_asset": "image-ed545cfe3c0ed6e53808db3c07759341b0b5f25f751173033d21578ef726330e",
       "initial_snapshot": {
         "download_bytes": 196616192,
@@ -118,20 +189,38 @@
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-ed545cfe3c0ed6e53808db3c07759341b0b5f25f751173033d21578ef726330e"
       },
       "native_initializer": "images/locks/ed545cfe3c0ed6e53808db3c07759341b0b5f25f751173033d21578ef726330e-initialize.sh",
-      "oci_digest": null,
+      "oci_digest": "sha256:c59896c6f14cff06829749fbddc10870024e32d686eb77e5d8a0f9d4b70fa69e",
       "platform": "linux-amd64",
-      "sif_sha256": null,
+      "sif_sha256": "729acce8596d2addafa134bd40109aebaff4a6ad23add26854b3c6a3f4532357",
       "source": "ade",
-      "status": "build_required",
+      "status": "published",
+      "tag": "v1-linux-amd64-729acce8596d2addafa134bd40109aebaff4a6ad23add26854b3c6a3f4532357",
       "task_keys": [
         "ade__ade-bench-ana-eng004"
       ],
-      "uri": null,
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-amd64-729acce8596d2addafa134bd40109aebaff4a6ad23add26854b3c6a3f4532357",
       "working_dir": "/app"
     },
     {
       "asset_id": "image-amd64-4bff1adede909e8d8b3dee3d8ccd06ece66984ddde1d4da5bbae3e87eedd34e0",
       "base_group": "1c24e2ff3245ae0a",
+      "build": {
+        "apptainer": "apptainer version 1.4.1",
+        "base_image": "docker.io/library/python@sha256:6d10e720318bd84cc3d88af92bb5a47189222e17620a2fd214da6445e4afb679",
+        "commit": "93ce3f19e72cf7427710727ed8fb75ee8b4427cd",
+        "reference_smoke": {
+          "model_requests": 0,
+          "native_rewards": [
+            {
+              "reward": 1.0
+            }
+          ],
+          "passed": true,
+          "task": "ade__ade-bench-ana-eng005"
+        },
+        "workflow_run": "https://github.com/zhuconv/dbt-bench/actions/runs/43359761397"
+      },
+      "bytes": 301449216,
       "canonical_asset": "image-4bff1adede909e8d8b3dee3d8ccd06ece66984ddde1d4da5bbae3e87eedd34e0",
       "initial_snapshot": {
         "download_bytes": 196624384,
@@ -150,20 +239,38 @@
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-4bff1adede909e8d8b3dee3d8ccd06ece66984ddde1d4da5bbae3e87eedd34e0"
       },
       "native_initializer": "images/locks/4bff1adede909e8d8b3dee3d8ccd06ece66984ddde1d4da5bbae3e87eedd34e0-initialize.sh",
-      "oci_digest": null,
+      "oci_digest": "sha256:03cf3234f7b238a151b410340fa0943f712741c72502ceb2865b5c2414027765",
       "platform": "linux-amd64",
-      "sif_sha256": null,
+      "sif_sha256": "f9b7ad87b7dfe95c18be9e959dcd4349772ade68739d018ef0186b0d5ecb21e7",
       "source": "ade",
-      "status": "build_required",
+      "status": "published",
+      "tag": "v1-linux-amd64-f9b7ad87b7dfe95c18be9e959dcd4349772ade68739d018ef0186b0d5ecb21e7",
       "task_keys": [
         "ade__ade-bench-ana-eng005"
       ],
-      "uri": null,
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-amd64-f9b7ad87b7dfe95c18be9e959dcd4349772ade68739d018ef0186b0d5ecb21e7",
       "working_dir": "/app"
     },
     {
       "asset_id": "image-amd64-3d2b6f9cce89028222fcda9040da2d0ebd608d4bb39e4d5323b4ee7785acc68c",
       "base_group": "1c24e2ff3245ae0a",
+      "build": {
+        "apptainer": "apptainer version 1.4.1",
+        "base_image": "docker.io/library/python@sha256:6d10e720318bd84cc3d88af92bb5a47189222e17620a2fd214da6445e4afb679",
+        "commit": "93ce3f19e72cf7427710727ed8fb75ee8b4427cd",
+        "reference_smoke": {
+          "model_requests": 0,
+          "native_rewards": [
+            {
+              "reward": 1.0
+            }
+          ],
+          "passed": true,
+          "task": "ade__ade-bench-ana-eng006"
+        },
+        "workflow_run": "https://github.com/zhuconv/dbt-bench/actions/runs/43359761397"
+      },
+      "bytes": 301416448,
       "canonical_asset": "image-3d2b6f9cce89028222fcda9040da2d0ebd608d4bb39e4d5323b4ee7785acc68c",
       "initial_snapshot": {
         "download_bytes": 196591616,
@@ -182,20 +289,38 @@
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-3d2b6f9cce89028222fcda9040da2d0ebd608d4bb39e4d5323b4ee7785acc68c"
       },
       "native_initializer": "images/locks/3d2b6f9cce89028222fcda9040da2d0ebd608d4bb39e4d5323b4ee7785acc68c-initialize.sh",
-      "oci_digest": null,
+      "oci_digest": "sha256:8566d6b29e3efa61ac2846538833882b40ff231d2e41db62155795a9277fc143",
       "platform": "linux-amd64",
-      "sif_sha256": null,
+      "sif_sha256": "f3749c328ffba025537893541e6f4763d0e6691f81f89e15af6fc35af998ce94",
       "source": "ade",
-      "status": "build_required",
+      "status": "published",
+      "tag": "v1-linux-amd64-f3749c328ffba025537893541e6f4763d0e6691f81f89e15af6fc35af998ce94",
       "task_keys": [
         "ade__ade-bench-ana-eng006"
       ],
-      "uri": null,
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-amd64-f3749c328ffba025537893541e6f4763d0e6691f81f89e15af6fc35af998ce94",
       "working_dir": "/app"
     },
     {
       "asset_id": "image-amd64-674da519863ff4d1941529e9cee5eecb2ee12f7c926b39a2bc49f46a882cc7af",
       "base_group": "1c24e2ff3245ae0a",
+      "build": {
+        "apptainer": "apptainer version 1.4.1",
+        "base_image": "docker.io/library/python@sha256:6d10e720318bd84cc3d88af92bb5a47189222e17620a2fd214da6445e4afb679",
+        "commit": "93ce3f19e72cf7427710727ed8fb75ee8b4427cd",
+        "reference_smoke": {
+          "model_requests": 0,
+          "native_rewards": [
+            {
+              "reward": 1.0
+            }
+          ],
+          "passed": true,
+          "task": "ade__ade-bench-f1003"
+        },
+        "workflow_run": "https://github.com/zhuconv/dbt-bench/actions/runs/43359761397"
+      },
+      "bytes": 304820224,
       "canonical_asset": "image-674da519863ff4d1941529e9cee5eecb2ee12f7c926b39a2bc49f46a882cc7af",
       "initial_snapshot": {
         "download_bytes": 199983104,
@@ -214,20 +339,38 @@
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-674da519863ff4d1941529e9cee5eecb2ee12f7c926b39a2bc49f46a882cc7af"
       },
       "native_initializer": "images/locks/674da519863ff4d1941529e9cee5eecb2ee12f7c926b39a2bc49f46a882cc7af-initialize.sh",
-      "oci_digest": null,
+      "oci_digest": "sha256:f2199cfbd88b2519f44e1d4bf584fe4b1c619590f7797b1800a40047bbd19845",
       "platform": "linux-amd64",
-      "sif_sha256": null,
+      "sif_sha256": "b78356453290293749cb8e4bd074596fa0eb03482e4bc8b01b455959819f4a3a",
       "source": "ade",
-      "status": "build_required",
+      "status": "published",
+      "tag": "v1-linux-amd64-b78356453290293749cb8e4bd074596fa0eb03482e4bc8b01b455959819f4a3a",
       "task_keys": [
         "ade__ade-bench-f1003"
       ],
-      "uri": null,
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-amd64-b78356453290293749cb8e4bd074596fa0eb03482e4bc8b01b455959819f4a3a",
       "working_dir": "/app"
     },
     {
       "asset_id": "image-amd64-c5485eddd674a9bc424627f23eb99f3854f1608094988b1ebbd2c749eec1cb7c",
       "base_group": "1c24e2ff3245ae0a",
+      "build": {
+        "apptainer": "apptainer version 1.4.1",
+        "base_image": "docker.io/library/python@sha256:6d10e720318bd84cc3d88af92bb5a47189222e17620a2fd214da6445e4afb679",
+        "commit": "93ce3f19e72cf7427710727ed8fb75ee8b4427cd",
+        "reference_smoke": {
+          "model_requests": 0,
+          "native_rewards": [
+            {
+              "reward": 1.0
+            }
+          ],
+          "passed": true,
+          "task": "ade__ade-bench-f1003-hard"
+        },
+        "workflow_run": "https://github.com/zhuconv/dbt-bench/actions/runs/43359761397"
+      },
+      "bytes": 304820224,
       "canonical_asset": "image-c5485eddd674a9bc424627f23eb99f3854f1608094988b1ebbd2c749eec1cb7c",
       "initial_snapshot": {
         "download_bytes": 199983104,
@@ -246,20 +389,38 @@
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-c5485eddd674a9bc424627f23eb99f3854f1608094988b1ebbd2c749eec1cb7c"
       },
       "native_initializer": "images/locks/c5485eddd674a9bc424627f23eb99f3854f1608094988b1ebbd2c749eec1cb7c-initialize.sh",
-      "oci_digest": null,
+      "oci_digest": "sha256:5a51e226622461ed04c6473b02c7b25e0a9477793185b0dab80ddc724b643a02",
       "platform": "linux-amd64",
-      "sif_sha256": null,
+      "sif_sha256": "5e6bc0e4c3d7e8c5fb35fd58c1ee45ec3001c4e903eff4f97409a5c790916645",
       "source": "ade",
-      "status": "build_required",
+      "status": "published",
+      "tag": "v1-linux-amd64-5e6bc0e4c3d7e8c5fb35fd58c1ee45ec3001c4e903eff4f97409a5c790916645",
       "task_keys": [
         "ade__ade-bench-f1003-hard"
       ],
-      "uri": null,
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-amd64-5e6bc0e4c3d7e8c5fb35fd58c1ee45ec3001c4e903eff4f97409a5c790916645",
       "working_dir": "/app"
     },
     {
       "asset_id": "image-amd64-ce47a9e6ed2defaac646b2bbb002d0eaf3fc3d8873a8342187d8b9fd4e521fd0",
       "base_group": "1c24e2ff3245ae0a",
+      "build": {
+        "apptainer": "apptainer version 1.4.1",
+        "base_image": "docker.io/library/python@sha256:6d10e720318bd84cc3d88af92bb5a47189222e17620a2fd214da6445e4afb679",
+        "commit": "93ce3f19e72cf7427710727ed8fb75ee8b4427cd",
+        "reference_smoke": {
+          "model_requests": 0,
+          "native_rewards": [
+            {
+              "reward": 1.0
+            }
+          ],
+          "passed": true,
+          "task": "ade__ade-bench-f1009"
+        },
+        "workflow_run": "https://github.com/zhuconv/dbt-bench/actions/runs/43359761397"
+      },
+      "bytes": 308994048,
       "canonical_asset": "image-ce47a9e6ed2defaac646b2bbb002d0eaf3fc3d8873a8342187d8b9fd4e521fd0",
       "initial_snapshot": {
         "download_bytes": 204173312,
@@ -278,20 +439,38 @@
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-ce47a9e6ed2defaac646b2bbb002d0eaf3fc3d8873a8342187d8b9fd4e521fd0"
       },
       "native_initializer": "images/locks/ce47a9e6ed2defaac646b2bbb002d0eaf3fc3d8873a8342187d8b9fd4e521fd0-initialize.sh",
-      "oci_digest": null,
+      "oci_digest": "sha256:3f13c15f80b0099b67f65b6e48bc3dc600fd3c273abab0ddc19714d6ac9f2497",
       "platform": "linux-amd64",
-      "sif_sha256": null,
+      "sif_sha256": "564e699cc5d903deaa40e1fe3dc8109a7a53c940301440fffdf63c03861eca2e",
       "source": "ade",
-      "status": "build_required",
+      "status": "published",
+      "tag": "v1-linux-amd64-564e699cc5d903deaa40e1fe3dc8109a7a53c940301440fffdf63c03861eca2e",
       "task_keys": [
         "ade__ade-bench-f1009"
       ],
-      "uri": null,
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-amd64-564e699cc5d903deaa40e1fe3dc8109a7a53c940301440fffdf63c03861eca2e",
       "working_dir": "/app"
     },
     {
       "asset_id": "image-amd64-41c1f547462abe50f1149b412045e0bf5d96e8e3bfacfe5b775dc258e261c7ea",
       "base_group": "1c24e2ff3245ae0a",
+      "build": {
+        "apptainer": "apptainer version 1.4.1",
+        "base_image": "docker.io/library/python@sha256:6d10e720318bd84cc3d88af92bb5a47189222e17620a2fd214da6445e4afb679",
+        "commit": "93ce3f19e72cf7427710727ed8fb75ee8b4427cd",
+        "reference_smoke": {
+          "model_requests": 0,
+          "native_rewards": [
+            {
+              "reward": 1.0
+            }
+          ],
+          "passed": true,
+          "task": "ade__ade-bench-f1010"
+        },
+        "workflow_run": "https://github.com/zhuconv/dbt-bench/actions/runs/43359761397"
+      },
+      "bytes": 308989952,
       "canonical_asset": "image-41c1f547462abe50f1149b412045e0bf5d96e8e3bfacfe5b775dc258e261c7ea",
       "initial_snapshot": {
         "download_bytes": 204169216,
@@ -310,20 +489,38 @@
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-41c1f547462abe50f1149b412045e0bf5d96e8e3bfacfe5b775dc258e261c7ea"
       },
       "native_initializer": "images/locks/41c1f547462abe50f1149b412045e0bf5d96e8e3bfacfe5b775dc258e261c7ea-initialize.sh",
-      "oci_digest": null,
+      "oci_digest": "sha256:9323bb331f1b030eb001b8006998b2bff0bb6a799890b370e1f0cdb82631c8e6",
       "platform": "linux-amd64",
-      "sif_sha256": null,
+      "sif_sha256": "cae7c7221f9a32803842a26f5b5e0027b78c7c2fe260e0fca0e36e6bebcd9a67",
       "source": "ade",
-      "status": "build_required",
+      "status": "published",
+      "tag": "v1-linux-amd64-cae7c7221f9a32803842a26f5b5e0027b78c7c2fe260e0fca0e36e6bebcd9a67",
       "task_keys": [
         "ade__ade-bench-f1010"
       ],
-      "uri": null,
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-amd64-cae7c7221f9a32803842a26f5b5e0027b78c7c2fe260e0fca0e36e6bebcd9a67",
       "working_dir": "/app"
     },
     {
       "asset_id": "image-amd64-c26a3cab660b455cd95f446cea80c8c866faa64c58fefdd12b3f6ec3dc405769",
       "base_group": "1c24e2ff3245ae0a",
+      "build": {
+        "apptainer": "apptainer version 1.4.1",
+        "base_image": "docker.io/library/python@sha256:6d10e720318bd84cc3d88af92bb5a47189222e17620a2fd214da6445e4afb679",
+        "commit": "93ce3f19e72cf7427710727ed8fb75ee8b4427cd",
+        "reference_smoke": {
+          "model_requests": 0,
+          "native_rewards": [
+            {
+              "reward": 1.0
+            }
+          ],
+          "passed": true,
+          "task": "ade__ade-bench-f1010-medium"
+        },
+        "workflow_run": "https://github.com/zhuconv/dbt-bench/actions/runs/43359761397"
+      },
+      "bytes": 308961280,
       "canonical_asset": "image-c26a3cab660b455cd95f446cea80c8c866faa64c58fefdd12b3f6ec3dc405769",
       "initial_snapshot": {
         "download_bytes": 204140544,
@@ -342,20 +539,38 @@
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-c26a3cab660b455cd95f446cea80c8c866faa64c58fefdd12b3f6ec3dc405769"
       },
       "native_initializer": "images/locks/c26a3cab660b455cd95f446cea80c8c866faa64c58fefdd12b3f6ec3dc405769-initialize.sh",
-      "oci_digest": null,
+      "oci_digest": "sha256:f3cfcd5a3efbbd880c2e7048f3f4a8d47ec522d2bcdd43abcbe94d1774904d34",
       "platform": "linux-amd64",
-      "sif_sha256": null,
+      "sif_sha256": "6609f45a91c352bc524f7a6b403262412a65bcaf6680185104e947d0445f171f",
       "source": "ade",
-      "status": "build_required",
+      "status": "published",
+      "tag": "v1-linux-amd64-6609f45a91c352bc524f7a6b403262412a65bcaf6680185104e947d0445f171f",
       "task_keys": [
         "ade__ade-bench-f1010-medium"
       ],
-      "uri": null,
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-amd64-6609f45a91c352bc524f7a6b403262412a65bcaf6680185104e947d0445f171f",
       "working_dir": "/app"
     },
     {
       "asset_id": "image-amd64-4b63c74af2f2816318325d37558bd5934bd71988816d1fbc6c15e48ee39bc0a1",
       "base_group": "1c24e2ff3245ae0a",
+      "build": {
+        "apptainer": "apptainer version 1.4.1",
+        "base_image": "docker.io/library/python@sha256:6d10e720318bd84cc3d88af92bb5a47189222e17620a2fd214da6445e4afb679",
+        "commit": "93ce3f19e72cf7427710727ed8fb75ee8b4427cd",
+        "reference_smoke": {
+          "model_requests": 0,
+          "native_rewards": [
+            {
+              "reward": 1.0
+            }
+          ],
+          "passed": true,
+          "task": "ade__ade-bench-f1011"
+        },
+        "workflow_run": "https://github.com/zhuconv/dbt-bench/actions/runs/43359761397"
+      },
+      "bytes": 308953088,
       "canonical_asset": "image-4b63c74af2f2816318325d37558bd5934bd71988816d1fbc6c15e48ee39bc0a1",
       "initial_snapshot": {
         "download_bytes": 204132352,
@@ -374,20 +589,38 @@
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-4b63c74af2f2816318325d37558bd5934bd71988816d1fbc6c15e48ee39bc0a1"
       },
       "native_initializer": "images/locks/4b63c74af2f2816318325d37558bd5934bd71988816d1fbc6c15e48ee39bc0a1-initialize.sh",
-      "oci_digest": null,
+      "oci_digest": "sha256:a15d17da2fc301493bdfab094c2f76cd0ef525350fe3b07453d5bdcceeb2cb27",
       "platform": "linux-amd64",
-      "sif_sha256": null,
+      "sif_sha256": "cbdc43e00c7cca14b67b6a46b3642d8119cad842f77d8a711650bcf818a81173",
       "source": "ade",
-      "status": "build_required",
+      "status": "published",
+      "tag": "v1-linux-amd64-cbdc43e00c7cca14b67b6a46b3642d8119cad842f77d8a711650bcf818a81173",
       "task_keys": [
         "ade__ade-bench-f1011"
       ],
-      "uri": null,
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-amd64-cbdc43e00c7cca14b67b6a46b3642d8119cad842f77d8a711650bcf818a81173",
       "working_dir": "/app"
     },
     {
       "asset_id": "image-amd64-7dd21401d98cb1ecb758d4510cf0430116dbca24d9a9b77d6e898f746ddb054d",
       "base_group": "1c24e2ff3245ae0a",
+      "build": {
+        "apptainer": "apptainer version 1.4.1",
+        "base_image": "docker.io/library/python@sha256:6d10e720318bd84cc3d88af92bb5a47189222e17620a2fd214da6445e4afb679",
+        "commit": "93ce3f19e72cf7427710727ed8fb75ee8b4427cd",
+        "reference_smoke": {
+          "model_requests": 0,
+          "native_rewards": [
+            {
+              "reward": 1.0
+            }
+          ],
+          "passed": true,
+          "task": "ade__ade-bench-intercom001"
+        },
+        "workflow_run": "https://github.com/zhuconv/dbt-bench/actions/runs/43359761397"
+      },
+      "bytes": 301580288,
       "canonical_asset": "image-7dd21401d98cb1ecb758d4510cf0430116dbca24d9a9b77d6e898f746ddb054d",
       "initial_snapshot": {
         "download_bytes": 196767744,
@@ -406,20 +639,38 @@
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-7dd21401d98cb1ecb758d4510cf0430116dbca24d9a9b77d6e898f746ddb054d"
       },
       "native_initializer": "images/locks/7dd21401d98cb1ecb758d4510cf0430116dbca24d9a9b77d6e898f746ddb054d-initialize.sh",
-      "oci_digest": null,
+      "oci_digest": "sha256:63c100df0b50ab0e48e7cc6898972f11b3e802d3f82de3d51a2d7cf86dd26888",
       "platform": "linux-amd64",
-      "sif_sha256": null,
+      "sif_sha256": "dea6fb6a3cc12bdbea669a2abb88e2d6e963b55fdad1811531a6bf8337138c2c",
       "source": "ade",
-      "status": "build_required",
+      "status": "published",
+      "tag": "v1-linux-amd64-dea6fb6a3cc12bdbea669a2abb88e2d6e963b55fdad1811531a6bf8337138c2c",
       "task_keys": [
         "ade__ade-bench-intercom001"
       ],
-      "uri": null,
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-amd64-dea6fb6a3cc12bdbea669a2abb88e2d6e963b55fdad1811531a6bf8337138c2c",
       "working_dir": "/app"
     },
     {
       "asset_id": "image-amd64-3b3737a8352f18cc1655f8656918c71e50f5271a99d4b6daef3b827ab975c713",
       "base_group": "1c24e2ff3245ae0a",
+      "build": {
+        "apptainer": "apptainer version 1.4.1",
+        "base_image": "docker.io/library/python@sha256:6d10e720318bd84cc3d88af92bb5a47189222e17620a2fd214da6445e4afb679",
+        "commit": "93ce3f19e72cf7427710727ed8fb75ee8b4427cd",
+        "reference_smoke": {
+          "model_requests": 0,
+          "native_rewards": [
+            {
+              "reward": 1.0
+            }
+          ],
+          "passed": true,
+          "task": "ade__ade-bench-intercom002"
+        },
+        "workflow_run": "https://github.com/zhuconv/dbt-bench/actions/runs/43359761397"
+      },
+      "bytes": 301580288,
       "canonical_asset": "image-3b3737a8352f18cc1655f8656918c71e50f5271a99d4b6daef3b827ab975c713",
       "initial_snapshot": {
         "download_bytes": 196767744,
@@ -438,20 +689,38 @@
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-3b3737a8352f18cc1655f8656918c71e50f5271a99d4b6daef3b827ab975c713"
       },
       "native_initializer": "images/locks/3b3737a8352f18cc1655f8656918c71e50f5271a99d4b6daef3b827ab975c713-initialize.sh",
-      "oci_digest": null,
+      "oci_digest": "sha256:9c727cec0683cbd4e595a9f2a158e81836ae7a1cacfa16880610d3e869c28aeb",
       "platform": "linux-amd64",
-      "sif_sha256": null,
+      "sif_sha256": "311cab90c378e4dced46d66869dafb50ab09fbc6e8fea035979eaec58b5f7a14",
       "source": "ade",
-      "status": "build_required",
+      "status": "published",
+      "tag": "v1-linux-amd64-311cab90c378e4dced46d66869dafb50ab09fbc6e8fea035979eaec58b5f7a14",
       "task_keys": [
         "ade__ade-bench-intercom002"
       ],
-      "uri": null,
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-amd64-311cab90c378e4dced46d66869dafb50ab09fbc6e8fea035979eaec58b5f7a14",
       "working_dir": "/app"
     },
     {
       "asset_id": "image-amd64-724a26e1d5e58d1aada9913bf4c6418355d0b693752e8f31a7de6941e0bed513",
       "base_group": "1c24e2ff3245ae0a",
+      "build": {
+        "apptainer": "apptainer version 1.4.1",
+        "base_image": "docker.io/library/python@sha256:6d10e720318bd84cc3d88af92bb5a47189222e17620a2fd214da6445e4afb679",
+        "commit": "93ce3f19e72cf7427710727ed8fb75ee8b4427cd",
+        "reference_smoke": {
+          "model_requests": 0,
+          "native_rewards": [
+            {
+              "reward": 1.0
+            }
+          ],
+          "passed": true,
+          "task": "ade__ade-bench-intercom003"
+        },
+        "workflow_run": "https://github.com/zhuconv/dbt-bench/actions/runs/43359761397"
+      },
+      "bytes": 301580288,
       "canonical_asset": "image-724a26e1d5e58d1aada9913bf4c6418355d0b693752e8f31a7de6941e0bed513",
       "initial_snapshot": {
         "download_bytes": 196767744,
@@ -470,20 +739,38 @@
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-724a26e1d5e58d1aada9913bf4c6418355d0b693752e8f31a7de6941e0bed513"
       },
       "native_initializer": "images/locks/724a26e1d5e58d1aada9913bf4c6418355d0b693752e8f31a7de6941e0bed513-initialize.sh",
-      "oci_digest": null,
+      "oci_digest": "sha256:3024cf5512226e04c7456e53359535a7b9105c41f7e72bdd8a88d1de211f43db",
       "platform": "linux-amd64",
-      "sif_sha256": null,
+      "sif_sha256": "70683e957cc636398c3d0530de2d596eaefc33aca3c986cbf00e7964865395dd",
       "source": "ade",
-      "status": "build_required",
+      "status": "published",
+      "tag": "v1-linux-amd64-70683e957cc636398c3d0530de2d596eaefc33aca3c986cbf00e7964865395dd",
       "task_keys": [
         "ade__ade-bench-intercom003"
       ],
-      "uri": null,
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-amd64-70683e957cc636398c3d0530de2d596eaefc33aca3c986cbf00e7964865395dd",
       "working_dir": "/app"
     },
     {
       "asset_id": "image-amd64-f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c",
       "base_group": "3cc1f2d02e92eb04",
+      "build": {
+        "apptainer": "apptainer version 1.4.1",
+        "base_image": "ghcr.io/snowflake-labs/data-eng-bench-base@sha256:ef92b6ef197a89ff1d8b371aaf5de19343003abc462991ddeedb1b1005e2e04b",
+        "commit": "93ce3f19e72cf7427710727ed8fb75ee8b4427cd",
+        "reference_smoke": {
+          "model_requests": 0,
+          "native_rewards": [
+            {
+              "reward": 1.0
+            }
+          ],
+          "passed": true,
+          "task": "deb__dbt-calculate-running-balance"
+        },
+        "workflow_run": "https://github.com/zhuconv/dbt-bench/actions/runs/43359761397"
+      },
+      "bytes": 400715776,
       "canonical_asset": "image-f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c",
       "initial_snapshot": {
         "download_bytes": 355258368,
@@ -500,11 +787,12 @@
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
       },
       "native_initializer": "images/locks/f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c-initialize.sh",
-      "oci_digest": null,
+      "oci_digest": "sha256:ab192db6aefe39498f487faad3118c1ef1a6b8f6c5144888bbb5d7a3de579838",
       "platform": "linux-amd64",
-      "sif_sha256": null,
+      "sif_sha256": "610b21a31e522cc4caea3ad75700984f03811dba4a26b88426cfccc3219565b9",
       "source": "deb",
-      "status": "build_required",
+      "status": "published",
+      "tag": "v1-linux-amd64-610b21a31e522cc4caea3ad75700984f03811dba4a26b88426cfccc3219565b9",
       "task_keys": [
         "deb__dbt-calculate-running-balance",
         "deb__dbt-coupon-effectiveness",
@@ -542,12 +830,29 @@
         "deb__dbt-web-session-analytics",
         "deb__dbt-weekly-sales-growth"
       ],
-      "uri": null,
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-amd64-610b21a31e522cc4caea3ad75700984f03811dba4a26b88426cfccc3219565b9",
       "working_dir": "/app"
     },
     {
       "asset_id": "image-amd64-294bc8f0712f4c715c464f7842852ffadf1662ccb0e12f1b4c4d643f32ec9f48",
       "base_group": "24652c4986ded03b",
+      "build": {
+        "apptainer": "apptainer version 1.4.1",
+        "base_image": "ghcr.io/snowflake-labs/data-eng-bench-base@sha256:ef92b6ef197a89ff1d8b371aaf5de19343003abc462991ddeedb1b1005e2e04b",
+        "commit": "93ce3f19e72cf7427710727ed8fb75ee8b4427cd",
+        "reference_smoke": {
+          "model_requests": 0,
+          "native_rewards": [
+            {
+              "reward": 1.0
+            }
+          ],
+          "passed": true,
+          "task": "deb__dbt-session-attribution"
+        },
+        "workflow_run": "https://github.com/zhuconv/dbt-bench/actions/runs/43359761397"
+      },
+      "bytes": 428146688,
       "canonical_asset": "image-294bc8f0712f4c715c464f7842852ffadf1662ccb0e12f1b4c4d643f32ec9f48",
       "initial_snapshot": {
         "download_bytes": 355540992,
@@ -564,20 +869,38 @@
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-294bc8f0712f4c715c464f7842852ffadf1662ccb0e12f1b4c4d643f32ec9f48"
       },
       "native_initializer": "images/locks/294bc8f0712f4c715c464f7842852ffadf1662ccb0e12f1b4c4d643f32ec9f48-initialize.sh",
-      "oci_digest": null,
+      "oci_digest": "sha256:258070cb86451c50f6dc885648398eef58a82426763b3ae8f2e6ce3d84ae5b3a",
       "platform": "linux-amd64",
-      "sif_sha256": null,
+      "sif_sha256": "5d289a975df94bd645a8f5e0d224309eb6cac94834cb0548ef5684dbadfe2a2d",
       "source": "deb",
-      "status": "build_required",
+      "status": "published",
+      "tag": "v1-linux-amd64-5d289a975df94bd645a8f5e0d224309eb6cac94834cb0548ef5684dbadfe2a2d",
       "task_keys": [
         "deb__dbt-session-attribution"
       ],
-      "uri": null,
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-amd64-5d289a975df94bd645a8f5e0d224309eb6cac94834cb0548ef5684dbadfe2a2d",
       "working_dir": "/app"
     },
     {
       "asset_id": "image-amd64-39f48a4c5f4cd8f8e7235d415e9459a49ca201e91b33e3b1a0a3eaee1485e15b",
       "base_group": "a9c9b7d2ef4cfb6a",
+      "build": {
+        "apptainer": "apptainer version 1.4.1",
+        "base_image": "docker.io/library/python@sha256:6d10e720318bd84cc3d88af92bb5a47189222e17620a2fd214da6445e4afb679",
+        "commit": "93ce3f19e72cf7427710727ed8fb75ee8b4427cd",
+        "reference_smoke": {
+          "model_requests": 0,
+          "native_rewards": [
+            {
+              "reward": 1.0
+            }
+          ],
+          "passed": true,
+          "task": "spider2__app_reporting001"
+        },
+        "workflow_run": "https://github.com/zhuconv/dbt-bench/actions/runs/43359761397"
+      },
+      "bytes": 328732672,
       "canonical_asset": "image-39f48a4c5f4cd8f8e7235d415e9459a49ca201e91b33e3b1a0a3eaee1485e15b",
       "initial_snapshot": {
         "download_bytes": 205193216,
@@ -596,20 +919,38 @@
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-39f48a4c5f4cd8f8e7235d415e9459a49ca201e91b33e3b1a0a3eaee1485e15b"
       },
       "native_initializer": "images/locks/39f48a4c5f4cd8f8e7235d415e9459a49ca201e91b33e3b1a0a3eaee1485e15b-initialize.sh",
-      "oci_digest": null,
+      "oci_digest": "sha256:cd655b5c8fde60565a00c21fd774b42082d8be33c0a039f3e5191d4770afb2cd",
       "platform": "linux-amd64",
-      "sif_sha256": null,
+      "sif_sha256": "0849920607f3ccf29074c2c3de06ff644c2b9b385e0a668031223d40e02cdb84",
       "source": "spider2",
-      "status": "build_required",
+      "status": "published",
+      "tag": "v1-linux-amd64-0849920607f3ccf29074c2c3de06ff644c2b9b385e0a668031223d40e02cdb84",
       "task_keys": [
         "spider2__app_reporting001"
       ],
-      "uri": null,
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-amd64-0849920607f3ccf29074c2c3de06ff644c2b9b385e0a668031223d40e02cdb84",
       "working_dir": "/workspace"
     },
     {
       "asset_id": "image-amd64-8323ed9479cf457c33415f8289c30cb868eda60d8264fb4356df2c3b00ee85a9",
       "base_group": "a9c9b7d2ef4cfb6a",
+      "build": {
+        "apptainer": "apptainer version 1.4.1",
+        "base_image": "docker.io/library/python@sha256:6d10e720318bd84cc3d88af92bb5a47189222e17620a2fd214da6445e4afb679",
+        "commit": "93ce3f19e72cf7427710727ed8fb75ee8b4427cd",
+        "reference_smoke": {
+          "model_requests": 0,
+          "native_rewards": [
+            {
+              "reward": 1.0
+            }
+          ],
+          "passed": true,
+          "task": "spider2__app_reporting002"
+        },
+        "workflow_run": "https://github.com/zhuconv/dbt-bench/actions/runs/43359761397"
+      },
+      "bytes": 328732672,
       "canonical_asset": "image-8323ed9479cf457c33415f8289c30cb868eda60d8264fb4356df2c3b00ee85a9",
       "initial_snapshot": {
         "download_bytes": 205193216,
@@ -628,20 +969,38 @@
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-8323ed9479cf457c33415f8289c30cb868eda60d8264fb4356df2c3b00ee85a9"
       },
       "native_initializer": "images/locks/8323ed9479cf457c33415f8289c30cb868eda60d8264fb4356df2c3b00ee85a9-initialize.sh",
-      "oci_digest": null,
+      "oci_digest": "sha256:0a49fdc5636298fe5c9d0df815ac4ef9c4f0714ff926a943ed02ae8c33c9d6d6",
       "platform": "linux-amd64",
-      "sif_sha256": null,
+      "sif_sha256": "f41b7ef8b08f2c8fcf2b81246847844f733824392c2aeaa7aba34d6726b9967b",
       "source": "spider2",
-      "status": "build_required",
+      "status": "published",
+      "tag": "v1-linux-amd64-f41b7ef8b08f2c8fcf2b81246847844f733824392c2aeaa7aba34d6726b9967b",
       "task_keys": [
         "spider2__app_reporting002"
       ],
-      "uri": null,
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-amd64-f41b7ef8b08f2c8fcf2b81246847844f733824392c2aeaa7aba34d6726b9967b",
       "working_dir": "/workspace"
     },
     {
       "asset_id": "image-amd64-4c0789ae41ddd1b8b87bbea9e555fd5fec8df8d7bf4adf9f83733b80bf38945d",
       "base_group": "a9c9b7d2ef4cfb6a",
+      "build": {
+        "apptainer": "apptainer version 1.4.1",
+        "base_image": "docker.io/library/python@sha256:6d10e720318bd84cc3d88af92bb5a47189222e17620a2fd214da6445e4afb679",
+        "commit": "93ce3f19e72cf7427710727ed8fb75ee8b4427cd",
+        "reference_smoke": {
+          "model_requests": 0,
+          "native_rewards": [
+            {
+              "reward": 1.0
+            }
+          ],
+          "passed": true,
+          "task": "spider2__apple_store001"
+        },
+        "workflow_run": "https://github.com/zhuconv/dbt-bench/actions/runs/43359761397"
+      },
+      "bytes": 328265728,
       "canonical_asset": "image-4c0789ae41ddd1b8b87bbea9e555fd5fec8df8d7bf4adf9f83733b80bf38945d",
       "initial_snapshot": {
         "download_bytes": 204726272,
@@ -660,20 +1019,38 @@
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-4c0789ae41ddd1b8b87bbea9e555fd5fec8df8d7bf4adf9f83733b80bf38945d"
       },
       "native_initializer": "images/locks/4c0789ae41ddd1b8b87bbea9e555fd5fec8df8d7bf4adf9f83733b80bf38945d-initialize.sh",
-      "oci_digest": null,
+      "oci_digest": "sha256:c50e5e16ed50542e5971394bbd2aa781dd1e14c799aceedb7ab9dcef6dd38ccc",
       "platform": "linux-amd64",
-      "sif_sha256": null,
+      "sif_sha256": "e1db94a793a1307f27d187389992a7a0d80832821a2fe44446e350f59bd92c6f",
       "source": "spider2",
-      "status": "build_required",
+      "status": "published",
+      "tag": "v1-linux-amd64-e1db94a793a1307f27d187389992a7a0d80832821a2fe44446e350f59bd92c6f",
       "task_keys": [
         "spider2__apple_store001"
       ],
-      "uri": null,
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-amd64-e1db94a793a1307f27d187389992a7a0d80832821a2fe44446e350f59bd92c6f",
       "working_dir": "/workspace"
     },
     {
       "asset_id": "image-amd64-e24702c7d0299838af168cc3c1e312b88703e2259d0c6b5da318b6c786a9029c",
       "base_group": "a9c9b7d2ef4cfb6a",
+      "build": {
+        "apptainer": "apptainer version 1.4.1",
+        "base_image": "docker.io/library/python@sha256:6d10e720318bd84cc3d88af92bb5a47189222e17620a2fd214da6445e4afb679",
+        "commit": "93ce3f19e72cf7427710727ed8fb75ee8b4427cd",
+        "reference_smoke": {
+          "model_requests": 0,
+          "native_rewards": [
+            {
+              "reward": 1.0
+            }
+          ],
+          "passed": true,
+          "task": "spider2__asset001"
+        },
+        "workflow_run": "https://github.com/zhuconv/dbt-bench/actions/runs/43359761397"
+      },
+      "bytes": 343019520,
       "canonical_asset": "image-e24702c7d0299838af168cc3c1e312b88703e2259d0c6b5da318b6c786a9029c",
       "initial_snapshot": {
         "download_bytes": 219480064,
@@ -692,20 +1069,38 @@
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-e24702c7d0299838af168cc3c1e312b88703e2259d0c6b5da318b6c786a9029c"
       },
       "native_initializer": "images/locks/e24702c7d0299838af168cc3c1e312b88703e2259d0c6b5da318b6c786a9029c-initialize.sh",
-      "oci_digest": null,
+      "oci_digest": "sha256:7ddfcb582770840c784f25467d22c8488d282248e4e70d6efa77337be32b1b38",
       "platform": "linux-amd64",
-      "sif_sha256": null,
+      "sif_sha256": "d571b17cfca21dade5e50de740223257c73a194911ba37563a2b490e4f233218",
       "source": "spider2",
-      "status": "build_required",
+      "status": "published",
+      "tag": "v1-linux-amd64-d571b17cfca21dade5e50de740223257c73a194911ba37563a2b490e4f233218",
       "task_keys": [
         "spider2__asset001"
       ],
-      "uri": null,
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-amd64-d571b17cfca21dade5e50de740223257c73a194911ba37563a2b490e4f233218",
       "working_dir": "/workspace"
     },
     {
       "asset_id": "image-amd64-75cdde48037e9c93512b08c9974c1aad6d5ea6a620d81a428dc8cb5abe69af69",
       "base_group": "a9c9b7d2ef4cfb6a",
+      "build": {
+        "apptainer": "apptainer version 1.4.1",
+        "base_image": "docker.io/library/python@sha256:6d10e720318bd84cc3d88af92bb5a47189222e17620a2fd214da6445e4afb679",
+        "commit": "93ce3f19e72cf7427710727ed8fb75ee8b4427cd",
+        "reference_smoke": {
+          "model_requests": 0,
+          "native_rewards": [
+            {
+              "reward": 1.0
+            }
+          ],
+          "passed": true,
+          "task": "spider2__google_play001"
+        },
+        "workflow_run": "https://github.com/zhuconv/dbt-bench/actions/runs/43359761397"
+      },
+      "bytes": 328273920,
       "canonical_asset": "image-75cdde48037e9c93512b08c9974c1aad6d5ea6a620d81a428dc8cb5abe69af69",
       "initial_snapshot": {
         "download_bytes": 204738560,
@@ -724,20 +1119,38 @@
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-75cdde48037e9c93512b08c9974c1aad6d5ea6a620d81a428dc8cb5abe69af69"
       },
       "native_initializer": "images/locks/75cdde48037e9c93512b08c9974c1aad6d5ea6a620d81a428dc8cb5abe69af69-initialize.sh",
-      "oci_digest": null,
+      "oci_digest": "sha256:b0346611174bd5d4cf98c81fe69ebe010b6b421e463305abaf4aaa9f8e72aff6",
       "platform": "linux-amd64",
-      "sif_sha256": null,
+      "sif_sha256": "9f262d4c574fcd6800c52ff4e22444cc11ad92da2f21afafd379f37252f75d5b",
       "source": "spider2",
-      "status": "build_required",
+      "status": "published",
+      "tag": "v1-linux-amd64-9f262d4c574fcd6800c52ff4e22444cc11ad92da2f21afafd379f37252f75d5b",
       "task_keys": [
         "spider2__google_play001"
       ],
-      "uri": null,
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-amd64-9f262d4c574fcd6800c52ff4e22444cc11ad92da2f21afafd379f37252f75d5b",
       "working_dir": "/workspace"
     },
     {
       "asset_id": "image-amd64-0aa0b9e80c8f90832ec0924f7f0bd26b7759434181ac00712f8d5a3a13ec5246",
       "base_group": "a9c9b7d2ef4cfb6a",
+      "build": {
+        "apptainer": "apptainer version 1.4.1",
+        "base_image": "docker.io/library/python@sha256:6d10e720318bd84cc3d88af92bb5a47189222e17620a2fd214da6445e4afb679",
+        "commit": "93ce3f19e72cf7427710727ed8fb75ee8b4427cd",
+        "reference_smoke": {
+          "model_requests": 0,
+          "native_rewards": [
+            {
+              "reward": 1.0
+            }
+          ],
+          "passed": true,
+          "task": "spider2__hive001"
+        },
+        "workflow_run": "https://github.com/zhuconv/dbt-bench/actions/runs/43359761397"
+      },
+      "bytes": 327503872,
       "canonical_asset": "image-0aa0b9e80c8f90832ec0924f7f0bd26b7759434181ac00712f8d5a3a13ec5246",
       "initial_snapshot": {
         "download_bytes": 203968512,
@@ -756,20 +1169,38 @@
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-0aa0b9e80c8f90832ec0924f7f0bd26b7759434181ac00712f8d5a3a13ec5246"
       },
       "native_initializer": "images/locks/0aa0b9e80c8f90832ec0924f7f0bd26b7759434181ac00712f8d5a3a13ec5246-initialize.sh",
-      "oci_digest": null,
+      "oci_digest": "sha256:20f4113595a49ccbd965a19c04be17caf362d9924fbacc3035e6e1001d04d731",
       "platform": "linux-amd64",
-      "sif_sha256": null,
+      "sif_sha256": "60caaa0a220b195cf880bfd4cc3df07f43c700c44cdabe35065826f759afb308",
       "source": "spider2",
-      "status": "build_required",
+      "status": "published",
+      "tag": "v1-linux-amd64-60caaa0a220b195cf880bfd4cc3df07f43c700c44cdabe35065826f759afb308",
       "task_keys": [
         "spider2__hive001"
       ],
-      "uri": null,
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-amd64-60caaa0a220b195cf880bfd4cc3df07f43c700c44cdabe35065826f759afb308",
       "working_dir": "/workspace"
     },
     {
       "asset_id": "image-amd64-993a5ee369464ac3bee72f1b718a4f3c89c1604eee0ec49d33c6613662e78103",
       "base_group": "a9c9b7d2ef4cfb6a",
+      "build": {
+        "apptainer": "apptainer version 1.4.1",
+        "base_image": "docker.io/library/python@sha256:6d10e720318bd84cc3d88af92bb5a47189222e17620a2fd214da6445e4afb679",
+        "commit": "93ce3f19e72cf7427710727ed8fb75ee8b4427cd",
+        "reference_smoke": {
+          "model_requests": 0,
+          "native_rewards": [
+            {
+              "reward": 1.0
+            }
+          ],
+          "passed": true,
+          "task": "spider2__intercom001"
+        },
+        "workflow_run": "https://github.com/zhuconv/dbt-bench/actions/runs/43359761397"
+      },
+      "bytes": 328163328,
       "canonical_asset": "image-993a5ee369464ac3bee72f1b718a4f3c89c1604eee0ec49d33c6613662e78103",
       "initial_snapshot": {
         "download_bytes": 204623872,
@@ -788,20 +1219,38 @@
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-993a5ee369464ac3bee72f1b718a4f3c89c1604eee0ec49d33c6613662e78103"
       },
       "native_initializer": "images/locks/993a5ee369464ac3bee72f1b718a4f3c89c1604eee0ec49d33c6613662e78103-initialize.sh",
-      "oci_digest": null,
+      "oci_digest": "sha256:8039f59c57b45c1aead4b56b0ad6fd4d045f82143500c1ffe40fbff6ee1cfcc2",
       "platform": "linux-amd64",
-      "sif_sha256": null,
+      "sif_sha256": "82bbaa268ed5963fb2a049b75ac145deb27c99236face898b7ac05f87cc99caf",
       "source": "spider2",
-      "status": "build_required",
+      "status": "published",
+      "tag": "v1-linux-amd64-82bbaa268ed5963fb2a049b75ac145deb27c99236face898b7ac05f87cc99caf",
       "task_keys": [
         "spider2__intercom001"
       ],
-      "uri": null,
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-amd64-82bbaa268ed5963fb2a049b75ac145deb27c99236face898b7ac05f87cc99caf",
       "working_dir": "/workspace"
     },
     {
       "asset_id": "image-amd64-f3d992b881041b0f30d03b9061c237ebcaa57f592df8a9d9c53522dbd33e4473",
       "base_group": "a9c9b7d2ef4cfb6a",
+      "build": {
+        "apptainer": "apptainer version 1.4.1",
+        "base_image": "docker.io/library/python@sha256:6d10e720318bd84cc3d88af92bb5a47189222e17620a2fd214da6445e4afb679",
+        "commit": "93ce3f19e72cf7427710727ed8fb75ee8b4427cd",
+        "reference_smoke": {
+          "model_requests": 0,
+          "native_rewards": [
+            {
+              "reward": 1.0
+            }
+          ],
+          "passed": true,
+          "task": "spider2__jira001"
+        },
+        "workflow_run": "https://github.com/zhuconv/dbt-bench/actions/runs/43359761397"
+      },
+      "bytes": 328187904,
       "canonical_asset": "image-f3d992b881041b0f30d03b9061c237ebcaa57f592df8a9d9c53522dbd33e4473",
       "initial_snapshot": {
         "download_bytes": 204652544,
@@ -820,20 +1269,38 @@
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-f3d992b881041b0f30d03b9061c237ebcaa57f592df8a9d9c53522dbd33e4473"
       },
       "native_initializer": "images/locks/f3d992b881041b0f30d03b9061c237ebcaa57f592df8a9d9c53522dbd33e4473-initialize.sh",
-      "oci_digest": null,
+      "oci_digest": "sha256:d1a80b0974c946917c396a096ace36e76f61fd6885f3585686bb9d98a021aac2",
       "platform": "linux-amd64",
-      "sif_sha256": null,
+      "sif_sha256": "29fd19c19205dc45cccab47634d0b69e8286d4cd0e7d2dd6e02c34a3702c3a76",
       "source": "spider2",
-      "status": "build_required",
+      "status": "published",
+      "tag": "v1-linux-amd64-29fd19c19205dc45cccab47634d0b69e8286d4cd0e7d2dd6e02c34a3702c3a76",
       "task_keys": [
         "spider2__jira001"
       ],
-      "uri": null,
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-amd64-29fd19c19205dc45cccab47634d0b69e8286d4cd0e7d2dd6e02c34a3702c3a76",
       "working_dir": "/workspace"
     },
     {
       "asset_id": "image-amd64-b76376cf74a0d69ad73dbb9977d1077d30e469fb466088a06a7dab94d7c03053",
       "base_group": "a9c9b7d2ef4cfb6a",
+      "build": {
+        "apptainer": "apptainer version 1.4.1",
+        "base_image": "docker.io/library/python@sha256:6d10e720318bd84cc3d88af92bb5a47189222e17620a2fd214da6445e4afb679",
+        "commit": "93ce3f19e72cf7427710727ed8fb75ee8b4427cd",
+        "reference_smoke": {
+          "model_requests": 0,
+          "native_rewards": [
+            {
+              "reward": 1.0
+            }
+          ],
+          "passed": true,
+          "task": "spider2__lever001"
+        },
+        "workflow_run": "https://github.com/zhuconv/dbt-bench/actions/runs/43359761397"
+      },
+      "bytes": 328253440,
       "canonical_asset": "image-b76376cf74a0d69ad73dbb9977d1077d30e469fb466088a06a7dab94d7c03053",
       "initial_snapshot": {
         "download_bytes": 204718080,
@@ -852,20 +1319,38 @@
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-b76376cf74a0d69ad73dbb9977d1077d30e469fb466088a06a7dab94d7c03053"
       },
       "native_initializer": "images/locks/b76376cf74a0d69ad73dbb9977d1077d30e469fb466088a06a7dab94d7c03053-initialize.sh",
-      "oci_digest": null,
+      "oci_digest": "sha256:3a7535eec50492f9deeb93dbaf0875537c6b2d7865571e6ae870e006be0de0d8",
       "platform": "linux-amd64",
-      "sif_sha256": null,
+      "sif_sha256": "d4fcafecaf01fedfc0b8d67a42b1ddad7bee78258382ccbc0559f7fda62eb4e3",
       "source": "spider2",
-      "status": "build_required",
+      "status": "published",
+      "tag": "v1-linux-amd64-d4fcafecaf01fedfc0b8d67a42b1ddad7bee78258382ccbc0559f7fda62eb4e3",
       "task_keys": [
         "spider2__lever001"
       ],
-      "uri": null,
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-amd64-d4fcafecaf01fedfc0b8d67a42b1ddad7bee78258382ccbc0559f7fda62eb4e3",
       "working_dir": "/workspace"
     },
     {
       "asset_id": "image-amd64-1329f8fe64254776ab90625302c9fb1f81eb1b4b38b803e064ffdda901cba0a4",
       "base_group": "a9c9b7d2ef4cfb6a",
+      "build": {
+        "apptainer": "apptainer version 1.4.1",
+        "base_image": "docker.io/library/python@sha256:6d10e720318bd84cc3d88af92bb5a47189222e17620a2fd214da6445e4afb679",
+        "commit": "93ce3f19e72cf7427710727ed8fb75ee8b4427cd",
+        "reference_smoke": {
+          "model_requests": 0,
+          "native_rewards": [
+            {
+              "reward": 1.0
+            }
+          ],
+          "passed": true,
+          "task": "spider2__marketo001"
+        },
+        "workflow_run": "https://github.com/zhuconv/dbt-bench/actions/runs/43359761397"
+      },
+      "bytes": 334352384,
       "canonical_asset": "image-1329f8fe64254776ab90625302c9fb1f81eb1b4b38b803e064ffdda901cba0a4",
       "initial_snapshot": {
         "download_bytes": 210817024,
@@ -884,20 +1369,38 @@
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-1329f8fe64254776ab90625302c9fb1f81eb1b4b38b803e064ffdda901cba0a4"
       },
       "native_initializer": "images/locks/1329f8fe64254776ab90625302c9fb1f81eb1b4b38b803e064ffdda901cba0a4-initialize.sh",
-      "oci_digest": null,
+      "oci_digest": "sha256:5e835998db6c92d92a3b788a866af35d2b98d30e1232af94064347e2b6d63f9c",
       "platform": "linux-amd64",
-      "sif_sha256": null,
+      "sif_sha256": "25edbe2c6ea9a478ef424bfe598fcb81f486607a3c419e25cb929213be4158b7",
       "source": "spider2",
-      "status": "build_required",
+      "status": "published",
+      "tag": "v1-linux-amd64-25edbe2c6ea9a478ef424bfe598fcb81f486607a3c419e25cb929213be4158b7",
       "task_keys": [
         "spider2__marketo001"
       ],
-      "uri": null,
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-amd64-25edbe2c6ea9a478ef424bfe598fcb81f486607a3c419e25cb929213be4158b7",
       "working_dir": "/workspace"
     },
     {
       "asset_id": "image-amd64-c6379b521ffc262e4598b154887ed5d3565dd4251efff7a55ac169eff482c427",
       "base_group": "a9c9b7d2ef4cfb6a",
+      "build": {
+        "apptainer": "apptainer version 1.4.1",
+        "base_image": "docker.io/library/python@sha256:6d10e720318bd84cc3d88af92bb5a47189222e17620a2fd214da6445e4afb679",
+        "commit": "93ce3f19e72cf7427710727ed8fb75ee8b4427cd",
+        "reference_smoke": {
+          "model_requests": 0,
+          "native_rewards": [
+            {
+              "reward": 1.0
+            }
+          ],
+          "passed": true,
+          "task": "spider2__maturity001"
+        },
+        "workflow_run": "https://github.com/zhuconv/dbt-bench/actions/runs/43359761397"
+      },
+      "bytes": 327544832,
       "canonical_asset": "image-c6379b521ffc262e4598b154887ed5d3565dd4251efff7a55ac169eff482c427",
       "initial_snapshot": {
         "download_bytes": 204005376,
@@ -916,20 +1419,38 @@
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-c6379b521ffc262e4598b154887ed5d3565dd4251efff7a55ac169eff482c427"
       },
       "native_initializer": "images/locks/c6379b521ffc262e4598b154887ed5d3565dd4251efff7a55ac169eff482c427-initialize.sh",
-      "oci_digest": null,
+      "oci_digest": "sha256:7a9176f6c41ff754bd6287ea07de705fa64f80f987867afd294c4f63d9e37b48",
       "platform": "linux-amd64",
-      "sif_sha256": null,
+      "sif_sha256": "aad9316b4f8cb8fc7c4aa7617dec4ff8fad68caf46955635eec58bab178ddbb6",
       "source": "spider2",
-      "status": "build_required",
+      "status": "published",
+      "tag": "v1-linux-amd64-aad9316b4f8cb8fc7c4aa7617dec4ff8fad68caf46955635eec58bab178ddbb6",
       "task_keys": [
         "spider2__maturity001"
       ],
-      "uri": null,
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-amd64-aad9316b4f8cb8fc7c4aa7617dec4ff8fad68caf46955635eec58bab178ddbb6",
       "working_dir": "/workspace"
     },
     {
       "asset_id": "image-amd64-a6cfdac52d5144073556202979189f5ba4e3f27e9cf411b5da1c6170272ac514",
       "base_group": "a9c9b7d2ef4cfb6a",
+      "build": {
+        "apptainer": "apptainer version 1.4.1",
+        "base_image": "docker.io/library/python@sha256:6d10e720318bd84cc3d88af92bb5a47189222e17620a2fd214da6445e4afb679",
+        "commit": "93ce3f19e72cf7427710727ed8fb75ee8b4427cd",
+        "reference_smoke": {
+          "model_requests": 0,
+          "native_rewards": [
+            {
+              "reward": 1.0
+            }
+          ],
+          "passed": true,
+          "task": "spider2__recharge002"
+        },
+        "workflow_run": "https://github.com/zhuconv/dbt-bench/actions/runs/43359761397"
+      },
+      "bytes": 328290304,
       "canonical_asset": "image-a6cfdac52d5144073556202979189f5ba4e3f27e9cf411b5da1c6170272ac514",
       "initial_snapshot": {
         "download_bytes": 204750848,
@@ -948,20 +1469,38 @@
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-a6cfdac52d5144073556202979189f5ba4e3f27e9cf411b5da1c6170272ac514"
       },
       "native_initializer": "images/locks/a6cfdac52d5144073556202979189f5ba4e3f27e9cf411b5da1c6170272ac514-initialize.sh",
-      "oci_digest": null,
+      "oci_digest": "sha256:a45417bd58540d867ce7f36fd1df55e0d49ab1b0eb2f85397189f006edec0603",
       "platform": "linux-amd64",
-      "sif_sha256": null,
+      "sif_sha256": "86717824db829116325eda904e39dd0cc1c835dce7498cac8a282f9c1f2047b0",
       "source": "spider2",
-      "status": "build_required",
+      "status": "published",
+      "tag": "v1-linux-amd64-86717824db829116325eda904e39dd0cc1c835dce7498cac8a282f9c1f2047b0",
       "task_keys": [
         "spider2__recharge002"
       ],
-      "uri": null,
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-amd64-86717824db829116325eda904e39dd0cc1c835dce7498cac8a282f9c1f2047b0",
       "working_dir": "/workspace"
     },
     {
       "asset_id": "image-amd64-53d5916ff99de9474ff14c8a62a22ce6e03b620e5961cc84b6ac30779c1401eb",
       "base_group": "a9c9b7d2ef4cfb6a",
+      "build": {
+        "apptainer": "apptainer version 1.4.1",
+        "base_image": "docker.io/library/python@sha256:6d10e720318bd84cc3d88af92bb5a47189222e17620a2fd214da6445e4afb679",
+        "commit": "93ce3f19e72cf7427710727ed8fb75ee8b4427cd",
+        "reference_smoke": {
+          "model_requests": 0,
+          "native_rewards": [
+            {
+              "reward": 1.0
+            }
+          ],
+          "passed": true,
+          "task": "spider2__shopify002"
+        },
+        "workflow_run": "https://github.com/zhuconv/dbt-bench/actions/runs/43359761397"
+      },
+      "bytes": 328577024,
       "canonical_asset": "image-53d5916ff99de9474ff14c8a62a22ce6e03b620e5961cc84b6ac30779c1401eb",
       "initial_snapshot": {
         "download_bytes": 205041664,
@@ -980,20 +1519,38 @@
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-53d5916ff99de9474ff14c8a62a22ce6e03b620e5961cc84b6ac30779c1401eb"
       },
       "native_initializer": "images/locks/53d5916ff99de9474ff14c8a62a22ce6e03b620e5961cc84b6ac30779c1401eb-initialize.sh",
-      "oci_digest": null,
+      "oci_digest": "sha256:74a742125feb0ce75e59d1ec0b4c5c87e87a14fd3f4cdfe47c12a8abd583d868",
       "platform": "linux-amd64",
-      "sif_sha256": null,
+      "sif_sha256": "546f49531d1f0e558287d33ea5be7e1c7dd39c70424956d4a462afcfd9557b32",
       "source": "spider2",
-      "status": "build_required",
+      "status": "published",
+      "tag": "v1-linux-amd64-546f49531d1f0e558287d33ea5be7e1c7dd39c70424956d4a462afcfd9557b32",
       "task_keys": [
         "spider2__shopify002"
       ],
-      "uri": null,
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-amd64-546f49531d1f0e558287d33ea5be7e1c7dd39c70424956d4a462afcfd9557b32",
       "working_dir": "/workspace"
     },
     {
       "asset_id": "image-amd64-bef6d0589e209aeff83a80bbe920bd12814629d61273bcdc81aa30d3366950f9",
       "base_group": "a9c9b7d2ef4cfb6a",
+      "build": {
+        "apptainer": "apptainer version 1.4.1",
+        "base_image": "docker.io/library/python@sha256:6d10e720318bd84cc3d88af92bb5a47189222e17620a2fd214da6445e4afb679",
+        "commit": "93ce3f19e72cf7427710727ed8fb75ee8b4427cd",
+        "reference_smoke": {
+          "model_requests": 0,
+          "native_rewards": [
+            {
+              "reward": 1.0
+            }
+          ],
+          "passed": true,
+          "task": "spider2__tickit001"
+        },
+        "workflow_run": "https://github.com/zhuconv/dbt-bench/actions/runs/43359761397"
+      },
+      "bytes": 334909440,
       "canonical_asset": "image-bef6d0589e209aeff83a80bbe920bd12814629d61273bcdc81aa30d3366950f9",
       "initial_snapshot": {
         "download_bytes": 211369984,
@@ -1012,20 +1569,38 @@
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-bef6d0589e209aeff83a80bbe920bd12814629d61273bcdc81aa30d3366950f9"
       },
       "native_initializer": "images/locks/bef6d0589e209aeff83a80bbe920bd12814629d61273bcdc81aa30d3366950f9-initialize.sh",
-      "oci_digest": null,
+      "oci_digest": "sha256:cb7720932f8dfedac0637ea553722fcae2706f91021bb799cb45c99b3dad40cd",
       "platform": "linux-amd64",
-      "sif_sha256": null,
+      "sif_sha256": "b7c5139e4ceaad4e89a3d52ad58eb711eecd3fa84323f8c912dcb29c5f035039",
       "source": "spider2",
-      "status": "build_required",
+      "status": "published",
+      "tag": "v1-linux-amd64-b7c5139e4ceaad4e89a3d52ad58eb711eecd3fa84323f8c912dcb29c5f035039",
       "task_keys": [
         "spider2__tickit001"
       ],
-      "uri": null,
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-amd64-b7c5139e4ceaad4e89a3d52ad58eb711eecd3fa84323f8c912dcb29c5f035039",
       "working_dir": "/workspace"
     },
     {
       "asset_id": "image-amd64-aa086772f50603e4477133db99c612851a64ec014867213833288317cbe55655",
       "base_group": "a9c9b7d2ef4cfb6a",
+      "build": {
+        "apptainer": "apptainer version 1.4.1",
+        "base_image": "docker.io/library/python@sha256:6d10e720318bd84cc3d88af92bb5a47189222e17620a2fd214da6445e4afb679",
+        "commit": "93ce3f19e72cf7427710727ed8fb75ee8b4427cd",
+        "reference_smoke": {
+          "model_requests": 0,
+          "native_rewards": [
+            {
+              "reward": 1.0
+            }
+          ],
+          "passed": true,
+          "task": "spider2__workday001"
+        },
+        "workflow_run": "https://github.com/zhuconv/dbt-bench/actions/runs/43359761397"
+      },
+      "bytes": 327811072,
       "canonical_asset": "image-aa086772f50603e4477133db99c612851a64ec014867213833288317cbe55655",
       "initial_snapshot": {
         "download_bytes": 204275712,
@@ -1044,20 +1619,38 @@
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-aa086772f50603e4477133db99c612851a64ec014867213833288317cbe55655"
       },
       "native_initializer": "images/locks/aa086772f50603e4477133db99c612851a64ec014867213833288317cbe55655-initialize.sh",
-      "oci_digest": null,
+      "oci_digest": "sha256:3f38e5364d0a50ad3e78154dea6331904103819b06b0873296ca92544064ec5a",
       "platform": "linux-amd64",
-      "sif_sha256": null,
+      "sif_sha256": "0aa8b3f83466f6446bf3e1a1681b4b775a55e661a6c972cf55199ff27861a425",
       "source": "spider2",
-      "status": "build_required",
+      "status": "published",
+      "tag": "v1-linux-amd64-0aa8b3f83466f6446bf3e1a1681b4b775a55e661a6c972cf55199ff27861a425",
       "task_keys": [
         "spider2__workday001"
       ],
-      "uri": null,
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-amd64-0aa8b3f83466f6446bf3e1a1681b4b775a55e661a6c972cf55199ff27861a425",
       "working_dir": "/workspace"
     },
     {
       "asset_id": "image-amd64-be26d87ad5011d60573552ae62df7d72a7821b081212e60d732155b10be45549",
       "base_group": "a9c9b7d2ef4cfb6a",
+      "build": {
+        "apptainer": "apptainer version 1.4.1",
+        "base_image": "docker.io/library/python@sha256:6d10e720318bd84cc3d88af92bb5a47189222e17620a2fd214da6445e4afb679",
+        "commit": "93ce3f19e72cf7427710727ed8fb75ee8b4427cd",
+        "reference_smoke": {
+          "model_requests": 0,
+          "native_rewards": [
+            {
+              "reward": 1.0
+            }
+          ],
+          "passed": true,
+          "task": "spider2__workday002"
+        },
+        "workflow_run": "https://github.com/zhuconv/dbt-bench/actions/runs/43359761397"
+      },
+      "bytes": 327806976,
       "canonical_asset": "image-be26d87ad5011d60573552ae62df7d72a7821b081212e60d732155b10be45549",
       "initial_snapshot": {
         "download_bytes": 204271616,
@@ -1076,15 +1669,16 @@
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-be26d87ad5011d60573552ae62df7d72a7821b081212e60d732155b10be45549"
       },
       "native_initializer": "images/locks/be26d87ad5011d60573552ae62df7d72a7821b081212e60d732155b10be45549-initialize.sh",
-      "oci_digest": null,
+      "oci_digest": "sha256:cd380f3da2193027139b43d903d0db4e6384e6e53c16b4863714ff0fc156d952",
       "platform": "linux-amd64",
-      "sif_sha256": null,
+      "sif_sha256": "caee3f4c4b91b8411a7cc1bf71a681270730f5eb3d186bd035abf97995b54247",
       "source": "spider2",
-      "status": "build_required",
+      "status": "published",
+      "tag": "v1-linux-amd64-caee3f4c4b91b8411a7cc1bf71a681270730f5eb3d186bd035abf97995b54247",
       "task_keys": [
         "spider2__workday002"
       ],
-      "uri": null,
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-amd64-caee3f4c4b91b8411a7cc1bf71a681270730f5eb3d186bd035abf97995b54247",
       "working_dir": "/workspace"
     }
   ],

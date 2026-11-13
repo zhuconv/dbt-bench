@@ -17,9 +17,8 @@ Follow this file exactly. When it and your own judgement disagree, stop and ask 
 The agent does the rest.
 
 Status (2026-11-12):
-- linux-arm64 (GH200) images are published.
-- linux-amd64 (H100) images and the `scripts/bench.py export` command are still being prepared.
-- Until `docs/artifacts.md` lists amd64 images and README.md documents `export`, do not start the loop.
+- linux-arm64 (GH200) and linux-amd64 (H100) images are published. Each amd64 image passed a CPU reference smoke and a Qwen Code CLI check inside the image on an x86 GitHub runner. The x86 inference lock installs and imports there too.
+- Nobody has started the model server on an H100 yet, so your first batch is also that check. If its job fails while the model server starts (for example, out of GPU memory), `run` stops. Report it in your PR, and do not change the server arguments.
 
 ## Once per server
 

@@ -34,4 +34,8 @@ This release deliberately keeps the existing server arguments intact. Do not red
 
 ## Ready gate
 
-The x64 lock and bundle assembly were CPU checked on ARM. No H100 inference service, amd64 CLI, Docker build or amd64 reference execution was run during this change. The owner builds/publishes images, fills `images/platform-images.json`, and runs `scripts/smoke_image.py` on amd64. Then workers follow the unchanged ledger claim/check loop and README preparation/export commands. Local failures are preserved and returned to the owner; workers never rerun slots themselves.
+The x64 lock and bundle assembly were first CPU checked on ARM. On 2026-11-12 GitHub Actions x86 runners then:
+- built the 33 amd64 images, ran `scripts/smoke_image.py` on each (oracle solution, native verifier reward 1), installed the x64 Qwen Code bundle inside each image with Harbor's container flags, and checked `node`, `npm` and `qwen` versions (`build-images` workflow); the images are published and registered in `images/platform-images.json`;
+- installed the x86 inference lock with `uv sync --locked` and imported vLLM 0.19.0 and Torch 2.10.0+cu128 (`check-x64-inference` workflow, no GPU).
+
+No H100 inference service has been started yet: the first batch on a new server is that check. Workers follow the unchanged ledger claim/check loop and README preparation/export commands. Local failures are preserved and returned to the owner; workers never rerun slots themselves.
