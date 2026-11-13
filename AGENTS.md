@@ -9,10 +9,10 @@ Each batch you take is a pull request from your fork:
 
 Follow this file exactly. When it and your own judgement disagree, stop and ask the experiment owner in an issue. [docs/distributed-workers.md](docs/distributed-workers.md) draws the whole workflow as a sequence diagram.
 
-**For people joining as a worker:** three things only you can do.
+**For people joining as a worker:** the repository is public, so you need no access from the owner. Three things only you can do:
 1. Get a Slurm allocation with H100 80 GB (or GH200) GPUs and Apptainer.
 2. Run `gh auth login`.
-3. Start your agent (Codex or Claude Code) in a clone of this repository and tell it: "Read AGENTS.md and work as a dbt-bench measurement worker."
+3. Clone this repository (`git clone https://github.com/zhuconv/dbt-bench`), start your agent (Codex or Claude Code) in that directory and tell it: "Read AGENTS.md and work as a dbt-bench measurement worker."
 
 The agent does the rest.
 

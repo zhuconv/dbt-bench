@@ -6,6 +6,18 @@ The original catalog contains **135 tasks**: ADE 16, Spider 55, DEB 64. The curr
 
 **All difficulty measurements and their trajectories are prohibited from training use.** Four independent valid attempts per task are used only for stratification. A success requires native and audit acceptance of the same submission.
 
+## Join as a measurement worker
+
+The repository is public; you need no access from the owner. You need your own Slurm allocation with one H100 80 GB or GH200 per job, and Apptainer. Then:
+
+```bash
+gh auth login
+git clone https://github.com/zhuconv/dbt-bench
+cd dbt-bench
+```
+
+Start Codex or Claude Code in that directory and tell it: "Read AGENTS.md and work as a dbt-bench measurement worker." The agent does the rest. It forks the repository to your account, because claims and results reach the owner as pull requests from your fork. Then it sets up the runtimes and the model and runs the loop in [AGENTS.md](AGENTS.md).
+
 ## Supported environment
 
 The tested deployment is TACC Vista GH200, Linux aarch64, Apptainer 1.4.1, Slurm, Harbor 0.25.0 and Qwen Code 0.26.5. The model is Qwen3.6-35B-A3B at the revision in `inference/qwen3.6-35b-a3b.json`; vLLM 0.19.0 and its dependencies are locked separately. Docker remains the benchmark reference backend; the current measurement release uses the reviewed Apptainer images. The owner also accepts H100 Linux x86_64 results as equivalent to ARM64 without a cross-architecture equivalence study. The amd64 images are built from the same recipes by GitHub Actions, passed a CPU reference smoke, and are registered with their digests in `images/platform-images.json`; no H100 GPU run has been made yet. Other backends remain outside this measurement release.
