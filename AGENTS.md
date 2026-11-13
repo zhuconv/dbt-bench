@@ -9,6 +9,13 @@ Each batch you take is a pull request from your fork:
 
 Follow this file exactly. When it and your own judgement disagree, stop and ask the experiment owner in an issue. [docs/distributed-workers.md](docs/distributed-workers.md) draws the whole workflow as a sequence diagram.
 
+**For people joining as a worker:** three things only you can do.
+1. Get a Slurm allocation with H100 80 GB (or GH200) GPUs and Apptainer.
+2. Run `gh auth login`.
+3. Start your agent (Codex or Claude Code) in a clone of this repository and tell it: "Read AGENTS.md and work as a dbt-bench measurement worker."
+
+The agent does the rest.
+
 Status (2026-11-12):
 - linux-arm64 (GH200) images are published.
 - linux-amd64 (H100) images and the `scripts/bench.py export` command are still being prepared.
@@ -41,7 +48,25 @@ Status (2026-11-12):
 
 ## The loop
 
-Commands are `python scripts/worker.py ...`, run from your working checkout with the two variables above set.
+Run the loop unattended with `worker.py run`. A batch takes many hours, longer than an agent session stays awake:
+
+```bash
+python scripts/worker.py run --platform P \
+  --python "$SCRATCH/dbt-bench-runtime/<runtime>/venv/bin/python" \
+  --batch-root "$SCRATCH/dbt-bench-batches" \
+  --submit-via 'timeout 60 ssh login1'   # only where compute nodes cannot run sbatch
+```
+
+Where to run it and what it does:
+- **Where:** somewhere that stays up, such as a `tmux` session on a login node (if your site allows light background processes there) or a small long-running CPU job.
+- **What:** it does steps 1–8 below on its own.
+- **When it stops:**
+  - when no batch is free (exit 0);
+  - after `--max-batches`;
+  - when a job fails (exit 4). It then has already published every finished task and commented on the PR. Report this to the experiment owner and do not resubmit.
+- **Restarting:** progress is kept in `~/.dbt-bench-worker/<worker>.json`, so a restarted `run` resumes the batch it was watching.
+
+The steps below are what `run` does. You can also run them by hand. Commands are `python scripts/worker.py ...`, run from your working checkout with the two variables above set.
 
 1. **Claim a batch:** `worker.py next --platform P`.
    - It reads the ledger on main and every open ledger PR, so work that others pushed while you were busy is respected.

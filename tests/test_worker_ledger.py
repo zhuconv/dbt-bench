@@ -244,6 +244,122 @@ class PrModeTest(LedgerRepos):
         self.assertIn(f'{ba}  finished          results 2/2', status)
 
 
+FAKE_BENCH = r'''#!/usr/bin/env python3
+import hashlib, json, os, sys
+from pathlib import Path
+args = sys.argv[1:]
+opt = lambda n: args[args.index(n) + 1]
+runs = Path(os.environ['FAKE_RUNS'])
+if args[0] == 'prepare':
+    bid, out = opt('--batch-id'), Path(opt('--output'))
+    out.mkdir(parents=True)
+    members = []
+    for t in json.loads(os.environ['FAKE_TASKS'])[bid]:
+        run = runs / bid / t
+        run.mkdir(parents=True, exist_ok=True)
+        (run / 'manifest.json').write_text(json.dumps({'identity': {'task_key': t}}))
+        members.append({'run': str(run)})
+    (out / 'manifest.json').write_text(json.dumps({'identity': {'members': members}}))
+    print(out)
+elif args[0] == 'check':
+    print('{"passed": true}')
+elif args[0] == 'sbatch-command':
+    print('echo 4242')
+elif args[0] == 'export':
+    task, out = opt('--task'), Path(opt('--output'))
+    bid = Path(opt('--batch')).name.split('--')[0]
+    out.mkdir(parents=True)
+    (out / 'summary.json').write_text(json.dumps({'batch': bid, 'task_key': task}))
+    arc = out / f'{bid}--{task}.tar.gz'
+    arc.write_bytes((bid + task).encode())
+    print(json.dumps({'summary': str(out / 'summary.json'), 'archive': str(arc)}))
+'''
+FAKE_SLURM = '#!/bin/sh\ncat "$FAKE_SLURM"\n'
+
+
+class RunLoopTest(LedgerRepos):
+    """worker.py run against fake bench.py, sacct and squeue: one batch end to end, and a failed job."""
+
+    def setUp(self):
+        super().setUp()
+        for name, text in (('bench.py', FAKE_BENCH), ('sacct', FAKE_SLURM), ('squeue', FAKE_SLURM)):
+            p = self.tmp / 'bin' / name
+            p.write_text(text)
+            p.chmod(0o755)
+        self.slurm = self.tmp / 'slurm-state'
+        self.slurm.write_text('PENDING\n')
+        self.a = self.fork('alice')
+        self.state = self.tmp / 'run-state.json'
+
+    def start(self):
+        tasks = {b: [f'{b}-t1', f'{b}-t2'] for b in self.batch_ids}
+        env = {**os.environ, 'PATH': f"{self.tmp / 'bin'}:{os.environ['PATH']}",
+               'FAKE_GH_DB': str(self.tmp / 'db.json'), 'FAKE_GH_REPOS': json.dumps(self.repos),
+               'DBT_BENCH_FORK': 'alice/dbt-bench', 'FAKE_SLURM': str(self.slurm),
+               'FAKE_RUNS': str(self.tmp / 'runs'), 'FAKE_TASKS': json.dumps(tasks)}
+        return subprocess.Popen([sys.executable, '-I', str(REPO / 'scripts' / 'worker.py'), '--ledger', str(self.a),
+                                 '--worker', 'alice', 'run', '--platform', 'p', '--python', sys.executable,
+                                 '--batch-root', str(self.tmp / 'batches'), '--bench', str(self.tmp / 'bin' / 'bench.py'),
+                                 '--state', str(self.state), '--poll', '0.2', '--max-batches', '1'],
+                                stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, env=env)
+
+    def wait(self, cond, what, timeout=60):
+        import time
+        end = time.time() + timeout
+        while time.time() < end:
+            if cond():
+                return
+            time.sleep(0.2)
+        self.fail(f'timed out waiting for {what}')
+
+    def st(self):
+        try:
+            return json.loads(self.state.read_text())
+        except (FileNotFoundError, json.JSONDecodeError):
+            return {}
+
+    def claim_state(self):
+        r = subprocess.run(['git', '--git-dir', self.repos['alice/dbt-bench'], 'show',
+                            'ledger/batch-01/alice:ledger/claims/batch-01/alice.json'], capture_output=True, text=True)
+        return json.loads(r.stdout)['state'] if r.returncode == 0 else None
+
+    def finalize(self, task):
+        (self.tmp / 'runs' / 'batch-01' / task / 'launch-result.json').write_text(
+            json.dumps({'finished_at': 'x', 'finalization_status': 'recorded_after_cleanup'}))
+
+    def test_one_batch_end_to_end(self):
+        proc = self.start()
+        self.wait(lambda: self.st().get('job') == '4242' and self.claim_state() == 'queued', 'queued claim')
+        self.slurm.write_text('RUNNING\n')
+        self.wait(lambda: self.claim_state() == 'running', 'running claim')
+        self.finalize('batch-01-t1')
+        self.wait(lambda: self.st().get('published') == ['batch-01-t1'], 'first task published')
+        self.finalize('batch-01-t2')
+        self.slurm.write_text('COMPLETED\n')
+        out = proc.communicate(timeout=60)[0]
+        self.assertEqual(proc.returncode, 0, out)
+        self.assertIn('finished batch-01', out)
+        self.assertEqual(self.claim_state(), 'finished')
+        db = json.loads((self.tmp / 'db.json').read_text())
+        self.assertEqual([p['draft'] for p in db['prs'] if p['owner'] == 'alice'], [False])
+        files = subprocess.run(['git', '--git-dir', self.repos['alice/dbt-bench'], 'ls-tree', '-r', '--name-only',
+                                'ledger/batch-01/alice', 'ledger/results'], capture_output=True, text=True).stdout.split()
+        self.assertEqual(sorted(files), ['ledger/results/batch-01/batch-01-t1/summary.json',
+                                         'ledger/results/batch-01/batch-01-t2/summary.json'])
+
+    def test_failed_job_stops_without_resubmitting(self):
+        proc = self.start()
+        self.wait(lambda: self.st().get('job') == '4242', 'submission')
+        self.slurm.write_text('RUNNING\n')
+        self.finalize('batch-01-t1')
+        self.wait(lambda: self.st().get('published') == ['batch-01-t1'], 'first task published')
+        self.slurm.write_text('FAILED\n')
+        out = proc.communicate(timeout=60)[0]
+        self.assertEqual(proc.returncode, 4, out)
+        self.assertIn("unpublished ['batch-01-t2']", out)
+        self.assertEqual(self.claim_state(), 'running')
+
+
 class DirectModeTest(LedgerRepos):
     seed_claims = {('batch-01', 'owner'): claim('owner', 'queued', hours=24 * 365, at=dt.datetime.now(dt.timezone.utc))}
 

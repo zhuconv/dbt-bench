@@ -38,7 +38,7 @@ Claim states:
   finished  the batch is done
   released  given up before running
 """
-import argparse, base64, datetime as dt, hashlib, json, os, re, subprocess, sys
+import argparse, base64, datetime as dt, hashlib, json, os, re, subprocess, sys, time
 from pathlib import Path
 
 UPSTREAM = 'zhuconv/dbt-bench'
@@ -262,7 +262,8 @@ def cmd_status(L, a):
         print(f'{bid}  {label:<17} results {len(results)}/{len(tasks)}  {who}{job}{extra}')
 
 
-def cmd_next(L, a):
+def claim_next(L, platform, no_takeover=False):
+    """Claim the first free batch (or take over a queued one); return {'batch', 'pr', 'took_over'}."""
     if L.mode != 'pr':
         # Claim order must come from one authority. PR numbers are assigned by GitHub in
         # creation order; self-reported timestamps on main are not. Maintainers claim new
@@ -273,27 +274,25 @@ def cmd_next(L, a):
         rows = [r for r in L.view() if r[0] not in skip]
         free = [r for r in rows if r[2] == 'free']
         taken = [r for r in rows if r[2] == 'queued' and r[3]['via'] == 'main'
-                 and r[3]['worker'] != L.worker and not a.no_takeover]
+                 and r[3]['worker'] != L.worker and not no_takeover]
         if not free and not taken:
             raise Conflict('no batch is free')
         bid, _, label, holder, _, _ = (free or taken)[0]
         t = now()
-        claim = {'batch': bid, 'worker': L.worker, 'platform': a.platform, 'state': 'claimed',
+        claim = {'batch': bid, 'worker': L.worker, 'platform': platform, 'state': 'claimed',
                  'claimed_at': iso(t), 'lease_until': iso(t + dt.timedelta(hours=LEASE_HOURS['claimed']))}
         if label == 'queued':
             claim['took_over_from'] = {'worker': holder['worker'], 'slurm_job': holder.get('slurm_job')}
         L.commit(bid, f'ledger: claim {bid} ({L.worker})',
                  lambda root: [write_json(root, L.claim_rel(bid), claim)], start=True)
-        if L.mode == 'pr':
-            gh('pr', 'create', '--repo', UPSTREAM, '--base', 'main', '--draft',
-               '--head', f"{L.fork().split('/')[0]}:{L.branch(bid)}",
-               '--title', f'ledger: {bid} ({L.worker})',
-               '--body', f'Claim and results for {bid} by worker `{L.worker}` on `{a.platform}`. '
-                         'Opened by scripts/worker.py; see AGENTS.md.')
+        gh('pr', 'create', '--repo', UPSTREAM, '--base', 'main', '--draft',
+           '--head', f"{L.fork().split('/')[0]}:{L.branch(bid)}",
+           '--title', f'ledger: {bid} ({L.worker})',
+           '--body', f'Claim and results for {bid} by worker `{L.worker}` on `{platform}`. '
+                     'Opened by scripts/worker.py; see AGENTS.md.')
         _, _, label2, holder2, _, _ = next(r for r in L.view() if r[0] == bid)
         if holder_is_me(L, holder2):
-            print(json.dumps({'batch': bid, 'pr': holder2.get('pr'), 'took_over': claim.get('took_over_from')}))
-            return
+            return {'batch': bid, 'pr': holder2.get('pr'), 'took_over': claim.get('took_over_from')}
         # Lost a race: someone else holds the batch now. Withdraw and try the next one.
         p = L.my_pr(bid)
         if p:
@@ -301,6 +300,10 @@ def cmd_next(L, a):
                '--comment', f'Lost the race for {bid}; withdrawn automatically.')
         skip.add(bid)
     raise RuntimeError('could not claim a batch after several races')
+
+
+def cmd_next(L, a):
+    print(json.dumps(claim_next(L, a.platform, a.no_takeover)))
 
 
 def mine(L, bid):
@@ -334,31 +337,39 @@ def update_claim(L, bid, message, **changes):
     return claim
 
 
-def cmd_heartbeat(L, a):
-    holder, _ = mine(L, a.batch)
-    if holder['state'] == 'running' and a.state == 'queued':
+def heartbeat(L, bid, state, slurm_job=None):
+    holder, _ = mine(L, bid)
+    if holder['state'] == 'running' and state == 'queued':
         raise Conflict('a running batch cannot go back to queued')
     t = now()
-    changes = {'state': a.state, 'heartbeat_at': iso(t),
-               'lease_until': iso(t + dt.timedelta(hours=LEASE_HOURS[a.state]))}
-    if a.slurm_job:
-        changes['slurm_job'] = a.slurm_job
-    update_claim(L, a.batch, f'ledger: {a.batch} {a.state} ({L.worker})', **changes)
+    changes = {'state': state, 'heartbeat_at': iso(t),
+               'lease_until': iso(t + dt.timedelta(hours=LEASE_HOURS[state]))}
+    if slurm_job:
+        changes['slurm_job'] = slurm_job
+    update_claim(L, bid, f'ledger: {bid} {state} ({L.worker})', **changes)
+
+
+def cmd_heartbeat(L, a):
+    heartbeat(L, a.batch, a.state, a.slurm_job)
 
 
 def cmd_publish(L, a):
-    summary = json.loads(Path(a.summary).read_text())
-    if summary.get('batch') != a.batch or summary.get('task_key') != a.task:
+    publish(L, a.batch, a.task, a.summary, a.raw)
+
+
+def publish(L, bid, task, summary_path, raw_path):
+    summary = json.loads(Path(summary_path).read_text())
+    if summary.get('batch') != bid or summary.get('task_key') != task:
         raise Conflict('summary batch/task_key do not match the arguments')
-    _, tasks = mine(L, a.batch)
-    if a.task not in tasks:
-        raise Conflict(f'{a.task} is not part of {a.batch}')
-    rel = f'ledger/results/{a.batch}/{a.task}/summary.json'
+    _, tasks = mine(L, bid)
+    if task not in tasks:
+        raise Conflict(f'{task} is not part of {bid}')
+    rel = f'ledger/results/{bid}/{task}/summary.json'
     if L.show(rel) is not None:
         raise Conflict(f'{rel} already exists on main')
-    raw = Path(a.raw)
+    raw = Path(raw_path)
     digest = sha256(raw)
-    asset = f'{a.batch}--{a.task}--{L.worker}--{digest[:12]}{"".join(raw.suffixes)}'
+    asset = f'{bid}--{task}--{L.worker}--{digest[:12]}{"".join(raw.suffixes)}'
     repo = L.fork() if L.mode == 'pr' else UPSTREAM
     if gh('release', 'view', RAW_RELEASE, '--repo', repo, check=False).returncode:
         gh('release', 'create', RAW_RELEASE, '--repo', repo, '--title', 'Raw run archives',
@@ -381,18 +392,169 @@ def cmd_publish(L, a):
             raise Conflict(f'{rel} already exists')
         return [write_json(root, rel, summary)]
 
-    L.commit(a.batch, f'ledger: results {a.batch} {a.task} ({L.worker})', mutate)
-    print(f'published {a.batch}/{a.task}; raw archive {asset}')
+    L.commit(bid, f'ledger: results {bid} {task} ({L.worker})', mutate)
+    print(f'published {bid}/{task}; raw archive {asset}')
 
 
-def cmd_finish(L, a):
-    update_claim(L, a.batch, f'ledger: finish {a.batch} ({L.worker})', state='finished', finished_at=iso(now()))
+def finish(L, bid, note=None):
+    update_claim(L, bid, f'ledger: finish {bid} ({L.worker})', state='finished', finished_at=iso(now()))
     if L.mode == 'pr':
-        p = L.my_pr(a.batch)
+        p = L.my_pr(bid)
         if p:
             gh('pr', 'ready', str(p['number']), '--repo', UPSTREAM)
             gh('pr', 'comment', str(p['number']), '--repo', UPSTREAM, '--body',
-               f'{a.batch} finished; ready for the experiment owner to review and merge.')
+               note or f'{bid} finished; ready for the experiment owner to review and merge.')
+
+
+def cmd_finish(L, a):
+    finish(L, a.batch)
+
+
+def comment(L, bid, body):
+    if L.mode == 'pr':
+        p = L.my_pr(bid)
+        if p:
+            gh('pr', 'comment', str(p['number']), '--repo', UPSTREAM, '--body', body)
+
+
+# -- the unattended loop -------------------------------------------------------------------
+CODE = Path(__file__).resolve().parents[1]
+ENDED = {'COMPLETED', 'FAILED', 'TIMEOUT', 'CANCELLED', 'OUT_OF_MEMORY', 'NODE_FAIL', 'PREEMPTED',
+         'BOOT_FAIL', 'DEADLINE', 'GONE'}
+
+
+def bench(a, *args):
+    env = {**os.environ, 'PYTHONPATH': f"{CODE / 'src'}{os.pathsep}{CODE / 'scripts'}",
+           'PYTHONDONTWRITEBYTECODE': '1'}
+    p = subprocess.run([a.python, str(a.bench), *args], capture_output=True, text=True, env=env)
+    if p.returncode:
+        raise RuntimeError(f"bench.py {args[0]} failed: {(p.stderr or p.stdout).strip()[-600:]}")
+    return p.stdout
+
+
+def submit(a, command):
+    """Run the printed sbatch command, through --submit-via when compute nodes cannot submit."""
+    if a.submit_via:
+        p = subprocess.run([*a.submit_via.split(), command], stdin=subprocess.DEVNULL, capture_output=True, text=True)
+    else:
+        p = subprocess.run(command, shell=True, stdin=subprocess.DEVNULL, capture_output=True, text=True)
+    lines = [x.strip() for x in p.stdout.splitlines() if x.strip()]
+    job = lines[-1].split(';')[0] if lines else ''
+    if p.returncode or not job.isdigit():
+        raise RuntimeError(f'submission failed: {(p.stderr or p.stdout).strip()[-400:]}')
+    return job
+
+
+def job_state(job):
+    p = subprocess.run(['sacct', '-X', '-n', '-P', '-j', job, '-o', 'State'], capture_output=True, text=True)
+    state = p.stdout.split()[0] if p.returncode == 0 and p.stdout.split() else ''
+    if not state:
+        q = subprocess.run(['squeue', '-h', '-j', job, '-o', '%T'], capture_output=True, text=True)
+        state = q.stdout.strip() or 'GONE'
+    return state
+
+
+def finalized_tasks(batch_dir):
+    """Task keys whose member run has recorded its final launch result."""
+    out = []
+    for entry in json.loads((Path(batch_dir) / 'manifest.json').read_text())['identity']['members']:
+        run = Path(entry['run'])
+        try:
+            launch = json.loads((run / 'launch-result.json').read_text())
+            key = json.loads((run / 'manifest.json').read_text())['identity']['task_key']
+        except (FileNotFoundError, json.JSONDecodeError, KeyError):
+            continue
+        if launch.get('finished_at') and launch.get('finalization_status') == 'recorded_after_cleanup':
+            out.append(key)
+    return out
+
+
+def cmd_run(L, a):
+    """Claim, run and publish batches until none is free, a job fails, or --max-batches is reached.
+
+    Progress is kept in --state, so a restarted loop resumes the batch it was watching.
+    """
+    state_path = Path(a.state or Path.home() / '.dbt-bench-worker' / f'{L.worker}.json')
+    state_path.parent.mkdir(parents=True, exist_ok=True)
+    st = json.loads(state_path.read_text()) if state_path.exists() else {'done': 0}
+
+    def save():
+        state_path.write_text(json.dumps(st, indent=1, sort_keys=True))
+
+    def say(msg):
+        print(f"{iso(now())} {msg}", flush=True)
+
+    while True:
+        if not st.get('batch'):
+            if a.max_batches and st['done'] >= a.max_batches:
+                say(f"stopping: {st['done']} batches done (--max-batches)")
+                return
+            try:
+                got = claim_next(L, a.platform, a.no_takeover)
+            except Conflict as e:
+                say(f'stopping: {e}')
+                return
+            bid = got['batch']
+            batch_dir = Path(a.batch_root).resolve() / f"{bid}--{L.worker}--{now().strftime('%Y%m%dT%H%M%SZ')}"
+            st.update(batch=bid, dir=str(batch_dir), job=None, published=[], heartbeat_at=None)
+            save()
+            say(f"claimed {bid} (PR {got['pr']}, took over {got['took_over']}); preparing {batch_dir}")
+            try:
+                bench(a, 'prepare', '--batch-id', bid, '--output', str(batch_dir))
+                bench(a, 'check', '--batch', str(batch_dir))
+                mine(L, bid)                               # check the ledger right before submitting
+                command = bench(a, 'sbatch-command', '--batch', str(batch_dir)).strip()
+                st['job'] = submit(a, command)
+            except (RuntimeError, Conflict) as e:
+                # Nothing ran: give the batch back and stop, so a broken setup cannot churn PRs.
+                say(f'stopping: could not launch {bid}: {e}')
+                if not isinstance(e, Conflict):
+                    comment(L, bid, f'Could not launch {bid}; releasing it. Error: {str(e)[-500:]}')
+                    p = L.my_pr(bid)
+                    if p:
+                        gh('pr', 'close', str(p['number']), '--repo', UPSTREAM, '--delete-branch')
+                st = {'done': st['done']}
+                save()
+                sys.exit(4)
+            save()
+            heartbeat(L, bid, 'queued', st['job'])
+            st['heartbeat_at'] = iso(now())
+            save()
+            say(f"submitted {bid} as job {st['job']}")
+        bid, job = st['batch'], st['job']
+        slurm = job_state(job)
+        holder, tasks = mine(L, bid)
+        if slurm == 'RUNNING' and (holder['state'] != 'running'
+                                   or now() - parse(st['heartbeat_at']) > dt.timedelta(hours=2)):
+            heartbeat(L, bid, 'running')
+            st['heartbeat_at'] = iso(now())
+            save()
+        for task in finalized_tasks(st['dir']):
+            if task in st['published']:
+                continue
+            out = Path(a.batch_root).resolve() / 'exports' / f"{bid}--{task}--{now().strftime('%Y%m%dT%H%M%SZ')}"
+            try:
+                receipt = json.loads(bench(a, 'export', '--batch', st['dir'], '--task', task, '--output', str(out)))
+            except RuntimeError as e:
+                say(f'export of {bid}/{task} failed; will retry: {str(e)[-300:]}')
+                continue
+            publish(L, bid, task, receipt['summary'], receipt['archive'])
+            st['published'].append(task)
+            save()
+            say(f'published {bid}/{task}')
+        if slurm in ENDED:
+            if set(tasks) <= set(st['published']):
+                finish(L, bid)
+                say(f'finished {bid}')
+                st = {'done': st['done'] + 1}
+                save()
+                continue
+            missing = sorted(set(tasks) - set(st['published']))
+            comment(L, bid, f'Job {job} ended as {slurm} with {len(missing)} task(s) unpublished: {missing}. '
+                            'Stopping without resubmitting; the experiment owner decides about reruns.')
+            say(f'stopping: job {job} ended as {slurm}; unpublished {missing}; see the PR')
+            sys.exit(4)
+        time.sleep(a.poll)
 
 
 def cmd_release(L, a):
@@ -434,6 +596,16 @@ def main():
     s.add_argument('task')
     s.add_argument('summary')
     s.add_argument('raw')
+    s = sub.add_parser('run', help='claim, run and publish batches unattended')
+    s.add_argument('--platform', required=True, help='e.g. linux-amd64/H100-80GB/apptainer')
+    s.add_argument('--python', required=True, help='the runtime Python from configs/local.toml')
+    s.add_argument('--batch-root', required=True, help='where prepared batch directories go (e.g. on SCRATCH)')
+    s.add_argument('--submit-via', default='', help="prefix for submitting, e.g. 'timeout 60 ssh login1'")
+    s.add_argument('--bench', default=str(CODE / 'scripts' / 'bench.py'))
+    s.add_argument('--state', help='progress file (default ~/.dbt-bench-worker/<worker>.json)')
+    s.add_argument('--poll', type=float, default=300)
+    s.add_argument('--max-batches', type=int, default=0)
+    s.add_argument('--no-takeover', action='store_true')
     a = p.parse_args()
     if not a.ledger:
         p.error('set DBT_BENCH_LEDGER or pass --ledger')
