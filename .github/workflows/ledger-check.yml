@@ -1,0 +1,37 @@
+name: ledger-check
+
+# Checks ledger pull requests (branches ledger/<batch>/<worker>, opened by scripts/worker.py).
+# The checker runs from the base branch, so a PR cannot change the rules it is checked by.
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+    paths: ['ledger/**']
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    if: startsWith(github.head_ref, 'ledger/')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the pull request
+        uses: actions/checkout@v4
+        with:
+          path: pr
+          fetch-depth: 0
+      - name: Check out the base branch (trusted checker)
+        uses: actions/checkout@v4
+        with:
+          path: base
+          ref: ${{ github.event.pull_request.base.sha }}
+      - name: Check the ledger change
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_REF: ${{ github.head_ref }}
+          DRAFT: ${{ github.event.pull_request.draft }}
+        run: |
+          set -eu
+          args="--repo pr --base $BASE_SHA --branch $HEAD_REF"
+          if [ "$DRAFT" = "false" ]; then args="$args --verify-archives"; fi
+          python3 base/scripts/ledger_check.py $args
