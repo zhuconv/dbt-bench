@@ -130,6 +130,39 @@ jobs:
             --sif "${{ steps.sif.outputs.path }}" --sif-sha256 "${{ steps.sif.outputs.sha256 }}" \
             --output "$RUNNER_TEMP/smoke"
 
+      # Built from the locked upstream tarballs and never uploaded: the bundle carries
+      # LGPL binaries that this project does not redistribute.
+      - name: Build the linux-x64 Qwen Code bundle
+        id: qwen_build
+        if: steps.smoke.outcome == 'success'
+        run: |
+          uv run --no-project --python 3.13 python scripts/build_qwen_platform.py \
+            --cache "$RUNNER_TEMP/qwen-cache" --output "$RUNNER_TEMP/qwen-x64"
+
+      - name: Install it in the image and run node, npm and qwen
+        id: qwen_cli
+        if: steps.qwen_build.outcome == 'success'
+        env:
+          SIF: ${{ steps.sif.outputs.path }}
+        run: |
+          set -euo pipefail
+          b="$RUNNER_TEMP/qwen-x64"
+          a=$(jq -r .files.archive.sha256 "$b/bundle.json")
+          i=$(jq -r .files.inventory.sha256 "$b/bundle.json")
+          node=$(jq -r .node_version "$b/bundle.json")
+          npm=$(jq -r .npm_version "$b/bundle.json")
+          apptainer exec --containall --no-home --bind "$b:/bundle:ro" "$SIF" env HOME=/tmp/qwen-home sh -c '
+            set -e
+            python3 /bundle/install_bundle.py --archive /bundle/bundle.tar.gz --inventory /bundle/inventory.json \
+              --archive-sha256 "$1" --inventory-sha256 "$2" --output /tmp/qwen-home/install.json
+            export PATH="/tmp/qwen-home/.nvm/versions/node/v$3/bin:$PATH"
+            echo "node $(node --version)"
+            echo "npm $(npm --version)"
+            echo "qwen $(qwen --version)"' sh "$a" "$i" "$node" | tee "$RUNNER_TEMP/qwen-cli.txt"
+          grep -qx "node v$node" "$RUNNER_TEMP/qwen-cli.txt"
+          grep -qx "npm $npm" "$RUNNER_TEMP/qwen-cli.txt"
+          grep -q '^qwen .*0\.26\.5' "$RUNNER_TEMP/qwen-cli.txt"
+
       - name: Write the build record
         if: always()
         env:
@@ -147,14 +180,16 @@ jobs:
             cp "$RUNNER_TEMP/smoke/smoke-result.json" "$RUNNER_TEMP/smoke/harbor.log" "$rec/" 2>/dev/null || true
             tar -C "$RUNNER_TEMP/smoke" -czf "$rec/smoke-jobs.tar.gz" jobs 2>/dev/null || true
           fi
+          cp "$RUNNER_TEMP/qwen-cli.txt" "$rec/" 2>/dev/null || true
           python3 - "$rec" <<'PY'
           import json, os, subprocess, sys
           from pathlib import Path
           rec = Path(sys.argv[1])
           steps = json.loads(os.environ['OUTCOMES'])
-          order = ['fetch', 'ctx', 'build', 'sif', 'runtime', 'smoke']
+          order = ['fetch', 'ctx', 'build', 'sif', 'runtime', 'smoke', 'qwen_build', 'qwen_cli']
           failed = next((s for s in order if steps.get(s, {}).get('outcome') not in ('success',)), None)
           smoke = rec / 'smoke-result.json'
+          cli = rec / 'qwen-cli.txt'
           version = subprocess.run(['apptainer', '--version'], capture_output=True, text=True).stdout.strip()
           record = {
               'image': os.environ['IMAGE'], 'task': os.environ['TASK'], 'group': os.environ['GROUP'],
@@ -166,6 +201,7 @@ jobs:
               'run_attempt': os.environ['GITHUB_RUN_ATTEMPT'], 'commit': os.environ['GITHUB_SHA'],
               'stage_failed': failed,
               'smoke': json.loads(smoke.read_text()) if smoke.is_file() else {},
+              'qwen_cli_in_image': cli.read_text().splitlines() if cli.is_file() else None,
               'step_outcomes': {k: v.get('outcome') for k, v in steps.items()},
           }
           (rec / 'build-record.json').write_text(json.dumps(record, indent=2, sort_keys=True) + '\n')
@@ -181,7 +217,7 @@ jobs:
           retention-days: 90
 
       - name: Upload the SIF
-        if: steps.smoke.outcome == 'success'
+        if: steps.smoke.outcome == 'success' && steps.qwen_cli.outcome == 'success'
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: sif-${{ inputs.image }}
