@@ -1,0 +1,44 @@
+# Installs the locked x86_64 inference environment (vLLM 0.19.0, Torch cu128) on a
+# GitHub x86 runner and imports it. No GPU and no model: this only shows that
+# `uv sync --locked` succeeds and the packages load, before an H100 worker tries.
+name: check-x64-inference
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  install:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Free disk space
+        run: |
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL
+          df -h "$RUNNER_TEMP"
+
+      - uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2 # v10.3.3
+
+      - name: uv sync --locked
+        run: |
+          UV_PROJECT_ENVIRONMENT="$RUNNER_TEMP/inference-x64" UV_CACHE_DIR="$RUNNER_TEMP/uv-cache" \
+            uv sync --locked --project inference/x86_64 --python 3.12
+          du -sh "$RUNNER_TEMP/inference-x64"
+
+      - name: Import vLLM and Torch
+        run: |
+          "$RUNNER_TEMP/inference-x64/bin/python" - <<'PY'
+          import importlib.metadata as m, json, platform
+          import torch, vllm
+          versions = {p: m.version(p) for p in ('vllm', 'torch', 'torchvision', 'torchaudio', 'transformers')}
+          print(json.dumps({'machine': platform.machine(), 'versions': versions,
+                            'torch_cuda_build': torch.version.cuda, 'gpu_available': torch.cuda.is_available()}, indent=1))
+          assert versions['vllm'] == '0.19.0', versions
+          assert torch.version.cuda and torch.version.cuda.startswith('12.8'), torch.version.cuda
+          PY
