@@ -149,19 +149,18 @@ jobs:
           b="$RUNNER_TEMP/qwen-x64"
           a=$(jq -r .files.archive.sha256 "$b/bundle.json")
           i=$(jq -r .files.inventory.sha256 "$b/bundle.json")
-          node=$(jq -r .node_version "$b/bundle.json")
-          npm=$(jq -r .npm_version "$b/bundle.json")
-          apptainer exec --containall --no-home --bind "$b:/bundle:ro" "$SIF" env HOME=/tmp/qwen-home sh -c '
-            set -e
-            python3 /bundle/install_bundle.py --archive /bundle/bundle.tar.gz --inventory /bundle/inventory.json \
-              --archive-sha256 "$1" --inventory-sha256 "$2" --output /tmp/qwen-home/install.json
-            export PATH="/tmp/qwen-home/.nvm/versions/node/v$3/bin:$PATH"
-            echo "node $(node --version)"
-            echo "npm $(npm --version)"
-            echo "qwen $(qwen --version)"' sh "$a" "$i" "$node" | tee "$RUNNER_TEMP/qwen-cli.txt"
-          grep -qx "node v$node" "$RUNNER_TEMP/qwen-cli.txt"
-          grep -qx "npm $npm" "$RUNNER_TEMP/qwen-cli.txt"
-          grep -q '^qwen .*0\.26\.5' "$RUNNER_TEMP/qwen-cli.txt"
+          # Same container flags as Harbor's Apptainer environment, and the same install and
+          # version check as the Qwen adapter (harbor/agents/installed/qwen_code.py).
+          apptainer exec --no-mount home,tmp,cwd,hostfs,bind-paths --writable-tmpfs --fakeroot --containall --pid \
+            --bind "$b:/bundle:ro" "$SIF" bash -c '
+              set -eo pipefail
+              python3 /bundle/install_bundle.py --archive /bundle/bundle.tar.gz --inventory /bundle/inventory.json \
+                --archive-sha256 "$1" --inventory-sha256 "$2" --output /tmp/locked-install.json >&2
+              . ~/.nvm/nvm.sh; node --version; npm --version; qwen --version' bash "$a" "$i" \
+            | tee "$RUNNER_TEMP/qwen-cli.txt"
+          printf '%s\n' "v$(jq -r .node_version "$b/bundle.json")" "$(jq -r .npm_version "$b/bundle.json")" 0.26.5 \
+            > "$RUNNER_TEMP/qwen-expected.txt"
+          diff "$RUNNER_TEMP/qwen-expected.txt" <(tail -n 3 "$RUNNER_TEMP/qwen-cli.txt")
 
       - name: Write the build record
         if: always()
