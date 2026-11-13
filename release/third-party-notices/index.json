@@ -1,0 +1,79 @@
+[
+  {
+    "file": "release/third-party-notices/ade-license.txt",
+    "name": "ade-license",
+    "scope_note": "Upstream notice; preserve applicable copyright/attribution.",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "source_url": "https://raw.githubusercontent.com/dbt-labs/ade-bench/c305600ebf17e7e7c4550bd401b6ddb530beb7c8/LICENSE"
+  },
+  {
+    "file": "release/third-party-notices/spider-license.txt",
+    "name": "spider-license",
+    "scope_note": "Upstream notice; preserve applicable copyright/attribution.",
+    "sha256": "fc8aef2000733079c37d42876179d928ae1634dbe088b81bf54e0f14c68aa1a3",
+    "source_url": "https://raw.githubusercontent.com/xlang-ai/Spider2/cafb867313aab4e674652054198f383cf4018943/LICENSE"
+  },
+  {
+    "file": "release/third-party-notices/harbor-adapter-license.txt",
+    "name": "harbor-adapter-license",
+    "scope_note": "Upstream notice; preserve applicable copyright/attribution.",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "source_url": "https://raw.githubusercontent.com/harbor-framework/harbor/fd9af60ae6b804dc76c282b172663e56c0811231/LICENSE"
+  },
+  {
+    "file": "release/third-party-notices/deb-license.txt",
+    "name": "deb-license",
+    "scope_note": "Upstream notice; preserve applicable copyright/attribution.",
+    "sha256": "eed3d167162b8037bbdf23872b8c91692931a6452c23be199949536061c8d1f1",
+    "source_url": "https://raw.githubusercontent.com/Snowflake-Labs/data-eng-bench/a3278ad102829a6084dde086244a0ef665a8011c/LICENSE"
+  },
+  {
+    "file": "release/third-party-notices/deb-notice.txt",
+    "name": "deb-notice",
+    "scope_note": "Upstream notice; preserve applicable copyright/attribution.",
+    "sha256": "9353aad1df76099d45c1f66e29652e6a0d572c75670dd8efff929ba34176788a",
+    "source_url": "https://raw.githubusercontent.com/Snowflake-Labs/data-eng-bench/a3278ad102829a6084dde086244a0ef665a8011c/NOTICE"
+  },
+  {
+    "file": "release/third-party-notices/qwen-license.txt",
+    "name": "qwen-license",
+    "scope_note": "Upstream notice; preserve applicable copyright/attribution.",
+    "sha256": "55367b61ccd2a016a0159ad886bd66a3ee6cb5e873d0c75c803c897dd245b075",
+    "source_url": "https://raw.githubusercontent.com/QwenLM/qwen-code/v0.26.5/LICENSE"
+  },
+  {
+    "file": "release/third-party-notices/node-license.txt",
+    "name": "node-license",
+    "scope_note": "Upstream notice; preserve applicable copyright/attribution.",
+    "sha256": "c738ae413cf561f174e34f6961f8ca458aae2369a73640dda6234c629b98bcc4",
+    "source_url": "https://raw.githubusercontent.com/nodejs/node/v22.23.4/LICENSE"
+  },
+  {
+    "file": "release/third-party-notices/duckdb-license.txt",
+    "name": "duckdb-license",
+    "scope_note": "Upstream notice; preserve applicable copyright/attribution.",
+    "sha256": "7e17fd31249fa875cb3b1c5e05c6c3e99b75509f6a2804ca176c217834de1dcb",
+    "source_url": "https://raw.githubusercontent.com/duckdb/duckdb/v1.2.2/LICENSE"
+  },
+  {
+    "file": "release/third-party-notices/fivetran-license.txt",
+    "name": "fivetran-license",
+    "scope_note": "Upstream notice; preserve applicable copyright/attribution.",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "source_url": "https://raw.githubusercontent.com/fivetran/dbt_asana/v0.8.1/LICENSE"
+  },
+  {
+    "file": "release/third-party-notices/bun-license.txt",
+    "name": "bun-license",
+    "scope_note": "Upstream notice; preserve applicable copyright/attribution.",
+    "sha256": "362fe32c954ec829240bd7429c53d705eef08c6bfa45ffc2d02005f857cba4dd",
+    "source_url": "https://raw.githubusercontent.com/oven-sh/bun/bun-v1.4.4/LICENSE.md"
+  },
+  {
+    "file": "release/third-party-notices/libvips-license.txt",
+    "name": "libvips-license",
+    "scope_note": "Reference notice, not blanket license coverage of every bundled component. The libvips reference version must be reconciled to the packaged binary before publication.",
+    "sha256": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551",
+    "source_url": "https://raw.githubusercontent.com/libvips/libvips/v8.17.3/LICENSE"
+  }
+]

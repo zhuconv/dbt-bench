@@ -1,6 +1,6 @@
 # DBT Bench
 
-Pinned Harbor + Qwen Code evaluation for ADE-bench, Spider2-DBT and data-eng-bench (DEB), with separate native and audit scores. Intended repository: `zhuconv/dbt-bench`.
+Pinned Harbor + Qwen Code evaluation for ADE-bench, Spider2-DBT and data-eng-bench (DEB), with separate native and audit scores. Licensed under Apache-2.0; see [License](#license).
 
 The original catalog contains **135 tasks**: ADE 16, Spider 55, DEB 64. The current qualified measurement population contains **67 tasks**: ADE 15, Spider 16, DEB 36. This is a candidate count, not 67 completed difficulty measurements or training-ready traces. See `catalog/measurement-tasks.json`. The new train/test split has not been drawn or frozen. Existing splits are retained as history.
 
@@ -36,7 +36,21 @@ export DBT_BENCH_LOCAL_CONFIG="$PWD/configs/local.toml"
 
 Fill your allocation, artifact/cache locations, patched Python, vLLM executable, model snapshot, Qwen bundle and CUDA toolchain. These fields only control deployment coordinates. Model settings, seeds, concurrency, attempts and native budgets come from locked protocol files.
 
-`release/assets.json` lists immutable prepared task trees, SIF images, Qwen files and qualification records by content hash. Obtain the reviewed objects from the project owner's approved shared artifact store, then create the JSON `asset_map` named in local config: each asset ID maps to your local file/directory. The GitHub repository does **not** contain the warehouse, model weights, SIFs, traces or full evidence. A public SIF/evidence download endpoint has not been selected; absence of an asset is a blocking error, never a switch to another image. See [asset acquisition](docs/artifacts.md).
+`release/assets.json` lists **171 external objects**: 33 SIF images, 67 prepared task trees, 67 qualification records, and 4 Qwen Code bundle files. The images are published on GHCR. The task trees and the qualification records are attachments to the `assets-v1-20261112` GitHub Release. The Qwen Code bundle is not redistributed; build it yourself as described below. The 67 qualification records are evidence indexes, not a complete audit bundle. The published bytes are exactly the measured ones, so historical build paths inside them were left in place. See [the publication review](docs/asset-publication.md).
+
+Images use one package, `ghcr.io/zhuconv/dbt-bench-images`, with a distinct tag `v1-linux-arm64-<full SIF SHA256>` for each image. Pull and verify an image as follows (replace the digest with the selected image's `sha256` from `release/assets.json`):
+
+```bash
+image_sha256='<64 hexadecimal characters from release/assets.json>'
+image_path="$SCRATCH/dbt-bench-assets/image-${image_sha256}.sif"
+mkdir -p "$(dirname "$image_path")"
+apptainer pull "$image_path" "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-${image_sha256}"
+printf '%s  %s\n' "$image_sha256" "$image_path" | sha256sum --check --strict
+```
+
+The SIF SHA256 is the image identity; the OCI manifest digest is a different value and is not used for verification. Task archives and the qualification index archive are attachments to the `assets-v1-20261112` Release. Check both the downloaded archive SHA256 and the extracted task/file hashes; commands are in [asset acquisition](docs/artifacts.md). Create the private JSON `asset_map` named in local config, mapping each asset ID to its verified local file/directory. Missing assets remain blocking errors.
+
+The Qwen Code bundle (Qwen Code 0.26.5, Node 22.23.4 and npm 10.9.9 for Linux ARM64) is not redistributed, because it carries third-party binaries under LGPL terms. Build it from the official npm and Node downloads pinned in `runtime/qwen-code/` (see its README and `scripts/build_qwen_bundle.py`). Every package file is checked against `runtime/qwen-code/native-installation.json`. A rebuilt bundle has its own archive identity.
 
 For the public model, `scripts/prefetch_smoke_model.py` downloads the exact pinned revision and checks every file against HF metadata. The full expected inventory is also in `release/model-files.json`. Set `model_snapshot` to the verified snapshot path. No model request is sent during download.
 
@@ -79,4 +93,8 @@ PYTHONPATH=src:scripts "$runtime_python" -m unittest   tests.test_release_portab
 
 These checks use small fixtures and do not count as benchmark runs. Older task-specific tests/scripts may additionally require the external qualification archive; source is retained for review and reuse. The release's portable GPU path has CPU preparation/equivalence coverage, but no new GPU run was launched from this export. The active experiment's separate runtime GPU validation is tracked independently.
 
-See [experiment protocol](docs/experiment-protocol.md), [release scope](docs/release-scope.md), and [asset acquisition](docs/artifacts.md). License selection is pending; no project license is asserted. Upstream assets retain their own terms and attribution.
+See [experiment protocol](docs/experiment-protocol.md), [release scope](docs/release-scope.md), and [asset acquisition](docs/artifacts.md).
+
+## License
+
+The code, patches, checkers and documentation in this repository are licensed under the Apache License 2.0 (`LICENSE`). Task content derives from ADE-bench (Apache-2.0), Spider 2.0 / Spider2-DBT (MIT) and data-eng-bench (Apache-2.0). These and the other third-party components keep their own licenses; see `NOTICE` and `release/third-party-notices/`. The published images are based on Debian 13. `release/third-party-notices/os-sources-unique.tsv` lists the Debian source package and version behind every installed package, with a snapshot.debian.org link; `os-source-packages.tsv` gives the per-image list.

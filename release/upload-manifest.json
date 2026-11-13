@@ -1,0 +1,2278 @@
+{
+  "counts": {
+    "qualification-records": 1,
+    "sif": 33,
+    "task-archive": 67
+  },
+  "date": "2026-11-12",
+  "ghcr_package": "ghcr.io/zhuconv/dbt-bench-images",
+  "not_redistributed": {
+    "qwen-code-0.26.5-linux-arm64": "Build from runtime/qwen-code locks; see docs/artifacts.md."
+  },
+  "objects": [
+    {
+      "asset_ids": [
+        "image-3e23d16ac0456b2d618f4131c0146ed9030019e943190202dfee30123faf5efc"
+      ],
+      "bytes": 320212992,
+      "filename": "image-3e23d16ac0456b2d618f4131c0146ed9030019e943190202dfee30123faf5efc.sif",
+      "hold_resolutions": {
+        "component_notice_and_corresponding_source_review": "third_party",
+        "dataset_provenance_review": "third_party",
+        "embedded_build_coordinates_review": "embedded_paths"
+      },
+      "holds": [],
+      "kind": "sif",
+      "registry_manifest_digest": null,
+      "sha256": "3e23d16ac0456b2d618f4131c0146ed9030019e943190202dfee30123faf5efc",
+      "tag": "v1-linux-arm64-3e23d16ac0456b2d618f4131c0146ed9030019e943190202dfee30123faf5efc",
+      "task_keys": [
+        "ade__ade-bench-airbnb005"
+      ],
+      "upload_status": "pushed_to_ghcr",
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-3e23d16ac0456b2d618f4131c0146ed9030019e943190202dfee30123faf5efc"
+    },
+    {
+      "asset_ids": [
+        "image-42d7d63a51a7293b77164e61effb6a2732b483116fccb7e422edc86e0d0d37fa"
+      ],
+      "bytes": 237985792,
+      "filename": "image-42d7d63a51a7293b77164e61effb6a2732b483116fccb7e422edc86e0d0d37fa.sif",
+      "hold_resolutions": {
+        "component_notice_and_corresponding_source_review": "third_party",
+        "dataset_provenance_review": "third_party",
+        "embedded_build_coordinates_review": "embedded_paths"
+      },
+      "holds": [],
+      "kind": "sif",
+      "registry_manifest_digest": null,
+      "sha256": "42d7d63a51a7293b77164e61effb6a2732b483116fccb7e422edc86e0d0d37fa",
+      "tag": "v1-linux-arm64-42d7d63a51a7293b77164e61effb6a2732b483116fccb7e422edc86e0d0d37fa",
+      "task_keys": [
+        "ade__ade-bench-airbnb007"
+      ],
+      "upload_status": "pushed_to_ghcr",
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-42d7d63a51a7293b77164e61effb6a2732b483116fccb7e422edc86e0d0d37fa"
+    },
+    {
+      "asset_ids": [
+        "image-5a996aeed7efc0e024b07224e730dde4bbd8317ef0a42968d997319a10bf45a7"
+      ],
+      "bytes": 196530176,
+      "filename": "image-5a996aeed7efc0e024b07224e730dde4bbd8317ef0a42968d997319a10bf45a7.sif",
+      "hold_resolutions": {
+        "component_notice_and_corresponding_source_review": "third_party",
+        "dataset_provenance_review": "third_party",
+        "embedded_build_coordinates_review": "embedded_paths"
+      },
+      "holds": [],
+      "kind": "sif",
+      "registry_manifest_digest": null,
+      "sha256": "5a996aeed7efc0e024b07224e730dde4bbd8317ef0a42968d997319a10bf45a7",
+      "tag": "v1-linux-arm64-5a996aeed7efc0e024b07224e730dde4bbd8317ef0a42968d997319a10bf45a7",
+      "task_keys": [
+        "ade__ade-bench-ana-eng003"
+      ],
+      "upload_status": "pushed_to_ghcr",
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-5a996aeed7efc0e024b07224e730dde4bbd8317ef0a42968d997319a10bf45a7"
+    },
+    {
+      "asset_ids": [
+        "image-ed545cfe3c0ed6e53808db3c07759341b0b5f25f751173033d21578ef726330e"
+      ],
+      "bytes": 196616192,
+      "filename": "image-ed545cfe3c0ed6e53808db3c07759341b0b5f25f751173033d21578ef726330e.sif",
+      "hold_resolutions": {
+        "component_notice_and_corresponding_source_review": "third_party",
+        "dataset_provenance_review": "third_party",
+        "embedded_build_coordinates_review": "embedded_paths"
+      },
+      "holds": [],
+      "kind": "sif",
+      "registry_manifest_digest": null,
+      "sha256": "ed545cfe3c0ed6e53808db3c07759341b0b5f25f751173033d21578ef726330e",
+      "tag": "v1-linux-arm64-ed545cfe3c0ed6e53808db3c07759341b0b5f25f751173033d21578ef726330e",
+      "task_keys": [
+        "ade__ade-bench-ana-eng004"
+      ],
+      "upload_status": "pushed_to_ghcr",
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-ed545cfe3c0ed6e53808db3c07759341b0b5f25f751173033d21578ef726330e"
+    },
+    {
+      "asset_ids": [
+        "image-4bff1adede909e8d8b3dee3d8ccd06ece66984ddde1d4da5bbae3e87eedd34e0"
+      ],
+      "bytes": 196624384,
+      "filename": "image-4bff1adede909e8d8b3dee3d8ccd06ece66984ddde1d4da5bbae3e87eedd34e0.sif",
+      "hold_resolutions": {
+        "component_notice_and_corresponding_source_review": "third_party",
+        "dataset_provenance_review": "third_party",
+        "embedded_build_coordinates_review": "embedded_paths"
+      },
+      "holds": [],
+      "kind": "sif",
+      "registry_manifest_digest": null,
+      "sha256": "4bff1adede909e8d8b3dee3d8ccd06ece66984ddde1d4da5bbae3e87eedd34e0",
+      "tag": "v1-linux-arm64-4bff1adede909e8d8b3dee3d8ccd06ece66984ddde1d4da5bbae3e87eedd34e0",
+      "task_keys": [
+        "ade__ade-bench-ana-eng005"
+      ],
+      "upload_status": "pushed_to_ghcr",
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-4bff1adede909e8d8b3dee3d8ccd06ece66984ddde1d4da5bbae3e87eedd34e0"
+    },
+    {
+      "asset_ids": [
+        "image-3d2b6f9cce89028222fcda9040da2d0ebd608d4bb39e4d5323b4ee7785acc68c"
+      ],
+      "bytes": 196591616,
+      "filename": "image-3d2b6f9cce89028222fcda9040da2d0ebd608d4bb39e4d5323b4ee7785acc68c.sif",
+      "hold_resolutions": {
+        "component_notice_and_corresponding_source_review": "third_party",
+        "dataset_provenance_review": "third_party",
+        "embedded_build_coordinates_review": "embedded_paths"
+      },
+      "holds": [],
+      "kind": "sif",
+      "registry_manifest_digest": null,
+      "sha256": "3d2b6f9cce89028222fcda9040da2d0ebd608d4bb39e4d5323b4ee7785acc68c",
+      "tag": "v1-linux-arm64-3d2b6f9cce89028222fcda9040da2d0ebd608d4bb39e4d5323b4ee7785acc68c",
+      "task_keys": [
+        "ade__ade-bench-ana-eng006"
+      ],
+      "upload_status": "pushed_to_ghcr",
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-3d2b6f9cce89028222fcda9040da2d0ebd608d4bb39e4d5323b4ee7785acc68c"
+    },
+    {
+      "asset_ids": [
+        "image-674da519863ff4d1941529e9cee5eecb2ee12f7c926b39a2bc49f46a882cc7af"
+      ],
+      "bytes": 199983104,
+      "filename": "image-674da519863ff4d1941529e9cee5eecb2ee12f7c926b39a2bc49f46a882cc7af.sif",
+      "hold_resolutions": {
+        "component_notice_and_corresponding_source_review": "third_party",
+        "dataset_provenance_review": "third_party",
+        "embedded_build_coordinates_review": "embedded_paths"
+      },
+      "holds": [],
+      "kind": "sif",
+      "registry_manifest_digest": null,
+      "sha256": "674da519863ff4d1941529e9cee5eecb2ee12f7c926b39a2bc49f46a882cc7af",
+      "tag": "v1-linux-arm64-674da519863ff4d1941529e9cee5eecb2ee12f7c926b39a2bc49f46a882cc7af",
+      "task_keys": [
+        "ade__ade-bench-f1003"
+      ],
+      "upload_status": "pushed_to_ghcr",
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-674da519863ff4d1941529e9cee5eecb2ee12f7c926b39a2bc49f46a882cc7af"
+    },
+    {
+      "asset_ids": [
+        "image-c5485eddd674a9bc424627f23eb99f3854f1608094988b1ebbd2c749eec1cb7c"
+      ],
+      "bytes": 199983104,
+      "filename": "image-c5485eddd674a9bc424627f23eb99f3854f1608094988b1ebbd2c749eec1cb7c.sif",
+      "hold_resolutions": {
+        "component_notice_and_corresponding_source_review": "third_party",
+        "dataset_provenance_review": "third_party",
+        "embedded_build_coordinates_review": "embedded_paths"
+      },
+      "holds": [],
+      "kind": "sif",
+      "registry_manifest_digest": null,
+      "sha256": "c5485eddd674a9bc424627f23eb99f3854f1608094988b1ebbd2c749eec1cb7c",
+      "tag": "v1-linux-arm64-c5485eddd674a9bc424627f23eb99f3854f1608094988b1ebbd2c749eec1cb7c",
+      "task_keys": [
+        "ade__ade-bench-f1003-hard"
+      ],
+      "upload_status": "pushed_to_ghcr",
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-c5485eddd674a9bc424627f23eb99f3854f1608094988b1ebbd2c749eec1cb7c"
+    },
+    {
+      "asset_ids": [
+        "image-ce47a9e6ed2defaac646b2bbb002d0eaf3fc3d8873a8342187d8b9fd4e521fd0"
+      ],
+      "bytes": 204173312,
+      "filename": "image-ce47a9e6ed2defaac646b2bbb002d0eaf3fc3d8873a8342187d8b9fd4e521fd0.sif",
+      "hold_resolutions": {
+        "component_notice_and_corresponding_source_review": "third_party",
+        "dataset_provenance_review": "third_party",
+        "embedded_build_coordinates_review": "embedded_paths"
+      },
+      "holds": [],
+      "kind": "sif",
+      "registry_manifest_digest": null,
+      "sha256": "ce47a9e6ed2defaac646b2bbb002d0eaf3fc3d8873a8342187d8b9fd4e521fd0",
+      "tag": "v1-linux-arm64-ce47a9e6ed2defaac646b2bbb002d0eaf3fc3d8873a8342187d8b9fd4e521fd0",
+      "task_keys": [
+        "ade__ade-bench-f1009"
+      ],
+      "upload_status": "pushed_to_ghcr",
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-ce47a9e6ed2defaac646b2bbb002d0eaf3fc3d8873a8342187d8b9fd4e521fd0"
+    },
+    {
+      "asset_ids": [
+        "image-41c1f547462abe50f1149b412045e0bf5d96e8e3bfacfe5b775dc258e261c7ea"
+      ],
+      "bytes": 204169216,
+      "filename": "image-41c1f547462abe50f1149b412045e0bf5d96e8e3bfacfe5b775dc258e261c7ea.sif",
+      "hold_resolutions": {
+        "component_notice_and_corresponding_source_review": "third_party",
+        "dataset_provenance_review": "third_party",
+        "embedded_build_coordinates_review": "embedded_paths"
+      },
+      "holds": [],
+      "kind": "sif",
+      "registry_manifest_digest": null,
+      "sha256": "41c1f547462abe50f1149b412045e0bf5d96e8e3bfacfe5b775dc258e261c7ea",
+      "tag": "v1-linux-arm64-41c1f547462abe50f1149b412045e0bf5d96e8e3bfacfe5b775dc258e261c7ea",
+      "task_keys": [
+        "ade__ade-bench-f1010"
+      ],
+      "upload_status": "pushed_to_ghcr",
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-41c1f547462abe50f1149b412045e0bf5d96e8e3bfacfe5b775dc258e261c7ea"
+    },
+    {
+      "asset_ids": [
+        "image-c26a3cab660b455cd95f446cea80c8c866faa64c58fefdd12b3f6ec3dc405769"
+      ],
+      "bytes": 204140544,
+      "filename": "image-c26a3cab660b455cd95f446cea80c8c866faa64c58fefdd12b3f6ec3dc405769.sif",
+      "hold_resolutions": {
+        "component_notice_and_corresponding_source_review": "third_party",
+        "dataset_provenance_review": "third_party",
+        "embedded_build_coordinates_review": "embedded_paths"
+      },
+      "holds": [],
+      "kind": "sif",
+      "registry_manifest_digest": null,
+      "sha256": "c26a3cab660b455cd95f446cea80c8c866faa64c58fefdd12b3f6ec3dc405769",
+      "tag": "v1-linux-arm64-c26a3cab660b455cd95f446cea80c8c866faa64c58fefdd12b3f6ec3dc405769",
+      "task_keys": [
+        "ade__ade-bench-f1010-medium"
+      ],
+      "upload_status": "pushed_to_ghcr",
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-c26a3cab660b455cd95f446cea80c8c866faa64c58fefdd12b3f6ec3dc405769"
+    },
+    {
+      "asset_ids": [
+        "image-4b63c74af2f2816318325d37558bd5934bd71988816d1fbc6c15e48ee39bc0a1"
+      ],
+      "bytes": 204132352,
+      "filename": "image-4b63c74af2f2816318325d37558bd5934bd71988816d1fbc6c15e48ee39bc0a1.sif",
+      "hold_resolutions": {
+        "component_notice_and_corresponding_source_review": "third_party",
+        "dataset_provenance_review": "third_party",
+        "embedded_build_coordinates_review": "embedded_paths"
+      },
+      "holds": [],
+      "kind": "sif",
+      "registry_manifest_digest": null,
+      "sha256": "4b63c74af2f2816318325d37558bd5934bd71988816d1fbc6c15e48ee39bc0a1",
+      "tag": "v1-linux-arm64-4b63c74af2f2816318325d37558bd5934bd71988816d1fbc6c15e48ee39bc0a1",
+      "task_keys": [
+        "ade__ade-bench-f1011"
+      ],
+      "upload_status": "pushed_to_ghcr",
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-4b63c74af2f2816318325d37558bd5934bd71988816d1fbc6c15e48ee39bc0a1"
+    },
+    {
+      "asset_ids": [
+        "image-7dd21401d98cb1ecb758d4510cf0430116dbca24d9a9b77d6e898f746ddb054d"
+      ],
+      "bytes": 196767744,
+      "filename": "image-7dd21401d98cb1ecb758d4510cf0430116dbca24d9a9b77d6e898f746ddb054d.sif",
+      "hold_resolutions": {
+        "component_notice_and_corresponding_source_review": "third_party",
+        "dataset_provenance_review": "third_party",
+        "embedded_build_coordinates_review": "embedded_paths"
+      },
+      "holds": [],
+      "kind": "sif",
+      "registry_manifest_digest": null,
+      "sha256": "7dd21401d98cb1ecb758d4510cf0430116dbca24d9a9b77d6e898f746ddb054d",
+      "tag": "v1-linux-arm64-7dd21401d98cb1ecb758d4510cf0430116dbca24d9a9b77d6e898f746ddb054d",
+      "task_keys": [
+        "ade__ade-bench-intercom001"
+      ],
+      "upload_status": "pushed_to_ghcr",
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-7dd21401d98cb1ecb758d4510cf0430116dbca24d9a9b77d6e898f746ddb054d"
+    },
+    {
+      "asset_ids": [
+        "image-3b3737a8352f18cc1655f8656918c71e50f5271a99d4b6daef3b827ab975c713"
+      ],
+      "bytes": 196767744,
+      "filename": "image-3b3737a8352f18cc1655f8656918c71e50f5271a99d4b6daef3b827ab975c713.sif",
+      "hold_resolutions": {
+        "component_notice_and_corresponding_source_review": "third_party",
+        "dataset_provenance_review": "third_party",
+        "embedded_build_coordinates_review": "embedded_paths"
+      },
+      "holds": [],
+      "kind": "sif",
+      "registry_manifest_digest": null,
+      "sha256": "3b3737a8352f18cc1655f8656918c71e50f5271a99d4b6daef3b827ab975c713",
+      "tag": "v1-linux-arm64-3b3737a8352f18cc1655f8656918c71e50f5271a99d4b6daef3b827ab975c713",
+      "task_keys": [
+        "ade__ade-bench-intercom002"
+      ],
+      "upload_status": "pushed_to_ghcr",
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-3b3737a8352f18cc1655f8656918c71e50f5271a99d4b6daef3b827ab975c713"
+    },
+    {
+      "asset_ids": [
+        "image-724a26e1d5e58d1aada9913bf4c6418355d0b693752e8f31a7de6941e0bed513"
+      ],
+      "bytes": 196767744,
+      "filename": "image-724a26e1d5e58d1aada9913bf4c6418355d0b693752e8f31a7de6941e0bed513.sif",
+      "hold_resolutions": {
+        "component_notice_and_corresponding_source_review": "third_party",
+        "dataset_provenance_review": "third_party",
+        "embedded_build_coordinates_review": "embedded_paths"
+      },
+      "holds": [],
+      "kind": "sif",
+      "registry_manifest_digest": null,
+      "sha256": "724a26e1d5e58d1aada9913bf4c6418355d0b693752e8f31a7de6941e0bed513",
+      "tag": "v1-linux-arm64-724a26e1d5e58d1aada9913bf4c6418355d0b693752e8f31a7de6941e0bed513",
+      "task_keys": [
+        "ade__ade-bench-intercom003"
+      ],
+      "upload_status": "pushed_to_ghcr",
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-724a26e1d5e58d1aada9913bf4c6418355d0b693752e8f31a7de6941e0bed513"
+    },
+    {
+      "asset_ids": [
+        "image-f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+      ],
+      "bytes": 355258368,
+      "data_license_evidence": "DEB fixed NOTICE declares the synthetic retail warehouse an original Apache-2.0 work.",
+      "filename": "image-f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c.sif",
+      "hold_resolutions": {
+        "component_notice_and_corresponding_source_review": "third_party"
+      },
+      "holds": [],
+      "kind": "sif",
+      "registry_manifest_digest": null,
+      "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c",
+      "tag": "v1-linux-arm64-f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c",
+      "task_keys": [
+        "deb__dbt-calculate-running-balance",
+        "deb__dbt-coupon-effectiveness",
+        "deb__dbt-customer-churn-cohorts",
+        "deb__dbt-customer-churn-early-warning",
+        "deb__dbt-customer-cltv-forecasting",
+        "deb__dbt-customer-geographic",
+        "deb__dbt-customer-lifetime-value",
+        "deb__dbt-customer-ltv-fix",
+        "deb__dbt-customer-order-analytics",
+        "deb__dbt-customer-risk-scoring",
+        "deb__dbt-daily-order-summary",
+        "deb__dbt-exchange-rate-settlement-date",
+        "deb__dbt-fix-cac-payback-waterfall",
+        "deb__dbt-fix-email-attribution",
+        "deb__dbt-fix-multi-touch-attribution",
+        "deb__dbt-fix-repeat-purchase-cohort-revenue",
+        "deb__dbt-fraud-detection-model",
+        "deb__dbt-fulfillment-sla",
+        "deb__dbt-harbor-warehouse-capacity",
+        "deb__dbt-inventory-analysis",
+        "deb__dbt-inventory-stockout-risk",
+        "deb__dbt-loyalty-points-analysis",
+        "deb__dbt-order-reconciliation",
+        "deb__dbt-price-elasticity",
+        "deb__dbt-product-category-analytics",
+        "deb__dbt-retail-task-01-channel-revenue",
+        "deb__dbt-retail-task-04-market-roi",
+        "deb__dbt-rfm-customer-segmentation",
+        "deb__dbt-rfm-customer-segmentation-2",
+        "deb__dbt-sales-funnel-analysis",
+        "deb__dbt-supplier-payment-optimization",
+        "deb__dbt-supplier-scorecard",
+        "deb__dbt-three-way-matching",
+        "deb__dbt-web-session-analytics",
+        "deb__dbt-weekly-sales-growth"
+      ],
+      "upload_status": "pushed_to_ghcr",
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
+    },
+    {
+      "asset_ids": [
+        "image-294bc8f0712f4c715c464f7842852ffadf1662ccb0e12f1b4c4d643f32ec9f48"
+      ],
+      "bytes": 355540992,
+      "data_license_evidence": "DEB fixed NOTICE declares the synthetic retail warehouse an original Apache-2.0 work.",
+      "filename": "image-294bc8f0712f4c715c464f7842852ffadf1662ccb0e12f1b4c4d643f32ec9f48.sif",
+      "hold_resolutions": {
+        "component_notice_and_corresponding_source_review": "third_party"
+      },
+      "holds": [],
+      "kind": "sif",
+      "registry_manifest_digest": null,
+      "sha256": "294bc8f0712f4c715c464f7842852ffadf1662ccb0e12f1b4c4d643f32ec9f48",
+      "tag": "v1-linux-arm64-294bc8f0712f4c715c464f7842852ffadf1662ccb0e12f1b4c4d643f32ec9f48",
+      "task_keys": [
+        "deb__dbt-session-attribution"
+      ],
+      "upload_status": "pushed_to_ghcr",
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-294bc8f0712f4c715c464f7842852ffadf1662ccb0e12f1b4c4d643f32ec9f48"
+    },
+    {
+      "asset_ids": [
+        "image-39f48a4c5f4cd8f8e7235d415e9459a49ca201e91b33e3b1a0a3eaee1485e15b"
+      ],
+      "bytes": 205193216,
+      "filename": "image-39f48a4c5f4cd8f8e7235d415e9459a49ca201e91b33e3b1a0a3eaee1485e15b.sif",
+      "hold_resolutions": {
+        "component_notice_and_corresponding_source_review": "third_party",
+        "dataset_provenance_review": "third_party",
+        "embedded_build_coordinates_review": "embedded_paths"
+      },
+      "holds": [],
+      "kind": "sif",
+      "registry_manifest_digest": null,
+      "sha256": "39f48a4c5f4cd8f8e7235d415e9459a49ca201e91b33e3b1a0a3eaee1485e15b",
+      "tag": "v1-linux-arm64-39f48a4c5f4cd8f8e7235d415e9459a49ca201e91b33e3b1a0a3eaee1485e15b",
+      "task_keys": [
+        "spider2__app_reporting001"
+      ],
+      "upload_status": "pushed_to_ghcr",
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-39f48a4c5f4cd8f8e7235d415e9459a49ca201e91b33e3b1a0a3eaee1485e15b"
+    },
+    {
+      "asset_ids": [
+        "image-8323ed9479cf457c33415f8289c30cb868eda60d8264fb4356df2c3b00ee85a9"
+      ],
+      "bytes": 205193216,
+      "filename": "image-8323ed9479cf457c33415f8289c30cb868eda60d8264fb4356df2c3b00ee85a9.sif",
+      "hold_resolutions": {
+        "component_notice_and_corresponding_source_review": "third_party",
+        "dataset_provenance_review": "third_party",
+        "embedded_build_coordinates_review": "embedded_paths"
+      },
+      "holds": [],
+      "kind": "sif",
+      "registry_manifest_digest": null,
+      "sha256": "8323ed9479cf457c33415f8289c30cb868eda60d8264fb4356df2c3b00ee85a9",
+      "tag": "v1-linux-arm64-8323ed9479cf457c33415f8289c30cb868eda60d8264fb4356df2c3b00ee85a9",
+      "task_keys": [
+        "spider2__app_reporting002"
+      ],
+      "upload_status": "pushed_to_ghcr",
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-8323ed9479cf457c33415f8289c30cb868eda60d8264fb4356df2c3b00ee85a9"
+    },
+    {
+      "asset_ids": [
+        "image-4c0789ae41ddd1b8b87bbea9e555fd5fec8df8d7bf4adf9f83733b80bf38945d"
+      ],
+      "bytes": 204726272,
+      "filename": "image-4c0789ae41ddd1b8b87bbea9e555fd5fec8df8d7bf4adf9f83733b80bf38945d.sif",
+      "hold_resolutions": {
+        "component_notice_and_corresponding_source_review": "third_party",
+        "dataset_provenance_review": "third_party",
+        "embedded_build_coordinates_review": "embedded_paths"
+      },
+      "holds": [],
+      "kind": "sif",
+      "registry_manifest_digest": null,
+      "sha256": "4c0789ae41ddd1b8b87bbea9e555fd5fec8df8d7bf4adf9f83733b80bf38945d",
+      "tag": "v1-linux-arm64-4c0789ae41ddd1b8b87bbea9e555fd5fec8df8d7bf4adf9f83733b80bf38945d",
+      "task_keys": [
+        "spider2__apple_store001"
+      ],
+      "upload_status": "pushed_to_ghcr",
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-4c0789ae41ddd1b8b87bbea9e555fd5fec8df8d7bf4adf9f83733b80bf38945d"
+    },
+    {
+      "asset_ids": [
+        "image-e24702c7d0299838af168cc3c1e312b88703e2259d0c6b5da318b6c786a9029c"
+      ],
+      "bytes": 219480064,
+      "filename": "image-e24702c7d0299838af168cc3c1e312b88703e2259d0c6b5da318b6c786a9029c.sif",
+      "hold_resolutions": {
+        "component_notice_and_corresponding_source_review": "third_party",
+        "dataset_provenance_review": "third_party",
+        "embedded_build_coordinates_review": "embedded_paths"
+      },
+      "holds": [],
+      "kind": "sif",
+      "registry_manifest_digest": null,
+      "sha256": "e24702c7d0299838af168cc3c1e312b88703e2259d0c6b5da318b6c786a9029c",
+      "tag": "v1-linux-arm64-e24702c7d0299838af168cc3c1e312b88703e2259d0c6b5da318b6c786a9029c",
+      "task_keys": [
+        "spider2__asset001"
+      ],
+      "upload_status": "pushed_to_ghcr",
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-e24702c7d0299838af168cc3c1e312b88703e2259d0c6b5da318b6c786a9029c"
+    },
+    {
+      "asset_ids": [
+        "image-75cdde48037e9c93512b08c9974c1aad6d5ea6a620d81a428dc8cb5abe69af69"
+      ],
+      "bytes": 204738560,
+      "filename": "image-75cdde48037e9c93512b08c9974c1aad6d5ea6a620d81a428dc8cb5abe69af69.sif",
+      "hold_resolutions": {
+        "component_notice_and_corresponding_source_review": "third_party",
+        "dataset_provenance_review": "third_party",
+        "embedded_build_coordinates_review": "embedded_paths"
+      },
+      "holds": [],
+      "kind": "sif",
+      "registry_manifest_digest": null,
+      "sha256": "75cdde48037e9c93512b08c9974c1aad6d5ea6a620d81a428dc8cb5abe69af69",
+      "tag": "v1-linux-arm64-75cdde48037e9c93512b08c9974c1aad6d5ea6a620d81a428dc8cb5abe69af69",
+      "task_keys": [
+        "spider2__google_play001"
+      ],
+      "upload_status": "pushed_to_ghcr",
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-75cdde48037e9c93512b08c9974c1aad6d5ea6a620d81a428dc8cb5abe69af69"
+    },
+    {
+      "asset_ids": [
+        "image-0aa0b9e80c8f90832ec0924f7f0bd26b7759434181ac00712f8d5a3a13ec5246"
+      ],
+      "bytes": 203968512,
+      "filename": "image-0aa0b9e80c8f90832ec0924f7f0bd26b7759434181ac00712f8d5a3a13ec5246.sif",
+      "hold_resolutions": {
+        "component_notice_and_corresponding_source_review": "third_party",
+        "dataset_provenance_review": "third_party",
+        "embedded_build_coordinates_review": "embedded_paths"
+      },
+      "holds": [],
+      "kind": "sif",
+      "registry_manifest_digest": null,
+      "sha256": "0aa0b9e80c8f90832ec0924f7f0bd26b7759434181ac00712f8d5a3a13ec5246",
+      "tag": "v1-linux-arm64-0aa0b9e80c8f90832ec0924f7f0bd26b7759434181ac00712f8d5a3a13ec5246",
+      "task_keys": [
+        "spider2__hive001"
+      ],
+      "upload_status": "pushed_to_ghcr",
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-0aa0b9e80c8f90832ec0924f7f0bd26b7759434181ac00712f8d5a3a13ec5246"
+    },
+    {
+      "asset_ids": [
+        "image-993a5ee369464ac3bee72f1b718a4f3c89c1604eee0ec49d33c6613662e78103"
+      ],
+      "bytes": 204623872,
+      "filename": "image-993a5ee369464ac3bee72f1b718a4f3c89c1604eee0ec49d33c6613662e78103.sif",
+      "hold_resolutions": {
+        "component_notice_and_corresponding_source_review": "third_party",
+        "dataset_provenance_review": "third_party",
+        "embedded_build_coordinates_review": "embedded_paths"
+      },
+      "holds": [],
+      "kind": "sif",
+      "registry_manifest_digest": null,
+      "sha256": "993a5ee369464ac3bee72f1b718a4f3c89c1604eee0ec49d33c6613662e78103",
+      "tag": "v1-linux-arm64-993a5ee369464ac3bee72f1b718a4f3c89c1604eee0ec49d33c6613662e78103",
+      "task_keys": [
+        "spider2__intercom001"
+      ],
+      "upload_status": "pushed_to_ghcr",
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-993a5ee369464ac3bee72f1b718a4f3c89c1604eee0ec49d33c6613662e78103"
+    },
+    {
+      "asset_ids": [
+        "image-f3d992b881041b0f30d03b9061c237ebcaa57f592df8a9d9c53522dbd33e4473"
+      ],
+      "bytes": 204652544,
+      "filename": "image-f3d992b881041b0f30d03b9061c237ebcaa57f592df8a9d9c53522dbd33e4473.sif",
+      "hold_resolutions": {
+        "component_notice_and_corresponding_source_review": "third_party",
+        "dataset_provenance_review": "third_party",
+        "embedded_build_coordinates_review": "embedded_paths"
+      },
+      "holds": [],
+      "kind": "sif",
+      "registry_manifest_digest": null,
+      "sha256": "f3d992b881041b0f30d03b9061c237ebcaa57f592df8a9d9c53522dbd33e4473",
+      "tag": "v1-linux-arm64-f3d992b881041b0f30d03b9061c237ebcaa57f592df8a9d9c53522dbd33e4473",
+      "task_keys": [
+        "spider2__jira001"
+      ],
+      "upload_status": "pushed_to_ghcr",
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-f3d992b881041b0f30d03b9061c237ebcaa57f592df8a9d9c53522dbd33e4473"
+    },
+    {
+      "asset_ids": [
+        "image-b76376cf74a0d69ad73dbb9977d1077d30e469fb466088a06a7dab94d7c03053"
+      ],
+      "bytes": 204718080,
+      "filename": "image-b76376cf74a0d69ad73dbb9977d1077d30e469fb466088a06a7dab94d7c03053.sif",
+      "hold_resolutions": {
+        "component_notice_and_corresponding_source_review": "third_party",
+        "dataset_provenance_review": "third_party",
+        "embedded_build_coordinates_review": "embedded_paths"
+      },
+      "holds": [],
+      "kind": "sif",
+      "registry_manifest_digest": null,
+      "sha256": "b76376cf74a0d69ad73dbb9977d1077d30e469fb466088a06a7dab94d7c03053",
+      "tag": "v1-linux-arm64-b76376cf74a0d69ad73dbb9977d1077d30e469fb466088a06a7dab94d7c03053",
+      "task_keys": [
+        "spider2__lever001"
+      ],
+      "upload_status": "pushed_to_ghcr",
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-b76376cf74a0d69ad73dbb9977d1077d30e469fb466088a06a7dab94d7c03053"
+    },
+    {
+      "asset_ids": [
+        "image-1329f8fe64254776ab90625302c9fb1f81eb1b4b38b803e064ffdda901cba0a4"
+      ],
+      "bytes": 210817024,
+      "filename": "image-1329f8fe64254776ab90625302c9fb1f81eb1b4b38b803e064ffdda901cba0a4.sif",
+      "hold_resolutions": {
+        "component_notice_and_corresponding_source_review": "third_party",
+        "dataset_provenance_review": "third_party",
+        "embedded_build_coordinates_review": "embedded_paths"
+      },
+      "holds": [],
+      "kind": "sif",
+      "registry_manifest_digest": null,
+      "sha256": "1329f8fe64254776ab90625302c9fb1f81eb1b4b38b803e064ffdda901cba0a4",
+      "tag": "v1-linux-arm64-1329f8fe64254776ab90625302c9fb1f81eb1b4b38b803e064ffdda901cba0a4",
+      "task_keys": [
+        "spider2__marketo001"
+      ],
+      "upload_status": "pushed_to_ghcr",
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-1329f8fe64254776ab90625302c9fb1f81eb1b4b38b803e064ffdda901cba0a4"
+    },
+    {
+      "asset_ids": [
+        "image-c6379b521ffc262e4598b154887ed5d3565dd4251efff7a55ac169eff482c427"
+      ],
+      "bytes": 204005376,
+      "filename": "image-c6379b521ffc262e4598b154887ed5d3565dd4251efff7a55ac169eff482c427.sif",
+      "hold_resolutions": {
+        "component_notice_and_corresponding_source_review": "third_party",
+        "dataset_provenance_review": "third_party",
+        "embedded_build_coordinates_review": "embedded_paths"
+      },
+      "holds": [],
+      "kind": "sif",
+      "registry_manifest_digest": null,
+      "sha256": "c6379b521ffc262e4598b154887ed5d3565dd4251efff7a55ac169eff482c427",
+      "tag": "v1-linux-arm64-c6379b521ffc262e4598b154887ed5d3565dd4251efff7a55ac169eff482c427",
+      "task_keys": [
+        "spider2__maturity001"
+      ],
+      "upload_status": "pushed_to_ghcr",
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-c6379b521ffc262e4598b154887ed5d3565dd4251efff7a55ac169eff482c427"
+    },
+    {
+      "asset_ids": [
+        "image-a6cfdac52d5144073556202979189f5ba4e3f27e9cf411b5da1c6170272ac514"
+      ],
+      "bytes": 204750848,
+      "filename": "image-a6cfdac52d5144073556202979189f5ba4e3f27e9cf411b5da1c6170272ac514.sif",
+      "hold_resolutions": {
+        "component_notice_and_corresponding_source_review": "third_party",
+        "dataset_provenance_review": "third_party",
+        "embedded_build_coordinates_review": "embedded_paths"
+      },
+      "holds": [],
+      "kind": "sif",
+      "registry_manifest_digest": null,
+      "sha256": "a6cfdac52d5144073556202979189f5ba4e3f27e9cf411b5da1c6170272ac514",
+      "tag": "v1-linux-arm64-a6cfdac52d5144073556202979189f5ba4e3f27e9cf411b5da1c6170272ac514",
+      "task_keys": [
+        "spider2__recharge002"
+      ],
+      "upload_status": "pushed_to_ghcr",
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-a6cfdac52d5144073556202979189f5ba4e3f27e9cf411b5da1c6170272ac514"
+    },
+    {
+      "asset_ids": [
+        "image-53d5916ff99de9474ff14c8a62a22ce6e03b620e5961cc84b6ac30779c1401eb"
+      ],
+      "bytes": 205041664,
+      "filename": "image-53d5916ff99de9474ff14c8a62a22ce6e03b620e5961cc84b6ac30779c1401eb.sif",
+      "hold_resolutions": {
+        "component_notice_and_corresponding_source_review": "third_party",
+        "dataset_provenance_review": "third_party",
+        "embedded_build_coordinates_review": "embedded_paths"
+      },
+      "holds": [],
+      "kind": "sif",
+      "registry_manifest_digest": null,
+      "sha256": "53d5916ff99de9474ff14c8a62a22ce6e03b620e5961cc84b6ac30779c1401eb",
+      "tag": "v1-linux-arm64-53d5916ff99de9474ff14c8a62a22ce6e03b620e5961cc84b6ac30779c1401eb",
+      "task_keys": [
+        "spider2__shopify002"
+      ],
+      "upload_status": "pushed_to_ghcr",
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-53d5916ff99de9474ff14c8a62a22ce6e03b620e5961cc84b6ac30779c1401eb"
+    },
+    {
+      "asset_ids": [
+        "image-bef6d0589e209aeff83a80bbe920bd12814629d61273bcdc81aa30d3366950f9"
+      ],
+      "bytes": 211369984,
+      "filename": "image-bef6d0589e209aeff83a80bbe920bd12814629d61273bcdc81aa30d3366950f9.sif",
+      "hold_resolutions": {
+        "component_notice_and_corresponding_source_review": "third_party",
+        "dataset_provenance_review": "third_party",
+        "embedded_build_coordinates_review": "embedded_paths"
+      },
+      "holds": [],
+      "kind": "sif",
+      "registry_manifest_digest": null,
+      "sha256": "bef6d0589e209aeff83a80bbe920bd12814629d61273bcdc81aa30d3366950f9",
+      "tag": "v1-linux-arm64-bef6d0589e209aeff83a80bbe920bd12814629d61273bcdc81aa30d3366950f9",
+      "task_keys": [
+        "spider2__tickit001"
+      ],
+      "upload_status": "pushed_to_ghcr",
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-bef6d0589e209aeff83a80bbe920bd12814629d61273bcdc81aa30d3366950f9"
+    },
+    {
+      "asset_ids": [
+        "image-aa086772f50603e4477133db99c612851a64ec014867213833288317cbe55655"
+      ],
+      "bytes": 204275712,
+      "filename": "image-aa086772f50603e4477133db99c612851a64ec014867213833288317cbe55655.sif",
+      "hold_resolutions": {
+        "component_notice_and_corresponding_source_review": "third_party",
+        "dataset_provenance_review": "third_party",
+        "embedded_build_coordinates_review": "embedded_paths"
+      },
+      "holds": [],
+      "kind": "sif",
+      "registry_manifest_digest": null,
+      "sha256": "aa086772f50603e4477133db99c612851a64ec014867213833288317cbe55655",
+      "tag": "v1-linux-arm64-aa086772f50603e4477133db99c612851a64ec014867213833288317cbe55655",
+      "task_keys": [
+        "spider2__workday001"
+      ],
+      "upload_status": "pushed_to_ghcr",
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-aa086772f50603e4477133db99c612851a64ec014867213833288317cbe55655"
+    },
+    {
+      "asset_ids": [
+        "image-be26d87ad5011d60573552ae62df7d72a7821b081212e60d732155b10be45549"
+      ],
+      "bytes": 204271616,
+      "filename": "image-be26d87ad5011d60573552ae62df7d72a7821b081212e60d732155b10be45549.sif",
+      "hold_resolutions": {
+        "component_notice_and_corresponding_source_review": "third_party",
+        "dataset_provenance_review": "third_party",
+        "embedded_build_coordinates_review": "embedded_paths"
+      },
+      "holds": [],
+      "kind": "sif",
+      "registry_manifest_digest": null,
+      "sha256": "be26d87ad5011d60573552ae62df7d72a7821b081212e60d732155b10be45549",
+      "tag": "v1-linux-arm64-be26d87ad5011d60573552ae62df7d72a7821b081212e60d732155b10be45549",
+      "task_keys": [
+        "spider2__workday002"
+      ],
+      "upload_status": "pushed_to_ghcr",
+      "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-be26d87ad5011d60573552ae62df7d72a7821b081212e60d732155b10be45549"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-9c75036f4febb7314d475568ddd440c3b965c8aebb44fc4fdb1cb8a20da3587b"
+      ],
+      "bytes": 715199,
+      "extract_subdir": "task",
+      "filename": "task-ade__ade-bench-airbnb005-9c75036f4febb731.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_notices_and_dataset_provenance_review": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "f33b6f06e070fc6da36b7dc7d78b12760321f9a597e70c164e247991f6a6eaec",
+      "task_key": "ade__ade-bench-airbnb005",
+      "tree_sha256": "9c75036f4febb7314d475568ddd440c3b965c8aebb44fc4fdb1cb8a20da3587b",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-ade__ade-bench-airbnb005-9c75036f4febb731.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-53c496fa47081e0337a09e277508963a9aa3b11c89d2f8e7826210ab51dbd537"
+      ],
+      "bytes": 4796573,
+      "extract_subdir": "task",
+      "filename": "task-ade__ade-bench-airbnb007-53c496fa47081e03.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_notices_and_dataset_provenance_review": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "564d0e2d0c5608b63c30477d31c2d213476863bd7ec379c3ee545bbf625f487d",
+      "task_key": "ade__ade-bench-airbnb007",
+      "tree_sha256": "53c496fa47081e0337a09e277508963a9aa3b11c89d2f8e7826210ab51dbd537",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-ade__ade-bench-airbnb007-53c496fa47081e03.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-a91d39df5f2f83240dca813b32674371a5c02cc2be5b9eb3deb1ad0192d6bd7f"
+      ],
+      "bytes": 36904,
+      "extract_subdir": "task",
+      "filename": "task-ade__ade-bench-ana-eng003-a91d39df5f2f8324.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_notices_and_dataset_provenance_review": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "46027f86fa0b870e6c2e953c65fef8956eb13ab807ec8c95944dcfe0b7dee198",
+      "task_key": "ade__ade-bench-ana-eng003",
+      "tree_sha256": "a91d39df5f2f83240dca813b32674371a5c02cc2be5b9eb3deb1ad0192d6bd7f",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-ade__ade-bench-ana-eng003-a91d39df5f2f8324.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-aad267608e21574ad82124142e16baecd6834a242c7f2d87185b32e99949fa18"
+      ],
+      "bytes": 43999,
+      "extract_subdir": "task",
+      "filename": "task-ade__ade-bench-ana-eng004-aad267608e21574a.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_notices_and_dataset_provenance_review": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "5b7660dd5d17bb21471fbe9905c88468c992191f027a667b59c28c8e8e579f2b",
+      "task_key": "ade__ade-bench-ana-eng004",
+      "tree_sha256": "aad267608e21574ad82124142e16baecd6834a242c7f2d87185b32e99949fa18",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-ade__ade-bench-ana-eng004-aad267608e21574a.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-2af6c1c4f48c50cd4ab43238489b9e76de9b0635f2fe8d637c49dbfafd95912f"
+      ],
+      "bytes": 36588,
+      "extract_subdir": "task",
+      "filename": "task-ade__ade-bench-ana-eng005-2af6c1c4f48c50cd.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_notices_and_dataset_provenance_review": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "04afddd2b3f8a6229ba7ed4ad05d7d827ec38e3522acb571be5f57a4de414143",
+      "task_key": "ade__ade-bench-ana-eng005",
+      "tree_sha256": "2af6c1c4f48c50cd4ab43238489b9e76de9b0635f2fe8d637c49dbfafd95912f",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-ade__ade-bench-ana-eng005-2af6c1c4f48c50cd.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-efd6b4bd5bd89a8fe31120a206af1af0c1d4805b4cee9510d31d36e8e15f003f"
+      ],
+      "bytes": 48168,
+      "extract_subdir": "task",
+      "filename": "task-ade__ade-bench-ana-eng006-efd6b4bd5bd89a8f.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_notices_and_dataset_provenance_review": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "c1a5c44677797209329438d68945c92a7042b4feff600a4c2d87e3ba01a45796",
+      "task_key": "ade__ade-bench-ana-eng006",
+      "tree_sha256": "efd6b4bd5bd89a8fe31120a206af1af0c1d4805b4cee9510d31d36e8e15f003f",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-ade__ade-bench-ana-eng006-efd6b4bd5bd89a8f.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-f5582e22a16499d3213fc9c6579dda77b3c3ff378fcab9244381ea7086dc26cc"
+      ],
+      "bytes": 36279,
+      "extract_subdir": "task",
+      "filename": "task-ade__ade-bench-f1003-f5582e22a16499d3.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_notices_and_dataset_provenance_review": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "4515c52f1384f6753fc5b84bac873322444f2c9c41524ce826a56296641339ac",
+      "task_key": "ade__ade-bench-f1003",
+      "tree_sha256": "f5582e22a16499d3213fc9c6579dda77b3c3ff378fcab9244381ea7086dc26cc",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-ade__ade-bench-f1003-f5582e22a16499d3.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-679d2263708d3ef681e620d908793371982230f9b1aa460ddf1f564994edad0f"
+      ],
+      "bytes": 38242,
+      "extract_subdir": "task",
+      "filename": "task-ade__ade-bench-f1003-hard-679d2263708d3ef6.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_notices_and_dataset_provenance_review": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "ceedfa3386a24d053796b74ac83e1d03606014d408bd38354cbacb8874e21004",
+      "task_key": "ade__ade-bench-f1003-hard",
+      "tree_sha256": "679d2263708d3ef681e620d908793371982230f9b1aa460ddf1f564994edad0f",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-ade__ade-bench-f1003-hard-679d2263708d3ef6.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-2d5b7d92c3e02e4aecef7ff7437155a35c1a81c732f92db3f8dfb0c64e0fafdc"
+      ],
+      "bytes": 41664,
+      "extract_subdir": "task",
+      "filename": "task-ade__ade-bench-f1009-2d5b7d92c3e02e4a.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_notices_and_dataset_provenance_review": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "429e1a8fdb4f4cad238016fed6bdb82bb1d54d607d812cf8690dbb075054026d",
+      "task_key": "ade__ade-bench-f1009",
+      "tree_sha256": "2d5b7d92c3e02e4aecef7ff7437155a35c1a81c732f92db3f8dfb0c64e0fafdc",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-ade__ade-bench-f1009-2d5b7d92c3e02e4a.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-94b44d8c2768978c71d20c803f6d8c76baf44b67eb4885ab85487d0949254507"
+      ],
+      "bytes": 55652,
+      "extract_subdir": "task",
+      "filename": "task-ade__ade-bench-f1010-94b44d8c2768978c.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_notices_and_dataset_provenance_review": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "6ec72a5e143665bddd436985b00419142e450f2557955eb01d4d69223c6afb8b",
+      "task_key": "ade__ade-bench-f1010",
+      "tree_sha256": "94b44d8c2768978c71d20c803f6d8c76baf44b67eb4885ab85487d0949254507",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-ade__ade-bench-f1010-94b44d8c2768978c.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-c79e9f4a7e433b9eebc10eff04892d7574375cc380a9f8ea2d135111cfb9f28b"
+      ],
+      "bytes": 55827,
+      "extract_subdir": "task",
+      "filename": "task-ade__ade-bench-f1010-medium-c79e9f4a7e433b9e.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_notices_and_dataset_provenance_review": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "1196b2d32bca11454f665886d3154fc941f87a24249fbf22d72140f5a95cffe4",
+      "task_key": "ade__ade-bench-f1010-medium",
+      "tree_sha256": "c79e9f4a7e433b9eebc10eff04892d7574375cc380a9f8ea2d135111cfb9f28b",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-ade__ade-bench-f1010-medium-c79e9f4a7e433b9e.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-8792ab3ed74d429df38515a45315d40e49dc96b38e478d739fcb3137f1b3cb50"
+      ],
+      "bytes": 38905,
+      "extract_subdir": "task",
+      "filename": "task-ade__ade-bench-f1011-8792ab3ed74d429d.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_notices_and_dataset_provenance_review": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "9dfd445e1850f3d3fa6f1cab58b25759407301bfa3e4959601842af23b02df70",
+      "task_key": "ade__ade-bench-f1011",
+      "tree_sha256": "8792ab3ed74d429df38515a45315d40e49dc96b38e478d739fcb3137f1b3cb50",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-ade__ade-bench-f1011-8792ab3ed74d429d.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-12d7152fb841a502e3af0635648f22ccf7d40116f9f99dddd398ac01ebf69c6a"
+      ],
+      "bytes": 42222,
+      "extract_subdir": "task",
+      "filename": "task-ade__ade-bench-intercom001-12d7152fb841a502.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_notices_and_dataset_provenance_review": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "0adaf5ac543521797b4b07ed89e187f48243bfcafa6e03528e39f743941a44a8",
+      "task_key": "ade__ade-bench-intercom001",
+      "tree_sha256": "12d7152fb841a502e3af0635648f22ccf7d40116f9f99dddd398ac01ebf69c6a",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-ade__ade-bench-intercom001-12d7152fb841a502.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-b99f274193a468dbc48c8908d329f0df3ddd8761031b50195555fad7cf39b6bf"
+      ],
+      "bytes": 43084,
+      "extract_subdir": "task",
+      "filename": "task-ade__ade-bench-intercom002-b99f274193a468db.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_notices_and_dataset_provenance_review": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "4a7aefc4dfe3d11d7851ee9fa4f2dc464c09e432eaec0d636471d94c1a5e7cfb",
+      "task_key": "ade__ade-bench-intercom002",
+      "tree_sha256": "b99f274193a468dbc48c8908d329f0df3ddd8761031b50195555fad7cf39b6bf",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-ade__ade-bench-intercom002-b99f274193a468db.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-3b9cc8e51dd673c18a7dc8bbc166fe606e834ff40d36183555eba4f67903fc7b"
+      ],
+      "bytes": 42762,
+      "extract_subdir": "task",
+      "filename": "task-ade__ade-bench-intercom003-3b9cc8e51dd673c1.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_notices_and_dataset_provenance_review": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "5ef658b0423351db5d903c96dad8c311b3704319f5aa0cf2679c6cfd7f49ace3",
+      "task_key": "ade__ade-bench-intercom003",
+      "tree_sha256": "3b9cc8e51dd673c18a7dc8bbc166fe606e834ff40d36183555eba4f67903fc7b",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-ade__ade-bench-intercom003-3b9cc8e51dd673c1.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-d75f9b9c346b5674fff7d9a3e861f3967c211acf9572a0449f5de394f08dd68f"
+      ],
+      "bytes": 18841,
+      "extract_subdir": "task",
+      "filename": "task-deb__dbt-calculate-running-balance-d75f9b9c346b5674.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_license_notice_packaging": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "5d445a3f8dc9c67b3a9798dece0f126e50ade8cbc8b11ba8e44e70949b6f7064",
+      "task_key": "deb__dbt-calculate-running-balance",
+      "tree_sha256": "d75f9b9c346b5674fff7d9a3e861f3967c211acf9572a0449f5de394f08dd68f",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-calculate-running-balance-d75f9b9c346b5674.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-bfd7b249a31c4d7db479cfc2052f18aa5663ce7a08e337231e5a5135a4612d74"
+      ],
+      "bytes": 24973,
+      "extract_subdir": "task",
+      "filename": "task-deb__dbt-coupon-effectiveness-bfd7b249a31c4d7d.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_license_notice_packaging": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "ce17732fd4a50c3a2359e4774b773f755fc2bc916aba2c38f94e4a8140047d89",
+      "task_key": "deb__dbt-coupon-effectiveness",
+      "tree_sha256": "bfd7b249a31c4d7db479cfc2052f18aa5663ce7a08e337231e5a5135a4612d74",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-coupon-effectiveness-bfd7b249a31c4d7d.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-5c2962386c02eb729ea6659fb99c07fd36cd4406cf8a23459216e58dc042a046"
+      ],
+      "bytes": 20913,
+      "extract_subdir": "task",
+      "filename": "task-deb__dbt-customer-churn-cohorts-5c2962386c02eb72.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_license_notice_packaging": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "991e49b868b7575d226848ba23db235130f4cf8d4e60d6b9e44400c3309a69f4",
+      "task_key": "deb__dbt-customer-churn-cohorts",
+      "tree_sha256": "5c2962386c02eb729ea6659fb99c07fd36cd4406cf8a23459216e58dc042a046",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-customer-churn-cohorts-5c2962386c02eb72.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-c1365ce723ccb5ade2222faed5d0876a91b46a0b005d424f0dbccea5e7c5e002"
+      ],
+      "bytes": 14810,
+      "extract_subdir": "task",
+      "filename": "task-deb__dbt-customer-churn-early-warning-c1365ce723ccb5ad.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_license_notice_packaging": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "c30663b7a188e508d30f59e2104d6a835da1a82a03e80f02f07c82ea29733a34",
+      "task_key": "deb__dbt-customer-churn-early-warning",
+      "tree_sha256": "c1365ce723ccb5ade2222faed5d0876a91b46a0b005d424f0dbccea5e7c5e002",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-customer-churn-early-warning-c1365ce723ccb5ad.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-639c192f252a8a018415995f4722f6f4829ab5e52fdde6a7ba76a833624de750"
+      ],
+      "bytes": 15666,
+      "extract_subdir": "task",
+      "filename": "task-deb__dbt-customer-cltv-forecasting-639c192f252a8a01.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_license_notice_packaging": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "d6bb5d6b36788725069500182bf67e2ddc90df2d987e0a61cef28c4d4852f543",
+      "task_key": "deb__dbt-customer-cltv-forecasting",
+      "tree_sha256": "639c192f252a8a018415995f4722f6f4829ab5e52fdde6a7ba76a833624de750",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-customer-cltv-forecasting-639c192f252a8a01.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-5a0b54ad65115ed07b23b001cf7a1bf52c11da613bccb1b3c791fe485e9de879"
+      ],
+      "bytes": 13956,
+      "extract_subdir": "task",
+      "filename": "task-deb__dbt-customer-geographic-5a0b54ad65115ed0.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_license_notice_packaging": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "99f638c34f2ec8cdc441fbc72eab6782a135548687152f82c7ba43cc13fdb10c",
+      "task_key": "deb__dbt-customer-geographic",
+      "tree_sha256": "5a0b54ad65115ed07b23b001cf7a1bf52c11da613bccb1b3c791fe485e9de879",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-customer-geographic-5a0b54ad65115ed0.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-9ee778862e2ea2fb5c4ccd74c1e58ce21cd36979abdca2c87f5bdb28448d47cd"
+      ],
+      "bytes": 26231,
+      "extract_subdir": "task",
+      "filename": "task-deb__dbt-customer-lifetime-value-9ee778862e2ea2fb.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_license_notice_packaging": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "395759b8ef070554733356245386ada4e6d3bd038e8313130d5b37839d1104e6",
+      "task_key": "deb__dbt-customer-lifetime-value",
+      "tree_sha256": "9ee778862e2ea2fb5c4ccd74c1e58ce21cd36979abdca2c87f5bdb28448d47cd",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-customer-lifetime-value-9ee778862e2ea2fb.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-e0da1d3492e4cce8b7fa0a97b18e4d3b3738bccb364fbea6d46157759d47bdc5"
+      ],
+      "bytes": 14231,
+      "extract_subdir": "task",
+      "filename": "task-deb__dbt-customer-ltv-fix-e0da1d3492e4cce8.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_license_notice_packaging": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "b89f3eebd4495f95f10113d1b1cf67ab5bc06f4978f0e3d89b54ac5b2cb13d5f",
+      "task_key": "deb__dbt-customer-ltv-fix",
+      "tree_sha256": "e0da1d3492e4cce8b7fa0a97b18e4d3b3738bccb364fbea6d46157759d47bdc5",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-customer-ltv-fix-e0da1d3492e4cce8.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-d54a2b42990a4f2ab101b8181f5dca8a85d941b9c9e911357a504e93fdd47e49"
+      ],
+      "bytes": 15415,
+      "extract_subdir": "task",
+      "filename": "task-deb__dbt-customer-order-analytics-d54a2b42990a4f2a.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_license_notice_packaging": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "6be9827041a0fca9f55a9d92a9943d78ca7fe78f23c728fde18e95d839657578",
+      "task_key": "deb__dbt-customer-order-analytics",
+      "tree_sha256": "d54a2b42990a4f2ab101b8181f5dca8a85d941b9c9e911357a504e93fdd47e49",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-customer-order-analytics-d54a2b42990a4f2a.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-d6f9fcf6156ba2808714ff3f2f5e1fbe912e26fe3d0f481ad1e5c7f30de779df"
+      ],
+      "bytes": 14654,
+      "extract_subdir": "task",
+      "filename": "task-deb__dbt-customer-risk-scoring-d6f9fcf6156ba280.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_license_notice_packaging": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "33271eb981954c45bb050cee07ad28bb944413c22f65121c43d339d2f58d312f",
+      "task_key": "deb__dbt-customer-risk-scoring",
+      "tree_sha256": "d6f9fcf6156ba2808714ff3f2f5e1fbe912e26fe3d0f481ad1e5c7f30de779df",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-customer-risk-scoring-d6f9fcf6156ba280.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-bde46a8d75356400408f22294e8de2095e9fa9be49a83cb4fd25e3cb6ab5c034"
+      ],
+      "bytes": 14173,
+      "extract_subdir": "task",
+      "filename": "task-deb__dbt-daily-order-summary-bde46a8d75356400.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_license_notice_packaging": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "2a9c1cdb688df740f3d459fc3ce9c7db5486258c41e54cf1c471cd9d4c45ef3e",
+      "task_key": "deb__dbt-daily-order-summary",
+      "tree_sha256": "bde46a8d75356400408f22294e8de2095e9fa9be49a83cb4fd25e3cb6ab5c034",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-daily-order-summary-bde46a8d75356400.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-bd8ac39a7859ec4ec65a163a2001da99bbfb1f6ca2f716bcacb8bff677ce5904"
+      ],
+      "bytes": 18739,
+      "extract_subdir": "task",
+      "filename": "task-deb__dbt-exchange-rate-settlement-date-bd8ac39a7859ec4e.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_license_notice_packaging": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "5ca8e9574533198a0847376a43b9a9c8d7661c178642d5af79e327e6dc731a19",
+      "task_key": "deb__dbt-exchange-rate-settlement-date",
+      "tree_sha256": "bd8ac39a7859ec4ec65a163a2001da99bbfb1f6ca2f716bcacb8bff677ce5904",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-exchange-rate-settlement-date-bd8ac39a7859ec4e.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-ad48e47ffbe36a108e427a77914a3f46b98d5adf9d0497b86f9195aaa7ca8678"
+      ],
+      "bytes": 16817,
+      "extract_subdir": "task",
+      "filename": "task-deb__dbt-fix-cac-payback-waterfall-ad48e47ffbe36a10.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_license_notice_packaging": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "9c1c8f5224095f1333cab5cf913a144d2e11e12566438f82c53541c1e7a6e9e3",
+      "task_key": "deb__dbt-fix-cac-payback-waterfall",
+      "tree_sha256": "ad48e47ffbe36a108e427a77914a3f46b98d5adf9d0497b86f9195aaa7ca8678",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-fix-cac-payback-waterfall-ad48e47ffbe36a10.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-f201001186d4c40d4e4c075ba627f77de2bb5113bfe6af060426a8350486af7c"
+      ],
+      "bytes": 18043,
+      "extract_subdir": "task",
+      "filename": "task-deb__dbt-fix-email-attribution-f201001186d4c40d.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_license_notice_packaging": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "7a4cbd8f618a20ae472139c3cf6a4f1f110b73266938c8cd1234457c4787d20e",
+      "task_key": "deb__dbt-fix-email-attribution",
+      "tree_sha256": "f201001186d4c40d4e4c075ba627f77de2bb5113bfe6af060426a8350486af7c",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-fix-email-attribution-f201001186d4c40d.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-4e14c491cb12027fe5cc4876dfb81776ec00718118a443024ad51a319fc2cc0d"
+      ],
+      "bytes": 20574,
+      "extract_subdir": "task",
+      "filename": "task-deb__dbt-fix-multi-touch-attribution-4e14c491cb12027f.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_license_notice_packaging": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "c3592e9cff30e782bb04b8cec97c60be8a866da7aa8a9b03b2bb00fc2a0a07cd",
+      "task_key": "deb__dbt-fix-multi-touch-attribution",
+      "tree_sha256": "4e14c491cb12027fe5cc4876dfb81776ec00718118a443024ad51a319fc2cc0d",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-fix-multi-touch-attribution-4e14c491cb12027f.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-0f84ad074469cc03a19b78630a63767223bb06448c867161d2cd3603233bdf36"
+      ],
+      "bytes": 15925,
+      "extract_subdir": "task",
+      "filename": "task-deb__dbt-fix-repeat-purchase-cohort-revenue-0f84ad074469cc03.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_license_notice_packaging": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "14042a97859955575d1b6b6a0f849bffb2a9f8a8c6d70636e94dd98eccb1abf3",
+      "task_key": "deb__dbt-fix-repeat-purchase-cohort-revenue",
+      "tree_sha256": "0f84ad074469cc03a19b78630a63767223bb06448c867161d2cd3603233bdf36",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-fix-repeat-purchase-cohort-revenue-0f84ad074469cc03.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-ab8d293d378ed31e40dce17bc40eda05aa1ae299989d34ffedff35e2b25b5eab"
+      ],
+      "bytes": 17656,
+      "extract_subdir": "task",
+      "filename": "task-deb__dbt-fraud-detection-model-ab8d293d378ed31e.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_license_notice_packaging": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "7a31a6bbd4d440b5de49b0db440943c45930e9250bbc34eb3e6fed3058988d34",
+      "task_key": "deb__dbt-fraud-detection-model",
+      "tree_sha256": "ab8d293d378ed31e40dce17bc40eda05aa1ae299989d34ffedff35e2b25b5eab",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-fraud-detection-model-ab8d293d378ed31e.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-f540250b07dc01d7f7539223feb4d1b0e6f35d252ea4f7a20a7322a063f439a5"
+      ],
+      "bytes": 27487,
+      "extract_subdir": "task",
+      "filename": "task-deb__dbt-fulfillment-sla-f540250b07dc01d7.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_license_notice_packaging": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "6ceb60a936b545f3eac10d2a1f7aeb1e2842e5b40f58501b2c6cf65ef4a3d850",
+      "task_key": "deb__dbt-fulfillment-sla",
+      "tree_sha256": "f540250b07dc01d7f7539223feb4d1b0e6f35d252ea4f7a20a7322a063f439a5",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-fulfillment-sla-f540250b07dc01d7.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-18526ecfb58eb81748c627a08b043b9164b3aefa6007bdf64af96d37573fd5a6"
+      ],
+      "bytes": 20239,
+      "extract_subdir": "task",
+      "filename": "task-deb__dbt-harbor-warehouse-capacity-18526ecfb58eb817.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_license_notice_packaging": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "a5279adf91448619232b35b49df7cedf7b5a5602c44dbd77011f8476575dfafd",
+      "task_key": "deb__dbt-harbor-warehouse-capacity",
+      "tree_sha256": "18526ecfb58eb81748c627a08b043b9164b3aefa6007bdf64af96d37573fd5a6",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-harbor-warehouse-capacity-18526ecfb58eb817.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-b62f741934fdd7312af5ec0a77921b28f98189f6572544def31e69c21d85a8f2"
+      ],
+      "bytes": 16652,
+      "extract_subdir": "task",
+      "filename": "task-deb__dbt-inventory-analysis-b62f741934fdd731.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_license_notice_packaging": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "1d34672315361ffc7d8f976cc91410f36e0f57419a0d8dbc7bcb5e0b3d37756f",
+      "task_key": "deb__dbt-inventory-analysis",
+      "tree_sha256": "b62f741934fdd7312af5ec0a77921b28f98189f6572544def31e69c21d85a8f2",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-inventory-analysis-b62f741934fdd731.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-b13b9b895210c8e7f18d190ac1054f9b3268716a978b650ceea446a5bd0c75a8"
+      ],
+      "bytes": 21725,
+      "extract_subdir": "task",
+      "filename": "task-deb__dbt-inventory-stockout-risk-b13b9b895210c8e7.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_license_notice_packaging": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "c9baa8ae6616cdab1fbf42cc039c9ecebc0966c6b5edcc0a2b6f87ecf00a05a8",
+      "task_key": "deb__dbt-inventory-stockout-risk",
+      "tree_sha256": "b13b9b895210c8e7f18d190ac1054f9b3268716a978b650ceea446a5bd0c75a8",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-inventory-stockout-risk-b13b9b895210c8e7.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-bc074bc24fb429232e4ee023a0c6cfe7fe8413a97f1bd86119757d9b6a656b9f"
+      ],
+      "bytes": 15099,
+      "extract_subdir": "task",
+      "filename": "task-deb__dbt-loyalty-points-analysis-bc074bc24fb42923.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_license_notice_packaging": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "0645b3e780bfd2a15f0ed6c3da7258b9b2337c5bca7c26f6b78d00c3aca4d320",
+      "task_key": "deb__dbt-loyalty-points-analysis",
+      "tree_sha256": "bc074bc24fb429232e4ee023a0c6cfe7fe8413a97f1bd86119757d9b6a656b9f",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-loyalty-points-analysis-bc074bc24fb42923.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-85472ff635434a07a258c2e31e1799bd453cfca011a6451905cc89c1186048e2"
+      ],
+      "bytes": 18321,
+      "extract_subdir": "task",
+      "filename": "task-deb__dbt-order-reconciliation-85472ff635434a07.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_license_notice_packaging": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "63a126b34391573138a38fbdc33063bd517e3ea8f6fa2aeee4348a2c4a2f2d61",
+      "task_key": "deb__dbt-order-reconciliation",
+      "tree_sha256": "85472ff635434a07a258c2e31e1799bd453cfca011a6451905cc89c1186048e2",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-order-reconciliation-85472ff635434a07.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-4e392d1ca5313ecc03521dbf89ead1d2e7550f992465d19563b09ff92490e399"
+      ],
+      "bytes": 17197,
+      "extract_subdir": "task",
+      "filename": "task-deb__dbt-price-elasticity-4e392d1ca5313ecc.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_license_notice_packaging": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "0fd83cb3e7c1cfe6c64991a06ddb42d561d064a9f694ce89d72559569c2873a3",
+      "task_key": "deb__dbt-price-elasticity",
+      "tree_sha256": "4e392d1ca5313ecc03521dbf89ead1d2e7550f992465d19563b09ff92490e399",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-price-elasticity-4e392d1ca5313ecc.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-bd41c9f3daee82cb935e89d2935e05d749a52608a4f181e15373356e4f6f968d"
+      ],
+      "bytes": 14963,
+      "extract_subdir": "task",
+      "filename": "task-deb__dbt-product-category-analytics-bd41c9f3daee82cb.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_license_notice_packaging": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "82da142412e068fa536c1ef2bf24884c5fa0b9da8d9563ad717bd0bbb3a81501",
+      "task_key": "deb__dbt-product-category-analytics",
+      "tree_sha256": "bd41c9f3daee82cb935e89d2935e05d749a52608a4f181e15373356e4f6f968d",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-product-category-analytics-bd41c9f3daee82cb.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-b9f878470d06b2a6f1342d0e9bc80ae207d800e5d687fb1cbd20b8efab69be31"
+      ],
+      "bytes": 15709,
+      "extract_subdir": "task",
+      "filename": "task-deb__dbt-retail-task-01-channel-revenue-b9f878470d06b2a6.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_license_notice_packaging": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "da5882dc0b659f4d157688a5c7a545ac632718340df86e79dda62e78f0d17145",
+      "task_key": "deb__dbt-retail-task-01-channel-revenue",
+      "tree_sha256": "b9f878470d06b2a6f1342d0e9bc80ae207d800e5d687fb1cbd20b8efab69be31",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-retail-task-01-channel-revenue-b9f878470d06b2a6.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-85453dc18e75a4755be32837d451ecbf20b8ef065c03057210ef308c516b50f2"
+      ],
+      "bytes": 100659,
+      "extract_subdir": "task",
+      "filename": "task-deb__dbt-retail-task-04-market-roi-85453dc18e75a475.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_license_notice_packaging": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "e2bc7c63a79ae8681a0b529c7b9e1ae8fcfa51e2889d2a6a4e18e9e01b9f6756",
+      "task_key": "deb__dbt-retail-task-04-market-roi",
+      "tree_sha256": "85453dc18e75a4755be32837d451ecbf20b8ef065c03057210ef308c516b50f2",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-retail-task-04-market-roi-85453dc18e75a475.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-cf30b1bcc2bf01d78043e97cbc715ed5bcafb5d8ee845d05def876599c8d1bdd"
+      ],
+      "bytes": 16995,
+      "extract_subdir": "task",
+      "filename": "task-deb__dbt-rfm-customer-segmentation-cf30b1bcc2bf01d7.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_license_notice_packaging": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "13864a8d4353820d77a13c08ecd4bb2e3aec8f57070ec3bbdae66452708cb505",
+      "task_key": "deb__dbt-rfm-customer-segmentation",
+      "tree_sha256": "cf30b1bcc2bf01d78043e97cbc715ed5bcafb5d8ee845d05def876599c8d1bdd",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-rfm-customer-segmentation-cf30b1bcc2bf01d7.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-f793de90f0e2401768682ef40d73ff50e3b46ce7ab5db158edd7833092647587"
+      ],
+      "bytes": 22692,
+      "extract_subdir": "task",
+      "filename": "task-deb__dbt-rfm-customer-segmentation-2-f793de90f0e24017.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_license_notice_packaging": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "7ae4691f5eee13baa84f46cda892f9e60365200b5ca10aece56544f5cc735617",
+      "task_key": "deb__dbt-rfm-customer-segmentation-2",
+      "tree_sha256": "f793de90f0e2401768682ef40d73ff50e3b46ce7ab5db158edd7833092647587",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-rfm-customer-segmentation-2-f793de90f0e24017.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-3b3d80098d5c6d9e08b2f6b109c4dad91a596f984e10e674c854ef5e717a0c81"
+      ],
+      "bytes": 17096,
+      "extract_subdir": "task",
+      "filename": "task-deb__dbt-sales-funnel-analysis-3b3d80098d5c6d9e.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_license_notice_packaging": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "368b22afc603bba0a39cbd0aa2fd3c4e67420b5b2ab84c8e1ae83e99167355ff",
+      "task_key": "deb__dbt-sales-funnel-analysis",
+      "tree_sha256": "3b3d80098d5c6d9e08b2f6b109c4dad91a596f984e10e674c854ef5e717a0c81",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-sales-funnel-analysis-3b3d80098d5c6d9e.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-ef234ff0686d1436f779c99a0bbec7181a2b468e954cd4e67d60710134e238d0"
+      ],
+      "bytes": 18267,
+      "extract_subdir": "task",
+      "filename": "task-deb__dbt-session-attribution-ef234ff0686d1436.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_license_notice_packaging": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "4054ccb46719f94b0cf4a2bbd04c0c575efb70e48679da643aae794dd739718e",
+      "task_key": "deb__dbt-session-attribution",
+      "tree_sha256": "ef234ff0686d1436f779c99a0bbec7181a2b468e954cd4e67d60710134e238d0",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-session-attribution-ef234ff0686d1436.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-3b0202b434a80c9333798d7c92454896cacb2d6d446ca271db56e7996d2098e6"
+      ],
+      "bytes": 27204,
+      "extract_subdir": "task",
+      "filename": "task-deb__dbt-supplier-payment-optimization-3b0202b434a80c93.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_license_notice_packaging": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "a02502ffc5ac785b6ce4cb8e93a8a8ea21fef8164257be1ff1516bb8ae66f050",
+      "task_key": "deb__dbt-supplier-payment-optimization",
+      "tree_sha256": "3b0202b434a80c9333798d7c92454896cacb2d6d446ca271db56e7996d2098e6",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-supplier-payment-optimization-3b0202b434a80c93.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-5556cf04d73695d0939b54658ada1e0753686883615bdba94254d2146f60e4d6"
+      ],
+      "bytes": 19358,
+      "extract_subdir": "task",
+      "filename": "task-deb__dbt-supplier-scorecard-5556cf04d73695d0.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_license_notice_packaging": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "b86a193de0742bbc6c807349b1229436319b2ec78e44559f1dcefaad822543f9",
+      "task_key": "deb__dbt-supplier-scorecard",
+      "tree_sha256": "5556cf04d73695d0939b54658ada1e0753686883615bdba94254d2146f60e4d6",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-supplier-scorecard-5556cf04d73695d0.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-7801b62c72bf4311c05f86f515ab1a6f7c1857e3b7a80f6aaca9603fdcac6676"
+      ],
+      "bytes": 27018,
+      "extract_subdir": "task",
+      "filename": "task-deb__dbt-three-way-matching-7801b62c72bf4311.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_license_notice_packaging": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "926a576a53b88b00dccaca11603cacef92b30d9d4e4251e29ac4fe9470c0dfae",
+      "task_key": "deb__dbt-three-way-matching",
+      "tree_sha256": "7801b62c72bf4311c05f86f515ab1a6f7c1857e3b7a80f6aaca9603fdcac6676",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-three-way-matching-7801b62c72bf4311.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-91e98b10e9ac93b4609e5cc3a685962b6b30fe4f0c0eed550449825ecb0b554b"
+      ],
+      "bytes": 17444,
+      "extract_subdir": "task",
+      "filename": "task-deb__dbt-web-session-analytics-91e98b10e9ac93b4.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_license_notice_packaging": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "534044a6adb27d9d23900c9fe7673fff23768cba372d667003d462646861ce10",
+      "task_key": "deb__dbt-web-session-analytics",
+      "tree_sha256": "91e98b10e9ac93b4609e5cc3a685962b6b30fe4f0c0eed550449825ecb0b554b",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-web-session-analytics-91e98b10e9ac93b4.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-42c240d4331d2b590fd44c8ac714afa18b0659aa55b2dc70f0a4e4bf140d2e31"
+      ],
+      "bytes": 19615,
+      "extract_subdir": "task",
+      "filename": "task-deb__dbt-weekly-sales-growth-42c240d4331d2b59.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_license_notice_packaging": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "b8c4f8fdd804f6f4d6fd7849a441e4104dfadbcfa51592f0c1ac1ca12c69f507",
+      "task_key": "deb__dbt-weekly-sales-growth",
+      "tree_sha256": "42c240d4331d2b590fd44c8ac714afa18b0659aa55b2dc70f0a4e4bf140d2e31",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-weekly-sales-growth-42c240d4331d2b59.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-843b8d826c8eb5c5e179a7a7f1cdc0ab41c6c8408f4415b569ec2b319a68f9af"
+      ],
+      "bytes": 3238651,
+      "extract_subdir": "task",
+      "filename": "task-spider2__app_reporting001-843b8d826c8eb5c5.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_notices_and_dataset_provenance_review": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "7df2729e8cf842eac1a1cc9f03dcda711a003284a67fdbc10a17531ebb5b448f",
+      "task_key": "spider2__app_reporting001",
+      "tree_sha256": "843b8d826c8eb5c5e179a7a7f1cdc0ab41c6c8408f4415b569ec2b319a68f9af",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__app_reporting001-843b8d826c8eb5c5.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-37fbb28c2fa81580ba4094244e033951ec998f149bc57a96ad8d6fbe12013744"
+      ],
+      "bytes": 3238638,
+      "extract_subdir": "task",
+      "filename": "task-spider2__app_reporting002-37fbb28c2fa81580.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_notices_and_dataset_provenance_review": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "fea37a47ea6c375f250902af39d3523cc36a22bb40b9241cc8d6cf30079af9a0",
+      "task_key": "spider2__app_reporting002",
+      "tree_sha256": "37fbb28c2fa81580ba4094244e033951ec998f149bc57a96ad8d6fbe12013744",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__app_reporting002-37fbb28c2fa81580.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-90dc426fe4693eb252e4678846d53a3007adf573f577dd60901793ae6ec1637e"
+      ],
+      "bytes": 1075493,
+      "extract_subdir": "task",
+      "filename": "task-spider2__apple_store001-90dc426fe4693eb2.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_notices_and_dataset_provenance_review": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "d34b7461acceab5896da8277839e13c7cb105c3fa000f2de767346b94ea15047",
+      "task_key": "spider2__apple_store001",
+      "tree_sha256": "90dc426fe4693eb252e4678846d53a3007adf573f577dd60901793ae6ec1637e",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__apple_store001-90dc426fe4693eb2.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-2520d2ea94db0c3db6344f9c315bcaf40666a047bade0f4dc6e75ddcfea65b12"
+      ],
+      "bytes": 111787791,
+      "extract_subdir": "task",
+      "filename": "task-spider2__asset001-2520d2ea94db0c3d.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_notices_and_dataset_provenance_review": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "5d791d85e2ddacd0b53d450a73534694d5da8d5b02004f059cac2bcb7a740ba3",
+      "task_key": "spider2__asset001",
+      "tree_sha256": "2520d2ea94db0c3db6344f9c315bcaf40666a047bade0f4dc6e75ddcfea65b12",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__asset001-2520d2ea94db0c3d.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-d67331b2d831e0d424a74e3a6e6c8f0b45c13713ca7c07311ed1559d6c00954b"
+      ],
+      "bytes": 1254048,
+      "extract_subdir": "task",
+      "filename": "task-spider2__google_play001-d67331b2d831e0d4.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_notices_and_dataset_provenance_review": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "2b2c98dcfba1d3012bbe75c77b10d108f538ff38e7d393045af2dd884723676e",
+      "task_key": "spider2__google_play001",
+      "tree_sha256": "d67331b2d831e0d424a74e3a6e6c8f0b45c13713ca7c07311ed1559d6c00954b",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__google_play001-d67331b2d831e0d4.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-8459249b33387ed495dd075829cdb6d01584bc6520661f74e1aedca973dd6b5a"
+      ],
+      "bytes": 229878,
+      "extract_subdir": "task",
+      "filename": "task-spider2__hive001-8459249b33387ed4.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_notices_and_dataset_provenance_review": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "e967846e3b231c829998d2b0059d1daf90e080478000cb0f1be7f841dec68fc5",
+      "task_key": "spider2__hive001",
+      "tree_sha256": "8459249b33387ed495dd075829cdb6d01584bc6520661f74e1aedca973dd6b5a",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__hive001-8459249b33387ed4.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-6582cd205bd3559ab2755c425e772c471d20f8f4c4665da2edfc3887709be03d"
+      ],
+      "bytes": 960736,
+      "extract_subdir": "task",
+      "filename": "task-spider2__intercom001-6582cd205bd3559a.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_notices_and_dataset_provenance_review": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "a936d0aef369022bb4937fe561ed78c6cf1abbbed6287ad72ff1e5569234e77d",
+      "task_key": "spider2__intercom001",
+      "tree_sha256": "6582cd205bd3559ab2755c425e772c471d20f8f4c4665da2edfc3887709be03d",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__intercom001-6582cd205bd3559a.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-85051214d9830d85b1bce53efed8124b7799b4663d7343771741190cadc8723f"
+      ],
+      "bytes": 903329,
+      "extract_subdir": "task",
+      "filename": "task-spider2__jira001-85051214d9830d85.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_notices_and_dataset_provenance_review": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "bf137aa59439e26367c8205548bcd19bd0597b02a2dd5a8e0bfb498dc4a2e2ab",
+      "task_key": "spider2__jira001",
+      "tree_sha256": "85051214d9830d85b1bce53efed8124b7799b4663d7343771741190cadc8723f",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__jira001-85051214d9830d85.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-f7d83f568ba2111ac9d3fd28375ccbdeaf7f95a8ea455e67376bb1ed218c369c"
+      ],
+      "bytes": 1046709,
+      "extract_subdir": "task",
+      "filename": "task-spider2__lever001-f7d83f568ba2111a.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_notices_and_dataset_provenance_review": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "8045539439f54c26ffd6a0c58fba14bc85651f0f067edac450348fc146f9b086",
+      "task_key": "spider2__lever001",
+      "tree_sha256": "f7d83f568ba2111ac9d3fd28375ccbdeaf7f95a8ea455e67376bb1ed218c369c",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__lever001-f7d83f568ba2111a.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-38a1e63d64305c6784485a1ae03347b2abce0e9c38dea3d3dea46ba89292c1cc"
+      ],
+      "bytes": 20443235,
+      "extract_subdir": "task",
+      "filename": "task-spider2__marketo001-38a1e63d64305c67.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_notices_and_dataset_provenance_review": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "37281f25e9123ebd6857b4456d8421c764e5bd47bd3b135bf9627c641ac30c07",
+      "task_key": "spider2__marketo001",
+      "tree_sha256": "38a1e63d64305c6784485a1ae03347b2abce0e9c38dea3d3dea46ba89292c1cc",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__marketo001-38a1e63d64305c67.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-452b5cfb39eaa12ff021e85dbf49039c295c2255126b77b78ebfe83f81a00518"
+      ],
+      "bytes": 254455,
+      "extract_subdir": "task",
+      "filename": "task-spider2__maturity001-452b5cfb39eaa12f.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_notices_and_dataset_provenance_review": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "276575fe562cdc9fa2293c850bdfdc977bcde967884af71cd34c924725e78548",
+      "task_key": "spider2__maturity001",
+      "tree_sha256": "452b5cfb39eaa12ff021e85dbf49039c295c2255126b77b78ebfe83f81a00518",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__maturity001-452b5cfb39eaa12f.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-194c7f4e21529ba5e87f5de82844b43f94454b5432e82d4b243fe743812c4d91"
+      ],
+      "bytes": 1085787,
+      "extract_subdir": "task",
+      "filename": "task-spider2__recharge002-194c7f4e21529ba5.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_notices_and_dataset_provenance_review": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "843823720b039ab2f90d7440040107830f523a323f0aba957e13e69024e3ef03",
+      "task_key": "spider2__recharge002",
+      "tree_sha256": "194c7f4e21529ba5e87f5de82844b43f94454b5432e82d4b243fe743812c4d91",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__recharge002-194c7f4e21529ba5.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-79280e53370dc6855c59bf137583c18ea1336872f9d4879c841b07fb6cd4b914"
+      ],
+      "bytes": 1664944,
+      "extract_subdir": "task",
+      "filename": "task-spider2__shopify002-79280e53370dc685.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_notices_and_dataset_provenance_review": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "ee1288458f2a1fb7467a06b784c6384bd5c1c80fa72bfa1906ffef0cd8e25204",
+      "task_key": "spider2__shopify002",
+      "tree_sha256": "79280e53370dc6855c59bf137583c18ea1336872f9d4879c841b07fb6cd4b914",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__shopify002-79280e53370dc685.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-51120249fcb29f99fd2477f55bfc6e490b13d37ef555404348a6f7a73635662d"
+      ],
+      "bytes": 61554150,
+      "extract_subdir": "task",
+      "filename": "task-spider2__tickit001-51120249fcb29f99.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_notices_and_dataset_provenance_review": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "5d242f81926be1aad9c6b2e715ef1d5538eabec1adae7c2160a5ec30a970b157",
+      "task_key": "spider2__tickit001",
+      "tree_sha256": "51120249fcb29f99fd2477f55bfc6e490b13d37ef555404348a6f7a73635662d",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__tickit001-51120249fcb29f99.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-89dc25ba7b225ff5bd8fe29a5da654056e69805fd643808cf75c5fce2ad19082"
+      ],
+      "bytes": 882156,
+      "extract_subdir": "task",
+      "filename": "task-spider2__workday001-89dc25ba7b225ff5.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_notices_and_dataset_provenance_review": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "901327eb400735f16c599322b77099844bea9c54a5e7e67e4906475379ec504c",
+      "task_key": "spider2__workday001",
+      "tree_sha256": "89dc25ba7b225ff5bd8fe29a5da654056e69805fd643808cf75c5fce2ad19082",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__workday001-89dc25ba7b225ff5.tar.gz"
+    },
+    {
+      "archive_roundtrip_verified": true,
+      "asset_ids": [
+        "task-ff8d9d44cd9cb31f985ad0ae0de4d5c2bdb1e1d5d80e74e261d62c1e2a737635"
+      ],
+      "bytes": 878716,
+      "extract_subdir": "task",
+      "filename": "task-spider2__workday002-ff8d9d44cd9cb31f.tar.gz",
+      "hold_resolutions": {
+        "embedded_historical_coordinates_review": "embedded_paths",
+        "project_modifications_license_not_selected": "project_license",
+        "upstream_notices_and_dataset_provenance_review": "third_party"
+      },
+      "holds": [],
+      "kind": "task-archive",
+      "sha256": "61db52f159865db584b04dee556afb27aff83d63cdf5fcdee6d43f1c86f9f295",
+      "task_key": "spider2__workday002",
+      "tree_sha256": "ff8d9d44cd9cb31f985ad0ae0de4d5c2bdb1e1d5d80e74e261d62c1e2a737635",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__workday002-ff8d9d44cd9cb31f.tar.gz"
+    },
+    {
+      "asset_ids": [
+        "qualification-c7a8cae111b865b51e1987f1ef4724c55b6786e68e03fcb2ee43633004f5b67d",
+        "qualification-8cb6dbc3def2cf0fdfc545ea59a1b78a93b525fe737c076fea4b3fcb46259bf2",
+        "qualification-452e0661ce9fd5948115a89985a5ed0995a23051df39e9d31c243a0871c03686",
+        "qualification-1a82520294d2e0600fa69f10d54296924e3fffbd433ca2edf7910e05ade432c2",
+        "qualification-7bb49bd5bd8dd8ca4c1452732b8922c9ac7e06108a5f5591acf77da0edc57c60",
+        "qualification-21cfcc7684c9c9409454b6177f51b31832c053b85aae016176625b9be5b27d5e",
+        "qualification-d0f33bdd7617aa7369d613ff6fa35f4911ade84fbf24f5089b4164fd5fa33868",
+        "qualification-c7832ce6e818f28b35f7093de300732e84691c0755a8e617994e8e51da994de5",
+        "qualification-36219817101a429f0a584ff8ef82f83b4f672084c10f20c832f4ea07969bdfa7",
+        "qualification-90232cec51b20ee0416e8e378282aad34542980ed8a8607da1bc4fc916713dcd",
+        "qualification-ce2a8f0838cb4bf4cc0bf04ce2e5c7cc7469b7afa26385a2a04f82e79603cb79",
+        "qualification-29b0a3619cb430bfe400be852da73cd432ffa7cad40df16a85128dd9dcd83db0",
+        "qualification-4db4a1ba7f4988b5dcd94daf6b817a4c478631c668b4d3ca55a03dded01f2a07",
+        "qualification-d1145afd4b1246ebec4ba985c6d2478c3d86e9c19038803baffd1b9ad2379c71",
+        "qualification-72b3b1c97192282e43a87c4229a960c9a184c7016e11e1f5513595337ab5fd4e",
+        "qualification-35309444b360e696c62e71bf68b963302a69ac5d786004e726b0fe2a5acf73c2",
+        "qualification-e477c8f0e7e270e1e679c54839e4e3a9cf72fb5fd72d61cb08c0707750d16c71",
+        "qualification-25fcdb03ba4b1b347f00b7114262c39eee05fe2a15a599fa3350c21b36bfa110",
+        "qualification-dde3640c83f0b6c5b8ae30899f388bc6b35272cf4b38beec9b7674fb90773162",
+        "qualification-e776d8da3c17454c9657da90aed7d698134966f449aae213a7c211ec62315853",
+        "qualification-9065459690470de66b623bd398cdca3e7b318aab7ac9eddbcb7702a508f9bf00",
+        "qualification-15e3f4504338085f7311512f63d154f930bbb4a57b636785c13e33b972115ddb",
+        "qualification-f4c9ed3542a09a548742fcd2a801dbc71c7f417e2775f4935102ab217e03fc80",
+        "qualification-8388c4e64dcc8f2b64e35a7c16883dfc96f6a27e39a9dd024c9d5cf4e8b17b89",
+        "qualification-712a42bb5cea6b11867295312be8f43b8e918ae5d397e18448d7d66280b284da",
+        "qualification-e6799f7f150c1a56079b42c5131d49299f6aef39bf417a8fd78f0574b6f90dbf",
+        "qualification-ce3f1e0059c4f12c3b69743bad4b4a80a19ef614e7a1c9c150c96c7cd8c84f3d",
+        "qualification-02761a70c290e395025ce233a137c64e7572c1793bd78cae9b4942062dc91528",
+        "qualification-60d60eda704ddbe7fec2f4cd0a120c664fdf82afec4315cdb0f9d1e8b3731dd2",
+        "qualification-e891aea7bf17f1a23bf629efead4f250862632e84b81e18fb81d4ea61b2d53d8",
+        "qualification-68bfb18675be3dc6687ebd8afbb1a0e63041d7528cbb72902212661f4727d6f3",
+        "qualification-becfd88d1d5c324654c8baf304e6c0294e54efb76a6574120c156bf1078c0df2",
+        "qualification-aed996fb0ff2eeb37ae23dbf5531d9a783dc40c51b2a188666471abdfe5826b3",
+        "qualification-c5caf1381c15d8265fd41fc859a2e7e9295bed7f6a3d0596ad0eb53f311cb61c",
+        "qualification-f9fa17d484e0ea3fde1a9b9d4fae1a68b61b0fe6d092c735a4cc43ce3e34a907",
+        "qualification-7e745d62154e4a02e973a1ddd92f10d03dcf51b19e187ec5fcaa8295a2a2c6b8",
+        "qualification-aa586c8e2cce1ea7aaf1ec45bf8d11b50323bbe88c431335cdc86a0568a15f18",
+        "qualification-651f7488ad1fa96e54fdec790448899b86034a9aa6289d9919752dd2d02b43d8",
+        "qualification-614a7c37fc46224466db59718592e724233fed7b41e8b0215634cf11cf7a1a79",
+        "qualification-b9cb987e6a524a7ed49f88d41a76db382ef80a331f5039aa16adf6d7b227be7e",
+        "qualification-8543afd1160300624392a61daa8635dfbde6a36c4d1307aab2a956bb2fe087ce",
+        "qualification-680964c0f0ac5e3035fbcd6087b5f9e86b329759d7adad8b1a24f274fb939826",
+        "qualification-885b94fac91bbcd0d8a20c0190c36c1cfe7ec7c3adbd9a18919c624fceb74060",
+        "qualification-33bdb9ee80ff81bb6d69fd1d0979caa7402281c3711249169a34eac2ccb982f7",
+        "qualification-9791f09c831da24069b4518578901966450c8d431a2c52abfb8676027b067ae5",
+        "qualification-78a6295640d31689f03b9ff36cb26dff02ca490d4d1fabebf8af40f757e19d1f",
+        "qualification-b4281bee980f29ecfcb3cfa9b46e6bcc10b6f25d2be7d481c61bb076356204bc",
+        "qualification-6e89c68542418e8ea92d3adb665601a828a20e8bf928472338972e3c64ffa8cc",
+        "qualification-aa8dfe5f9caba0d2aeadecfcd5187420fab7a04142f381e69bf0e2b021c90c0c",
+        "qualification-5877d77bf08ded501667c9ee491dcf45d18285b6a893d906390394f55b6b927d",
+        "qualification-7f6f9202ddfecf8f6b693c70d1523c4b24f69364fba0d36a73fcd4194297932b",
+        "qualification-5a567ed30158c6b981079aa0b956e16307f53faf6b8d243e0c670fd790f18f92",
+        "qualification-404837d622fa7b0f78ce0be4fe7235eeafdfd312c29c756c64b11d4a26b88f05",
+        "qualification-b9d58cbadfbba294a92e23ddb124359038b5b4575d6a418a8febda90bc910caa",
+        "qualification-f536af49bb9b2a1aa328e5ddcadffc90f107fbd1d430b8ce47616215d0bc2bd0",
+        "qualification-68ee1b54be3f98b351af4be74bcaf31765d5c331ad9b0a24ae06699ab5f65c16",
+        "qualification-6ac8ef88cdf565201eb87982c8f0314d3c6ec79aac135c234ddde0ea56131fb0",
+        "qualification-c9db7023b2886c1ce46433adfdbcbdd94b9a4ebf847ab2dfc41a63ca75676812",
+        "qualification-ba81647c6ddedc783765456c3ab4d74e022220d2294442fca3e609dc9bf7016e",
+        "qualification-21dda430daf6afbc464ac36b6a8dda92a5c7e116a5c03b2e3426dcf8abdd4c51",
+        "qualification-4cd73c30603716f19064680002f712b297f81046f4cad16ef48b665e44d0d04f",
+        "qualification-3c0499dfc115c11772da2c1cfac76095d1ff74eb5cabcabe5f5b418fbe3a9598",
+        "qualification-16abb4da718b36a9db056d98e2caf85cadd53040ad6b06a6f34d9afa4c4d0755",
+        "qualification-b3777435dddeb1715c1b1403959aeba6e343e711d39060f8432d8c82cc0f77c5",
+        "qualification-45e5bb9bd6f5f32ff4746c9879f7178da5291537d2a220eab7f362225c940f25",
+        "qualification-484abe9ada0f89be5ab28ae5d8fe824fd68791f4e979c5e131fa80c110f79fa7",
+        "qualification-8404c7448dc3f7d599cc216e27733cd625a0d1827390670bab2cc7d47c0d154b"
+      ],
+      "bytes": 1979483,
+      "extract_subdir": "records",
+      "filename": "qualification-records-v1.tar.gz",
+      "hold_resolutions": {
+        "historical_personal_paths": "embedded_paths",
+        "not_dependency_closed_evidence": "published as an index only; documented as not complete evidence",
+        "project_license_not_selected": "project_license"
+      },
+      "holds": [],
+      "kind": "qualification-records",
+      "self_contained_evidence": false,
+      "sha256": "3da7da303b28bf01b3105a771066126e997ba7c158bb4215740ac7fb64f1e67c",
+      "upload_status": "uploaded_to_release",
+      "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
+    }
+  ],
+  "publication_decisions": {
+    "approved_by": "repository owner",
+    "date": "2026-11-12",
+    "embedded_paths": "Historical build paths inside images, task archives and qualification records are published unchanged, so the published bytes equal the measured ones.",
+    "project_license": "Apache-2.0 (LICENSE, NOTICE).",
+    "third_party": "Upstream licenses and notices are kept in release/third-party-notices/. The images are Debian 13; the source package behind every installed package is listed with snapshot.debian.org links (os-sources-unique.tsv, os-source-packages.tsv). The Qwen Code bundle is not redistributed (it carries LGPL binaries); build it from the pinned locks in runtime/qwen-code/. Residual dataset-provenance risk for ADE-bench and Spider2 data, which upstream already publishes, is accepted."
+  },
+  "publication_status": "uploaded",
+  "registry_digest_note": "SIF file SHA256 is not an OCI manifest digest; populate registry_manifest_digest only after push and verified anonymous pull.",
+  "release_tag": "assets-v1-20261112",
+  "repository": "zhuconv/dbt-bench",
+  "schema_version": 1,
+  "sif_tag_rule": "v1-linux-arm64-<full SIF SHA256>; one tag per immutable image; never overwrite a published tag",
+  "total_payload_bytes": 7383377560
+}

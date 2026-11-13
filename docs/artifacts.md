@@ -1,15 +1,58 @@
 # External artifacts
 
-Git contains source, locks, recipes, checker code, small manifests and synthetic tests. It excludes `tasks/`, `jobs/`, `artifacts/`, `reports/`, caches, all nested virtual environments, SIFs, database files, archives, model weights and full qualification ledgers.
+The repository contains source, locks, recipes, checker code and small manifests. It excludes task payloads, jobs, database files, archives, SIFs, model weights and full evidence. `release/assets.json` binds 171 immutable objects to 67 candidate task versions. Its existing object IDs and content hashes are unchanged.
 
-`release/assets.json` is the required-object index. Each image/file is SHA256-addressed; task trees use `dbt_bench.io.tree_hash`, which includes relative names, bytes, symlinks and executable bits. Preserve modes during transfer. `catalog/measurement-tasks.json` binds67 task versions and unchanged verifier hashes. `release/model-files.json` specifies40 model files using SHA256 for LFS and Git-blob SHA1 for ordinary files.
+## Hosting status
 
-Obtain prepared tasks/SIFs/Qwen payloads/full qualification records through the experiment owner's existing approved shared storage. No public SIF/evidence URL is currently configured. Fill a private JSON mapping of asset ID to local path and point `asset_map` at it. Do not commit the map. For example an ID from `release/assets.json` maps to a file under your own SCRATCH. Preparation rejects missing or changed assets. The current immutable prepared task objects contain historical provenance; their local relocation changes only the reviewed image coordinate and records both hashes.
+The 33 images are published in `ghcr.io/zhuconv/dbt-bench-images`, one tag per SIF: `v1-linux-arm64-<full SIF SHA256>`. The 67 task archives and the qualification index archive are attachments to the `assets-v1-20261112` GitHub Release. File names, sizes and hashes are in `release/upload-manifest.json`; the review behind the publication is in [asset-publication.md](asset-publication.md). The Qwen Code bundle is not redistributed (see below).
 
-Public upstream task sources are fixed in `sources.lock.yaml`; `scripts/prepare.py` can retrieve those upstream snapshots. Upstream retrieval alone does not reproduce all reviewed instruction variants, image fixes, frozen packages or qualification evidence. Transfer the locked objects to reproduce this measurement pool. Rebuilding recipes with mutable apt/pip/dbt resolution cannot be represented as the same image.
+Never substitute a newly resolved image, dbt package or task version for an absent object.
 
-Public model acquisition uses `scripts/prefetch_smoke_model.py`, the fixed HF repository/revision in `inference/qwen3.6-35b-a3b.json`, and exact file checksums. The download does not generate text. Node/npm/Qwen are fixed by `runtime/qwen-code/` locks; for exact offline task installation use the reviewed bundle and its manifest/archive/installer/inventory hashes in `release/assets.json`. Do not freshly resolve task dbt packages.
+## Verify an image
 
-Frozen ledgers, audit contracts/expected artifacts and original receipts stay external. The checker source in Git is reviewable but does not replace the missing qualification evidence. A path-sanitized copy is a new release artifact with its own hash, never a replacement for a historical evidence object.
+```bash
+image_sha256='<selected image sha256 from release/assets.json>'
+image_path="$SCRATCH/dbt-bench-assets/image-${image_sha256}.sif"
+mkdir -p "$(dirname "$image_path")"
+apptainer pull "$image_path" "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-${image_sha256}"
+printf '%s  %s\n' "$image_sha256" "$image_path" | sha256sum --check --strict
+```
 
-Your own TACC login and allocation membership are needed for Slurm. Current public downloads/localhost model serving require no project secret; use your own optional HF/registry credentials if required by your access. DuckDB tasks need no Snowflake account. No keys, tokens or email credentials should be placed in local config or result manifests.
+The hash is over the complete SIF file, not an OCI manifest. Keep both identities after publication. Tags are immutable by project policy, not by a registry guarantee; always verify the SHA256 even when a tag looks correct.
+
+## Verify a Release attachment and its contents
+
+Select `filename` and `sha256` from `release/upload-manifest.json`:
+
+```bash
+filename='<selected attachment filename>'
+archive_sha256='<selected attachment sha256>'
+curl --fail --location --output "$filename" \
+  "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/$filename"
+printf '%s  %s\n' "$archive_sha256" "$filename" | sha256sum --check --strict
+mkdir -p extracted
+tar --no-same-owner -xzf "$filename" -C extracted
+```
+
+Use an empty extraction directory per task. Task archives contain a `task/` directory, retain executable bits and symlinks, and were checked against the original tree hash. Verify after extracting:
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src python - <<'PYCODE'
+from dbt_bench.io import tree_hash
+expected = '<task sha256 from release/assets.json>'
+assert tree_hash('extracted/task') == expected, 'Task tree changed'
+print('Task tree verified')
+PYCODE
+```
+
+The Qwen Code bundle is not redistributed, because it carries third-party binaries under LGPL terms (Bun's statically linked JavaScriptCore, and sharp/libvips). Build it on a Linux ARM64 compute node from the official npm and Node downloads pinned in `runtime/qwen-code/`; see its README and `scripts/build_qwen_bundle.py`. Every package file must match `runtime/qwen-code/native-installation.json`. A rebuilt bundle has its own archive identity, which is recorded separately from the original four bundle objects in `release/assets.json`. The qualification attachment contains `records/<asset-id>.json`; each must match its own original hash. **It is only an index archive**: contracts, expected outputs, input snapshots and receipts referenced by those records are not enclosed. Independently replaying all audits still requires those exact evidence dependencies.
+
+Fill a private JSON `asset_map` with asset IDs mapped to verified local files or task directories; point `configs/local.toml` at it. Do not commit local paths or credentials. Task relocation changes only the reviewed image coordinate and records the new identity separately.
+
+## Rebuild versus exact replay
+
+The fixed upstream task snapshots in `sources.lock.yaml` can be retrieved with `scripts/prepare.py`. Public upstream content plus the checked-in patches and recipes explains task construction, but does not recreate every prepared variant or historical build byte automatically. In particular, mutable apt resolution, build timestamps and frozen dbt packages prevent a claim of bit-identical SIF reconstruction. Use the exact SIF and task objects for this measurement identity. A rebuild has a new identity and needs qualification.
+
+The public model stays at the fixed HF revision in `inference/qwen3.6-35b-a3b.json`; `scripts/prefetch_smoke_model.py` and `release/model-files.json` verify it. Model weights are not part of this upload plan. The download does not send model requests.
+
+Task solutions/gold/tests are public upstream materials but must stay outside the agent-visible workspace during evaluation. Do not mount a complete task archive into the agent. Images, task archives and qualification records contain historical build paths. They were published unchanged on purpose: a sanitized copy would be a new artifact, never a silent replacement of the original hashes.
