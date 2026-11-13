@@ -208,7 +208,7 @@ def export_task(batch, key, output, root=ROOT):
     io.write_json(output/'export-receipt.json',receipt);return receipt
 
 
-def verify_import(stage, summary, batch, row, root=ROOT):
+def verify_import(stage, summary, batch, row, root=ROOT, *, code_repo, owner_main):
     """Validate bytes and protocol independently of worker-calculated scores/IDs."""
     inventory=io.read_json(stage/'inventory.json')
     actual=[v for v in io.tree_manifest(stage) if v['path']!='inventory.json']
@@ -253,7 +253,7 @@ def verify_import(stage, summary, batch, row, root=ROOT):
     for rel in ('release/model-files.json','inference/qwen3.6-35b-a3b.json',runtime_rel):
         if io.file_hash(stage/'proof'/Path(rel).name)!=io.file_hash(root/rel):raise ValueError('Model/runtime lock differs')
     from platform_support import verify_import_platform
-    verify_import_platform(i,stage/'proof/qwen',row,root)
+    verify_import_platform(i,stage/'proof/qwen',row,root,code_repo=code_repo,owner_main=owner_main)
     si=summary['identity']
     if (si['code']!=i['code_identity'] or si['image']!=i['image_identity']
             or si['runtime']!=i['runtime_patch'] or si['qwen_installation']!=i['qwen_installation']
@@ -331,12 +331,12 @@ def import_ledger(repo, output, remote='upstream', root=ROOT):
                 if old['summary_sha256']!=summary_hash:raise ValueError('Duplicate/conflicting slot ownership')
                 if io.file_hash(dest/'raw.tar.gz')!=summary['raw_archive']['sha256']:
                     raise ValueError('Previously imported archive changed')
-                verify_import(dest/'raw',summary,batches[bid],rows[key],root)
+                verify_import(dest/'raw',summary,batches[bid],rows[key],root,code_repo=repo,owner_main=commit)
                 receipts.append(old);continue
             with tempfile.TemporaryDirectory(prefix='.import-',dir=output) as d:
                 temp=Path(d);download_raw(summary['raw_archive'],temp/'raw.tar.gz')
                 raw=temp/'raw';raw.mkdir();safe_unpack(temp/'raw.tar.gz',raw)
-                manifest=verify_import(raw,summary,batches[bid],rows[key],root)
+                manifest=verify_import(raw,summary,batches[bid],rows[key],root,code_repo=repo,owner_main=commit)
                 receipt={'schema_version':1,'policy':POLICY,'accepted_main_commit':commit,
                     'ledger_path':name,'summary_sha256':summary_hash,'worker':worker,'batch':bid,'task_key':key,
                     'experiment_id':manifest['experiment_id'],'slots':[1,2,3,4],

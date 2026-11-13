@@ -68,7 +68,8 @@ class Transfers(unittest.TestCase):
 
     def verify(self):
         with patch('platform_support.verify_import_platform'):
-            return verify_import(self.stage,self.summary,self.declaration,self.row,self.repo)
+            return verify_import(self.stage,self.summary,self.declaration,self.row,self.repo,
+                code_repo=self.repo,owner_main='refs/heads/main')
 
     def test_roundtrip_retains_raw_failures_and_four_slots(self):
         self.verify();self.assertEqual(len(self.summary['slots']),4)
@@ -127,11 +128,14 @@ class Transfers(unittest.TestCase):
         summary_path.write_text('unmerged tampering')
         def download(entry,target):
             with patch('urllib.request.urlopen',return_value=raw.open('rb')):download_raw(entry,target)
-        with patch('result_transfer.download_raw',side_effect=download),patch('platform_support.verify_import_platform'):
+        with patch('result_transfer.download_raw',side_effect=download),patch('platform_support.verify_import_platform') as platform_check:
             output=self.root/'central'
             a=import_ledger(self.repo,output,root=self.repo);b=import_ledger(self.repo,output,root=self.repo)
             self.assertEqual(a,b);self.assertEqual(a['slots'],4)
             self.assertTrue((output/'trials.jsonl').is_file())
+            self.assertEqual(platform_check.call_count,2)
+            for call in platform_check.call_args_list:
+                self.assertEqual(call.kwargs,{'code_repo':self.repo,'owner_main':a['accepted_main_commit']})
 
     def test_server_seed_tamper_rejected_even_with_updated_archive_inventory(self):
         p=self.stage/'batch/server-command.json';value=io.read_json(p);value['argv'][-1]='999';io.write_json(p,value)

@@ -1,7 +1,9 @@
 """Explicit per-platform identities; architecture equivalence is a user decision."""
 from copy import deepcopy
+import hashlib
 from pathlib import Path
 import platform
+import re
 import subprocess
 from dbt_bench import io
 
@@ -78,7 +80,36 @@ def code_identity(root):
     return {'commit':commit,'worktree_differs_from_commit':bool(changed),'files':files,'content_id':io.digest(files)}
 
 
-def verify_import_platform(identity, proof, row, root):
+def verify_code_identity(code, repo, owner_main):
+    """Check the prepared commit against the importer's trusted owner-main snapshot."""
+    if io.digest(code['files'])!=code['content_id']:raise ValueError('Code identity invalid')
+    commit=code.get('commit','')
+    if not isinstance(commit,str) or not re.fullmatch(r'(?:[0-9a-f]{40}|[0-9a-f]{64})',commit):
+        raise ValueError('Code identity requires a full commit ID')
+    def git_bytes(*args):
+        try:
+            return subprocess.run(['git','--no-replace-objects','-C',str(repo),*args],
+                check=True,capture_output=True).stdout
+        except subprocess.CalledProcessError as e:
+            raise ValueError('Cannot verify recorded code commit; fetch complete owner main history') from e
+    if git_bytes('rev-parse',commit+'^{commit}').decode().strip()!=commit:
+        raise ValueError('Code identity must name a commit')
+    ancestor=subprocess.run(['git','--no-replace-objects','-C',str(repo),
+        'merge-base','--is-ancestor',commit,owner_main],capture_output=True)
+    if ancestor.returncode==1:raise ValueError('Code commit is not an ancestor of owner main')
+    if ancestor.returncode!=0:raise ValueError('Cannot verify owner main ancestry; fetch complete history')
+    paths=git_bytes('ls-tree','-r','-z','--name-only',commit,'--',
+        'scripts','src','runtime/qwen-code').decode().split('\0')
+    expected_paths={name for name in paths if name and '__pycache__' not in Path(name).parts
+        and Path(name).suffix in ('.py','.json') and Path(name).name not in ('worker.py','ledger_check.py')}
+    if len(code['files'])!=len(expected_paths) or {f['path'] for f in code['files']}!=expected_paths:
+        raise ValueError('Incomplete code inventory')
+    for f in code['files']:
+        if hashlib.sha256(git_bytes('show',commit+':'+f['path'])).hexdigest()!=f['sha256']:
+            raise ValueError('Unreviewed code version: '+f['path'])
+
+
+def verify_import_platform(identity, proof, row, root, *, code_repo, owner_main):
     name=platform_name(identity['deployment']);expected=image_identity(row,identity['deployment'],root)
     if identity['image_identity']!=expected:raise ValueError('Unapproved image/platform identity')
     pin=qwen_pin(name,root);m=io.read_json(proof/'bundle.json');q=identity['qwen_installation']
@@ -94,12 +125,7 @@ def verify_import_platform(identity, proof, row, root):
         if m[key]!=wanted:raise ValueError('Qwen platform/version mismatch')
     for key in ('inventory','installer'):
         if io.file_hash(proof/Path(m['files'][key]['path']).name)!=pin['files'][key]:raise ValueError('Qwen inventory/installer differs')
-    code=identity['code_identity']
-    if io.digest(code['files'])!=code['content_id']:raise ValueError('Code identity invalid')
-    expected_paths={f['path'] for f in code_identity(root)['files']}
-    if len(code['files'])!=len(expected_paths) or {f['path'] for f in code['files']}!=expected_paths:raise ValueError('Incomplete code inventory')
-    for f in code['files']:
-        if io.file_hash(io.contained(root,f['path']))!=f['sha256']:raise ValueError('Unreviewed code version: '+f['path'])
+    verify_code_identity(identity['code_identity'],code_repo,owner_main)
     runtime=identity['runtime_patch']['package_inventory']
     if runtime['sha256']!=io.file_hash(runtime_inventory(identity['deployment'],root)):
         raise ValueError('Runtime package inventory mismatch')

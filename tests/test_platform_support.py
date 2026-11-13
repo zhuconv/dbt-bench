@@ -1,4 +1,7 @@
+from copy import deepcopy
 import json
+import subprocess
+import tempfile
 import unittest
 from pathlib import Path
 from unittest.mock import patch
@@ -53,3 +56,79 @@ class Platforms(unittest.TestCase):
                 self.assertTrue((ROOT/'images/locks'/i['base_group']/filename).is_file())
             self.assertEqual(i['initial_snapshot']['status'],'published')
             self.assertTrue((ROOT/i['native_initializer']).is_file())
+
+
+class HistoricalCodeImport(unittest.TestCase):
+    """Real Git histories and platform proofs, without mocking import validation."""
+    def git(self,*args):
+        return subprocess.run(['git','-c','core.hooksPath=/dev/null','-C',str(self.repo),*args],
+            check=True,capture_output=True,text=True).stdout.strip()
+
+    def setUp(self):
+        from platform_support import code_identity
+        self.tmp=tempfile.TemporaryDirectory();self.addCleanup(self.tmp.cleanup)
+        self.repo=Path(self.tmp.name)/'repo';self.repo.mkdir()
+        self.proof=Path(self.tmp.name)/'proof';self.proof.mkdir()
+        self.git('init','-b','main');self.git('config','user.name','Fixture')
+        self.git('config','user.email','fixture@example.invalid')
+        self.git('config','commit.gpgsign','false')
+        for name in ('scripts/run.py','src/old.py','runtime/qwen-code/lock.json',
+                     'scripts/worker.py','scripts/ledger_check.py','scripts/README.md'):
+            path=self.repo/name;path.parent.mkdir(parents=True,exist_ok=True)
+            path.write_bytes(b'original\r\n')
+        for name in ('inventory','installer'):(self.proof/name).write_text(name)
+        bundle={'kind':'dbt-bench-qwen-bundle-v1','platform':'linux-arm64',
+            'qwen_version':'0.26.5','node_version':'22.16.0','npm_version':'10.9.2','locks':[],
+            'files':{name:{'path':name,'sha256':io.file_hash(self.proof/name)} for name in ('inventory','installer')}}
+        bundle['files']['archive']={'path':'archive','sha256':'0'*64}
+        io.write_json(self.proof/'bundle.json',bundle)
+        content={k:v for k,v in bundle.items() if k!='files'}
+        content['files']={k:v['sha256'] for k,v in bundle['files'].items()}
+        io.write_json(self.repo/'sources.lock.yaml',{'qwen_code':{'installation_bundle':content}})
+        io.write_json(self.repo/'release/assets.json',{'assets':[{'id':'image','sha256':'1'*64,
+            'distribution':{'uri':'oras://example.invalid/image','registry_manifest_digest':'sha256:'+'2'*64}}]})
+        io.write_json(self.repo/'release/harbor-package-files.json',[])
+        self.row={'image_asset':'image'};deployment={'platform':'linux-arm64'}
+        self.git('add','.');self.git('commit','-m','prepared code')
+        self.identity={'deployment':deployment,'image_identity':image_identity(self.row,deployment,self.repo),
+            'qwen_installation':{'content':content,'content_id':io.digest(content),
+                'manifest_sha256':io.file_hash(self.proof/'bundle.json')},
+            'config':{'agents':[{'kwargs':{'installation_bundle_sha256':io.file_hash(self.proof/'bundle.json')}}]},
+            'code_identity':code_identity(self.repo),
+            'runtime_patch':{'package_inventory':{'sha256':io.file_hash(self.repo/'release/harbor-package-files.json')}}}
+
+    def verify(self,identity=None):
+        from platform_support import verify_import_platform
+        verify_import_platform(identity or self.identity,self.proof,self.row,self.repo,
+            code_repo=self.repo,owner_main='refs/heads/main')
+
+    def test_prepared_code_import_survives_later_scripts_commit(self):
+        self.verify()
+        (self.repo/'scripts/run.py').write_text('changed after preparation\n')
+        (self.repo/'scripts/new.py').write_text('added after preparation\n')
+        (self.repo/'src/old.py').unlink()
+        self.git('add','.');self.git('commit','-m','later scripts changes')
+        self.assertNotEqual(self.git('rev-parse','main'),self.identity['code_identity']['commit'])
+        self.verify()  # Includes the historical file set, even files removed on main.
+
+    def test_unaccepted_commit_or_changed_inventory_is_rejected(self):
+        from platform_support import code_identity
+        self.git('checkout','-b','unaccepted')
+        (self.repo/'scripts/run.py').write_text('unmerged code\n')
+        self.git('add','.');self.git('commit','-m','unaccepted change')
+        unaccepted=deepcopy(self.identity);unaccepted['code_identity']=code_identity(self.repo)
+        with self.assertRaisesRegex(ValueError,'not an ancestor of owner main'):self.verify(unaccepted)
+        self.git('checkout','main')
+        # The dirty checkout agrees with the worker's forged inventory, but the commit does not.
+        (self.repo/'scripts/run.py').write_text('uncommitted code\n')
+        changed=deepcopy(self.identity);changed['code_identity']=code_identity(self.repo)
+        with self.assertRaisesRegex(ValueError,'Unreviewed code version'):self.verify(changed)
+        for mutation in ('missing','extra','duplicate','unknown_commit'):
+            with self.subTest(mutation=mutation):
+                changed=deepcopy(self.identity);code=changed['code_identity']
+                if mutation=='missing':code['files'].pop()
+                elif mutation=='extra':code['files'].append({'path':'scripts/extra.py','sha256':'0'*64})
+                elif mutation=='duplicate':code['files'][-1]=code['files'][0]
+                else:code['commit']='f'*40
+                code['content_id']=io.digest(code['files'])
+                with self.assertRaises(ValueError):self.verify(changed)
