@@ -280,7 +280,8 @@ if args[0] == 'prepare':
 elif args[0] == 'check':
     print('{"passed": true}')
 elif args[0] == 'sbatch-command':
-    print('echo 4242')
+    # Records where the submission ran: the job script cds to SLURM_SUBMIT_DIR.
+    print('pwd > ' + os.environ['FAKE_RUNS'] + '/../submit-cwd && echo 4242')
 elif args[0] == 'export':
     task, out = opt('--task'), Path(opt('--output'))
     bid = Path(opt('--batch')).name.split('--')[0]
@@ -298,7 +299,8 @@ class RunLoopTest(LedgerRepos):
 
     def setUp(self):
         super().setUp()
-        for name, text in (('bench.py', FAKE_BENCH), ('sacct', FAKE_SLURM), ('squeue', FAKE_SLURM)):
+        fake_ssh = '#!/bin/sh\n# Like ssh login1: run the last argument in a shell that starts in $HOME.\ncd "$HOME" && exec sh -c "$1"\n'
+        for name, text in (('bench.py', FAKE_BENCH), ('sacct', FAKE_SLURM), ('squeue', FAKE_SLURM), ('fakessh', fake_ssh)):
             p = self.tmp / 'bin' / name
             p.write_text(text)
             p.chmod(0o755)
@@ -307,7 +309,7 @@ class RunLoopTest(LedgerRepos):
         self.a = self.fork('alice')
         self.state = self.tmp / 'run-state.json'
 
-    def start(self):
+    def start(self, via=()):
         tasks = {b: [f'{b}-t1', f'{b}-t2'] for b in self.batch_ids}
         env = {**os.environ, 'PATH': f"{self.tmp / 'bin'}:{os.environ['PATH']}",
                'FAKE_GH_DB': str(self.tmp / 'db.json'), 'FAKE_GH_REPOS': json.dumps(self.repos),
@@ -316,7 +318,7 @@ class RunLoopTest(LedgerRepos):
         return subprocess.Popen([sys.executable, '-I', str(REPO / 'scripts' / 'worker.py'), '--ledger', str(self.a),
                                  '--worker', 'alice', 'run', '--platform', 'p', '--python', sys.executable,
                                  '--batch-root', str(self.tmp / 'batches'), '--bench', str(self.tmp / 'bin' / 'bench.py'),
-                                 '--state', str(self.state), '--poll', '0.2', '--max-batches', '1', '--no-assets'],
+                                 '--state', str(self.state), '--poll', '0.2', '--max-batches', '1', '--no-assets', *via],
                                 stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, env=env)
 
     def wait(self, cond, what, timeout=60):
@@ -344,8 +346,9 @@ class RunLoopTest(LedgerRepos):
             json.dumps({'finished_at': 'x', 'finalization_status': 'recorded_after_cleanup'}))
 
     def test_one_batch_end_to_end(self):
-        proc = self.start()
+        proc = self.start(via=('--submit-via', str(self.tmp / 'bin' / 'fakessh')))
         self.wait(lambda: self.st().get('job') == '4242' and self.claim_state() == 'queued', 'queued claim')
+        self.assertEqual((self.tmp / 'submit-cwd').read_text().strip(), str(REPO))
         self.slurm.write_text('RUNNING\n')
         self.wait(lambda: self.claim_state() == 'running', 'running claim')
         self.finalize('batch-01-t1')

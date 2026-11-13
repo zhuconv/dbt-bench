@@ -45,8 +45,8 @@ Claim states:
             without result summaries (the owner's own Vista runs are recorded this way).
   released  given up before running
 """
-import argparse, base64, datetime as dt, hashlib, json, os, platform, re, shutil, subprocess, sys, tarfile, \
-    tempfile, time, urllib.request
+import argparse, base64, datetime as dt, hashlib, json, os, platform, re, shlex, shutil, subprocess, sys, \
+    tarfile, tempfile, time, urllib.request
 from pathlib import Path
 
 UPSTREAM = 'zhuconv/dbt-bench'
@@ -450,11 +450,14 @@ def bench(a, *args):
 
 
 def submit(a, command):
-    """Run the printed sbatch command, through --submit-via when compute nodes cannot submit."""
+    """Run the printed sbatch command from the checkout root, through --submit-via when compute
+    nodes cannot submit. The job script starts with `cd "$SLURM_SUBMIT_DIR"`, and ssh would
+    otherwise submit from the home directory."""
     if a.submit_via:
-        p = subprocess.run([*a.submit_via.split(), command], stdin=subprocess.DEVNULL, capture_output=True, text=True)
+        remote = f'cd {shlex.quote(str(CODE))} && {command}'
+        p = subprocess.run([*a.submit_via.split(), remote], stdin=subprocess.DEVNULL, capture_output=True, text=True)
     else:
-        p = subprocess.run(command, shell=True, stdin=subprocess.DEVNULL, capture_output=True, text=True)
+        p = subprocess.run(command, shell=True, cwd=CODE, stdin=subprocess.DEVNULL, capture_output=True, text=True)
     lines = [x.strip() for x in p.stdout.splitlines() if x.strip()]
     job = lines[-1].split(';')[0] if lines else ''
     if p.returncode or not job.isdigit():
