@@ -16,7 +16,7 @@
           "upstream_notices_and_dataset_provenance_review": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-ade__ade-bench-airbnb005-9c75036f4febb731.tar.gz"
       },
@@ -39,8 +39,8 @@
           "embedded_build_coordinates_review": "embedded_paths"
         },
         "publication_holds": [],
-        "registry_manifest_digest": null,
-        "status": "pushed_to_ghcr",
+        "registry_manifest_digest": "sha256:cdd7b5018bde9d4988d632496d3eda192394de88712fc7ca7b9a3250f799f083",
+        "status": "published",
         "tag": "v1-linux-arm64-3e23d16ac0456b2d618f4131c0146ed9030019e943190202dfee30123faf5efc",
         "transport": "oras",
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-3e23d16ac0456b2d618f4131c0146ed9030019e943190202dfee30123faf5efc"
@@ -65,7 +65,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -90,7 +90,7 @@
           "upstream_notices_and_dataset_provenance_review": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-ade__ade-bench-airbnb007-53c496fa47081e03.tar.gz"
       },
@@ -113,8 +113,8 @@
           "embedded_build_coordinates_review": "embedded_paths"
         },
         "publication_holds": [],
-        "registry_manifest_digest": null,
-        "status": "pushed_to_ghcr",
+        "registry_manifest_digest": "sha256:366f68980f1d44dba6f32eaeabc3f5a9009d0db54e843b534b86227b81df7d8e",
+        "status": "published",
         "tag": "v1-linux-arm64-42d7d63a51a7293b77164e61effb6a2732b483116fccb7e422edc86e0d0d37fa",
         "transport": "oras",
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-42d7d63a51a7293b77164e61effb6a2732b483116fccb7e422edc86e0d0d37fa"
@@ -139,7 +139,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -164,7 +164,7 @@
           "upstream_notices_and_dataset_provenance_review": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-ade__ade-bench-ana-eng003-a91d39df5f2f8324.tar.gz"
       },
@@ -187,8 +187,8 @@
           "embedded_build_coordinates_review": "embedded_paths"
         },
         "publication_holds": [],
-        "registry_manifest_digest": null,
-        "status": "pushed_to_ghcr",
+        "registry_manifest_digest": "sha256:76814c83fbb26f09483035b93489adc13b4b1570c990d859bb742e74dbf633fe",
+        "status": "published",
         "tag": "v1-linux-arm64-5a996aeed7efc0e024b07224e730dde4bbd8317ef0a42968d997319a10bf45a7",
         "transport": "oras",
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-5a996aeed7efc0e024b07224e730dde4bbd8317ef0a42968d997319a10bf45a7"
@@ -213,7 +213,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -238,7 +238,7 @@
           "upstream_notices_and_dataset_provenance_review": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-ade__ade-bench-ana-eng004-aad267608e21574a.tar.gz"
       },
@@ -261,8 +261,8 @@
           "embedded_build_coordinates_review": "embedded_paths"
         },
         "publication_holds": [],
-        "registry_manifest_digest": null,
-        "status": "pushed_to_ghcr",
+        "registry_manifest_digest": "sha256:e143d453d05265d1afb2724b034d986377ebc48771eeca05b0f0e8bfbd99edfe",
+        "status": "published",
         "tag": "v1-linux-arm64-ed545cfe3c0ed6e53808db3c07759341b0b5f25f751173033d21578ef726330e",
         "transport": "oras",
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-ed545cfe3c0ed6e53808db3c07759341b0b5f25f751173033d21578ef726330e"
@@ -287,7 +287,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -312,7 +312,7 @@
           "upstream_notices_and_dataset_provenance_review": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-ade__ade-bench-ana-eng005-2af6c1c4f48c50cd.tar.gz"
       },
@@ -335,8 +335,8 @@
           "embedded_build_coordinates_review": "embedded_paths"
         },
         "publication_holds": [],
-        "registry_manifest_digest": null,
-        "status": "pushed_to_ghcr",
+        "registry_manifest_digest": "sha256:10b17aed0e1b746a205a1f13b1a6047d370cf078282c79db8e7c7c225734b299",
+        "status": "published",
         "tag": "v1-linux-arm64-4bff1adede909e8d8b3dee3d8ccd06ece66984ddde1d4da5bbae3e87eedd34e0",
         "transport": "oras",
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-4bff1adede909e8d8b3dee3d8ccd06ece66984ddde1d4da5bbae3e87eedd34e0"
@@ -361,7 +361,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -386,7 +386,7 @@
           "upstream_notices_and_dataset_provenance_review": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-ade__ade-bench-ana-eng006-efd6b4bd5bd89a8f.tar.gz"
       },
@@ -409,8 +409,8 @@
           "embedded_build_coordinates_review": "embedded_paths"
         },
         "publication_holds": [],
-        "registry_manifest_digest": null,
-        "status": "pushed_to_ghcr",
+        "registry_manifest_digest": "sha256:8d2c5d4d1c8937afeadf1cdab36f032e085436e944318a1efc988facc4893fc0",
+        "status": "published",
         "tag": "v1-linux-arm64-3d2b6f9cce89028222fcda9040da2d0ebd608d4bb39e4d5323b4ee7785acc68c",
         "transport": "oras",
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-3d2b6f9cce89028222fcda9040da2d0ebd608d4bb39e4d5323b4ee7785acc68c"
@@ -435,7 +435,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -460,7 +460,7 @@
           "upstream_notices_and_dataset_provenance_review": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-ade__ade-bench-f1003-f5582e22a16499d3.tar.gz"
       },
@@ -483,8 +483,8 @@
           "embedded_build_coordinates_review": "embedded_paths"
         },
         "publication_holds": [],
-        "registry_manifest_digest": null,
-        "status": "pushed_to_ghcr",
+        "registry_manifest_digest": "sha256:5d0f6bb3f259007be537922fe637ee2847b5615ebd35a4e3c4148b2b6f129f10",
+        "status": "published",
         "tag": "v1-linux-arm64-674da519863ff4d1941529e9cee5eecb2ee12f7c926b39a2bc49f46a882cc7af",
         "transport": "oras",
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-674da519863ff4d1941529e9cee5eecb2ee12f7c926b39a2bc49f46a882cc7af"
@@ -509,7 +509,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -534,7 +534,7 @@
           "upstream_notices_and_dataset_provenance_review": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-ade__ade-bench-f1003-hard-679d2263708d3ef6.tar.gz"
       },
@@ -557,8 +557,8 @@
           "embedded_build_coordinates_review": "embedded_paths"
         },
         "publication_holds": [],
-        "registry_manifest_digest": null,
-        "status": "pushed_to_ghcr",
+        "registry_manifest_digest": "sha256:7b285330dc745e136377fbe4e31b343cff94eb368ccade3696edcd7917d77514",
+        "status": "published",
         "tag": "v1-linux-arm64-c5485eddd674a9bc424627f23eb99f3854f1608094988b1ebbd2c749eec1cb7c",
         "transport": "oras",
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-c5485eddd674a9bc424627f23eb99f3854f1608094988b1ebbd2c749eec1cb7c"
@@ -583,7 +583,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -608,7 +608,7 @@
           "upstream_notices_and_dataset_provenance_review": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-ade__ade-bench-f1009-2d5b7d92c3e02e4a.tar.gz"
       },
@@ -631,8 +631,8 @@
           "embedded_build_coordinates_review": "embedded_paths"
         },
         "publication_holds": [],
-        "registry_manifest_digest": null,
-        "status": "pushed_to_ghcr",
+        "registry_manifest_digest": "sha256:e34dec5a9ccb964e9263e9c8c8d0f5e5e018306c86f80691ffe08276b5ba2b33",
+        "status": "published",
         "tag": "v1-linux-arm64-ce47a9e6ed2defaac646b2bbb002d0eaf3fc3d8873a8342187d8b9fd4e521fd0",
         "transport": "oras",
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-ce47a9e6ed2defaac646b2bbb002d0eaf3fc3d8873a8342187d8b9fd4e521fd0"
@@ -657,7 +657,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -682,7 +682,7 @@
           "upstream_notices_and_dataset_provenance_review": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-ade__ade-bench-f1010-94b44d8c2768978c.tar.gz"
       },
@@ -705,8 +705,8 @@
           "embedded_build_coordinates_review": "embedded_paths"
         },
         "publication_holds": [],
-        "registry_manifest_digest": null,
-        "status": "pushed_to_ghcr",
+        "registry_manifest_digest": "sha256:de5ddc64435a6f1471d63810a421efa9356d964efe85b4ba9e40ed1519ce194c",
+        "status": "published",
         "tag": "v1-linux-arm64-41c1f547462abe50f1149b412045e0bf5d96e8e3bfacfe5b775dc258e261c7ea",
         "transport": "oras",
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-41c1f547462abe50f1149b412045e0bf5d96e8e3bfacfe5b775dc258e261c7ea"
@@ -731,7 +731,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -756,7 +756,7 @@
           "upstream_notices_and_dataset_provenance_review": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-ade__ade-bench-f1010-medium-c79e9f4a7e433b9e.tar.gz"
       },
@@ -779,8 +779,8 @@
           "embedded_build_coordinates_review": "embedded_paths"
         },
         "publication_holds": [],
-        "registry_manifest_digest": null,
-        "status": "pushed_to_ghcr",
+        "registry_manifest_digest": "sha256:87ac13ad4d7117445760ebd332ad30147b962ee831d1b2c802dd150acccac9f6",
+        "status": "published",
         "tag": "v1-linux-arm64-c26a3cab660b455cd95f446cea80c8c866faa64c58fefdd12b3f6ec3dc405769",
         "transport": "oras",
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-c26a3cab660b455cd95f446cea80c8c866faa64c58fefdd12b3f6ec3dc405769"
@@ -805,7 +805,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -830,7 +830,7 @@
           "upstream_notices_and_dataset_provenance_review": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-ade__ade-bench-f1011-8792ab3ed74d429d.tar.gz"
       },
@@ -853,8 +853,8 @@
           "embedded_build_coordinates_review": "embedded_paths"
         },
         "publication_holds": [],
-        "registry_manifest_digest": null,
-        "status": "pushed_to_ghcr",
+        "registry_manifest_digest": "sha256:a7a64d296fe1fd1e9eed738e35b7797ce5fe9f6f6b39e2292a1672967cb8db05",
+        "status": "published",
         "tag": "v1-linux-arm64-4b63c74af2f2816318325d37558bd5934bd71988816d1fbc6c15e48ee39bc0a1",
         "transport": "oras",
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-4b63c74af2f2816318325d37558bd5934bd71988816d1fbc6c15e48ee39bc0a1"
@@ -879,7 +879,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -904,7 +904,7 @@
           "upstream_notices_and_dataset_provenance_review": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-ade__ade-bench-intercom001-12d7152fb841a502.tar.gz"
       },
@@ -927,8 +927,8 @@
           "embedded_build_coordinates_review": "embedded_paths"
         },
         "publication_holds": [],
-        "registry_manifest_digest": null,
-        "status": "pushed_to_ghcr",
+        "registry_manifest_digest": "sha256:2d57174baceac8101ebaf73c1ecd23656ea043c345a05677aac9e1ec88b52f9c",
+        "status": "published",
         "tag": "v1-linux-arm64-7dd21401d98cb1ecb758d4510cf0430116dbca24d9a9b77d6e898f746ddb054d",
         "transport": "oras",
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-7dd21401d98cb1ecb758d4510cf0430116dbca24d9a9b77d6e898f746ddb054d"
@@ -953,7 +953,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -978,7 +978,7 @@
           "upstream_notices_and_dataset_provenance_review": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-ade__ade-bench-intercom002-b99f274193a468db.tar.gz"
       },
@@ -1001,8 +1001,8 @@
           "embedded_build_coordinates_review": "embedded_paths"
         },
         "publication_holds": [],
-        "registry_manifest_digest": null,
-        "status": "pushed_to_ghcr",
+        "registry_manifest_digest": "sha256:184bc18af3b191d1f5099746567a06f2f37990b8608b86999957c110fce1389e",
+        "status": "published",
         "tag": "v1-linux-arm64-3b3737a8352f18cc1655f8656918c71e50f5271a99d4b6daef3b827ab975c713",
         "transport": "oras",
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-3b3737a8352f18cc1655f8656918c71e50f5271a99d4b6daef3b827ab975c713"
@@ -1027,7 +1027,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -1052,7 +1052,7 @@
           "upstream_notices_and_dataset_provenance_review": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-ade__ade-bench-intercom003-3b9cc8e51dd673c1.tar.gz"
       },
@@ -1075,8 +1075,8 @@
           "embedded_build_coordinates_review": "embedded_paths"
         },
         "publication_holds": [],
-        "registry_manifest_digest": null,
-        "status": "pushed_to_ghcr",
+        "registry_manifest_digest": "sha256:69ab4a99b08c40a32fb55fd69f18b13e0eac79256f98e50d56e82cdc5c99c8ab",
+        "status": "published",
         "tag": "v1-linux-arm64-724a26e1d5e58d1aada9913bf4c6418355d0b693752e8f31a7de6941e0bed513",
         "transport": "oras",
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-724a26e1d5e58d1aada9913bf4c6418355d0b693752e8f31a7de6941e0bed513"
@@ -1101,7 +1101,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -1126,7 +1126,7 @@
           "upstream_license_notice_packaging": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-calculate-running-balance-d75f9b9c346b5674.tar.gz"
       },
@@ -1147,8 +1147,8 @@
           "component_notice_and_corresponding_source_review": "third_party"
         },
         "publication_holds": [],
-        "registry_manifest_digest": null,
-        "status": "pushed_to_ghcr",
+        "registry_manifest_digest": "sha256:777ef3292afc782e5400141408e1c75b5f6622c3f6e1f13934c8ff9769a2c0e9",
+        "status": "published",
         "tag": "v1-linux-arm64-f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c",
         "transport": "oras",
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
@@ -1173,7 +1173,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -1198,7 +1198,7 @@
           "upstream_license_notice_packaging": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-coupon-effectiveness-bfd7b249a31c4d7d.tar.gz"
       },
@@ -1222,7 +1222,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -1247,7 +1247,7 @@
           "upstream_license_notice_packaging": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-customer-churn-cohorts-5c2962386c02eb72.tar.gz"
       },
@@ -1271,7 +1271,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -1296,7 +1296,7 @@
           "upstream_license_notice_packaging": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-customer-churn-early-warning-c1365ce723ccb5ad.tar.gz"
       },
@@ -1320,7 +1320,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -1345,7 +1345,7 @@
           "upstream_license_notice_packaging": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-customer-cltv-forecasting-639c192f252a8a01.tar.gz"
       },
@@ -1369,7 +1369,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -1394,7 +1394,7 @@
           "upstream_license_notice_packaging": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-customer-geographic-5a0b54ad65115ed0.tar.gz"
       },
@@ -1418,7 +1418,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -1443,7 +1443,7 @@
           "upstream_license_notice_packaging": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-customer-lifetime-value-9ee778862e2ea2fb.tar.gz"
       },
@@ -1467,7 +1467,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -1492,7 +1492,7 @@
           "upstream_license_notice_packaging": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-customer-ltv-fix-e0da1d3492e4cce8.tar.gz"
       },
@@ -1516,7 +1516,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -1541,7 +1541,7 @@
           "upstream_license_notice_packaging": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-customer-order-analytics-d54a2b42990a4f2a.tar.gz"
       },
@@ -1565,7 +1565,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -1590,7 +1590,7 @@
           "upstream_license_notice_packaging": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-customer-risk-scoring-d6f9fcf6156ba280.tar.gz"
       },
@@ -1614,7 +1614,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -1639,7 +1639,7 @@
           "upstream_license_notice_packaging": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-daily-order-summary-bde46a8d75356400.tar.gz"
       },
@@ -1663,7 +1663,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -1688,7 +1688,7 @@
           "upstream_license_notice_packaging": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-exchange-rate-settlement-date-bd8ac39a7859ec4e.tar.gz"
       },
@@ -1712,7 +1712,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -1737,7 +1737,7 @@
           "upstream_license_notice_packaging": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-fix-cac-payback-waterfall-ad48e47ffbe36a10.tar.gz"
       },
@@ -1761,7 +1761,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -1786,7 +1786,7 @@
           "upstream_license_notice_packaging": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-fix-email-attribution-f201001186d4c40d.tar.gz"
       },
@@ -1810,7 +1810,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -1835,7 +1835,7 @@
           "upstream_license_notice_packaging": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-fix-multi-touch-attribution-4e14c491cb12027f.tar.gz"
       },
@@ -1859,7 +1859,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -1884,7 +1884,7 @@
           "upstream_license_notice_packaging": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-fix-repeat-purchase-cohort-revenue-0f84ad074469cc03.tar.gz"
       },
@@ -1908,7 +1908,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -1933,7 +1933,7 @@
           "upstream_license_notice_packaging": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-fraud-detection-model-ab8d293d378ed31e.tar.gz"
       },
@@ -1957,7 +1957,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -1982,7 +1982,7 @@
           "upstream_license_notice_packaging": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-fulfillment-sla-f540250b07dc01d7.tar.gz"
       },
@@ -2006,7 +2006,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -2031,7 +2031,7 @@
           "upstream_license_notice_packaging": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-harbor-warehouse-capacity-18526ecfb58eb817.tar.gz"
       },
@@ -2055,7 +2055,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -2080,7 +2080,7 @@
           "upstream_license_notice_packaging": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-inventory-analysis-b62f741934fdd731.tar.gz"
       },
@@ -2104,7 +2104,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -2129,7 +2129,7 @@
           "upstream_license_notice_packaging": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-inventory-stockout-risk-b13b9b895210c8e7.tar.gz"
       },
@@ -2153,7 +2153,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -2178,7 +2178,7 @@
           "upstream_license_notice_packaging": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-loyalty-points-analysis-bc074bc24fb42923.tar.gz"
       },
@@ -2202,7 +2202,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -2227,7 +2227,7 @@
           "upstream_license_notice_packaging": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-order-reconciliation-85472ff635434a07.tar.gz"
       },
@@ -2251,7 +2251,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -2276,7 +2276,7 @@
           "upstream_license_notice_packaging": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-price-elasticity-4e392d1ca5313ecc.tar.gz"
       },
@@ -2300,7 +2300,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -2325,7 +2325,7 @@
           "upstream_license_notice_packaging": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-product-category-analytics-bd41c9f3daee82cb.tar.gz"
       },
@@ -2349,7 +2349,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -2374,7 +2374,7 @@
           "upstream_license_notice_packaging": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-retail-task-01-channel-revenue-b9f878470d06b2a6.tar.gz"
       },
@@ -2398,7 +2398,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -2423,7 +2423,7 @@
           "upstream_license_notice_packaging": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-retail-task-04-market-roi-85453dc18e75a475.tar.gz"
       },
@@ -2447,7 +2447,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -2472,7 +2472,7 @@
           "upstream_license_notice_packaging": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-rfm-customer-segmentation-cf30b1bcc2bf01d7.tar.gz"
       },
@@ -2496,7 +2496,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -2521,7 +2521,7 @@
           "upstream_license_notice_packaging": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-rfm-customer-segmentation-2-f793de90f0e24017.tar.gz"
       },
@@ -2545,7 +2545,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -2570,7 +2570,7 @@
           "upstream_license_notice_packaging": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-sales-funnel-analysis-3b3d80098d5c6d9e.tar.gz"
       },
@@ -2594,7 +2594,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -2619,7 +2619,7 @@
           "upstream_license_notice_packaging": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-session-attribution-ef234ff0686d1436.tar.gz"
       },
@@ -2640,8 +2640,8 @@
           "component_notice_and_corresponding_source_review": "third_party"
         },
         "publication_holds": [],
-        "registry_manifest_digest": null,
-        "status": "pushed_to_ghcr",
+        "registry_manifest_digest": "sha256:f594cc8df05caa8bab5217fb926f105bb06b000959897e3e65fbaa3487ef32aa",
+        "status": "published",
         "tag": "v1-linux-arm64-294bc8f0712f4c715c464f7842852ffadf1662ccb0e12f1b4c4d643f32ec9f48",
         "transport": "oras",
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-294bc8f0712f4c715c464f7842852ffadf1662ccb0e12f1b4c4d643f32ec9f48"
@@ -2666,7 +2666,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -2691,7 +2691,7 @@
           "upstream_license_notice_packaging": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-supplier-payment-optimization-3b0202b434a80c93.tar.gz"
       },
@@ -2715,7 +2715,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -2740,7 +2740,7 @@
           "upstream_license_notice_packaging": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-supplier-scorecard-5556cf04d73695d0.tar.gz"
       },
@@ -2764,7 +2764,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -2789,7 +2789,7 @@
           "upstream_license_notice_packaging": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-three-way-matching-7801b62c72bf4311.tar.gz"
       },
@@ -2813,7 +2813,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -2838,7 +2838,7 @@
           "upstream_license_notice_packaging": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-web-session-analytics-91e98b10e9ac93b4.tar.gz"
       },
@@ -2862,7 +2862,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -2887,7 +2887,7 @@
           "upstream_license_notice_packaging": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-weekly-sales-growth-42c240d4331d2b59.tar.gz"
       },
@@ -2911,7 +2911,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -2936,7 +2936,7 @@
           "upstream_notices_and_dataset_provenance_review": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__app_reporting001-843b8d826c8eb5c5.tar.gz"
       },
@@ -2959,8 +2959,8 @@
           "embedded_build_coordinates_review": "embedded_paths"
         },
         "publication_holds": [],
-        "registry_manifest_digest": null,
-        "status": "pushed_to_ghcr",
+        "registry_manifest_digest": "sha256:3611d260e924a858c2c7758e8060d033514fc405b42ecba78cc4ba2f44392c27",
+        "status": "published",
         "tag": "v1-linux-arm64-39f48a4c5f4cd8f8e7235d415e9459a49ca201e91b33e3b1a0a3eaee1485e15b",
         "transport": "oras",
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-39f48a4c5f4cd8f8e7235d415e9459a49ca201e91b33e3b1a0a3eaee1485e15b"
@@ -2985,7 +2985,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -3010,7 +3010,7 @@
           "upstream_notices_and_dataset_provenance_review": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__app_reporting002-37fbb28c2fa81580.tar.gz"
       },
@@ -3033,8 +3033,8 @@
           "embedded_build_coordinates_review": "embedded_paths"
         },
         "publication_holds": [],
-        "registry_manifest_digest": null,
-        "status": "pushed_to_ghcr",
+        "registry_manifest_digest": "sha256:cd7e8235381d7495906f62da723057b0dbcdd21add203c3739a1eb8825f088ae",
+        "status": "published",
         "tag": "v1-linux-arm64-8323ed9479cf457c33415f8289c30cb868eda60d8264fb4356df2c3b00ee85a9",
         "transport": "oras",
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-8323ed9479cf457c33415f8289c30cb868eda60d8264fb4356df2c3b00ee85a9"
@@ -3059,7 +3059,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -3084,7 +3084,7 @@
           "upstream_notices_and_dataset_provenance_review": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__apple_store001-90dc426fe4693eb2.tar.gz"
       },
@@ -3107,8 +3107,8 @@
           "embedded_build_coordinates_review": "embedded_paths"
         },
         "publication_holds": [],
-        "registry_manifest_digest": null,
-        "status": "pushed_to_ghcr",
+        "registry_manifest_digest": "sha256:0f7561f0f4c25074672c1946750f23c62fb632259cfbf0d79caf54914c173f29",
+        "status": "published",
         "tag": "v1-linux-arm64-4c0789ae41ddd1b8b87bbea9e555fd5fec8df8d7bf4adf9f83733b80bf38945d",
         "transport": "oras",
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-4c0789ae41ddd1b8b87bbea9e555fd5fec8df8d7bf4adf9f83733b80bf38945d"
@@ -3133,7 +3133,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -3158,7 +3158,7 @@
           "upstream_notices_and_dataset_provenance_review": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__asset001-2520d2ea94db0c3d.tar.gz"
       },
@@ -3181,8 +3181,8 @@
           "embedded_build_coordinates_review": "embedded_paths"
         },
         "publication_holds": [],
-        "registry_manifest_digest": null,
-        "status": "pushed_to_ghcr",
+        "registry_manifest_digest": "sha256:33bd0a17b1c16888611be07cf3260bc65fb5bad2d0904eb0d7c3114cefe105ae",
+        "status": "published",
         "tag": "v1-linux-arm64-e24702c7d0299838af168cc3c1e312b88703e2259d0c6b5da318b6c786a9029c",
         "transport": "oras",
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-e24702c7d0299838af168cc3c1e312b88703e2259d0c6b5da318b6c786a9029c"
@@ -3207,7 +3207,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -3232,7 +3232,7 @@
           "upstream_notices_and_dataset_provenance_review": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__google_play001-d67331b2d831e0d4.tar.gz"
       },
@@ -3255,8 +3255,8 @@
           "embedded_build_coordinates_review": "embedded_paths"
         },
         "publication_holds": [],
-        "registry_manifest_digest": null,
-        "status": "pushed_to_ghcr",
+        "registry_manifest_digest": "sha256:582d742507bd13e87414d80f2ff914956d07b898de3b85f043f475cc9178404d",
+        "status": "published",
         "tag": "v1-linux-arm64-75cdde48037e9c93512b08c9974c1aad6d5ea6a620d81a428dc8cb5abe69af69",
         "transport": "oras",
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-75cdde48037e9c93512b08c9974c1aad6d5ea6a620d81a428dc8cb5abe69af69"
@@ -3281,7 +3281,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -3306,7 +3306,7 @@
           "upstream_notices_and_dataset_provenance_review": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__hive001-8459249b33387ed4.tar.gz"
       },
@@ -3329,8 +3329,8 @@
           "embedded_build_coordinates_review": "embedded_paths"
         },
         "publication_holds": [],
-        "registry_manifest_digest": null,
-        "status": "pushed_to_ghcr",
+        "registry_manifest_digest": "sha256:f3f74f3d0b0677d9b2cb9fc21f187443d374c2c29110d32a868e117cbd253021",
+        "status": "published",
         "tag": "v1-linux-arm64-0aa0b9e80c8f90832ec0924f7f0bd26b7759434181ac00712f8d5a3a13ec5246",
         "transport": "oras",
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-0aa0b9e80c8f90832ec0924f7f0bd26b7759434181ac00712f8d5a3a13ec5246"
@@ -3355,7 +3355,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -3380,7 +3380,7 @@
           "upstream_notices_and_dataset_provenance_review": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__intercom001-6582cd205bd3559a.tar.gz"
       },
@@ -3403,8 +3403,8 @@
           "embedded_build_coordinates_review": "embedded_paths"
         },
         "publication_holds": [],
-        "registry_manifest_digest": null,
-        "status": "pushed_to_ghcr",
+        "registry_manifest_digest": "sha256:b49b25e97a1e06a1701528de0611d95cfbacccd98ad0014ba6f829567e90fef7",
+        "status": "published",
         "tag": "v1-linux-arm64-993a5ee369464ac3bee72f1b718a4f3c89c1604eee0ec49d33c6613662e78103",
         "transport": "oras",
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-993a5ee369464ac3bee72f1b718a4f3c89c1604eee0ec49d33c6613662e78103"
@@ -3429,7 +3429,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -3454,7 +3454,7 @@
           "upstream_notices_and_dataset_provenance_review": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__jira001-85051214d9830d85.tar.gz"
       },
@@ -3477,8 +3477,8 @@
           "embedded_build_coordinates_review": "embedded_paths"
         },
         "publication_holds": [],
-        "registry_manifest_digest": null,
-        "status": "pushed_to_ghcr",
+        "registry_manifest_digest": "sha256:b1a59bc7e9586013d9a21dbb25cd2a3d27efdc115c34c2d61d22d82f7d0551cc",
+        "status": "published",
         "tag": "v1-linux-arm64-f3d992b881041b0f30d03b9061c237ebcaa57f592df8a9d9c53522dbd33e4473",
         "transport": "oras",
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-f3d992b881041b0f30d03b9061c237ebcaa57f592df8a9d9c53522dbd33e4473"
@@ -3503,7 +3503,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -3528,7 +3528,7 @@
           "upstream_notices_and_dataset_provenance_review": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__lever001-f7d83f568ba2111a.tar.gz"
       },
@@ -3551,8 +3551,8 @@
           "embedded_build_coordinates_review": "embedded_paths"
         },
         "publication_holds": [],
-        "registry_manifest_digest": null,
-        "status": "pushed_to_ghcr",
+        "registry_manifest_digest": "sha256:5409814dd9c90549ab51540cb1eaca19cbdd0c4ffe50108038a874c825ec886a",
+        "status": "published",
         "tag": "v1-linux-arm64-b76376cf74a0d69ad73dbb9977d1077d30e469fb466088a06a7dab94d7c03053",
         "transport": "oras",
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-b76376cf74a0d69ad73dbb9977d1077d30e469fb466088a06a7dab94d7c03053"
@@ -3577,7 +3577,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -3602,7 +3602,7 @@
           "upstream_notices_and_dataset_provenance_review": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__marketo001-38a1e63d64305c67.tar.gz"
       },
@@ -3625,8 +3625,8 @@
           "embedded_build_coordinates_review": "embedded_paths"
         },
         "publication_holds": [],
-        "registry_manifest_digest": null,
-        "status": "pushed_to_ghcr",
+        "registry_manifest_digest": "sha256:542b2db0367293e7cc69c29bffe868e03cbbd6115a215ab3df6784d67bec770c",
+        "status": "published",
         "tag": "v1-linux-arm64-1329f8fe64254776ab90625302c9fb1f81eb1b4b38b803e064ffdda901cba0a4",
         "transport": "oras",
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-1329f8fe64254776ab90625302c9fb1f81eb1b4b38b803e064ffdda901cba0a4"
@@ -3651,7 +3651,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -3676,7 +3676,7 @@
           "upstream_notices_and_dataset_provenance_review": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__maturity001-452b5cfb39eaa12f.tar.gz"
       },
@@ -3699,8 +3699,8 @@
           "embedded_build_coordinates_review": "embedded_paths"
         },
         "publication_holds": [],
-        "registry_manifest_digest": null,
-        "status": "pushed_to_ghcr",
+        "registry_manifest_digest": "sha256:dd4befb88fad34adf00e7dea9b866f6691a6c3e6964f2265ab620c0fb3e82d39",
+        "status": "published",
         "tag": "v1-linux-arm64-c6379b521ffc262e4598b154887ed5d3565dd4251efff7a55ac169eff482c427",
         "transport": "oras",
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-c6379b521ffc262e4598b154887ed5d3565dd4251efff7a55ac169eff482c427"
@@ -3725,7 +3725,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -3750,7 +3750,7 @@
           "upstream_notices_and_dataset_provenance_review": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__recharge002-194c7f4e21529ba5.tar.gz"
       },
@@ -3773,8 +3773,8 @@
           "embedded_build_coordinates_review": "embedded_paths"
         },
         "publication_holds": [],
-        "registry_manifest_digest": null,
-        "status": "pushed_to_ghcr",
+        "registry_manifest_digest": "sha256:3ad29a613317e8f541fdb0ebe679653ffea2546f6f6879cc81bcb34b4b57a9b4",
+        "status": "published",
         "tag": "v1-linux-arm64-a6cfdac52d5144073556202979189f5ba4e3f27e9cf411b5da1c6170272ac514",
         "transport": "oras",
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-a6cfdac52d5144073556202979189f5ba4e3f27e9cf411b5da1c6170272ac514"
@@ -3799,7 +3799,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -3824,7 +3824,7 @@
           "upstream_notices_and_dataset_provenance_review": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__shopify002-79280e53370dc685.tar.gz"
       },
@@ -3847,8 +3847,8 @@
           "embedded_build_coordinates_review": "embedded_paths"
         },
         "publication_holds": [],
-        "registry_manifest_digest": null,
-        "status": "pushed_to_ghcr",
+        "registry_manifest_digest": "sha256:7f644b21076ba7e1183c64fc082c234eb0089a127db44b8183b7d7fd93082e08",
+        "status": "published",
         "tag": "v1-linux-arm64-53d5916ff99de9474ff14c8a62a22ce6e03b620e5961cc84b6ac30779c1401eb",
         "transport": "oras",
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-53d5916ff99de9474ff14c8a62a22ce6e03b620e5961cc84b6ac30779c1401eb"
@@ -3873,7 +3873,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -3898,7 +3898,7 @@
           "upstream_notices_and_dataset_provenance_review": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__tickit001-51120249fcb29f99.tar.gz"
       },
@@ -3921,8 +3921,8 @@
           "embedded_build_coordinates_review": "embedded_paths"
         },
         "publication_holds": [],
-        "registry_manifest_digest": null,
-        "status": "pushed_to_ghcr",
+        "registry_manifest_digest": "sha256:9ef53676f7e1330128807294c8d2ee81e6ab98d8c08dafec22e78ba0db723b14",
+        "status": "published",
         "tag": "v1-linux-arm64-bef6d0589e209aeff83a80bbe920bd12814629d61273bcdc81aa30d3366950f9",
         "transport": "oras",
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-bef6d0589e209aeff83a80bbe920bd12814629d61273bcdc81aa30d3366950f9"
@@ -3947,7 +3947,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -3972,7 +3972,7 @@
           "upstream_notices_and_dataset_provenance_review": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__workday001-89dc25ba7b225ff5.tar.gz"
       },
@@ -3995,8 +3995,8 @@
           "embedded_build_coordinates_review": "embedded_paths"
         },
         "publication_holds": [],
-        "registry_manifest_digest": null,
-        "status": "pushed_to_ghcr",
+        "registry_manifest_digest": "sha256:e7236e610d34dacbc34610be1f99bc74eb29a7bb9af5d826352d0d4bbc81e0ee",
+        "status": "published",
         "tag": "v1-linux-arm64-aa086772f50603e4477133db99c612851a64ec014867213833288317cbe55655",
         "transport": "oras",
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-aa086772f50603e4477133db99c612851a64ec014867213833288317cbe55655"
@@ -4021,7 +4021,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },
@@ -4046,7 +4046,7 @@
           "upstream_notices_and_dataset_provenance_review": "third_party"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__workday002-ff8d9d44cd9cb31f.tar.gz"
       },
@@ -4069,8 +4069,8 @@
           "embedded_build_coordinates_review": "embedded_paths"
         },
         "publication_holds": [],
-        "registry_manifest_digest": null,
-        "status": "pushed_to_ghcr",
+        "registry_manifest_digest": "sha256:0237495ddbdd345982969e10cc08845c151cc5e042b61b0d9e3a16bf174a57e2",
+        "status": "published",
         "tag": "v1-linux-arm64-be26d87ad5011d60573552ae62df7d72a7821b081212e60d732155b10be45549",
         "transport": "oras",
         "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-be26d87ad5011d60573552ae62df7d72a7821b081212e60d732155b10be45549"
@@ -4095,7 +4095,7 @@
           "project_license_not_selected": "project_license"
         },
         "publication_holds": [],
-        "status": "uploaded_to_release",
+        "status": "published",
         "transport": "github-release",
         "uri": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
       },

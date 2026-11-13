@@ -79,3 +79,4 @@ Outcome:
 - All 33 SIFs (6.67 GiB) were pushed to `ghcr.io/zhuconv/dbt-bench-images`, one tag each.
 - The 67 task archives and the qualification index archive (0.2 GiB compressed) were uploaded to the `assets-v1-20261112` Release.
 - Every object's SHA256 was checked against the manifest before its upload.
+- The GHCR package was made public. Anonymous checks then passed: the registry listed all 33 tags, the smallest image pulled with a matching SIF SHA256, and a Release attachment downloaded with a matching SHA256. Each image's OCI manifest digest is recorded in `release/upload-manifest.json` and `release/assets.json`. Verification uses the SIF SHA256, not this digest.

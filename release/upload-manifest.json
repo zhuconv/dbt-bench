@@ -23,13 +23,13 @@
       },
       "holds": [],
       "kind": "sif",
-      "registry_manifest_digest": null,
+      "registry_manifest_digest": "sha256:cdd7b5018bde9d4988d632496d3eda192394de88712fc7ca7b9a3250f799f083",
       "sha256": "3e23d16ac0456b2d618f4131c0146ed9030019e943190202dfee30123faf5efc",
       "tag": "v1-linux-arm64-3e23d16ac0456b2d618f4131c0146ed9030019e943190202dfee30123faf5efc",
       "task_keys": [
         "ade__ade-bench-airbnb005"
       ],
-      "upload_status": "pushed_to_ghcr",
+      "upload_status": "published",
       "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-3e23d16ac0456b2d618f4131c0146ed9030019e943190202dfee30123faf5efc"
     },
     {
@@ -45,13 +45,13 @@
       },
       "holds": [],
       "kind": "sif",
-      "registry_manifest_digest": null,
+      "registry_manifest_digest": "sha256:366f68980f1d44dba6f32eaeabc3f5a9009d0db54e843b534b86227b81df7d8e",
       "sha256": "42d7d63a51a7293b77164e61effb6a2732b483116fccb7e422edc86e0d0d37fa",
       "tag": "v1-linux-arm64-42d7d63a51a7293b77164e61effb6a2732b483116fccb7e422edc86e0d0d37fa",
       "task_keys": [
         "ade__ade-bench-airbnb007"
       ],
-      "upload_status": "pushed_to_ghcr",
+      "upload_status": "published",
       "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-42d7d63a51a7293b77164e61effb6a2732b483116fccb7e422edc86e0d0d37fa"
     },
     {
@@ -67,13 +67,13 @@
       },
       "holds": [],
       "kind": "sif",
-      "registry_manifest_digest": null,
+      "registry_manifest_digest": "sha256:76814c83fbb26f09483035b93489adc13b4b1570c990d859bb742e74dbf633fe",
       "sha256": "5a996aeed7efc0e024b07224e730dde4bbd8317ef0a42968d997319a10bf45a7",
       "tag": "v1-linux-arm64-5a996aeed7efc0e024b07224e730dde4bbd8317ef0a42968d997319a10bf45a7",
       "task_keys": [
         "ade__ade-bench-ana-eng003"
       ],
-      "upload_status": "pushed_to_ghcr",
+      "upload_status": "published",
       "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-5a996aeed7efc0e024b07224e730dde4bbd8317ef0a42968d997319a10bf45a7"
     },
     {
@@ -89,13 +89,13 @@
       },
       "holds": [],
       "kind": "sif",
-      "registry_manifest_digest": null,
+      "registry_manifest_digest": "sha256:e143d453d05265d1afb2724b034d986377ebc48771eeca05b0f0e8bfbd99edfe",
       "sha256": "ed545cfe3c0ed6e53808db3c07759341b0b5f25f751173033d21578ef726330e",
       "tag": "v1-linux-arm64-ed545cfe3c0ed6e53808db3c07759341b0b5f25f751173033d21578ef726330e",
       "task_keys": [
         "ade__ade-bench-ana-eng004"
       ],
-      "upload_status": "pushed_to_ghcr",
+      "upload_status": "published",
       "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-ed545cfe3c0ed6e53808db3c07759341b0b5f25f751173033d21578ef726330e"
     },
     {
@@ -111,13 +111,13 @@
       },
       "holds": [],
       "kind": "sif",
-      "registry_manifest_digest": null,
+      "registry_manifest_digest": "sha256:10b17aed0e1b746a205a1f13b1a6047d370cf078282c79db8e7c7c225734b299",
       "sha256": "4bff1adede909e8d8b3dee3d8ccd06ece66984ddde1d4da5bbae3e87eedd34e0",
       "tag": "v1-linux-arm64-4bff1adede909e8d8b3dee3d8ccd06ece66984ddde1d4da5bbae3e87eedd34e0",
       "task_keys": [
         "ade__ade-bench-ana-eng005"
       ],
-      "upload_status": "pushed_to_ghcr",
+      "upload_status": "published",
       "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-4bff1adede909e8d8b3dee3d8ccd06ece66984ddde1d4da5bbae3e87eedd34e0"
     },
     {
@@ -133,13 +133,13 @@
       },
       "holds": [],
       "kind": "sif",
-      "registry_manifest_digest": null,
+      "registry_manifest_digest": "sha256:8d2c5d4d1c8937afeadf1cdab36f032e085436e944318a1efc988facc4893fc0",
       "sha256": "3d2b6f9cce89028222fcda9040da2d0ebd608d4bb39e4d5323b4ee7785acc68c",
       "tag": "v1-linux-arm64-3d2b6f9cce89028222fcda9040da2d0ebd608d4bb39e4d5323b4ee7785acc68c",
       "task_keys": [
         "ade__ade-bench-ana-eng006"
       ],
-      "upload_status": "pushed_to_ghcr",
+      "upload_status": "published",
       "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-3d2b6f9cce89028222fcda9040da2d0ebd608d4bb39e4d5323b4ee7785acc68c"
     },
     {
@@ -155,13 +155,13 @@
       },
       "holds": [],
       "kind": "sif",
-      "registry_manifest_digest": null,
+      "registry_manifest_digest": "sha256:5d0f6bb3f259007be537922fe637ee2847b5615ebd35a4e3c4148b2b6f129f10",
       "sha256": "674da519863ff4d1941529e9cee5eecb2ee12f7c926b39a2bc49f46a882cc7af",
       "tag": "v1-linux-arm64-674da519863ff4d1941529e9cee5eecb2ee12f7c926b39a2bc49f46a882cc7af",
       "task_keys": [
         "ade__ade-bench-f1003"
       ],
-      "upload_status": "pushed_to_ghcr",
+      "upload_status": "published",
       "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-674da519863ff4d1941529e9cee5eecb2ee12f7c926b39a2bc49f46a882cc7af"
     },
     {
@@ -177,13 +177,13 @@
       },
       "holds": [],
       "kind": "sif",
-      "registry_manifest_digest": null,
+      "registry_manifest_digest": "sha256:7b285330dc745e136377fbe4e31b343cff94eb368ccade3696edcd7917d77514",
       "sha256": "c5485eddd674a9bc424627f23eb99f3854f1608094988b1ebbd2c749eec1cb7c",
       "tag": "v1-linux-arm64-c5485eddd674a9bc424627f23eb99f3854f1608094988b1ebbd2c749eec1cb7c",
       "task_keys": [
         "ade__ade-bench-f1003-hard"
       ],
-      "upload_status": "pushed_to_ghcr",
+      "upload_status": "published",
       "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-c5485eddd674a9bc424627f23eb99f3854f1608094988b1ebbd2c749eec1cb7c"
     },
     {
@@ -199,13 +199,13 @@
       },
       "holds": [],
       "kind": "sif",
-      "registry_manifest_digest": null,
+      "registry_manifest_digest": "sha256:e34dec5a9ccb964e9263e9c8c8d0f5e5e018306c86f80691ffe08276b5ba2b33",
       "sha256": "ce47a9e6ed2defaac646b2bbb002d0eaf3fc3d8873a8342187d8b9fd4e521fd0",
       "tag": "v1-linux-arm64-ce47a9e6ed2defaac646b2bbb002d0eaf3fc3d8873a8342187d8b9fd4e521fd0",
       "task_keys": [
         "ade__ade-bench-f1009"
       ],
-      "upload_status": "pushed_to_ghcr",
+      "upload_status": "published",
       "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-ce47a9e6ed2defaac646b2bbb002d0eaf3fc3d8873a8342187d8b9fd4e521fd0"
     },
     {
@@ -221,13 +221,13 @@
       },
       "holds": [],
       "kind": "sif",
-      "registry_manifest_digest": null,
+      "registry_manifest_digest": "sha256:de5ddc64435a6f1471d63810a421efa9356d964efe85b4ba9e40ed1519ce194c",
       "sha256": "41c1f547462abe50f1149b412045e0bf5d96e8e3bfacfe5b775dc258e261c7ea",
       "tag": "v1-linux-arm64-41c1f547462abe50f1149b412045e0bf5d96e8e3bfacfe5b775dc258e261c7ea",
       "task_keys": [
         "ade__ade-bench-f1010"
       ],
-      "upload_status": "pushed_to_ghcr",
+      "upload_status": "published",
       "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-41c1f547462abe50f1149b412045e0bf5d96e8e3bfacfe5b775dc258e261c7ea"
     },
     {
@@ -243,13 +243,13 @@
       },
       "holds": [],
       "kind": "sif",
-      "registry_manifest_digest": null,
+      "registry_manifest_digest": "sha256:87ac13ad4d7117445760ebd332ad30147b962ee831d1b2c802dd150acccac9f6",
       "sha256": "c26a3cab660b455cd95f446cea80c8c866faa64c58fefdd12b3f6ec3dc405769",
       "tag": "v1-linux-arm64-c26a3cab660b455cd95f446cea80c8c866faa64c58fefdd12b3f6ec3dc405769",
       "task_keys": [
         "ade__ade-bench-f1010-medium"
       ],
-      "upload_status": "pushed_to_ghcr",
+      "upload_status": "published",
       "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-c26a3cab660b455cd95f446cea80c8c866faa64c58fefdd12b3f6ec3dc405769"
     },
     {
@@ -265,13 +265,13 @@
       },
       "holds": [],
       "kind": "sif",
-      "registry_manifest_digest": null,
+      "registry_manifest_digest": "sha256:a7a64d296fe1fd1e9eed738e35b7797ce5fe9f6f6b39e2292a1672967cb8db05",
       "sha256": "4b63c74af2f2816318325d37558bd5934bd71988816d1fbc6c15e48ee39bc0a1",
       "tag": "v1-linux-arm64-4b63c74af2f2816318325d37558bd5934bd71988816d1fbc6c15e48ee39bc0a1",
       "task_keys": [
         "ade__ade-bench-f1011"
       ],
-      "upload_status": "pushed_to_ghcr",
+      "upload_status": "published",
       "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-4b63c74af2f2816318325d37558bd5934bd71988816d1fbc6c15e48ee39bc0a1"
     },
     {
@@ -287,13 +287,13 @@
       },
       "holds": [],
       "kind": "sif",
-      "registry_manifest_digest": null,
+      "registry_manifest_digest": "sha256:2d57174baceac8101ebaf73c1ecd23656ea043c345a05677aac9e1ec88b52f9c",
       "sha256": "7dd21401d98cb1ecb758d4510cf0430116dbca24d9a9b77d6e898f746ddb054d",
       "tag": "v1-linux-arm64-7dd21401d98cb1ecb758d4510cf0430116dbca24d9a9b77d6e898f746ddb054d",
       "task_keys": [
         "ade__ade-bench-intercom001"
       ],
-      "upload_status": "pushed_to_ghcr",
+      "upload_status": "published",
       "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-7dd21401d98cb1ecb758d4510cf0430116dbca24d9a9b77d6e898f746ddb054d"
     },
     {
@@ -309,13 +309,13 @@
       },
       "holds": [],
       "kind": "sif",
-      "registry_manifest_digest": null,
+      "registry_manifest_digest": "sha256:184bc18af3b191d1f5099746567a06f2f37990b8608b86999957c110fce1389e",
       "sha256": "3b3737a8352f18cc1655f8656918c71e50f5271a99d4b6daef3b827ab975c713",
       "tag": "v1-linux-arm64-3b3737a8352f18cc1655f8656918c71e50f5271a99d4b6daef3b827ab975c713",
       "task_keys": [
         "ade__ade-bench-intercom002"
       ],
-      "upload_status": "pushed_to_ghcr",
+      "upload_status": "published",
       "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-3b3737a8352f18cc1655f8656918c71e50f5271a99d4b6daef3b827ab975c713"
     },
     {
@@ -331,13 +331,13 @@
       },
       "holds": [],
       "kind": "sif",
-      "registry_manifest_digest": null,
+      "registry_manifest_digest": "sha256:69ab4a99b08c40a32fb55fd69f18b13e0eac79256f98e50d56e82cdc5c99c8ab",
       "sha256": "724a26e1d5e58d1aada9913bf4c6418355d0b693752e8f31a7de6941e0bed513",
       "tag": "v1-linux-arm64-724a26e1d5e58d1aada9913bf4c6418355d0b693752e8f31a7de6941e0bed513",
       "task_keys": [
         "ade__ade-bench-intercom003"
       ],
-      "upload_status": "pushed_to_ghcr",
+      "upload_status": "published",
       "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-724a26e1d5e58d1aada9913bf4c6418355d0b693752e8f31a7de6941e0bed513"
     },
     {
@@ -352,7 +352,7 @@
       },
       "holds": [],
       "kind": "sif",
-      "registry_manifest_digest": null,
+      "registry_manifest_digest": "sha256:777ef3292afc782e5400141408e1c75b5f6622c3f6e1f13934c8ff9769a2c0e9",
       "sha256": "f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c",
       "tag": "v1-linux-arm64-f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c",
       "task_keys": [
@@ -392,7 +392,7 @@
         "deb__dbt-web-session-analytics",
         "deb__dbt-weekly-sales-growth"
       ],
-      "upload_status": "pushed_to_ghcr",
+      "upload_status": "published",
       "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-f9368e4ec8011ce93621ed07412e2590755f832fdeba27a1777f021183353b4c"
     },
     {
@@ -407,13 +407,13 @@
       },
       "holds": [],
       "kind": "sif",
-      "registry_manifest_digest": null,
+      "registry_manifest_digest": "sha256:f594cc8df05caa8bab5217fb926f105bb06b000959897e3e65fbaa3487ef32aa",
       "sha256": "294bc8f0712f4c715c464f7842852ffadf1662ccb0e12f1b4c4d643f32ec9f48",
       "tag": "v1-linux-arm64-294bc8f0712f4c715c464f7842852ffadf1662ccb0e12f1b4c4d643f32ec9f48",
       "task_keys": [
         "deb__dbt-session-attribution"
       ],
-      "upload_status": "pushed_to_ghcr",
+      "upload_status": "published",
       "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-294bc8f0712f4c715c464f7842852ffadf1662ccb0e12f1b4c4d643f32ec9f48"
     },
     {
@@ -429,13 +429,13 @@
       },
       "holds": [],
       "kind": "sif",
-      "registry_manifest_digest": null,
+      "registry_manifest_digest": "sha256:3611d260e924a858c2c7758e8060d033514fc405b42ecba78cc4ba2f44392c27",
       "sha256": "39f48a4c5f4cd8f8e7235d415e9459a49ca201e91b33e3b1a0a3eaee1485e15b",
       "tag": "v1-linux-arm64-39f48a4c5f4cd8f8e7235d415e9459a49ca201e91b33e3b1a0a3eaee1485e15b",
       "task_keys": [
         "spider2__app_reporting001"
       ],
-      "upload_status": "pushed_to_ghcr",
+      "upload_status": "published",
       "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-39f48a4c5f4cd8f8e7235d415e9459a49ca201e91b33e3b1a0a3eaee1485e15b"
     },
     {
@@ -451,13 +451,13 @@
       },
       "holds": [],
       "kind": "sif",
-      "registry_manifest_digest": null,
+      "registry_manifest_digest": "sha256:cd7e8235381d7495906f62da723057b0dbcdd21add203c3739a1eb8825f088ae",
       "sha256": "8323ed9479cf457c33415f8289c30cb868eda60d8264fb4356df2c3b00ee85a9",
       "tag": "v1-linux-arm64-8323ed9479cf457c33415f8289c30cb868eda60d8264fb4356df2c3b00ee85a9",
       "task_keys": [
         "spider2__app_reporting002"
       ],
-      "upload_status": "pushed_to_ghcr",
+      "upload_status": "published",
       "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-8323ed9479cf457c33415f8289c30cb868eda60d8264fb4356df2c3b00ee85a9"
     },
     {
@@ -473,13 +473,13 @@
       },
       "holds": [],
       "kind": "sif",
-      "registry_manifest_digest": null,
+      "registry_manifest_digest": "sha256:0f7561f0f4c25074672c1946750f23c62fb632259cfbf0d79caf54914c173f29",
       "sha256": "4c0789ae41ddd1b8b87bbea9e555fd5fec8df8d7bf4adf9f83733b80bf38945d",
       "tag": "v1-linux-arm64-4c0789ae41ddd1b8b87bbea9e555fd5fec8df8d7bf4adf9f83733b80bf38945d",
       "task_keys": [
         "spider2__apple_store001"
       ],
-      "upload_status": "pushed_to_ghcr",
+      "upload_status": "published",
       "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-4c0789ae41ddd1b8b87bbea9e555fd5fec8df8d7bf4adf9f83733b80bf38945d"
     },
     {
@@ -495,13 +495,13 @@
       },
       "holds": [],
       "kind": "sif",
-      "registry_manifest_digest": null,
+      "registry_manifest_digest": "sha256:33bd0a17b1c16888611be07cf3260bc65fb5bad2d0904eb0d7c3114cefe105ae",
       "sha256": "e24702c7d0299838af168cc3c1e312b88703e2259d0c6b5da318b6c786a9029c",
       "tag": "v1-linux-arm64-e24702c7d0299838af168cc3c1e312b88703e2259d0c6b5da318b6c786a9029c",
       "task_keys": [
         "spider2__asset001"
       ],
-      "upload_status": "pushed_to_ghcr",
+      "upload_status": "published",
       "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-e24702c7d0299838af168cc3c1e312b88703e2259d0c6b5da318b6c786a9029c"
     },
     {
@@ -517,13 +517,13 @@
       },
       "holds": [],
       "kind": "sif",
-      "registry_manifest_digest": null,
+      "registry_manifest_digest": "sha256:582d742507bd13e87414d80f2ff914956d07b898de3b85f043f475cc9178404d",
       "sha256": "75cdde48037e9c93512b08c9974c1aad6d5ea6a620d81a428dc8cb5abe69af69",
       "tag": "v1-linux-arm64-75cdde48037e9c93512b08c9974c1aad6d5ea6a620d81a428dc8cb5abe69af69",
       "task_keys": [
         "spider2__google_play001"
       ],
-      "upload_status": "pushed_to_ghcr",
+      "upload_status": "published",
       "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-75cdde48037e9c93512b08c9974c1aad6d5ea6a620d81a428dc8cb5abe69af69"
     },
     {
@@ -539,13 +539,13 @@
       },
       "holds": [],
       "kind": "sif",
-      "registry_manifest_digest": null,
+      "registry_manifest_digest": "sha256:f3f74f3d0b0677d9b2cb9fc21f187443d374c2c29110d32a868e117cbd253021",
       "sha256": "0aa0b9e80c8f90832ec0924f7f0bd26b7759434181ac00712f8d5a3a13ec5246",
       "tag": "v1-linux-arm64-0aa0b9e80c8f90832ec0924f7f0bd26b7759434181ac00712f8d5a3a13ec5246",
       "task_keys": [
         "spider2__hive001"
       ],
-      "upload_status": "pushed_to_ghcr",
+      "upload_status": "published",
       "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-0aa0b9e80c8f90832ec0924f7f0bd26b7759434181ac00712f8d5a3a13ec5246"
     },
     {
@@ -561,13 +561,13 @@
       },
       "holds": [],
       "kind": "sif",
-      "registry_manifest_digest": null,
+      "registry_manifest_digest": "sha256:b49b25e97a1e06a1701528de0611d95cfbacccd98ad0014ba6f829567e90fef7",
       "sha256": "993a5ee369464ac3bee72f1b718a4f3c89c1604eee0ec49d33c6613662e78103",
       "tag": "v1-linux-arm64-993a5ee369464ac3bee72f1b718a4f3c89c1604eee0ec49d33c6613662e78103",
       "task_keys": [
         "spider2__intercom001"
       ],
-      "upload_status": "pushed_to_ghcr",
+      "upload_status": "published",
       "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-993a5ee369464ac3bee72f1b718a4f3c89c1604eee0ec49d33c6613662e78103"
     },
     {
@@ -583,13 +583,13 @@
       },
       "holds": [],
       "kind": "sif",
-      "registry_manifest_digest": null,
+      "registry_manifest_digest": "sha256:b1a59bc7e9586013d9a21dbb25cd2a3d27efdc115c34c2d61d22d82f7d0551cc",
       "sha256": "f3d992b881041b0f30d03b9061c237ebcaa57f592df8a9d9c53522dbd33e4473",
       "tag": "v1-linux-arm64-f3d992b881041b0f30d03b9061c237ebcaa57f592df8a9d9c53522dbd33e4473",
       "task_keys": [
         "spider2__jira001"
       ],
-      "upload_status": "pushed_to_ghcr",
+      "upload_status": "published",
       "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-f3d992b881041b0f30d03b9061c237ebcaa57f592df8a9d9c53522dbd33e4473"
     },
     {
@@ -605,13 +605,13 @@
       },
       "holds": [],
       "kind": "sif",
-      "registry_manifest_digest": null,
+      "registry_manifest_digest": "sha256:5409814dd9c90549ab51540cb1eaca19cbdd0c4ffe50108038a874c825ec886a",
       "sha256": "b76376cf74a0d69ad73dbb9977d1077d30e469fb466088a06a7dab94d7c03053",
       "tag": "v1-linux-arm64-b76376cf74a0d69ad73dbb9977d1077d30e469fb466088a06a7dab94d7c03053",
       "task_keys": [
         "spider2__lever001"
       ],
-      "upload_status": "pushed_to_ghcr",
+      "upload_status": "published",
       "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-b76376cf74a0d69ad73dbb9977d1077d30e469fb466088a06a7dab94d7c03053"
     },
     {
@@ -627,13 +627,13 @@
       },
       "holds": [],
       "kind": "sif",
-      "registry_manifest_digest": null,
+      "registry_manifest_digest": "sha256:542b2db0367293e7cc69c29bffe868e03cbbd6115a215ab3df6784d67bec770c",
       "sha256": "1329f8fe64254776ab90625302c9fb1f81eb1b4b38b803e064ffdda901cba0a4",
       "tag": "v1-linux-arm64-1329f8fe64254776ab90625302c9fb1f81eb1b4b38b803e064ffdda901cba0a4",
       "task_keys": [
         "spider2__marketo001"
       ],
-      "upload_status": "pushed_to_ghcr",
+      "upload_status": "published",
       "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-1329f8fe64254776ab90625302c9fb1f81eb1b4b38b803e064ffdda901cba0a4"
     },
     {
@@ -649,13 +649,13 @@
       },
       "holds": [],
       "kind": "sif",
-      "registry_manifest_digest": null,
+      "registry_manifest_digest": "sha256:dd4befb88fad34adf00e7dea9b866f6691a6c3e6964f2265ab620c0fb3e82d39",
       "sha256": "c6379b521ffc262e4598b154887ed5d3565dd4251efff7a55ac169eff482c427",
       "tag": "v1-linux-arm64-c6379b521ffc262e4598b154887ed5d3565dd4251efff7a55ac169eff482c427",
       "task_keys": [
         "spider2__maturity001"
       ],
-      "upload_status": "pushed_to_ghcr",
+      "upload_status": "published",
       "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-c6379b521ffc262e4598b154887ed5d3565dd4251efff7a55ac169eff482c427"
     },
     {
@@ -671,13 +671,13 @@
       },
       "holds": [],
       "kind": "sif",
-      "registry_manifest_digest": null,
+      "registry_manifest_digest": "sha256:3ad29a613317e8f541fdb0ebe679653ffea2546f6f6879cc81bcb34b4b57a9b4",
       "sha256": "a6cfdac52d5144073556202979189f5ba4e3f27e9cf411b5da1c6170272ac514",
       "tag": "v1-linux-arm64-a6cfdac52d5144073556202979189f5ba4e3f27e9cf411b5da1c6170272ac514",
       "task_keys": [
         "spider2__recharge002"
       ],
-      "upload_status": "pushed_to_ghcr",
+      "upload_status": "published",
       "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-a6cfdac52d5144073556202979189f5ba4e3f27e9cf411b5da1c6170272ac514"
     },
     {
@@ -693,13 +693,13 @@
       },
       "holds": [],
       "kind": "sif",
-      "registry_manifest_digest": null,
+      "registry_manifest_digest": "sha256:7f644b21076ba7e1183c64fc082c234eb0089a127db44b8183b7d7fd93082e08",
       "sha256": "53d5916ff99de9474ff14c8a62a22ce6e03b620e5961cc84b6ac30779c1401eb",
       "tag": "v1-linux-arm64-53d5916ff99de9474ff14c8a62a22ce6e03b620e5961cc84b6ac30779c1401eb",
       "task_keys": [
         "spider2__shopify002"
       ],
-      "upload_status": "pushed_to_ghcr",
+      "upload_status": "published",
       "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-53d5916ff99de9474ff14c8a62a22ce6e03b620e5961cc84b6ac30779c1401eb"
     },
     {
@@ -715,13 +715,13 @@
       },
       "holds": [],
       "kind": "sif",
-      "registry_manifest_digest": null,
+      "registry_manifest_digest": "sha256:9ef53676f7e1330128807294c8d2ee81e6ab98d8c08dafec22e78ba0db723b14",
       "sha256": "bef6d0589e209aeff83a80bbe920bd12814629d61273bcdc81aa30d3366950f9",
       "tag": "v1-linux-arm64-bef6d0589e209aeff83a80bbe920bd12814629d61273bcdc81aa30d3366950f9",
       "task_keys": [
         "spider2__tickit001"
       ],
-      "upload_status": "pushed_to_ghcr",
+      "upload_status": "published",
       "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-bef6d0589e209aeff83a80bbe920bd12814629d61273bcdc81aa30d3366950f9"
     },
     {
@@ -737,13 +737,13 @@
       },
       "holds": [],
       "kind": "sif",
-      "registry_manifest_digest": null,
+      "registry_manifest_digest": "sha256:e7236e610d34dacbc34610be1f99bc74eb29a7bb9af5d826352d0d4bbc81e0ee",
       "sha256": "aa086772f50603e4477133db99c612851a64ec014867213833288317cbe55655",
       "tag": "v1-linux-arm64-aa086772f50603e4477133db99c612851a64ec014867213833288317cbe55655",
       "task_keys": [
         "spider2__workday001"
       ],
-      "upload_status": "pushed_to_ghcr",
+      "upload_status": "published",
       "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-aa086772f50603e4477133db99c612851a64ec014867213833288317cbe55655"
     },
     {
@@ -759,13 +759,13 @@
       },
       "holds": [],
       "kind": "sif",
-      "registry_manifest_digest": null,
+      "registry_manifest_digest": "sha256:0237495ddbdd345982969e10cc08845c151cc5e042b61b0d9e3a16bf174a57e2",
       "sha256": "be26d87ad5011d60573552ae62df7d72a7821b081212e60d732155b10be45549",
       "tag": "v1-linux-arm64-be26d87ad5011d60573552ae62df7d72a7821b081212e60d732155b10be45549",
       "task_keys": [
         "spider2__workday002"
       ],
-      "upload_status": "pushed_to_ghcr",
+      "upload_status": "published",
       "uri": "oras://ghcr.io/zhuconv/dbt-bench-images:v1-linux-arm64-be26d87ad5011d60573552ae62df7d72a7821b081212e60d732155b10be45549"
     },
     {
@@ -786,7 +786,7 @@
       "sha256": "f33b6f06e070fc6da36b7dc7d78b12760321f9a597e70c164e247991f6a6eaec",
       "task_key": "ade__ade-bench-airbnb005",
       "tree_sha256": "9c75036f4febb7314d475568ddd440c3b965c8aebb44fc4fdb1cb8a20da3587b",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-ade__ade-bench-airbnb005-9c75036f4febb731.tar.gz"
     },
     {
@@ -807,7 +807,7 @@
       "sha256": "564d0e2d0c5608b63c30477d31c2d213476863bd7ec379c3ee545bbf625f487d",
       "task_key": "ade__ade-bench-airbnb007",
       "tree_sha256": "53c496fa47081e0337a09e277508963a9aa3b11c89d2f8e7826210ab51dbd537",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-ade__ade-bench-airbnb007-53c496fa47081e03.tar.gz"
     },
     {
@@ -828,7 +828,7 @@
       "sha256": "46027f86fa0b870e6c2e953c65fef8956eb13ab807ec8c95944dcfe0b7dee198",
       "task_key": "ade__ade-bench-ana-eng003",
       "tree_sha256": "a91d39df5f2f83240dca813b32674371a5c02cc2be5b9eb3deb1ad0192d6bd7f",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-ade__ade-bench-ana-eng003-a91d39df5f2f8324.tar.gz"
     },
     {
@@ -849,7 +849,7 @@
       "sha256": "5b7660dd5d17bb21471fbe9905c88468c992191f027a667b59c28c8e8e579f2b",
       "task_key": "ade__ade-bench-ana-eng004",
       "tree_sha256": "aad267608e21574ad82124142e16baecd6834a242c7f2d87185b32e99949fa18",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-ade__ade-bench-ana-eng004-aad267608e21574a.tar.gz"
     },
     {
@@ -870,7 +870,7 @@
       "sha256": "04afddd2b3f8a6229ba7ed4ad05d7d827ec38e3522acb571be5f57a4de414143",
       "task_key": "ade__ade-bench-ana-eng005",
       "tree_sha256": "2af6c1c4f48c50cd4ab43238489b9e76de9b0635f2fe8d637c49dbfafd95912f",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-ade__ade-bench-ana-eng005-2af6c1c4f48c50cd.tar.gz"
     },
     {
@@ -891,7 +891,7 @@
       "sha256": "c1a5c44677797209329438d68945c92a7042b4feff600a4c2d87e3ba01a45796",
       "task_key": "ade__ade-bench-ana-eng006",
       "tree_sha256": "efd6b4bd5bd89a8fe31120a206af1af0c1d4805b4cee9510d31d36e8e15f003f",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-ade__ade-bench-ana-eng006-efd6b4bd5bd89a8f.tar.gz"
     },
     {
@@ -912,7 +912,7 @@
       "sha256": "4515c52f1384f6753fc5b84bac873322444f2c9c41524ce826a56296641339ac",
       "task_key": "ade__ade-bench-f1003",
       "tree_sha256": "f5582e22a16499d3213fc9c6579dda77b3c3ff378fcab9244381ea7086dc26cc",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-ade__ade-bench-f1003-f5582e22a16499d3.tar.gz"
     },
     {
@@ -933,7 +933,7 @@
       "sha256": "ceedfa3386a24d053796b74ac83e1d03606014d408bd38354cbacb8874e21004",
       "task_key": "ade__ade-bench-f1003-hard",
       "tree_sha256": "679d2263708d3ef681e620d908793371982230f9b1aa460ddf1f564994edad0f",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-ade__ade-bench-f1003-hard-679d2263708d3ef6.tar.gz"
     },
     {
@@ -954,7 +954,7 @@
       "sha256": "429e1a8fdb4f4cad238016fed6bdb82bb1d54d607d812cf8690dbb075054026d",
       "task_key": "ade__ade-bench-f1009",
       "tree_sha256": "2d5b7d92c3e02e4aecef7ff7437155a35c1a81c732f92db3f8dfb0c64e0fafdc",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-ade__ade-bench-f1009-2d5b7d92c3e02e4a.tar.gz"
     },
     {
@@ -975,7 +975,7 @@
       "sha256": "6ec72a5e143665bddd436985b00419142e450f2557955eb01d4d69223c6afb8b",
       "task_key": "ade__ade-bench-f1010",
       "tree_sha256": "94b44d8c2768978c71d20c803f6d8c76baf44b67eb4885ab85487d0949254507",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-ade__ade-bench-f1010-94b44d8c2768978c.tar.gz"
     },
     {
@@ -996,7 +996,7 @@
       "sha256": "1196b2d32bca11454f665886d3154fc941f87a24249fbf22d72140f5a95cffe4",
       "task_key": "ade__ade-bench-f1010-medium",
       "tree_sha256": "c79e9f4a7e433b9eebc10eff04892d7574375cc380a9f8ea2d135111cfb9f28b",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-ade__ade-bench-f1010-medium-c79e9f4a7e433b9e.tar.gz"
     },
     {
@@ -1017,7 +1017,7 @@
       "sha256": "9dfd445e1850f3d3fa6f1cab58b25759407301bfa3e4959601842af23b02df70",
       "task_key": "ade__ade-bench-f1011",
       "tree_sha256": "8792ab3ed74d429df38515a45315d40e49dc96b38e478d739fcb3137f1b3cb50",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-ade__ade-bench-f1011-8792ab3ed74d429d.tar.gz"
     },
     {
@@ -1038,7 +1038,7 @@
       "sha256": "0adaf5ac543521797b4b07ed89e187f48243bfcafa6e03528e39f743941a44a8",
       "task_key": "ade__ade-bench-intercom001",
       "tree_sha256": "12d7152fb841a502e3af0635648f22ccf7d40116f9f99dddd398ac01ebf69c6a",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-ade__ade-bench-intercom001-12d7152fb841a502.tar.gz"
     },
     {
@@ -1059,7 +1059,7 @@
       "sha256": "4a7aefc4dfe3d11d7851ee9fa4f2dc464c09e432eaec0d636471d94c1a5e7cfb",
       "task_key": "ade__ade-bench-intercom002",
       "tree_sha256": "b99f274193a468dbc48c8908d329f0df3ddd8761031b50195555fad7cf39b6bf",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-ade__ade-bench-intercom002-b99f274193a468db.tar.gz"
     },
     {
@@ -1080,7 +1080,7 @@
       "sha256": "5ef658b0423351db5d903c96dad8c311b3704319f5aa0cf2679c6cfd7f49ace3",
       "task_key": "ade__ade-bench-intercom003",
       "tree_sha256": "3b9cc8e51dd673c18a7dc8bbc166fe606e834ff40d36183555eba4f67903fc7b",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-ade__ade-bench-intercom003-3b9cc8e51dd673c1.tar.gz"
     },
     {
@@ -1101,7 +1101,7 @@
       "sha256": "5d445a3f8dc9c67b3a9798dece0f126e50ade8cbc8b11ba8e44e70949b6f7064",
       "task_key": "deb__dbt-calculate-running-balance",
       "tree_sha256": "d75f9b9c346b5674fff7d9a3e861f3967c211acf9572a0449f5de394f08dd68f",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-calculate-running-balance-d75f9b9c346b5674.tar.gz"
     },
     {
@@ -1122,7 +1122,7 @@
       "sha256": "ce17732fd4a50c3a2359e4774b773f755fc2bc916aba2c38f94e4a8140047d89",
       "task_key": "deb__dbt-coupon-effectiveness",
       "tree_sha256": "bfd7b249a31c4d7db479cfc2052f18aa5663ce7a08e337231e5a5135a4612d74",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-coupon-effectiveness-bfd7b249a31c4d7d.tar.gz"
     },
     {
@@ -1143,7 +1143,7 @@
       "sha256": "991e49b868b7575d226848ba23db235130f4cf8d4e60d6b9e44400c3309a69f4",
       "task_key": "deb__dbt-customer-churn-cohorts",
       "tree_sha256": "5c2962386c02eb729ea6659fb99c07fd36cd4406cf8a23459216e58dc042a046",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-customer-churn-cohorts-5c2962386c02eb72.tar.gz"
     },
     {
@@ -1164,7 +1164,7 @@
       "sha256": "c30663b7a188e508d30f59e2104d6a835da1a82a03e80f02f07c82ea29733a34",
       "task_key": "deb__dbt-customer-churn-early-warning",
       "tree_sha256": "c1365ce723ccb5ade2222faed5d0876a91b46a0b005d424f0dbccea5e7c5e002",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-customer-churn-early-warning-c1365ce723ccb5ad.tar.gz"
     },
     {
@@ -1185,7 +1185,7 @@
       "sha256": "d6bb5d6b36788725069500182bf67e2ddc90df2d987e0a61cef28c4d4852f543",
       "task_key": "deb__dbt-customer-cltv-forecasting",
       "tree_sha256": "639c192f252a8a018415995f4722f6f4829ab5e52fdde6a7ba76a833624de750",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-customer-cltv-forecasting-639c192f252a8a01.tar.gz"
     },
     {
@@ -1206,7 +1206,7 @@
       "sha256": "99f638c34f2ec8cdc441fbc72eab6782a135548687152f82c7ba43cc13fdb10c",
       "task_key": "deb__dbt-customer-geographic",
       "tree_sha256": "5a0b54ad65115ed07b23b001cf7a1bf52c11da613bccb1b3c791fe485e9de879",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-customer-geographic-5a0b54ad65115ed0.tar.gz"
     },
     {
@@ -1227,7 +1227,7 @@
       "sha256": "395759b8ef070554733356245386ada4e6d3bd038e8313130d5b37839d1104e6",
       "task_key": "deb__dbt-customer-lifetime-value",
       "tree_sha256": "9ee778862e2ea2fb5c4ccd74c1e58ce21cd36979abdca2c87f5bdb28448d47cd",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-customer-lifetime-value-9ee778862e2ea2fb.tar.gz"
     },
     {
@@ -1248,7 +1248,7 @@
       "sha256": "b89f3eebd4495f95f10113d1b1cf67ab5bc06f4978f0e3d89b54ac5b2cb13d5f",
       "task_key": "deb__dbt-customer-ltv-fix",
       "tree_sha256": "e0da1d3492e4cce8b7fa0a97b18e4d3b3738bccb364fbea6d46157759d47bdc5",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-customer-ltv-fix-e0da1d3492e4cce8.tar.gz"
     },
     {
@@ -1269,7 +1269,7 @@
       "sha256": "6be9827041a0fca9f55a9d92a9943d78ca7fe78f23c728fde18e95d839657578",
       "task_key": "deb__dbt-customer-order-analytics",
       "tree_sha256": "d54a2b42990a4f2ab101b8181f5dca8a85d941b9c9e911357a504e93fdd47e49",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-customer-order-analytics-d54a2b42990a4f2a.tar.gz"
     },
     {
@@ -1290,7 +1290,7 @@
       "sha256": "33271eb981954c45bb050cee07ad28bb944413c22f65121c43d339d2f58d312f",
       "task_key": "deb__dbt-customer-risk-scoring",
       "tree_sha256": "d6f9fcf6156ba2808714ff3f2f5e1fbe912e26fe3d0f481ad1e5c7f30de779df",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-customer-risk-scoring-d6f9fcf6156ba280.tar.gz"
     },
     {
@@ -1311,7 +1311,7 @@
       "sha256": "2a9c1cdb688df740f3d459fc3ce9c7db5486258c41e54cf1c471cd9d4c45ef3e",
       "task_key": "deb__dbt-daily-order-summary",
       "tree_sha256": "bde46a8d75356400408f22294e8de2095e9fa9be49a83cb4fd25e3cb6ab5c034",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-daily-order-summary-bde46a8d75356400.tar.gz"
     },
     {
@@ -1332,7 +1332,7 @@
       "sha256": "5ca8e9574533198a0847376a43b9a9c8d7661c178642d5af79e327e6dc731a19",
       "task_key": "deb__dbt-exchange-rate-settlement-date",
       "tree_sha256": "bd8ac39a7859ec4ec65a163a2001da99bbfb1f6ca2f716bcacb8bff677ce5904",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-exchange-rate-settlement-date-bd8ac39a7859ec4e.tar.gz"
     },
     {
@@ -1353,7 +1353,7 @@
       "sha256": "9c1c8f5224095f1333cab5cf913a144d2e11e12566438f82c53541c1e7a6e9e3",
       "task_key": "deb__dbt-fix-cac-payback-waterfall",
       "tree_sha256": "ad48e47ffbe36a108e427a77914a3f46b98d5adf9d0497b86f9195aaa7ca8678",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-fix-cac-payback-waterfall-ad48e47ffbe36a10.tar.gz"
     },
     {
@@ -1374,7 +1374,7 @@
       "sha256": "7a4cbd8f618a20ae472139c3cf6a4f1f110b73266938c8cd1234457c4787d20e",
       "task_key": "deb__dbt-fix-email-attribution",
       "tree_sha256": "f201001186d4c40d4e4c075ba627f77de2bb5113bfe6af060426a8350486af7c",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-fix-email-attribution-f201001186d4c40d.tar.gz"
     },
     {
@@ -1395,7 +1395,7 @@
       "sha256": "c3592e9cff30e782bb04b8cec97c60be8a866da7aa8a9b03b2bb00fc2a0a07cd",
       "task_key": "deb__dbt-fix-multi-touch-attribution",
       "tree_sha256": "4e14c491cb12027fe5cc4876dfb81776ec00718118a443024ad51a319fc2cc0d",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-fix-multi-touch-attribution-4e14c491cb12027f.tar.gz"
     },
     {
@@ -1416,7 +1416,7 @@
       "sha256": "14042a97859955575d1b6b6a0f849bffb2a9f8a8c6d70636e94dd98eccb1abf3",
       "task_key": "deb__dbt-fix-repeat-purchase-cohort-revenue",
       "tree_sha256": "0f84ad074469cc03a19b78630a63767223bb06448c867161d2cd3603233bdf36",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-fix-repeat-purchase-cohort-revenue-0f84ad074469cc03.tar.gz"
     },
     {
@@ -1437,7 +1437,7 @@
       "sha256": "7a31a6bbd4d440b5de49b0db440943c45930e9250bbc34eb3e6fed3058988d34",
       "task_key": "deb__dbt-fraud-detection-model",
       "tree_sha256": "ab8d293d378ed31e40dce17bc40eda05aa1ae299989d34ffedff35e2b25b5eab",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-fraud-detection-model-ab8d293d378ed31e.tar.gz"
     },
     {
@@ -1458,7 +1458,7 @@
       "sha256": "6ceb60a936b545f3eac10d2a1f7aeb1e2842e5b40f58501b2c6cf65ef4a3d850",
       "task_key": "deb__dbt-fulfillment-sla",
       "tree_sha256": "f540250b07dc01d7f7539223feb4d1b0e6f35d252ea4f7a20a7322a063f439a5",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-fulfillment-sla-f540250b07dc01d7.tar.gz"
     },
     {
@@ -1479,7 +1479,7 @@
       "sha256": "a5279adf91448619232b35b49df7cedf7b5a5602c44dbd77011f8476575dfafd",
       "task_key": "deb__dbt-harbor-warehouse-capacity",
       "tree_sha256": "18526ecfb58eb81748c627a08b043b9164b3aefa6007bdf64af96d37573fd5a6",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-harbor-warehouse-capacity-18526ecfb58eb817.tar.gz"
     },
     {
@@ -1500,7 +1500,7 @@
       "sha256": "1d34672315361ffc7d8f976cc91410f36e0f57419a0d8dbc7bcb5e0b3d37756f",
       "task_key": "deb__dbt-inventory-analysis",
       "tree_sha256": "b62f741934fdd7312af5ec0a77921b28f98189f6572544def31e69c21d85a8f2",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-inventory-analysis-b62f741934fdd731.tar.gz"
     },
     {
@@ -1521,7 +1521,7 @@
       "sha256": "c9baa8ae6616cdab1fbf42cc039c9ecebc0966c6b5edcc0a2b6f87ecf00a05a8",
       "task_key": "deb__dbt-inventory-stockout-risk",
       "tree_sha256": "b13b9b895210c8e7f18d190ac1054f9b3268716a978b650ceea446a5bd0c75a8",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-inventory-stockout-risk-b13b9b895210c8e7.tar.gz"
     },
     {
@@ -1542,7 +1542,7 @@
       "sha256": "0645b3e780bfd2a15f0ed6c3da7258b9b2337c5bca7c26f6b78d00c3aca4d320",
       "task_key": "deb__dbt-loyalty-points-analysis",
       "tree_sha256": "bc074bc24fb429232e4ee023a0c6cfe7fe8413a97f1bd86119757d9b6a656b9f",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-loyalty-points-analysis-bc074bc24fb42923.tar.gz"
     },
     {
@@ -1563,7 +1563,7 @@
       "sha256": "63a126b34391573138a38fbdc33063bd517e3ea8f6fa2aeee4348a2c4a2f2d61",
       "task_key": "deb__dbt-order-reconciliation",
       "tree_sha256": "85472ff635434a07a258c2e31e1799bd453cfca011a6451905cc89c1186048e2",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-order-reconciliation-85472ff635434a07.tar.gz"
     },
     {
@@ -1584,7 +1584,7 @@
       "sha256": "0fd83cb3e7c1cfe6c64991a06ddb42d561d064a9f694ce89d72559569c2873a3",
       "task_key": "deb__dbt-price-elasticity",
       "tree_sha256": "4e392d1ca5313ecc03521dbf89ead1d2e7550f992465d19563b09ff92490e399",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-price-elasticity-4e392d1ca5313ecc.tar.gz"
     },
     {
@@ -1605,7 +1605,7 @@
       "sha256": "82da142412e068fa536c1ef2bf24884c5fa0b9da8d9563ad717bd0bbb3a81501",
       "task_key": "deb__dbt-product-category-analytics",
       "tree_sha256": "bd41c9f3daee82cb935e89d2935e05d749a52608a4f181e15373356e4f6f968d",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-product-category-analytics-bd41c9f3daee82cb.tar.gz"
     },
     {
@@ -1626,7 +1626,7 @@
       "sha256": "da5882dc0b659f4d157688a5c7a545ac632718340df86e79dda62e78f0d17145",
       "task_key": "deb__dbt-retail-task-01-channel-revenue",
       "tree_sha256": "b9f878470d06b2a6f1342d0e9bc80ae207d800e5d687fb1cbd20b8efab69be31",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-retail-task-01-channel-revenue-b9f878470d06b2a6.tar.gz"
     },
     {
@@ -1647,7 +1647,7 @@
       "sha256": "e2bc7c63a79ae8681a0b529c7b9e1ae8fcfa51e2889d2a6a4e18e9e01b9f6756",
       "task_key": "deb__dbt-retail-task-04-market-roi",
       "tree_sha256": "85453dc18e75a4755be32837d451ecbf20b8ef065c03057210ef308c516b50f2",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-retail-task-04-market-roi-85453dc18e75a475.tar.gz"
     },
     {
@@ -1668,7 +1668,7 @@
       "sha256": "13864a8d4353820d77a13c08ecd4bb2e3aec8f57070ec3bbdae66452708cb505",
       "task_key": "deb__dbt-rfm-customer-segmentation",
       "tree_sha256": "cf30b1bcc2bf01d78043e97cbc715ed5bcafb5d8ee845d05def876599c8d1bdd",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-rfm-customer-segmentation-cf30b1bcc2bf01d7.tar.gz"
     },
     {
@@ -1689,7 +1689,7 @@
       "sha256": "7ae4691f5eee13baa84f46cda892f9e60365200b5ca10aece56544f5cc735617",
       "task_key": "deb__dbt-rfm-customer-segmentation-2",
       "tree_sha256": "f793de90f0e2401768682ef40d73ff50e3b46ce7ab5db158edd7833092647587",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-rfm-customer-segmentation-2-f793de90f0e24017.tar.gz"
     },
     {
@@ -1710,7 +1710,7 @@
       "sha256": "368b22afc603bba0a39cbd0aa2fd3c4e67420b5b2ab84c8e1ae83e99167355ff",
       "task_key": "deb__dbt-sales-funnel-analysis",
       "tree_sha256": "3b3d80098d5c6d9e08b2f6b109c4dad91a596f984e10e674c854ef5e717a0c81",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-sales-funnel-analysis-3b3d80098d5c6d9e.tar.gz"
     },
     {
@@ -1731,7 +1731,7 @@
       "sha256": "4054ccb46719f94b0cf4a2bbd04c0c575efb70e48679da643aae794dd739718e",
       "task_key": "deb__dbt-session-attribution",
       "tree_sha256": "ef234ff0686d1436f779c99a0bbec7181a2b468e954cd4e67d60710134e238d0",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-session-attribution-ef234ff0686d1436.tar.gz"
     },
     {
@@ -1752,7 +1752,7 @@
       "sha256": "a02502ffc5ac785b6ce4cb8e93a8a8ea21fef8164257be1ff1516bb8ae66f050",
       "task_key": "deb__dbt-supplier-payment-optimization",
       "tree_sha256": "3b0202b434a80c9333798d7c92454896cacb2d6d446ca271db56e7996d2098e6",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-supplier-payment-optimization-3b0202b434a80c93.tar.gz"
     },
     {
@@ -1773,7 +1773,7 @@
       "sha256": "b86a193de0742bbc6c807349b1229436319b2ec78e44559f1dcefaad822543f9",
       "task_key": "deb__dbt-supplier-scorecard",
       "tree_sha256": "5556cf04d73695d0939b54658ada1e0753686883615bdba94254d2146f60e4d6",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-supplier-scorecard-5556cf04d73695d0.tar.gz"
     },
     {
@@ -1794,7 +1794,7 @@
       "sha256": "926a576a53b88b00dccaca11603cacef92b30d9d4e4251e29ac4fe9470c0dfae",
       "task_key": "deb__dbt-three-way-matching",
       "tree_sha256": "7801b62c72bf4311c05f86f515ab1a6f7c1857e3b7a80f6aaca9603fdcac6676",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-three-way-matching-7801b62c72bf4311.tar.gz"
     },
     {
@@ -1815,7 +1815,7 @@
       "sha256": "534044a6adb27d9d23900c9fe7673fff23768cba372d667003d462646861ce10",
       "task_key": "deb__dbt-web-session-analytics",
       "tree_sha256": "91e98b10e9ac93b4609e5cc3a685962b6b30fe4f0c0eed550449825ecb0b554b",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-web-session-analytics-91e98b10e9ac93b4.tar.gz"
     },
     {
@@ -1836,7 +1836,7 @@
       "sha256": "b8c4f8fdd804f6f4d6fd7849a441e4104dfadbcfa51592f0c1ac1ca12c69f507",
       "task_key": "deb__dbt-weekly-sales-growth",
       "tree_sha256": "42c240d4331d2b590fd44c8ac714afa18b0659aa55b2dc70f0a4e4bf140d2e31",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-deb__dbt-weekly-sales-growth-42c240d4331d2b59.tar.gz"
     },
     {
@@ -1857,7 +1857,7 @@
       "sha256": "7df2729e8cf842eac1a1cc9f03dcda711a003284a67fdbc10a17531ebb5b448f",
       "task_key": "spider2__app_reporting001",
       "tree_sha256": "843b8d826c8eb5c5e179a7a7f1cdc0ab41c6c8408f4415b569ec2b319a68f9af",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__app_reporting001-843b8d826c8eb5c5.tar.gz"
     },
     {
@@ -1878,7 +1878,7 @@
       "sha256": "fea37a47ea6c375f250902af39d3523cc36a22bb40b9241cc8d6cf30079af9a0",
       "task_key": "spider2__app_reporting002",
       "tree_sha256": "37fbb28c2fa81580ba4094244e033951ec998f149bc57a96ad8d6fbe12013744",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__app_reporting002-37fbb28c2fa81580.tar.gz"
     },
     {
@@ -1899,7 +1899,7 @@
       "sha256": "d34b7461acceab5896da8277839e13c7cb105c3fa000f2de767346b94ea15047",
       "task_key": "spider2__apple_store001",
       "tree_sha256": "90dc426fe4693eb252e4678846d53a3007adf573f577dd60901793ae6ec1637e",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__apple_store001-90dc426fe4693eb2.tar.gz"
     },
     {
@@ -1920,7 +1920,7 @@
       "sha256": "5d791d85e2ddacd0b53d450a73534694d5da8d5b02004f059cac2bcb7a740ba3",
       "task_key": "spider2__asset001",
       "tree_sha256": "2520d2ea94db0c3db6344f9c315bcaf40666a047bade0f4dc6e75ddcfea65b12",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__asset001-2520d2ea94db0c3d.tar.gz"
     },
     {
@@ -1941,7 +1941,7 @@
       "sha256": "2b2c98dcfba1d3012bbe75c77b10d108f538ff38e7d393045af2dd884723676e",
       "task_key": "spider2__google_play001",
       "tree_sha256": "d67331b2d831e0d424a74e3a6e6c8f0b45c13713ca7c07311ed1559d6c00954b",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__google_play001-d67331b2d831e0d4.tar.gz"
     },
     {
@@ -1962,7 +1962,7 @@
       "sha256": "e967846e3b231c829998d2b0059d1daf90e080478000cb0f1be7f841dec68fc5",
       "task_key": "spider2__hive001",
       "tree_sha256": "8459249b33387ed495dd075829cdb6d01584bc6520661f74e1aedca973dd6b5a",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__hive001-8459249b33387ed4.tar.gz"
     },
     {
@@ -1983,7 +1983,7 @@
       "sha256": "a936d0aef369022bb4937fe561ed78c6cf1abbbed6287ad72ff1e5569234e77d",
       "task_key": "spider2__intercom001",
       "tree_sha256": "6582cd205bd3559ab2755c425e772c471d20f8f4c4665da2edfc3887709be03d",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__intercom001-6582cd205bd3559a.tar.gz"
     },
     {
@@ -2004,7 +2004,7 @@
       "sha256": "bf137aa59439e26367c8205548bcd19bd0597b02a2dd5a8e0bfb498dc4a2e2ab",
       "task_key": "spider2__jira001",
       "tree_sha256": "85051214d9830d85b1bce53efed8124b7799b4663d7343771741190cadc8723f",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__jira001-85051214d9830d85.tar.gz"
     },
     {
@@ -2025,7 +2025,7 @@
       "sha256": "8045539439f54c26ffd6a0c58fba14bc85651f0f067edac450348fc146f9b086",
       "task_key": "spider2__lever001",
       "tree_sha256": "f7d83f568ba2111ac9d3fd28375ccbdeaf7f95a8ea455e67376bb1ed218c369c",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__lever001-f7d83f568ba2111a.tar.gz"
     },
     {
@@ -2046,7 +2046,7 @@
       "sha256": "37281f25e9123ebd6857b4456d8421c764e5bd47bd3b135bf9627c641ac30c07",
       "task_key": "spider2__marketo001",
       "tree_sha256": "38a1e63d64305c6784485a1ae03347b2abce0e9c38dea3d3dea46ba89292c1cc",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__marketo001-38a1e63d64305c67.tar.gz"
     },
     {
@@ -2067,7 +2067,7 @@
       "sha256": "276575fe562cdc9fa2293c850bdfdc977bcde967884af71cd34c924725e78548",
       "task_key": "spider2__maturity001",
       "tree_sha256": "452b5cfb39eaa12ff021e85dbf49039c295c2255126b77b78ebfe83f81a00518",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__maturity001-452b5cfb39eaa12f.tar.gz"
     },
     {
@@ -2088,7 +2088,7 @@
       "sha256": "843823720b039ab2f90d7440040107830f523a323f0aba957e13e69024e3ef03",
       "task_key": "spider2__recharge002",
       "tree_sha256": "194c7f4e21529ba5e87f5de82844b43f94454b5432e82d4b243fe743812c4d91",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__recharge002-194c7f4e21529ba5.tar.gz"
     },
     {
@@ -2109,7 +2109,7 @@
       "sha256": "ee1288458f2a1fb7467a06b784c6384bd5c1c80fa72bfa1906ffef0cd8e25204",
       "task_key": "spider2__shopify002",
       "tree_sha256": "79280e53370dc6855c59bf137583c18ea1336872f9d4879c841b07fb6cd4b914",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__shopify002-79280e53370dc685.tar.gz"
     },
     {
@@ -2130,7 +2130,7 @@
       "sha256": "5d242f81926be1aad9c6b2e715ef1d5538eabec1adae7c2160a5ec30a970b157",
       "task_key": "spider2__tickit001",
       "tree_sha256": "51120249fcb29f99fd2477f55bfc6e490b13d37ef555404348a6f7a73635662d",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__tickit001-51120249fcb29f99.tar.gz"
     },
     {
@@ -2151,7 +2151,7 @@
       "sha256": "901327eb400735f16c599322b77099844bea9c54a5e7e67e4906475379ec504c",
       "task_key": "spider2__workday001",
       "tree_sha256": "89dc25ba7b225ff5bd8fe29a5da654056e69805fd643808cf75c5fce2ad19082",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__workday001-89dc25ba7b225ff5.tar.gz"
     },
     {
@@ -2172,7 +2172,7 @@
       "sha256": "61db52f159865db584b04dee556afb27aff83d63cdf5fcdee6d43f1c86f9f295",
       "task_key": "spider2__workday002",
       "tree_sha256": "ff8d9d44cd9cb31f985ad0ae0de4d5c2bdb1e1d5d80e74e261d62c1e2a737635",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/task-spider2__workday002-ff8d9d44cd9cb31f.tar.gz"
     },
     {
@@ -2257,7 +2257,7 @@
       "kind": "qualification-records",
       "self_contained_evidence": false,
       "sha256": "3da7da303b28bf01b3105a771066126e997ba7c158bb4215740ac7fb64f1e67c",
-      "upload_status": "uploaded_to_release",
+      "upload_status": "published",
       "url": "https://github.com/zhuconv/dbt-bench/releases/download/assets-v1-20261112/qualification-records-v1.tar.gz"
     }
   ],
@@ -2268,11 +2268,17 @@
     "project_license": "Apache-2.0 (LICENSE, NOTICE).",
     "third_party": "Upstream licenses and notices are kept in release/third-party-notices/. The images are Debian 13; the source package behind every installed package is listed with snapshot.debian.org links (os-sources-unique.tsv, os-source-packages.tsv). The Qwen Code bundle is not redistributed (it carries LGPL binaries); build it from the pinned locks in runtime/qwen-code/. Residual dataset-provenance risk for ADE-bench and Spider2 data, which upstream already publishes, is accepted."
   },
-  "publication_status": "uploaded",
+  "publication_status": "published",
   "registry_digest_note": "SIF file SHA256 is not an OCI manifest digest; populate registry_manifest_digest only after push and verified anonymous pull.",
   "release_tag": "assets-v1-20261112",
   "repository": "zhuconv/dbt-bench",
   "schema_version": 1,
   "sif_tag_rule": "v1-linux-arm64-<full SIF SHA256>; one tag per immutable image; never overwrite a published tag",
-  "total_payload_bytes": 7383377560
+  "total_payload_bytes": 7383377560,
+  "verification": {
+    "anonymous_image_pull_sha256_ok": "v1-linux-arm64-5a996aeed7efc0e024b07224e730dde4bbd8317ef0a42968d997319a10bf45a7",
+    "anonymous_release_download_sha256_ok": "qualification-records-v1.tar.gz",
+    "anonymous_tag_list": 33,
+    "date": "2026-11-12"
+  }
 }
