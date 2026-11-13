@@ -7,7 +7,7 @@ Each batch you take is a pull request from your fork:
 - pushing to it publishes your results;
 - the experiment owner merging it accepts them.
 
-Follow this file exactly. When it and your own judgement disagree, stop and ask the experiment owner in an issue.
+Follow this file exactly. When it and your own judgement disagree, stop and ask the experiment owner in an issue. [docs/distributed-workers.md](docs/distributed-workers.md) draws the whole workflow as a sequence diagram.
 
 Status (2026-11-12):
 - linux-arm64 (GH200) images are published.

@@ -1,6 +1,6 @@
 # Ledger
 
-The shared queue of the distributed difficulty measurement. Workers follow [AGENTS.md](../AGENTS.md) and change these files only through `scripts/worker.py`.
+The shared queue of the distributed difficulty measurement. Workers follow [AGENTS.md](../AGENTS.md) and change these files only through `scripts/worker.py`. [docs/distributed-workers.md](../docs/distributed-workers.md) has a sequence diagram of the workflow.
 
 - `claims/<batch>/<worker>.json`: one worker's claim on a batch. It records the platform, state (`claimed`, `queued`, `running`, `finished` or `released`), lease and Slurm job.
 - `results/<batch>/<task>/summary.json`: one task's raw results, as exported by the worker that ran it. It is added once and never edited. Each summary names its raw archive (a `raw-v1` release asset) with URL and SHA256.
