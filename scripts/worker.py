@@ -28,6 +28,11 @@ checkout your jobs run from:
   - pr mode: origin = your fork, upstream = zhuconv/dbt-bench, as `gh repo clone <you>/dbt-bench` sets up;
   - direct mode: origin = zhuconv/dbt-bench.
 
+Assets: `worker.py assets <batch> --asset-map F --dest D` downloads the batch's task trees
+(GitHub Release) and its images for this machine's architecture (GHCR), checks every SHA256
+and records them in the asset map that configs/local.toml names. `run` does this itself
+before preparing each batch, unless --no-assets is given.
+
 Claim states:
   claimed   taken; must move to queued or running within 6 hours or the batch is free again
   queued    the Slurm job is submitted but has not started. Another worker may take over a
@@ -40,7 +45,8 @@ Claim states:
             without result summaries (the owner's own Vista runs are recorded this way).
   released  given up before running
 """
-import argparse, base64, datetime as dt, hashlib, json, os, re, subprocess, sys, time
+import argparse, base64, datetime as dt, hashlib, json, os, platform, re, shutil, subprocess, sys, tarfile, \
+    tempfile, time, urllib.request
 from pathlib import Path
 
 UPSTREAM = 'zhuconv/dbt-bench'
@@ -511,12 +517,18 @@ def cmd_run(L, a):
             save()
             say(f"claimed {bid} (PR {got['pr']}, took over {got['took_over']}); preparing {batch_dir}")
             try:
+                if not a.no_assets:
+                    s = local_settings(a)
+                    assets_dir = Path(a.assets_dir) if a.assets_dir else Path(s['asset_map']).resolve().parent / 'assets'
+                    got_assets = fetch_assets(bid, s.get('platform') or host_arch(), assets_dir, s['asset_map'])
+                    if got_assets:
+                        say(f'downloaded and verified {len(got_assets)} assets for {bid}')
                 bench(a, 'prepare', '--batch-id', bid, '--output', str(batch_dir))
                 bench(a, 'check', '--batch', str(batch_dir))
                 mine(L, bid)                               # check the ledger right before submitting
                 command = bench(a, 'sbatch-command', '--batch', str(batch_dir)).strip()
                 st['job'] = submit(a, command)
-            except (RuntimeError, Conflict) as e:
+            except (RuntimeError, Conflict, OSError) as e:
                 # Nothing ran: give the batch back and stop, so a broken setup cannot churn PRs.
                 say(f'stopping: could not launch {bid}: {e}')
                 if not isinstance(e, Conflict):
@@ -581,6 +593,156 @@ def cmd_release(L, a):
                      state='released', released_at=iso(now()), release_reason=a.reason)
 
 
+# -- external assets -----------------------------------------------------------------------
+ASSET_RELEASE = f'https://github.com/{UPSTREAM}/releases/download/assets-v1-20261112/'
+REGISTRY = os.environ.get('DBT_BENCH_REGISTRY', 'https://ghcr.io')   # overridden only by tests
+IMAGE_REPO = 'zhuconv/dbt-bench-images'
+SIF_LAYER = 'application/vnd.sylabs.sif.layer.v1.sif'
+
+
+def code_json(rel):
+    return json.loads((CODE / rel).read_text())
+
+
+def tree_hash(path):
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'src'))
+    from dbt_bench.io import tree_hash as th
+    return th(path)
+
+
+def download(req, dest, size, digest):
+    """Stream to dest.part, check size and SHA256, then move into place."""
+    part = dest.with_name(dest.name + '.part')
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    with urllib.request.urlopen(req, timeout=300) as r, open(part, 'wb') as f:
+        total = 0
+        while True:
+            chunk = r.read(1 << 22)
+            if not chunk:
+                break
+            total += len(chunk)
+            if total > size:
+                raise RuntimeError(f'{dest.name}: larger than the declared {size} bytes')
+            f.write(chunk)
+    if total != size or sha256(part) != digest:
+        part.unlink()
+        raise RuntimeError(f'{dest.name}: size or SHA256 differs from the release manifest')
+    part.replace(dest)
+
+
+def pull_sif(tag, dest, size, digest):
+    """Anonymous pull of the single SIF layer of oras://ghcr.io/zhuconv/dbt-bench-images:<tag>.
+
+    Same bytes as `apptainer pull`, without needing Apptainer on the machine that downloads.
+    """
+    with urllib.request.urlopen(f'{REGISTRY}/token?scope=repository:{IMAGE_REPO}:pull', timeout=60) as r:
+        token = json.load(r)['token']
+
+    def request(path, accept=None):
+        req = urllib.request.Request(f'{REGISTRY}/v2/{IMAGE_REPO}/{path}')
+        req.add_unredirected_header('Authorization', 'Bearer ' + token)   # not sent on to blob storage
+        if accept:
+            req.add_header('Accept', accept)
+        return req
+
+    with urllib.request.urlopen(request(f'manifests/{tag}', 'application/vnd.oci.image.manifest.v1+json'),
+                                timeout=60) as r:
+        layers = [x for x in json.load(r).get('layers', []) if x.get('mediaType') == SIF_LAYER]
+    if len(layers) != 1 or layers[0]['digest'] != 'sha256:' + digest or layers[0]['size'] != size:
+        raise RuntimeError(f'{tag}: the registry does not hold exactly the expected SIF')
+    download(request(f'blobs/sha256:{digest}'), dest, size, digest)
+
+
+def fetch_assets(bid, arch, dest, asset_map):
+    """Download and verify the task trees and images of one batch; record them in asset_map.
+
+    arch is linux-amd64 or linux-arm64 (the `platform` of configs/local.toml). Assets already
+    mapped and verified are kept. Returns the asset IDs that were downloaded.
+    """
+    dest, asset_map = Path(dest).resolve(), Path(asset_map)
+    batch = next((b for b in code_json('release/batches.json')['batches'] if b['id'] == bid), None)
+    if not batch:
+        raise RuntimeError(f'unknown batch {bid}')
+    rows = {r['task_key']: r for r in code_json('catalog/measurement-tasks.json')['tasks']}
+    objects = code_json('release/upload-manifest.json')['objects']
+    mapping = json.loads(asset_map.read_text()) if asset_map.is_file() else {}
+
+    def mapped_ok(aid, check):
+        path = mapping.get(aid)
+        return bool(path) and Path(path).exists() and check(Path(path))
+
+    fetched = []
+    for key in batch['task_keys']:
+        row = rows[key]
+        aid, want = row['task_asset'], row['task_tree_sha256']
+        if not mapped_ok(aid, lambda p: p.is_dir() and tree_hash(p) == want):
+            target = dest / 'tasks' / aid
+            if not (target.is_dir() and tree_hash(target) == want):
+                obj = next(o for o in objects if o['kind'] == 'task-archive' and aid in o['asset_ids'])
+                archive = dest / 'downloads' / obj['filename']
+                if not (archive.is_file() and sha256(archive) == obj['sha256']):
+                    download(ASSET_RELEASE + obj['filename'], archive, obj['bytes'], obj['sha256'])
+                target.parent.mkdir(parents=True, exist_ok=True)
+                tmp = Path(tempfile.mkdtemp(prefix='.extract-', dir=target.parent))
+                with tarfile.open(archive) as t:
+                    t.extractall(tmp, **({'filter': 'tar'} if hasattr(tarfile, 'tar_filter') else {}))
+                tree = tmp / obj['extract_subdir']
+                if tree_hash(tree) != want:
+                    raise RuntimeError(f'{aid}: extracted tree hash differs')
+                if target.exists():
+                    target.rename(target.with_name(f'{target.name}.bad-{int(time.time())}'))
+                tree.rename(target)
+                shutil.rmtree(tmp)
+                fetched.append(aid)
+            mapping[aid] = str(target)
+
+        if arch == 'linux-arm64':
+            obj = next(o for o in objects if o['kind'] == 'sif' and row['image_asset'] in o['asset_ids'])
+            aid, tag, size, digest = row['image_asset'], obj['tag'], obj['bytes'], obj['sha256']
+        else:
+            found = [e for e in code_json('images/platform-images.json')['images']
+                     if e['canonical_asset'] == row['image_asset'] and e['platform'] == arch]
+            if len(found) != 1 or found[0].get('status') != 'published':
+                raise RuntimeError(f'no published {arch} image for {key} yet')
+            e = found[0]
+            aid, tag, size, digest = e['asset_id'], e['tag'], e['bytes'], e['sif_sha256']
+        if not mapped_ok(aid, lambda p: p.is_file() and sha256(p) == digest):
+            target = dest / 'images' / f'{aid}.sif'
+            if not (target.is_file() and sha256(target) == digest):
+                pull_sif(tag, target, size, digest)
+                fetched.append(aid)
+            mapping[aid] = str(target)
+    asset_map.parent.mkdir(parents=True, exist_ok=True)
+    tmp = asset_map.with_name(asset_map.name + '.tmp')
+    tmp.write_text(json.dumps(mapping, indent=1, sort_keys=True) + '\n')
+    tmp.replace(asset_map)
+    return fetched
+
+
+def host_arch():
+    return {'x86_64': 'linux-amd64', 'amd64': 'linux-amd64',
+            'aarch64': 'linux-arm64', 'arm64': 'linux-arm64'}.get(platform.machine(), platform.machine())
+
+
+def cmd_assets(L, a):
+    got = fetch_assets(a.batch, a.arch or host_arch(), a.dest, a.asset_map)
+    print(json.dumps({'batch': a.batch, 'downloaded': got, 'asset_map': str(a.asset_map)}, indent=1))
+
+
+def local_settings(a):
+    """asset_map and platform from configs/local.toml, read with the runtime Python."""
+    code = ('import json; from dbt_bench.local_config import load; s = load(); '
+            'print(json.dumps({k: s.get(k) for k in ("asset_map", "platform")}))')
+    env = {**os.environ, 'PYTHONPATH': str(CODE / 'src'), 'PYTHONDONTWRITEBYTECODE': '1'}
+    p = subprocess.run([a.python, '-c', code], capture_output=True, text=True, env=env)
+    if p.returncode:
+        raise RuntimeError(f'reading configs/local.toml failed: {(p.stderr or p.stdout).strip()[-300:]}')
+    s = json.loads(p.stdout)
+    if not s.get('asset_map') or '${' in s['asset_map']:
+        raise RuntimeError('set asset_map in configs/local.toml')
+    return s
+
+
 def main():
     p = argparse.ArgumentParser(description=__doc__.split('\n')[0],
                                 formatter_class=argparse.RawDescriptionHelpFormatter, epilog=__doc__)
@@ -617,7 +779,20 @@ def main():
     s.add_argument('--poll', type=float, default=300)
     s.add_argument('--max-batches', type=int, default=0)
     s.add_argument('--no-takeover', action='store_true')
+    s.add_argument('--assets-dir', help='where batch assets are downloaded (default: next to asset_map)')
+    s.add_argument('--no-assets', action='store_true', help='do not download assets; asset_map is managed by hand')
+    s = sub.add_parser('assets', help="download and verify one batch's task trees and images")
+    s.add_argument('batch')
+    s.add_argument('--asset-map', required=True, help='the asset_map file named in configs/local.toml')
+    s.add_argument('--dest', required=True, help='download directory')
+    s.add_argument('--arch', choices=['linux-amd64', 'linux-arm64'], help='default: this machine')
     a = p.parse_args()
+    if a.cmd == 'assets':
+        try:
+            cmd_assets(None, a)
+        except RuntimeError as e:
+            sys.exit(f'assets: {e}')
+        return
     if not a.ledger:
         p.error('set DBT_BENCH_LEDGER or pass --ledger')
     if a.cmd != 'status' and not a.worker:

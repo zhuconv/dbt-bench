@@ -38,12 +38,13 @@ Status (2026-11-12):
    ```
 3. In your working checkout, follow README.md:
    - install the runtimes;
-   - fill in `configs/local.toml`;
-   - pull and verify the images for your architecture;
+   - fill in `configs/local.toml`, including `platform` and `asset_map`;
    - build the Qwen Code bundle;
    - download the model.
 
-   Do all of this on compute nodes.
+   On x86_64 (H100), also follow [docs/h100-worker.md](docs/h100-worker.md): the x64 runtime patch, the x86 inference lock, the x64 Qwen Code bundle and `configs/local.amd64.example.toml`. Do all of this on compute nodes.
+
+   You do not download task trees or images by hand: `worker.py run` fetches each batch's assets for your architecture into the directory next to `asset_map`, checks every SHA256 and records them in `asset_map`.
 4. Pick a platform string such as `linux-amd64/H100-80GB/apptainer`.
 
 ## The loop
@@ -59,7 +60,7 @@ python scripts/worker.py run --platform P \
 
 Where to run it and what it does:
 - **Where:** somewhere that stays up, such as a `tmux` session on a login node (if your site allows light background processes there) or a small long-running CPU job.
-- **What:** it does steps 1–8 below on its own.
+- **What:** it does steps 1–8 below on its own, including downloading each batch's assets (pass `--no-assets` if you manage `asset_map` by hand).
 - **When it stops:**
   - when no batch is free (exit 0);
   - after `--max-batches`;
@@ -72,7 +73,9 @@ The steps below are what `run` does. You can also run them by hand. Commands are
    - It reads the ledger on main and every open ledger PR, so work that others pushed while you were busy is respected.
    - It takes the first free batch. If none is free, it takes over a batch the owner has only queued. It then opens a draft PR named `ledger: <batch> (<worker>)` and prints the batch.
    - If two workers race for one batch, the lower PR number keeps it, and the tool closes the other PR and tries the next batch.
-2. **Prepare and check the batch** as in README.md ("Prepare and run one assigned batch").
+2. **Fetch its assets, then prepare and check the batch.**
+   - `worker.py assets B --asset-map <asset_map from configs/local.toml> --dest <download dir>` downloads the batch's task trees and images for this machine, checks every SHA256 and updates `asset_map`.
+   - Then prepare and check the batch as in README.md ("Prepare and run one assigned batch").
 3. **Check before submitting:** run `worker.py check B` right before you submit. If it reports a conflict, do not submit; go back to step 1.
 4. **Submit the job**, then run `worker.py heartbeat B --state queued --slurm-job ID`.
 5. **When the job starts**, run `worker.py heartbeat B --state running`. Repeat it at least every 2 hours while the job runs; a running claim expires after 6 hours without one.

@@ -316,7 +316,7 @@ class RunLoopTest(LedgerRepos):
         return subprocess.Popen([sys.executable, '-I', str(REPO / 'scripts' / 'worker.py'), '--ledger', str(self.a),
                                  '--worker', 'alice', 'run', '--platform', 'p', '--python', sys.executable,
                                  '--batch-root', str(self.tmp / 'batches'), '--bench', str(self.tmp / 'bin' / 'bench.py'),
-                                 '--state', str(self.state), '--poll', '0.2', '--max-batches', '1'],
+                                 '--state', str(self.state), '--poll', '0.2', '--max-batches', '1', '--no-assets'],
                                 stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, env=env)
 
     def wait(self, cond, what, timeout=60):
@@ -395,6 +395,121 @@ class DirectModeTest(LedgerRepos):
         self.assertEqual(self.w('owner', o, 'direct', 'publish', 'batch-01', 'batch-01-t1', str(s), str(raw)).returncode, 0)
         self.assertEqual(self.w('owner', o, 'direct', 'publish', 'batch-01', 'batch-01-t1', str(s), str(raw)).returncode, 3)
         self.assertIn('batch-01  running           results 1/2', self.w('owner', o, 'direct', 'status').stdout)
+
+
+class FetchAssetsTest(unittest.TestCase):
+    """worker.fetch_assets against a local server standing in for the Release and GHCR."""
+
+    def setUp(self):
+        import hashlib, http.server, io, shutil, tarfile
+        self.tmp = Path(tempfile.mkdtemp())
+        self.addCleanup(shutil.rmtree, self.tmp)
+        h = lambda b: hashlib.sha256(b).hexdigest()
+        # A task tree, its archive, and one SIF per architecture.
+        tree = self.tmp / 'src-task'
+        (tree / 'tests').mkdir(parents=True)
+        (tree / 'task.toml').write_text('docker_image = "x"\n')
+        (tree / 'tests' / 'test.sh').write_text('exit 0\n')
+        (tree / 'tests' / 'test.sh').chmod(0o755)
+        buf = io.BytesIO()
+        with tarfile.open(fileobj=buf, mode='w:gz') as t:
+            t.add(tree, arcname='task')
+        archive, arm, amd = buf.getvalue(), b'arm64 sif bytes', b'amd64 sif bytes!'
+        tree_sha = worker.tree_hash(tree)
+        self.blobs = {h(arm): arm, h(amd): amd}
+        self.files = {'task-t1.tar.gz': archive}
+        self.arm, self.amd = h(arm), h(amd)
+        self.auth_on_storage = []
+        code = self.tmp / 'code'
+        for rel, data in {
+            'release/batches.json': {'batches': [{'id': 'batch-07', 'task_keys': ['t1']}]},
+            'catalog/measurement-tasks.json': {'tasks': [{'task_key': 't1', 'task_asset': 'task-aaa',
+                                                          'task_tree_sha256': tree_sha,
+                                                          'image_asset': f'image-{self.arm}'}]},
+            'release/upload-manifest.json': {'objects': [
+                {'kind': 'task-archive', 'asset_ids': ['task-aaa'], 'filename': 'task-t1.tar.gz',
+                 'bytes': len(archive), 'sha256': h(archive), 'extract_subdir': 'task'},
+                {'kind': 'sif', 'asset_ids': [f'image-{self.arm}'], 'tag': f'v1-linux-arm64-{self.arm}',
+                 'bytes': len(arm), 'sha256': self.arm}]},
+            'images/platform-images.json': {'images': [
+                {'canonical_asset': f'image-{self.arm}', 'platform': 'linux-amd64', 'status': 'published',
+                 'asset_id': f'image-amd64-{self.arm}', 'tag': f'v1-linux-amd64-{self.amd}',
+                 'bytes': len(amd), 'sif_sha256': self.amd}]},
+        }.items():
+            (code / rel).parent.mkdir(parents=True, exist_ok=True)
+            (code / rel).write_text(json.dumps(data))
+        test = self
+
+        class Handler(http.server.BaseHTTPRequestHandler):
+            def log_message(self, *args):
+                pass
+
+            def send(self, body, ctype='application/octet-stream'):
+                self.send_response(200)
+                self.send_header('Content-Type', ctype)
+                self.send_header('Content-Length', str(len(body)))
+                self.end_headers()
+                self.wfile.write(body)
+
+            def do_GET(self):
+                path = self.path
+                if path.startswith('/release/'):
+                    return self.send(test.files[path.rsplit('/', 1)[1]])
+                if path.startswith('/token'):
+                    return self.send(b'{"token": "t"}', 'application/json')
+                if '/manifests/' in path:
+                    digest = path.rsplit('-', 1)[1]
+                    layer = {'mediaType': worker.SIF_LAYER, 'digest': 'sha256:' + digest, 'size': len(test.blobs[digest])}
+                    return self.send(json.dumps({'layers': [layer]}).encode(), 'application/vnd.oci.image.manifest.v1+json')
+                if '/blobs/sha256:' in path:
+                    assert self.headers.get('Authorization') == 'Bearer t'
+                    self.send_response(307)
+                    self.send_header('Location', '/storage/' + path.rsplit(':', 1)[1])
+                    self.end_headers()
+                    return
+                if path.startswith('/storage/'):
+                    test.auth_on_storage.append(self.headers.get('Authorization'))
+                    return self.send(test.blobs[path.rsplit('/', 1)[1]])
+                self.send_error(404)
+
+        self.server = http.server.ThreadingHTTPServer(('127.0.0.1', 0), Handler)
+        threading.Thread(target=self.server.serve_forever, daemon=True).start()
+        self.addCleanup(self.server.shutdown)
+        base = f'http://127.0.0.1:{self.server.server_address[1]}'
+        saved = (worker.CODE, worker.ASSET_RELEASE, worker.REGISTRY)
+        self.addCleanup(lambda: setattr(worker, 'CODE', saved[0]) or setattr(worker, 'ASSET_RELEASE', saved[1])
+                        or setattr(worker, 'REGISTRY', saved[2]))
+        worker.CODE, worker.ASSET_RELEASE, worker.REGISTRY = code, base + '/release/', base
+
+    def test_amd64_fetch_verifies_maps_and_is_idempotent(self):
+        amap, dest = self.tmp / 'local-assets.json', self.tmp / 'assets'
+        got = worker.fetch_assets('batch-07', 'linux-amd64', dest, amap)
+        self.assertEqual(got, ['task-aaa', f'image-amd64-{self.arm}'])
+        m = json.loads(amap.read_text())
+        self.assertEqual((Path(m[f'image-amd64-{self.arm}'])).read_bytes(), self.blobs[self.amd])
+        self.assertTrue((Path(m['task-aaa']) / 'tests' / 'test.sh').stat().st_mode & 0o111)
+        self.assertEqual(self.auth_on_storage, [None])          # the token stays with the registry
+        self.assertEqual(worker.fetch_assets('batch-07', 'linux-amd64', dest, amap), [])
+
+    def test_arm64_fetch_takes_the_original_image(self):
+        amap = self.tmp / 'm.json'
+        got = worker.fetch_assets('batch-07', 'linux-arm64', self.tmp / 'a', amap)
+        self.assertEqual(got, ['task-aaa', f'image-{self.arm}'])
+
+    def test_tampered_blob_is_rejected_and_not_kept(self):
+        self.blobs[self.amd] = b'something else!!'          # same length, other bytes
+        with self.assertRaises(RuntimeError):
+            worker.fetch_assets('batch-07', 'linux-amd64', self.tmp / 'a', self.tmp / 'm.json')
+        self.assertEqual(list((self.tmp / 'a' / 'images').iterdir()), [])
+        self.assertFalse((self.tmp / 'm.json').exists())
+
+    def test_unpublished_platform_image_is_an_error(self):
+        p = worker.CODE / 'images/platform-images.json'
+        d = json.loads(p.read_text())
+        d['images'][0]['status'] = 'build_required'
+        p.write_text(json.dumps(d))
+        with self.assertRaisesRegex(RuntimeError, 'no published linux-amd64 image'):
+            worker.fetch_assets('batch-07', 'linux-amd64', self.tmp / 'a', self.tmp / 'm.json')
 
 
 if __name__ == '__main__':
