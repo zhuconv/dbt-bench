@@ -1,0 +1,192 @@
+# Builds one task image for linux/amd64 from images/, converts it to a SIF and
+# runs the CPU reference smoke (oracle + native verifier, no model).
+# Called by build-images.yml; it publishes nothing. The experiment owner
+# downloads the SIF artifact, pushes it to GHCR and records its digests.
+name: build-image
+
+on:
+  workflow_call:
+    inputs:
+      image:
+        description: Canonical (arm64) image SHA256
+        type: string
+        required: true
+      task:
+        description: Task used to build and smoke the image
+        type: string
+        required: true
+      group:
+        description: Software group, which scopes the build cache
+        type: string
+        required: true
+      write-cache:
+        description: Save the build cache (seed jobs only)
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+env:
+  APPTAINER_VERSION: 1.4.1
+  APPTAINER_DEB_SHA256: 9a0663f6e680d270dd3675f94cabf35dc324bb8673f5c6b645005e5aa1bd6d88
+  IMAGE: ${{ inputs.image }}
+  TASK: ${{ inputs.task }}
+  GROUP: ${{ inputs.group }}
+
+jobs:
+  build:
+    name: ${{ inputs.task }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Install Apptainer
+        run: |
+          set -euo pipefail
+          cd "$RUNNER_TEMP"
+          curl -fsSLo apptainer.deb \
+            "https://github.com/apptainer/apptainer/releases/download/v${APPTAINER_VERSION}/apptainer_${APPTAINER_VERSION}_amd64.deb"
+          echo "${APPTAINER_DEB_SHA256}  apptainer.deb" | sha256sum --check --strict
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ./apptainer.deb squashfs-tools uidmap jq
+          # Ubuntu 24.04 blocks unprivileged user namespaces through AppArmor.
+          # Harbor starts task containers with --fakeroot, which needs them.
+          sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
+          apptainer --version
+
+      - name: Fetch the task archive and the original arm64 SIF
+        id: fetch
+        run: |
+          python3 .github/ci/images.py fetch --image "$IMAGE" --task "$TASK" --out "$RUNNER_TEMP/in"
+
+      - name: Prepare the build context
+        id: ctx
+        run: |
+          set -euo pipefail
+          python3 scripts/prepare_image_context.py --task "$TASK" --platform linux/amd64 \
+            --task-tree "$RUNNER_TEMP/in/extracted/task" \
+            --original-sif "$RUNNER_TEMP/in/original.sif" \
+            --output "$RUNNER_TEMP/ctx"
+          echo "base_image=$(jq -r .upstream "$RUNNER_TEMP/ctx/context.json")" >> "$GITHUB_OUTPUT"
+          echo "workdir=$(jq -r .working_dir "$RUNNER_TEMP/ctx/context.json")" >> "$GITHUB_OUTPUT"
+          echo "cache=type=gha,scope=base-${GROUP}-amd64" >> "$GITHUB_OUTPUT"
+
+      - uses: docker/setup-buildx-action@f87e5991a6d7451dcb8d9637bfbc97413f497069 # v4.4.1
+
+      - name: Build the image
+        id: build
+        uses: docker/build-push-action@c3c9e263c25d99ce0380d002d59b67737d91b0dc # v7.4.0
+        with:
+          context: ${{ runner.temp }}/ctx
+          file: ${{ runner.temp }}/ctx/Dockerfile
+          platforms: linux/amd64
+          build-args: |
+            BASE_IMAGE=${{ steps.ctx.outputs.base_image }}
+            TASK_WORKDIR=${{ steps.ctx.outputs.workdir }}
+          outputs: type=oci,dest=${{ runner.temp }}/image.oci.tar
+          provenance: false
+          sbom: false
+          cache-from: ${{ steps.ctx.outputs.cache }}
+          cache-to: ${{ inputs.write-cache && format('{0},mode=max', steps.ctx.outputs.cache) || '' }}
+
+      - name: Convert to SIF
+        id: sif
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/out"
+          sif="$RUNNER_TEMP/out/image-amd64-${IMAGE}.sif"
+          apptainer build "$sif" "oci-archive://$RUNNER_TEMP/image.oci.tar"
+          rm -f "$RUNNER_TEMP/image.oci.tar"
+          sha=$(sha256sum "$sif" | cut -d' ' -f1)
+          echo "$sha  $(basename "$sif")" > "$sif.sha256"
+          echo "path=$sif" >> "$GITHUB_OUTPUT"
+          echo "sha256=$sha" >> "$GITHUB_OUTPUT"
+          echo "bytes=$(stat -c %s "$sif")" >> "$GITHUB_OUTPUT"
+
+      - uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2 # v10.3.3
+        with:
+          enable-cache: true
+          cache-dependency-glob: runtime/uv.lock
+
+      - name: Install the patched Harbor runtime
+        id: runtime
+        run: |
+          set -euo pipefail
+          export UV_PROJECT_ENVIRONMENT="$RUNNER_TEMP/runtime-base"
+          uv sync --locked --project runtime --python 3.13
+          PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:scripts "$UV_PROJECT_ENVIRONMENT/bin/python" \
+            scripts/install_release_runtime.py --output "$RUNNER_TEMP/runtime/timeout-v2"
+          "$RUNNER_TEMP/runtime/timeout-v2/venv/bin/python" scripts/apply_platform_runtime.py --platform linux-amd64
+
+      - name: Reference smoke
+        id: smoke
+        run: |
+          "$RUNNER_TEMP/runtime/timeout-v2/venv/bin/python" scripts/smoke_image.py --task "$TASK" \
+            --task-tree "$RUNNER_TEMP/in/extracted/task" \
+            --sif "${{ steps.sif.outputs.path }}" --sif-sha256 "${{ steps.sif.outputs.sha256 }}" \
+            --output "$RUNNER_TEMP/smoke"
+
+      - name: Write the build record
+        if: always()
+        env:
+          OUTCOMES: ${{ toJSON(steps) }}
+          SIF_SHA256: ${{ steps.sif.outputs.sha256 }}
+          SIF_BYTES: ${{ steps.sif.outputs.bytes }}
+          BASE_IMAGE: ${{ steps.ctx.outputs.base_image }}
+          IMAGE_DIGEST: ${{ steps.build.outputs.digest }}
+        run: |
+          set -uo pipefail
+          rec="$RUNNER_TEMP/record"
+          mkdir -p "$rec"
+          cp "$RUNNER_TEMP/ctx/context.json" "$RUNNER_TEMP/ctx/task-source-files.json" "$rec/" 2>/dev/null || true
+          if [ -d "$RUNNER_TEMP/smoke" ]; then
+            cp "$RUNNER_TEMP/smoke/smoke-result.json" "$RUNNER_TEMP/smoke/harbor.log" "$rec/" 2>/dev/null || true
+            tar -C "$RUNNER_TEMP/smoke" -czf "$rec/smoke-jobs.tar.gz" jobs 2>/dev/null || true
+          fi
+          python3 - "$rec" <<'PY'
+          import json, os, subprocess, sys
+          from pathlib import Path
+          rec = Path(sys.argv[1])
+          steps = json.loads(os.environ['OUTCOMES'])
+          order = ['fetch', 'ctx', 'build', 'sif', 'runtime', 'smoke']
+          failed = next((s for s in order if steps.get(s, {}).get('outcome') not in ('success',)), None)
+          smoke = rec / 'smoke-result.json'
+          version = subprocess.run(['apptainer', '--version'], capture_output=True, text=True).stdout.strip()
+          record = {
+              'image': os.environ['IMAGE'], 'task': os.environ['TASK'], 'group': os.environ['GROUP'],
+              'platform': 'linux/amd64', 'base_image': os.environ.get('BASE_IMAGE') or None,
+              'oci_image_digest': os.environ.get('IMAGE_DIGEST') or None,
+              'sif_sha256': os.environ.get('SIF_SHA256') or None,
+              'sif_bytes': int(os.environ['SIF_BYTES']) if os.environ.get('SIF_BYTES') else None,
+              'apptainer': version, 'run_id': os.environ['GITHUB_RUN_ID'],
+              'run_attempt': os.environ['GITHUB_RUN_ATTEMPT'], 'commit': os.environ['GITHUB_SHA'],
+              'stage_failed': failed,
+              'smoke': json.loads(smoke.read_text()) if smoke.is_file() else {},
+              'step_outcomes': {k: v.get('outcome') for k, v in steps.items()},
+          }
+          (rec / 'build-record.json').write_text(json.dumps(record, indent=2, sort_keys=True) + '\n')
+          print(json.dumps(record, indent=2))
+          PY
+
+      - name: Upload the build record
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: record-${{ inputs.image }}
+          path: ${{ runner.temp }}/record/
+          retention-days: 90
+
+      - name: Upload the SIF
+        if: steps.smoke.outcome == 'success'
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: sif-${{ inputs.image }}
+          path: |
+            ${{ steps.sif.outputs.path }}
+            ${{ steps.sif.outputs.path }}.sha256
+          retention-days: 14
+          compression-level: 0

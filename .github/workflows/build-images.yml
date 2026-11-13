@@ -1,0 +1,100 @@
+# Builds the task images for linux/amd64 (H100 workers) from images/.
+#
+# One "seed" job per software group builds first and saves the BuildKit cache;
+# the other images of that group then reuse it, so the pinned Debian snapshot
+# and PyPI downloads happen five times instead of 33.
+#
+# Run it from the Actions tab or with:
+#   gh workflow run build-images.yml -f only=<image sha prefixes or task keys>
+# It publishes nothing: images that pass the reference smoke are left as
+# workflow artifacts for the experiment owner to push and register.
+name: build-images
+
+on:
+  workflow_dispatch:
+    inputs:
+      only:
+        description: Image SHA256 prefixes or task keys, comma-separated (empty = every unpublished amd64 image)
+        type: string
+        default: ''
+      rebuild:
+        description: Also rebuild images already published
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: build-images
+  cancel-in-progress: false
+
+jobs:
+  plan:
+    runs-on: ubuntu-24.04
+    outputs:
+      seed: ${{ steps.plan.outputs.seed }}
+      rest: ${{ steps.plan.outputs.rest }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - id: plan
+        env:
+          ONLY: ${{ inputs.only }}
+          REBUILD: ${{ inputs.rebuild && '--rebuild' || '' }}
+        run: python3 .github/ci/images.py plan --platform linux/amd64 --only "$ONLY" $REBUILD >> "$GITHUB_OUTPUT"
+
+  seed:
+    needs: plan
+    if: needs.plan.outputs.seed != '[]'
+    strategy:
+      fail-fast: false
+      matrix:
+        include: ${{ fromJSON(needs.plan.outputs.seed) }}
+    uses: ./.github/workflows/build-image.yml
+    with:
+      image: ${{ matrix.image }}
+      task: ${{ matrix.task }}
+      group: ${{ matrix.group }}
+      write-cache: true
+
+  rest:
+    needs: [plan, seed]
+    if: ${{ !cancelled() && needs.plan.outputs.rest != '[]' }}
+    strategy:
+      fail-fast: false
+      max-parallel: 16
+      matrix:
+        include: ${{ fromJSON(needs.plan.outputs.rest) }}
+    uses: ./.github/workflows/build-image.yml
+    with:
+      image: ${{ matrix.image }}
+      task: ${{ matrix.task }}
+      group: ${{ matrix.group }}
+
+  summary:
+    needs: [plan, seed, rest]
+    if: ${{ !cancelled() }}
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          pattern: record-*
+          path: records
+      - name: Summarize
+        env:
+          SEED: ${{ needs.plan.outputs.seed }}
+          REST: ${{ needs.plan.outputs.rest }}
+        run: |
+          planned=$(python3 -c 'import json,os; print(json.dumps(json.loads(os.environ["SEED"] or "[]") + json.loads(os.environ["REST"] or "[]")))')
+          python3 .github/ci/images.py summarize --platform linux/amd64 --records records \
+            --planned "$planned" --output build-summary.json
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: build-summary
+          path: build-summary.json
+          retention-days: 90
