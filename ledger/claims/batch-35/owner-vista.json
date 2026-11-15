@@ -1,12 +1,15 @@
 {
   "batch": "batch-35",
   "claimed_at": "2026-11-13T01:44:06Z",
+  "finished_at": "2026-11-15T12:30:47Z",
   "heartbeat_at": "2026-11-15T12:15:20Z",
   "history": [],
   "lease_until": "2026-11-17T12:15:20Z",
-  "note": "Submitted on TACC Vista by the experiment owner on 2026-11-12. Another worker may take it over through a pull request while it is queued; the owner then cancels this job.",
+  "note": "Vista job 1140678 ended COMPLETED. Results are kept centrally by the owner, not as ledger summaries; the owner decides about any reruns.",
   "platform": "linux-arm64/GH200/apptainer",
+  "slurm_end": "2026-11-15T06:29:19",
+  "slurm_final_state": "COMPLETED",
   "slurm_job": "1140678",
-  "state": "running",
+  "state": "finished",
   "worker": "owner-vista"
 }
