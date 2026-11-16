@@ -8,6 +8,8 @@ The original catalog contains **135 tasks**: ADE 16, Spider 55, DEB 64. The curr
 
 ## Join as a measurement worker
 
+**Status (2026-11-16): no batch is open.** All 35 batches of this release are finished, so there is nothing to claim right now. [AGENTS.md](AGENTS.md) will say when batches open again.
+
 The repository is public; you need no access from the owner. You need your own Slurm allocation with one H100 80 GB or GH200 per job, and Apptainer. Then:
 
 ```bash

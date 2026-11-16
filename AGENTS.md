@@ -16,9 +16,10 @@ Follow this file exactly. When it and your own judgement disagree, stop and ask 
 
 The agent does the rest.
 
-Status (2026-11-12):
-- linux-arm64 (GH200) and linux-amd64 (H100) images are published. Each amd64 image passed a CPU reference smoke and a Qwen Code CLI check inside the image on an x86 GitHub runner. The x86 inference lock installs and imports there too.
-- Nobody has started the model server on an H100 yet, so your first batch is also that check. If its job fails while the model server starts (for example, out of GPU memory), `run` stops. Report it in your PR, and do not change the server arguments.
+Status (2026-11-16): **no batch is open.**
+- The experiment owner ran all 35 batches of this release on Vista GH200 between 04:37 and 06:49 CST on 2026-11-15, and the ledger marks every one `finished`. `worker.py next` reports that no batch is free, so do not start the loop.
+- If the owner opens batches again (for example, approved reruns), this section will say so.
+- linux-arm64 (GH200) and linux-amd64 (H100) images stay published. Each amd64 image passed a CPU reference smoke and a Qwen Code CLI check inside the image on an x86 GitHub runner, and the x86 inference lock installs and imports there too. Nobody has started the model server on an H100 yet, so a first H100 batch would also be that check: if its job fails while the model server starts (for example, out of GPU memory), `run` stops; report it in your PR and do not change the server arguments.
 
 ## Once per server
 
