@@ -20,6 +20,8 @@ Model: `Qwen/Qwen3.6-35B-A3B@995ad96eacd98c81ed38be0c5b274b04031597b0`. Harbor 0
 
 The independent timeout patch removes the unintended600s transport deadline. Genuine native phase deadlines retain their original values. Communication/cleanup failure is not reported as model budget exhaustion. Cancellation must stop owned processes before stable submission collection; unconfirmed cleanup invalidates grading. Runtime package inventory and patch pre/postimages are fixed.
 
+Qwen Code's bundled ripgrep binary cannot start on the 64K-page aarch64 kernels used here: its jemalloc build rejects the system page size, the client reports `Ripgrep not available` and falls back to its own built-in grep. Every measured attempt in this release searched through that fallback; none recorded a working ripgrep. Checked across all 269 agent logs of the measurement runs, and reproduced on a second 64K-page aarch64 platform. The published results therefore describe the fallback-grep configuration. This is a property of the environment rather than of the tasks, and it is worth stating because the DEB projects contain about 2337 dbt models, where search behaviour affects how an agent explores. The images and the agent bundle were deliberately left unchanged.
+
 ## 4. Four attempts and scheduling
 
 Each task needs four **valid** independent clean attempts. One model service is loaded per batch and reused across sequential native Harbor jobs. No extra model smoke generations, custom agent loop, automatic model retries or training requests. The four attempts retain their native agent/verifier/setup/resource budgets. The 24h regrouping uses at most three tasks per job; conservative phase-cap sums force many smaller batches.

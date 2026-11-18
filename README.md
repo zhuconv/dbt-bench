@@ -24,6 +24,8 @@ Start Codex or Claude Code in that directory and tell it: "Read AGENTS.md and wo
 
 The tested deployment is TACC Vista GH200, Linux aarch64, Apptainer 1.4.1, Slurm, Harbor 0.25.0 and Qwen Code 0.26.5. The model is Qwen3.6-35B-A3B at the revision in `inference/qwen3.6-35b-a3b.json`; vLLM 0.19.0 and its dependencies are locked separately. Docker remains the benchmark reference backend; the current measurement release uses the reviewed Apptainer images. The owner also accepts H100 Linux x86_64 results as equivalent to ARM64 without a cross-architecture equivalence study. The amd64 images are built from the same recipes by GitHub Actions, passed a CPU reference smoke, and are registered with their digests in `images/platform-images.json`; no H100 GPU run has been made yet. Other backends remain outside this measurement release.
 
+On the 64K-page aarch64 kernels used for this release, Qwen Code's bundled ripgrep cannot start, so the agent's search tool fell back to the client's built-in grep in every measured attempt; see `docs/experiment-protocol.md` section 3.
+
 Run installations, agents, containers and inference on compute nodes. Use login nodes only for short Slurm commands. Obtain your own allocation membership; no project credential is required for the public model or DuckDB warehouse. Optional provider/registry credentials belong in your environment, never this repository.
 
 ## Install the two locked runtimes
